@@ -1,1 +1,0 @@
-﻿Method for Logging out of the Currency Cloud Platform    Required Paramaters:  @authKey (String): Active authentication key for Currency Cloud account    Optional Parameters:  @error (Pointer): A pointer to a text variable where an error message can be assigned    Output:  Status Code (String)    https://www.currencycloud.com/developers/docs/item/logout/
