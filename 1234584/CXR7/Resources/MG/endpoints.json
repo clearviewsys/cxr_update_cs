@@ -1,0 +1,19 @@
+﻿
+{
+	"newSession": "https://tmg.mgprofix.com/mg/CXR/IntegratedLogin.aspx",
+	"sendURL": "https://tmg.mgprofix.com/mg/CXR/IntegratedSend.aspx",
+	"receiveURL": "https://tmg.mgprofix.com/mg/CXR/IntegratedReceive.aspx",
+	"afterSendURL": "https://tmg.mgprofix.com/mg/Operator/QuickSend.aspx",
+	"afterReceiveURL": "https://tmg.mgprofix.com/mg/MG/Operator/Receive.aspx",
+	"afterFinishURL": "https://tmg.mgprofix.com/mg/Operator/Default4D.aspx",
+	"baseURL": "https://tmg.mgprofix.com/",
+	"loginURL": "https://tmg.mgprofix.com/mg/Login.aspx",
+	"afterLoginURL": "https://tmg.mgprofix.com/mg/default.aspx",
+	"soap": {
+		"root": "soapenv:Envelope",
+		"namespace": "http://schemas.xmlsoap.org/soap/envelope/",
+		"namespaceName1": "xmlns:web",
+		"namespace1": "http://sb.com.ua/webservices/",
+		"soapURL": "https://tsws.sb.com.ua/swws/swws.asmx"
+	}
+}
