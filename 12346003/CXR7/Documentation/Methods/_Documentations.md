@@ -1,0 +1,1 @@
+﻿Designer,Wednesday, March 9, 2005,11:56 AM      How to Add a Server Preference Field    - Add a field to [ServerPrefs] table  - Declare the filed in the method 'initGlobalVars'  - Add a default value for the field in the method 'loadServerPrefs'  - Add the field in the form [ServerPrefs]Entry     
