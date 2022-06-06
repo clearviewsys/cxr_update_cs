@@ -1,1 +1,0 @@
-﻿Purpose of Transaction
