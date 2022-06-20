@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href='<!--#4DTEXT webgetkeyvalue(" email.configuration.css.url")-->'>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="row" style="padding-top: 10px">
+            <div class="col-md-6 col-md-offset-3">
+
+                <div class="row">
+                    <div class="col-sm-12 clearfix" style="padding-left: 0px; padding-bottom: 10px">
+                        <img class="img-responsive" src="<!--#4DSCRIPT/webGetKeyValue/email.configuration.logo.large.url-->">
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <span class="fa fa-bars"></span>&nbsp;
+                                WebUser Link Request
+                            </div>
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="col-sm-12 form-group">
+                                <p>
+                                    A new webuser has indicated the are an existing customer. Please review their webuser account and link to a customer profile by ensuring the customer profile is using the same email address. Once that is complete and you have authorized their use of the web portal you will need to "approve" their web access on the "Other" tab of the profile.
+                                </p>
+                            </div>
+
+                            <div class="col-sm-12 form-group">
+
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <td>Information</td>
+                                            <td>Value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Email</td>
+                                            <td>$4DEVAL([WebUsers]email)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ID</td>
+                                            <td>$4DEVAL([WebUsers]webUserName)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phone Type</td>
+                                            <td>$4DEVAL([WebUsers]phoneType)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phone Number</td>
+                                            <td>$4DEVAL([WebUsers]phone)</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+
+                        </div>
+
+                        <div class="panel-footer">
+                            <div class="row clearfix">
+                                <div class="col-sm-6">
+                                    <a href='$4DEVAL(webGetKeyValue("email.configuration.company.url"))'>
+                                        <img src='$4DEVAL(webGetKeyValue("email.configuration.logo.small.url"))' height="20">&nbsp;
+                                        $4DEVAL(webgetkeyvalue("email.configuration.company.name"))</a>
+                                </div>
+                                <div class="col-sm-6">
+                                    <span class="pull-right">
+                                        $4DEVAL(webgetkeyvalue("email.configuration.company.phone"))</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
