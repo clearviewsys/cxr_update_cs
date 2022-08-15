@@ -1,0 +1,44 @@
+{
+	"forms": {
+		"entry": {
+			"timeStamp": "2022-08-15T21:14:04.460Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-15T21:14:04.440Z",
+			"destination": "detailScreen"
+		},
+		"pay": {
+			"timeStamp": "2022-08-15T21:14:04.470Z",
+			"destination": "detailScreen"
+		},
+		"printList": {
+			"timeStamp": "2022-08-15T21:14:04.471Z",
+			"destination": "listPrinter"
+		},
+		"receive": {
+			"timeStamp": "2022-08-15T21:14:04.472Z",
+			"destination": "detailScreen"
+		},
+		"Search": {
+			"timeStamp": "2022-08-15T21:14:04.450Z",
+			"destination": "detailScreen"
+		},
+		"ChequeScanForm": {
+			"timeStamp": "2022-08-15T21:14:04.437Z",
+			"destination": "detailScreen"
+		},
+		"list": {
+			"timeStamp": "2022-08-15T21:14:04.469Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T21:14:04.452Z",
+			"destination": "detailScreen"
+		},
+		"PayReceive": {
+			"timeStamp": "2022-08-15T21:14:04.449Z",
+			"destination": "detailScreen"
+		}
+	}
+}

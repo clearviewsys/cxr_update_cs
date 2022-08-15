@@ -1,0 +1,24 @@
+{
+	"forms": {
+		"subform_IntegrityChecks": {
+			"timeStamp": "2022-08-15T21:14:06.722Z",
+			"destination": "detailScreen"
+		},
+		"Search": {
+			"timeStamp": "2022-08-15T21:14:06.719Z",
+			"destination": "detailScreen"
+		},
+		"list": {
+			"timeStamp": "2022-08-15T21:14:06.721Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T21:14:06.720Z",
+			"destination": "detailScreen"
+		},
+		"subform_IntegrityChecksPanel": {
+			"timeStamp": "2022-08-15T21:14:06.723Z",
+			"destination": "detailScreen"
+		}
+	}
+}

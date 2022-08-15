@@ -1,0 +1,32 @@
+{
+	"forms": {
+		"rep_items": {
+			"timeStamp": "2022-08-15T21:14:06.608Z",
+			"destination": "listScreen"
+		},
+		"Entry": {
+			"timeStamp": "2022-08-15T21:14:06.594Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-15T21:14:06.600Z",
+			"destination": "detailScreen"
+		},
+		"List": {
+			"timeStamp": "2022-08-15T21:14:06.598Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T21:14:06.604Z",
+			"destination": "detailScreen"
+		},
+		"ItemsList": {
+			"timeStamp": "2022-08-15T21:14:06.597Z",
+			"destination": "detailScreen"
+		},
+		"PICK": {
+			"timeStamp": "2022-08-15T21:14:06.602Z",
+			"destination": "detailScreen"
+		}
+	}
+}

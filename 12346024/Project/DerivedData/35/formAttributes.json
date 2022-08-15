@@ -1,0 +1,32 @@
+{
+	"forms": {
+		"subform_CashRegisters": {
+			"timeStamp": "2022-08-15T21:14:06.534Z",
+			"destination": "listScreen"
+		},
+		"Entry": {
+			"timeStamp": "2022-08-15T21:14:06.528Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-15T21:14:06.529Z",
+			"destination": "detailScreen"
+		},
+		"Subform_CashAccounts": {
+			"timeStamp": "2022-08-15T21:14:06.529Z",
+			"destination": "listScreen"
+		},
+		"Subform_CashRegister2": {
+			"timeStamp": "2022-08-15T21:14:06.530Z",
+			"destination": "listScreen"
+		},
+		"list": {
+			"timeStamp": "2022-08-15T21:14:06.533Z",
+			"destination": "listScreen"
+		},
+		"view": {
+			"timeStamp": "2022-08-15T21:14:06.534Z",
+			"destination": "detailScreen"
+		}
+	}
+}
