@@ -1,0 +1,468 @@
+{
+	"destination": "detailScreen",
+	"windowTitle": "Sanction List Check Demo",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"b_check": {
+					"type": "button",
+					"top": 299,
+					"left": 485,
+					"width": 71,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Check",
+					"class": "Fields_Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_check.4dm",
+					"events": [
+						"onClick"
+					],
+					"defaultButton": true
+				},
+				"check_auto": {
+					"type": "checkbox",
+					"top": 61,
+					"left": 108,
+					"width": 140,
+					"height": 19,
+					"sizingY": "fixed",
+					"dataSource": "Form:C1466.autoCheck",
+					"text": "Run manually",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/check_auto.4dm",
+					"dataSourceTypeHint": "boolean"
+				},
+				"check_interface": {
+					"type": "checkbox",
+					"top": 304,
+					"left": 30,
+					"width": 109,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.showInterface",
+					"text": "Show Interface",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"method": "ObjectMethods/check_interface.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"check_confirm": {
+					"type": "checkbox",
+					"top": 304,
+					"left": 159,
+					"width": 109,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.comfirmReject",
+					"text": "Confirm Reject",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"check_worker": {
+					"type": "checkbox",
+					"top": 304,
+					"left": 276,
+					"width": 142,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.useWorker",
+					"text": "Run in background",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Text8": {
+					"type": "text",
+					"top": 20,
+					"left": 20,
+					"width": 77,
+					"height": 19,
+					"class": "Fields_Large",
+					"text": "Name:"
+				},
+				"var_indicator": {
+					"type": "input",
+					"top": 102,
+					"left": 52,
+					"width": 23,
+					"height": 16,
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"events": [
+						"onDataChange"
+					],
+					"printFrame": "fixed",
+					"fontTheme": "normal"
+				},
+				"txt_result": {
+					"type": "input",
+					"top": 102,
+					"left": 90,
+					"width": 466,
+					"height": 20,
+					"sizingX": "grow",
+					"class": "Fields_Large",
+					"focusable": false,
+					"enterable": false,
+					"placeholder": "Result of the check",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"check_entity": {
+					"type": "checkbox",
+					"top": 19,
+					"left": 472,
+					"width": 84,
+					"height": 20,
+					"sizingX": "move",
+					"dataSource": "Form:C1466.isEntity",
+					"text": "Is Entity",
+					"class": "Fields_Large",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"txt_ran": {
+					"type": "input",
+					"top": 167,
+					"left": 80,
+					"width": 150,
+					"height": 120,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Form:C1466.ran",
+					"class": "Fields_Large",
+					"focusable": false,
+					"enterable": false,
+					"multiline": "yes",
+					"placeholder": "Sanction Check Ran",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"txt_sanctions": {
+					"type": "input",
+					"top": 167,
+					"left": 243,
+					"width": 150,
+					"height": 120,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Form:C1466.sanctions",
+					"class": "Fields_Large",
+					"focusable": false,
+					"enterable": false,
+					"multiline": "yes",
+					"placeholder": "Sanction List Matches",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"txt_peps": {
+					"type": "input",
+					"top": 167,
+					"left": 406,
+					"width": 150,
+					"height": 120,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Form:C1466.peps",
+					"class": "Fields_Large",
+					"focusable": false,
+					"enterable": false,
+					"multiline": "yes",
+					"placeholder": "PEP List Matches",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text13": {
+					"type": "text",
+					"top": 61,
+					"left": 20,
+					"width": 77,
+					"height": 19,
+					"class": "Fields_Large",
+					"text": "Condition:"
+				},
+				"var_autoList": {
+					"type": "combo",
+					"top": 59,
+					"left": 268,
+					"width": 288,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.autoList",
+					"dataSourceTypeHint": "arrayText",
+					"placeholder": "default",
+					"choiceList": [
+						"Customers",
+						"Invoices",
+						"Links",
+						"eWires",
+						"Agents",
+						"ThirdParties",
+						"Wires"
+					],
+					"class": "Fields_Large",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Splitter1": {
+					"type": "splitter",
+					"top": 142,
+					"left": 236,
+					"width": 1,
+					"height": 151,
+					"sizingY": "grow",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter2": {
+					"type": "splitter",
+					"top": 142,
+					"left": 399,
+					"width": 2,
+					"height": 151,
+					"sizingY": "grow",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable": {
+					"type": "input",
+					"top": 142,
+					"left": 80,
+					"width": 150,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "\"List Checked\"",
+					"class": "Control_Large_",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#F5DEB3",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 142,
+					"left": 243,
+					"width": 150,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "\"Sanction Matches\"",
+					"class": "Control_Large_",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#F5DEB3",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 142,
+					"left": 407,
+					"width": 149,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "\"PEP Matches\"",
+					"class": "Control_Large_",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#F5DEB3",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"var_useList": {
+					"type": "combo",
+					"top": 58,
+					"left": 373,
+					"width": 183,
+					"height": 22,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.list",
+					"dataSourceTypeHint": "text",
+					"placeholder": "All Sanction/PEP List",
+					"class": "Fields_Large",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"rad_pep": {
+					"type": "radio",
+					"text": "PEP",
+					"top": 61,
+					"left": 268,
+					"width": 45,
+					"height": 19,
+					"events": [
+						"onClick"
+					],
+					"radioGroup": "manual",
+					"dataSource": "Form:C1466.usePep",
+					"dataSourceTypeHint": "boolean"
+				},
+				"rad_sl": {
+					"type": "radio",
+					"text": "SL",
+					"top": 61,
+					"left": 313,
+					"width": 45,
+					"height": 19,
+					"events": [
+						"onClick"
+					],
+					"radioGroup": "manual",
+					"dataSource": "Form:C1466.useSL",
+					"dataSourceTypeHint": "boolean"
+				},
+				"rad_list": {
+					"type": "radio",
+					"text": "",
+					"top": 61,
+					"left": 357,
+					"width": 17,
+					"height": 21,
+					"events": [
+						"onClick"
+					],
+					"radioGroup": "manual",
+					"dataSource": "Form:C1466.useList",
+					"dataSourceTypeHint": "boolean"
+				},
+				"text_name": {
+					"type": "combo",
+					"left": 90,
+					"top": 20,
+					"width": 379,
+					"height": 19,
+					"events": [
+						"onDataChange"
+					],
+					"method": "ObjectMethods/text_name.4dm",
+					"class": "Fields_Large",
+					"automaticInsertion": true,
+					"choiceList": [
+						"Bernie Sanders",
+						"Ahmed Ahmed",
+						"Proud Boys"
+					],
+					"dataSource": "Form:C1466.name",
+					"sizingX": "grow"
+				}
+			},
+			"entryOrder": [
+				"check_entity",
+				"var_autoList",
+				"check_auto",
+				"rad_pep",
+				"rad_sl",
+				"rad_list",
+				"var_useList",
+				"var_indicator",
+				"txt_result",
+				"Variable",
+				"Variable1",
+				"Variable2",
+				"txt_ran",
+				"txt_sanctions",
+				"txt_peps",
+				"check_interface",
+				"check_confirm",
+				"check_worker",
+				"b_check",
+				"text_name"
+			]
+		}
+	],
+	"geometryStamp": 172,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

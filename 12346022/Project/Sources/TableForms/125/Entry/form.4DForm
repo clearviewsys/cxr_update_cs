@@ -1,0 +1,303 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedFormTable": 125,
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Field": {
+					"type": "input",
+					"top": 77,
+					"left": 207,
+					"width": 179,
+					"height": 20,
+					"dataSource": "[KYC_ReviewLog:124]ReviewDate:3",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 108,
+					"left": 207,
+					"width": 179,
+					"height": 20,
+					"dataSource": "[KYC_ReviewLog:124]CustomerID:2",
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 139,
+					"left": 207,
+					"width": 133,
+					"height": 20,
+					"dataSource": "[KYC_ReviewLog:124]CustomerID:2",
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 170,
+					"left": 207,
+					"width": 256,
+					"height": 20,
+					"dataSource": "[KYC_ReviewLog:124]ReviewerID:4",
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 202,
+					"left": 207,
+					"width": 46,
+					"height": 20,
+					"dataSource": "[KYC_ReviewLog:124]isPictureIDChecked:8",
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"top": 202,
+					"left": 260,
+					"width": 320,
+					"height": 18,
+					"dataSource": "Check Box",
+					"text": "Check Box",
+					"class": "Fields_Large",
+					"threeState": true,
+					"events": [
+						"onLoad"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 227,
+					"left": 207,
+					"width": 46,
+					"height": 20,
+					"dataSource": "[KYC_ReviewLog:124]isOccupationChecked:9",
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 252,
+					"left": 207,
+					"width": 46,
+					"height": 20,
+					"dataSource": "[KYC_ReviewLog:124]isGeneralInfoChecked:11",
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field8": {
+					"type": "input",
+					"top": 277,
+					"left": 207,
+					"width": 46,
+					"height": 20,
+					"dataSource": "[KYC_ReviewLog:124]isAddressChecked:10",
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field9": {
+					"type": "checkbox",
+					"top": 302,
+					"left": 207,
+					"width": 46,
+					"height": 20,
+					"dataSource": "[KYC_ReviewLog:124]isAllOkay:12",
+					"class": "Fields_Large",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 346,
+					"left": 207,
+					"width": 373,
+					"height": 40,
+					"dataSource": "[KYC_ReviewLog:124]Notes:5",
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 394,
+					"left": 244,
+					"width": 150,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"text": ":xliff:cvs_cancel",
+					"class": "Control_Large_",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_save": {
+					"type": "button",
+					"top": 394,
+					"left": 408,
+					"width": 150,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"text": ":xliff:cvs_save",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 77,
+					"left": 17,
+					"width": 180,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_date"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 108,
+					"left": 17,
+					"width": 180,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_customer_id"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 139,
+					"left": 17,
+					"width": 180,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_customer"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 170,
+					"left": 17,
+					"width": 180,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Reviewer Name"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 346,
+					"left": 17,
+					"width": 180,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Review Notes"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

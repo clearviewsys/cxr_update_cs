@@ -1,0 +1,96 @@
+{
+	"forms": {
+		"SendeWire": {
+			"timeStamp": "2022-08-15T20:45:59.518Z",
+			"destination": "detailScreen"
+		},
+		"print_Medium_Old": {
+			"timeStamp": "2022-08-15T20:45:59.542Z",
+			"destination": "detailScreen"
+		},
+		"AdjustAccounts": {
+			"timeStamp": "2022-08-15T20:45:59.432Z",
+			"destination": "detailScreen"
+		},
+		"print_Thermal_Old": {
+			"timeStamp": "2022-08-15T20:45:59.546Z",
+			"destination": "detailScreen"
+		},
+		"print_Large": {
+			"timeStamp": "2022-08-15T20:45:59.540Z",
+			"destination": "detailScreen"
+		},
+		"Picker": {
+			"timeStamp": "2022-08-15T20:45:59.512Z",
+			"destination": "detailScreen"
+		},
+		"Signature": {
+			"timeStamp": "2022-08-15T20:45:59.521Z",
+			"destination": "detailScreen"
+		},
+		"ReceiveeWire": {
+			"timeStamp": "2022-08-15T20:45:59.516Z",
+			"destination": "detailScreen"
+		},
+		"print_Large_Old": {
+			"timeStamp": "2022-08-15T20:45:59.541Z",
+			"destination": "detailScreen"
+		},
+		"print_Tabular_Old": {
+			"timeStamp": "2022-08-15T20:45:59.544Z",
+			"destination": "detailScreen"
+		},
+		"SubForm_Invoices": {
+			"timeStamp": "2022-08-15T20:45:59.522Z",
+			"destination": "listScreen"
+		},
+		"Entry": {
+			"timeStamp": "2022-08-15T20:45:59.470Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-15T20:45:59.511Z",
+			"destination": "detailScreen"
+		},
+		"print_Medium": {
+			"timeStamp": "2022-08-15T20:45:59.542Z",
+			"destination": "detailScreen"
+		},
+		"TransferFunds": {
+			"timeStamp": "2022-08-15T20:45:59.533Z",
+			"destination": "detailScreen"
+		},
+		"search": {
+			"timeStamp": "2022-08-15T20:45:59.547Z",
+			"destination": "detailScreen"
+		},
+		"ReceiveCashLCForm": {
+			"timeStamp": "2022-08-15T20:45:59.514Z",
+			"destination": "detailScreen"
+		},
+		"Entry_Backup": {
+			"timeStamp": "2022-08-15T20:45:59.502Z",
+			"destination": "detailScreen"
+		},
+		"LargeCashTransForm": {
+			"timeStamp": "2022-08-15T20:45:59.504Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T20:45:59.539Z",
+			"destination": "detailScreen"
+		},
+		"print_Tabular": {
+			"timeStamp": "2022-08-15T20:45:59.543Z",
+			"destination": "detailScreen"
+		},
+		"SubForm_Currencies": {
+			"timeStamp": "2022-08-15T20:45:59.521Z",
+			"destination": "detailScreen"
+		},
+		"print_Thermal": {
+			"timeStamp": "2022-08-15T20:45:59.545Z",
+			"destination": "detailScreen"
+		}
+	}
+}

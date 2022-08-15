@@ -1,0 +1,784 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar",
+	"rightMargin": 0,
+	"bottomMargin": 5,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onUnload",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 438,
+					"left": 2,
+					"width": 933,
+					"height": 64,
+					"sizingY": "move",
+					"fill": "#CCEAE7",
+					"stroke": "#AAAAAA"
+				},
+				"mainListBox": {
+					"type": "listbox",
+					"top": 73,
+					"left": 2,
+					"width": 936,
+					"height": 360,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "mainListBox",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"dragging": "custom",
+					"rowHeight": "20px",
+					"headerHeight": "25px",
+					"showFooters": true,
+					"footerHeight": "22px",
+					"table": 3,
+					"highlightSet": "$mainListBoxUserSet",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#DDDDDD",
+					"fill": "#FFFFFF",
+					"alternateFill": "#E8FFFE",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDisplayDetail",
+						"onDoubleClick",
+						"onUnload",
+						"onAfterSort",
+						"onSelectionChange",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": []
+				},
+				"Highlight Button4": {
+					"type": "button",
+					"top": 444,
+					"left": 878,
+					"width": 54,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#CF0000",
+					"focusable": false,
+					"text": "On Hold",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button6": {
+					"type": "button",
+					"top": 472,
+					"left": 78,
+					"width": 70,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Companies",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button9": {
+					"type": "button",
+					"top": 472,
+					"left": 222,
+					"width": 70,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "People",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button10": {
+					"type": "button",
+					"top": 472,
+					"left": 294,
+					"width": 70,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Debitors",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button10.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button11": {
+					"type": "button",
+					"top": 472,
+					"left": 366,
+					"width": 70,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Creditors",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button11.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Pop-up/Drop-down List1": {
+					"type": "dropdown",
+					"top": 475,
+					"left": 732,
+					"width": 101,
+					"height": 22,
+					"sizingY": "move",
+					"dataSource": "arrCustomerRatings",
+					"choiceList": [
+						"Credit Rating",
+						"Poor Credit",
+						"Average Credit",
+						"Good Credit",
+						"Excellent Credit"
+					],
+					"class": "Control_Small",
+					"method": "ObjectMethods/Pop-up%2FDrop-down List1.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Highlight Button1": {
+					"type": "button",
+					"top": 444,
+					"left": 366,
+					"width": 70,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Envelope",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button2": {
+					"type": "button",
+					"top": 444,
+					"left": 438,
+					"width": 70,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Label",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Pop-up/Drop-down List2": {
+					"type": "dropdown",
+					"top": 447,
+					"left": 513,
+					"width": 67,
+					"height": 22,
+					"sizingY": "move",
+					"dataSource": "arrRiskRatings",
+					"choiceList": [
+						"Risk Rating",
+						"Very Low Risk",
+						"Low Risk",
+						"Medium Risk",
+						"High Risk",
+						"Very High Risk",
+						"Suspicious"
+					],
+					"class": "Control_Small",
+					"method": "ObjectMethods/Pop-up%2FDrop-down List2.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Pop-up/Drop-down List3": {
+					"type": "dropdown",
+					"top": 475,
+					"left": 513,
+					"width": 100,
+					"height": 22,
+					"sizingY": "move",
+					"dataSource": "arrCustomerDOBs",
+					"choiceList": [
+						"Birthday",
+						"Birthdays Today",
+						"Birthdays Next 7 days",
+						"Birthdays Next 30 days",
+						"Birthdays Next 60 days",
+						"Birthdays Next 90 days"
+					],
+					"class": "Control_Small",
+					"method": "ObjectMethods/Pop-up%2FDrop-down List3.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Pop-up/Drop-down List4": {
+					"type": "dropdown",
+					"top": 475,
+					"left": 620,
+					"width": 105,
+					"height": 22,
+					"sizingY": "move",
+					"dataSource": "arrActiveCustomers",
+					"choiceList": [
+						"Active Customers",
+						"Active today",
+						"Active past month",
+						"Active past 3 months",
+						"Active past 6 months",
+						"Active past 9 months",
+						"Active past year",
+						"Active past 2 years"
+					],
+					"class": "Control_Small",
+					"method": "ObjectMethods/Pop-up%2FDrop-down List4.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Highlight Button3": {
+					"type": "button",
+					"top": 444,
+					"left": 823,
+					"width": 54,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#CF0000",
+					"focusable": false,
+					"text": "Exp. IDs",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button5": {
+					"type": "button",
+					"top": 472,
+					"left": 6,
+					"width": 70,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "MSBs",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button7": {
+					"type": "button",
+					"top": 472,
+					"left": 150,
+					"width": 70,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Wholesalers",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button8": {
+					"type": "button",
+					"top": 472,
+					"left": 438,
+					"width": 70,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Pending",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button12": {
+					"type": "button",
+					"top": 444,
+					"left": 652,
+					"width": 69,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#CF0000",
+					"focusable": false,
+					"text": "Poor KYC",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button12.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button3": {
+					"type": "button",
+					"top": 444,
+					"left": 78,
+					"width": 70,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Button3",
+					"class": "Control_Small",
+					"focusable": false,
+					"text": "Show All",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 444,
+					"left": 222,
+					"width": 70,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Button3",
+					"class": "Control_Small",
+					"focusable": false,
+					"text": "Flagged",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "bevel",
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button7": {
+					"type": "button",
+					"top": 444,
+					"left": 294,
+					"width": 70,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Button3",
+					"class": "Control_Small",
+					"focusable": false,
+					"text": "±Flag",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button9": {
+					"type": "button",
+					"top": 444,
+					"left": 150,
+					"width": 70,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Button3",
+					"class": "Control_Small",
+					"focusable": false,
+					"text": "Select All",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"showTodaysButton": {
+					"type": "button",
+					"top": 444,
+					"left": 6,
+					"width": 70,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "bShowTodays",
+					"class": "Control_Small",
+					"focusable": false,
+					"text": "Today's",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/showTodaysButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button13": {
+					"type": "button",
+					"top": 444,
+					"left": 582,
+					"width": 69,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#CF0000",
+					"focusable": false,
+					"text": "XRefs Old",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button13.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Round Rectangle1": {
+					"type": "rectangle",
+					"top": 504,
+					"left": 3,
+					"width": 451,
+					"height": 28,
+					"sizingY": "move",
+					"fill": "#DCE8EB",
+					"stroke": "#AAAAAA",
+					"borderRadius": 5
+				},
+				"QuerySelection1": {
+					"type": "checkbox",
+					"top": 506,
+					"left": 316,
+					"width": 137,
+					"height": 23,
+					"sizingY": "move",
+					"dataSource": "cbQuerySelection",
+					"text": "Filter within selection",
+					"class": "Control_Small",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"arrUsers1": {
+					"type": "dropdown",
+					"top": 507,
+					"left": 180,
+					"width": 133,
+					"height": 22,
+					"sizingY": "move",
+					"dataSource": "arrUsers",
+					"focusable": false,
+					"choiceList": [
+						"All",
+						"Assets",
+						"Liabilities",
+						"Equities",
+						"Revenues",
+						"Expenses"
+					],
+					"class": "Control_Small",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/arrUsers1.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"arrBranches1": {
+					"type": "dropdown",
+					"top": 507,
+					"left": 88,
+					"width": 88,
+					"height": 22,
+					"sizingY": "move",
+					"dataSource": "arrBranches",
+					"focusable": false,
+					"choiceList": [
+						"All",
+						"Assets",
+						"Liabilities",
+						"Equities",
+						"Revenues",
+						"Expenses"
+					],
+					"class": "Control_Small",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/arrBranches1.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 511,
+					"left": 10,
+					"width": 69,
+					"height": 13,
+					"sizingY": "move",
+					"stroke": "#404040",
+					"class": "Control_Small",
+					"text": "Filter by:"
+				},
+				"Highlight Button14": {
+					"type": "button",
+					"top": 444,
+					"left": 722,
+					"width": 99,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#CF0000",
+					"focusable": false,
+					"text": "View KYC Cols",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button14.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button15": {
+					"type": "button",
+					"top": 472,
+					"left": 838,
+					"width": 94,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#0000FF",
+					"focusable": false,
+					"text": "Large PicIDs",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button15.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button16": {
+					"type": "button",
+					"top": 505,
+					"left": 459,
+					"width": 154,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#600000",
+					"focusable": false,
+					"text": "Find Duplicate Customers",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button16.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"newButton2": {
+					"type": "button",
+					"top": 505,
+					"left": 616,
+					"width": 141,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "bNew",
+					"shortcutKey": "r",
+					"shortcutAccel": true,
+					"shortcutShift": true,
+					"class": "Control_Small",
+					"stroke": "#EE0000",
+					"focusable": false,
+					"text": "Review Customer",
+					"icon": "/RESOURCES/Images/library/toolbarChange.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/newButton2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button17": {
+					"type": "button",
+					"top": 505,
+					"left": 761,
+					"width": 169,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Control_Small",
+					"stroke": "#EE0000",
+					"focusable": false,
+					"text": "Customer due for Review",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button17.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button": {
+					"type": "button",
+					"top": 6,
+					"left": 883,
+					"width": 39,
+					"height": 60,
+					"class": "toolbar",
+					"focusable": false,
+					"text": "action",
+					"icon": "/RESOURCES/Images/library/tbar_tinygear (32788).png",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/3D Button.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"mainListBox",
+				"Pop-up/Drop-down List1",
+				"Pop-up/Drop-down List2",
+				"Pop-up/Drop-down List3",
+				"Pop-up/Drop-down List4",
+				"QuerySelection1",
+				"arrUsers1",
+				"arrBranches1"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Rectangle2",
+					"arrUsers1",
+					"Highlight Button16"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

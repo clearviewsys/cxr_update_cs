@@ -1,0 +1,947 @@
+﻿{
+	"destination": "listScreen",
+	"inheritedForm": "ListToolbar_Buttons",
+	"inheritedFormTable": 7,
+	"windowMinWidth": 600,
+	"windowMinHeight": 200,
+	"rightMargin": 16,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 89,
+	"markerBody": 115,
+	"markerBreak": 179,
+	"markerFooter": 179,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"S1_Field": {
+					"type": "input",
+					"top": 92,
+					"left": 13,
+					"width": 163,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Accounts:9]AccountID:1",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Line1": {
+					"type": "line",
+					"top": 417,
+					"left": 397,
+					"width": 353
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 92,
+					"left": 452,
+					"width": 104,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "vSumCredits",
+					"dataSourceTypeHint": "number",
+					"stroke": "#603000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Highlight Button4": {
+					"type": "button",
+					"top": 152,
+					"left": 637,
+					"width": 90,
+					"height": 25,
+					"dataSource": "Highlight Button1",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Cash",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button3": {
+					"type": "button",
+					"top": 152,
+					"left": 543,
+					"width": 90,
+					"height": 25,
+					"dataSource": "Highlight Button1",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Banks",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button6": {
+					"type": "button",
+					"top": 125,
+					"left": 422,
+					"width": 65,
+					"height": 25,
+					"dataSource": "Highlight Button1",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Only >0",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 92,
+					"left": 336,
+					"width": 104,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "vSumDebits",
+					"dataSourceTypeHint": "number",
+					"stroke": "#005F60",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Highlight Button5": {
+					"type": "button",
+					"top": 152,
+					"left": 355,
+					"width": 90,
+					"height": 25,
+					"dataSource": "Highlight Button1",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Receivable",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button8": {
+					"type": "button",
+					"top": 152,
+					"left": 449,
+					"width": 90,
+					"height": 25,
+					"dataSource": "Highlight Button1",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Payable",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Pop-up/Drop-down List1": {
+					"type": "dropdown",
+					"top": 125,
+					"left": 507,
+					"width": 139,
+					"height": 25,
+					"dataSource": "arrAccountType",
+					"choiceList": [
+						"All",
+						"Assets",
+						"Liabilities",
+						"Equities",
+						"Revenues",
+						"Expenses"
+					],
+					"class": "Control",
+					"method": "ObjectMethods/Pop-up%2FDrop-down List1.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_onlyLC": {
+					"type": "button",
+					"top": 125,
+					"left": 355,
+					"width": 65,
+					"height": 25,
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Only LC",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/b_onlyLC.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"S7_Text4": {
+					"type": "text",
+					"top": 322,
+					"left": 428,
+					"width": 124,
+					"height": 15,
+					"sizingX": "grow",
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"class": "Headings",
+					"textAlign": "center",
+					"text": "Credit (LC)"
+				},
+				"Variable8": {
+					"type": "input",
+					"top": 343,
+					"left": 431,
+					"width": 116,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "vSumCreditsLocal",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S7_Text5": {
+					"type": "text",
+					"top": 322,
+					"left": 302,
+					"width": 125,
+					"height": 15,
+					"sizingX": "grow",
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"class": "Headings",
+					"textAlign": "center",
+					"text": "Debit (LC)"
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 343,
+					"left": 306,
+					"width": 117,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "vSumDebitsLocal",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S7_Text3": {
+					"type": "text",
+					"top": 322,
+					"left": 553,
+					"width": 125,
+					"height": 15,
+					"sizingX": "grow",
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"class": "Headings",
+					"textAlign": "center",
+					"text": "Balance (LC)"
+				},
+				"Variable4": {
+					"type": "input",
+					"top": 342,
+					"left": 556,
+					"width": 117,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "vBalanceLocal",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 375,
+					"left": 431,
+					"width": 117,
+					"height": 15,
+					"dataSource": "vTotalSumCreditsLocal",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable6": {
+					"type": "input",
+					"top": 375,
+					"left": 306,
+					"width": 117,
+					"height": 15,
+					"dataSource": "vTotalSumDebitsLocal",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 309,
+					"left": 1,
+					"width": 45,
+					"height": 15,
+					"stroke": "#444444",
+					"class": "Headings",
+					"textAlign": "right",
+					"text": "Sum :"
+				},
+				"Variable7": {
+					"type": "input",
+					"top": 375,
+					"left": 557,
+					"width": 117,
+					"height": 15,
+					"dataSource": "vTotalBalanceLocal",
+					"dataSourceTypeHint": "number",
+					"stroke": "#EE0000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Line8": {
+					"type": "line",
+					"top": 371,
+					"left": 427,
+					"height": 26,
+					"stroke": "#AAAAAA"
+				},
+				"Line9": {
+					"type": "line",
+					"top": 371,
+					"left": 553,
+					"height": 26,
+					"stroke": "#AAAAAA"
+				},
+				"Line12": {
+					"type": "line",
+					"top": 370,
+					"left": 262,
+					"width": 415,
+					"stroke": "#AAAAAA",
+					"strokeWidth": 2
+				},
+				"vBalance": {
+					"type": "input",
+					"top": 92,
+					"left": 569,
+					"width": 116,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "vBalance",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields_BOLD",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S4_Field": {
+					"type": "input",
+					"top": 256,
+					"left": 607,
+					"width": 32,
+					"height": 16,
+					"sizingX": "move",
+					"dataSource": "[Currencies:6]Flag:3",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "scaled",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Splitter1": {
+					"type": "splitter",
+					"top": 68,
+					"left": 190,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter2": {
+					"type": "splitter",
+					"top": 68,
+					"left": 446,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter3": {
+					"type": "splitter",
+					"top": 68,
+					"left": 562,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter5": {
+					"type": "splitter",
+					"top": 68,
+					"left": 726,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"splitterMode": "move",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"flag": {
+					"type": "picture",
+					"top": 99,
+					"left": 2,
+					"width": 10,
+					"height": 10,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/favorite.png"
+				},
+				"agentIcon": {
+					"type": "picture",
+					"top": 94,
+					"left": 174,
+					"width": 12,
+					"height": 12,
+					"sizingX": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/miniAgent.png"
+				},
+				"arrCurrencies": {
+					"type": "dropdown",
+					"top": 125,
+					"left": 649,
+					"width": 77,
+					"height": 25,
+					"dataSource": "arrCurrencies",
+					"choiceList": [
+						"All",
+						"Assets",
+						"Liabilities",
+						"Equities",
+						"Revenues",
+						"Expenses"
+					],
+					"class": "Control",
+					"method": "ObjectMethods/arrCurrencies.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 152,
+					"left": 6,
+					"width": 105,
+					"height": 25,
+					"dataSource": "Button1",
+					"shortcutKey": "r",
+					"shortcutAccel": true,
+					"shortcutShift": true,
+					"class": "Control",
+					"focusable": false,
+					"text": "Old Reconcile",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable10": {
+					"type": "input",
+					"top": 92,
+					"left": 197,
+					"width": 127,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "vOpeningBalance",
+					"dataSourceTypeHint": "number",
+					"stroke": "#666666",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Splitter4": {
+					"type": "splitter",
+					"top": 68,
+					"left": 330,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"S1_Field1": {
+					"type": "input",
+					"top": 92,
+					"left": 691,
+					"width": 32,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Accounts:9]Currency:6",
+					"stroke": "#000000",
+					"class": "Fields",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Line5": {
+					"type": "line",
+					"top": 121,
+					"left": 349,
+					"height": 25,
+					"stroke": "#444444"
+				},
+				"3D Button4": {
+					"type": "button",
+					"top": 68,
+					"left": 3,
+					"width": 185,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Account",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button4.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"3D Button1": {
+					"type": "button",
+					"top": 68,
+					"left": 193,
+					"width": 135,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"focusable": false,
+					"text": "Opening",
+					"textPlacement": "right",
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"3D Button2": {
+					"type": "button",
+					"top": 68,
+					"left": 333,
+					"width": 111,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"focusable": false,
+					"text": "In",
+					"textPlacement": "right",
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"3D Button3": {
+					"type": "button",
+					"top": 68,
+					"left": 449,
+					"width": 111,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"focusable": false,
+					"text": "Out",
+					"textPlacement": "right",
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"3D Button5": {
+					"type": "button",
+					"top": 68,
+					"left": 565,
+					"width": 122,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"focusable": false,
+					"text": "Balance",
+					"textPlacement": "right",
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"3D Button6": {
+					"type": "button",
+					"top": 68,
+					"left": 692,
+					"width": 33,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Curr",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button6.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Splitter6": {
+					"type": "splitter",
+					"top": 68,
+					"left": 689,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button1": {
+					"type": "button",
+					"top": 152,
+					"left": 116,
+					"width": 117,
+					"height": 25,
+					"dataSource": "Highlight Button1",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Accounts Table",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button2": {
+					"type": "button",
+					"top": 152,
+					"left": 235,
+					"width": 117,
+					"height": 25,
+					"dataSource": "Highlight Button1",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Positions",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Text1",
+					"Line8",
+					"Line9",
+					"Line12"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

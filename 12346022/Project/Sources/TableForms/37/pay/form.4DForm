@@ -1,0 +1,66 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "PayReceive",
+	"inheritedFormTable": 37,
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onLosingFocus",
+		"onGettingFocus",
+		"onBeforeKeystroke",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"l_pay": {
+					"type": "text",
+					"top": 12,
+					"left": 18,
+					"width": 285,
+					"height": 27,
+					"stroke": "#D86D00",
+					"class": "Titles",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Pay from Account"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

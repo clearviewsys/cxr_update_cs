@@ -1,0 +1,396 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onLosingFocus",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"VarJob1": {
+					"type": "input",
+					"top": 351,
+					"left": 168,
+					"width": 200,
+					"height": 16,
+					"placeholder": "Pick a country starts with an A",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/VarJob1.4dm",
+					"events": [
+						"onAfterKeystroke"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 291,
+					"left": 168,
+					"width": 200,
+					"height": 16,
+					"dataSource": "Form:C1466.subform2",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"VarJob2": {
+					"type": "input",
+					"top": 321,
+					"left": 168,
+					"width": 200,
+					"height": 16,
+					"placeholder": "Pick a country starts with an A",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/VarJob2.4dm",
+					"events": [
+						"onAfterKeystroke"
+					]
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 262,
+					"left": 168,
+					"width": 171,
+					"height": 98,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"detailForm": "typeahead_combobox",
+					"hideFocusRing": true,
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"method": "ObjectMethods/Subform1.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus"
+					]
+				},
+				"Variable": {
+					"type": "input",
+					"top": 232,
+					"left": 168,
+					"width": 198,
+					"height": 16,
+					"dataSource": "Form:C1466.subform1",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"VarName": {
+					"type": "input",
+					"top": 21,
+					"left": 168,
+					"width": 200,
+					"height": 16,
+					"placeholder": "(starts with B/C/H/K)",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/VarName.4dm",
+					"events": [
+						"onAfterKeystroke"
+					]
+				},
+				"VarCity": {
+					"type": "input",
+					"top": 51,
+					"left": 168,
+					"width": 200,
+					"height": 16,
+					"placeholder": "(start with S/V)",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/VarCity.4dm",
+					"events": [
+						"onAfterKeystroke"
+					]
+				},
+				"VarColourList": {
+					"type": "input",
+					"top": 81,
+					"left": 168,
+					"width": 200,
+					"height": 16,
+					"placeholder": "Colour List",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/VarColourList.4dm",
+					"events": [
+						"onAfterKeystroke"
+					]
+				},
+				"VarMonth": {
+					"type": "input",
+					"top": 111,
+					"left": 168,
+					"width": 200,
+					"height": 16,
+					"placeholder": "Array for months",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/VarMonth.4dm",
+					"events": [
+						"onAfterKeystroke"
+					]
+				},
+				"VarCountryName": {
+					"type": "input",
+					"top": 141,
+					"left": 168,
+					"width": 200,
+					"height": 16,
+					"placeholder": "[Countries]CountryName",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/VarCountryName.4dm",
+					"events": [
+						"onAfterKeystroke"
+					]
+				},
+				"VarCountryName1": {
+					"type": "input",
+					"top": 171,
+					"left": 168,
+					"width": 200,
+					"height": 16,
+					"placeholder": "[Countries]CountryName",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/VarCountryName1.4dm",
+					"events": [
+						"onAfterKeystroke"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 22,
+					"left": 14,
+					"width": 134,
+					"height": 15,
+					"textAlign": "right",
+					"text": "Collection - Required : \r:"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 52,
+					"left": 14,
+					"width": 134,
+					"height": 15,
+					"textAlign": "right",
+					"text": "Collection - Optional :"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 82,
+					"left": 14,
+					"width": 134,
+					"height": 15,
+					"textAlign": "right",
+					"text": "List (ColourList) :"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 112,
+					"left": 14,
+					"width": 134,
+					"height": 15,
+					"textAlign": "right",
+					"text": "Array (Month) :"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 142,
+					"left": 14,
+					"width": 134,
+					"height": 15,
+					"textAlign": "right",
+					"text": "Selection - Required :"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 172,
+					"left": 14,
+					"width": 134,
+					"height": 15,
+					"textAlign": "right",
+					"text": "Selection - Optional :"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 202,
+					"left": 14,
+					"width": 134,
+					"height": 15,
+					"textAlign": "right",
+					"text": "Collection :"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 232,
+					"left": 14,
+					"width": 134,
+					"height": 15,
+					"textAlign": "right",
+					"text": "(Output) :"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 262,
+					"left": 14,
+					"width": 134,
+					"height": 15,
+					"textAlign": "right",
+					"text": "Selection :"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 292,
+					"left": 14,
+					"width": 134,
+					"height": 15,
+					"textAlign": "right",
+					"text": "(Output) :"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 322,
+					"left": 14,
+					"width": 134,
+					"height": 15,
+					"textAlign": "right",
+					"text": "Restriced Entity :"
+				},
+				"Subform": {
+					"type": "subform",
+					"top": 202,
+					"left": 168,
+					"width": 105,
+					"height": 75,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"detailForm": "typeahead_combobox",
+					"hideFocusRing": true,
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"method": "ObjectMethods/Subform.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus"
+					]
+				},
+				"Combo Box": {
+					"type": "combo",
+					"top": 19,
+					"left": 388,
+					"width": 152,
+					"height": 21,
+					"method": "ObjectMethods/Combo Box.4dm",
+					"events": [
+						"onAfterKeystroke"
+					]
+				},
+				"Combo Box1": {
+					"type": "combo",
+					"top": 49,
+					"left": 388,
+					"width": 152,
+					"height": 21,
+					"method": "ObjectMethods/Combo Box1.4dm",
+					"events": [
+						"onAfterKeystroke"
+					]
+				},
+				"Text11": {
+					"type": "text",
+					"top": 351,
+					"left": 14,
+					"width": 134,
+					"height": 15,
+					"textAlign": "right",
+					"text": "Restricted Selection :"
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 80,
+					"left": 391,
+					"width": 149,
+					"height": 16,
+					"dataSource": "Form:C1466.tmp",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"defaultView": "View 1",
+		"activeView": "View 5",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Subform"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {
+				"objects": [
+					"VarJob1",
+					"Combo Box1",
+					"Text11",
+					"Variable2"
+				]
+			},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

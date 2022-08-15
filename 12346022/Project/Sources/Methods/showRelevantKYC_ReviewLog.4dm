@@ -1,0 +1,2 @@
+//%attributes = {}
+allRecordsKYC_ReviewLog

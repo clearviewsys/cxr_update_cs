@@ -1,0 +1,4479 @@
+{
+	"destination": "detailScreen",
+	"windowTitle": "Server Preferences",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 2,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 575,
+	"markerBreak": 575,
+	"markerFooter": 575,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onBeforeKeystroke",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"b_save": {
+					"type": "button",
+					"top": 604,
+					"left": 533,
+					"width": 160,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": ":xliff:cvs_save",
+					"class": "Control_Large_",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 604,
+					"left": 443,
+					"width": 82,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"action": "cancel",
+					"text": ":xliff:cvs_cancel",
+					"class": "Control_Large_",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_serverPreferences": {
+					"type": "text",
+					"top": 1,
+					"left": 2,
+					"width": 700,
+					"height": 30,
+					"fill": "#5B82B1",
+					"stroke": "#FFFFFF",
+					"class": "Fields_XtraLarge",
+					"textAlign": "center",
+					"text": "Server Preferences"
+				},
+				"Tab Control1": {
+					"type": "tab",
+					"top": 31,
+					"left": 15,
+					"width": 678,
+					"height": 570,
+					"dataSource": "",
+					"dataSourceTypeHint": "arrayText",
+					"labels": [
+						"General",
+						"FTP & Rates",
+						"Email & SMS",
+						"Compliance",
+						"Other Settings",
+						"Disclaimers",
+						"LDAP&SSO"
+					],
+					"class": "Control_Large_",
+					"action": "gotoPage",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_apply": {
+					"type": "button",
+					"top": 604,
+					"left": 15,
+					"width": 80,
+					"height": 22,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"text": "Apply",
+					"textAlign": "center",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"method": "ObjectMethods/b_apply.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnsave": {
+					"type": "button",
+					"top": 600,
+					"left": 98,
+					"width": 45,
+					"height": 32,
+					"sizingY": "move",
+					"dataSource": "",
+					"class": "toolbar",
+					"textAlign": "center",
+					"focusable": false,
+					"text": "Save",
+					"icon": "/RESOURCES/Images/library/toolbarSave.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/btnsave.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnload": {
+					"type": "button",
+					"top": 600,
+					"left": 137,
+					"width": 45,
+					"height": 32,
+					"sizingY": "move",
+					"dataSource": "",
+					"class": "toolbar",
+					"textAlign": "center",
+					"focusable": false,
+					"text": "Load",
+					"icon": "/RESOURCES/Images/library/toolbarLoad.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/btnload.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Group Box8": {
+					"type": "groupBox",
+					"top": 192,
+					"left": 283,
+					"width": 221,
+					"height": 100,
+					"class": "Label",
+					"text": "Default Invoice Behaviour"
+				},
+				"Group Box11": {
+					"type": "groupBox",
+					"top": 294,
+					"left": 514,
+					"width": 153,
+					"height": 85,
+					"class": "Label",
+					"text": "Most used currencies"
+				},
+				"Group Box4": {
+					"type": "groupBox",
+					"top": 64,
+					"left": 32,
+					"width": 232,
+					"height": 110,
+					"class": "Label",
+					"text": "Default Date Range"
+				},
+				"Text39": {
+					"type": "text",
+					"top": 92,
+					"left": 43,
+					"width": 95,
+					"height": 12,
+					"class": "Label",
+					"text": "From Date"
+				},
+				"Text40": {
+					"type": "text",
+					"top": 120,
+					"left": 43,
+					"width": 95,
+					"height": 12,
+					"class": "Label",
+					"text": "To Date"
+				},
+				"[ServerPrefs]fromDate": {
+					"type": "input",
+					"top": 94,
+					"left": 116,
+					"width": 144,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]fromDate:34",
+					"dataSourceTypeHint": "date",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"method": "ObjectMethods/[ServerPrefs]fromDate.4dm",
+					"events": [
+						"onBeforeKeystroke"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 119,
+					"left": 116,
+					"width": 144,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]toDate:35",
+					"dataSourceTypeHint": "date",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onBeforeKeystroke"
+					]
+				},
+				"applyDateRange": {
+					"type": "checkbox",
+					"top": 145,
+					"left": 43,
+					"width": 217,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]applyDateRange:36",
+					"text": "Apply Date Range",
+					"stroke": "#000000",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"starteWireNo7": {
+					"type": "input",
+					"top": 240,
+					"left": 75,
+					"width": 78,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]defaultBuyCommission:31",
+					"dataSourceTypeHint": "number",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Percent"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"starteWireNo16": {
+					"type": "input",
+					"top": 240,
+					"left": 163,
+					"width": 93,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]defaultBuyOffset:48",
+					"dataSourceTypeHint": "number",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"starteWireNo8": {
+					"type": "input",
+					"top": 267,
+					"left": 75,
+					"width": 78,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]defaultSellCommission:32",
+					"dataSourceTypeHint": "number",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Percent"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"starteWireNo17": {
+					"type": "input",
+					"top": 267,
+					"left": 163,
+					"width": 93,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]defaultSellOffset:49",
+					"dataSourceTypeHint": "number",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"starteWireNo13": {
+					"type": "input",
+					"top": 240,
+					"left": 333,
+					"width": 38,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]defaultBuyCurrency:45",
+					"stroke": "#444444",
+					"fill": "#DFE4FF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "~A",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"starteWireNo15": {
+					"type": "input",
+					"top": 240,
+					"left": 380,
+					"width": 115,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]defaultBuyMethod:47",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/PaymentMethods"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"starteWireNo14": {
+					"type": "input",
+					"top": 267,
+					"left": 333,
+					"width": 38,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]defaultSellCurrency:46",
+					"stroke": "#444444",
+					"fill": "#FFFFDF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "~A",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"starteWireNo18": {
+					"type": "input",
+					"top": 266,
+					"left": 380,
+					"width": 115,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]defaultSellMethod:54",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/PaymentMethods"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"starteWireNo19": {
+					"type": "input",
+					"top": 326,
+					"left": 614,
+					"width": 38,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]customCurrencyFlag1:50",
+					"stroke": "#444444",
+					"fill": "#DFE4FF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "~A",
+					"method": "ObjectMethods/starteWireNo19.4dm",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"starteWireNo20": {
+					"type": "input",
+					"top": 353,
+					"left": 614,
+					"width": 38,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]customCurrencyFlag2:51",
+					"stroke": "#444444",
+					"fill": "#DFE4FF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "~A",
+					"method": "ObjectMethods/starteWireNo20.4dm",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Group Box6": {
+					"type": "groupBox",
+					"top": 192,
+					"left": 32,
+					"width": 244,
+					"height": 101,
+					"class": "Label",
+					"text": "Default Commission Policies"
+				},
+				"vDateFormat": {
+					"type": "dropdown",
+					"top": 301,
+					"left": 160,
+					"width": 204,
+					"height": 23,
+					"dataSource": "vDateFormat",
+					"choiceList": [
+						"System date short",
+						"System date abbreviated",
+						"System date long",
+						"Internal date short special",
+						"Internal date long",
+						"Internal date abbreviated",
+						"Internal date short",
+						"ISO Date"
+					],
+					"class": "Fields_Medium",
+					"method": "ObjectMethods/vDateFormat.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"vTestDateDisplayFormat": {
+					"type": "input",
+					"top": 304,
+					"left": 371,
+					"width": 142,
+					"height": 16,
+					"dataSource": "vTestDateDisplayFormat",
+					"dataSourceTypeHint": "date",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/vTestDateDisplayFormat.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 330,
+					"left": 160,
+					"width": 204,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]dateEntryFilter:60",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Field6.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"vTestDateEntryFilter": {
+					"type": "input",
+					"top": 330,
+					"left": 371,
+					"width": 133,
+					"height": 16,
+					"dataSource": "vTestDateEntryFilter",
+					"dataSourceTypeHint": "date",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"arrDateEntrySamples": {
+					"type": "dropdown",
+					"top": 352,
+					"left": 160,
+					"width": 204,
+					"height": 23,
+					"dataSource": "arrDateEntrySamples",
+					"choiceList": [
+						"!1&9##/##/####",
+						"!1&9##/##/##",
+						"!1&9mm:## dd:## yyyy:####",
+						"!1&9MM:## DD:## YY:##"
+					],
+					"class": "Fields_Medium",
+					"method": "ObjectMethods/arrDateEntrySamples.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"vTestDateEntryFilter1": {
+					"type": "input",
+					"top": 355,
+					"left": 371,
+					"width": 133,
+					"height": 16,
+					"dataSource": "vTestDateEntryFilter",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"Text16": {
+					"type": "text",
+					"top": 267,
+					"left": 293,
+					"width": 33,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Sell"
+				},
+				"Text52": {
+					"type": "text",
+					"top": 240,
+					"left": 293,
+					"width": 33,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Buy"
+				},
+				"Text51": {
+					"type": "text",
+					"top": 219,
+					"left": 63,
+					"width": 99,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"textAlign": "center",
+					"text": "Margin %"
+				},
+				"Text53": {
+					"type": "text",
+					"top": 219,
+					"left": 159,
+					"width": 97,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"textAlign": "center",
+					"text": "Point (offset)"
+				},
+				"Text36": {
+					"type": "text",
+					"top": 268,
+					"left": 43,
+					"width": 33,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Sell"
+				},
+				"Text37": {
+					"type": "text",
+					"top": 237,
+					"left": 43,
+					"width": 33,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Buy"
+				},
+				"Field5": {
+					"type": "checkbox",
+					"top": 426,
+					"left": 386,
+					"width": 20,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]doAskSigningWithTill:62",
+					"text": ".",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field100": {
+					"type": "checkbox",
+					"top": 449,
+					"left": 386,
+					"width": 20,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]useSentenceForACG:55",
+					"text": ".",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "checkbox",
+					"top": 473,
+					"left": 386,
+					"width": 20,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]useCommissionRules:56",
+					"text": ".",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field8": {
+					"type": "checkbox",
+					"top": 497,
+					"left": 386,
+					"width": 20,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]useAMLRules:77",
+					"text": ".",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field11": {
+					"type": "checkbox",
+					"top": 429,
+					"left": 660,
+					"width": 20,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]doLockDirectRate:88",
+					"text": ".",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field12": {
+					"type": "checkbox",
+					"top": 452,
+					"left": 660,
+					"width": 20,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]doLockInverseRate:89",
+					"text": ".",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field13": {
+					"type": "checkbox",
+					"top": 475,
+					"left": 660,
+					"width": 20,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]doHideDirectRate:90",
+					"text": ".",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field14": {
+					"type": "checkbox",
+					"top": 497,
+					"left": 660,
+					"width": 20,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]doHideInverseRate:91",
+					"text": ".",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DD_Default_Language": {
+					"type": "dropdown",
+					"top": 537,
+					"left": 322,
+					"width": 196,
+					"height": 21,
+					"choiceList": [
+						"English",
+						"French",
+						"Spanish (not implemented)",
+						"German (not implemented)"
+					],
+					"class": "Fields_Medium",
+					"method": "ObjectMethods/DD_Default_Language.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"starteWireNo21": {
+					"type": "input",
+					"top": 563,
+					"left": 324,
+					"width": 51,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]queryLimit:61",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"min": 0,
+					"max": 1000,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Text50": {
+					"type": "text",
+					"top": 450,
+					"left": 31,
+					"width": 350,
+					"height": 22,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Create Long Sentences by the Automatic Comment Generator"
+				},
+				"Text60": {
+					"type": "text",
+					"top": 473,
+					"left": 31,
+					"width": 350,
+					"height": 22,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Activate the Rule-based Fee Structures"
+				},
+				"Text63": {
+					"type": "text",
+					"top": 330,
+					"left": 5,
+					"width": 142,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Date Entry Format"
+				},
+				"Text64": {
+					"type": "text",
+					"top": 304,
+					"left": 5,
+					"width": 142,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Date Display Format"
+				},
+				"Text65": {
+					"type": "text",
+					"top": 562,
+					"left": 142,
+					"width": 172,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Stop filter & queries after"
+				},
+				"Text66": {
+					"type": "text",
+					"top": 565,
+					"left": 383,
+					"width": 172,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "left",
+					"text": "matches. (0 for no limit)"
+				},
+				"Text67": {
+					"type": "text",
+					"top": 427,
+					"left": 31,
+					"width": 350,
+					"height": 22,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Ask User to Sign-in with Till before creating a new Invoice"
+				},
+				"Text58": {
+					"type": "text",
+					"top": 324,
+					"left": 522,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Currency 1"
+				},
+				"Text59": {
+					"type": "text",
+					"top": 353,
+					"left": 522,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Currency 2"
+				},
+				"Text49": {
+					"type": "text",
+					"top": 538,
+					"left": 140,
+					"width": 172,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Default Language"
+				},
+				"Text82": {
+					"type": "text",
+					"top": 497,
+					"left": 31,
+					"width": 350,
+					"height": 22,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Activate the Rule-based AML Policies"
+				},
+				"btnnextpage2": {
+					"type": "button",
+					"top": 572,
+					"left": 588,
+					"width": 101,
+					"height": 26,
+					"dataSource": "",
+					"action": "nextPage",
+					"text": "Next Page",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field10": {
+					"type": "input",
+					"top": 383,
+					"left": 220,
+					"width": 143,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]defaultPhoneFormat:79",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text85": {
+					"type": "text",
+					"top": 383,
+					"left": -44,
+					"width": 251,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Default Phone Format"
+				},
+				"Text": {
+					"type": "text",
+					"top": 384,
+					"left": 370,
+					"width": 157,
+					"height": 18,
+					"class": "Fields_Medium",
+					"text": "e.g. ## ### #####"
+				},
+				"DD_Buy_Sell": {
+					"type": "dropdown",
+					"top": 212,
+					"left": 425,
+					"width": 71,
+					"height": 21,
+					"choiceList": [
+						"None",
+						"Buy",
+						"Sell"
+					],
+					"class": "Fields",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/DD_Buy_Sell.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Text15": {
+					"type": "text",
+					"top": 215,
+					"left": 293,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Default on Buy/Sell"
+				},
+				"Text48": {
+					"type": "text",
+					"top": 429,
+					"left": 416,
+					"width": 239,
+					"height": 18,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Lock 'Direct Rate' modification in invoice"
+				},
+				"Text54": {
+					"type": "text",
+					"top": 452,
+					"left": 413,
+					"width": 239,
+					"height": 18,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Lock 'Inverse Rate' modification in invoice"
+				},
+				"Text90": {
+					"type": "text",
+					"top": 475,
+					"left": 416,
+					"width": 239,
+					"height": 18,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Hide the Direct Rate column in invoice"
+				},
+				"Text91": {
+					"type": "text",
+					"top": 497,
+					"left": 416,
+					"width": 239,
+					"height": 18,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Hide the Inverse Rate column in invoice"
+				},
+				"offRateErrorPercent5": {
+					"type": "checkbox",
+					"top": 81,
+					"left": 280,
+					"width": 378,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]doRememberWindowPositions:102",
+					"text": "Remember windows size and positions",
+					"stroke": "#000000",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"offRateErrorPercent6": {
+					"type": "checkbox",
+					"top": 104,
+					"left": 280,
+					"width": 378,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]isTransactionCodeVisible:104",
+					"text": "Ask Transaction Type in Invoice",
+					"stroke": "#000000",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"offRateErrorPercent7": {
+					"type": "checkbox",
+					"top": 128,
+					"left": 280,
+					"width": 378,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]isCustomerCodeVisible:105",
+					"text": "Ask Customer Type in Invoice",
+					"stroke": "#000000",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Group Box14": {
+					"type": "groupBox",
+					"top": 75,
+					"left": 514,
+					"width": 153,
+					"height": 89,
+					"class": "Label",
+					"text": "Auto Logout Settings\r"
+				},
+				"autoLogoutTime": {
+					"type": "input",
+					"top": 128,
+					"left": 607,
+					"width": 54,
+					"height": 16,
+					"defaultValue": "10",
+					"dataSource": "[ServerPrefs:27]autoLogoutTime:111",
+					"dataSourceTypeHint": "integer",
+					"entryFilter": "&9",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 92,
+					"left": 522,
+					"width": 91,
+					"height": 30,
+					"text": "Log User out when Inactive:"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 124,
+					"left": 522,
+					"width": 91,
+					"height": 30,
+					"text": "Inactivity Time (minutes)"
+				},
+				"Field15": {
+					"type": "checkbox",
+					"top": 99,
+					"left": 623,
+					"width": 15,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]autoLogoutEnabled:110",
+					"text": ".",
+					"focusable": false,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Group Box3": {
+					"type": "groupBox",
+					"top": 167,
+					"left": 514,
+					"width": 153,
+					"height": 60,
+					"class": "Label",
+					"text": "Force Password reset"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 187,
+					"left": 524,
+					"width": 91,
+					"height": 30,
+					"text": "Reset Interval (months)"
+				},
+				"passwordResetInterval": {
+					"type": "input",
+					"top": 194,
+					"left": 607,
+					"width": 54,
+					"height": 16,
+					"defaultValue": "3",
+					"dataSource": "[ServerPrefs:27]passwordResetInterval:112",
+					"textAlign": "right",
+					"entryFilter": "&9",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Group Box15": {
+					"type": "groupBox",
+					"top": 229,
+					"left": 514,
+					"width": 153,
+					"height": 60,
+					"class": "Label",
+					"text": "Pasword changing"
+				},
+				"Text62": {
+					"type": "text",
+					"top": 249,
+					"left": 524,
+					"width": 91,
+					"height": 30,
+					"text": "Disallow Reusing Passwords"
+				},
+				"Field16": {
+					"type": "checkbox",
+					"top": 256,
+					"left": 623,
+					"width": 15,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]passwordCheckUsed:118",
+					"text": ".",
+					"focusable": false,
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"starteWireNo23": {
+					"type": "input",
+					"top": 71,
+					"left": 529,
+					"width": 29,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]webTimeOut:82",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Group Box9": {
+					"type": "groupBox",
+					"top": 339,
+					"left": 27,
+					"width": 293,
+					"height": 153,
+					"class": "Label",
+					"text": "Rate Update and Publish Frequency"
+				},
+				"Group Box5": {
+					"type": "groupBox",
+					"top": 85,
+					"left": 27,
+					"width": 651,
+					"height": 199,
+					"class": "Label",
+					"text": "FTP Server Access"
+				},
+				"Text43": {
+					"type": "text",
+					"top": 110,
+					"left": 39,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Host URL"
+				},
+				"starteWireNo10": {
+					"type": "input",
+					"top": 110,
+					"left": 159,
+					"width": 286,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]ftpHostName:37",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text44": {
+					"type": "text",
+					"top": 136,
+					"left": 39,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "User Name"
+				},
+				"starteWireNo11": {
+					"type": "input",
+					"top": 136,
+					"left": 159,
+					"width": 286,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]ftpUserName:38",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text45": {
+					"type": "text",
+					"top": 162,
+					"left": 39,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "FTP Password"
+				},
+				"starteWireNo12": {
+					"type": "input",
+					"top": 162,
+					"left": 159,
+					"width": 286,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]ftpPassword:39",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"cvViewPassword1": {
+					"type": "checkbox",
+					"top": 158,
+					"left": 454,
+					"width": 130,
+					"height": 20,
+					"dataSource": "cbViewPassword1",
+					"text": "View Password",
+					"focusable": false,
+					"method": "ObjectMethods/cvViewPassword1.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"XMLfolder15": {
+					"type": "input",
+					"top": 187,
+					"left": 159,
+					"width": 366,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]ftpUploadPath:41",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"XMLfolder27": {
+					"type": "input",
+					"top": 210,
+					"left": 159,
+					"width": 57,
+					"height": 16,
+					"defaultValue": "21",
+					"dataSource": "[ServerPrefs:27]ftpPortNo:72",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"uploadxmlToFTP": {
+					"type": "checkbox",
+					"top": 233,
+					"left": 48,
+					"width": 393,
+					"height": 19,
+					"dataSource": "[ServerPrefs:27]doUploadXMLToFTP:40",
+					"text": "Automatically Upload XML rates to FTP Server",
+					"stroke": "#000000",
+					"class": "Label",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_test": {
+					"type": "button",
+					"top": 248,
+					"left": 461,
+					"width": 209,
+					"height": 26,
+					"text": "Test FTP / SFTP Settings",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/b_test.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text47": {
+					"type": "text",
+					"top": 184,
+					"left": 39,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "FTP Path"
+				},
+				"Text55": {
+					"type": "text",
+					"top": 110,
+					"left": 454,
+					"width": 150,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"text": "e.g.: mysite.com"
+				},
+				"Text56": {
+					"type": "text",
+					"top": 135,
+					"left": 454,
+					"width": 174,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"text": "e.g.: ftpuser"
+				},
+				"Text57": {
+					"type": "text",
+					"top": 187,
+					"left": 535,
+					"width": 135,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"text": "e.g.: /www/mysite.com/"
+				},
+				"XMLfolder4": {
+					"type": "input",
+					"top": 365,
+					"left": 268,
+					"width": 40,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]updateFrequency:9",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"XMLfolder12": {
+					"type": "input",
+					"top": 387,
+					"left": 268,
+					"width": 40,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]minUpdateTime:17",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"offRateErrorPercent2": {
+					"type": "checkbox",
+					"top": 409,
+					"left": 48,
+					"width": 260,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]isRefreshRatesOnByDefault:42",
+					"text": "Update Currency Rates Automatically",
+					"stroke": "#000000",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"offRateErrorPercent3": {
+					"type": "checkbox",
+					"top": 433,
+					"left": 48,
+					"width": 260,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]autoPublishXMLRates:78",
+					"text": "Publish the XML Rates ",
+					"stroke": "#000000",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text13": {
+					"type": "text",
+					"top": 365,
+					"left": 64,
+					"width": 213,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Rate Update Period (in mins) "
+				},
+				"Text23": {
+					"type": "text",
+					"top": 386,
+					"left": 84,
+					"width": 164,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Min Update in minutes "
+				},
+				"Text78": {
+					"type": "text",
+					"top": 210,
+					"left": 39,
+					"width": 107,
+					"height": 12,
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "FTP Port No"
+				},
+				"Text79": {
+					"type": "text",
+					"top": 212,
+					"left": 223,
+					"width": 120,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"text": "e.g.: 21"
+				},
+				"btnNextPage": {
+					"type": "button",
+					"top": 572,
+					"left": 588,
+					"width": 101,
+					"height": 26,
+					"action": "nextPage",
+					"text": "Next Page",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 212,
+					"left": 627,
+					"width": 41,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]flagExtension:74",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text81": {
+					"type": "text",
+					"top": 211,
+					"left": 459,
+					"width": 168,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Flags Image extension: "
+				},
+				"Text46": {
+					"type": "text",
+					"top": 71,
+					"left": 307,
+					"width": 217,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Web Services Timout (in secs)"
+				},
+				"Text87": {
+					"type": "text",
+					"top": 73,
+					"left": 564,
+					"width": 110,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"text": "about 6-15 seconds"
+				},
+				"currencyRateSource": {
+					"type": "dropdown",
+					"top": 457,
+					"left": 47,
+					"width": 261,
+					"height": 18,
+					"dataSource": "currencyRateSource",
+					"dataSourceTypeHint": "arrayNumber",
+					"focusable": false,
+					"choiceList": [
+						"ewire.me",
+						"cloud.clearviewsys.net",
+						"openexchangerates.org"
+					],
+					"method": "ObjectMethods/currencyRateSource.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"ftpUSeSecure": {
+					"type": "checkbox",
+					"top": 208,
+					"left": 267,
+					"width": 113,
+					"height": 19,
+					"dataSource": "[ServerPrefs:27]ftpUseSecure:114",
+					"text": "Use SFTP",
+					"stroke": "#000000",
+					"class": "Label",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Group Box13": {
+					"type": "groupBox",
+					"top": 247,
+					"left": 343,
+					"width": 335,
+					"height": 139,
+					"class": "Label"
+				},
+				"Group Box1": {
+					"type": "groupBox",
+					"top": 65,
+					"left": 26,
+					"width": 659,
+					"height": 179,
+					"class": "Label",
+					"text": "Email SMTP Settings (Outgoing Mail Server)"
+				},
+				"XMLfolder": {
+					"type": "input",
+					"top": 97,
+					"left": 170,
+					"width": 323,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]smtpServer:5",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"XMLfolder1": {
+					"type": "input",
+					"top": 122,
+					"left": 170,
+					"width": 323,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]smtpFromEmail:6",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"XMLfolder2": {
+					"type": "input",
+					"top": 147,
+					"left": 170,
+					"width": 303,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]smtpUserName:7",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"XMLfolder3": {
+					"type": "input",
+					"top": 172,
+					"left": 170,
+					"width": 174,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]smtpPassword:8",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/XMLfolder3.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"cvViewPassword": {
+					"type": "checkbox",
+					"top": 168,
+					"left": 359,
+					"width": 125,
+					"height": 21,
+					"dataSource": "cbViewPassword",
+					"text": "View Password",
+					"focusable": false,
+					"method": "ObjectMethods/cvViewPassword.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"XMLfolder24": {
+					"type": "input",
+					"top": 195,
+					"left": 170,
+					"width": 57,
+					"height": 16,
+					"defaultValue": "25",
+					"dataSource": "[ServerPrefs:27]smtpPortNo:71",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 211,
+					"left": 537,
+					"width": 135,
+					"height": 22,
+					"dataSource": "Button4",
+					"text": "Test SMTP Setting",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"top": 97,
+					"left": 36,
+					"width": 131,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "SMTP Server"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 122,
+					"left": 36,
+					"width": 131,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Sender Address"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 147,
+					"left": 36,
+					"width": 131,
+					"height": 12,
+					"stroke": "#444444",
+					"class": "Label",
+					"text": "SMTP User ID *"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 172,
+					"left": 36,
+					"width": 131,
+					"height": 12,
+					"stroke": "#444444",
+					"class": "Label",
+					"text": "SMTP Password *"
+				},
+				"Text38": {
+					"type": "text",
+					"top": 221,
+					"left": 36,
+					"width": 328,
+					"height": 14,
+					"stroke": "#444444",
+					"class": "Label_Small",
+					"text": "* Only if authentication is necessary by SMTP server"
+				},
+				"Text70": {
+					"type": "text",
+					"top": 100,
+					"left": 506,
+					"width": 120,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"text": "e.g.: smtp2go.com"
+				},
+				"Text73": {
+					"type": "text",
+					"top": 195,
+					"left": 36,
+					"width": 131,
+					"height": 12,
+					"stroke": "#444444",
+					"class": "Label",
+					"text": "SMTP Port No"
+				},
+				"Text75": {
+					"type": "text",
+					"top": 123,
+					"left": 506,
+					"width": 174,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"text": "e.g.: support@clearviewsys.com"
+				},
+				"Text76": {
+					"type": "text",
+					"top": 197,
+					"left": 234,
+					"width": 120,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"text": "e.g.: 2525, 587"
+				},
+				"Group Box10": {
+					"type": "groupBox",
+					"top": 247,
+					"left": 26,
+					"width": 318,
+					"height": 139,
+					"class": "Label",
+					"text": "Administrator contact info"
+				},
+				"XMLfolder7": {
+					"type": "input",
+					"top": 274,
+					"left": 134,
+					"width": 196,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]administratorEmail:12",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Text17": {
+					"type": "text",
+					"top": 274,
+					"left": 47,
+					"width": 109,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Email"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 300,
+					"left": 47,
+					"width": 129,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Admin Cell Phone"
+				},
+				"XMLfolder25": {
+					"type": "input",
+					"top": 300,
+					"left": 170,
+					"width": 160,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]administratorCellNo:70",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&\"0-9;+\"",
+					"method": "ObjectMethods/XMLfolder25.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text74": {
+					"type": "text",
+					"top": 325,
+					"left": 47,
+					"width": 169,
+					"height": 26,
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"text": "Cell phone is used for urgent notification purpose only"
+				},
+				"Text93": {
+					"type": "text",
+					"top": 395,
+					"left": 26,
+					"width": 300,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Email Header"
+				},
+				"Text94": {
+					"type": "text",
+					"top": 483,
+					"left": 26,
+					"width": 300,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Email Signature"
+				},
+				"XMLfolder36": {
+					"type": "input",
+					"top": 288,
+					"left": 434,
+					"width": 236,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]twilioAccountSid:115",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"XMLfolder37": {
+					"type": "input",
+					"top": 311,
+					"left": 434,
+					"width": 236,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]twilioAuthKey:116",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"XMLfolder38": {
+					"type": "input",
+					"top": 334,
+					"left": 479,
+					"width": 191,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]twilioDefaultFromNumber:117",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Text95": {
+					"type": "text",
+					"top": 288,
+					"left": 359,
+					"width": 109,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Account Sid"
+				},
+				"Text96": {
+					"type": "text",
+					"top": 311,
+					"left": 359,
+					"width": 109,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Auth Key"
+				},
+				"Text97": {
+					"type": "text",
+					"top": 334,
+					"left": 359,
+					"width": 120,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Default From Number"
+				},
+				"XMLfolder34": {
+					"type": "input",
+					"top": 415,
+					"left": 26,
+					"width": 644,
+					"height": 64,
+					"dataSource": "[ServerPrefs:27]EmailHeader:96",
+					"stroke": "#001274",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "yes",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"XMLfolder35": {
+					"type": "input",
+					"top": 506,
+					"left": 26,
+					"width": 644,
+					"height": 60,
+					"dataSource": "[ServerPrefs:27]EmailSignature:95",
+					"stroke": "#444444",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "yes",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Button9": {
+					"type": "button",
+					"top": 572,
+					"left": 588,
+					"width": 101,
+					"height": 26,
+					"dataSource": "Button",
+					"action": "nextPage",
+					"text": "Next Page",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_twilio": {
+					"type": "button",
+					"top": 261,
+					"left": 350,
+					"width": 76,
+					"height": 21,
+					"display": false,
+					"method": "ObjectMethods/b_twilio.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bSMSTest1": {
+					"type": "button",
+					"top": 261,
+					"left": 572,
+					"width": 100,
+					"height": 22,
+					"dataSource": "Button6",
+					"text": "Test Message",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/bSMSTest1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text100": {
+					"type": "text",
+					"top": 399,
+					"left": 134,
+					"width": 544,
+					"height": 13,
+					"class": "Fields_Small",
+					"text": "These tags can be used in the header or signature: <CUSTOMER> <COMPANY> <PHONE> <CELL> <ADDRESS>"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 260,
+					"left": 359,
+					"width": 62,
+					"height": 24,
+					"class": "Titles",
+					"text": "Twilio"
+				},
+				"bSetupSubAccounts": {
+					"type": "button",
+					"top": 261,
+					"left": 462,
+					"width": 100,
+					"height": 22,
+					"text": "Set Up Subaccounts",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/bSetupSubAccounts.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bSMSTest2": {
+					"type": "button",
+					"top": 356,
+					"left": 572,
+					"width": 100,
+					"height": 22,
+					"dataSource": "Button6",
+					"text": "Update Balance",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/bSMSTest2.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"XMLfolder8": {
+					"type": "checkbox",
+					"top": 70,
+					"left": 52,
+					"width": 365,
+					"height": 19,
+					"dataSource": "[ServerPrefs:27]doFINTRACchecks:13",
+					"text": "Perform Compliance Checks & Validations",
+					"stroke": "#000000",
+					"class": "Fields",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Field9": {
+					"type": "checkbox",
+					"top": 64,
+					"left": 437,
+					"width": 236,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]useAMLRules:77",
+					"text": "Activate Rule Based AML Polices",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"XMLfolder9": {
+					"type": "input",
+					"top": 100,
+					"left": 522,
+					"width": 142,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]oneIDLimit:14",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"XMLfolder10": {
+					"type": "input",
+					"top": 142,
+					"left": 522,
+					"width": 142,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]twoIDsLimit:15",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"XMLfolder11": {
+					"type": "input",
+					"top": 121,
+					"left": 522,
+					"width": 142,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]LimitForSS:73",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"XMLfolder28": {
+					"type": "input",
+					"top": 165,
+					"left": 522,
+					"width": 142,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]declarationFormLimit:16",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"XMLfolder6": {
+					"type": "input",
+					"top": 187,
+					"left": 522,
+					"width": 142,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]thresholdForPTRTransfers:108",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Field1": {
+					"type": "checkbox",
+					"top": 217,
+					"left": 53,
+					"width": 348,
+					"height": 15,
+					"dataSource": "[ServerPrefs:27]doCheckSanctionLists:63",
+					"text": "Check customers against all sanction lists automatically",
+					"class": "Fields",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"bTestPEP": {
+					"type": "button",
+					"top": 215,
+					"left": 518,
+					"width": 149,
+					"height": 25,
+					"text": "Test PEP",
+					"focusable": false,
+					"method": "ObjectMethods/bTestPEP.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"LimitToRecheckSanctionList": {
+					"type": "input",
+					"top": 243,
+					"left": 401,
+					"width": 41,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]LimitToRecheckSanctionList:107",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"min": 0,
+					"max": 24,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"bTestSanctions": {
+					"type": "button",
+					"top": 240,
+					"left": 518,
+					"width": 149,
+					"height": 25,
+					"text": "Test Sanction Lists",
+					"focusable": false,
+					"method": "ObjectMethods/bTestSanctions.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"XMLfolder19": {
+					"type": "checkbox",
+					"top": 262,
+					"left": 52,
+					"width": 365,
+					"height": 18,
+					"dataSource": "[ServerPrefs:27]doCheckCustomerProfile:66",
+					"text": "Warn if customer profile is incomplete (KYC)",
+					"stroke": "#000000",
+					"class": "Fields",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"XMLfolder20": {
+					"type": "checkbox",
+					"top": 287,
+					"left": 52,
+					"width": 390,
+					"height": 15,
+					"dataSource": "[ServerPrefs:27]doCheck24HrsRule:67",
+					"text": "Warn repeat transactions for same customer  N days apart",
+					"stroke": "#000000",
+					"class": "Fields",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"XMLfolder32": {
+					"type": "input",
+					"top": 286,
+					"left": 522,
+					"width": 41,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]checkNPreviousDays:83",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"XMLfolder30": {
+					"type": "checkbox",
+					"top": 309,
+					"left": 52,
+					"width": 364,
+					"height": 18,
+					"dataSource": "[ServerPrefs:27]doSanctionCheckOnInvoice:80",
+					"text": "Automatically check customer before every invoice",
+					"stroke": "#000000",
+					"class": "Fields",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"profileReviewDays": {
+					"type": "input",
+					"top": 338,
+					"left": 401,
+					"width": 41,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]ReviewCustomerAfterNDays:81",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"profileReviewHighRiskDays": {
+					"type": "input",
+					"top": 359,
+					"left": 401,
+					"width": 41,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]ReviewHighRiskAfterNDays:109",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"XMLfolder21": {
+					"type": "input",
+					"top": 411,
+					"left": 475,
+					"width": 126,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]overrideLimit:69",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"starteWireNo22": {
+					"type": "input",
+					"top": 437,
+					"left": 327,
+					"width": 142,
+					"height": 16,
+					"defaultValue": "1000000000",
+					"dataSource": "[ServerPrefs:27]OverridePassword:68",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"cvViewPassword2": {
+					"type": "checkbox",
+					"top": 435,
+					"left": 475,
+					"width": 130,
+					"height": 20,
+					"dataSource": "cbViewPassword2",
+					"text": "View Password",
+					"method": "ObjectMethods/cvViewPassword2.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"starteWireNo1": {
+					"type": "input",
+					"top": 468,
+					"left": 479,
+					"width": 126,
+					"height": 16,
+					"defaultValue": "1000000000",
+					"dataSource": "[ServerPrefs:27]cashFaultTolerance:20",
+					"dataSourceTypeHint": "number",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"offRateErrorPercent": {
+					"type": "input",
+					"top": 497,
+					"left": 426,
+					"width": 39,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]errorTolerance:4",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "checkbox",
+					"top": 510,
+					"left": 559,
+					"width": 23,
+					"height": 32,
+					"dataSource": "[ServerPrefs:27]doAskCustIDForCheque:57",
+					"text": ".",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "checkbox",
+					"top": 533,
+					"left": 559,
+					"width": 23,
+					"height": 32,
+					"dataSource": "[ServerPrefs:27]doWarnOnShortSelling:58",
+					"text": ".",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vWarningLevel": {
+					"type": "dropdown",
+					"top": 563,
+					"left": 348,
+					"width": 224,
+					"height": 26,
+					"dataSource": "vWarningLevel",
+					"choiceList": [
+						"Relax Mode - Turn all warnings off",
+						"Normal Mode - Warnings can be ignored",
+						"Severe Mode - Warnings cannot be ignored"
+					],
+					"class": "Control",
+					"method": "ObjectMethods/vWarningLevel.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Button7": {
+					"type": "button",
+					"top": 572,
+					"left": 588,
+					"width": 101,
+					"height": 26,
+					"dataSource": "Button",
+					"action": "nextPage",
+					"text": "Next Page",
+					"events": [
+						"onClick"
+					]
+				},
+				"XMLfolder23": {
+					"type": "input",
+					"top": 468,
+					"left": 610,
+					"width": 43,
+					"height": 25,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#000000",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"XMLfolder22": {
+					"type": "input",
+					"top": 412,
+					"left": 606,
+					"width": 43,
+					"height": 25,
+					"dataSource": "<>baseCurrency",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"l_CustomerProfileLimit": {
+					"type": "text",
+					"top": 101,
+					"left": 73,
+					"width": 447,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Fields",
+					"text": "Limit for creating a Customer Profile - KYC"
+				},
+				"l_LCELimit": {
+					"type": "text",
+					"top": 143,
+					"left": 73,
+					"width": 447,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Fields",
+					"text": "Limit for Large Cash Transaction Reporting (LCT)"
+				},
+				"l_pictureIDLimit": {
+					"type": "text",
+					"top": 121,
+					"left": 73,
+					"width": 447,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Fields",
+					"text": "Limit for requiring Picture ID - KYC"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 498,
+					"left": 182,
+					"width": 235,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Maximum allowance for rate change"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 497,
+					"left": 471,
+					"width": 82,
+					"height": 13,
+					"stroke": "#444444",
+					"class": "Tags_Small",
+					"text": "eg. 0.03 for 3%"
+				},
+				"Text34": {
+					"type": "text",
+					"top": 569,
+					"left": 144,
+					"width": 189,
+					"height": 12,
+					"stroke": "#D86D00",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Warning Tolerance Level"
+				},
+				"Text61": {
+					"type": "text",
+					"top": 519,
+					"left": 40,
+					"width": 506,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Force users to register the customers when dealing with Cheque or Wire"
+				},
+				"Text22": {
+					"type": "text",
+					"top": 542,
+					"left": 29,
+					"width": 517,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Warn users when cash balance is negative"
+				},
+				"Text26": {
+					"type": "text",
+					"top": 470,
+					"left": 45,
+					"width": 432,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Ask for denominations when cash transactions is larger than"
+				},
+				"Text71": {
+					"type": "text",
+					"top": 438,
+					"left": 135,
+					"width": 181,
+					"height": 12,
+					"stroke": "#9C0000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Override password"
+				},
+				"Text72": {
+					"type": "text",
+					"top": 411,
+					"left": 61,
+					"width": 417,
+					"height": 12,
+					"stroke": "#9C0000",
+					"class": "Label",
+					"textAlign": "left",
+					"text": "Ask for override password when cash transaction is larger than"
+				},
+				"Round Rectangle1": {
+					"type": "rectangle",
+					"top": 403,
+					"left": 45,
+					"width": 624,
+					"height": 60,
+					"fill": "transparent",
+					"stroke": "#999999",
+					"borderRadius": 5
+				},
+				"l_LimitForEDD": {
+					"type": "text",
+					"top": 167,
+					"left": 73,
+					"width": 447,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Fields",
+					"text": "Limit for Customer Enhanced Due Diligence (ECDD, EDD)"
+				},
+				"l_ReviewFrequency": {
+					"type": "text",
+					"top": 338,
+					"left": 45,
+					"width": 343,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Profile Review Frequencey in Days"
+				},
+				"Text88": {
+					"type": "text",
+					"top": 285,
+					"left": 436,
+					"width": 77,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "No of days"
+				},
+				"NumHoursBeweenChecks": {
+					"type": "text",
+					"top": 241,
+					"left": 52,
+					"width": 327,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "Fields",
+					"textAlign": "left",
+					"text": "Do not recheck sanction list for the same name below (hrs):"
+				},
+				"thresholdForPTRTransfers": {
+					"type": "text",
+					"top": 189,
+					"left": 73,
+					"width": 447,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Fields",
+					"text": "Limit for Electronic Fund Transfer Reporting (EFT) Wire/eWires"
+				},
+				"l_ReviewFrequency1": {
+					"type": "text",
+					"top": 359,
+					"left": 45,
+					"width": 343,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Profile Review Frequency for high risk customers in Days"
+				}
+			},
+			"entryOrder": [
+				"XMLfolder8",
+				"Field9",
+				"XMLfolder9",
+				"XMLfolder10",
+				"XMLfolder11",
+				"XMLfolder28",
+				"XMLfolder6",
+				"Field1",
+				"bTestPEP",
+				"LimitToRecheckSanctionList",
+				"bTestSanctions",
+				"XMLfolder19",
+				"XMLfolder20",
+				"XMLfolder32",
+				"XMLfolder30",
+				"profileReviewDays",
+				"profileReviewHighRiskDays",
+				"XMLfolder21",
+				"starteWireNo22",
+				"cvViewPassword2",
+				"starteWireNo1",
+				"offRateErrorPercent",
+				"Field3",
+				"Field4",
+				"vWarningLevel",
+				"Button7",
+				"XMLfolder23",
+				"XMLfolder22"
+			]
+		},
+		{
+			"objects": {
+				"Group Box7": {
+					"type": "groupBox",
+					"top": 413,
+					"left": 133,
+					"width": 438,
+					"height": 64,
+					"class": "Label",
+					"text": "Default Tax System"
+				},
+				"Round Rectangle": {
+					"type": "rectangle",
+					"top": 333,
+					"left": 29,
+					"width": 649,
+					"height": 79,
+					"fill": "transparent",
+					"stroke": "#777777",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"arrWorkstationDetection": {
+					"type": "dropdown",
+					"top": 339,
+					"left": 340,
+					"width": 299,
+					"height": 25,
+					"dataSource": "arrWorkstationDetection",
+					"choiceList": [
+						"Workstation Name (Computer Name)",
+						"OS username",
+						"MAC Address (network card address)",
+						"Application username (4D user)",
+						"Static Name (by ClientCode)"
+					],
+					"class": "Control",
+					"method": "ObjectMethods/arrWorkstationDetection.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Field": {
+					"type": "input",
+					"top": 342,
+					"left": 642,
+					"width": 28,
+					"height": 17,
+					"dataSource": "[ServerPrefs:27]WorkstationDetectionMethod:76",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text24": {
+					"type": "text",
+					"top": 342,
+					"left": 45,
+					"width": 308,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Individual workstations shall be detected by: "
+				},
+				"Text84": {
+					"type": "text",
+					"top": 368,
+					"left": 43,
+					"width": 627,
+					"height": 39,
+					"stroke": "#000000",
+					"class": "Tags",
+					"text": "Normally computers shall be identified by a workstation name. However, in a terminal server environment all computers are named the same so you should select the user name as a way to distinguish between different computers. "
+				},
+				"Group Box2": {
+					"type": "groupBox",
+					"top": 64,
+					"left": 23,
+					"width": 454,
+					"height": 166,
+					"class": "Tags",
+					"text": "Automatic Serial Number Generator"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 103,
+					"left": 43,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Start InvoiceID"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 128,
+					"left": 43,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Start RegisterID"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 153,
+					"left": 43,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Start eWireID"
+				},
+				"startInvoiceNo": {
+					"type": "input",
+					"top": 103,
+					"left": 158,
+					"width": 105,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]startInvoiceNumber:1",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"btnautocalcstsrtinvoice": {
+					"type": "button",
+					"top": 100,
+					"left": 292,
+					"width": 170,
+					"height": 20,
+					"dataSource": "",
+					"text": "Auto Calc start Invoice",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/btnautocalcstsrtinvoice.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"startRegisterNo": {
+					"type": "input",
+					"top": 128,
+					"left": 158,
+					"width": 105,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]startRegisterNumber:2",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"btnautocalcstartregister": {
+					"type": "button",
+					"top": 125,
+					"left": 292,
+					"width": 170,
+					"height": 20,
+					"dataSource": "",
+					"text": "Auto Calc start Register",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/btnautocalcstartregister.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"starteWireNo": {
+					"type": "input",
+					"top": 153,
+					"left": 158,
+					"width": 105,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]starteWireNumber:3",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"btnautocalcstartewire": {
+					"type": "button",
+					"top": 150,
+					"left": 292,
+					"width": 170,
+					"height": 20,
+					"dataSource": "",
+					"text": "Auto Calc start eWire",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/btnautocalcstartewire.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"starteWireNo9": {
+					"type": "input",
+					"top": 245,
+					"left": 448,
+					"width": 28,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]totalCashRegisters:33",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"min": 0,
+					"max": 99,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 84,
+					"left": 23,
+					"width": 423,
+					"height": 12,
+					"stroke": "#CF0000",
+					"class": "Tags_Small",
+					"textAlign": "center",
+					"text": "It is not recommended to change the serial number starting point after the initial setup of the software"
+				},
+				"Text33": {
+					"type": "text",
+					"top": 315,
+					"left": 32,
+					"width": 411,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"text": "The file panetRatesInput.txt must be placed in the CX Support Files folder."
+				},
+				"Text14": {
+					"type": "text",
+					"top": 270,
+					"left": 32,
+					"width": 255,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Logout web users who were inactive for : "
+				},
+				"XMLfolder5": {
+					"type": "input",
+					"top": 269,
+					"left": 335,
+					"width": 142,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]InactivityTimeAllowed:10",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "!0&9## Hrs ## Mins ## Secs",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text32": {
+					"type": "text",
+					"top": 290,
+					"left": 32,
+					"width": 196,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Panel Rates Output Folder"
+				},
+				"Text31": {
+					"type": "text",
+					"top": 112,
+					"left": 482,
+					"width": 156,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Local Currency Rounding"
+				},
+				"offRateErrorPercent1": {
+					"type": "checkbox",
+					"top": 75,
+					"left": 488,
+					"width": 194,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]isLogEnabled:18",
+					"text": "Enable Application Log",
+					"stroke": "#000000",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"starteWireNo6": {
+					"type": "input",
+					"top": 110,
+					"left": 635,
+					"width": 28,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]roundDigitBaseCurrency:25",
+					"stroke": "#EE0000",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"min": 0,
+					"max": 4,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"XMLfolder18": {
+					"type": "checkbox",
+					"top": 164,
+					"left": 488,
+					"width": 185,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]doComplyWithSkatteverket:65",
+					"text": "Comply with Skatteverket",
+					"stroke": "#000000",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"SVbaseSerial": {
+					"type": "input",
+					"top": 189,
+					"left": 601,
+					"width": 62,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]SVbaseSerial:86",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"XMLfolder13": {
+					"type": "input",
+					"top": 293,
+					"left": 235,
+					"width": 368,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]panelRatesOutputFolder:27",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"btnChooseOiutoputFolder": {
+					"type": "button",
+					"top": 290,
+					"left": 623,
+					"width": 43,
+					"height": 21,
+					"dataSource": "",
+					"text": "...",
+					"class": "Control_Small",
+					"method": "ObjectMethods/btnChooseOiutoputFolder.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"starteWireNo2": {
+					"type": "input",
+					"top": 434,
+					"left": 243,
+					"width": 58,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]tax1Name:21",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"starteWireNo4": {
+					"type": "input",
+					"top": 433,
+					"left": 403,
+					"width": 58,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]tax1:22",
+					"dataSourceTypeHint": "number",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"starteWireNo3": {
+					"type": "input",
+					"top": 457,
+					"left": 243,
+					"width": 58,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]tax2Name:23",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"starteWireNo5": {
+					"type": "input",
+					"top": 456,
+					"left": 403,
+					"width": 58,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]tax2:24",
+					"dataSourceTypeHint": "number",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text25": {
+					"type": "text",
+					"top": 434,
+					"left": 151,
+					"width": 73,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Tax 1 Name"
+				},
+				"Text27": {
+					"type": "text",
+					"top": 457,
+					"left": 151,
+					"width": 73,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Tax 2 Name"
+				},
+				"Text28": {
+					"type": "text",
+					"top": 433,
+					"left": 331,
+					"width": 73,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Tax 1 Rate"
+				},
+				"Text29": {
+					"type": "text",
+					"top": 456,
+					"left": 331,
+					"width": 73,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Tax 2 Rate"
+				},
+				"Text30": {
+					"type": "text",
+					"top": 433,
+					"left": 466,
+					"width": 98,
+					"height": 14,
+					"stroke": "#444444",
+					"class": "Label_Small",
+					"textAlign": "center",
+					"text": "ex: 0.05 for 5%"
+				},
+				"Text68": {
+					"type": "text",
+					"top": 189,
+					"left": 496,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "SV Start Serial#"
+				},
+				"Text69": {
+					"type": "text",
+					"top": 147,
+					"left": 493,
+					"width": 158,
+					"height": 14,
+					"stroke": "#FF004B",
+					"class": "Tags",
+					"text": "For Sweden only"
+				},
+				"Text35": {
+					"type": "text",
+					"top": 245,
+					"left": 23,
+					"width": 412,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Number of Cash Registers (besides the main cash)"
+				},
+				"Group Box12": {
+					"type": "groupBox",
+					"top": 474,
+					"left": 25,
+					"width": 653,
+					"height": 64,
+					"class": "Label",
+					"text": "hmReport License"
+				},
+				"offRateErrorPercent4": {
+					"type": "checkbox",
+					"top": 490,
+					"left": 34,
+					"width": 194,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]isHMReportActive:93",
+					"text": "Enable hmReport (Pro Only)",
+					"stroke": "#000000",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"startInvoiceNo1": {
+					"type": "input",
+					"top": 512,
+					"left": 150,
+					"width": 366,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]hmReportLicense:92",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Text42": {
+					"type": "text",
+					"top": 512,
+					"left": 34,
+					"width": 142,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "hmReport License"
+				},
+				"btntestregistration": {
+					"type": "button",
+					"top": 508,
+					"left": 530,
+					"width": 141,
+					"height": 18,
+					"dataSource": "",
+					"text": "Test Registration",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/btntestregistration.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"startInvoiceNo2": {
+					"type": "input",
+					"top": 552,
+					"left": 150,
+					"width": 296,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]eWireServerURL:103",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"btnNextPage1": {
+					"type": "button",
+					"top": 572,
+					"left": 588,
+					"width": 101,
+					"height": 26,
+					"dataSource": "",
+					"action": "nextPage",
+					"text": "Next Page",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text77": {
+					"type": "text",
+					"top": 552,
+					"left": 34,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "eWire Server URL"
+				},
+				"Text101": {
+					"type": "text",
+					"top": 551,
+					"left": 456,
+					"width": 192,
+					"height": 16,
+					"text": "e.g. http://192.168.20.20:8080"
+				},
+				"btnresetewires": {
+					"type": "button",
+					"top": 175,
+					"left": 294,
+					"width": 77,
+					"height": 20,
+					"dataSource": "",
+					"text": "Auto Reset",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/btnresetewires.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnresetall": {
+					"type": "button",
+					"top": 200,
+					"left": 291,
+					"width": 170,
+					"height": 20,
+					"dataSource": "",
+					"text": "Reset ALL Sequence Numbers",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/btnresetall.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"PREFS_TableList": {
+					"type": "dropdown",
+					"top": 174,
+					"left": 40,
+					"width": 240,
+					"height": 21,
+					"dataSourceTypeHint": "integer",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"method": "ObjectMethods/PREFS_TableList.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"btnresetewires1": {
+					"type": "button",
+					"top": 175,
+					"left": 373,
+					"width": 89,
+					"height": 20,
+					"dataSource": "",
+					"text": "Manual Reset",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/btnresetewires1.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"arrWorkstationDetection",
+				"startInvoiceNo",
+				"btnautocalcstsrtinvoice",
+				"startRegisterNo",
+				"btnautocalcstartregister",
+				"starteWireNo",
+				"btnautocalcstartewire",
+				"starteWireNo9",
+				"XMLfolder5",
+				"offRateErrorPercent1",
+				"starteWireNo6",
+				"XMLfolder18",
+				"SVbaseSerial",
+				"XMLfolder13",
+				"btnChooseOiutoputFolder",
+				"starteWireNo2",
+				"starteWireNo4",
+				"starteWireNo3",
+				"starteWireNo5",
+				"offRateErrorPercent4",
+				"startInvoiceNo1",
+				"btntestregistration",
+				"startInvoiceNo2",
+				"btnNextPage1",
+				"btnresetewires",
+				"btnresetall",
+				"PREFS_TableList",
+				"btnresetewires1"
+			]
+		},
+		{
+			"objects": {
+				"XMLfolder14": {
+					"type": "input",
+					"top": 86,
+					"left": 24,
+					"width": 640,
+					"height": 80,
+					"dataSource": "[ServerPrefs:27]receiptFootnote:43",
+					"stroke": "#001274",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"XMLfolder33": {
+					"type": "input",
+					"top": 206,
+					"left": 24,
+					"width": 640,
+					"height": 105,
+					"dataSource": "[ServerPrefs:27]disclaimer:75",
+					"stroke": "#444444",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"XMLfolder29": {
+					"type": "input",
+					"top": 339,
+					"left": 24,
+					"width": 640,
+					"height": 105,
+					"dataSource": "[ServerPrefs:27]WireDisclaimer:85",
+					"stroke": "#444444",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Text83": {
+					"type": "text",
+					"top": 317,
+					"left": 24,
+					"width": 496,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Wire Transfer Disclaimer - appears on the TT Wire printed receipts or emails"
+				},
+				"Text21": {
+					"type": "text",
+					"top": 66,
+					"left": 24,
+					"width": 300,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "General Receipt Footnote"
+				},
+				"Text41": {
+					"type": "text",
+					"top": 186,
+					"left": 24,
+					"width": 300,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "General Disclaimer"
+				},
+				"XMLfolder16": {
+					"type": "input",
+					"top": 475,
+					"left": 24,
+					"width": 640,
+					"height": 105,
+					"dataSource": "[ServerPrefs:27]BookingDisclaimer:94",
+					"stroke": "#444444",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Text92": {
+					"type": "text",
+					"top": 454,
+					"left": 24,
+					"width": 655,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Booking Disclaimer - appears on the footnote of a booking email/receipt"
+				}
+			}
+		},
+		{
+			"objects": {
+				"useSSO": {
+					"type": "checkbox",
+					"top": 75,
+					"left": 48,
+					"width": 194,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]useSSO:119",
+					"text": "Use SSO",
+					"stroke": "#000000",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"useLDAP": {
+					"type": "checkbox",
+					"top": 75,
+					"left": 328,
+					"width": 194,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]useLDAP:120",
+					"text": "Use LDAP",
+					"stroke": "#000000",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"LDAP_GroupBox": {
+					"type": "groupBox",
+					"top": 125,
+					"left": 26,
+					"width": 659,
+					"height": 179,
+					"class": "Label",
+					"text": "LDAP Settings"
+				},
+				"XMLfolder17": {
+					"type": "input",
+					"top": 157,
+					"left": 170,
+					"width": 303,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]LDAP_ServerAddress:123",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"XMLfolder26": {
+					"type": "input",
+					"top": 182,
+					"left": 170,
+					"width": 303,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]LDAP_RootEntry:126",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"XMLfolder31": {
+					"type": "input",
+					"top": 207,
+					"left": 170,
+					"width": 303,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]LDAP_Admin:121",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"XMLfolder39": {
+					"type": "input",
+					"top": 232,
+					"left": 170,
+					"width": 174,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]LDAP_AdminPassword:122",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/XMLfolder39.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"cbViewLDAPPassword": {
+					"type": "checkbox",
+					"top": 228,
+					"left": 359,
+					"width": 125,
+					"height": 21,
+					"text": "View Password",
+					"focusable": false,
+					"method": "ObjectMethods/cbViewLDAPPassword.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"XMLfolder40": {
+					"type": "input",
+					"top": 255,
+					"left": 170,
+					"width": 57,
+					"height": 16,
+					"defaultValue": "25",
+					"dataSource": "[ServerPrefs:27]LDAP_Port:125",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text80": {
+					"type": "text",
+					"top": 157,
+					"left": 36,
+					"width": 131,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "LDAP Server"
+				},
+				"Text86": {
+					"type": "text",
+					"top": 182,
+					"left": 36,
+					"width": 131,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "LDAP Root Entry"
+				},
+				"Text89": {
+					"type": "text",
+					"top": 207,
+					"left": 36,
+					"width": 131,
+					"height": 12,
+					"stroke": "#444444",
+					"class": "Label",
+					"text": "LDAP Admin"
+				},
+				"Text98": {
+					"type": "text",
+					"top": 232,
+					"left": 36,
+					"width": 131,
+					"height": 12,
+					"stroke": "#444444",
+					"class": "Label",
+					"text": "LDAP Password *"
+				},
+				"Text103": {
+					"type": "text",
+					"top": 255,
+					"left": 36,
+					"width": 131,
+					"height": 12,
+					"stroke": "#444444",
+					"class": "Label",
+					"text": "LDAP Port No"
+				},
+				"Text104": {
+					"type": "text",
+					"top": 183,
+					"left": 486,
+					"width": 174,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"text": "e.g. CN=Users,DC=company,DC=com"
+				},
+				"Text105": {
+					"type": "text",
+					"top": 257,
+					"left": 234,
+					"width": 120,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"text": "e.g.: 2525"
+				},
+				"useLDAPSecure": {
+					"type": "checkbox",
+					"top": 249,
+					"left": 317,
+					"width": 194,
+					"height": 16,
+					"dataSource": "[ServerPrefs:27]LDAP_USESECURE:124",
+					"text": "Use secure connection",
+					"stroke": "#000000",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bHandleADUsersGroups": {
+					"type": "button",
+					"top": 324,
+					"left": 170,
+					"width": 376,
+					"height": 19,
+					"text": "Save preferences and handle AD users",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/bHandleADUsersGroups.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 2",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Group Box8",
+					"Group Box11",
+					"Group Box6",
+					"Field11",
+					"Field12",
+					"Field13",
+					"Field14",
+					"Text58",
+					"Text59",
+					"DD_Buy_Sell",
+					"Text15",
+					"Text48",
+					"Text54",
+					"Text90",
+					"Text91",
+					"offRateErrorPercent5",
+					"offRateErrorPercent6",
+					"offRateErrorPercent7",
+					"Group Box14",
+					"autoLogoutTime",
+					"Text1",
+					"Text18",
+					"Field15",
+					"Group Box3",
+					"Text19",
+					"passwordResetInterval",
+					"Group Box15",
+					"Text62",
+					"Field16",
+					"starteWireNo23",
+					"Group Box5",
+					"Text78",
+					"Text79",
+					"Field7",
+					"Text81",
+					"Text46",
+					"Text87",
+					"currencyRateSource",
+					"ftpUSeSecure",
+					"Group Box13",
+					"Text70",
+					"Text73",
+					"Text75",
+					"Text76",
+					"Group Box10",
+					"XMLfolder25",
+					"Text74",
+					"Text93",
+					"Text94",
+					"XMLfolder36",
+					"XMLfolder37",
+					"XMLfolder38",
+					"Text95",
+					"Text96",
+					"Text97",
+					"XMLfolder35",
+					"b_twilio",
+					"bSMSTest1",
+					"Text100",
+					"Text20",
+					"bSetupSubAccounts",
+					"bSMSTest2",
+					"XMLfolder28",
+					"XMLfolder6",
+					"Field1",
+					"LimitToRecheckSanctionList",
+					"XMLfolder32",
+					"XMLfolder30",
+					"profileReviewDays",
+					"profileReviewHighRiskDays",
+					"l_LimitForEDD",
+					"l_ReviewFrequency",
+					"Text88",
+					"NumHoursBeweenChecks",
+					"thresholdForPTRTransfers",
+					"l_ReviewFrequency1",
+					"SVbaseSerial",
+					"Text68",
+					"Group Box12",
+					"offRateErrorPercent4",
+					"startInvoiceNo1",
+					"Text42",
+					"startInvoiceNo2",
+					"Text77",
+					"Text101",
+					"PREFS_TableList",
+					"XMLfolder33",
+					"XMLfolder29",
+					"Text83",
+					"Text21",
+					"Text41",
+					"XMLfolder16",
+					"Text92",
+					"useLDAP",
+					"Text103",
+					"Text104",
+					"Text105",
+					"useLDAPSecure",
+					"bHandleADUsersGroups"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 181
+}

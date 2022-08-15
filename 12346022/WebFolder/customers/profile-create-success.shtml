@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/head.shtml-->
+    <!--#4DSCRIPT/webSelectWebUserRecord-->
+</head>
+
+<body>
+
+    <form method="post" action="/customers/login.shtml">
+
+        <div class="container">
+            <div style="margin-top:30px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="panel-title"><span class="fa fa-check-circle"></span>&nbsp;Profile Setup Complete!
+                            <!--#4DIF false-->
+                            <span class="small pull-right" style="position: relative; top:5px"><a class="link-a" href="/customers/login.shtml">Login</a></span>
+                            <!--#4DENDIF-->
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <h3>Your web profile request has been successfully submitted.[
+                            <!--#4DTEXT [Customers]CustomerID-->]</h3>
+
+                        Dear
+                        <!--#4DTEXT [Customers]firstName-->,
+                        <br>
+                        <!--#4DSCRIPT/webGetKeyValue/web.customers.profile.onsuccess.alert-->
+
+                        <br><br>
+                        <div class="form-group">
+                            <input id="login-submit" name="login-submit" class="btn btn-success btn-block" value="Close" type="submit">
+                        </div>
+                    </div>
+
+                    <div class="panel-footer panel-primary">
+                        <a class="logo pull-left" style='padding-top: 0px' href="<!--#4DSCRIPT/webGetKeyValue/web.configuration.footer.URL-->"><img src="<!--#4DSCRIPT/webGetKeyValue/web.configuration.footer.logo.url-->" height="20"></a>
+                        <!--#4DTEXT webgetkeyvalue("web.configuration.footer.name")-->
+                        <span class="pull-right">
+                            <a href="tel:<!--#4DSCRIPT/webGetKeyValue/web.configuration.footer.phone-->"><!--#4DSCRIPT/webGetKeyValue/web.configuration.footer.phone--></a>
+                        </span>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

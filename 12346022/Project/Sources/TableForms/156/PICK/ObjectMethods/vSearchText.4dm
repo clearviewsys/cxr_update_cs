@@ -1,0 +1,2 @@
+C_TEXT:C284(vSearchText)
+handlePICKSearchVariable(Self:C308; Current form table:C627; ->[RelationTypes:156]relationTypeID:1; ->[RelationTypes:156]Description:2; ->[RelationTypes:156]relationTypeID:1; ->[RelationTypes:156]Description:2)

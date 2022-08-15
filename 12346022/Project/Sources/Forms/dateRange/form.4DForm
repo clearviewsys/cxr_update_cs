@@ -1,0 +1,462 @@
+﻿{
+	"destination": "detailScreen",
+	"windowTitle": "Date Range",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 39,
+					"left": 16,
+					"width": 56,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "From"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 68,
+					"left": 17,
+					"width": 55,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "To "
+				},
+				"Text3": {
+					"type": "text",
+					"top": 4,
+					"left": 16,
+					"width": 519,
+					"height": 24,
+					"fill": "#DDDDDD",
+					"class": "Titles",
+					"textAlign": "center",
+					"text": " Select a Date Range "
+				},
+				"vFromDate": {
+					"type": "input",
+					"top": 43,
+					"left": 80,
+					"width": 285,
+					"height": 20,
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Large",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"method": "ObjectMethods/vFromDate.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"vToDate": {
+					"type": "input",
+					"top": 70,
+					"left": 80,
+					"width": 285,
+					"height": 20,
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Large",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"method": "ObjectMethods/vToDate.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"b_OK": {
+					"type": "button",
+					"top": 410,
+					"left": 415,
+					"width": 125,
+					"height": 25,
+					"action": "accept",
+					"text": "OK",
+					"class": "Control_Large_",
+					"defaultButton": true,
+					"method": "ObjectMethods/b_OK.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_Cance": {
+					"type": "button",
+					"top": 410,
+					"left": 313,
+					"width": 100,
+					"height": 25,
+					"action": "cancel",
+					"shortcutKey": ".",
+					"shortcutAccel": true,
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/b_Cance.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"shortcuts1": {
+					"type": "text",
+					"top": 277,
+					"left": 12,
+					"width": 166,
+					"height": 126,
+					"class": "Fields",
+					"text": "Key\tAction\r T\tToday\r ; \tBack one day\r '  \tGo forward one day\r [\tGo back 1 month\r ] \tGo forward 1 month\r - \tto add 1 year. \r = \tto subtract 1 year"
+				},
+				"b_dayminus": {
+					"type": "button",
+					"top": 167,
+					"left": 16,
+					"width": 100,
+					"height": 25,
+					"text": "Day -",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_dayminus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_DayPlus": {
+					"type": "button",
+					"top": 167,
+					"left": 117,
+					"width": 100,
+					"height": 25,
+					"text": "Day +",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_DayPlus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_MonthMinus": {
+					"type": "button",
+					"top": 194,
+					"left": 16,
+					"width": 100,
+					"height": 25,
+					"text": "Month -",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_MonthMinus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_MonthPlus": {
+					"type": "button",
+					"top": 194,
+					"left": 117,
+					"width": 100,
+					"height": 25,
+					"text": "Month +",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_MonthPlus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_YearMinus": {
+					"type": "button",
+					"top": 221,
+					"left": 16,
+					"width": 100,
+					"height": 25,
+					"text": "Year -",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_YearMinus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_YearPlus": {
+					"type": "button",
+					"top": 221,
+					"left": 117,
+					"width": 100,
+					"height": 25,
+					"text": "Year +",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_YearPlus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_BOM": {
+					"type": "button",
+					"top": 194,
+					"left": 218,
+					"width": 125,
+					"height": 25,
+					"text": "BOMonth",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_BOM.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_EOM": {
+					"type": "button",
+					"top": 194,
+					"left": 344,
+					"width": 125,
+					"height": 25,
+					"text": "EOMonth",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_EOM.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_BOY": {
+					"type": "button",
+					"top": 221,
+					"left": 218,
+					"width": 125,
+					"height": 25,
+					"text": "BOYear",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_BOY.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_EOY": {
+					"type": "button",
+					"top": 221,
+					"left": 344,
+					"width": 125,
+					"height": 25,
+					"text": "EOYear",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_EOY.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_Today": {
+					"type": "button",
+					"top": 167,
+					"left": 218,
+					"width": 251,
+					"height": 25,
+					"text": "Today",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_Today.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button1": {
+					"type": "pictureButton",
+					"top": 39,
+					"left": 372,
+					"width": 24,
+					"height": 24,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/calendar.png",
+					"loopBackToFirstFrame": true,
+					"method": "ObjectMethods/3D Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button2": {
+					"type": "pictureButton",
+					"top": 66,
+					"left": 372,
+					"width": 24,
+					"height": 24,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/calendar.png",
+					"loopBackToFirstFrame": true,
+					"method": "ObjectMethods/3D Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"vDFromDate": {
+					"type": "input",
+					"top": 45,
+					"left": 399,
+					"width": 141,
+					"height": 15,
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "systemMedium",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"vDToDate": {
+					"type": "input",
+					"top": 75,
+					"left": 399,
+					"width": 141,
+					"height": 15,
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "systemMedium",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 136,
+					"left": 36,
+					"width": 159,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Number of days:"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 136,
+					"left": 204,
+					"width": 120,
+					"height": 20,
+					"dataSource": "vNumberOfDays",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"spellcheck": true,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"shortcuts2": {
+					"type": "text",
+					"top": 269,
+					"left": 291,
+					"width": 206,
+					"height": 112,
+					"class": "Fields",
+					"text": "Key\tAction\rY\tBeginning of Year\rR \tEnd of Year\r\rB\tBeginning of Month\rE \tEnd of Month"
+				},
+				"dd_dateRanges": {
+					"type": "dropdown",
+					"top": 97,
+					"left": 204,
+					"width": 195,
+					"height": 24,
+					"focusable": false,
+					"class": "Fields_Medium",
+					"method": "ObjectMethods/dd_dateRanges.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 97,
+					"left": 45,
+					"width": 150,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Date Range"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

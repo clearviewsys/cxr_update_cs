@@ -1,0 +1,492 @@
+﻿{
+	"destination": "detailScreen",
+	"windowMinWidth": 400,
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 587,
+	"markerBreak": 587,
+	"markerFooter": 640,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Group Box": {
+					"type": "groupBox",
+					"top": 64,
+					"left": 47,
+					"width": 710,
+					"height": 203,
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Reporting Entity Information:"
+				},
+				"Group Box1": {
+					"type": "groupBox",
+					"top": 292,
+					"left": 47,
+					"width": 710,
+					"height": 203,
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Contact Information:"
+				},
+				"Group Box2": {
+					"type": "groupBox",
+					"top": 515,
+					"left": 47,
+					"width": 710,
+					"height": 124,
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Report Configuration"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text14": {
+					"type": "text",
+					"top": 138,
+					"left": 77,
+					"width": 260,
+					"height": 26,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Entity PKI:"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 179,
+					"left": 77,
+					"width": 260,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Certificate ID:"
+				},
+				"Text22": {
+					"type": "text",
+					"top": 3,
+					"left": 13,
+					"width": 743,
+					"height": 24,
+					"sizingX": "grow",
+					"fill": "#005597",
+					"stroke": "#FFFFFF",
+					"class": "Titles",
+					"textAlign": "center",
+					"text": "Please Enter o Edit The FINTRAC Information"
+				},
+				"reportingEntityName": {
+					"type": "input",
+					"top": 99,
+					"left": 350,
+					"width": 373,
+					"height": 24,
+					"dataSource": "reportingEntityName",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"fill": "#FFCFA0",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "no",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"reportingEntityPKI": {
+					"type": "input",
+					"top": 138,
+					"left": 350,
+					"width": 372,
+					"height": 24,
+					"sizingX": "grow",
+					"dataSource": "reportingEntityPKI",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"fill": "#FFCFA0",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "no",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"reportingEntityCertificateID": {
+					"type": "input",
+					"top": 177,
+					"left": 350,
+					"width": 209,
+					"height": 24,
+					"dataSource": "reportingEntityCertificateID",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"fill": "#FFCFA0",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "no",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"reportingEntityLocationNumber": {
+					"type": "input",
+					"top": 217,
+					"left": 350,
+					"width": 66,
+					"height": 24,
+					"dataSource": "reportingEntityLocationNumber",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"fill": "#FFCFA0",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "no",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"contactSurname": {
+					"type": "input",
+					"top": 332,
+					"left": 350,
+					"width": 373,
+					"height": 24,
+					"dataSource": "contactSurname",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"fill": "#FFCFA0",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "no",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"contactGivenName": {
+					"type": "input",
+					"top": 371,
+					"left": 350,
+					"width": 372,
+					"height": 24,
+					"sizingX": "grow",
+					"dataSource": "contactGivenName",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"fill": "#FFCFA0",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "no",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"contactOtherName": {
+					"type": "input",
+					"top": 410,
+					"left": 350,
+					"width": 209,
+					"height": 24,
+					"dataSource": "contactOtherName",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"fill": "#FFCFA0",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "no",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"contactPhoneNumber": {
+					"type": "input",
+					"top": 449,
+					"left": 350,
+					"width": 209,
+					"height": 24,
+					"dataSource": "contactPhoneNumber",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"fill": "#FFCFA0",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "no",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"contactPhoneNumberExt": {
+					"type": "input",
+					"top": 449,
+					"left": 569,
+					"width": 156,
+					"height": 24,
+					"dataSource": "contactPhoneNumberExt",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"fill": "#FFCFA0",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "no",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"initialDate": {
+					"type": "input",
+					"top": 559,
+					"left": 349,
+					"width": 100,
+					"height": 24,
+					"dataSource": "initialDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"fill": "#FFCFA0",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "no",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"operationMode": {
+					"type": "checkbox",
+					"top": 552,
+					"left": 525,
+					"width": 186,
+					"height": 39,
+					"dataSource": "operationMode",
+					"text": "  Testing Mode",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"fontWeight": "bold",
+					"events": [
+						"onClick"
+					]
+				},
+				"bReport": {
+					"type": "button",
+					"top": 647,
+					"left": 615,
+					"width": 142,
+					"height": 39,
+					"dataSource": "bReport",
+					"text": "Generate Report",
+					"method": "ObjectMethods/bReport.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bUpdate": {
+					"type": "button",
+					"top": 647,
+					"left": 456,
+					"width": 142,
+					"height": 39,
+					"dataSource": "bUpdate",
+					"text": "Update Information",
+					"method": "ObjectMethods/bUpdate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 647,
+					"left": 47,
+					"width": 142,
+					"height": 39,
+					"dataSource": "bCancel",
+					"action": "cancel",
+					"text": "Cancel",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 101,
+					"left": 77,
+					"width": 260,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Entity Name:"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 219,
+					"left": 77,
+					"width": 260,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Location Number:"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 371,
+					"left": 77,
+					"width": 260,
+					"height": 26,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Given Name:"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 412,
+					"left": 77,
+					"width": 260,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Other (Middle) Name:"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 334,
+					"left": 77,
+					"width": 260,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Surname:"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 452,
+					"left": 77,
+					"width": 260,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Phone Number and Extension:"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 561,
+					"left": 76,
+					"width": 260,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Report Date"
+				},
+				"reportingEntityLocationName": {
+					"type": "input",
+					"top": 217,
+					"left": 430,
+					"width": 287,
+					"height": 24,
+					"dataSource": "reportingEntityLocationName",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"fill": "#FFCFA0",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "no",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

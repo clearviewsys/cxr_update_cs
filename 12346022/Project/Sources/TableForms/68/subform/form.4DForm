@@ -1,0 +1,338 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 21,
+	"markerBody": 42,
+	"markerBreak": 43,
+	"markerFooter": 48,
+	"events": [
+		"onLoad",
+		"onDoubleClick",
+		"onDragOver",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"S2_Text": {
+					"type": "text",
+					"top": 6,
+					"left": 9,
+					"width": 68,
+					"height": 12,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "Date Stamp: "
+				},
+				"S4_Text": {
+					"type": "text",
+					"top": 6,
+					"left": 144,
+					"width": 77,
+					"height": 12,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "Invoice ID : "
+				},
+				"S5_Text": {
+					"type": "text",
+					"top": 6,
+					"left": 228,
+					"width": 72,
+					"height": 12,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "Invoice Serial : "
+				},
+				"backstripe": {
+					"type": "rectangle",
+					"top": 20,
+					"left": 0,
+					"width": 756,
+					"height": 24,
+					"sizingX": "grow",
+					"stroke": "#FFFFFF"
+				},
+				"S2_Field": {
+					"type": "input",
+					"top": 27,
+					"left": 4,
+					"width": 78,
+					"height": 12,
+					"sizingX": "grow",
+					"dataSource": "[ControlBoxLog:68]Date:2",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Small",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S3_Field": {
+					"type": "input",
+					"top": 27,
+					"left": 84,
+					"width": 48,
+					"height": 12,
+					"sizingX": "grow",
+					"dataSource": "[ControlBoxLog:68]Time:3",
+					"dataSourceTypeHint": "time",
+					"class": "Fields_Small",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S4_Field": {
+					"type": "input",
+					"top": 27,
+					"left": 144,
+					"width": 77,
+					"height": 12,
+					"sizingX": "grow",
+					"dataSource": "[ControlBoxLog:68]InvoiceID:7",
+					"class": "Fields_Small",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S5_Field": {
+					"type": "input",
+					"top": 27,
+					"left": 228,
+					"width": 72,
+					"height": 12,
+					"sizingX": "grow",
+					"dataSource": "[ControlBoxLog:68]InvoiceSerial:8",
+					"dataSourceTypeHint": "integer",
+					"class": "Fields_Small",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S6_Field": {
+					"type": "input",
+					"top": 27,
+					"left": 555,
+					"width": 192,
+					"height": 12,
+					"sizingX": "grow",
+					"dataSource": "[ControlBoxLog:68]outputString:5",
+					"class": "Fields_Small",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"spellcheck": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S7_Field": {
+					"type": "checkbox",
+					"top": 27,
+					"left": 521,
+					"width": 51,
+					"height": 12,
+					"sizingX": "grow",
+					"dataSource": "[ControlBoxLog:68]isSuccessful:9",
+					"text": "OK",
+					"class": "Fields_Small",
+					"focusable": false,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Line12": {
+					"type": "line",
+					"top": 0,
+					"left": 754,
+					"height": 43,
+					"sizingX": "move",
+					"stroke": "#A8A8A8"
+				},
+				"Line13": {
+					"type": "line",
+					"top": 1,
+					"left": 515,
+					"height": 43,
+					"stroke": "#A8A8A8"
+				},
+				"Line14": {
+					"type": "line",
+					"top": 1,
+					"left": 306,
+					"height": 43,
+					"stroke": "#A8A8A8"
+				},
+				"Line15": {
+					"type": "line",
+					"top": 1,
+					"left": 222,
+					"height": 43,
+					"stroke": "#A8A8A8"
+				},
+				"Line16": {
+					"type": "line",
+					"top": 1,
+					"left": 138,
+					"height": 43,
+					"stroke": "#A8A8A8"
+				},
+				"S6_Field1": {
+					"type": "input",
+					"top": 27,
+					"left": 311,
+					"width": 194,
+					"height": 12,
+					"sizingX": "grow",
+					"dataSource": "[ControlBoxLog:68]inputString:4",
+					"class": "Fields_Small",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"spellcheck": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S6_Text1": {
+					"type": "text",
+					"top": 5,
+					"left": 312,
+					"width": 152,
+					"height": 12,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "Input String : "
+				},
+				"S6_Text": {
+					"type": "text",
+					"top": 5,
+					"left": 521,
+					"width": 177,
+					"height": 12,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "Output String : "
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

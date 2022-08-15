@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--#4DSCRIPT/webRedirectIfNotAuthorized-->
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/head.shtml-->
+
+    <style type="text/css">
+        body {
+            padding-top: 5px;
+            /* Margin bottom by footer height */
+            margin-bottom: 60px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="container content">
+            <div class="row" style="padding-top: 70px">
+                <div class="col-md-6 col-md-offset-3">
+
+                    <div class="row">
+                        <div class="col-sm-12 clearfix" style="padding-left: 0px; padding-bottom: 10px">
+                            <img class="img-responsive" src="<!--#4DSCRIPT/webGetKeyValue/email.configuration.logo.large.url-->">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <span class="fa fa-bars"></span>&nbsp;
+                                    Registration Form <span class="pull-right"><small>#
+                                            <!--#4DSCRIPT/WAPI_webVariableValue/links___linkid--> on
+                                            <!--#4DTEXT CURRENT DATE--></small></span>
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+
+                                <table class="table table-condensed small" style="border: .5px solid black;">
+                                    <thead class='h3'>
+                                        <tr>
+                                            <td>Field
+                                            </td>
+                                            <td>Value
+                                            </td>
+                                        </tr>
+                                    </thead>
+
+                                    <tr>
+                                        <td width='25%'>
+                                            <div>Name</div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <!--#4DSCRIPT/WAPI_webVariableValue/links___firstname-->
+                                                <!--#4DSCRIPT/WAPI_webVariableValue/links___lastname-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>Client Number</div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <!--#4DSCRIPT/WAPI_webVariableValue/links___linkid-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>Identity Number</div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <!--#4DSCRIPT/WAPI_webVariableValue/links___pictureIDNo-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>Identification Type</div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <!--#4DSCRIPT/WAPI_webVariableValue/links___pictureIDType-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>Address</div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <!--#4DSCRIPT/WAPI_webVariableValue/links___address--><br>
+                                                <!--#4DSCRIPT/WAPI_webVariableValue/links___country-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>Mobile Phone</div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <!--#4DSCRIPT/WAPI_webVariableValue/links___mainphone-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>Email</div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <!--#4DSCRIPT/WAPI_webVariableValue/links___email-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!--#4DIF false-->
+                                    <tr>
+                                        <td colspan="2">
+                                            <h4>I confirm:</h4>
+                                            <div class="small">By filling in and signing this form I,
+                                                <!--#4DSCRIPT/WAPI_webVariableValue/links___firstname-->
+                                                <!--#4DSCRIPT/WAPI_webVariableValue/links___lastname-->, confirm that the funds being transferred by me are not involved in money launderng, terrism or the development of nuclear weapons and are in accordance with all applicable EU laws and regulations. </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <br>
+                                            <br>
+                                            <div style="border-top-style: solid; border-width: thin">Client Signature</div>
+                                        </td>
+                                    </tr>
+                                    <!--#4DENDIF-->
+                                    <tr>
+                                        <td>
+                                            <div>Date</div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <!--#4DTEXT current date-->
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{
+	"forms": {
+		"Entry": {
+			"timeStamp": "2022-08-15T20:45:57.947Z",
+			"destination": "detailScreen"
+		},
+		"QuizChoiceForm": {
+			"timeStamp": "2022-08-15T20:45:57.950Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-15T20:45:57.948Z",
+			"destination": "detailScreen"
+		},
+		"quizQuestionForm": {
+			"timeStamp": "2022-08-15T20:45:57.956Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T20:45:57.951Z",
+			"destination": "detailScreen"
+		},
+		"View1": {
+			"timeStamp": "2022-08-15T20:45:57.953Z",
+			"destination": "detailScreen"
+		}
+	}
+}

@@ -1,0 +1,492 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "ViewToolbar2",
+	"inheritedFormTable": 7,
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 416,
+	"markerBreak": 416,
+	"markerFooter": 426,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onDataChange",
+		"onTimer"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control1": {
+					"type": "tab",
+					"top": 235,
+					"left": 10,
+					"width": 550,
+					"height": 430,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "tabView",
+					"dataSourceTypeHint": "arrayText",
+					"labels": [
+						"Obverse",
+						"Reverse"
+					],
+					"class": "Control",
+					"action": "gotoPage",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"top": 60,
+					"left": 10,
+					"width": 265,
+					"height": 16,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "Label",
+					"fontWeight": "bold",
+					"text": "BankNotes"
+				},
+				"vRecNum": {
+					"type": "input",
+					"top": 60,
+					"left": 100,
+					"width": 136,
+					"height": 15,
+					"dataSource": "vRecNum",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"focusable": false,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Record Number"
+					},
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/vRecNum.4dm",
+					"events": [
+						"onLoad",
+						"onHeader",
+						"onPrintingBreak"
+					]
+				},
+				"Text11": {
+					"type": "text",
+					"top": 90,
+					"left": 10,
+					"width": 99,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Bank Notes ID"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 120,
+					"left": 10,
+					"width": 99,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Cat No"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 150,
+					"left": 10,
+					"width": 99,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Country Code"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 180,
+					"left": 10,
+					"width": 99,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Description"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 205,
+					"left": 10,
+					"width": 99,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Denomination"
+				},
+				"BankNotesID": {
+					"type": "input",
+					"top": 90,
+					"left": 135,
+					"width": 54,
+					"height": 19,
+					"dataSource": "[BankNotes:23]BankNotesID:1",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CatNo1": {
+					"type": "input",
+					"top": 120,
+					"left": 135,
+					"width": 56,
+					"height": 19,
+					"dataSource": "[BankNotes:23]Prefix:6",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CatNo": {
+					"type": "input",
+					"top": 120,
+					"left": 200,
+					"width": 56,
+					"height": 19,
+					"dataSource": "[BankNotes:23]CatNo:3",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CatNo2": {
+					"type": "input",
+					"top": 120,
+					"left": 265,
+					"width": 56,
+					"height": 19,
+					"dataSource": "[BankNotes:23]Postfix:7",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CountryCode": {
+					"type": "input",
+					"top": 150,
+					"left": 135,
+					"width": 27,
+					"height": 19,
+					"dataSource": "[BankNotes:23]CountryCode:2",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Description": {
+					"type": "input",
+					"top": 180,
+					"left": 135,
+					"width": 340,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[BankNotes:23]Description:4",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Denomination": {
+					"type": "input",
+					"top": 205,
+					"left": 135,
+					"width": 120,
+					"height": 15,
+					"dataSource": "[BankNotes:23]Denomination:5",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 55,
+					"left": 270,
+					"width": 80,
+					"height": 20,
+					"dataSource": "Button1",
+					"text": "Download",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 125,
+					"left": 330,
+					"width": 95,
+					"height": 15,
+					"class": "Label",
+					"text": "ex : CA 30 A"
+				},
+				"CountryCode1": {
+					"type": "input",
+					"top": 150,
+					"left": 265,
+					"width": 27,
+					"height": 19,
+					"dataSource": "[BankNotes:23]CurrencyCode:8",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 150,
+					"left": 175,
+					"width": 99,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Currency Code"
+				},
+				"Button2": {
+					"type": "button",
+					"top": 215,
+					"left": 440,
+					"width": 110,
+					"height": 20,
+					"dataSource": "Button2",
+					"text": "Button",
+					"class": "Control",
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Variable1": {
+					"type": "input",
+					"top": 265,
+					"left": 15,
+					"width": 540,
+					"height": 396,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "vPictObverse",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"pictureFormat": "truncatedCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			},
+			"entryOrder": []
+		},
+		{
+			"objects": {
+				"Variable2": {
+					"type": "input",
+					"top": 265,
+					"left": 15,
+					"width": 540,
+					"height": 396,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "vPictReverse",
+					"dataSourceTypeHint": "picture",
+					"fill": "#CCCCCC",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"pictureFormat": "truncatedCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			},
+			"entryOrder": []
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

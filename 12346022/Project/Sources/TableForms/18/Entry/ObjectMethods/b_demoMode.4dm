@@ -1,0 +1,1 @@
+setMACsLicenseSettings(1)

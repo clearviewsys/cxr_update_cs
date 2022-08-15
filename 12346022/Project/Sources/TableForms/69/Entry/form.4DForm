@@ -1,0 +1,385 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Popup Drop down List1": {
+					"type": "dropdown",
+					"top": 56,
+					"left": 114,
+					"width": 308,
+					"height": 22,
+					"dataSource": "arrTableNames",
+					"class": "Fields_Medium",
+					"method": "ObjectMethods/Popup Drop down List1.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Popup Drop down List2": {
+					"type": "dropdown",
+					"top": 84,
+					"left": 114,
+					"width": 308,
+					"height": 22,
+					"dataSource": "arrFieldNames",
+					"class": "Fields_Medium",
+					"method": "ObjectMethods/Popup Drop down List2.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 114,
+					"left": 116,
+					"width": 54,
+					"height": 18,
+					"dataSource": "[FieldConstraints:69]TableNo:1",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 139,
+					"left": 116,
+					"width": 54,
+					"height": 18,
+					"dataSource": "[FieldConstraints:69]FieldNo:2",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 165,
+					"left": 116,
+					"width": 306,
+					"height": 18,
+					"dataSource": "[FieldConstraints:69]FieldLabel:3",
+					"class": "Fields_Medium",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "checkbox",
+					"top": 192,
+					"left": 114,
+					"width": 135,
+					"height": 18,
+					"dataSource": "[FieldConstraints:69]isMandatory:4",
+					"text": "Mandatory Field",
+					"class": "Fields_Medium",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Round Rectangle": {
+					"type": "rectangle",
+					"top": 282,
+					"left": 15,
+					"width": 413,
+					"height": 94,
+					"fill": "transparent",
+					"borderRadius": 5
+				},
+				"cb_Conditional": {
+					"type": "checkbox",
+					"top": 289,
+					"left": 26,
+					"width": 383,
+					"height": 20,
+					"dataSource": "[FieldConstraints:69]isConditional:7",
+					"text": "Activate when AML Rule is met",
+					"class": "Fields_medium",
+					"method": "ObjectMethods/cb_Conditional.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"conditionGroup": {
+					"type": "input",
+					"top": 314,
+					"left": 274,
+					"width": 135,
+					"height": 20,
+					"dataSource": "[FieldConstraints:69]GroupName:8",
+					"class": "Fields_Large",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 315,
+					"left": 67,
+					"width": 200,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Condition Group Name"
+				},
+				"Text": {
+					"type": "text",
+					"top": 339,
+					"left": 26,
+					"width": 392,
+					"height": 27,
+					"class": "Tags",
+					"text": "conditional contraints are used by the AML Rule and get checked only a certain condition or rules apply. "
+				},
+				"Text1": {
+					"type": "text",
+					"top": 115,
+					"left": 9,
+					"width": 100,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Table No"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 58,
+					"left": 9,
+					"width": 100,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Table"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 85,
+					"left": 9,
+					"width": 100,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Field"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 140,
+					"left": 9,
+					"width": 100,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Field No"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 166,
+					"left": 9,
+					"width": 100,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Field Label"
+				},
+				"Button1": {
+					"type": "button",
+					"top": 388,
+					"left": 308,
+					"width": 114,
+					"height": 32,
+					"dataSource": "Button1",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 388,
+					"left": 189,
+					"width": 114,
+					"height": 32,
+					"dataSource": "Button1",
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 114,
+					"left": 183,
+					"width": 200,
+					"height": 18,
+					"dataSource": "[FieldConstraints:69]TableName:5",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 139,
+					"left": 183,
+					"width": 200,
+					"height": 18,
+					"dataSource": "[FieldConstraints:69]FieldName:6",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"OptInEmail": {
+					"type": "checkbox",
+					"top": 192,
+					"left": 249,
+					"width": 174,
+					"height": 18,
+					"text": "Web Contraint",
+					"class": "Fields_Medium",
+					"threeState": true,
+					"method": "ObjectMethods/OptInEmail.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 218,
+					"left": 116,
+					"width": 302,
+					"height": 52,
+					"dataSource": "[FieldConstraints:69]condition:14",
+					"class": "Fields_Medium",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 218,
+					"left": 9,
+					"width": 100,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Condition"
+				},
+				"Button": {
+					"type": "button",
+					"top": 238,
+					"left": 43,
+					"width": 65,
+					"height": 22,
+					"text": "Test",
+					"focusable": false,
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"OptInEmail"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 88,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

@@ -1,0 +1,322 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_PICK",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vSearchText": {
+					"type": "input",
+					"top": 49,
+					"left": 205,
+					"width": 246,
+					"height": 20,
+					"dataSource": "vSearchText",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/vSearchText.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange",
+						"onAfterKeystroke",
+						"onAfterEdit"
+					]
+				},
+				"List Box": {
+					"type": "listbox",
+					"top": 76,
+					"left": 10,
+					"width": 441,
+					"height": 381,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "slb_picker",
+					"movableRows": false,
+					"headerHeight": "25px",
+					"table": 62,
+					"highlightSet": "$ListboxSet0",
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"alternateFill": "#E8EAFD",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"method": "ObjectMethods/List Box.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"name": "Column7",
+							"dataSource": "[Countries:62]isSanctioned:7",
+							"dataSourceTypeHint": "boolean",
+							"width": 44,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"fill": "#EAE2DF",
+							"alternateFill": "#D5D8DA",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header7",
+								"text": "hold",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "[Countries:62]CountryCode:1",
+							"width": 49,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#E8EAFD",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Code",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer1",
+								"dataSource": "vTotalCount",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "count",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C2C8CD",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[Countries:62]RiskLevel:5",
+							"width": 45,
+							"maxWidth": 32000,
+							"alternateFill": "#E8EAFD",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Risk",
+								"text": "Risk",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer2",
+								"dataSourceTypeHint": "boolean",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C2C8CD",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "[Countries:62]CountryName:2",
+							"width": 350,
+							"minWidth": 300,
+							"maxWidth": 32000,
+							"alternateFill": "#E8EAFD",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header5",
+								"text": "Country Name",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer5",
+								"dataSourceTypeHint": "boolean",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C2C8CD",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						}
+					]
+				},
+				"PickButton": {
+					"type": "button",
+					"top": 464,
+					"left": 300,
+					"width": 151,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": ":xliff:cvs_pick",
+					"class": "Control_Large_",
+					"defaultButton": true,
+					"method": "ObjectMethods/PickButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 464,
+					"left": 205,
+					"width": 95,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 48,
+					"left": 10,
+					"width": 164,
+					"height": 21,
+					"class": "Fields_Large",
+					"text": "Type Country Name"
+				},
+				"newButton": {
+					"type": "button",
+					"top": 463,
+					"left": 10,
+					"width": 122,
+					"height": 25,
+					"sizingY": "move",
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"class": "Control_Large_",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": ":xliff:cvs_add",
+					"icon": "/RESOURCES/Images/library/toolbarNewRecord (24134).png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/newButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_self": {
+					"type": "button",
+					"top": 9,
+					"left": 408,
+					"width": 43,
+					"height": 25,
+					"text": "XX",
+					"method": "ObjectMethods/b_self.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"vSearchText",
+				"List Box",
+				"PickButton",
+				"Button2",
+				"b_self"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+handleListBoxObjectMethod(Self:C308; ->[Bookings:50])

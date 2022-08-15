@@ -1,0 +1,356 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_View",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Name": {
+					"type": "input",
+					"top": 88,
+					"left": 150,
+					"width": 358,
+					"height": 18,
+					"dataSource": "[AML_AggrRules:150]ruleName:2",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Description": {
+					"type": "input",
+					"top": 119,
+					"left": 150,
+					"width": 358,
+					"height": 36,
+					"dataSource": "[AML_AggrRules:150]description:3",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"enterable": false,
+					"styledText": true,
+					"multiline": "yes",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Name1": {
+					"type": "input",
+					"top": 168,
+					"left": 150,
+					"width": 174,
+					"height": 18,
+					"dataSource": "[AML_AggrRules:150]ifCustomerID:7",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Name2": {
+					"type": "input",
+					"top": 200,
+					"left": 150,
+					"width": 174,
+					"height": 18,
+					"dataSource": "[AML_AggrRules:150]ifAccountID:19",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"cbisReceived": {
+					"type": "checkbox",
+					"top": 252,
+					"left": 91,
+					"width": 130,
+					"height": 21,
+					"text": "Received?",
+					"class": "Fields_Medium",
+					"stroke": "#000000",
+					"focusable": false,
+					"threeState": true,
+					"method": "ObjectMethods/cbisReceived.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"cbpaymethod": {
+					"type": "checkbox",
+					"top": 278,
+					"left": 91,
+					"width": 150,
+					"height": 21,
+					"text": "Payment Method?",
+					"class": "Fields_Medium",
+					"stroke": "#000000",
+					"focusable": false,
+					"threeState": true,
+					"method": "ObjectMethods/cbpaymethod.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Name7": {
+					"type": "input",
+					"top": 314,
+					"left": 91,
+					"width": 130,
+					"height": 18,
+					"dataSource": "[AML_AggrRules:150]ifQtyGTOE:9",
+					"dataSourceTypeHint": "integer",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Name8": {
+					"type": "input",
+					"top": 344,
+					"left": 91,
+					"width": 130,
+					"height": 18,
+					"dataSource": "[AML_AggrRules:150]ifVolumeGTOE:10",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Name10": {
+					"type": "input",
+					"top": 374,
+					"left": 91,
+					"width": 80,
+					"height": 18,
+					"dataSource": "[AML_AggrRules:150]inDays:12",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"IsActive": {
+					"type": "checkbox",
+					"top": 404,
+					"left": 91,
+					"width": 130,
+					"height": 18,
+					"dataSource": "[AML_AggrRules:150]isActive:4",
+					"text": "Rule is Active",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"isDuringInvoice?": {
+					"type": "checkbox",
+					"top": 431,
+					"left": 91,
+					"width": 130,
+					"height": 18,
+					"dataSource": "[AML_AggrRules:150]ifIsDuringInvoice:13",
+					"text": "if During Invoice?",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"EDD": {
+					"type": "checkbox",
+					"top": 252,
+					"left": 285,
+					"width": 67,
+					"height": 18,
+					"dataSource": "[AML_AggrRules:150]thenEDD:14",
+					"text": "EDD",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Warn": {
+					"type": "checkbox",
+					"top": 278,
+					"left": 285,
+					"width": 67,
+					"height": 18,
+					"dataSource": "[AML_AggrRules:150]thenWarn:15",
+					"text": "Warn",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"WarningMessage": {
+					"type": "input",
+					"top": 344,
+					"left": 277,
+					"width": 239,
+					"height": 90,
+					"dataSource": "[AML_AggrRules:150]WarningMessage:16",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"enterable": false,
+					"styledText": true,
+					"multiline": "yes",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_Description": {
+					"type": "text",
+					"top": 120,
+					"left": 48,
+					"width": 100,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "left",
+					"text": "Description"
+				},
+				"l_Name": {
+					"type": "text",
+					"top": 88,
+					"left": 48,
+					"width": 100,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "left",
+					"text": "Rule Name"
+				},
+				"l_warningMessage": {
+					"type": "text",
+					"top": 313,
+					"left": 264,
+					"width": 128,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Warning Message"
+				},
+				"l_CustID": {
+					"type": "text",
+					"top": 170,
+					"left": 48,
+					"width": 100,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "left",
+					"text": "Customer ID"
+				},
+				"l_Account": {
+					"type": "text",
+					"top": 199,
+					"left": 48,
+					"width": 100,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "left",
+					"text": "Account"
+				},
+				"l_Qty": {
+					"type": "text",
+					"top": 309,
+					"left": 30,
+					"width": 70,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "left",
+					"text": "Qty >="
+				},
+				"l_Vol": {
+					"type": "text",
+					"top": 340,
+					"left": 30,
+					"width": 70,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "left",
+					"text": "Vol >="
+				},
+				"l_Days": {
+					"type": "text",
+					"top": 370,
+					"left": 30,
+					"width": 70,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "left",
+					"text": "Days"
+				},
+				"Line": {
+					"type": "line",
+					"top": 238,
+					"left": 255,
+					"height": 230
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,2 @@
+//%attributes = {}
+searchTable(->[Confirmations:153]; ->[Confirmations:153]confirmationID:2; ->[Confirmations:153]requestDate:3; ->[Confirmations:153]requestUser:7; ->[Confirmations:153]status:12; ->[Confirmations:153]confirmedDate:8)

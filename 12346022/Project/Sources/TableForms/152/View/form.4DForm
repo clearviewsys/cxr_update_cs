@@ -1,0 +1,368 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "ViewToolbar2",
+	"inheritedFormTable": 7,
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text10": {
+					"type": "text",
+					"top": 97,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Username"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 70,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Site Name"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 290,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "SFTP?"
+				},
+				"SiteName": {
+					"type": "input",
+					"top": 71,
+					"left": 131,
+					"width": 275,
+					"height": 16,
+					"dataSource": "[FTP_Sites:152]siteName:2",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"Username": {
+					"type": "input",
+					"top": 98,
+					"left": 131,
+					"width": 157,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]username:3",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"SFTP_first": {
+					"type": "radio",
+					"top": 291,
+					"left": 131,
+					"width": 35,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]isSFTP:12",
+					"text": "Yes",
+					"stroke": "#000000",
+					"focusable": false,
+					"radioGroup": "SFTP_group"
+				},
+				"SFTP": {
+					"type": "radio",
+					"top": 291,
+					"left": 186,
+					"width": 65,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "Not:C34([FTP_Sites:152]isSFTP:12)",
+					"text": "No",
+					"stroke": "#000000",
+					"focusable": false,
+					"radioGroup": "SFTP_group"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 318,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Passive Mode?"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 124,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Password"
+				},
+				"Password": {
+					"type": "input",
+					"top": 125,
+					"left": 130,
+					"width": 158,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]password:6",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Password.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 151,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "Host URL"
+				},
+				"HostURL": {
+					"type": "input",
+					"top": 152,
+					"left": 131,
+					"width": 275,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]hostURL:7",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 206,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "Public URL"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 178,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "Root URL"
+				},
+				"RootURL": {
+					"type": "input",
+					"top": 179,
+					"left": 131,
+					"width": 275,
+					"height": 16,
+					"dataSource": "[FTP_Sites:152]rootURL:8",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"PublicURL": {
+					"type": "input",
+					"top": 207,
+					"left": 131,
+					"width": 275,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]publicURL:9",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 234,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Local File Path"
+				},
+				"LocalFilePath": {
+					"type": "input",
+					"top": 235,
+					"left": 131,
+					"width": 275,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]localFilePath:10",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 262,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Local Server Name"
+				},
+				"LocalServerName": {
+					"type": "input",
+					"top": 263,
+					"left": 131,
+					"width": 275,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]localServerName:11",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"SFTP1_first": {
+					"type": "radio",
+					"top": 319,
+					"left": 131,
+					"width": 35,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]isPassiveMode:13",
+					"text": "Yes",
+					"stroke": "#000000",
+					"focusable": false,
+					"radioGroup": "SFTP1_group"
+				},
+				"SFTP1": {
+					"type": "radio",
+					"top": 319,
+					"left": 186,
+					"width": 65,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "Not:C34([FTP_Sites:152]isPassiveMode:13)",
+					"text": "No",
+					"stroke": "#000000",
+					"focusable": false,
+					"radioGroup": "SFTP1_group"
+				},
+				"b_gotoURL": {
+					"type": "button",
+					"top": 151,
+					"left": 37,
+					"width": 80,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_gotoURL.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_gotoURL1": {
+					"type": "button",
+					"top": 178,
+					"left": 37,
+					"width": 80,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_gotoURL1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_gotoURL2": {
+					"type": "button",
+					"top": 206,
+					"left": 37,
+					"width": 80,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_gotoURL2.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

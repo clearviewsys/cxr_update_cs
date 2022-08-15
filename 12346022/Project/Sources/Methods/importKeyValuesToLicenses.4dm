@@ -1,0 +1,2 @@
+//%attributes = {}
+loadLicenseFromKeyValue("twilio.accountSid")

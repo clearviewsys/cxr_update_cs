@@ -1,0 +1,216 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_View",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerBody": 126,
+	"markerBreak": 126,
+	"markerFooter": 136,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle9": {
+					"type": "rectangle",
+					"top": 72,
+					"left": 9,
+					"width": 250,
+					"height": 100,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"fill": "transparent",
+					"stroke": "transparent"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 77,
+					"left": 14,
+					"width": 70,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "BackupDate"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 102,
+					"left": 14,
+					"width": 70,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "BackupLogID"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 127,
+					"left": 14,
+					"width": 70,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "BackupTime"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 152,
+					"left": 14,
+					"width": 70,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Status"
+				},
+				"BackupDate": {
+					"type": "input",
+					"top": 77,
+					"left": 90,
+					"width": 68,
+					"height": 15,
+					"dataSource": "[BackupLogs:47]BackupDate:2",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"BackupLogID": {
+					"type": "input",
+					"top": 102,
+					"left": 90,
+					"width": 32,
+					"height": 15,
+					"dataSource": "[BackupLogs:47]",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"BackupTime": {
+					"type": "input",
+					"top": 127,
+					"left": 90,
+					"width": 48,
+					"height": 15,
+					"dataSource": "[BackupLogs:47]BackupTime:3",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Status": {
+					"type": "input",
+					"top": 152,
+					"left": 90,
+					"width": 134,
+					"height": 16,
+					"dataSource": "[BackupLogs:47]Status:4",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Rectangle9"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

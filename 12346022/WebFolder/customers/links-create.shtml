@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--#4DSCRIPT/webRedirectIfNotAuthorized-->
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/head.shtml-->
+    <!--#4DSCRIPT/WAPI_pageStart/{onload:true, sessiontimer:true, dropzone-div:links-form-create, dropzone-post:true}-->
+
+
+</head>
+
+<body>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/menubar.shtml-->
+
+    <main>
+        <!--#4DSCRIPT/webSelectAgentRecord-->
+        <!--#4DHTML WAPI_includeAlertMessage-->
+        <script src="/app/js/bootstrap-auto-dismiss-alert.js"></script>
+        <!--MUST COME AFTER THE ALERT YOU WANT TO CLOSE -->
+
+        <div class="page-header hidden-xs">
+            <!-- JUMBOTRON - WELCOME -->
+            <div class='container'>
+                <h1>Add a new beneficiary</h1>
+            </div>
+        </div>
+
+        <div class="container content">
+
+            <!--Row with two equal columns-->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    <form enctype="multipart/form-data" id='links-form-create' action="createRecord" method="post">
+                        <div>
+                            <!--#4DSCRIPT/WAPI_formHeader/{table:links, action:create, primarykey:links___linkid, field1:links___customerid, success:/customers/home.shtml, print:/customers/links-print.shtml, failure:/customers/home.shtml, form:links-form-create}-->
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading hidden-xs">
+                                <ul class="nav nav-pills nav-justified" role="tablist">
+
+                                    <li role="presentation" onclick="setProgressLabel('Who do you wish to add?',20)" class="active"><a href="#name-tab" aria-controls="name-tab" role="tab" data-toggle="pill"><span class="fa fa-user fa-2x"></span></a></li>
+
+                                    <li role="presentation" onclick="setProgressLabel('Contact Information: Please tell us more about the beneficiary?',40)"><a href="#demographics-tab" aria-controls="demographics-tab" role="tab" data-toggle="pill"><span class="fa fa-address-card-o fa-2x"></span></a></li>
+
+                                    <li role="presentation" onclick="setProgressLabel('Banking Information: Is there a bank acount for the beneficiary?',60)"><a href="#banking-tab" aria-controls="banking-tab" role="tab" data-toggle="pill"><span class="fa fa-bank fa-2x"></span></a></li>
+
+                                    <!--#4DIF false-->
+                                    <li role="presentation" onclick="setProgressLabel('Identification: Do you have id for the beneficiary?',80)"><a href="#identification-tab" aria-controls="identification-tab" role="tab" data-toggle="pill"><span class="fa fa-picture-o fa-2x"></span></a>
+                                    </li>
+                                    <!--#4DENDIF-->
+
+                                    <li role="presentation" onclick="setProgressLabel('Are you ready to add this beneficiary?',100)"><a href="#confirmation-tab" aria-controls="confirmation-tab" role="tab" data-toggle="pill"><span class="fa fa-check fa-2x"></span></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="panel-body">
+                                <div class="progress hidden-xs">
+                                    <div id="progress-bar" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 13%">
+                                        <span class="sr-only">20% Complete (success)</span>
+                                    </div>
+                                </div>
+                                <h3>
+                                    <div id="progress-label" class="text-center">Beneficiary information</div>
+                                </h3>
+                            </div>
+                        </div>
+
+
+                        <div class="tab-content">
+
+                            <!-- CLIENT NAME - BENEFICIARY PARTY -->
+                            <div role="tabpanel" class="tab-pane fade in active" id="name-tab">
+                                <div class="panel panel-default">
+
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___iscompany, label:This-new-beneficiary-is-a-company, onchange:wapiObjectMethod}-->
+                                        </div>
+
+                                        <div class="form-group" style="display:none" id="company-info-hidden">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___companyname, label:Company-Name, placeholder:Company-Name-Optional, width:100px, onchange:wapiObjectMethod}}-->
+                                        </div>
+
+
+                                        <div id="individual-info-hidden">
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:links___salutation, label:Salutation, placeholder:Salutation, width:100px, choicelist:titles-->
+                                            </div>
+
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:links___firstname, label:First-Name, placeholder:First-name-of-counterparty, pattern:alpha, onchange:wapiObjectMethod}-->
+                                            </div>
+
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:links___lastname, label:Last-Name, placeholder:Last-name-of-counterparty, pattern:alpha, onchange:wapiObjectMethod}-->
+                                            </div>
+
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:links___gender, label:Gender, placeholder:Gender, choicelist:webgetchoicelistgender}-->
+                                            </div>
+
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:links___dob, label:Date-of-birth, placeholder:Date-of-birth, inputmask-selectyears:50, inputmask-startyear:1980, inputmask-max:true, onchange:wapiObjectMethod}-->
+                                            </div>
+
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:links___nationality, label:Nationality, placeholder:Nationality-of-customer, width:100, choicelist:webGetChoiceListCountries, tooltip:The-country-of-citizenship-of-the-beneficiary}-->
+                                            </div>
+
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:links___occupation, label:Occupation, placeholder:Occupation-of-counterparty, width:100, choicelist:webgetchoicelistoccupations}-->
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___relationship, label:Relationship, placeholder:Relationship-to-customer, choicelist:webGetChoiceListRelship}-->
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <a class="btn btn-primary btnPrevious">Previous</a>
+
+                                        <div class="pull-right">
+                                            <a class="btn btn-primary btnNext">Next</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CLIENT CONTACT INFO -->
+                            <div role="tabpanel" class="tab-pane fade" id="demographics-tab">
+                                <div class="panel panel-default">
+
+                                    <div class="panel-body">
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___address, label:Address, placeholder:Address-of-residence, width:100px}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___city, label:City, placeholder:City-of-residence, pattern:alpha}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___province, label:Province, placeholder:Province-or-State-of-residence, pattern:alpha}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___postalcode, label:Postal-Code, placeholder:Postal-code-of-residence, width:100px}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___countrycode, label:Country-Code, placeholder:Country-of-residence, choicelist:webGetChoiceListCountries, onchange:wapiObjectMethod, readonly:false}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___email, label:Email, placeholder:Email-address, width:100, pattern:email}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___mainphone, label:Main-Phone, placeholder:Primary-phone-of-customer, pattern:phone}-->
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <a class="btn btn-primary btnPrevious">Previous</a>
+
+                                        <div class="pull-right">
+                                            <a class="btn btn-primary btnNext">Next</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- CLIENT FINANCIALS - BANKING -->
+                            <div role="tabpanel" class="tab-pane fade" id="banking-tab">
+                                <div class="panel panel-default">
+
+
+                                    <div class="panel-body">
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___defaultpurposeoftransaction, label:Usual-Purpose-Of-Your-Transactions, placeholder:Usual-purpose-of-transactions, choicelist:webgetchoicelistpurposetrans}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankname, label:Bank-Name, placeholder:Bank-name, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankaccountno, label:Account-Number, placeholder:Bank-account-number, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___banktransitcode, label:Bank-Routing-Number, placeholder:Bank-routing-numbers, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankswift, label:Swift-Number, placeholder:SWIFT-Numbers, pattern:[0-9], title:Only-numbers-are-allowed, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankaddress, label:Bank Address, placeholder:Bank-address}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankingdetails, label:Banking-Details, placeholder:Bank-details}-->
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <a class="btn btn-primary btnPrevious">Previous</a>
+
+                                        <div class="pull-right">
+                                            <a class="btn btn-primary btnNext">Next</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CLIENT PICTURE ID -->
+                            <!--#4DIF false-->
+                            <div role="tabpanel" class="tab-pane fade" id="identification-tab">
+                                <div class="panel panel-default">
+
+
+                                    <div class="panel-body">
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___pictureidtype, label:National-ID-Type, placeholder:ie.-license-passport, width:100, choicelist:webgetchoicelistpicturetypes}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___pictureidno, label:National-ID-No, width:100, tooltip:This-is-your-resident-id-not-drivers-license}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___pictureidissuedin, label:Country-of-Issue, placeholder:Country-issuing-your-ID, width:100, choicelist:webGetChoiceListCountries}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___pictureidexpdate, label:Expiry-Date, inputmask-min:true}-->
+                                        </div>
+
+                                        <!--#4dif false-->
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___pictureid, label:Image-of-Picture-ID, placeholder:Picture-ID, readonly:false, width:100, image-upload:true}-->
+                                        </div>
+                                        <!--#4dendif-->
+
+                                        <!-- DROPZONE AREA FOR ADDITIONAL ATTACHMENTS -->
+                                        <div class="row" id="wapi-dropzone-group">
+                                            <div class="dz-clickable dropzone-previews" id="wapi-dropzone">
+                                                <div class="dz-message text-center" style="padding-bottom: 12px">
+                                                    <h3><span class="label label-default">Click or Drop Files Here to Attach</span></h3>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group fallback">
+                                                <input id='dropzone-upload-file' type="file" multiple />
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <a class="btn btn-primary btnPrevious">Previous</a>
+
+                                        <div class="pull-right">
+                                            <a class="btn btn-primary btnNext">Next</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--#4DENDIF-->
+
+                            <!-- BENEFICIARY/CUSTOMER/RECEIVER NAME -->
+                            <!--4DIF false-->
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading" role="tab" id="receiver-tab">
+                                    <h3 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#receiver-data" aria-expanded="true" aria-controls="receiver-data">
+                                            <span class="glyphicon glyphicon-user" aria-hidden="true"> </span> Receiving Party (Beneficiary)</a>
+                                    </h3>
+                                </div>
+
+                                <div id="receiver-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="receiver-tab">
+                                    <div class="panel-body">
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___customerid, label:Customer-ID, placeholder:Enter-customer-ID-of-receiving-party-if-known, onchange:wapiObjectMethod}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___customername, label:Customer-Name, placeholder:Name-of-receiving-party, width:100px}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___customerphone, label:Phone, placeholder:Receiving-party-phone}-->
+                                        </div>
+
+                                        <!-- hide if a valid custoemr ID-->
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___customerbankinfo, label:Bank-Information, placeholder:Receiving-party-bank-information}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___comments, label:Comments, placeholder:Comments}-->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--4DENDIF-->
+
+
+                            <!-- CONFIRMATION -->
+                            <div role="tabpanel" class="tab-pane fade" id="confirmation-tab">
+                                <div class="panel panel-default">
+
+                                    <!--#4DIF false-->
+                                    <div class='panel-heading'>Terms and Conditions</div>
+
+                                    <div class='panel-body'>
+                                        <div>
+                                            <!--#4DHTMLVAR <>DISCLAIMER-->
+                                        </div>
+                                        <div class="form-check" style="padding-top: 10px">
+                                            <label class="form-check-label" for="agreement-input">
+                                                <input type="checkbox" class="form-check-input" id="agreement-input" name="agreement-input" onchange="wapiObjectMethod(event)">
+                                                By checking this you agree to the terms specified above</label>
+                                        </div>
+                                    </div>
+                                    <!--#4DENDIF-->
+
+                                    <div class='panel-footer clearfix'>
+
+                                        <div class="pull-right">
+                                            <!--#4DIF WAPI_isDebug-->
+                                            <input class="btn btn-primary" type="button" value="Debug-Print" form="links-form-create" onclick="wapiPrintForm(true);" />
+                                            <!--#4DENDIF-->
+
+                                            <input class="btn btn-primary" type="button" value="Print Registration" form="links-form-create" onclick="wapiPrintForm();" />
+
+                                            <a class="btn btn-default" href="home.shtml" role="button">Cancel</a>
+
+                                            <input type="button" class="btn btn-primary" id="submit-input" name="submit-input" onclick="wapiValidateOnSubmit()" form='links-form-create' value="Add Beneficiary">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </form>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <script type='text/javascript'>
+        function setProgressLabel(theLabel, thePercent) {
+            debugger;
+            $('#progress-label').text(theLabel);
+            $('#progress-bar').css('width', thePercent + '%').attr('aria-valuenow', thePercent);
+
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        console.trace;
+        $('.btnNext').click(function() {
+            $('.nav-pills > .active').next('li').find('a').trigger('click');
+        });
+
+        $('.btnPrevious').click(function() {
+            $('.nav-pills > .active').prev('li').find('a').trigger('click');
+        });
+
+    </script>
+
+    <!-- DIALOG FOR MESSAGE -->
+    <!--#4DSCRIPT/WAPI_4DInclude/wapi/message.shtml -->
+
+    <!-- DIALOG FOR CONFIRMATION -->
+    <!--#4DSCRIPT/WAPI_4DInclude/wapi/confirm.shtml -->
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/dz_preview.shtml-->
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/footer.shtml-->
+
+    <!--#4DSCRIPT/WAPI_formInit-->
+</body>
+
+</html>

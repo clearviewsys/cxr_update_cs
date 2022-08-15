@@ -1,0 +1,604 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onHeader",
+		"onOutsideCall",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseDetail",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Button3": {
+					"type": "button",
+					"top": 60,
+					"left": 25,
+					"width": 40,
+					"height": 20,
+					"dataSource": "Button3",
+					"shortcutKey": "f",
+					"shortcutAccel": true,
+					"shortcutShift": true,
+					"text": "Fix",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Variable7": {
+					"type": "input",
+					"top": 60,
+					"left": 160,
+					"width": 145,
+					"height": 15,
+					"dataSource": "[CashTransactions:36]Amount:3",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable12": {
+					"type": "input",
+					"top": 85,
+					"left": 160,
+					"width": 145,
+					"height": 15,
+					"dataSource": "[CashTransactions:36]CashAccountID:9",
+					"class": "Fields",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Variable12.4dm",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Variable11": {
+					"type": "input",
+					"top": 145,
+					"left": 20,
+					"width": 350,
+					"height": 30,
+					"dataSource": "[CashTransactions:36]comments:11",
+					"class": "Fields",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"vQty": {
+					"type": "input",
+					"top": 185,
+					"left": 225,
+					"width": 145,
+					"height": 15,
+					"dataSource": "vQty",
+					"class": "Fields",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&\"0-9;-\"",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable6": {
+					"type": "input",
+					"top": 210,
+					"left": 225,
+					"width": 145,
+					"height": 15,
+					"dataSource": "vDenomination",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"method": "ObjectMethods/Variable6.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable16": {
+					"type": "input",
+					"top": 230,
+					"left": 225,
+					"width": 145,
+					"height": 16,
+					"dataSource": "vTotal",
+					"dataSourceTypeHint": "number",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "#DDDDDD",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 255,
+					"left": 225,
+					"width": 145,
+					"height": 20,
+					"dataSource": "Button2",
+					"shortcutKey": "[Return]",
+					"text": "Add Row Entry",
+					"class": "Control",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 300,
+					"left": 15,
+					"width": 359,
+					"height": 132,
+					"sizingY": "grow",
+					"dataSourceTypeHint": "text",
+					"table": 32,
+					"listForm": "Subform_CashTransactions",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "sunken"
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 460,
+					"left": 220,
+					"width": 120,
+					"height": 16,
+					"sizingY": "move",
+					"dataSource": "vTotalAmount",
+					"focusable": false,
+					"fill": "#EEEEEE",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 480,
+					"left": 220,
+					"width": 120,
+					"height": 16,
+					"sizingY": "move",
+					"dataSource": "vRemaining",
+					"stroke": "#EE0000",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 505,
+					"left": 220,
+					"width": 85,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "Button4",
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"bSave": {
+					"type": "button",
+					"top": 505,
+					"left": 305,
+					"width": 85,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "Button1",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/bSave.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 460,
+					"left": 60,
+					"width": 150,
+					"height": 15,
+					"sizingY": "move",
+					"class": "Headings",
+					"textAlign": "right",
+					"text": "Total"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 480,
+					"left": 60,
+					"width": 150,
+					"height": 15,
+					"sizingY": "move",
+					"class": "Headings",
+					"textAlign": "right",
+					"text": "Remaining off-balance"
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 460,
+					"left": 345,
+					"width": 35,
+					"height": 16,
+					"sizingY": "move",
+					"dataSource": "[CashTransactions:36]Currency:4",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 185,
+					"left": 90,
+					"width": 125,
+					"height": 15,
+					"class": "Headings",
+					"textAlign": "right",
+					"text": "Qty received"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 210,
+					"left": 65,
+					"width": 150,
+					"height": 15,
+					"class": "Headings",
+					"textAlign": "right",
+					"text": "Which Denominations"
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 60,
+					"left": 310,
+					"width": 45,
+					"height": 16,
+					"dataSource": "[CashTransactions:36]Currency:4",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable8": {
+					"type": "input",
+					"top": 15,
+					"left": 246,
+					"width": 128,
+					"height": 15,
+					"dataSource": "[CashTransactions:36]CashTransactionID:1",
+					"class": "Fields",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 60,
+					"left": 70,
+					"width": 80,
+					"height": 15,
+					"class": "Headings",
+					"textAlign": "right",
+					"text": "Total Cash In"
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 35,
+					"left": 160,
+					"width": 145,
+					"height": 15,
+					"dataSource": "[CashTransactions:36]Date:5",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 35,
+					"left": 30,
+					"width": 120,
+					"height": 15,
+					"class": "Headings",
+					"textAlign": "right",
+					"text": "Date"
+				},
+				"Variable10": {
+					"type": "input",
+					"top": 15,
+					"left": 160,
+					"width": 80,
+					"height": 15,
+					"dataSource": "[CashTransactions:36]InvoiceID:7",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#C5FFC0",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 15,
+					"left": 35,
+					"width": 120,
+					"height": 15,
+					"class": "Headings",
+					"textAlign": "right",
+					"text": "Invoice Number"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 85,
+					"left": 30,
+					"width": 120,
+					"height": 15,
+					"class": "Headings",
+					"textAlign": "right",
+					"text": "Cash Account"
+				},
+				"Variable4": {
+					"type": "checkbox",
+					"top": 110,
+					"left": 160,
+					"width": 140,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "[CashTransactions:36]isPaid:2",
+					"text": "is Paid",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bDeleteSubrecord": {
+					"type": "button",
+					"top": 261,
+					"left": 15,
+					"width": 96,
+					"height": 28,
+					"dataSource": "bDeleteRow",
+					"class": "Control",
+					"focusable": false,
+					"text": "Delete Row",
+					"icon": "/RESOURCES/Images/library/toolbarDelete.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "roundedBevel",
+					"method": "ObjectMethods/bDeleteSubrecord.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 230,
+					"left": 225,
+					"width": 145,
+					"height": 15,
+					"dataSource": "Invisible Button1",
+					"shortcutKey": "+",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text14": {
+					"type": "text",
+					"top": 124,
+					"left": 18,
+					"width": 87,
+					"height": 15,
+					"fill": "#DDDDDD",
+					"class": "Headings",
+					"textAlign": "center",
+					"text": "Comments"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 230,
+					"left": 65,
+					"width": 150,
+					"height": 15,
+					"class": "Headings",
+					"textAlign": "right",
+					"text": "Total"
+				}
+			},
+			"entryOrder": [
+				"Button3",
+				"Variable7",
+				"Variable12",
+				"Variable11",
+				"vQty",
+				"Variable6",
+				"Variable16",
+				"Button1",
+				"Subform1",
+				"Variable1",
+				"Variable2",
+				"Button4",
+				"bSave"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

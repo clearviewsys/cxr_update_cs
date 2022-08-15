@@ -1,0 +1,1 @@
+displayCurrentRecord(->[Links:17])

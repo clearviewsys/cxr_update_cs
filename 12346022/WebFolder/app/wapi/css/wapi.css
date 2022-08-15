@@ -1,0 +1,35 @@
+.picker__select--month,
+.picker__select--year {
+    height: 3em;
+    width: 25%;
+}
+
+
+.bg-rates {
+    background-color: #377fb6;
+}
+
+.bg-bookings {
+    background-color: #63b5a4;
+}
+
+.bg-requests {
+    background-color: #f39c12;
+}
+
+.bg-links {
+    background-color: #95a5a6;
+}
+
+.bg-wires {
+    background-color: #e74c3c;
+}
+
+
+#wapi-message-title {
+    color: #4f5464;
+}
+
+#wapi-message-text {
+    color: #4f5464;
+}

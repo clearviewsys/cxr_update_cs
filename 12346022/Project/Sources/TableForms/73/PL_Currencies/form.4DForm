@@ -1,0 +1,1502 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 0,
+	"bottomMargin": 5,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onHeader",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onUnload",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"cbInverse": {
+					"type": "checkbox",
+					"top": 58,
+					"left": 828,
+					"width": 138,
+					"height": 16,
+					"dataSource": "cbShowInverseRates",
+					"text": "Show Inverse Rates",
+					"method": "ObjectMethods/cbInverse.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"lBranchID": {
+					"type": "text",
+					"top": 56,
+					"left": 6,
+					"width": 102,
+					"height": 17,
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": ":xliff:cvs_branch"
+				},
+				"lFromDate": {
+					"type": "text",
+					"top": 13,
+					"left": 6,
+					"width": 102,
+					"height": 17,
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": ":xliff:cvs_from_date"
+				},
+				"Field7": {
+					"type": "input",
+					"top": 12,
+					"left": 112,
+					"width": 128,
+					"height": 18,
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Medium",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field7.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"Field8": {
+					"type": "input",
+					"top": 34,
+					"left": 112,
+					"width": 128,
+					"height": 18,
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Medium",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field8.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"lToDate": {
+					"type": "text",
+					"top": 34,
+					"left": 6,
+					"width": 102,
+					"height": 17,
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": ":xliff:cvs_to_date"
+				},
+				"3D Button1": {
+					"type": "pictureButton",
+					"top": 10,
+					"left": 243,
+					"width": 20,
+					"height": 20,
+					"dataSource": "3D Button1",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/calendar.png",
+					"loopBackToFirstFrame": true,
+					"method": "ObjectMethods/3D Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button2": {
+					"type": "pictureButton",
+					"top": 32,
+					"left": 243,
+					"width": 20,
+					"height": 20,
+					"dataSource": "3D Button1",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/calendar.png",
+					"loopBackToFirstFrame": true,
+					"method": "ObjectMethods/3D Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bLastMonth": {
+					"type": "button",
+					"top": 52,
+					"left": 267,
+					"width": 116,
+					"height": 22,
+					"class": "Control_Small",
+					"focusable": false,
+					"text": "Previous Month",
+					"iconFrames": 4,
+					"method": "ObjectMethods/bLastMonth.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bThisMonth": {
+					"type": "button",
+					"top": 31,
+					"left": 267,
+					"width": 116,
+					"height": 22,
+					"class": "Control_Small",
+					"focusable": false,
+					"text": "This  Month",
+					"iconFrames": 4,
+					"method": "ObjectMethods/bThisMonth.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bToday": {
+					"type": "button",
+					"top": 10,
+					"left": 267,
+					"width": 116,
+					"height": 22,
+					"class": "Control_Small",
+					"focusable": false,
+					"text": ":xliff:cvs_today",
+					"iconFrames": 4,
+					"method": "ObjectMethods/bToday.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"arrBranches": {
+					"type": "dropdown",
+					"top": 55,
+					"left": 111,
+					"width": 53,
+					"height": 22,
+					"dataSource": "arrBranches",
+					"focusable": false,
+					"choiceList": [
+						"All",
+						"Assets",
+						"Liabilities",
+						"Equities",
+						"Revenues",
+						"Expenses"
+					],
+					"class": "Fields_Medium",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/arrBranches.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"PL_summaryListBox": {
+					"type": "listbox",
+					"top": 88,
+					"left": 1,
+					"width": 1260,
+					"height": 410,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "holdingsListBox",
+					"rowHeight": "25px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "2em",
+					"showFooters": true,
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#C0C0C0",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"alternateFill": "#E7E7E7",
+					"rowStrokeSource": "arrColour",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"method": "ObjectMethods/PL_summaryListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column10",
+							"dataSource": "arrCurrencies",
+							"width": 42,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#E7E7E7",
+							"textAlign": "center",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"fontWeight": "bold",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "CCY",
+								"text": "CCY",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer16",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "count",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column13",
+							"dataSource": "arrOpenings",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#E7E7E7",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Opening",
+								"text": "Opening",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer17",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column12",
+							"dataSource": "arrBuys",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#EAFFFE",
+							"alternateFill": "#DDF0EE",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Buy",
+								"text": "Buy",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer18",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column11",
+							"dataSource": "arrSells",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#FFFCE5",
+							"alternateFill": "#F2F0DA",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Sell",
+								"text": "Sell",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer19",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column15",
+							"dataSource": "arrBalances",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textFormat": "|Currency (blank for 0)",
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#E7E7E7",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Inventory Balance2",
+								"text": "Inventory",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer20",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column14",
+							"dataSource": "arrBuyRates",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textFormat": "|Rates",
+							"numberFormat": "|Rates",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#E7E7E7",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Avg Buy Rate",
+								"text": "avg Rate",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer21",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "inventoryCost",
+							"dataSource": "arrInventoryValueLC",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textFormat": "|Currency (blank for 0)",
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#E7E7E7",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Inventory Cost",
+								"text": "Inventory Cost",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer15",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column19",
+							"dataSource": "arrInventoryCosts",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#FFEAEA",
+							"alternateFill": "#F2DEDF",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_Cost of Purchase LC",
+								"text": "Cost of Purchase",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer24",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column20",
+							"dataSource": "arrRevenues",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#F2FFE5",
+							"alternateFill": "#E8F2DE",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_Sales Revenue",
+								"text": "Sales Revenue",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer25",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "colCOGS",
+							"dataSource": "arrSumCOGS",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#FEE4E4",
+							"alternateFill": "#EED5D6",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_COGS",
+								"text": "COGS",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer27",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "colProfits",
+							"dataSource": "arrTotalProfits",
+							"dataSourceTypeHint": "number",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#F6FFE5",
+							"alternateFill": "#EBF2DE",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_Profit",
+								"text": "Profit",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer28",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "colFees",
+							"dataSource": "arrTotalFees",
+							"dataSourceTypeHint": "number",
+							"width": 67,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#F6FFE5",
+							"alternateFill": "#EBF2DE",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_Fees Received",
+								"text": "Fees",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer26",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "colNets",
+							"dataSource": "arrNetProfits",
+							"dataSourceTypeHint": "number",
+							"width": 124,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#EAFFE0",
+							"alternateFill": "#D7F0CB",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_Net",
+								"text": "Profit after fees",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer23",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"bCalculate": {
+					"type": "button",
+					"top": 49,
+					"left": 420,
+					"width": 149,
+					"height": 26,
+					"text": ":xliff:cvs_refresh",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/bCalculate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button2": {
+					"type": "button",
+					"top": 14,
+					"left": 986,
+					"width": 110,
+					"height": 25,
+					"sizingX": "move",
+					"dataSource": "Highlight Button1",
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Export",
+					"icon": "/RESOURCES/Images/library/toolbarLoad.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/Highlight Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button3": {
+					"type": "button",
+					"top": 44,
+					"left": 986,
+					"width": 110,
+					"height": 25,
+					"sizingX": "move",
+					"dataSource": "Highlight Button1",
+					"shortcutKey": "h",
+					"shortcutAccel": true,
+					"shortcutShift": true,
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Hide Row",
+					"icon": "/RESOURCES/Images/library/toolbarFilter.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/Highlight Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bViewDetail": {
+					"type": "button",
+					"top": 49,
+					"left": 573,
+					"width": 236,
+					"height": 26,
+					"visibility": "hidden",
+					"text": "Show Line by line detail",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/bViewDetail.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button5": {
+					"type": "button",
+					"top": 15,
+					"left": 1104,
+					"width": 110,
+					"height": 25,
+					"sizingX": "move",
+					"dataSource": "Highlight Button1",
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Print",
+					"icon": "/RESOURCES/Images/library/toolbarPrinter.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/Highlight Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"dd_dateRanges": {
+					"type": "dropdown",
+					"top": 56,
+					"left": 167,
+					"width": 96,
+					"height": 19,
+					"focusable": false,
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"method": "ObjectMethods/dd_dateRanges.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"detailListBox": {
+					"type": "listbox",
+					"top": 90,
+					"left": 1,
+					"width": 1260,
+					"height": 410,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "holdingsListBox2",
+					"rowHeight": "25px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "2em",
+					"showFooters": true,
+					"selectionMode": "single",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCC6C2",
+					"stroke": "#000000",
+					"alternateFill": "#F2F2F2",
+					"rowStrokeSource": "arrColour",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"borderStyle": "solid",
+					"method": "ObjectMethods/detailListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column8",
+							"dataSource": "arrRegisterIDs",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#888888",
+							"fill": "#EEEEEE",
+							"textAlign": "right",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Register1",
+								"text": "Register",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer14",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "arrDates",
+							"dataSourceTypeHint": "date",
+							"width": 83,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"dateFormat": "short",
+							"stroke": "#888888",
+							"fill": "#EEEEEE",
+							"alternateFill": "#DEDEDE",
+							"textAlign": "right",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "date_Date",
+								"text": "Date",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer10",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrDebits",
+							"dataSourceTypeHint": "number",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#F5FFFE",
+							"alternateFill": "#E9F2F2",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_No of Buys1",
+								"text": "Buy",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer8",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "arrCountOuts1",
+							"dataSource": "arrCredits",
+							"dataSourceTypeHint": "number",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#FEFDF5",
+							"alternateFill": "#F2F1E9",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_No of Sells1",
+								"text": "Sell",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer9",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "arrInventory",
+							"dataSourceTypeHint": "number",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"alternateFill": "#F2F2F2",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_inventory",
+								"text": "Inventory",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "rate_Rate",
+							"dataSource": "arrRates",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Rates",
+							"stroke": "#000000",
+							"alternateFill": "#F2F2F2",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_rate",
+								"text": "Rate",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "arrDebitLocals",
+							"dataSourceTypeHint": "number",
+							"width": 121,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#FEE7E8",
+							"alternateFill": "#EED9D9",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_Cost of Purchase",
+								"text": "Purchase Cost",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer12",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "arrCountOuts",
+							"dataSource": "arrCreditLocals",
+							"dataSourceTypeHint": "number",
+							"width": 118,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#F2FFE6",
+							"alternateFill": "#E3F2D4",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_Sales Revenue1",
+								"text": "Sales Revenue",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer7",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "arrCOGS",
+							"dataSourceTypeHint": "number",
+							"width": 117,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#FEE7E8",
+							"alternateFill": "#F1DBDC",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_COGS1",
+								"text": "COGS",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "num_profit1",
+							"dataSource": "arrProfits",
+							"dataSourceTypeHint": "number",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#F9FFE0",
+							"alternateFill": "#EEF3DC",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Row Profit",
+								"text": "Profit",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer13",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "num_fees",
+							"dataSource": "arrFees",
+							"dataSourceTypeHint": "number",
+							"width": 60,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#F9FFE0",
+							"alternateFill": "#EEF3DC",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_fees",
+								"text": "Fees",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer6",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "num_profit2",
+							"dataSource": "arrNets",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#F4FFC5",
+							"alternateFill": "#E3EFB8",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_Net Profit",
+								"text": "Net Profit",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "arrAvgBuyRates",
+							"dataSourceTypeHint": "number",
+							"width": 70,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Rates",
+							"stroke": "#000000",
+							"alternateFill": "#F2F2F2",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_AvgRate",
+								"text": "Avg Rate",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer11",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "arrShortRates",
+							"dataSourceTypeHint": "number",
+							"width": 83,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Rates",
+							"stroke": "#000000",
+							"alternateFill": "#F2F2F2",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_AvgSellRate",
+								"text": "Short rate",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"Highlight Button1": {
+					"type": "button",
+					"top": 20,
+					"left": 996,
+					"width": 110,
+					"height": 25,
+					"dataSource": "Highlight Button1",
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Export",
+					"icon": "/RESOURCES/Images/library/toolbarLoad.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/Highlight Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button4": {
+					"type": "button",
+					"top": 50,
+					"left": 996,
+					"width": 110,
+					"height": 25,
+					"dataSource": "Highlight Button1",
+					"shortcutKey": "h",
+					"shortcutAccel": true,
+					"shortcutShift": true,
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Hide Row",
+					"icon": "/RESOURCES/Images/library/toolbarFilter.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/Highlight Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"backButton": {
+					"type": "button",
+					"top": 6,
+					"left": 529,
+					"width": 222,
+					"height": 30,
+					"action": "firstPage",
+					"text": "Back to Summary Page",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"top": 50,
+					"left": 529,
+					"width": 132,
+					"height": 27,
+					"text": "Refresh",
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 506,
+					"left": 10,
+					"width": 414,
+					"height": 15,
+					"sizingY": "move",
+					"text": "Notes: Fees are included in Cost of Purchase and Sales Revenue"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 525,
+					"left": 10,
+					"width": 414,
+					"height": 15,
+					"sizingY": "move",
+					"text": "The COGS is the amount before Fees Received"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 543,
+					"left": 10,
+					"width": 414,
+					"height": 15,
+					"sizingY": "move",
+					"text": "The Net Profit is the profit after fees received"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 561,
+					"left": 10,
+					"width": 414,
+					"height": 15,
+					"sizingY": "move",
+					"text": "Profit = (Sell Rate - avg. Buy Rate) x Sell"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

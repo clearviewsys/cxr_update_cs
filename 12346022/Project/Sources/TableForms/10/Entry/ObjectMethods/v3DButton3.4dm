@@ -1,0 +1,1 @@
+displayList(Table:C252([Registers:10]InternalTableNumber:17))

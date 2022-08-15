@@ -1,0 +1,709 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 194,
+	"markerBreak": 194,
+	"markerFooter": 204,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onGettingFocus",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onUnload",
+		"onCloseDetail",
+		"onLoadRecord",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Group Box": {
+					"type": "groupBox",
+					"top": 390,
+					"left": 55,
+					"width": 495,
+					"height": 120,
+					"sizingX": "grow",
+					"text": "Ignore manual option and check automatically for"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 120,
+					"left": 9,
+					"width": 152,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Long Name"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 90,
+					"left": 9,
+					"width": 152,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Short Name"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 60,
+					"left": 9,
+					"width": 152,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "From Server"
+				},
+				"Combo Box1": {
+					"type": "combo",
+					"top": 60,
+					"left": 174,
+					"width": 376,
+					"height": 19,
+					"sizingX": "grow",
+					"dataSource": "[SanctionLists:113]UseServer:12",
+					"choiceList": [
+						"CXBlacklist",
+						"KYC2020"
+					],
+					"class": "Fields_Large",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onAfterEdit"
+					]
+				},
+				"Shortname": {
+					"type": "input",
+					"top": 90,
+					"left": 174,
+					"width": 192,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "[SanctionLists:113]ShortName:2",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Enabled1": {
+					"type": "checkbox",
+					"top": 90,
+					"left": 377,
+					"width": 173,
+					"height": 20,
+					"sizingX": "move",
+					"dataSource": "[SanctionLists:113]isPEP:10",
+					"text": "Is PEP List",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"LongName": {
+					"type": "input",
+					"top": 120,
+					"left": 174,
+					"width": 376,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "[SanctionLists:113]Description:3",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Enabled": {
+					"type": "checkbox",
+					"top": 360,
+					"left": 55,
+					"width": 205,
+					"height": 20,
+					"dataSource": "[SanctionLists:113]IsEnabled:4",
+					"text": "Enabled",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"method": "ObjectMethods/Enabled.4dm"
+				},
+				"but_manual": {
+					"type": "checkbox",
+					"top": 360,
+					"left": 345,
+					"width": 205,
+					"height": 20,
+					"sizingX": "move",
+					"dataSource": "[SanctionLists:113]isManual:7",
+					"text": "Manual",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"method": "ObjectMethods/but_manual.4dm"
+				},
+				"but_autoCustomer": {
+					"type": "checkbox",
+					"top": 408,
+					"left": 64,
+					"width": 135,
+					"height": 25,
+					"dataSource": "sl_isAutoScreeningForTable(sl_CustomersFlag)",
+					"text": "Customers",
+					"focusable": false,
+					"method": "ObjectMethods/but_autoCustomer.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"but_autoInvoice": {
+					"type": "checkbox",
+					"top": 408,
+					"left": 205,
+					"width": 135,
+					"height": 25,
+					"dataSource": "sl_isAutoScreeningForTable(sl_InvoicesFlag)",
+					"text": "Invoices",
+					"focusable": false,
+					"method": "ObjectMethods/but_autoInvoice.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 541,
+					"left": 254,
+					"width": 117,
+					"height": 30,
+					"sizingX": "move",
+					"dataSource": "Button1",
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 541,
+					"left": 372,
+					"width": 178,
+					"height": 30,
+					"sizingX": "move",
+					"dataSource": "Button1",
+					"action": "accept",
+					"text": ":xliff:cvs_save",
+					"class": "Control_Large_",
+					"defaultButton": true,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"but_autoAgent": {
+					"type": "checkbox",
+					"top": 408,
+					"left": 345,
+					"width": 135,
+					"height": 25,
+					"dataSource": "sl_isAutoScreeningForTable(sl_AgentsFlag)",
+					"text": "Agents",
+					"focusable": false,
+					"method": "ObjectMethods/but_autoAgent.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"but_autoEWires": {
+					"type": "checkbox",
+					"top": 438,
+					"left": 64,
+					"width": 135,
+					"height": 25,
+					"dataSource": "sl_isAutoScreeningForTable(sl_eWiresFlag)",
+					"text": "eWires",
+					"focusable": false,
+					"method": "ObjectMethods/but_autoEWires.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"but_autoWires": {
+					"type": "checkbox",
+					"top": 438,
+					"left": 205,
+					"width": 135,
+					"height": 25,
+					"dataSource": "sl_isAutoScreeningForTable(sl_WiresFlag)",
+					"text": "Wires",
+					"focusable": false,
+					"method": "ObjectMethods/but_autoWires.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"but_autoThirdPaties": {
+					"type": "checkbox",
+					"top": 438,
+					"left": 345,
+					"width": 135,
+					"height": 25,
+					"dataSource": "sl_isAutoScreeningForTable(sl_ThirdPartiesFlag)",
+					"text": "Third Parties",
+					"focusable": false,
+					"method": "ObjectMethods/but_autoThirdPaties.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"but_autoLinks": {
+					"type": "checkbox",
+					"top": 468,
+					"left": 64,
+					"width": 135,
+					"height": 25,
+					"dataSource": "sl_isAutoScreeningForTable(sl_LinksFlag)",
+					"text": "Links",
+					"focusable": false,
+					"method": "ObjectMethods/but_autoLinks.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 150,
+					"left": 9,
+					"width": 152,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Match Type"
+				},
+				"Combo Box": {
+					"type": "combo",
+					"top": 150,
+					"left": 172,
+					"width": 207,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "[SanctionLists:113]MatchType:9",
+					"choiceList": [
+						"EXACT",
+						"FULL-TEXT",
+						"PART",
+						"QUICK"
+					],
+					"class": "Fields_Large",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text8": {
+					"type": "text",
+					"text": "Match Type:\r\tQUICK \t= exact full name match \r\tEXACT \t= above + search in aliases and original scripts\r\tPART \t\t= above + match part of a longer name\r\tFULL-TEXT \t= above + match name variations/misspellings",
+					"top": 214,
+					"left": 64,
+					"width": 486,
+					"height": 95,
+					"borderStyle": "dotted",
+					"fontWeight": "normal",
+					"fontStyle": "normal",
+					"class": "Label_Large",
+					"stroke": "#696969"
+				},
+				"Text12": {
+					"type": "text",
+					"text": "Last Updated:",
+					"top": 183,
+					"left": 9,
+					"width": 152,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 172,
+					"top": 182,
+					"width": 378,
+					"height": 20,
+					"dataSource": "sl_getListLastUpdate([SanctionLists:113]ShortName:2])",
+					"showSelection": false,
+					"enterable": false,
+					"class": "Fields_Large"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Variable": {
+					"type": "input",
+					"top": 150,
+					"left": 174,
+					"width": 376,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "[SanctionLists:113]Details:13.KYC2020.categoryCodeList",
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 180,
+					"left": 174,
+					"width": 376,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "[SanctionLists:113]Details:13.KYC2020.catGroupName",
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"rad_k20fuzz": {
+					"type": "radio",
+					"top": 210,
+					"left": 436,
+					"width": 114,
+					"height": 24,
+					"dataSource": "Form:C1466.KYC2020.fuzzy",
+					"text": "Fuzzy Match",
+					"class": "Fields_Large",
+					"radioGroup": "Group5",
+					"method": "ObjectMethods/rad_k20fuzz.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"rad_k20exact": {
+					"type": "radio",
+					"top": 210,
+					"left": 174,
+					"width": 114,
+					"height": 24,
+					"dataSource": "Form:C1466.KYC2020.exact",
+					"text": "Exact Match",
+					"class": "Fields_Large",
+					"radioGroup": "Group5",
+					"method": "ObjectMethods/rad_k20exact.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"check_k20Name": {
+					"type": "checkbox",
+					"top": 240,
+					"left": 174,
+					"width": 103,
+					"height": 24,
+					"dataSource": "Form:C1466.KYC2020.name",
+					"text": "Name",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/check_k20Name.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"check_k20Address": {
+					"type": "checkbox",
+					"top": 240,
+					"left": 304,
+					"width": 103,
+					"height": 24,
+					"dataSource": "Form:C1466.KYC2020.address",
+					"text": "Address",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/check_k20Address.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"check_k20Id": {
+					"type": "checkbox",
+					"top": 240,
+					"left": 435,
+					"width": 115,
+					"height": 24,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.KYC2020.id",
+					"text": "Identification",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/check_k20Id.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 270,
+					"left": 174,
+					"width": 376,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "[SanctionLists:113]Details:13.KYC2020.queryCount",
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"combo_K2020ResponseType": {
+					"type": "combo",
+					"top": 300,
+					"left": 174,
+					"width": 345,
+					"height": 19,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.responseType",
+					"dataSourceTypeHint": "integer",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/KYC2020ResponseType"
+					},
+					"class": "Fields_Large",
+					"method": "ObjectMethods/combo_K2020ResponseType.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 150,
+					"left": 9,
+					"width": 152,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Cetegory Code List"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 210,
+					"left": 9,
+					"width": 152,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Search Type"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 240,
+					"left": 9,
+					"width": 152,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Must Match"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 270,
+					"left": 9,
+					"width": 152,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Query Count"
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"top": 330,
+					"left": 174,
+					"width": 139,
+					"height": 18,
+					"dataSource": "[SanctionLists:113]Details:13.KYC2020.excludeTerms",
+					"text": "Exclude Terms",
+					"class": "Fields_Large",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box3": {
+					"type": "checkbox",
+					"top": 330,
+					"left": 345,
+					"width": 139,
+					"height": 18,
+					"sizingX": "move",
+					"dataSource": "[SanctionLists:113]Details:13.KYC2020.filterThreshold",
+					"text": "Filter Threshold",
+					"class": "Fields_Large",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 180,
+					"left": 9,
+					"width": 152,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Watchlist Group"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 300,
+					"left": 9,
+					"width": 152,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Response Type"
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 541,
+					"left": 108,
+					"width": 137,
+					"height": 16,
+					"visibility": "hidden",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[SanctionLists:113]Details:13.KYC2020",
+					"focusable": false,
+					"enterable": false,
+					"multiline": "yes",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 541,
+					"left": 9,
+					"width": 97,
+					"height": 15,
+					"visibility": "hidden",
+					"text": "Raw Details JSON:"
+				},
+				"Input": {
+					"type": "input",
+					"left": 525,
+					"top": 300,
+					"width": 25,
+					"height": 16,
+					"dataSource": "[SanctionLists:113]Details:13.KYC2020.responseType",
+					"enterable": false,
+					"focusable": false,
+					"borderStyle": "none"
+				}
+			}
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group5": [
+				"rad_k20fuzz",
+				"rad_k20exact"
+			]
+		},
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 76
+}

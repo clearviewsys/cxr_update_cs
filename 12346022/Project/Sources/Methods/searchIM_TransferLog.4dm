@@ -1,0 +1,2 @@
+//%attributes = {}
+searchTable(->[IM_TransferLog:133]; ->[IM_TransferLog:133]InvoiceID:13; ->[IM_TransferLog:133]RegisterID:2; ->[IM_TransferLog:133]CustomerID:3; ->[IM_TransferLog:133]Endpoint:8; ->[IM_TransferLog:133]FraudRuleFired:9; ->[IM_TransferLog:133]ResponseDate:7)

@@ -1,0 +1,214 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"lb_Customers": {
+					"type": "listbox",
+					"top": 56,
+					"left": 18,
+					"width": 682,
+					"height": 326,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"listboxType": "collection",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"headerHeight": "2em",
+					"dataSource": "Form:C1466.entitySelection",
+					"scrollbarHorizontal": "automatic",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column8",
+							"dataSource": "This:C1470.CustomerID",
+							"width": 100,
+							"minWidth": 70,
+							"maxWidth": 150,
+							"resizable": false,
+							"enterable": false,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header8",
+								"text": "Customer ID"
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column11",
+							"dataSource": "This:C1470.FirstName",
+							"width": 120,
+							"minWidth": 120,
+							"maxWidth": 300,
+							"enterable": false,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header11",
+								"text": "First Name"
+							},
+							"footer": {
+								"name": "Footer11",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column15",
+							"dataSource": "This:C1470.LastName",
+							"width": 120,
+							"minWidth": 120,
+							"maxWidth": 300,
+							"enterable": false,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header15",
+								"text": "Last Name"
+							},
+							"footer": {
+								"name": "Footer15",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column16",
+							"dataSource": "This:C1470.CompanyName",
+							"width": 150,
+							"minWidth": 150,
+							"maxWidth": 200,
+							"enterable": false,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header16",
+								"text": "Company"
+							},
+							"footer": {
+								"name": "Footer16",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column17",
+							"dataSource": "This:C1470.HomeTel",
+							"width": 90,
+							"minWidth": 90,
+							"maxWidth": 150,
+							"enterable": false,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header17",
+								"text": "Phone"
+							},
+							"footer": {
+								"name": "Footer17",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "This:C1470.DOB",
+							"dataSourceTypeHint": "date",
+							"width": 90,
+							"minWidth": 90,
+							"maxWidth": 100,
+							"enterable": false,
+							"textAlign": "left",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "DOB"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				},
+				"btnQueryCustomers": {
+					"type": "button",
+					"top": 402,
+					"left": 73,
+					"width": 146,
+					"height": 20,
+					"sizingY": "move",
+					"text": "Query Lastname A",
+					"focusable": false,
+					"method": "ObjectMethods/btnQueryCustomers.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"searchCustomer": {
+					"type": "input",
+					"top": 16,
+					"left": 451,
+					"width": 156,
+					"height": 16,
+					"sizingX": "move",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/searchCustomer.4dm",
+					"events": [
+						"onAfterKeystroke"
+					]
+				},
+				"l_search": {
+					"type": "text",
+					"top": 15,
+					"left": 312,
+					"width": 125,
+					"height": 19,
+					"sizingX": "move",
+					"textAlign": "right",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"text": ":xliff:cvs_search"
+				}
+			}
+		}
+	]
+}

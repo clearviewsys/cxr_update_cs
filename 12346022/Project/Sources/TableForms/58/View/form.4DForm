@@ -1,0 +1,203 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text3": {
+					"type": "text",
+					"top": 105,
+					"left": 15,
+					"width": 107,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Column 1:"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 132,
+					"left": 15,
+					"width": 107,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Column 2:"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 15,
+					"left": 15,
+					"width": 87,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Crurencies"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 45,
+					"left": 15,
+					"width": 107,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Line order: "
+				},
+				"Text5": {
+					"type": "text",
+					"top": 161,
+					"left": 15,
+					"width": 107,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Column 3:"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 74,
+					"left": 15,
+					"width": 107,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "CurrencyCode: "
+				},
+				"Field": {
+					"type": "input",
+					"top": 45,
+					"left": 122,
+					"width": 58,
+					"height": 16,
+					"dataSource": "[Ratex:58]LineNo:1",
+					"dataSourceTypeHint": "number",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 74,
+					"left": 122,
+					"width": 98,
+					"height": 16,
+					"dataSource": "[Ratex:58]CurrencyCode:2",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 103,
+					"left": 122,
+					"width": 58,
+					"height": 16,
+					"dataSource": "[Ratex:58]FieldNo1:3",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 132,
+					"left": 122,
+					"width": 58,
+					"height": 16,
+					"dataSource": "[Ratex:58]FieldNo2:4",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 161,
+					"left": 122,
+					"width": 58,
+					"height": 16,
+					"dataSource": "[Ratex:58]FieldNo3:5",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 73,
+					"left": 232,
+					"width": 182,
+					"height": 16,
+					"dataSource": "[Currencies:6]Name:2",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

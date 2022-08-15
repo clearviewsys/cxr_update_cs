@@ -1,0 +1,3 @@
+handleApplyDateRangeObject(Self:C308)
+
+acc_fillPositionsListBox

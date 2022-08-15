@@ -1,0 +1,291 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 20,
+	"markerHeader": 60,
+	"markerBody": 85,
+	"markerBreak": 85,
+	"markerFooter": 85,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"backstripe": {
+					"type": "rectangle",
+					"top": 61,
+					"left": -18,
+					"width": 746,
+					"height": 23,
+					"sizingX": "grow",
+					"stroke": "#FFFFFF"
+				},
+				"Splitter7": {
+					"type": "splitter",
+					"top": 97,
+					"left": 24,
+					"width": 1,
+					"height": 42,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"flag": {
+					"type": "picture",
+					"top": 121,
+					"left": 4,
+					"width": 12,
+					"height": 18,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/flag.png"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 84,
+					"left": -39,
+					"width": 768,
+					"height": 1,
+					"stroke": "#888888",
+					"startPoint": "bottomLeft"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 114,
+					"left": 292,
+					"width": 172,
+					"height": 30,
+					"text": "H: 60 D:85, F:85\rStripe: R: 728"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 141,
+					"left": 36,
+					"width": 97,
+					"height": 15,
+					"text": "Line Heigh: 43"
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 5,
+					"left": 48,
+					"width": 471,
+					"height": 24,
+					"dataSource": "vFormTitle",
+					"stroke": "#555555",
+					"class": "Titles",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 5,
+					"left": 4,
+					"width": 30,
+					"height": 30,
+					"dataSource": "vSubformIcon",
+					"dataSourceTypeHint": "picture",
+					"fill": "transparent",
+					"borderStyle": "solid",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"deleteButton": {
+					"type": "button",
+					"top": 106,
+					"left": 574,
+					"width": 45,
+					"height": 40,
+					"dataSource": "bDelete",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Delete Selectio"
+					},
+					"shortcutKey": "[Backspace]",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Delete",
+					"icon": "/RESOURCES/Images/library/toolbarDelete.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/deleteButton.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"newButton": {
+					"type": "button",
+					"top": 4,
+					"left": 529,
+					"width": 86,
+					"height": 35,
+					"dataSource": "bNew",
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "New",
+					"icon": "/RESOURCES/Images/library/toolbarNewRecord (24134).png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/newButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"changeButton": {
+					"type": "button",
+					"top": 106,
+					"left": 660,
+					"width": 45,
+					"height": 40,
+					"dataSource": "bChange",
+					"shortcutKey": "m",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Change",
+					"icon": "/RESOURCES/Images/library/toolbarChange.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/changeButton.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"3D Button4": {
+					"type": "button",
+					"top": 40,
+					"left": 3,
+					"width": 12,
+					"height": 19,
+					"visibility": "hidden",
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"textPlacement": "right",
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 97,
+					"left": 292,
+					"width": 149,
+					"height": 15,
+					"text": "Heading: T: 40 ; B: 59"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 167,
+					"left": 40,
+					"width": 579,
+					"height": 120,
+					"text": "Check list: \r1) form method: handleCustomersSubformMethod (current form table; ->isFlagged) \r2) form events: on load; on double click; on click; on display detail\r3) all fields have properties: Horizontal: grow  Vertical: none\r4) check the headings object method for right field usage \r5) "
+				},
+				"3D Button1": {
+					"type": "button",
+					"top": 5,
+					"left": 617,
+					"width": 106,
+					"height": 25,
+					"dataSource": "3D Button1",
+					"class": "Control",
+					"focusable": false,
+					"text": "View Records",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 5,
+					"left": 3,
+					"width": 37,
+					"height": 33,
+					"dataSource": "Invisible Button1",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

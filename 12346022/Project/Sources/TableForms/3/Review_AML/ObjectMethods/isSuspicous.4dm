@@ -1,0 +1,1 @@
+//setEnterableIff (Self->=True;"reason_suspicious")

@@ -1,0 +1,591 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedFormTable": 7,
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Field1": {
+					"type": "input",
+					"top": 5,
+					"left": 427,
+					"width": 123,
+					"height": 20,
+					"dataSource": "[TellerProof:78]TellerProofID:1",
+					"stroke": "#999999",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 5,
+					"left": 538,
+					"width": 167,
+					"height": 20,
+					"dataSource": "[TellerProof:78]Teller:2",
+					"stroke": "#999999",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vCashAccount": {
+					"type": "input",
+					"top": 5,
+					"left": 268,
+					"width": 152,
+					"height": 21,
+					"dataSource": "vCashAccount",
+					"stroke": "#777777",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onGettingFocus"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 12,
+					"left": 11,
+					"width": 103,
+					"height": 20,
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"text": "Currency"
+				},
+				"Highlight Button1": {
+					"type": "button",
+					"top": 56,
+					"left": 575,
+					"width": 130,
+					"height": 25,
+					"dataSource": "Highlight Button1",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Export Table",
+					"icon": "/RESOURCES/Images/library/toolbarLoad.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Combo Box1": {
+					"type": "combo",
+					"top": 8,
+					"left": 94,
+					"width": 106,
+					"height": 28,
+					"dataSource": "cbCurrencies",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"method": "ObjectMethods/Combo Box1.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 56,
+					"left": 10,
+					"width": 120,
+					"height": 25,
+					"dataSource": "Button1",
+					"shortcutKey": "e",
+					"shortcutAccel": true,
+					"text": "Edit Row",
+					"focusable": false,
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"List Box1": {
+					"type": "listbox",
+					"top": 87,
+					"left": 11,
+					"width": 694,
+					"height": 393,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "lbTellerProof",
+					"rowHeight": "28px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "2em",
+					"showFooters": true,
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "#AAAAAA",
+					"verticalLineStroke": "#AAAAAA",
+					"stroke": "#2A2A31",
+					"fill": "#FFFEFD",
+					"alternateFill": "#F5FAFB",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"method": "ObjectMethods/List Box1.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "arrDenoms",
+							"dataSourceTypeHint": "number",
+							"width": 153,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#2A2A31",
+							"fill": "#FFFEFD",
+							"alternateFill": "#F5FAFB",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Denominations",
+								"text": "Denomination",
+								"dataSource": "Denominations",
+								"stroke": "#2A2A31",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#FFFFFF",
+								"fill": "#D4D3D0",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "arrQty1",
+							"dataSource": "arrQty1",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"entryFilter": "&9",
+							"numberFormat": "|Currency_NoDec",
+							"stroke": "#2A2A31",
+							"fill": "#F4F0ED",
+							"alternateFill": "#E9ECEB",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Qty1",
+								"text": "Count 1",
+								"dataSource": "Qty1",
+								"stroke": "#2A2A31",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#FFFFFF",
+								"fill": "#D4D3D0",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "arrQty2",
+							"dataSource": "arrQty2",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"maxWidth": 32000,
+							"entryFilter": "&9",
+							"numberFormat": "|Currency_NoDec",
+							"stroke": "#2A2A31",
+							"fill": "#F4F0ED",
+							"alternateFill": "#E9ECEB",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Qty 2",
+								"text": "Count 2",
+								"dataSource": "Qty2",
+								"stroke": "#2A2A31",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#FFFFFF",
+								"fill": "#D4D3D0",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrTotalQtys",
+							"dataSourceTypeHint": "number",
+							"width": 132,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency_NoDec",
+							"stroke": "#2A2A31",
+							"fill": "#FFFEFD",
+							"alternateFill": "#F5FAFB",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Total Qtys",
+								"text": "Total Counts",
+								"dataSource": "Header5",
+								"stroke": "#2A2A31",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#FFFFFF",
+								"fill": "#D4D3D0",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "arrTotals",
+							"dataSourceTypeHint": "number",
+							"width": 155,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#2A2A31",
+							"fill": "#F9FBFC",
+							"alternateFill": "#EEF7F9",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Total Amount",
+								"text": "Total Amount",
+								"dataSource": "totalAmount",
+								"stroke": "#2A2A31",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer5",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#444444",
+								"fill": "#D4D3D0",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						}
+					]
+				},
+				"SaveContinueButton": {
+					"type": "button",
+					"top": 519,
+					"left": 363,
+					"width": 342,
+					"height": 27,
+					"sizingY": "move",
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"text": "Save & Continue With Next CURR",
+					"class": "Fields_Large",
+					"focusable": false,
+					"method": "ObjectMethods/SaveContinueButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"closeButton": {
+					"type": "button",
+					"top": 519,
+					"left": 10,
+					"width": 156,
+					"height": 27,
+					"sizingY": "move",
+					"action": "cancel",
+					"text": "Close Window",
+					"class": "Fields_Large",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Button7": {
+					"type": "button",
+					"top": 56,
+					"left": 133,
+					"width": 120,
+					"height": 25,
+					"dataSource": "Button1",
+					"text": "Add Denomination",
+					"focusable": false,
+					"method": "ObjectMethods/Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"top": 485,
+					"left": 363,
+					"width": 342,
+					"height": 27,
+					"sizingY": "move",
+					"dataSource": "cbValidate",
+					"text": "End of Day (End of Shift)",
+					"class": "Fields_Large",
+					"fontWeight": "bold",
+					"focusable": false,
+					"method": "ObjectMethods/Check Box1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 56,
+					"left": 257,
+					"width": 120,
+					"height": 25,
+					"dataSource": "Button1",
+					"text": "Clear Table",
+					"focusable": false,
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"top": 56,
+					"left": 385,
+					"width": 150,
+					"height": 26,
+					"dataSource": "cbHideColumn2",
+					"shortcutKey": "h",
+					"shortcutAccel": true,
+					"shortcutShift": true,
+					"text": "Hide 2nd Column",
+					"focusable": false,
+					"method": "ObjectMethods/Check Box2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 512,
+					"left": 8,
+					"width": 7,
+					"height": 11,
+					"dataSource": "Invisible Button1",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"SaveButton": {
+					"type": "button",
+					"top": 519,
+					"left": 171,
+					"width": 188,
+					"height": 27,
+					"sizingY": "move",
+					"action": "accept",
+					"text": "Save & Close",
+					"class": "Fields_Large",
+					"focusable": false,
+					"method": "ObjectMethods/SaveButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bNext": {
+					"type": "button",
+					"top": 14,
+					"left": 232,
+					"width": 16,
+					"height": 16,
+					"shortcutKey": "]",
+					"shortcutAccel": true,
+					"focusable": false,
+					"icon": "/RESOURCES/Images/library/toolbarNext.png",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/bNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bPrevious": {
+					"type": "button",
+					"top": 14,
+					"left": 215,
+					"width": 16,
+					"height": 16,
+					"dataSource": "bPrevious",
+					"shortcutKey": "[",
+					"shortcutAccel": true,
+					"focusable": false,
+					"icon": "/RESOURCES/Images/library/toolbarPrevious.png",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/bPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"vCashAccount1": {
+					"type": "input",
+					"top": 28,
+					"left": 268,
+					"width": 152,
+					"height": 21,
+					"dataSource": "vCurrency",
+					"stroke": "#777777",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onGettingFocus"
+					]
+				},
+				"vProgressBar": {
+					"type": "progress",
+					"top": 485,
+					"left": 10,
+					"width": 333,
+					"height": 25,
+					"dataSource": "vProgressBar",
+					"continuousExecution": false,
+					"min": 0,
+					"max": 100,
+					"graduationStep": 1,
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"checkMark": {
+					"type": "picture",
+					"top": 485,
+					"left": 673,
+					"width": 32,
+					"height": 32,
+					"visibility": "hidden",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/checkMark2.png"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

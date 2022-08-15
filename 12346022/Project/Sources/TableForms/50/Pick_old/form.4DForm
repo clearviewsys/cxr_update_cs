@@ -1,0 +1,459 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vSearchText": {
+					"type": "input",
+					"top": 31,
+					"left": 65,
+					"width": 205,
+					"height": 16,
+					"dataSource": "vSearchText",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/vSearchText.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onBeforeKeystroke",
+						"onDataChange",
+						"onAfterKeystroke"
+					]
+				},
+				"List Box1": {
+					"type": "listbox",
+					"top": 65,
+					"left": 7,
+					"width": 653,
+					"height": 157,
+					"resizingMode": "legacy",
+					"dataSource": "List Box1",
+					"focusable": false,
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "#AAAAAA",
+					"verticalLineStroke": "#AAAAAA",
+					"fill": "#FFFFFF",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"method": "ObjectMethods/List Box1.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "arrKey",
+							"width": 96,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"styledText": true,
+							"contextMenu": "none",
+							"fill": "#FFFFFF",
+							"alternateFill": "#FFFCEC",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Identifier",
+								"dataSource": "Header1",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold",
+								"fontStyle": "italic"
+							},
+							"footer": {
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#000000"
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrValue",
+							"width": 541,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"styledText": true,
+							"contextMenu": "none",
+							"fill": "#FFFFFF",
+							"alternateFill": "#FFFCEC",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Description",
+								"dataSource": "Header2",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold",
+								"fontStyle": "italic"
+							},
+							"footer": {
+								"name": "1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#000000"
+							}
+						}
+					]
+				},
+				"CalcField7": {
+					"type": "input",
+					"top": 242,
+					"left": 135,
+					"width": 141,
+					"height": 15,
+					"dataSource": "[Bookings:50]Amount:9",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 478,
+					"left": 580,
+					"width": 80,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bAccept",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Pick",
+					"class": "Control",
+					"defaultButton": true,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 478,
+					"left": 495,
+					"width": 80,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Control",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 8,
+					"left": 65,
+					"width": 210,
+					"height": 15,
+					"class": "Label",
+					"text": "Search For Bookings"
+				},
+				"newButton": {
+					"type": "button",
+					"top": 478,
+					"left": 8,
+					"width": 165,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "bNew",
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"class": "Control",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "New Booking",
+					"icon": "/RESOURCES/Images/library/toolbarNewRecord (24134).png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/newButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button3": {
+					"type": "button",
+					"top": 11,
+					"left": 7,
+					"width": 47,
+					"height": 44,
+					"dataSource": "Invisible Button3",
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"shortcutShift": true,
+					"display": false,
+					"method": "ObjectMethods/Invisible Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 300,
+					"left": 8,
+					"width": 124,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Exchange Rate"
+				},
+				"Text43": {
+					"type": "text",
+					"top": 242,
+					"left": 8,
+					"width": 124,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Amount"
+				},
+				"CalcField1": {
+					"type": "input",
+					"top": 261,
+					"left": 135,
+					"width": 50,
+					"height": 15,
+					"dataSource": "[Bookings:50]Currency:10",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"BookingMethod1": {
+					"type": "input",
+					"top": 281,
+					"left": 135,
+					"width": 141,
+					"height": 15,
+					"dataSource": "[Bookings:50]PaymentMethod:8",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/PayablesType"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CalcField8": {
+					"type": "input",
+					"top": 301,
+					"left": 135,
+					"width": 101,
+					"height": 15,
+					"dataSource": "[Bookings:50]ourRate:11",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 262,
+					"left": 8,
+					"width": 124,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Currency"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 280,
+					"left": 8,
+					"width": 124,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Payment Method"
+				},
+				"ourRemarks": {
+					"type": "input",
+					"top": 363,
+					"left": 8,
+					"width": 641,
+					"height": 105,
+					"dataSource": "[Bookings:50]ourRemarks:13",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 320,
+					"left": 8,
+					"width": 124,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "left",
+					"text": "Customer Remarks"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 344,
+					"left": 8,
+					"width": 124,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "left",
+					"text": "Our Remarks"
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 8,
+					"left": 7,
+					"width": 50,
+					"height": 50,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/_Bookings.png"
+				}
+			},
+			"entryOrder": [
+				"vSearchText",
+				"List Box1",
+				"Button1",
+				"Button2"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,706 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "ViewToolbar2",
+	"inheritedFormTable": 7,
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"tab_branches": {
+					"type": "tab",
+					"top": 332,
+					"left": 7,
+					"width": 685,
+					"height": 217,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"labels": [
+						"Computer",
+						"Users"
+					],
+					"class": "Fields_Large",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_branchID": {
+					"type": "text",
+					"top": 64,
+					"left": 20,
+					"width": 280,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_branch_id"
+				},
+				"l_branchName": {
+					"type": "text",
+					"top": 88,
+					"left": 20,
+					"width": 280,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_branch_name"
+				},
+				"l_branchAddress": {
+					"type": "text",
+					"top": 141,
+					"left": 20,
+					"width": 280,
+					"height": 38,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": ":xliff:BranchAddress"
+				},
+				"l_branchPhone": {
+					"type": "text",
+					"top": 187,
+					"left": 20,
+					"width": 280,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": ":xliff:BranchPhone"
+				},
+				"l_branchFax": {
+					"type": "text",
+					"top": 213,
+					"left": 20,
+					"width": 280,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": ":xliff:BranchFax"
+				},
+				"l_branchTimeOffset": {
+					"type": "text",
+					"top": 238,
+					"left": 20,
+					"width": 280,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": ":xliff:TimeDifference"
+				},
+				"l_url": {
+					"type": "text",
+					"top": 115,
+					"left": 20,
+					"width": 280,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": ":xliff:WebServerURL"
+				},
+				"BranchID": {
+					"type": "input",
+					"top": 64,
+					"left": 315,
+					"width": 75,
+					"height": 20,
+					"dataSource": "[Branches:70]BranchID:1",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "#FDFEE9",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"BranchName": {
+					"type": "input",
+					"top": 88,
+					"left": 315,
+					"width": 320,
+					"height": 20,
+					"dataSource": "[Branches:70]BranchName:2",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "#FDFEE9",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Address": {
+					"type": "input",
+					"top": 141,
+					"left": 315,
+					"width": 377,
+					"height": 40,
+					"dataSource": "[Branches:70]Address:3",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"BranchName2": {
+					"type": "input",
+					"top": 186,
+					"left": 315,
+					"width": 164,
+					"height": 20,
+					"dataSource": "[Branches:70]BranchPhone:5",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"BranchName3": {
+					"type": "input",
+					"top": 212,
+					"left": 315,
+					"width": 164,
+					"height": 20,
+					"dataSource": "[Branches:70]BranchFax:6",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"branchTimeDifference": {
+					"type": "input",
+					"top": 237,
+					"left": 315,
+					"width": 34,
+					"height": 20,
+					"dataSource": "[Branches:70]TimeDifference:7",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"branchURL": {
+					"type": "input",
+					"top": 114,
+					"left": 315,
+					"width": 377,
+					"height": 20,
+					"dataSource": "[Branches:70]WebServerURL:9",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"branchNotes": {
+					"type": "input",
+					"top": 262,
+					"left": 315,
+					"width": 364,
+					"height": 80,
+					"dataSource": "[Branches:70]Notes:8",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"l_branchName1": {
+					"type": "text",
+					"top": 237,
+					"left": 468,
+					"width": 117,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Loc. Number FT"
+				},
+				"LocNumber": {
+					"type": "input",
+					"top": 236,
+					"left": 594,
+					"width": 100,
+					"height": 20,
+					"dataSource": "[Branches:70]LocationNumberFT:19",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 360,
+					"left": 10,
+					"width": 680,
+					"height": 183,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "22px",
+					"headerHeight": "2em",
+					"table": 26,
+					"highlightSet": "$ClientPrefs_LBSet",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"fill": "#E6E9FD",
+					"alternateFill": "#A8ABC8",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column2",
+							"dataSource": "[ClientPrefs:26]ClientName:1",
+							"width": 163,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"fill": "#E6E9FD",
+							"alternateFill": "#D3D7EF",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Name",
+								"dataSource": "Header1",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B2B6D5",
+								"textAlign": "center",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "[ClientPrefs:26]ComputerAlias:33",
+							"width": 540,
+							"minWidth": 4,
+							"maxWidth": 32000,
+							"fill": "#E6E9FD",
+							"alternateFill": "#D3D7EF",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Computer Alias",
+								"dataSource": "Header3",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B2B6D5",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"mainListBox1": {
+					"type": "listbox",
+					"top": 362,
+					"left": 11,
+					"width": 681,
+					"height": 181,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "2em",
+					"footerHeight": "2em",
+					"table": 25,
+					"highlightSet": "$Users_LBSet",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"alternateFill": "#D9E7F4",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"events": [
+						"onLoad",
+						"onDisplayDetail",
+						"onDoubleClick",
+						"onUnload"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "[Users:25]UserID:1",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_userID",
+								"text": "User ID",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A9BACB",
+								"textAlign": "center",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "[Users:25]UserName:3",
+							"width": 207,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_username",
+								"text": "Username",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A9BACB",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column13",
+							"dataSource": "[Users:25]Group:30",
+							"width": 98,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_group",
+								"text": "Group",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer13",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A9BACB",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "[Users:25]isInactive:18",
+							"dataSourceTypeHint": "boolean",
+							"width": 55,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_inactive",
+								"text": "Active",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A9BACB",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column8",
+							"dataSource": "[Users:25]isManager:10",
+							"dataSourceTypeHint": "boolean",
+							"width": 41,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"fill": "#ECF2F8",
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_man",
+								"text": ":xliff:isManager",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A9BACB",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column9",
+							"dataSource": "[Users:25]isController:29",
+							"dataSourceTypeHint": "boolean",
+							"width": 41,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"fill": "#ECF2F8",
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_controller",
+								"text": ":xliff:isController",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer9",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A9BACB",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column11",
+							"dataSource": "[Users:25]isComplianceOfficer:16",
+							"dataSourceTypeHint": "boolean",
+							"width": 132,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"fill": "#ECF2F8",
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_co",
+								"text": ":xliff:isComplianceOfficer",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer11",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A9BACB",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/head.shtml -->
+
+    <!--#4DSCRIPT/webSelectWebUserRecord-->
+
+</head>
+
+
+<body>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/menubar.shtml -->
+
+    <main role="main">
+
+        <div class="page-header">
+
+            <div class='container'>
+
+                <!--#4DHTML WAPI_includeAlertMessage-->
+                <script src="/app/js/bootstrap-auto-dismiss-alert.js"></script>
+                <!--MUST COME AFTER THE ALERT YOU WANT TO CLOSE -->
+
+                <h1>Welcome
+                    <!--#4DTEXT [webUsers]webusername-->
+                </h1>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                        <div class="form-group">
+                            <!--#4DSCRIPT/WAPI_formGroup/{field:webusers___webusername, label:User-Name, readonly:true}-->
+                        </div>
+
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+
+                        <div class="form-group">
+                            <!--#4DSCRIPT/WAPI_formGroup/{field:webusers___email, label:Email-Address, readonly:true, width:100}-->
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <p>Account creation info</p>
+                    </div>
+
+                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                        <p>
+                            <!--#4DTEXT [webUsers]creationdate--> at
+                            <!--#4DTEXT [webUsers]creationtime-->
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- ACCOUNT CONFIRMATION PANELS -->
+        <div class="container" style="padding-bottom: 40px; padding-top: 0px">
+
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="panel panel-heading">
+                        <h1 class="panel-title">Please confirm 2 of the following:
+                            <small>The final step is required to link your customer profile with you web user account.</small></h1>
+                    </div>
+
+
+                    <!--CONTACT INFORMATION-->
+                    <div class="panel panel-default">
+
+                        <div id="profile-demographics-data" class="panel-collapse" role="tabpanel" aria-labelledby="profile-demographics-tab">
+
+                            <form id='profile-confirm-form' action="/webconfirmaccount" method="post">
+
+                                <div>
+                                    <!--#4DSCRIPT/WAPI_formHeader/{form:profile-demographics-tab, table:webusers, field:webusers___email, success:profile.shtml}-->
+                                </div>
+
+
+                                <div class="panel-body">
+
+                                    <div class="form-group">
+                                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___DOB, label:Date-of-birth, inputmask-selectyears:50, inputmask-startyear:1900, readonly:false, label:Your-birth-date}-->
+                                    </div>
+
+                                    <div class="form-group">
+                                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___sin_no, label:SIN-Number, readonly:false, label:Your-government-assigned-ID-number}-->
+                                    </div>
+
+                                    <div class="form-group">
+                                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___secretquestion, readonly:false, label:Your-secret-word}-->
+                                    </div>
+
+                                    <div class="form-group">
+                                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___city, readonly:false, label:The-city-in-which-you-live, width:100}-->
+                                    </div>
+
+
+                                    <div class="btn-group pull-right" role="group" aria-label="profile-confirm">
+                                        <a id="cancel-button-confirm-account" class="btn btn-default" role="button" style='display:none;' onclick="wapiObjectMethod(event)">Cancel</a>
+
+                                        <input type="button" type='submit' class="btn btn-primary" id="save-button-confirm-account" name="save-button-confirm-account" form="profile-confirm-form" onclick="wapiValidateOnSubmit()" value="Confirm Account">
+
+                                    </div>
+
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </main>
+
+    <!-- DIALOG FOR MESSAGE -->
+    <!--#4DSCRIPT/WAPI_4DInclude/wapi/message.shtml -->
+
+    <!-- DIALOG FOR CONFIRMATION -->
+    <!--#4DSCRIPT/WAPI_4DInclude/wapi/confirm.shtml -->
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/footer.shtml -->
+</body>
+
+
+</html>

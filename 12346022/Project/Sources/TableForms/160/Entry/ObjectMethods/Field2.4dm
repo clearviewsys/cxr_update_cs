@@ -1,0 +1,1 @@
+OBJECT SET FONT:C164([Licenses:160]Password:12; "%password")

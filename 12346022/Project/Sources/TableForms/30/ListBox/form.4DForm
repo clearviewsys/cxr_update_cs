@@ -1,0 +1,258 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Listbox_complete",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 75,
+	"markerBody": 105,
+	"markerBreak": 381,
+	"markerFooter": 441,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onPrintingDetail",
+		"onUnload",
+		"onAfterKeystroke",
+		"onLoadRecord"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 76,
+					"left": 1,
+					"width": 961,
+					"height": 436,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "24px",
+					"showFooters": true,
+					"table": 30,
+					"highlightSet": "$Sync_Queue_LBSet",
+					"horizontalLineStroke": "transparent",
+					"alternateFill": "#F0F0EC",
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column10",
+							"dataSource": "[Sync_Queue:30]PK:1",
+							"width": 91,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#F0F0EC",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_PK",
+								"text": "Primary Key"
+							},
+							"footer": {
+								"name": "Footer10",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[Sync_Queue:30]For_ID:2",
+							"width": 103,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#F0F0EC",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_ForID",
+								"text": "For ID"
+							},
+							"footer": {
+								"name": "Footer2",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "[Sync_Queue:30]Table_Num:5",
+							"width": 81,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#F0F0EC",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_tableNo1",
+								"text": "Table No"
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "c_tableName",
+							"dataSource": "getTableName([Sync_Queue:30]Table_Num:5)",
+							"width": 142,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#F0F0EC",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_tableNo",
+								"text": "Table Name"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "[Sync_Queue:30]Action:8",
+							"width": 161,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#F0F0EC",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_ACtion",
+								"text": "Action"
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "[Sync_Queue:30]Is_Deleted:7",
+							"dataSourceTypeHint": "integer",
+							"width": 53,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"alternateFill": "#F0F0EC",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Deleted",
+								"text": "Deleted"
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "[Sync_Queue:30]Send_Attempts:6",
+							"dataSourceTypeHint": "integer",
+							"width": 96,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#F0F0EC",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_SendAttempts",
+								"text": "Send Attempts"
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column8",
+							"dataSource": "[Sync_Queue:30]Error_Descrip:4",
+							"width": 217,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#F0F0EC",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_ErrorDesc",
+								"text": "Error Description"
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

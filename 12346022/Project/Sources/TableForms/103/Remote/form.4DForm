@@ -1,0 +1,797 @@
+﻿{
+	"destination": "detailScreen",
+	"windowMinWidth": 1024,
+	"windowMinHeight": 650,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"top": 8,
+					"left": 15,
+					"width": 240,
+					"height": 25,
+					"fontFamily": "Segoe UI",
+					"fontSize": 18,
+					"text": "Import Remote Methods"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 40,
+					"left": 15,
+					"width": 117,
+					"height": 25,
+					"fontFamily": "Segoe UI",
+					"fontSize": 18,
+					"text": "Connect to:"
+				},
+				"Variable": {
+					"type": "input",
+					"top": 47,
+					"left": 136,
+					"width": 164,
+					"height": 16,
+					"dataSource": "serverIP",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 47,
+					"left": 384,
+					"width": 98,
+					"height": 16,
+					"dataSource": "user4D",
+					"placeholder": "Designer",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 46,
+					"left": 650,
+					"width": 98,
+					"height": 16,
+					"dataSource": "password4D",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 44,
+					"left": 760,
+					"width": 109,
+					"height": 23,
+					"text": "Check",
+					"focusable": false,
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 42,
+					"left": 313,
+					"width": 56,
+					"height": 25,
+					"fontFamily": "Segoe UI",
+					"fontSize": 18,
+					"text": "User:"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 40,
+					"left": 536,
+					"width": 100,
+					"height": 25,
+					"fontFamily": "Segoe UI",
+					"fontSize": 18,
+					"text": "Password:"
+				},
+				"Button3": {
+					"type": "button",
+					"top": 44,
+					"left": 760,
+					"width": 109,
+					"height": 23,
+					"text": "Check",
+					"focusable": false,
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 79,
+					"left": 15,
+					"width": 73,
+					"height": 14,
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "left",
+					"text": "From date : "
+				},
+				"Text4": {
+					"type": "text",
+					"top": 80,
+					"left": 451,
+					"width": 57,
+					"height": 15,
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "To date : "
+				},
+				"Highlight Button5": {
+					"type": "button",
+					"top": 80,
+					"left": 343,
+					"width": 44,
+					"height": 16,
+					"dataSource": "Highlight Button1",
+					"shortcutKey": "t",
+					"shortcutAccel": true,
+					"class": "Fields_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Today",
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bIncreaseDate": {
+					"type": "pictureButton",
+					"top": 80,
+					"left": 388,
+					"width": 16,
+					"height": 15,
+					"dataSource": "vIncreaseDate",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyPlus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bIncreaseDate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bDecrDate": {
+					"type": "pictureButton",
+					"top": 79,
+					"left": 326,
+					"width": 16,
+					"height": 16,
+					"dataSource": "vDecrDate",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyMinus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bDecrDate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_chooseDate": {
+					"type": "pictureButton",
+					"top": 75,
+					"left": 407,
+					"width": 24,
+					"height": 24,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/calendar.png",
+					"loopBackToFirstFrame": true,
+					"method": "ObjectMethods/b_chooseDate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button1": {
+					"type": "button",
+					"top": 80,
+					"left": 780,
+					"width": 44,
+					"height": 16,
+					"dataSource": "Highlight Button1",
+					"shortcutKey": "t",
+					"shortcutAccel": true,
+					"class": "Fields_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Today",
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bIncreaseDate1": {
+					"type": "pictureButton",
+					"top": 80,
+					"left": 824,
+					"width": 16,
+					"height": 15,
+					"dataSource": "vIncreaseDate",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyPlus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bIncreaseDate1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_chooseDate1": {
+					"type": "pictureButton",
+					"top": 75,
+					"left": 843,
+					"width": 24,
+					"height": 24,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/calendar.png",
+					"loopBackToFirstFrame": true,
+					"method": "ObjectMethods/b_chooseDate1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bDecrDate1": {
+					"type": "pictureButton",
+					"top": 80,
+					"left": 762,
+					"width": 16,
+					"height": 16,
+					"dataSource": "vDecrDate",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyMinus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bDecrDate1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"vFromDate": {
+					"type": "input",
+					"top": 79,
+					"left": 86,
+					"width": 212,
+					"height": 15,
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"method": "ObjectMethods/vFromDate.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"vToDate": {
+					"type": "input",
+					"top": 79,
+					"left": 534,
+					"width": 212,
+					"height": 15,
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"method": "ObjectMethods/vToDate.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"popDevelopers": {
+					"type": "dropdown",
+					"top": 114,
+					"left": 86,
+					"width": 212,
+					"height": 24,
+					"dataSource": "popDevelopers",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"top": 114,
+					"left": 326,
+					"width": 105,
+					"height": 23,
+					"text": "Get Changes",
+					"focusable": false,
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 121,
+					"left": 15,
+					"width": 73,
+					"height": 14,
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "left",
+					"text": "Developer:"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 120,
+					"left": 451,
+					"width": 57,
+					"height": 15,
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Method:"
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 118,
+					"left": 534,
+					"width": 335,
+					"height": 20,
+					"dataSource": "vMethodName",
+					"fontFamily": "Segoe UI",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"lbRemoteRevisions": {
+					"type": "listbox",
+					"top": 155,
+					"left": 36,
+					"width": 955,
+					"height": 478,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "lbRemoteRevisions",
+					"scrollbarHorizontal": "automatic",
+					"method": "ObjectMethods/lbRemoteRevisions.4dm",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "arrId",
+							"dataSourceTypeHint": "number",
+							"width": 54,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textAlign": "center",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "ID"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrCommitDate",
+							"dataSourceTypeHint": "date",
+							"width": 75,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textAlign": "center",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Date"
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "arrCommitTime",
+							"dataSourceTypeHint": "time",
+							"width": 74,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textAlign": "center",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "Time"
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "arrVersion",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textAlign": "center",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header5",
+								"text": "Version"
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "arrDeveloper",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textAlign": "center",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header6",
+								"text": "Developer"
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "arrMethodName",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header7",
+								"text": "Merhod"
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "arrMethodPath",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"visibility": "hidden",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "MethodPath"
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column8",
+							"dataSource": "arrSourceCode",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"visibility": "hidden",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header8",
+								"text": "Source Code"
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column9",
+							"dataSource": "arrComments",
+							"width": 135,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"visibility": "hidden",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header9",
+								"text": "Comments"
+							},
+							"footer": {
+								"name": "Footer9",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 653,
+					"left": 879,
+					"width": 112,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"text": "Cancel",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"b_diff2": {
+					"type": "button",
+					"top": 653,
+					"left": 36,
+					"width": 275,
+					"height": 30,
+					"sizingY": "move",
+					"text": "Diff & Merge revisions",
+					"class": "Control",
+					"method": "ObjectMethods/b_diff2.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"MergelyArea": {
+					"type": "webArea",
+					"top": 179,
+					"left": 14,
+					"width": 972,
+					"height": 460,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "MergelyArea",
+					"progressSource": "Web Area_progress",
+					"borderStyle": "none",
+					"method": "ObjectMethods/MergelyArea.4dm",
+					"events": [
+						"onLoad",
+						"onEndURLLoading"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 653,
+					"left": 874,
+					"width": 112,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Cancel",
+					"focusable": false,
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 152,
+					"left": 15,
+					"width": 63,
+					"height": 15,
+					"fontWeight": "bold",
+					"text": "Local File"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 152,
+					"left": 908,
+					"width": 78,
+					"height": 15,
+					"sizingX": "move",
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": "Remote File"
+				},
+				"b_refresh": {
+					"type": "button",
+					"top": 654,
+					"left": 15,
+					"width": 125,
+					"height": 29,
+					"sizingY": "move",
+					"text": "Undo Merge",
+					"class": "Control",
+					"method": "ObjectMethods/b_refresh.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_mergeToLeft": {
+					"type": "button",
+					"top": 654,
+					"left": 142,
+					"width": 125,
+					"height": 29,
+					"sizingY": "move",
+					"text": "Merge to left",
+					"class": "Control",
+					"method": "ObjectMethods/b_mergeToLeft.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_mergeToRight": {
+					"type": "button",
+					"top": 654,
+					"left": 269,
+					"width": 125,
+					"height": 29,
+					"sizingY": "move",
+					"text": "Merge to right",
+					"class": "Control",
+					"method": "ObjectMethods/b_mergeToRight.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_save_merged": {
+					"type": "button",
+					"top": 654,
+					"left": 398,
+					"width": 258,
+					"height": 29,
+					"sizingY": "move",
+					"text": "Set Merged Code as default",
+					"class": "Control",
+					"method": "ObjectMethods/b_save_merged.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"bIncreaseDate",
+					"bDecrDate",
+					"bIncreaseDate1",
+					"bDecrDate1"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

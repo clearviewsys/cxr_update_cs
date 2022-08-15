@@ -1,0 +1,2 @@
+//%attributes = {}
+searchTable(->[ImportedRows:91]; ->[ImportedRows:91]importedRowID:1; ->[ImportedRows:91]CXR_accountID:7; ->[ImportedRows:91]statementNo:6; ->[ImportedRows:91]bankID:2; ->[ImportedRows:91]bankRowRef:3; ->[ImportedRows:91]confirmation:12)

@@ -1,0 +1,939 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"b_save": {
+					"type": "button",
+					"top": 412,
+					"left": 470,
+					"width": 125,
+					"height": 30,
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": ":xliff:cvs_save",
+					"class": "Fields_Large",
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_cancel": {
+					"type": "button",
+					"top": 412,
+					"left": 344,
+					"width": 125,
+					"height": 30,
+					"text": ":xliff:cvs_cancel",
+					"class": "Fields_Large",
+					"method": "ObjectMethods/l_cancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"SYNC_Exception": {
+					"type": "checkbox",
+					"top": 417,
+					"left": 16,
+					"width": 152,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "[CalendarEvents:80]_Sync_Exception:34",
+					"text": "Do NOT Sync",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"isScheduledEvent": {
+					"type": "checkbox",
+					"top": 15,
+					"left": 376,
+					"width": 152,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]isScheduledEvent:31",
+					"text": "Scheduled Event",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"method": "ObjectMethods/isScheduledEvent.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"isAllDayEvent1": {
+					"type": "checkbox",
+					"top": 38,
+					"left": 376,
+					"width": 152,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]isFlagged:15",
+					"text": "Flagged",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"CalendarName": {
+					"type": "input",
+					"top": 78,
+					"left": 207,
+					"width": 150,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]CalendarName:9",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/CalendarList"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"eventName1": {
+					"type": "input",
+					"top": 109,
+					"left": 206,
+					"width": 182,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]TargetUser:10",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/eventName1.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_pickUser": {
+					"type": "button",
+					"top": 105,
+					"left": 393,
+					"width": 50,
+					"height": 25,
+					"text": "...",
+					"method": "ObjectMethods/b_pickUser.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Date": {
+					"type": "input",
+					"top": 141,
+					"left": 207,
+					"width": 181,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]Date:4",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dateFormat": "systemLong",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Date.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"isAllDayEvent": {
+					"type": "checkbox",
+					"top": 142,
+					"left": 417,
+					"width": 152,
+					"height": 18,
+					"dataSource": "[CalendarEvents:80]isAllDayEvent:3",
+					"text": "All Day Event",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"method": "ObjectMethods/isAllDayEvent.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"FromTime": {
+					"type": "input",
+					"top": 173,
+					"left": 207,
+					"width": 82,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]FromTime:5",
+					"dataSourceTypeHint": "time",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"toTime": {
+					"type": "input",
+					"top": 173,
+					"left": 336,
+					"width": 95,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]toTime:6",
+					"dataSourceTypeHint": "time",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isTask": {
+					"type": "checkbox",
+					"top": 197,
+					"left": 206,
+					"width": 230,
+					"height": 21,
+					"dataSource": "[CalendarEvents:80]isTask:7",
+					"text": "Task",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isCompleted": {
+					"type": "checkbox",
+					"top": 197,
+					"left": 367,
+					"width": 217,
+					"height": 18,
+					"dataSource": "[CalendarEvents:80]isCompleted:17",
+					"text": "Is this task complete?",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text17": {
+					"type": "text",
+					"top": 78,
+					"left": -2,
+					"width": 200,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Calendar"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 140,
+					"left": -2,
+					"width": 200,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Date"
+				},
+				"Text21": {
+					"type": "text",
+					"top": 225,
+					"left": -2,
+					"width": 200,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Event Heading"
+				},
+				"Text22": {
+					"type": "text",
+					"top": 256,
+					"left": -2,
+					"width": 200,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Notes"
+				},
+				"Text24": {
+					"type": "text",
+					"top": 172,
+					"left": -2,
+					"width": 200,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "From Time"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 173,
+					"left": 299,
+					"width": 29,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "center",
+					"text": "to"
+				},
+				"l_user": {
+					"type": "text",
+					"top": 108,
+					"left": -2,
+					"width": 200,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_user"
+				},
+				"eventName": {
+					"type": "input",
+					"top": 226,
+					"left": 206,
+					"width": 378,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]EventHeading:2",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Notes": {
+					"type": "input",
+					"top": 257,
+					"left": 206,
+					"width": 363,
+					"height": 126,
+					"dataSource": "[CalendarEvents:80]Notes:8",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			},
+			"entryOrder": [
+				"isScheduledEvent",
+				"isAllDayEvent1",
+				"CalendarName",
+				"eventName1",
+				"b_pickUser",
+				"Date",
+				"isAllDayEvent",
+				"FromTime",
+				"toTime",
+				"isTask",
+				"isCompleted",
+				"eventName",
+				"Notes"
+			]
+		},
+		{
+			"objects": {
+				"Text4": {
+					"type": "text",
+					"top": 63,
+					"left": 30,
+					"width": 104,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Calendar"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 142,
+					"left": 1,
+					"width": 133,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Start Date"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 220,
+					"left": 1,
+					"width": 133,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Event Heading"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 248,
+					"left": 1,
+					"width": 133,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Notes"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 142,
+					"left": 275,
+					"width": 120,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Start Time"
+				},
+				"CalendarName1": {
+					"type": "input",
+					"top": 63,
+					"left": 146,
+					"width": 150,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]CalendarName:9",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/CalendarList"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Date1": {
+					"type": "input",
+					"top": 142,
+					"left": 150,
+					"width": 125,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]Date:4",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dateFormat": "systemLong",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Date1.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"FromTime1": {
+					"type": "input",
+					"top": 142,
+					"left": 406,
+					"width": 115,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]FromTime:5",
+					"dataSourceTypeHint": "time",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"entryFilter": "!0&9##:##",
+					"method": "ObjectMethods/FromTime1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"isCompleted1": {
+					"type": "checkbox",
+					"top": 18,
+					"left": 441,
+					"width": 150,
+					"height": 18,
+					"dataSource": "[CalendarEvents:80]isCompleted:17",
+					"text": "Is complete?",
+					"stroke": "#000000",
+					"class": "Label_Large"
+				},
+				"eventName2": {
+					"type": "input",
+					"top": 220,
+					"left": 149,
+					"width": 446,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]EventHeading:2",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Notes1": {
+					"type": "input",
+					"top": 248,
+					"left": 149,
+					"width": 431,
+					"height": 38,
+					"dataSource": "[CalendarEvents:80]Notes:8",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text10": {
+					"type": "text",
+					"top": 63,
+					"left": 297,
+					"width": 133,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "User"
+				},
+				"eventName3": {
+					"type": "input",
+					"top": 63,
+					"left": 445,
+					"width": 150,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]TargetUser:10",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/eventName3.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text11": {
+					"type": "text",
+					"top": 114,
+					"left": 149,
+					"width": 250,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"text": "Leave blank for all users and/or all branches"
+				},
+				"Method": {
+					"type": "input",
+					"top": 294,
+					"left": 149,
+					"width": 431,
+					"height": 74,
+					"dataSource": "[CalendarEvents:80]executeMethod:23",
+					"class": "Fields_Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "automatic",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isRecurring": {
+					"type": "checkbox",
+					"top": 169,
+					"left": 150,
+					"width": 150,
+					"height": 18,
+					"dataSource": "[CalendarEvents:80]isRecurring:24",
+					"text": "Is Recurring?",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"method": "ObjectMethods/isRecurring.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Repeat_every_txt": {
+					"type": "text",
+					"top": 168,
+					"left": 272,
+					"width": 133,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Repeat every"
+				},
+				"Repeat_daysField": {
+					"type": "input",
+					"top": 168,
+					"left": 418,
+					"width": 50,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]RepeatsEveryNDay:25",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none"
+				},
+				"Repeat_days_txt": {
+					"type": "text",
+					"top": 168,
+					"left": 478,
+					"width": 50,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"text": "days"
+				},
+				"CalendarName3": {
+					"type": "input",
+					"top": 63,
+					"left": 146,
+					"width": 200,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]CalendarName:9",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/CalendarList"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"top": 296,
+					"left": 1,
+					"width": 133,
+					"height": 19,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Method"
+				},
+				"Button": {
+					"type": "button",
+					"top": 346,
+					"left": 39,
+					"width": 100,
+					"height": 21,
+					"dataSource": "Button",
+					"text": "Check Method",
+					"class": "Control_Small",
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"CalendarInfoText": {
+					"type": "input",
+					"top": 392,
+					"left": 24,
+					"width": 571,
+					"height": 14,
+					"class": "Fields_Small",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text15": {
+					"type": "text",
+					"top": 91,
+					"left": 35,
+					"width": 104,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Target Branch"
+				},
+				"CalendarName8": {
+					"type": "input",
+					"top": 91,
+					"left": 146,
+					"width": 150,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]Target_BID:19",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/CalendarName8.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_pickBranch": {
+					"type": "button",
+					"top": 91,
+					"left": 302,
+					"width": 44,
+					"height": 20,
+					"text": "...",
+					"method": "ObjectMethods/b_pickBranch.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 372,
+					"left": 147,
+					"width": 448,
+					"height": 12,
+					"class": "Fields_Small",
+					"text": "format: methodName/optionalParameter/optionalParameter2"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 191,
+					"left": 227,
+					"width": 300,
+					"height": 12,
+					"class": "Fields_Small",
+					"textAlign": "right",
+					"text": "To repeat multiple times a day use decimals. ie. .01 = 15 minutes"
+				}
+			},
+			"entryOrder": [
+				"CalendarName1",
+				"Date1",
+				"FromTime1",
+				"isCompleted1",
+				"eventName2",
+				"Notes1",
+				"eventName3",
+				"Method",
+				"isRecurring",
+				"Repeat_daysField",
+				"CalendarName3",
+				"Button",
+				"CalendarName8",
+				"b_pickBranch"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 119,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

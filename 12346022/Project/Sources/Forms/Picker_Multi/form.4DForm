@@ -1,0 +1,168 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"PickerFormName": {
+					"type": "input",
+					"top": 13,
+					"left": 43,
+					"width": 284,
+					"height": 24,
+					"sizingX": "grow",
+					"class": "Titles",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/PickerFormName.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Picture0": {
+					"type": "picture",
+					"top": 13,
+					"left": 5,
+					"width": 32,
+					"height": 32,
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture0.png"
+				},
+				"vSearchText": {
+					"type": "input",
+					"top": 20,
+					"left": 400,
+					"width": 167,
+					"height": 20,
+					"sizingX": "move",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"placeholder": "Type here to search",
+					"method": "ObjectMethods/vSearchText.4dm",
+					"events": [
+						"onLosingFocus",
+						"onAfterKeystroke"
+					]
+				},
+				"mainlist": {
+					"type": "listbox",
+					"top": 62,
+					"left": 16,
+					"width": 551,
+					"height": 238,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"movableRows": false,
+					"dataSource": "Form:C1466.mainlist",
+					"currentItemSource": "Form:C1466.currItem",
+					"selectedItemsSource": "Form:C1466.selectedItems",
+					"scrollbarHorizontal": "automatic",
+					"alternateFill": "#B1C4DD",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"method": "ObjectMethods/mainlist.4dm",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": []
+				},
+				"PickButton": {
+					"type": "button",
+					"top": 311,
+					"left": 380,
+					"width": 187,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "pick",
+					"class": "Control_Large_",
+					"defaultButton": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"SearchTextLbl": {
+					"type": "input",
+					"top": 20,
+					"left": 194,
+					"width": 200,
+					"height": 20,
+					"sizingX": "move",
+					"dataSource": "Form:C1466.searchtextlbl",
+					"class": "Control_Large_",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/SearchTextLbl.4dm"
+				},
+				"closeButton": {
+					"type": "button",
+					"top": 310,
+					"left": 209,
+					"width": 162,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"text": ":xliff:cvs_cancel",
+					"class": "Control_Large_",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"vSearchText",
+				"mainlist",
+				"PickButton",
+				"closeButton"
+			]
+		}
+	]
+}

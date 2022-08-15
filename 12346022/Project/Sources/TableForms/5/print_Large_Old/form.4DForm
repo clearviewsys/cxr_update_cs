@@ -1,0 +1,2548 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 0,
+	"markerHeader": [
+		55,
+		83,
+		97
+	],
+	"markerBody": 802,
+	"markerBreak": 803,
+	"markerFooter": 872,
+	"events": [
+		"onLoad",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onPrintingDetail",
+		"onLoadRecord"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"lineTitleBar": {
+					"type": "line",
+					"top": 97,
+					"left": 38,
+					"width": 551,
+					"strokeWidth": 0.1
+				},
+				"Field17": {
+					"type": "input",
+					"top": 213,
+					"left": 41,
+					"width": 208,
+					"height": 15,
+					"dataSource": "[CashTransactions:36]CashAccountID:9",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field21": {
+					"type": "input",
+					"top": 213,
+					"left": 412,
+					"width": 18,
+					"height": 16,
+					"dataSource": "[Registers:10]Currency:19",
+					"textAlign": "center",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vAmountLocal": {
+					"type": "input",
+					"top": 213,
+					"left": 311,
+					"width": 96,
+					"height": 14,
+					"dataSource": "vAmountLocal",
+					"dataSourceTypeHint": "number",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_cheque": {
+					"type": "text",
+					"top": 312,
+					"left": 42,
+					"width": 90,
+					"height": 14,
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"text": ":xliff:cvs_cheque"
+				},
+				"l_wiretransfers": {
+					"type": "text",
+					"top": 475,
+					"left": 43,
+					"width": 107,
+					"height": 14,
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"text": "Wire Transfer (TT)"
+				},
+				"l_ewire": {
+					"type": "text",
+					"top": 635,
+					"left": 43,
+					"width": 93,
+					"height": 14,
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"text": "eWire International Transfer"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 265,
+					"left": 41,
+					"width": 191,
+					"height": 15,
+					"dataSource": "[Registers:10]AccountID:6",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 291,
+					"left": 42,
+					"width": 297,
+					"height": 12,
+					"dataSource": "[Registers:10]Comments:9",
+					"fontFamily": "Calibri",
+					"fontSize": 9,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"printFrame": "variable",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 329,
+					"left": 41,
+					"width": 95,
+					"height": 14,
+					"dataSource": "[Registers:10]AccountID:6",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"itemName": {
+					"type": "input",
+					"top": 389,
+					"left": 41,
+					"width": 160,
+					"height": 15,
+					"dataSource": "[Items:39]ItemName:2",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field23": {
+					"type": "input",
+					"top": 417,
+					"left": 41,
+					"width": 168,
+					"height": 54,
+					"dataSource": "[Items:39]Description:19",
+					"fontFamily": "Segoe UI",
+					"fontSize": 6,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"multiline": "yes",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field25": {
+					"type": "input",
+					"top": 493,
+					"left": 42,
+					"width": 180,
+					"height": 14,
+					"dataSource": "[Registers:10]AccountID:6",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field31": {
+					"type": "input",
+					"top": 649,
+					"left": 42,
+					"width": 174,
+					"height": 14,
+					"dataSource": "[eWires:13]AccountID:30",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field36": {
+					"type": "input",
+					"top": 691,
+					"left": 236,
+					"width": 95,
+					"height": 50,
+					"dataSource": "[eWires:13]comments_Visible:48",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"printFrame": "variable",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ColorItem7": {
+					"type": "input",
+					"top": 353,
+					"left": 103,
+					"width": 110,
+					"height": 13,
+					"dataSource": "[Cheques:1]ChequeNumber:4",
+					"stroke": "#444444",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onDataChange",
+						"onAfterKeystroke"
+					]
+				},
+				"ColorItem4": {
+					"type": "input",
+					"top": 344,
+					"left": 103,
+					"width": 110,
+					"height": 13,
+					"dataSource": "[Cheques:1]DueDate:3",
+					"dataSourceTypeHint": "date",
+					"stroke": "#444444",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 344,
+					"left": 41,
+					"width": 60,
+					"height": 12,
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": "Due Date"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 354,
+					"left": 41,
+					"width": 60,
+					"height": 12,
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": "Cheque No"
+				},
+				"ColorItem13": {
+					"type": "input",
+					"top": 364,
+					"left": 103,
+					"width": 110,
+					"height": 11,
+					"sizingX": "grow",
+					"dataSource": "[Cheques:1]PayTo:15",
+					"stroke": "#444444",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text27": {
+					"type": "text",
+					"top": 364,
+					"left": 41,
+					"width": 60,
+					"height": 12,
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": "To the order of"
+				},
+				"ColorItem1": {
+					"type": "input",
+					"top": 373,
+					"left": 103,
+					"width": 146,
+					"height": 11,
+					"sizingX": "grow",
+					"dataSource": "[Cheques:1]Memo:10",
+					"stroke": "#444444",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 373,
+					"left": 41,
+					"width": 60,
+					"height": 12,
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": "Comments"
+				},
+				"BankID23": {
+					"type": "input",
+					"top": 573,
+					"left": 127,
+					"width": 111,
+					"height": 33,
+					"dataSource": "[Wires:8]BeneficiaryBankAddress:4",
+					"stroke": "#000000",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID27": {
+					"type": "input",
+					"top": 575,
+					"left": 322,
+					"width": 90,
+					"height": 10,
+					"dataSource": "[Wires:8]BeneficiaryInstitutionNo:7",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID28": {
+					"type": "input",
+					"top": 586,
+					"left": 322,
+					"width": 90,
+					"height": 10,
+					"dataSource": "[Wires:8]BeneficiaryBranchTransitNo:8",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID29": {
+					"type": "input",
+					"top": 598,
+					"left": 322,
+					"width": 90,
+					"height": 10,
+					"dataSource": "[Wires:8]BeneficiaryRoutingCode:27",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID30": {
+					"type": "input",
+					"top": 604,
+					"left": 132,
+					"width": 90,
+					"height": 11,
+					"dataSource": "[Wires:8]BeneficiarySWIFT:28",
+					"stroke": "#000000",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID31": {
+					"type": "input",
+					"top": 615,
+					"left": 131,
+					"width": 90,
+					"height": 11,
+					"dataSource": "[Wires:8]BeneficiaryAccountNo:9",
+					"stroke": "#000000",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"textDecoration": "underline",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"l_beneficiaryBank": {
+					"type": "text",
+					"top": 564,
+					"left": 45,
+					"width": 78,
+					"height": 11,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": "Beneficiary Bank"
+				},
+				"l_bankAddress": {
+					"type": "text",
+					"top": 573,
+					"left": 45,
+					"width": 78,
+					"height": 19,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": ":xliff:cvs_bank_address"
+				},
+				"l_transit": {
+					"type": "text",
+					"top": 576,
+					"left": 239,
+					"width": 80,
+					"height": 10,
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": ":xliff:BeneficiaryTransitNo"
+				},
+				"l_branchNo": {
+					"type": "text",
+					"top": 587,
+					"left": 239,
+					"width": 80,
+					"height": 10,
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Branch Transit"
+				},
+				"l_iban": {
+					"type": "text",
+					"top": 616,
+					"left": 48,
+					"width": 80,
+					"height": 11,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": ":xliff:cvs_account_no_iban"
+				},
+				"l_routingCode": {
+					"type": "text",
+					"top": 598,
+					"left": 239,
+					"width": 80,
+					"height": 10,
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Routing"
+				},
+				"l_swift1": {
+					"type": "text",
+					"top": 604,
+					"left": 49,
+					"width": 80,
+					"height": 11,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": ":xliff:cvs_swift_bic"
+				},
+				"BankID1": {
+					"type": "input",
+					"top": 564,
+					"left": 127,
+					"width": 94,
+					"height": 11,
+					"dataSource": "[Wires:8]BeneficiaryBankName:3",
+					"stroke": "#000000",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID32": {
+					"type": "input",
+					"top": 526,
+					"left": 127,
+					"width": 94,
+					"height": 11,
+					"dataSource": "[Wires:8]BeneficiaryFullName:10",
+					"stroke": "#000000",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID33": {
+					"type": "input",
+					"top": 536,
+					"left": 127,
+					"width": 105,
+					"height": 33,
+					"dataSource": "[Wires:8]BeneficiaryAddress:26",
+					"stroke": "#000000",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"l_beneficiaryAddress": {
+					"type": "text",
+					"top": 537,
+					"left": 44,
+					"width": 80,
+					"height": 9,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": ":xliff:BeneficiaryAddress"
+				},
+				"l_beneficiaryname": {
+					"type": "text",
+					"top": 527,
+					"left": 44,
+					"width": 79,
+					"height": 9,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": "Beneficiary Name"
+				},
+				"Field43": {
+					"type": "input",
+					"top": 447,
+					"left": 221,
+					"width": 168,
+					"height": 10,
+					"dataSource": "[ItemInOuts:40]memo:15",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"multiline": "yes",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"lineEWires": {
+					"type": "line",
+					"top": 800,
+					"left": 38,
+					"width": 551
+				},
+				"receiptFootnote": {
+					"type": "input",
+					"top": 1880,
+					"left": 9,
+					"width": 595,
+					"height": 33,
+					"sizingX": "grow",
+					"dataSource": "<>ReceiptFootnote",
+					"stroke": "#000000",
+					"class": "Label_print",
+					"textAlign": "center",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLosingFocus"
+					]
+				},
+				"CANCELLED_BORDER": {
+					"type": "rectangle",
+					"top": 876,
+					"left": 35,
+					"width": 114,
+					"height": 35,
+					"fill": "transparent",
+					"stroke": "#EE0000",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"CANCELLED_TEXT": {
+					"type": "text",
+					"top": 879,
+					"left": 29,
+					"width": 126,
+					"height": 32,
+					"stroke": "#EE0000",
+					"textAlign": "center",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold",
+					"text": "INVOICE\rCANCELLED"
+				},
+				"Field51": {
+					"type": "input",
+					"top": 708,
+					"left": 125,
+					"width": 95,
+					"height": 11,
+					"dataSource": "[eWires:13]BeneficiaryFullName:5",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"multiline": "no",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"beneficiaryBankName": {
+					"type": "input",
+					"top": 757,
+					"left": 133,
+					"width": 80,
+					"height": 10,
+					"dataSource": "[eWires:13]BeneficiaryBankName:76",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"beneficiaryBankAccountNo": {
+					"type": "input",
+					"top": 766,
+					"left": 133,
+					"width": 80,
+					"height": 12,
+					"dataSource": "[eWires:13]BeneficiaryBankAccountNo:66",
+					"class": "Fields_print",
+					"fontWeight": "bold",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"fromCountry2": {
+					"type": "input",
+					"top": 776,
+					"left": 133,
+					"width": 80,
+					"height": 12,
+					"dataSource": "[eWires:13]BeneficiarySWIFT:105",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"beneficiaryBankDetails": {
+					"type": "input",
+					"top": 785,
+					"left": 133,
+					"width": 80,
+					"height": 10,
+					"dataSource": "[eWires:13]BeneficiaryBankDetails:38",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"l_swift": {
+					"type": "text",
+					"top": 776,
+					"left": 39,
+					"width": 90,
+					"height": 8,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": ":xliff:cvs_swift_bic"
+				},
+				"l_beneficiarybankj": {
+					"type": "text",
+					"top": 757,
+					"left": 39,
+					"width": 90,
+					"height": 8,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": ":xliff:BeneficiaryBankName"
+				},
+				"Field57": {
+					"type": "input",
+					"top": 678,
+					"left": 190,
+					"width": 26,
+					"height": 11,
+					"dataSource": "[eWires:13]securityChallengeCode:75",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"Field59": {
+					"type": "input",
+					"top": 678,
+					"left": 125,
+					"width": 49,
+					"height": 11,
+					"dataSource": "[eWires:13]eWireID:1",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"Field65": {
+					"type": "input",
+					"top": 689,
+					"left": 125,
+					"width": 64,
+					"height": 11,
+					"sizingY": "move",
+					"dataSource": "[eWires:13]ToAmount:14",
+					"dataSourceTypeHint": "number",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"fontWeight": "bold",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"multiline": "no",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field66": {
+					"type": "input",
+					"top": 699,
+					"left": 125,
+					"width": 17,
+					"height": 11,
+					"sizingY": "move",
+					"dataSource": "[eWires:13]toCountryCode:112",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"multiline": "no",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_amoun": {
+					"type": "text",
+					"top": 689,
+					"left": 42,
+					"width": 80,
+					"height": 11,
+					"sizingY": "move",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": ":xliff:cvs_amount"
+				},
+				"Text50": {
+					"type": "text",
+					"top": 677,
+					"left": 179,
+					"width": 5,
+					"height": 8,
+					"textAlign": "center",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": "-"
+				},
+				"Field67": {
+					"type": "input",
+					"top": 689,
+					"left": 190,
+					"width": 20,
+					"height": 11,
+					"sizingY": "move",
+					"dataSource": "[eWires:13]Currency:12",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"multiline": "no",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_bankdetails": {
+					"type": "text",
+					"top": 745,
+					"left": 39,
+					"width": 179,
+					"height": 10,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"class": "Fields_print",
+					"textAlign": "center",
+					"textDecoration": "underline",
+					"text": ":xliff:BeneficiaryBankDetails"
+				},
+				"lineCash1": {
+					"type": "line",
+					"top": 209,
+					"left": 38,
+					"width": 551,
+					"strokeWidth": 0.1
+				},
+				"lineCash2": {
+					"type": "line",
+					"top": 258,
+					"left": 38,
+					"width": 551,
+					"strokeWidth": 0.1
+				},
+				"lineAccount": {
+					"type": "line",
+					"top": 309,
+					"left": 38,
+					"width": 551,
+					"strokeWidth": 0.1
+				},
+				"lineCheque": {
+					"type": "line",
+					"top": 385,
+					"left": 38,
+					"width": 551,
+					"strokeWidth": 0.1
+				},
+				"lineProduct": {
+					"type": "line",
+					"top": 473,
+					"left": 38,
+					"width": 551,
+					"strokeWidth": 0.1
+				},
+				"lineWire": {
+					"type": "line",
+					"top": 631,
+					"left": 38,
+					"width": 551,
+					"strokeWidth": 0.1
+				},
+				"l_bankAccount": {
+					"type": "text",
+					"top": 766,
+					"left": 39,
+					"width": 90,
+					"height": 8,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": ":xliff:BankAccountNo"
+				},
+				"InvoiceNum2": {
+					"type": "input",
+					"top": 27,
+					"left": 515,
+					"width": 64,
+					"height": 14,
+					"dataSource": "[Invoices:5]InvoiceID:1",
+					"stroke": "#000000",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"l_createdby": {
+					"type": "text",
+					"top": 57,
+					"left": 437,
+					"width": 73,
+					"height": 11,
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": ":xliff:cvs_teller_name"
+				},
+				"InvoiceTime1": {
+					"type": "input",
+					"top": 57,
+					"left": 514,
+					"width": 75,
+					"height": 10,
+					"dataSource": "[Invoices:5]CreatedByUserID:19",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": "!0&9Hrs: ## Mins: ## Secs: ##",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"InvoiceDate1": {
+					"type": "input",
+					"top": 16,
+					"left": 515,
+					"width": 89,
+					"height": 10,
+					"dataSource": "[Invoices:5]invoiceDate:44",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "systemLong",
+					"entryFilter": "!0&9Month: ## Day: ## Year: ##",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[Customers]FullName18": {
+					"type": "input",
+					"top": 70,
+					"left": 120,
+					"width": 241,
+					"height": 11,
+					"dataSource": "[Customers:3]FullName:40",
+					"stroke": "#000000",
+					"class": "Label_print",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable": {
+					"type": "input",
+					"top": 814,
+					"left": 359,
+					"width": 59,
+					"height": 10,
+					"dataSource": "vAmountLC",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_print",
+					"textAlign": "left",
+					"textDecoration": "underline",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_tax1Received": {
+					"type": "text",
+					"top": 825,
+					"left": 209,
+					"width": 146,
+					"height": 8,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": ":xliff:cvs_taxes"
+				},
+				"vTaxes": {
+					"type": "input",
+					"top": 825,
+					"left": 359,
+					"width": 59,
+					"height": 10,
+					"dataSource": "vTaxes",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_print",
+					"textAlign": "left",
+					"textDecoration": "underline",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field55": {
+					"type": "input",
+					"top": 661,
+					"left": 42,
+					"width": 174,
+					"height": 14,
+					"dataSource": "[eWires:13]AgentID:26",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"lineEWire": {
+					"type": "line",
+					"top": 741,
+					"left": 38,
+					"width": 181,
+					"visibility": "hidden",
+					"stroke": "#AAAAAA",
+					"strokeWidth": 0.1,
+					"strokeDashArray": "1 1"
+				},
+				"lineLast": {
+					"type": "line",
+					"top": 799,
+					"left": 38,
+					"width": 551,
+					"visibility": "hidden",
+					"strokeWidth": 0.1
+				},
+				"receiptFootnote1": {
+					"type": "input",
+					"top": 839,
+					"left": 41,
+					"width": 548,
+					"height": 30,
+					"sizingX": "grow",
+					"dataSource": "<>ReceiptFootnote",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLosingFocus"
+					]
+				},
+				"Field56": {
+					"type": "input",
+					"top": 410,
+					"left": 268,
+					"width": 29,
+					"height": 10,
+					"dataSource": "[ItemInOuts:40]tax1:20",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field58": {
+					"type": "input",
+					"top": 420,
+					"left": 268,
+					"width": 29,
+					"height": 10,
+					"dataSource": "[ItemInOuts:40]tax2:21",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"f_tax1": {
+					"type": "input",
+					"top": 410,
+					"left": 234,
+					"width": 32,
+					"height": 10,
+					"dataSource": "<>tax1Name",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"f_tax2": {
+					"type": "input",
+					"top": 420,
+					"left": 234,
+					"width": 32,
+					"height": 10,
+					"dataSource": "<>tax2Name",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_destination": {
+					"type": "text",
+					"top": 699,
+					"left": 42,
+					"width": 80,
+					"height": 11,
+					"sizingY": "move",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": "Destination"
+				},
+				"vLabelDue": {
+					"type": "input",
+					"top": 814,
+					"left": 244,
+					"width": 112,
+					"height": 10,
+					"dataSource": "vLabelDue",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"itemCode": {
+					"type": "input",
+					"top": 410,
+					"left": 41,
+					"width": 95,
+					"height": 10,
+					"dataSource": "[Items:39]ItemCode:27",
+					"fontFamily": "Calibri",
+					"fontSize": 7,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_beneficiaryname1": {
+					"type": "text",
+					"top": 517,
+					"left": 42,
+					"width": 198,
+					"height": 9,
+					"fill": "#DDDDDD",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "center",
+					"text": "Beneficiary Info"
+				},
+				"l_purpose": {
+					"type": "text",
+					"top": 608,
+					"left": 239,
+					"width": 80,
+					"height": 10,
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Purpose of Transfer"
+				},
+				"l_source": {
+					"type": "text",
+					"top": 620,
+					"left": 239,
+					"width": 80,
+					"height": 10,
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Source of Funds"
+				},
+				"pot": {
+					"type": "input",
+					"top": 608,
+					"left": 322,
+					"width": 90,
+					"height": 10,
+					"dataSource": "[Wires:8]AML_PurposeOfTransaction:49",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"sof": {
+					"type": "input",
+					"top": 620,
+					"left": 322,
+					"width": 90,
+					"height": 10,
+					"dataSource": "[Wires:8]AML_SourceOfFunds:66",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"l_amoun2": {
+					"type": "text",
+					"top": 709,
+					"left": 42,
+					"width": 80,
+					"height": 11,
+					"sizingY": "move",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": "Beneficiary Name"
+				},
+				"l_creationDate1": {
+					"type": "text",
+					"top": 678,
+					"left": 42,
+					"width": 80,
+					"height": 11,
+					"sizingY": "move",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": "eWire ID - Security Code"
+				},
+				"l_source1": {
+					"type": "text",
+					"top": 718,
+					"left": 42,
+					"width": 80,
+					"height": 11,
+					"sizingY": "move",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": "Source of Funds"
+				},
+				"Field13": {
+					"type": "input",
+					"top": 718,
+					"left": 125,
+					"width": 95,
+					"height": 11,
+					"sizingY": "move",
+					"dataSource": "[eWires:13]AMLsourceOfFunds:94",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"multiline": "no",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_purpose1": {
+					"type": "text",
+					"top": 728,
+					"left": 42,
+					"width": 80,
+					"height": 11,
+					"sizingY": "move",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"text": "Purpose of Transaction"
+				},
+				"Field30": {
+					"type": "input",
+					"top": 728,
+					"left": 125,
+					"width": 95,
+					"height": 11,
+					"sizingY": "move",
+					"dataSource": "[eWires:13]PurposeOfTransaction:65",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"multiline": "no",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 11,
+					"left": 29,
+					"width": 99,
+					"height": 32,
+					"dataSource": "<>CompanyLogo",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 11,
+					"left": 132,
+					"width": 241,
+					"height": 15,
+					"dataSource": "<>CompanyName",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 27,
+					"left": 132,
+					"width": 117,
+					"height": 10,
+					"dataSource": "vCompanyTel1",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 8,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/Variable9.4dm",
+					"events": [
+						"onHeader"
+					]
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 57,
+					"left": 120,
+					"width": 170,
+					"height": 10,
+					"dataSource": "<>CompanyWebAddress",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 8,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[Customers]FullName1": {
+					"type": "input",
+					"top": 70,
+					"left": 38,
+					"width": 69,
+					"height": 11,
+					"dataSource": "[Customers:3]CustomerID:1",
+					"stroke": "#000000",
+					"class": "Label_print",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Field49": {
+					"type": "input",
+					"top": 214,
+					"left": 486,
+					"width": 56,
+					"height": 25,
+					"dataSource": "[Flags:19]flag:4",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"lineCash3": {
+					"type": "line",
+					"top": 805,
+					"left": 37,
+					"width": 551,
+					"strokeWidth": 0.1
+				},
+				"Field62": {
+					"type": "input",
+					"top": 266,
+					"left": 487,
+					"width": 56,
+					"height": 25,
+					"dataSource": "[Flags:19]flag:4",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field68": {
+					"type": "input",
+					"top": 318,
+					"left": 487,
+					"width": 56,
+					"height": 25,
+					"dataSource": "[Flags:19]flag:4",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field9": {
+					"type": "input",
+					"top": 484,
+					"left": 487,
+					"width": 56,
+					"height": 25,
+					"dataSource": "[Flags:19]flag:4",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field27": {
+					"type": "input",
+					"top": 649,
+					"left": 487,
+					"width": 56,
+					"height": 25,
+					"dataSource": "[Flags:19]flag:4",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"itemCode1": {
+					"type": "input",
+					"top": 402,
+					"left": 41,
+					"width": 95,
+					"height": 10,
+					"dataSource": "[Items:39]AccountID:12",
+					"fontFamily": "Calibri",
+					"fontSize": 7,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field": {
+					"type": "input",
+					"top": 431,
+					"left": 248,
+					"width": 49,
+					"height": 11,
+					"dataSource": "[ItemInOuts:40]tax1:20+[ItemInOuts:40]tax2:21",
+					"dataSourceTypeHint": "number",
+					"fontFamily": "Calibri",
+					"fontSize": 7,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 406,
+					"left": 218,
+					"width": 20,
+					"height": 13,
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"text": "Tax:"
+				},
+				"Line": {
+					"type": "line",
+					"top": 429,
+					"left": 274,
+					"width": 25,
+					"height": 1,
+					"startPoint": "bottomLeft"
+				},
+				"vFeeSting": {
+					"type": "input",
+					"top": 243,
+					"left": 356,
+					"width": 75,
+					"height": 14,
+					"dataSource": "vFeeString",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vRateSting6": {
+					"type": "input",
+					"top": 229,
+					"left": 250,
+					"width": 180,
+					"height": 14,
+					"dataSource": "vRateString",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 262,
+					"left": 412,
+					"width": 18,
+					"height": 16,
+					"dataSource": "[Registers:10]Currency:19",
+					"textAlign": "center",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vAmountLocal1": {
+					"type": "input",
+					"top": 262,
+					"left": 352,
+					"width": 55,
+					"height": 14,
+					"dataSource": "vAmountLocal",
+					"dataSourceTypeHint": "number",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vFeeSting2": {
+					"type": "input",
+					"top": 292,
+					"left": 356,
+					"width": 75,
+					"height": 14,
+					"dataSource": "vFeeString",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vRateSting1": {
+					"type": "input",
+					"top": 278,
+					"left": 250,
+					"width": 180,
+					"height": 14,
+					"dataSource": "vRateString",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 316,
+					"left": 412,
+					"width": 18,
+					"height": 16,
+					"dataSource": "[Registers:10]Currency:19",
+					"textAlign": "center",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vAmountLocal2": {
+					"type": "input",
+					"top": 316,
+					"left": 352,
+					"width": 55,
+					"height": 14,
+					"dataSource": "vAmountLocal",
+					"dataSourceTypeHint": "number",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vFeeSting1": {
+					"type": "input",
+					"top": 346,
+					"left": 356,
+					"width": 75,
+					"height": 14,
+					"dataSource": "vFeeString",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vRateSting2": {
+					"type": "input",
+					"top": 332,
+					"left": 250,
+					"width": 180,
+					"height": 14,
+					"dataSource": "vRateString",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 393,
+					"left": 411,
+					"width": 18,
+					"height": 16,
+					"dataSource": "[Registers:10]Currency:19",
+					"textAlign": "center",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vAmountLocal3": {
+					"type": "input",
+					"top": 393,
+					"left": 351,
+					"width": 55,
+					"height": 14,
+					"dataSource": "vAmountLocal",
+					"dataSourceTypeHint": "number",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 483,
+					"left": 412,
+					"width": 18,
+					"height": 16,
+					"dataSource": "[Registers:10]Currency:19",
+					"textAlign": "center",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vAmountLocal4": {
+					"type": "input",
+					"top": 483,
+					"left": 352,
+					"width": 55,
+					"height": 14,
+					"dataSource": "vAmountLocal",
+					"dataSourceTypeHint": "number",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vFeeSting3": {
+					"type": "input",
+					"top": 513,
+					"left": 356,
+					"width": 75,
+					"height": 14,
+					"dataSource": "vFeeString",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vRateSting3": {
+					"type": "input",
+					"top": 499,
+					"left": 250,
+					"width": 180,
+					"height": 14,
+					"dataSource": "vRateString",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field8": {
+					"type": "input",
+					"top": 639,
+					"left": 412,
+					"width": 18,
+					"height": 16,
+					"dataSource": "[Registers:10]Currency:19",
+					"textAlign": "center",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vAmountLocal5": {
+					"type": "input",
+					"top": 639,
+					"left": 352,
+					"width": 55,
+					"height": 14,
+					"dataSource": "vAmountLocal",
+					"dataSourceTypeHint": "number",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vFeeSting4": {
+					"type": "input",
+					"top": 669,
+					"left": 356,
+					"width": 75,
+					"height": 14,
+					"dataSource": "vFeeString",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vRateSting4": {
+					"type": "input",
+					"top": 655,
+					"left": 250,
+					"width": 180,
+					"height": 14,
+					"dataSource": "vRateString",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vDiscountString1": {
+					"type": "input",
+					"top": 430,
+					"left": 352,
+					"width": 77,
+					"height": 14,
+					"dataSource": "vDiscountString",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vQtyAndPrice": {
+					"type": "input",
+					"top": 393,
+					"left": 184,
+					"width": 160,
+					"height": 14,
+					"dataSource": "vQtyAndPrice",
+					"textAlign": "center",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vInvoiceCanceled": {
+					"type": "input",
+					"top": 34,
+					"left": 279,
+					"width": 180,
+					"height": 23,
+					"dataSource": "vInvoiceCanceled",
+					"stroke": "#FF0000",
+					"textAlign": "center",
+					"fontFamily": "Calibri",
+					"fontSize": 18,
+					"fontWeight": "bold",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field10": {
+					"type": "input",
+					"top": 243,
+					"left": 41,
+					"width": 297,
+					"height": 12,
+					"dataSource": "[Registers:10]Comments:9",
+					"fontFamily": "Calibri",
+					"fontSize": 9,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"printFrame": "variable",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field11": {
+					"type": "input",
+					"top": 101,
+					"left": 42,
+					"width": 208,
+					"height": 15,
+					"dataSource": "[CashTransactions:36]CashAccountID:9",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field15": {
+					"type": "input",
+					"top": 128,
+					"left": 42,
+					"width": 297,
+					"height": 72,
+					"dataSource": "[Registers:10]Comments:9",
+					"fontFamily": "Calibri",
+					"fontSize": 9,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"printFrame": "variable",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field12": {
+					"type": "input",
+					"top": 101,
+					"left": 413,
+					"width": 18,
+					"height": 16,
+					"dataSource": "[Registers:10]Currency:19",
+					"textAlign": "center",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vAmountLocal6": {
+					"type": "input",
+					"top": 101,
+					"left": 312,
+					"width": 96,
+					"height": 14,
+					"dataSource": "vAmountLocal",
+					"dataSourceTypeHint": "number",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field14": {
+					"type": "input",
+					"top": 102,
+					"left": 487,
+					"width": 56,
+					"height": 25,
+					"dataSource": "[Flags:19]flag:4",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vFeeSting5": {
+					"type": "input",
+					"top": 131,
+					"left": 357,
+					"width": 75,
+					"height": 14,
+					"dataSource": "vFeeString",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vRateSting5": {
+					"type": "input",
+					"top": 117,
+					"left": 251,
+					"width": 180,
+					"height": 14,
+					"dataSource": "vRateString",
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"groups": {
+			"CANCELLED_STAMP": [
+				"CANCELLED_BORDER",
+				"CANCELLED_TEXT"
+			]
+		},
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

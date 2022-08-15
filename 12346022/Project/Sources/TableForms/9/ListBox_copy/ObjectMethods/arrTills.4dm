@@ -1,0 +1,25 @@
+
+If (Form event code:C388=On Load:K2:1)
+	ARRAY TEXT:C222(arrTills; 0)
+	ALL RECORDS:C47([CashRegisters:33])
+	SELECTION TO ARRAY:C260([CashRegisters:33]CashRegisterID:1; arrTills)
+	SORT ARRAY:C229(arrTills)
+	
+	INSERT IN ARRAY:C227(arrTills; 1)
+	arrTills{1}:="Tills"
+	arrTills:=1
+	
+End if 
+
+If (Form event code:C388=On Clicked:K2:4)
+	C_TEXT:C284($till)
+	$till:=arrTills{arrTills}
+	selectAccountsRelatedToTill($till)
+	If (getKeyValue("settings.filterZeroBalanceTills"; "true")="true")
+		selectAccountsWithBalance  // by default filter the zero balance accounts
+	End if 
+	filterHiddenAccounts
+	POST OUTSIDE CALL:C329(Current process:C322)
+	arrMainAccounts:=0
+	arrAccountType:=0
+End if 

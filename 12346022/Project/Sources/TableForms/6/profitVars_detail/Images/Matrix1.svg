@@ -1,0 +1,26 @@
+﻿<svg viewBox="0 0 1000 1000" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" vector-effect="non-scaling-stroke" xmlns:ns4D="http://www.4D.com" ns4D:vp-deflate="0.5" ns4D:renderOffScreen="false">
+	
+	<line x1="0" y1="0" x2="1000" y2="0" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="0" y1="500" x2="1000" y2="500" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="0" y1="1000" x2="1000" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="0" y1="0" x2="0" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="58.823529411765" y1="0" x2="58.823529411765" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="117.64705882353" y1="0" x2="117.64705882353" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="176.47058823529" y1="0" x2="176.47058823529" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="235.29411764706" y1="0" x2="235.29411764706" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="294.11764705882" y1="0" x2="294.11764705882" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="352.94117647059" y1="0" x2="352.94117647059" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="411.76470588235" y1="0" x2="411.76470588235" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="470.58823529412" y1="0" x2="470.58823529412" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="529.41176470588" y1="0" x2="529.41176470588" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="588.23529411765" y1="0" x2="588.23529411765" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="647.05882352941" y1="0" x2="647.05882352941" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="705.88235294118" y1="0" x2="705.88235294118" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="764.70588235294" y1="0" x2="764.70588235294" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="823.52941176471" y1="0" x2="823.52941176471" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="882.35294117647" y1="0" x2="882.35294117647" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="941.17647058824" y1="0" x2="941.17647058824" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+	<line x1="1000" y1="0" x2="1000" y2="1000" stroke="#AAAAAA"  vector-effect="non-scaling-stroke" />
+
+	<rect width="1000" height="1000" fill="none" stroke="#AAAAAA"  vector-effect="non-scaling-stroke"/>
+</svg>

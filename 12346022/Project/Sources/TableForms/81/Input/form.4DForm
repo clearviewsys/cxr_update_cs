@@ -1,0 +1,337 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerBody": 101,
+	"markerBreak": 101,
+	"markerFooter": 111,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle8": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 474,
+					"height": 75,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"fill": "transparent",
+					"stroke": "transparent"
+				},
+				"bFirst": {
+					"type": "button",
+					"top": 80,
+					"left": 232,
+					"width": 30,
+					"height": 21,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bFirst",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/First Record"
+					},
+					"action": "firstRecord",
+					"shortcutKey": "\u0000",
+					"text": "First",
+					"textAlign": "center",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"bPrevious": {
+					"type": "button",
+					"top": 80,
+					"left": 267,
+					"width": 54,
+					"height": 21,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bPrevious",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Previous Record"
+					},
+					"action": "previousRecord",
+					"shortcutKey": "\u0000",
+					"text": "Previous",
+					"textAlign": "center",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"bNext": {
+					"type": "button",
+					"top": 80,
+					"left": 326,
+					"width": 33,
+					"height": 21,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bNext",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Next Record"
+					},
+					"action": "nextRecord",
+					"shortcutKey": "\u0000",
+					"text": "Next ",
+					"textAlign": "center",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"bLast": {
+					"type": "button",
+					"top": 80,
+					"left": 364,
+					"width": 30,
+					"height": 21,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bLast",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Last Record"
+					},
+					"action": "lastRecord",
+					"shortcutKey": "\u0000",
+					"text": "Last",
+					"textAlign": "center",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"bDelete": {
+					"type": "button",
+					"top": 80,
+					"left": 399,
+					"width": 42,
+					"height": 21,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bDelete",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Delete Record"
+					},
+					"action": "deleteRecord",
+					"shortcutKey": "\u0000",
+					"text": "Delete",
+					"textAlign": "center",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 80,
+					"left": 446,
+					"width": 23,
+					"height": 21,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/OK"
+					},
+					"action": "accept",
+					"shortcutKey": "\u0000",
+					"text": "OK",
+					"textAlign": "center",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"Rectangle12": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 66,
+					"height": 75,
+					"sizingY": "grow",
+					"fill": "#000000",
+					"stroke": "#AAAAAA"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 5,
+					"left": 5,
+					"width": 58,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Name"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 30,
+					"left": 5,
+					"width": 58,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Next_Value"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 55,
+					"left": 5,
+					"width": 58,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Qty"
+				},
+				"Name": {
+					"type": "input",
+					"top": 5,
+					"left": 69,
+					"width": 400,
+					"height": 15,
+					"dataSource": "[Sequence_Config:81]Name:1",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Next_Value": {
+					"type": "input",
+					"top": 30,
+					"left": 69,
+					"width": 48,
+					"height": 15,
+					"dataSource": "[Sequence_Config:81]Next_Value:2",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Qty": {
+					"type": "input",
+					"top": 55,
+					"left": 69,
+					"width": 48,
+					"height": 15,
+					"dataSource": "[Sequence_Config:81]Qty:3",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Rectangle8"
+				]
+			},
+			"View 3": {
+				"objects": [
+					"bFirst",
+					"bPrevious",
+					"bNext",
+					"bLast",
+					"bDelete",
+					"bValidate"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

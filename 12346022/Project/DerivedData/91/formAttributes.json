@@ -1,0 +1,20 @@
+{
+	"forms": {
+		"MatchMaker": {
+			"timeStamp": "2022-08-15T20:46:00.354Z",
+			"destination": "detailScreen"
+		},
+		"Entry": {
+			"timeStamp": "2022-08-15T20:46:00.353Z",
+			"destination": "detailScreen"
+		},
+		"listbox": {
+			"timeStamp": "2022-08-15T20:46:00.357Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T20:46:00.355Z",
+			"destination": "detailScreen"
+		}
+	}
+}

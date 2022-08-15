@@ -1,0 +1,28 @@
+{
+	"forms": {
+		"Entry": {
+			"timeStamp": "2022-08-15T20:45:59.577Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-15T20:45:59.580Z",
+			"destination": "detailScreen"
+		},
+		"print": {
+			"timeStamp": "2022-08-15T20:45:59.583Z",
+			"destination": "listPrinter"
+		},
+		"subform_Customers": {
+			"timeStamp": "2022-08-15T20:45:59.585Z",
+			"destination": "detailScreen"
+		},
+		"List": {
+			"timeStamp": "2022-08-15T20:45:59.579Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T20:45:59.582Z",
+			"destination": "detailScreen"
+		}
+	}
+}

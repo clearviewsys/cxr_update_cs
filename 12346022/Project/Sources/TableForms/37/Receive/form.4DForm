@@ -1,0 +1,65 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "PayReceive",
+	"inheritedFormTable": 37,
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 474,
+	"markerBreak": 474,
+	"markerFooter": 484,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onLosingFocus",
+		"onGettingFocus",
+		"onBeforeKeystroke",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onAfterKeystroke",
+		"onLoadRecord"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"l_receive": {
+					"type": "text",
+					"top": 5,
+					"left": 7,
+					"width": 360,
+					"height": 24,
+					"stroke": "#405EFF",
+					"class": "Titles",
+					"textAlign": "left",
+					"text": "Receive in Account"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,257 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Button1": {
+					"type": "button",
+					"top": 385,
+					"left": 191,
+					"width": 120,
+					"height": 29,
+					"dataSource": "Button",
+					"action": "cancel",
+					"text": "Close",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"top": 14,
+					"left": 25,
+					"width": 286,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Invoices",
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 41,
+					"left": 25,
+					"width": 286,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Registers",
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button3": {
+					"type": "button",
+					"top": 68,
+					"left": 25,
+					"width": 286,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Customers",
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 95,
+					"left": 25,
+					"width": 286,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Exceptions Log",
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button5": {
+					"type": "button",
+					"top": 122,
+					"left": 25,
+					"width": 286,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Countries",
+					"method": "ObjectMethods/Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 149,
+					"left": 25,
+					"width": 286,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Cities",
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button7": {
+					"type": "button",
+					"top": 176,
+					"left": 25,
+					"width": 286,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "States",
+					"method": "ObjectMethods/Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button8": {
+					"type": "button",
+					"top": 203,
+					"left": 25,
+					"width": 286,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Attached Documents",
+					"method": "ObjectMethods/Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button9": {
+					"type": "button",
+					"top": 230,
+					"left": 25,
+					"width": 286,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Users",
+					"method": "ObjectMethods/Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button10": {
+					"type": "button",
+					"top": 257,
+					"left": 25,
+					"width": 286,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "User Privileges",
+					"method": "ObjectMethods/Button10.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button11": {
+					"type": "button",
+					"top": 284,
+					"left": 25,
+					"width": 286,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Customer Interrelations",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button12": {
+					"type": "button",
+					"top": 311,
+					"left": 25,
+					"width": 286,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Customer Notes (Call Logs)",
+					"method": "ObjectMethods/Button12.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button13": {
+					"type": "button",
+					"top": 338,
+					"left": 25,
+					"width": 286,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Invoices",
+					"method": "ObjectMethods/Button13.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button14": {
+					"type": "button",
+					"top": 365,
+					"left": 25,
+					"width": 286,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Invoices",
+					"method": "ObjectMethods/Button14.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

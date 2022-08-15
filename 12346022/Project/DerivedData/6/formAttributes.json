@@ -1,0 +1,96 @@
+{
+	"forms": {
+		"Search2": {
+			"timeStamp": "2022-08-15T20:45:59.666Z",
+			"destination": "detailScreen"
+		},
+		"CurrenciesPanel": {
+			"timeStamp": "2022-08-15T20:45:59.637Z",
+			"destination": "listScreen"
+		},
+		"ProfitVars_detail-Backup": {
+			"timeStamp": "2022-08-15T20:45:59.665Z",
+			"destination": "detailScreen"
+		},
+		"update": {
+			"timeStamp": "2022-08-15T20:45:59.684Z",
+			"destination": "detailScreen"
+		},
+		"subform_currencyGroups": {
+			"timeStamp": "2022-08-15T20:45:59.684Z",
+			"destination": "detailScreen"
+		},
+		"rep_Currencies": {
+			"timeStamp": "2022-08-15T20:45:59.682Z",
+			"destination": "detailScreen"
+		},
+		"Entry": {
+			"timeStamp": "2022-08-15T20:45:59.655Z",
+			"destination": "detailScreen"
+		},
+		"Toolbar_ScreenTable": {
+			"timeStamp": "2022-08-15T20:45:59.668Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-15T20:45:59.663Z",
+			"destination": "detailScreen"
+		},
+		"CurrencyPLTable": {
+			"timeStamp": "2022-08-15T20:45:59.639Z",
+			"destination": "detailScreen"
+		},
+		"rateSheet": {
+			"timeStamp": "2022-08-15T20:45:59.681Z",
+			"destination": "detailScreen"
+		},
+		"Holdings": {
+			"timeStamp": "2022-08-15T20:45:59.659Z",
+			"destination": "detailScreen"
+		},
+		"print": {
+			"timeStamp": "2022-08-15T20:45:59.676Z",
+			"destination": "listPrinter"
+		},
+		"Search": {
+			"timeStamp": "2022-08-15T20:45:59.666Z",
+			"destination": "detailScreen"
+		},
+		"updateFailed": {
+			"timeStamp": "2022-08-15T20:45:59.684Z",
+			"destination": "detailScreen"
+		},
+		"profitVars_Sums": {
+			"timeStamp": "2022-08-15T20:45:59.677Z",
+			"destination": "detailScreen"
+		},
+		"actions": {
+			"timeStamp": "2022-08-15T20:45:59.675Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T20:45:59.673Z",
+			"destination": "detailScreen"
+		},
+		"TradeSummary": {
+			"timeStamp": "2022-08-15T20:45:59.668Z",
+			"destination": "detailScreen"
+		},
+		"profitVars_detail": {
+			"timeStamp": "2022-08-15T20:45:59.678Z",
+			"destination": "detailScreen"
+		},
+		"SummaryStatement": {
+			"timeStamp": "2022-08-15T20:45:59.666Z",
+			"destination": "listScreen"
+		},
+		"Pick": {
+			"timeStamp": "2022-08-15T20:45:59.665Z",
+			"destination": "detailScreen"
+		},
+		"HideRates": {
+			"timeStamp": "2022-08-15T20:45:59.656Z",
+			"destination": "detailScreen"
+		}
+	}
+}

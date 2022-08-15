@@ -1,0 +1,364 @@
+﻿{
+	"destination": "detailScreen",
+	"windowTitle": "Administrator Panel",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Button": {
+					"type": "button",
+					"top": 192,
+					"left": 282,
+					"width": 98,
+					"height": 23,
+					"text": "Close",
+					"class": "Control_Large_",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Picture6": {
+					"type": "picture",
+					"top": 2,
+					"left": 0,
+					"width": 389,
+					"height": 230,
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture6.pict"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 94,
+					"left": 312,
+					"width": 70,
+					"height": 13,
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"class": "Tags",
+					"textAlign": "center",
+					"text": "Denom."
+				},
+				"3D Button8": {
+					"type": "pictureButton",
+					"top": 24,
+					"left": 312,
+					"width": 70,
+					"height": 70,
+					"dataSource": "bRegisters",
+					"picture": "/RESOURCES/Images/library/_cashInOuts.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/3D Button8.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text22": {
+					"type": "text",
+					"top": 95,
+					"left": 11,
+					"width": 70,
+					"height": 13,
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"class": "Tags",
+					"textAlign": "center",
+					"text": "Cash View"
+				},
+				"3D Button14": {
+					"type": "pictureButton",
+					"top": 120,
+					"left": 162,
+					"width": 70,
+					"height": 70,
+					"dataSource": "bCash",
+					"picture": "/RESOURCES/Images/library/_cash.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/3D Button14.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 94,
+					"left": 162,
+					"width": 70,
+					"height": 13,
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"class": "Tags",
+					"textAlign": "center",
+					"text": "Cash Flow"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 94,
+					"left": 87,
+					"width": 70,
+					"height": 13,
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"class": "Tags",
+					"textAlign": "center",
+					"text": "Bills"
+				},
+				"3D Button7": {
+					"type": "pictureButton",
+					"top": 24,
+					"left": 87,
+					"width": 70,
+					"height": 70,
+					"dataSource": "bCustomers",
+					"picture": "/RESOURCES/Images/library/_cashInventory.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/3D Button7.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"3D Button9": {
+					"type": "pictureButton",
+					"top": 24,
+					"left": 162,
+					"width": 70,
+					"height": 70,
+					"dataSource": "bCustomers",
+					"picture": "/RESOURCES/Images/library/_CashTransactions.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/3D Button9.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text16": {
+					"type": "text",
+					"top": 94,
+					"left": 237,
+					"width": 70,
+					"height": 13,
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"class": "Tags",
+					"textAlign": "center",
+					"text": "Cash"
+				},
+				"3D Button25": {
+					"type": "pictureButton",
+					"top": 24,
+					"left": 237,
+					"width": 70,
+					"height": 70,
+					"dataSource": "bOnlineUsers",
+					"picture": "/RESOURCES/Images/library/_cashAccounts.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/3D Button25.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"3D Button11": {
+					"type": "pictureButton",
+					"top": 23,
+					"left": 11,
+					"width": 70,
+					"height": 70,
+					"dataSource": "bOnlineUsers",
+					"picture": "/RESOURCES/Images/library/_itemInOuts.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/3D Button11.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text39": {
+					"type": "text",
+					"top": 190,
+					"left": 11,
+					"width": 70,
+					"height": 26,
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"class": "Tags",
+					"textAlign": "center",
+					"text": "Wire Tr."
+				},
+				"3D Button24": {
+					"type": "pictureButton",
+					"top": 120,
+					"left": 11,
+					"width": 70,
+					"height": 70,
+					"dataSource": "bCustomers",
+					"picture": "/RESOURCES/Images/library/_wires.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/3D Button24.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text41": {
+					"type": "text",
+					"top": 190,
+					"left": 237,
+					"width": 70,
+					"height": 26,
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"class": "Tags",
+					"textAlign": "center",
+					"text": "Acc. IO"
+				},
+				"3D Button26": {
+					"type": "pictureButton",
+					"top": 120,
+					"left": 237,
+					"width": 70,
+					"height": 70,
+					"dataSource": "bCustomers",
+					"picture": "/RESOURCES/Images/library/_AccountInOuts.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/3D Button26.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text23": {
+					"type": "text",
+					"top": 190,
+					"left": 90,
+					"width": 70,
+					"height": 26,
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"class": "Tags",
+					"textAlign": "center",
+					"text": "Bills IO"
+				},
+				"3D Button20": {
+					"type": "pictureButton",
+					"top": 120,
+					"left": 90,
+					"width": 70,
+					"height": 70,
+					"dataSource": "bCustomers",
+					"picture": "/RESOURCES/Images/library/_cashInOuts.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/3D Button20.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"defaultView": "View 1",
+		"activeView": "View 2",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Button",
+					"Picture6"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

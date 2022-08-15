@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--#4DSCRIPT/webRedirectIfNotAuthorized-->
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/head.shtml-->
+
+    <!--#4DSCRIPT/webSelectCustomerRecord-->
+
+
+    <!-- PQGRID FUNCTION -->
+    <script type="text/javascript">
+        function loadGrid(element, wapi_filter) {
+
+            debugger;
+
+            var theTable = element.id.replace("grid-data-", ""); //get the 4D table name
+
+            if (theTable === undefined) {
+                var theTable = '';
+            };
+
+            if (wapi_filter === undefined) {
+                var wapi_filter = [{
+                    dataIndx: 'customers___customerid',
+                    value: '<!--#4DTEXT [Customers]customerid -->',
+                    condition: 'equal'
+                }]
+
+                //customers___customerid: '<!--#4DTEXT [Customers]customerid -->'
+            };
+
+
+            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_gettablename.js-->
+            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_datepicker.js-->
+            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_viewRecord.js-->  
+            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_commentRender.js-->
+
+                //--------- INITIALIZATION FUNCTION -----------
+            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_initGrid.js-->
+
+
+            //--------- DEFINE GRID OBJECT -----------
+            //          NOTE: grid object var = obj
+            var obj = {
+                    //create grid with defaults
+                <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_createGrid.js-->  
+                //set override - additional options
+                height: "100%",
+                showTitle: false,
+                rowHt: 35,
+            };
+
+            //----------- CREATE EVENT  -- USED FOR TOOL TIP WIDGET -------------            
+
+
+            //----------- DATA READY EVENT (this sets the listbox title) --------------
+            obj.dataReady =
+                    function () {
+                        <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_evtDataReady.js-->
+            };
+
+            //---------- BEFORE SORT EVENT ------------     
+            obj.beforeSort =
+                        function (evt) {
+                            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_evtBeforeSort.js-->
+            };
+
+            //---------- BEFORE TABLE VIEW EVENT ------------           
+            obj.beforeTableView =
+                            function (evt, ui) {
+                                <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_evtBeforeTableView.js-->
+            };
+
+
+            //--------------CREATE TOOLBAR  ------------- 
+
+
+            //--------------- DEFINE COLUMN MODEL -------------------
+            // ADD COLUMNS TO THE GRID HERE -- USE 4D TABLENAME___FIELDNAME 
+            // THE FIRST COLUMN SHOULD BE THE PK/ID FIELD FOR THE TABLE - YOU CAN SET HIDDEN:TRUE
+            // https://paramquery.com/pro/api# option - colModel < --doc 's and options
+
+        switch (theTable) {
+
+            case 'links':
+
+            obj.colModel = [ 
+                <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___linkid, filter:false, hidden:true}-->,
+                <!--#4DSCRIPT/WAPI_getColModelColumn/{field: links___fullname,title: Name,filter: false,width: 120}--> , 
+                <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___relationship, title:Relationship, filter:false}-->,
+                <!--#4DSCRIPT/WAPI_getColModelColumn/{field: links___city,title: City,filter: false, maxWidth: 100 }--> , 
+                <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___country,title:Country, filter:false, maxWidth:100}-->,
+                <!--#4DSCRIPT/WAPI_getColModelColumn/{field: links___mainphone,title: Main - Phone, filter: false}--> , 
+                <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___email,title:Email, filter:false}-->,
+            ];
+
+            obj.sortModel = {
+                                                sorter: [{
+                                                    dataIndx: 'links___fullname',
+                                                    dir: 'up'
+                                                }],
+                                            };
+
+                                            obj.rowSelect = function (evt, ui) {
+
+                                                var row = ui.addList[0];
+                                                var id = row.rowData.links___linkid; //this is the beneficiary
+                                                var name = row.rowData.links___fullname;
+                                                var custid = '<!--#4DTEXT [Customers]customerid -->' //row.rowData.links___customerid;
+
+                                                // $("#links-send-ewire-button").val('Send eWire to  ' + name);
+                                                //$("#links-send-ewire-button").removeAttr('disabled');
+                                                //$("[id=ewires-linkid-input]").val(id);
+                                                //$("[id=ewires-customerid-input]").val(custid);
+
+                                                $("#links-send-webewire-button").val('Request eWire to  ' + name);
+                                                $("#links-send-webewire-button").removeAttr('disabled');
+                                                $("[id=webewires-linkid-input]").val(id);
+                                                $("[id=webewires-customerid-input]").val(custid);
+
+                                                $("#links-update-button").val('Update  ' + name);
+                                                $("#links-update-button").removeAttr('disabled');
+                                                $("#links-update-button").attr('links___linkid', id);
+                                                //$("#links-update-button").attr('links___customerid', custid);
+                                                //$("[id=links-linkid-input]").val(id);
+                                                //$("[id=links-customerid-input]").val(custid);
+                                                //alert(str)
+                                            };
+
+                                            obj.rowDblClick = function (evt, ui) {
+
+                                                var name = ui.rowData.links___fullname;
+                                                var id = ui.rowData.links___linkid;
+                                                var thePrimaryKey = 'links___linkid';
+                                                var theForm = 'modal-form';
+                                                var theViewPage = 'customers/links-dialog.shtml';
+                                                var thePrintPage = '/customers/links-print.shtml';
+                                                var theEditPage = '';
+                                                var theTable = 'links';
+                                                var viewForm = new FormData();
+
+                                                viewForm.append(thePrimaryKey, id);
+                                                viewForm.append('table', theTable);
+                                                viewForm.append('primarykey', thePrimaryKey);
+                                                viewForm.append('action', 'view');
+                                                viewForm.append('readonly', 'true');
+                                                viewForm.append('request', theViewPage);
+
+                                                var request = new XMLHttpRequest();
+
+                                                request.onreadystatechange = wapiDisplayModalDialog(request, {
+                                                    'form': theForm,
+                                                    'view': theViewPage,
+                                                    'print': thePrintPage,
+                                                    'update': theEditPage,
+                                                    'table': theTable,
+                                                    'id': id,
+                                                    'primarykey': thePrimaryKey
+                                                }); //theForm, thePrintPage);
+                                                request.responseType = 'text';
+                                                request.open('POST', 'readRecord');
+                                                request.send(viewForm);
+                                                request.response;
+
+                                            };
+                                            break;
+
+            case 'wiretemplates':
+                obj.colModel = [ 
+                    <!--#4DSCRIPT/WAPI_getColModelColumn/{field:wiretemplates___wiretemplateid, filter:false, hidden:true}-->,
+                    <!--#4DSCRIPT/WAPI_getColModelColumn/{field: wiretemplates___wiretemplateid,filter: false,title: ID}--> , 
+                    <!--#4DSCRIPT/WAPI_getColModelColumn/{field:wiretemplates___wiretemplatealias, title:Name ,filter:false}-->,
+                    <!--#4DSCRIPT/WAPI_getColModelColumn/{field: wiretemplates___bankname,title: Bank,filter: false}-->, 
+                    <!--#4DSCRIPT/WAPI_getColModelColumn/{field:wiretemplates___beneficiaryfullname,title:Beneficiary, filter:false} -->,
+                    <!--#4DSCRIPT/WAPI_getColModelColumn/{field: wiretemplates___remarks,title: Remarks,filter: false}-->,
+                                            ];
+
+                                            obj.sortModel = {
+                                                sorter: [{
+                                                    dataIndx: 'wiretemplates___wiretemplatealias',
+                                                    dir: 'up'
+                                                }],
+                                            };
+
+                                            obj.rowDblClick = function (evt, ui) {
+
+                                                var id = ui.rowData.wiretemplates___wiretemplateid;
+                                                var thePrimaryKey = 'wiretemplates___wiretemplateid';
+                                                var theForm = 'modal-form';
+                                                var theViewPage = 'wapi/view.shtml';
+                                                var thePrintPage = '';
+                                                var theEditPage = 'wapi/update.shtml';
+                                                var theTable = 'wiretemplates';
+                                                var viewForm = new FormData();
+
+                                                viewForm.append(thePrimaryKey, id);
+                                                viewForm.append('table', theTable);
+                                                viewForm.append('primarykey', thePrimaryKey);
+                                                viewForm.append('action', 'view');
+                                                viewForm.append('readonly', 'true');
+                                                viewForm.append('request', theViewPage);
+
+                                                var request = new XMLHttpRequest();
+
+                                                request.onreadystatechange = wapiDisplayModalDialog(request, {
+                                                    'form': theForm,
+                                                    'view': theViewPage,
+                                                    'print': thePrintPage,
+                                                    'update': theEditPage,
+                                                    'table': theTable,
+                                                    'id': id,
+                                                    'primarykey': thePrimaryKey
+                                                }); //theForm, thePrintPage);
+                                                request.responseType = 'text';
+                                                request.open('POST', 'readRecord');
+                                                request.send(viewForm);
+                                                request.response;
+
+                                            };
+
+                                            obj.rowSelect = function (evt, ui) {
+
+var row = ui.addList[0];
+var id = row.rowData.wiretemplates___wiretemplateid; //this is the beneficiary
+var name = row.rowData.wiretemplates___wiretemplatealias;
+var custid = '<!--#4DTEXT [Customers]customerid -->' //row.rowData.links___customerid;
+
+debugger;
+$("#wiretemplates-update-button").val('Update  ' + name);
+$("#wiretemplates-update-button").removeAttr('disabled');
+$("#wiretemplates-update-button").attr('wiretemplates___wiretemplateid', id);
+
+};
+
+
+                                            break;
+
+                                        };
+
+
+
+                                        // ------------- DEFINE DATAMODEL -----------
+                                        obj.dataModel = {
+                                            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_dataModel.js--> 
+            };
+
+
+
+            // ------------- DEFINE FILTERMODEL -----------      
+            obj.filterModel = {
+                                                header: false,
+                                                on: true,
+                                                type: 'remote',
+                                                menuIcon: true,
+                                            }
+
+                                            //--------------DEFINE GROUP MODEL -------------
+                                            // NONE
+
+
+
+                                            //---------- INSERT THE GRID INTO THE DOM ---------------
+                                            var theGrid = pq.grid("div#grid-" + theTable, obj);
+
+                                        };
+    </script>
+
+
+    <!-- ON READY -- ADD ON SHOW ACCORDIAN EVENT HERE -->
+    <script type="text/javascript">
+        $(function () {
+            var customerID = '<!--#4DSCRIPT/WAPI_getSession/customerid-->'
+
+            $('#grid-data-links').on('show.bs.collapse', function () {
+                var wapi_filter = [{
+                    dataIndx: 'links___customerid',
+                    value: customerID,
+                    condition: 'equal'
+                }];
+
+                if ($("#grid-links").hasClass("pq-grid") == false) {
+                    loadGrid(this, wapi_filter);
+                } else {
+                    pq.grid('#grid-links').refreshDataAndView();
+                };
+                wapiSetSession('homeSelectedDiv', this.id);
+            });
+
+            $('#grid-data-wiretemplates').on('show.bs.collapse', function () {
+                var wapi_filter = [{
+                    dataIndx: 'wiretemplates___customerid',
+                    value: customerID,
+                    condition: 'equal'
+                }];
+
+                if ($("#grid-wiretemplates").hasClass("pq-grid") == false) {
+                    loadGrid(this, wapi_filter);
+                } else {
+                    pq.grid('#grid-wiretemplates').refreshDataAndView();
+                };
+                wapiSetSession('homeSelectedDiv', this.id);
+            });
+
+            //open an accordian - maybe use user session setting
+            var theDiv = '<!--#4DSCRIPT/WAPI_getSession/homeSelectedDiv-->';
+
+            if (theDiv === undefined) {
+                var theDiv = '';
+            };
+
+            if (theDiv !== '') {
+                $('#' + theDiv).collapse('show');
+                $('#' + theDiv).addClass('in');
+                $('#' + theDiv).prop('aria-expanded', true); //aria-expanded='true'
+
+            };
+
+
+        })
+    </script>
+
+    <!--#4DSCRIPT/WAPI_pageStart/{sessiontimer:true}-->
+</head>
+
+
+<body>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/menubar.shtml-->
+
+    <main role="main">
+
+        <div class="page-header">
+
+            <div class='container'>
+                <h1>Relationships</h1>
+            </div>
+        </div>
+
+
+        <div class='container'>
+
+            <!--#4DHTML WAPI_includeAlertMessage-->
+
+            <!-- ACCOUNT AND TRANSACTION PANELS -->
+
+            <div class='row'>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <!-- RELATED CUSTOMER TABLES -->
+
+                    <div class="panel-group" id="accordion-related" role="tablist" aria-multiselectable='true'>
+
+                        <!--LINKS-->
+                        <!--#4DIF (webgetkeyvalue("web.customers.module.links.show")="false")-->
+                        <!--#4DELSE-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="grid-tab-links">
+                                <h3 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse"
+                                        data-parent="#accordion-related" href="#grid-data-links" aria-expanded="false"
+                                        aria-controls="grid-data-links">
+                                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"> </span>
+                                        Beneficiaries</a>
+                                </h3>
+                            </div>
+
+                            <div id="grid-data-links" class="panel-collapse collapse" role="tabpanel"
+                                aria-labelledby="grid-data-links">
+                                <div class="panel-body">
+
+                                    <div class='form-group' style='height: 300px'>
+                                        <div id="grid-links"></div><!-- INSERT WIRES GRID HERE -->
+                                    </div>
+
+                                    <div class="btn-group btn-group-justified" role="group" aria-label="links-toolbar">
+
+                                        <div class="pull-right">
+
+                                            <div class="btn-group" role="group" style="padding-right: 15px">
+                                                <input type="button" class="btn btn-primary btn-block"
+                                                    id="wapi-create-btn" name="wapi-create-btn" value="Add Beneficiary"
+                                                    onclick="wapiCreateForm({'request':'customers/links-create.shtml', 'table':'links', 'action':'create', 'primarykey':'links___linkid'})">
+                                            </div>
+
+                                            <div class="btn-group" role="group" style="padding-right: 5px">
+
+                                                <input type="button" class="btn btn-primary btn-block"
+                                                    id="links-update-button" name="links-update-button"
+                                                    value="Update Beneficiary"
+                                                    onclick="wapiEditForm({'request':'customers/links-update.shtml', 'table':'links', 'action':'update', 'primarykey':'links___linkid'})"
+                                                    disabled>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--#4DENDIF-->
+
+
+                        <!--WIRE TEMPLATES-->
+                        <!--#4DIF (webgetkeyvalue("web.customers.module.wiretemplates.show")="false")-->
+                        <!--#4DELSE-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading" id="grid-tab-wiretemplates" role="tab">
+                                <h3 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse"
+                                        data-parent="#accordion-related" href="#grid-data-wiretemplates"
+                                        aria-expanded="false" aria-controls="grid-data-wiretemplates">
+                                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"> </span>
+                                        Wire Templates</a>
+                                </h3>
+                            </div>
+
+                            <div id="grid-data-wiretemplates" class="panel-collapse collapse" role="tabpanel"
+                                aria-labelledby="grid-data-wiretemplates">
+                                <div class="panel-body">
+
+                                    <div class='form-group' style='height: 300px'>
+                                        <div id="grid-wiretemplates"></div><!-- INSERT WIRETEMPLATES GRID HERE -->
+                                    </div>
+
+                                    <div class="btn-group btn-group-justified" role="group"
+                                        aria-label="wiretemplates-toolbar">
+
+                                        <div class="pull-right">
+
+                                            <div class="btn-group" role="group" style="padding-right: 15px">
+                                                <input type="button" class="btn btn-primary btn-block"
+                                                    id="wapi-create-btn" name="wapi-create-btn"
+                                                    value="Add Wire Template" onclick="wapiCreateForm()"
+                                                    data-wapi-success="customers/links-list.shtml"
+                                                    data-wapi-failure="customers/links-list.shtml"
+                                                    data-wapi-request="customers/wiretemplates-create.shtml"
+                                                    data-wapi-table="wiretemplates" data-wapi-action="create"
+                                                    data-wapi-primarykey="wiretemplates___wiretemplateid">
+                                            </div>
+
+                                            <div class="btn-group" role="group" style="padding-right: 5px">
+                                                <input type="button" class="btn btn-primary btn-block"
+                                                    id="wiretemplates-update-button" name="wiretemplates-update-button"
+                                                    value="Update Wire Template" onclick="wapiEditForm()"
+                                                    data-wapi-success="customers/links-list.shtml"
+                                                    data-wapi-failure="customers/links-list.shtml"
+                                                    data-wapi-request="customers/wiretemplates-update.shtml"
+                                                    data-wapi-table="wiretemplates" data-wapi-action="update"
+                                                    data-wapi-primarykey="wiretemplates___wiretemplateid" 
+                                                    data-wapi-id="" 
+                                                    disabled>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--#4DENDIF-->
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+    </main>
+
+
+    <!-- DIALOG FOR MESSAGE -->
+    <!--#4DSCRIPT/WAPI_4DInclude/wapi/message.shtml -->
+
+    <!-- DIALOG FOR CONFIRMATION -->
+    <!--#4DSCRIPT/WAPI_4DInclude/wapi/confirm.shtml -->
+
+    <!-- GENERIC DIALOG -->
+    <!--#4DSCRIPT/WAPI_4DInclude/wapi/modal-dialog.shtml-->
+
+    <!--FOOTER-->
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/footer.shtml-->
+</body>
+
+
+</html>

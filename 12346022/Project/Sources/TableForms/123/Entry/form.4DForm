@@ -1,0 +1,220 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"text": "Create a Quiz",
+					"top": 17,
+					"left": 34,
+					"width": 408,
+					"height": 30
+				},
+				"Input": {
+					"type": "input",
+					"left": 34,
+					"top": 81,
+					"width": 404,
+					"height": 32,
+					"dataSource": "Form:C1466.quizName",
+					"placeholder": " ",
+					"method": "ObjectMethods/Input.4dm"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Quiz Name:",
+					"top": 60,
+					"left": 34,
+					"width": 156,
+					"height": 15
+				},
+				"listbox": {
+					"type": "listbox",
+					"dataSource": "Form:C1466.allQuestions",
+					"top": 124,
+					"left": 34,
+					"width": 404,
+					"height": 300,
+					"visibility": "visible",
+					"sizingX": "fixed",
+					"sizingY": "fixed",
+					"headerHeight": "2em",
+					"listboxType": "collection",
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"resizingMode": "legacy",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDrop"
+					],
+					"singleClickEdit": false,
+					"dragging": "custom",
+					"dropping": "custom",
+					"selectionMode": "single",
+					"currentItemSource": "Form:C1466.currentItemAllQuestions",
+					"method": "ObjectMethods/listbox.4dm",
+					"focusable": false,
+					"columns": [
+						{
+							"name": "questionID",
+							"dataSource": "This:C1470.questionID",
+							"width": 120,
+							"enterable": false,
+							"header": {
+								"text": "Question id",
+								"name": "Header1"
+							},
+							"footer": {
+								"name": "1"
+							}
+						},
+						{
+							"name": "question",
+							"dataSource": "This:C1470.question",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Question",
+								"name": "2"
+							},
+							"events": [
+								"onDoubleClick"
+							],
+							"footer": {
+								"name": "3"
+							}
+						}
+					]
+				},
+				"selectedQuestionsListbox": {
+					"type": "listbox",
+					"dataSource": "Form:C1466.selectedQuestions",
+					"top": 124,
+					"left": 496,
+					"width": 404,
+					"height": 300,
+					"visibility": "visible",
+					"sizingX": "fixed",
+					"sizingY": "fixed",
+					"headerHeight": "2em",
+					"listboxType": "collection",
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"resizingMode": "legacy",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDrop"
+					],
+					"singleClickEdit": false,
+					"dragging": "custom",
+					"dropping": "custom",
+					"selectionMode": "single",
+					"currentItemSource": "Form:C1466.currentItemSelectedQuestions",
+					"method": "ObjectMethods/selectedQuestionsListbox.4dm",
+					"columns": [
+						{
+							"name": "questionID1",
+							"dataSource": "This:C1470.questionID",
+							"width": 120,
+							"enterable": false,
+							"header": {
+								"text": "Question id",
+								"name": "Header2"
+							},
+							"footer": {
+								"name": "4"
+							}
+						},
+						{
+							"name": "question1",
+							"dataSource": "This:C1470.question",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Question",
+								"name": "5"
+							},
+							"events": [
+								"onDoubleClick"
+							],
+							"footer": {
+								"name": "6"
+							}
+						}
+					]
+				},
+				"Button": {
+					"type": "button",
+					"text": "Save",
+					"top": 437,
+					"left": 747,
+					"width": 153,
+					"height": 42,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm",
+					"action": ""
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Cancel",
+					"top": 437,
+					"left": 573,
+					"width": 148,
+					"height": 42,
+					"events": [
+						"onClick"
+					],
+					"action": "cancel",
+					"method": "ObjectMethods/Button1.4dm"
+				}
+			}
+		}
+	],
+	"geometryStamp": 1,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

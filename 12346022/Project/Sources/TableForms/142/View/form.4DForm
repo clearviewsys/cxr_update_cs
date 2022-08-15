@@ -1,0 +1,253 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Entry",
+	"rightMargin": 0,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 192,
+	"markerBreak": 192,
+	"markerFooter": 202,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text8": {
+					"type": "text",
+					"top": 97,
+					"left": 15,
+					"width": 135,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Customer ID:"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 137,
+					"left": 15,
+					"width": 135,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Member Check ID:"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 176,
+					"left": 15,
+					"width": 135,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Response Date:"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 215,
+					"left": 15,
+					"width": 135,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Total Count:"
+				},
+				"CustomerID": {
+					"type": "input",
+					"top": 97,
+					"left": 170,
+					"width": 229,
+					"height": 20,
+					"dataSource": "[mchk_CheckLog:142]InternalRecordID:3",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "solid",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"MemberCheckID": {
+					"type": "input",
+					"top": 137,
+					"left": 170,
+					"width": 229,
+					"height": 20,
+					"dataSource": "[mchk_CheckLog:142]MemberCheckID:1",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "solid",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"ResponseDate": {
+					"type": "input",
+					"top": 175,
+					"left": 170,
+					"width": 71,
+					"height": 20,
+					"dataSource": "[mchk_CheckLog:142]ResponseDate:8",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "solid",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Size": {
+					"type": "input",
+					"top": 215,
+					"left": 170,
+					"width": 42,
+					"height": 20,
+					"dataSource": "[mchk_CheckLog:142]Size:4",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "solid",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"top": 263,
+					"left": 288,
+					"width": 111,
+					"height": 31,
+					"text": "Close",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 263,
+					"left": 157,
+					"width": 111,
+					"height": 31,
+					"text": "Show Report",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field": {
+					"type": "checkbox",
+					"top": 57,
+					"left": 170,
+					"width": 115,
+					"height": 20,
+					"dataSource": "[mchk_CheckLog:142]isCompany:9",
+					"text": "Is Company",
+					"class": "Fields_Large",
+					"focusable": false,
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	]
+}

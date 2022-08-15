@@ -1,0 +1,279 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"markerBody": 94,
+	"markerBreak": 94,
+	"markerFooter": 94,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vDateTime": {
+					"type": "input",
+					"top": 77,
+					"left": 11,
+					"width": 454,
+					"height": 11,
+					"dataSource": "vDateTime",
+					"stroke": "#000000",
+					"class": "Titles_print",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onHeader"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 5,
+					"left": 11,
+					"width": 563,
+					"height": 21,
+					"dataSource": "<>CompanyName",
+					"stroke": "#000000",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 18,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 56,
+					"left": 11,
+					"width": 543,
+					"height": 15,
+					"dataSource": "vReportTitle",
+					"stroke": "#000000",
+					"class": "Titles_Small",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 28,
+					"left": 85,
+					"width": 116,
+					"height": 10,
+					"dataSource": "<>organizationNo",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable4": {
+					"type": "input",
+					"top": 332,
+					"left": 193,
+					"width": 47,
+					"height": 10,
+					"dataSource": "<>CBPosID",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"hifl_OurRate_Label1": {
+					"type": "text",
+					"top": 332,
+					"left": 43,
+					"width": 64,
+					"height": 10,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "left",
+					"text": "Cash Disbursed"
+				},
+				"hifl_Ourrate1": {
+					"type": "input",
+					"top": 332,
+					"left": 106,
+					"width": 82,
+					"height": 10,
+					"sizingX": "grow",
+					"dataSource": "[Invoices:5]CashDisbursement:52",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLosingFocus"
+					]
+				},
+				"hifl_OurRate_Label2": {
+					"type": "text",
+					"top": 28,
+					"left": 11,
+					"width": 113,
+					"height": 10,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "left",
+					"text": "Organization No:"
+				},
+				"hifl_OurRate_Label4": {
+					"type": "text",
+					"top": 41,
+					"left": 11,
+					"width": 108,
+					"height": 10,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "left",
+					"text": "Workstation Name:"
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 41,
+					"left": 85,
+					"width": 244,
+					"height": 10,
+					"dataSource": "vTerminalName",
+					"class": "Fields_print",
+					"textAlign": "left",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Line1": {
+					"type": "line",
+					"top": 53,
+					"left": 11,
+					"width": 318,
+					"strokeWidth": 0.1
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

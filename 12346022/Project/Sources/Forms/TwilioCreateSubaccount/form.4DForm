@@ -1,0 +1,148 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"top": 36,
+					"left": 27,
+					"width": 274,
+					"height": 24,
+					"class": "Titles",
+					"text": "Create a Twilio Sub-Account"
+				},
+				"h_accountName": {
+					"type": "text",
+					"top": 70,
+					"left": 27,
+					"width": 101,
+					"height": 34,
+					"class": "Fields_Medium",
+					"text": "Account Name: (optional)"
+				},
+				"f_accountName": {
+					"type": "input",
+					"top": 75,
+					"left": 148,
+					"width": 244,
+					"height": 22,
+					"dataSource": "Form:C1466.accountName",
+					"fontFamily": "Segoe UI",
+					"fontSize": 16,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"h_setCurrent": {
+					"type": "text",
+					"top": 119,
+					"left": 27,
+					"width": 153,
+					"height": 30,
+					"text": "Set as current sub account?"
+				},
+				"f_setCurrent": {
+					"type": "checkbox",
+					"top": 119,
+					"left": 193,
+					"width": 26,
+					"height": 21,
+					"dataSource": "Form:C1466.setCurrent",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"b_Cancel": {
+					"type": "button",
+					"top": 178,
+					"left": 27,
+					"width": 151,
+					"height": 30,
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"h_accountSid": {
+					"type": "text",
+					"top": 147,
+					"left": 27,
+					"width": 97,
+					"height": 17,
+					"visibility": "hidden",
+					"class": "Fields_Medium",
+					"text": "Account SID:"
+				},
+				"f_accountSid": {
+					"type": "input",
+					"top": 148,
+					"left": 123,
+					"width": 270,
+					"height": 16,
+					"visibility": "hidden",
+					"dataSource": "Form:C1466.accountSid",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_Send1": {
+					"type": "button",
+					"top": 178,
+					"left": 193,
+					"width": 151,
+					"height": 30,
+					"text": "Create Account",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_Send1.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	]
+}

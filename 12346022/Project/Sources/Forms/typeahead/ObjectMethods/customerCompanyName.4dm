@@ -1,0 +1,1 @@
+//pickCompanyCustomer (OBJECT Get pointer(Object current);->[Customers]CompanyID)

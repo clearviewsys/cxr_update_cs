@@ -1,0 +1,71 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "PayReceive",
+	"inheritedFormTable": 1,
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onLosingFocus",
+		"onGettingFocus",
+		"onBeforeKeystroke",
+		"onDataChange",
+		"onCloseDetail"
+	],
+	"method": "method.4dm",
+	"pages": [
+		null,
+		{
+			"objects": {
+				"l_ReceiveChque": {
+					"type": "text",
+					"top": 15,
+					"left": 255,
+					"width": 180,
+					"height": 25,
+					"fill": "#7F93FF",
+					"stroke": "#FFFFFF",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 18,
+					"fontWeight": "bold",
+					"text": "Receive Cheque"
+				},
+				"b_none": {
+					"type": "button",
+					"top": 660,
+					"left": 686,
+					"width": 9,
+					"height": 9,
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

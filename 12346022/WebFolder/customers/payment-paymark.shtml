@@ -1,0 +1,212 @@
+<div id="payment-container" class="well well-lg">
+
+    <div style="padding-bottom: 10px">
+        <h3>
+            <div class="hidden-xs">Internet Banking</div> <small>(Online EFTPOS)</small>
+            <div class="pull-right">
+                <a href="https://www.paymark.co.nz/products/online-eftpos/">
+                    <svg class="worldline-logo" xmlns="http://www.w3.org/2000/svg" width="235.409" height="24.006">
+                        <path
+                            d="M39.06 22.916a11.412 11.412 0 01-4.907-4.376 12.132 12.132 0 01-1.855-6.226 12.579 12.579 0 01.76-4.865 11.268 11.268 0 016.094-6.435A12.79 12.79 0 0144.411.003a12.837 12.837 0 015.265 1.011 11.26 11.26 0 013.793 2.689 11.983 11.983 0 013.077 8.61 12.132 12.132 0 01-1.855 6.226 11.4 11.4 0 01-4.907 4.376 12.35 12.35 0 01-5.363 1.088 12.339 12.339 0 01-5.361-1.087zm.3-16.107a7.832 7.832 0 00-1.724 5.206 7.843 7.843 0 001.781 5.153 6.42 6.42 0 005.023 2.192 6.424 6.424 0 005-2.183 7.819 7.819 0 001.8-5.162 7.55 7.55 0 00-1.98-5.445 6.677 6.677 0 00-4.824-1.9 6.463 6.463 0 00-5.08 2.134zm57.749 16.7v-23h8.478a12.616 12.616 0 019.18 3.358 10.813 10.813 0 013.078 7.772 11.84 11.84 0 01-.762 4.757 10.854 10.854 0 01-6.17 6.17 14.117 14.117 0 01-5.378.948zm5.1-4.461h3.425a8.151 8.151 0 002.892-.482 5.838 5.838 0 003.528-3.513 10.291 10.291 0 000-6.233 5.645 5.645 0 00-3.528-3.42 8.956 8.956 0 00-2.892-.435H102.2zm98.637 4.338c-.864-6.32-3.433-11.778-6.994-15.353a23.83 23.83 0 012.379-2.407 24.181 24.181 0 012.488 2.948 32.169 32.169 0 015.553 14.812zm-6.311 0a21.809 21.809 0 00-4.223-9.819 23.708 23.708 0 011.745-3.149 20.1 20.1 0 011.531 1.879 25.761 25.761 0 014.384 11.089zm-6.355 0a23.644 23.644 0 01.891-6.45 19.756 19.756 0 012.557 6.45zm-123.92 0h-5.1V.504h8.922c3.928.03 6.583 1.144 8.114 3.4a7.517 7.517 0 011.12 4.212 7.759 7.759 0 01-1.134 4.678 6.833 6.833 0 01-3.139 2.461l5.8 8.123h-5.9l-4.812-7.027h-3.862v7.026zm0-11.285h4.1a3.444 3.444 0 003.182-1.725 4.163 4.163 0 000-3.824 3.293 3.293 0 00-1.275-1.274 3.957 3.957 0 00-1.927-.311h-4.08zm169.48 11.281a18.028 18.028 0 011.36-3.817 23.717 23.717 0 01.309 3.817zm-6.239 0a22.92 22.92 0 015.108-11.154q.424.79.788 1.614a21.379 21.379 0 00-4.241 9.54zm-6.18 0a28.291 28.291 0 017.63-16.219q.567.6 1.09 1.234c-.179.187-.358.376-.536.573a26.807 26.807 0 00-6.539 14.412zm-7.939 0a47.012 47.012 0 00-1.317-7.508 42.55 42.55 0 00-1.4 7.508h-3.546c-.9-8.05-4.072-15.036-8.55-19.57a23.491 23.491 0 013.023-1.735 29.417 29.417 0 012.249 2.77 36.928 36.928 0 015.91 13.637 41.659 41.659 0 011.482-5.394A36.076 36.076 0 00204.5.915a23.432 23.432 0 013.661-.87c.273.352.544.71.806 1.078a39.521 39.521 0 014.166 7.428 37.738 37.738 0 015.2-7.861q.855.246 1.68.554a36.15 36.15 0 00-6.053 9.374 47.458 47.458 0 012.117 7.637 33.268 33.268 0 017.5-14.275q.312-.345.635-.68.7.437 1.375.921c-.267.274-.534.556-.8.85a32.431 32.431 0 00-7.985 18.311zm-47.914 0V.689h12.623v1.656h-10.78v8.6h10.031v1.619h-10.031v9.161h11.156v1.656zm-7.565 0L144.757 2.344h-.449v21.038h-1.834V.689h3.315l13.145 21.038h.375V.689h1.837v22.693zm-22.249 0V.689h1.846v22.693zm-14.311 0V.689h1.844v21.038h10.342v1.656zm-40.34 0V.689h5.1v18.215h8.89v4.477zm-61.749 0L16.226 9.56l-2.811 13.822H5.6L0 .689h5.218l4.551 18.217h.493l3.341-17.6h5.3l3.738 17.6h.381L26.955.689h5.242l-4.973 22.693z"
+                            fill="#FFF"></path>
+                    </svg>
+
+                </a>
+            </div>
+        </h3>
+    </div>
+
+    <div class="panel-group" id="accordian">
+        <div class="panel panel-default">
+
+            <!--#4DIF webGetWebewirePayStatus="NEW"-->
+            <div class="panel panel-body">
+                
+                <input type="button" class="btn btn-primary btn-block active" id="submit-paymark" name="submit-paymark"
+                    onClick="location.href='<!--#4DSCRIPT/WAPI_formField/webewires___paymentinfo___url -->'"
+                    value='Pay Now with Online EFTPOS'>
+            </div>
+
+            <!--#4DELSEIF ((webGetWebewirePayStatus="UNKNOWN")|(webGetWebewirePayStatus="NOT FOUND"))-->
+            <div class="panel panel-body">
+                <input type="button" class="btn btn-primary btn-block active" id="submit-paymark" name="submit-paymark"
+                    onClick="location.href='<!--#4DSCRIPT/WAPI_formField/webewires___paymentinfo___url -->'"
+                    value='Pay Now with Online EFTPOS'>
+            </div>
+
+             <!--#4DELSEIF (webGetWebewirePayStatus="SUCCESSFUL")|(webGetWebewirePayStatus="completed")-->
+
+            <div class="panel panel-heading">
+                <h3>
+                    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapse">
+                        <span class="fa fa-check-circle"></span>&nbsp;PAID <small>
+                            <div class="hidden-xs">&nbsp;This transaction has been paid.</div>
+                            <div class="pull-right">
+                                <span class="fa fa-question"></span>
+                            </div>
+                        </small>
+                    </a>
+                </h3>
+            </div>
+
+            <div id="collapse" class="panel-collapse collapse">
+                <div class="panel panel-body">
+                    <div class="table-responsive">
+                        <!--#4DHTML webGetWebewirePaymentData-->
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!--#4DELSEIF webGetWebewirePayStatus="CANCELLED"-->
+
+            <div class="panel panel-heading">
+                <h3>
+                    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapse">
+                        <span class="fa fa-times-circle"></span>&nbsp;CANCELLED <small>
+                            <div class="hidden-xs">&nbsp;This transaction has been CANCELLED.</div>
+
+                            <div class="pull-right">
+                                <span class="fa fa-question"></span>
+                            </div>
+                        </small>
+                    </a>
+                </h3>
+            </div>
+
+            <div id="collapse" class="panel-collapse collapse">
+                <div class="panel panel-body">
+                    <div class="table-responsive">
+                        <!--#4DHTML webGetWebewirePaymentData-->
+                    </div>
+                </div>
+            </div>
+
+
+            <!--#4DELSEIF webGetWebewirePayStatus="FAILED"-->
+
+            <div class="panel panel-heading">
+                <h3>
+                    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapse">
+                        <span class="fa fa-times-circle"></span>&nbsp;FAILED <small>
+                            <div class="hidden-xs">&nbsp;This transaction has FAILED.</div>
+                            <div class="pull-right">
+                                <span class="fa fa-question"></span>
+                            </div>
+                        </small>
+                    </a>
+                </h3>
+            </div>
+
+            <div id="collapse" class="panel-collapse collapse">
+                <div class="panel panel-body">
+                    <div class="table-responsive">
+                        <!--#4DHTML webGetWebewirePaymentData-->
+                    </div>
+                </div>
+            </div>
+
+
+            <!--#4DELSEIF webGetWebewirePayStatus="DECLINED"-->
+
+            <div class="panel panel-heading">
+                <h3>
+                    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapse">
+                        <span class="fa fa-warning"></span>&nbsp;DECLINED <small>
+                            <div class="hidden-xs">&nbsp;This transaction is DECLINED.</div>
+                            <div class="pull-right align-bottom">
+                                <span class="fa fa-question"></span>
+                            </div>
+                        </small>
+                    </a>
+                </h3>
+            </div>
+            <div id="collapse" class="panel-collapse collapse">
+                <div class="panel panel-body">
+                    <div class="table-responsive">
+                        <!--#4DHTML webGetWebewirePaymentData-->
+                    </div>
+                </div>
+            </div>
+
+
+            <!--#4DELSEIF webGetWebewirePayStatus="BLOCKED"-->
+
+            <div class="panel panel-heading">
+                <h3>
+                    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapse">
+                        <span class="fa fa-warning"></span>&nbsp;BLOCKED <small>
+                            <div class="hidden-xs">&nbsp;This transaction has been BLOCKED.</div>
+                            <div class="pull-right">
+                                <span class="fa fa-question"></span>
+                            </div>
+                        </small>
+                    </a>
+                </h3>
+            </div>
+
+            <div id="collapse" class="panel-collapse collapse">
+                <div class="panel panel-body">
+                    <div class="table-responsive">
+                        <!--#4DHTML webGetWebewirePaymentData-->
+                    </div>
+                </div>
+            </div>
+
+
+            <!--#4DELSEIF webGetWebewirePayStatus="INPROGRESS"-->
+
+            <div class="panel panel-heading">
+                <h3>
+                    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapse">
+                        <span class="fa fa-warning"></span>&nbsp;INPROGRESS <small>
+                            <div class="hidden-xs">&nbsp;This transaction is INPROGRESS.</div>
+                            <div class="pull-right">
+                                <span class="fa fa-question"></span>
+                            </div>
+                        </small>
+                    </a>
+                </h3>
+            </div>
+
+            <div id="collapse" class="panel-collapse collapse">
+                <div class="panel panel-body">
+                    <div class="table-responsive">
+                        <!--#4DHTML webGetWebewirePaymentData-->
+                    </div>
+                </div>
+            </div>
+
+
+            <!--#4DELSE-->
+
+            <div class="panel panel-heading">
+                <h3>
+                    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapse">
+                        <span class="fa fa-warning"></span>&nbsp;ERROR <small>
+                            <div class="hidden-xs">&nbsp;This transaction has ERRORED OUT.</div>
+                            <div class="pull-right">
+                                <span class="fa fa-question"></span>
+                            </div>
+                        </small>
+                    </a>
+                </h3>
+            </div>
+
+            <div id="collapse" class="panel-collapse collapse">
+                <div class="panel panel-body">
+                    <div class="table-responsive">
+                        <!--#4DHTML webGetWebewirePayStatus-->
+                        <!--#4DHTML webGetWebewirePaymentData-->
+                    </div>
+                </div>
+            </div>
+
+            <!--#4DENDIF-->
+        </div>
+
+    </div>
+
+</div>

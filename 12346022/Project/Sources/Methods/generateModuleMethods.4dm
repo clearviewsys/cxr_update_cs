@@ -1,0 +1,4 @@
+//%attributes = {}
+// view createAllModuleMethods
+
+createAllModuleMethods

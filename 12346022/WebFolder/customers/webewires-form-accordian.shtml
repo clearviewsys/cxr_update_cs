@@ -1,0 +1,383 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable='true'>
+
+    <!-- SENDER-CUSTOMER INFORMATION -->
+    <div class="panel panel-default">
+
+        <div class="panel-heading" role="tab" id="customer-tab">
+            <h3 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#customer-data"
+                    aria-expanded="false" aria-controls="customer-data">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"> </span> Sending Party</a>
+                <div class='pull-right'>
+                    <div id='customer-tab-status'>[
+                        <!--4DTEXT [webewires]fromParty.fullName-->]</div>
+                </div>
+            </h3>
+        </div>
+
+        <div id="customer-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="customer-tab">
+
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___customerid, label:Customer-ID, readonly:true}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromparty___fullName, label:Sender, readonly:true,  onchange:wapiObjectMethod}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromparty___address, label:Sender-Address, placeholder:Address, readonly:true}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromparty___city, label:Sender-City, placeholder:City, readonly:true, width:100}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromparty___email, label:Sender-Email, placeholder:Email, readonly:true, width:100}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromparty___phone, label:Sender-Phone, placeholder:Main-Phone, readonly:true, width:100}-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- BENEFICIARY INFORMATION -->
+    <div class="panel panel-default">
+
+        <div class="panel-heading" role="tab" id="beneficiary-tab">
+            <div class='media'>
+                <div class="media-body">
+                    <h3 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                            href="#beneficiary-data" aria-expanded="false" aria-controls="beneficiary-data">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"> </span> Receiving Party
+                            (Beneficiary) </a>
+                        <div class='pull-right'>
+                            <div id='beneficiary-tab-status'>[
+                                <!--4DTEXT [webewires]toParty.fullName-->]</div>
+                        </div>
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="beneficiary-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="beneficiary-tab">
+
+            <div class="panel-body">
+
+                <div class='well' id='beneficiary-link' style="display: block">
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___linkid, label:Link-ID, readonly:true}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___fullName, label:Beneficiary, readonly:true, width:100, onchange:wapiObjectMethod}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___unicodeName, label:Unicode-Name, readonly:true, width:100, onchange:wapiObjectMethod}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___phone, label:Beneficiary-Cell-Phone, readonly:true, width:100, onchange:wapiObjectMethod, inputmask:999-999-9999}-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SEND AN EWIRE INFORMATION -->
+    <div class="panel panel-default">
+
+        <div class="panel-heading" role="tab" id="destination-tab">
+            <h3 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                    href="#destination-data" aria-expanded="true" aria-controls="destination-data">
+                    <span class="glyphicon glyphicon-send" aria-hidden="true"> </span> Transfer Amounts</a>
+                <div id='destination-tab-status' class="pull-right">[
+                    <!--4DTEXT string([webewires]toamount;"###,###,##0.00")-->]</div>
+            </h3>
+        </div>
+
+        <div id="destination-data" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="destination-tab">
+
+
+            <div class="panel-body">
+
+                <!--4DIF (true)-->
+                <table>
+                    <tr>
+                        <td width="50%">
+                            <!--#4DSCRIPT/WAPI_textGroup/{field:webewires___fromcountrycode, label:From-Country, width:100}-->
+                        </td>
+                        <td style="padding-left: 10px">
+                            <!--#4DSCRIPT/WAPI_textGroup/{field:webewires___tocountrycode, label:To-Country, width:100}-->
+                        </td>
+                    </tr>
+                </table>
+                <!--4DENDIF-->
+
+                <!-- SENDING AMOUNT -->
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toamount, step:0.01, label:To-amount, readonly:false, addonimage:<>basecurrencyflag, addon-pre-image:<>basecurrencyflag, addon-post:ALL, onchange:wapiObjectMethod, required:true, inputmask:currency, inputmask-greedy:false}-->
+                </div>
+
+
+                <!--EXCHANGE RATE AND INVERSE RATE -->
+                <div class="form-group">
+                    <div class="pull-right"><span id='rateRefresh' class="glyphicon glyphicon-refresh"
+                            onclick="wapiObjectMethod(event)"></span></div>
+
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___inverserate, step:0.00001, label:Rate, readonly:true, addon-post:ALL/ALL, required:true, align:right, onchange:wapiObjectMethod}-->
+                </div>
+
+                <!--#4DIF False-->
+                <div class='form-group'>
+
+                    <label class="form-control-label" for='webewires-sourcerate-input-inverse'
+                        id='webewires-sourcerate-input-inverse-label'>Inverse Rate</label>
+
+                    <div class="input-group">
+                        <input type='number' class="form-control" id='webewires-sourcerate-input-inverse' value=''
+                            name='webewires-sourcerate-input-inverse' onchange='wapiObjectMethod(event)' step="0.00001">
+
+                        <div id='webewires-sourcerate-addon-post-inverse' class="input-group-addon">NZD/FJD</div>
+                    </div>
+
+                    <div id='webewires-sourcerate-input-error-inverse'></div>
+
+                    <div><span class='text-muted' id='webewires-sourcerate-inverse'>
+                        </span>
+                        <span id='webewires-currency-rate-updated' class='text-muted small pull-right'
+                            style='padding-top:4px'> Updated: </span> </div>
+                </div>
+                <!--#4DENDIF-->
+
+                <!-- FEES -->
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromfee, step:0.01, label:Priority-service-fee, readonly:false, inputmask:currency, onchange:wapiObjectMethod, required:false, addon-pre:glyphicon-usd, addon-pre-image:<>basecurrencyflag, addon-post:ALL }-->
+                </div>
+
+
+                <div class="form-group">
+                    <!--#4DIF [webewires]paymentInfo.deliveryMethod="MG"-->
+                    <label class="form-control-label" for="webewires-amount-due-input">Amount Due:</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <img height="20"
+                                src="data:image/jpg;base64, <!--#4DEVAL webGetFlag_Currency([webewires]fromCCY)-->">
+                        </div>
+                        <input type="tel" class="form-control" id="webewires-amount-due-input"
+                            name="webewires-amount-due-input"
+                            value="<!--#4DTEXT string([webewires]fromAmount+[webewires]fromFee;" ###,###,##0.00")-->"
+                        readonly>
+                        <div class="input-group-addon" id="webewires-amount-due-addon-post">
+                            <!--#4DTEXT [webewires]fromCCY-->
+                        </div>
+                    </div>
+
+                    <!--#4DELSE-->
+                    <!--LOCAL AMOUNT INCLUSIVE OF FEES -->
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromamount, step:0.01, label:Total-Local-Amt-Due, readonly:false, inputmask:currency, inputmask-greedy:false, onchange:wapiObjectMethod, addon-pre:glyphicon-usd, addon-pre-image:<>basecurrencyflag, addon-post:ALL}-->
+                    <!--#4DENDIF-->
+                </div>
+
+                <!--#4DIF false-->
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___frommop, label:Method-of-payment-received, placeholder:Method-of-payment-received, readonly:false, width:100, choicelist:webGetChoiceListMOP, required:true}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tomop, label:Delivery-payment-method, placeholder:Delivery-payment-method, readonly:false, width:100, choicelist:webGetChoiceListMOP}-->
+                </div>
+                <!--#4DENDIF-->
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- DELIVERY INFORMATION -->
+    <div class="panel panel-default">
+
+        <div class="panel-heading" role="tab" id="delivery-tab">
+            <h3 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#delivery-data"
+                    aria-expanded="false" aria-controls="delivery-data">
+                    <span class="glyphicon glyphicon-plane" aria-hidden="true"> </span> Banking Information</a>
+                <div id='delivery-tab-status' class="pull-right"></div>
+            </h3>
+        </div>
+
+        <div id="delivery-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="delivery-tab">
+
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___dotransfertobank, label:Direct-deposit-to-bank, type:checkbox, readonly:false, onchange:wapiObjectMethod}-->
+                </div>
+
+
+                <div id='delivery-hidden'
+                    style='display: <!--#4DEVAL webIsDisplay("webewires___tobankinginfo___dotransfertobank")-->'>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___bankname, label:Bank-name, readonly:false, placeholder:Bank-name, width:100, onchange:wapiObjectMethod}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___accountno, label:Account-No/IBAN, placeholder:Bank-account-or-IBAN, readonly:false, width:100}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___transitcode, label:Transit-No, placeholder:Transit-number, readonly:false, width:100}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___routingcode, label:Routing-Code, placeholder:Routing-code, readonly:false}-->
+                    </div>
+  
+                </div>
+   
+
+            </div>
+        </div>
+    </div>
+
+    <!-- THIRD PARTY INFORMATION -->
+    <!--#4DIF false-->
+    <div class="panel panel-default">
+
+        <div class="panel-heading" role="tab" id="thirdparty-tab">
+            <h3 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                    href="#thirdparty-data" aria-expanded="false" aria-controls="thirdparty-data">
+                    <span class="glyphicon glyphicon-paperclip" aria-hidden="true"> </span> Third Party Information</a>
+                <div id='thirdparty-tab-status' class="pull-right"></div>
+            </h3>
+        </div>
+
+        <div id="thirdparty-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="thirdparty-tab">
+
+            <div class="panel-body">
+
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tothirdparty___dosendthirdparty, label:Is-payment-for-a-third-party?, type:checkbox, readonly:false, onchange:wapiObjectMethod}-->
+                </div>
+
+                <div id='thirdparty-hidden' style='display: none'>
+
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tothirdparty___firstname, label:First-Name, placeholder:Third-party-recipient, readonly:false}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tothirdparty___lastname, label:Last-Name, placeholder:Third-party-recipient, readonly:false, onchange:wapiObjectMethod}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tothirdparty___address, label:Address, placeholder:Third-party-recipient, readonly:false}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tothirdparty___city, label:City, placeholder:Third-party-recipient, readonly:false}-->
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <!--#4DENDIF-->
+
+    <!-- AML INFORMATION -->
+    <div class="panel panel-default">
+
+        <div class="panel-heading" role="tab" id="aml-tab">
+            <h3 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#aml-data"
+                    aria-expanded="false" aria-controls="aml-data">
+                    <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"> </span> Purpose</a>
+                <div id='aml-tab-status' class="pull-right"></div>
+            </h3>
+        </div>
+
+        <div id="aml-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="aml-tab">
+
+            <div class="panel-body">
+
+                <!--#4DIF [webewires]paymentInfo.deliveryMethod="MG"-->
+
+                <!--#4DSCRIPT/WAPI_formGroup/{function:webGetMgSenderOccupation, label:Occupation, readonly:false, placeholder:Sender-occupation, onchange:wapiObjectMethod, required:true}-->
+
+                <!--#4DSCRIPT/WAPI_formGroup/{function:webGetMgPurposeOfTrans, label:Purpose, readonly:false, placeholder:Purpose-of-transaction, onchange:wapiObjectMethod, required:true}-->
+
+
+                <!--#4DELSE-->
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___aml_info___purposeoftransaction, label:Purpose, readonly:false, placeholder:Purpose-of-transaction, onchange:wapiObjectMethod, required:true, choicelist:webgetchoicelistpurposetrans}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___aml_info___sourceoffunds, label:Source-of-funds, placeholder:Source-of-funds, readonly:false, required:true, choicelist:webgetchoicelistsourcefunds}-->
+                </div>
+                <!--#4DENDIF-->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ATTACHMENTS INFORMATION -->
+    <!--#4DIF false-->
+    <div class="panel panel-default">
+
+        <div class="panel-heading" role="tab" id="attachments-tab">
+            <h3 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                    href="#attachments-data" aria-expanded="false" aria-controls="attachments-data">
+                    <span class="glyphicon glyphicon-paperclip" aria-hidden="true"> </span> Attachments</a>
+                <div id='attachments-tab-status' class="pull-right"></div>
+            </h3>
+        </div>
+
+        <div id="attachments-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="attachments-tab">
+
+            <div class="panel-body">
+
+                <!-- DROPZONE AREA FOR ADDITIONAL ATTACHMENTS -->
+                <div class="row" id="wapi-dropzone-group">
+                    <div class="dz-clickable dropzone-previews" id="wapi-dropzone">
+                        <div class="dz-message text-center" style="padding-bottom: 12px">
+                            <h3><span class="label label-default">Click or Drop Files Here to Attach</span></h3>
+                        </div>
+                    </div>
+
+                    <div class="form-group fallback">
+                        <input id='dropzone-upload-file' type="file" multiple />
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <!--#4DENDIF-->
+
+
+
+</div>

@@ -1,0 +1,386 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Entry",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"cbCurrencies": {
+					"type": "combo",
+					"top": 58,
+					"left": 108,
+					"width": 96,
+					"height": 28,
+					"dataSource": "cbCurrencies",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"method": "ObjectMethods/cbCurrencies.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 64,
+					"left": 428,
+					"width": 79,
+					"height": 25,
+					"dataSource": "Button1",
+					"shortcutKey": "e",
+					"shortcutAccel": true,
+					"text": "Edit Row",
+					"focusable": false,
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"OrderLines": {
+					"type": "listbox",
+					"top": 94,
+					"left": 10,
+					"width": 502,
+					"height": 473,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "lbaOrderLines",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "22px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "2em",
+					"staticColumnCount": 1,
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "#AAAAAA",
+					"verticalLineStroke": "#AAAAAA",
+					"stroke": "#2A2A31",
+					"fill": "#FFFEFD",
+					"alternateFill": "#F5FAFB",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"method": "ObjectMethods/OrderLines.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "Column2",
+							"dataSource": [
+								"arrCurr"
+							],
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#2A2A31",
+							"fill": "#FFFEFD",
+							"alternateFill": "#F5FAFB",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "arrCURR",
+								"text": "CCY",
+								"stroke": "#2A2A31",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#2A2A31",
+								"fill": "#FFFEFD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "arrDenoms",
+							"dataSourceTypeHint": "number",
+							"width": 153,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#2A2A31",
+							"fill": "#FFFEFD",
+							"alternateFill": "#F5FAFB",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Denominations",
+								"text": "Denomination",
+								"dataSource": "Denominations",
+								"stroke": "#2A2A31",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#FFFFFF",
+								"fill": "#D4D3D0",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "arrQty",
+							"dataSource": "arrQty",
+							"dataSourceTypeHint": "number",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"entryFilter": "&9",
+							"numberFormat": "|Currency_NoDec",
+							"stroke": "#2A2A31",
+							"fill": "#F4F0ED",
+							"alternateFill": "#E9ECEB",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Qty1",
+								"text": "Order Qty",
+								"stroke": "#2A2A31",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#FFFFFF",
+								"fill": "#D4D3D0",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "arrTotals",
+							"dataSourceTypeHint": "number",
+							"width": 164,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#2A2A31",
+							"fill": "#F9FBFC",
+							"alternateFill": "#EEF7F9",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Total Amount",
+								"text": "Total Amount",
+								"dataSource": "totalAmount",
+								"stroke": "#2A2A31",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer5",
+								"dataSource": "vSumTotals",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#444444",
+								"fill": "#D4D3D0",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"SaveAsDraft": {
+					"type": "button",
+					"top": 577,
+					"left": 204,
+					"width": 152,
+					"height": 30,
+					"visibility": "hidden",
+					"sizingY": "move",
+					"action": "accept",
+					"text": "Save as Draft",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/SaveAsDraft.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 62,
+					"left": 25,
+					"width": 103,
+					"height": 20,
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"text": "Currency"
+				},
+				"SaveContinueButton": {
+					"type": "button",
+					"top": 577,
+					"left": 359,
+					"width": 147,
+					"height": 30,
+					"sizingY": "move",
+					"action": "accept",
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"text": "Submit Order",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/SaveContinueButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"SaveButton": {
+					"type": "button",
+					"top": 577,
+					"left": 15,
+					"width": 186,
+					"height": 30,
+					"sizingY": "move",
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/SaveButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"vCashAccount1": {
+					"type": "input",
+					"top": 63,
+					"left": 277,
+					"width": 82,
+					"height": 21,
+					"visibility": "hidden",
+					"dataSource": "vCurrency",
+					"stroke": "#777777",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onGettingFocus"
+					]
+				},
+				"ReturnButton": {
+					"type": "button",
+					"top": 79,
+					"left": 372,
+					"width": 36,
+					"height": 10,
+					"shortcutKey": "[Return]",
+					"display": false,
+					"method": "ObjectMethods/ReturnButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"FindButton": {
+					"type": "button",
+					"top": 64,
+					"left": 372,
+					"width": 36,
+					"height": 10,
+					"shortcutKey": "f",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/FindButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"status": {
+					"type": "text",
+					"top": 15,
+					"left": 135,
+					"width": 377,
+					"height": 30,
+					"class": "Fields_XtraLarge",
+					"textAlign": "center",
+					"text": "Order Status"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

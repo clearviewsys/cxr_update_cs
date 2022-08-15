@@ -1,0 +1,134 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_View",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"l_code": {
+					"type": "text",
+					"top": 73,
+					"left": 7,
+					"width": 180,
+					"height": 19,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Code"
+				},
+				"l_Purpose": {
+					"type": "text",
+					"top": 99,
+					"left": 7,
+					"width": 180,
+					"height": 20,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Purpose of Transaction"
+				},
+				"code": {
+					"type": "input",
+					"top": 73,
+					"left": 200,
+					"width": 72,
+					"height": 20,
+					"dataSource": "[List_POT:128]Code:2",
+					"class": "Fields_Large",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"occupation": {
+					"type": "input",
+					"top": 101,
+					"left": 200,
+					"width": 395,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "[List_POT:128]Purpose:3",
+					"class": "Fields_Large",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"risk": {
+					"type": "checkbox",
+					"top": 129,
+					"left": 200,
+					"width": 197,
+					"height": 20,
+					"dataSource": "[List_POT:128]isHighRisk:4",
+					"text": "isHighRisk",
+					"class": "Fields_Large",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

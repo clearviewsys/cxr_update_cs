@@ -1,0 +1,207 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Min",
+	"windowSizingX": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 89,
+	"markerBody": 115,
+	"markerBreak": 115,
+	"markerFooter": 146,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDisplayDetail",
+		"onDragOver",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"b_backup": {
+					"type": "button",
+					"top": 361,
+					"left": 10,
+					"width": 103,
+					"height": 22,
+					"sizingY": "move",
+					"text": "Backup",
+					"focusable": false,
+					"method": "ObjectMethods/b_backup.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"List Box": {
+					"type": "listbox",
+					"top": 65,
+					"left": 0,
+					"width": 315,
+					"height": 289,
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "mainListBox",
+					"focusable": false,
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "24px",
+					"showFooters": true,
+					"table": 47,
+					"highlightSet": "$BackupLogs_LBSet",
+					"horizontalLineStroke": "#AAAAAA",
+					"verticalLineStroke": "#AAAAAA",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"alternateFill": "#EEEEEE",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"columns": [
+						{
+							"name": "Column2",
+							"dataSource": "[BackupLogs:47]BackupDate:2",
+							"dataSourceTypeHint": "date",
+							"width": 88,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Date",
+								"dataSource": "Header2",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "[BackupLogs:47]BackupTime:3",
+							"dataSourceTypeHint": "time",
+							"width": 39,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Time",
+								"dataSource": "Header3",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "[BackupLogs:47]Status:4",
+							"width": 171,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|NumberNoZero",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "Status",
+								"dataSource": "Header4",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 361,
+					"left": 118,
+					"width": 187,
+					"height": 22,
+					"sizingY": "move",
+					"dataSource": "Button1",
+					"text": "Delete all backup logs",
+					"focusable": false,
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

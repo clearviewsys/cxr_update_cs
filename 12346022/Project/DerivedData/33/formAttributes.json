@@ -1,0 +1,36 @@
+{
+	"forms": {
+		"TransferToSafe": {
+			"timeStamp": "2022-08-15T20:45:59.180Z",
+			"destination": "detailScreen"
+		},
+		"Entry": {
+			"timeStamp": "2022-08-15T20:45:59.173Z",
+			"destination": "detailScreen"
+		},
+		"pickTill": {
+			"timeStamp": "2022-08-15T20:45:59.189Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-15T20:45:59.177Z",
+			"destination": "detailScreen"
+		},
+		"List": {
+			"timeStamp": "2022-08-15T20:45:59.175Z",
+			"destination": "listScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T20:45:59.181Z",
+			"destination": "detailScreen"
+		},
+		"View1": {
+			"timeStamp": "2022-08-15T20:45:59.187Z",
+			"destination": "detailScreen"
+		},
+		"Pick": {
+			"timeStamp": "2022-08-15T20:45:59.179Z",
+			"destination": "detailScreen"
+		}
+	}
+}

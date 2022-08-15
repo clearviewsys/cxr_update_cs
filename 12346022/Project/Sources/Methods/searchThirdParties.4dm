@@ -1,0 +1,2 @@
+//%attributes = {}
+searchTable(->[ThirdParties:101]; ->[ThirdParties:101]City:7; ->[ThirdParties:101]CompanyName:23; ->[ThirdParties:101]FirstName:4; ->[ThirdParties:101]LastName:3; ->[ThirdParties:101]IdType:14; ->[ThirdParties:101]IncorporationNumber:25; ->[ThirdParties:101]Occupation:20; ->[ThirdParties:101]ZipCode:9; ->[ThirdParties:101]CountryCode:8; ->[ThirdParties:101]DOB:13; ->[ThirdParties:101]WorkPhone:11)

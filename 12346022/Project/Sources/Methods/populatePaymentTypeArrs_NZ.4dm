@@ -1,0 +1,25 @@
+//%attributes = {}
+C_POINTER:C301($arrKeysPtr; $arrValuesPtr; $1; $2; True:C214)
+$arrKeysPtr:=$1
+$arrValuesPtr:=$2
+
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "A"; "Bank draft"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "B"; "Bearer bond"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "C"; "Bill of exchange"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "D"; "Cash"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "E"; "Cash (curr. other than the from/to side)"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "F"; "Cash (denom. other than the from/to side)"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "G"; "Casino chips"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "H"; "Certificate of deposit"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "I"; "Cheque"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "J"; "Counterfeit"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "K"; "Credit"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "L"; "Credit Card"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "M"; "E-currency (Crypto)"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "N"; "Electronically held funds"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "O"; "Money order"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "P"; "Other"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "Q"; "Other negotiable instrument"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "R"; "Promissory note"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "S"; "Traveller's cheques"; True:C214)
+appendKeyValueToArrays($arrKeysPtr; $arrValuesPtr; "-"; "Unknown"; True:C214)

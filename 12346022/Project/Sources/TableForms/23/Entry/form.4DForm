@@ -1,0 +1,400 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerBody": 241,
+	"markerBreak": 241,
+	"markerFooter": 251,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onSelectionChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"bCancel": {
+					"type": "button",
+					"top": 531,
+					"left": 314,
+					"width": 77,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 531,
+					"left": 392,
+					"width": 76,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"text": "Save",
+					"class": "Control_Large_",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text11": {
+					"type": "text",
+					"top": 25,
+					"left": 15,
+					"width": 79,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "BankNotesID"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 55,
+					"left": 15,
+					"width": 79,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "CatNo"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 85,
+					"left": 15,
+					"width": 79,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "CountryCode"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 115,
+					"left": 15,
+					"width": 79,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Description"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 149,
+					"left": 15,
+					"width": 79,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Denomination"
+				},
+				"BankNotesID": {
+					"type": "input",
+					"top": 25,
+					"left": 120,
+					"width": 54,
+					"height": 19,
+					"dataSource": "[BankNotes:23]BankNotesID:1",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CatNo": {
+					"type": "input",
+					"top": 55,
+					"left": 120,
+					"width": 56,
+					"height": 19,
+					"dataSource": "[BankNotes:23]CatNo:3",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CountryCode": {
+					"type": "input",
+					"top": 85,
+					"left": 120,
+					"width": 27,
+					"height": 19,
+					"dataSource": "[BankNotes:23]CountryCode:2",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Description": {
+					"type": "input",
+					"top": 115,
+					"left": 120,
+					"width": 340,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[BankNotes:23]Description:4",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Denomination": {
+					"type": "input",
+					"top": 149,
+					"left": 120,
+					"width": 72,
+					"height": 19,
+					"dataSource": "[BankNotes:23]Denomination:5",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bView": {
+					"type": "button",
+					"top": 530,
+					"left": 140,
+					"width": 120,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "vView",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"text": "View Obverse",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bView.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bView1": {
+					"type": "button",
+					"top": 530,
+					"left": 10,
+					"width": 120,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "vView",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"text": "View Reverse",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bView1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel1": {
+					"type": "button",
+					"top": 20,
+					"left": 230,
+					"width": 110,
+					"height": 20,
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"text": "Release Lock",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bCancel1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel2": {
+					"type": "button",
+					"top": 20,
+					"left": 350,
+					"width": 110,
+					"height": 20,
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"text": "Lock",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bCancel2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 180,
+					"left": 20,
+					"width": 440,
+					"height": 336,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "vGraph",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"pictureFormat": "truncatedCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 150,
+					"left": 290,
+					"width": 170,
+					"height": 20,
+					"sizingX": "move",
+					"dataSource": "Button1",
+					"text": "Fetch Speciment",
+					"class": "Control",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

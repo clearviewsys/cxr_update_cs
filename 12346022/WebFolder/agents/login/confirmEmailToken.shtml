@@ -1,0 +1,118 @@
+<!--#4DINCLUDE ../include/head_lite.shtml -->
+
+
+<title>Email confirmation</title>
+</head>
+<body>
+<!--#4DIF (UNDEFINED(webConfirmationToken))-->
+<!--#4DMETHOD webInitVars -->
+<!--#4DENDIF-->
+
+<form method="post" action="/4DACTION/webConfirmToken" class="form-signin">
+
+
+	
+    <div class="container">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">Email Confirmation</div>
+            <div class="panel-body">
+
+				<!--#4DHTML WAPI_includeAlertMessage-->
+				
+		
+		
+                <!--#4DIF (webEmail#"")-->
+               
+                <p style="font-size:20px;color:#5C5C5C;">We have sent an email to:<strong>
+                    <!--#4DVAR webEmail--></strong>, please read it and enter the registration code
+                    below.</p>
+                <!--#4DELSE-->
+               
+                <p style="font-size:20px;color:#5C5C5C;">In order to confirm your email address, please enter your email
+                    and registration code below.</p>
+                <!--#4DENDIF-->
+
+                <div class="col-lg-12 well">
+                    <div class="row">
+
+                        <div class="col-sm-12">
+
+                            <div class="row">
+
+
+                                <div class="col-sm-6 form-group">
+                                    <label>Email</label>
+
+                                    <div class="input-group" data-validate="webEmail">
+                                        <input type="text" name="webEmail" id="webEmail"
+                                               placeholder="Enter Email Address Here .."
+                                               value="<!--#4DVAR webEmail-->" required class="form-control">
+                                            <span class="input-group-addon danger">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-sm-6 form-group">
+                                    <label>Registration code</label>
+                                    <input type="text" name="webConfirmationToken" id="webConfirmationToken"
+                                           placeholder="Enter your registration code here"
+                                           value="" required class="form-control">
+                                </div>
+
+
+                            </div>
+                            <button type="Submit" id="submit-button" class="btn btn-success btn-md">Submit
+                                Confirmation
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+		
+    <!--#4DSCRIPT /webCaptchaValidation/submit-button-->
+    <!--#4DHTMLVAR captchaHtmlCode -->
+
+        <!--#4DINCLUDE include/footer.shtml-->
+
+    </div>
+
+
+</form>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#submit-button").prop('disabled', true);
+
+        $('#webEmail').on('keyup change',
+                function () {
+                    var ok = validateEmails("#webEmail");
+                    $("#submit-button").prop('disabled', !ok);
+                });
+
+        $('#webConfirmationToken').on('keyup change',
+                function () {
+                    var len = $('#webConfirmationToken').val().length,
+                            maxLen=8;
+                    console.log("length: ", len);
+                    $("#submit-button").prop('disabled', len!=maxLen);
+                });
+
+    });
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

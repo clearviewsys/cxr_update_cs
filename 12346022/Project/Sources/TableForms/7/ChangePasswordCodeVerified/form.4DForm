@@ -1,0 +1,204 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onBeforeKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Field2": {
+					"type": "input",
+					"top": 26,
+					"left": 251,
+					"width": 251,
+					"height": 19,
+					"dataSource": "vNewPassword1",
+					"class": "Label_Large",
+					"fill": "#FFFFC0",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field2.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onAfterKeystroke"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 54,
+					"left": 251,
+					"width": 251,
+					"height": 19,
+					"dataSource": "vNewPassword2",
+					"class": "Label_Large",
+					"fill": "#FFFFC0",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field3.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onAfterKeystroke"
+					]
+				},
+				"bchangePassword": {
+					"type": "button",
+					"top": 111,
+					"left": 322,
+					"width": 180,
+					"height": 24,
+					"dataSource": "Button1",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Change Password",
+					"class": "Control",
+					"focusable": false,
+					"defaultButton": true,
+					"method": "ObjectMethods/bchangePassword.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 111,
+					"left": 216,
+					"width": 100,
+					"height": 24,
+					"dataSource": "Button1",
+					"action": "cancel",
+					"shortcutKey": ".",
+					"shortcutAccel": true,
+					"text": "Cancel",
+					"class": "Control",
+					"focusable": false,
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 25,
+					"left": 6,
+					"width": 239,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "New password: "
+				},
+				"Text3": {
+					"type": "text",
+					"top": 53,
+					"left": 6,
+					"width": 239,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Confirm new password: "
+				},
+				"checkmark": {
+					"type": "picture",
+					"top": 43,
+					"left": 513,
+					"width": 30,
+					"height": 29,
+					"pictureFormat": "scaled"
+				},
+				"Field4": {
+					"type": "input",
+					"top": 83,
+					"left": 251,
+					"width": 251,
+					"height": 20,
+					"dataSource": "vNewHint",
+					"class": "Label_Large",
+					"fill": "transparent",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onAfterKeystroke"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 82,
+					"left": 6,
+					"width": 239,
+					"height": 20,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "New password hint"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

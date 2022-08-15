@@ -1,0 +1,266 @@
+﻿{
+	"destination": "listPrinter",
+	"inheritedForm": "printHeader",
+	"inheritedFormTable": 7,
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 77,
+	"markerBody": 146,
+	"markerBreak": 149,
+	"markerFooter": 181,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onSelectionChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Line1": {
+					"type": "line",
+					"top": 144,
+					"left": 17,
+					"width": 540,
+					"stroke": "#AAAAAA"
+				},
+				"vPageNum": {
+					"type": "input",
+					"top": 163,
+					"left": 257,
+					"width": 120,
+					"height": 16,
+					"sizingX": "move",
+					"dataSource": "vPageNum",
+					"stroke": "#000000",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/vPageNum.4dm",
+					"events": [
+						"onPrintingFooter"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 881,
+					"left": 0,
+					"width": 130,
+					"height": 23,
+					"dataSource": "Button2",
+					"text": "New Invoice",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 92,
+					"left": 225,
+					"width": 42,
+					"height": 10,
+					"stroke": "#000000",
+					"class": "Label_print",
+					"textAlign": "right",
+					"text": "Created at:"
+				},
+				"nameFirstName1": {
+					"type": "input",
+					"top": 92,
+					"left": 272,
+					"width": 64,
+					"height": 10,
+					"dataSource": "[WebEWireLogs:151]creationDate:2",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"FirstName1": {
+					"type": "input",
+					"top": 89,
+					"left": 32,
+					"width": 190,
+					"height": 13,
+					"dataSource": "[WebEWireLogs:151]WebEwireID:7",
+					"stroke": "#000000",
+					"class": "Fields_Small",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 111,
+					"left": 265,
+					"width": 82,
+					"height": 11,
+					"stroke": "#000000",
+					"class": "Label_print",
+					"textAlign": "right",
+					"text": "Old Status:"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 111,
+					"left": 32,
+					"width": 80,
+					"height": 11,
+					"stroke": "#000000",
+					"class": "Label_print",
+					"textAlign": "right",
+					"text": "New Status:"
+				},
+				"nameFirstName2": {
+					"type": "input",
+					"top": 112,
+					"left": 117,
+					"width": 150,
+					"height": 11,
+					"dataSource": "getWebEWireStatusText()",
+					"stroke": "#000000",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"nameFirstName3": {
+					"type": "input",
+					"top": 92,
+					"left": 338,
+					"width": 64,
+					"height": 10,
+					"dataSource": "[WebEWireLogs:151]creationTime:3",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_ss",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 128,
+					"left": 32,
+					"width": 80,
+					"height": 11,
+					"stroke": "#000000",
+					"class": "Label_print",
+					"textAlign": "right",
+					"text": "Notes:"
+				},
+				"nameFirstName4": {
+					"type": "input",
+					"top": 128,
+					"left": 117,
+					"width": 400,
+					"height": 11,
+					"dataSource": "[WebEWireLogs:151]Notes:6",
+					"stroke": "#000000",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"nameFirstName5": {
+					"type": "input",
+					"top": 112,
+					"left": 353,
+					"width": 150,
+					"height": 11,
+					"dataSource": "getWebEWireStatusText()",
+					"stroke": "#000000",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 8,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

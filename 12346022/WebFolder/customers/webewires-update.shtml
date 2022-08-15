@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/head.shtml-->
+
+    <!--#4DSCRIPT/WAPI_pageStart/{onload:true, sessiontimer:true, dropzone-div:webewires-form-update, dropzone-post:true}-->
+
+</head>
+
+<body>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/menubar.shtml-->
+    <main>
+        <div class="page-header">
+
+            <div class='container'>
+
+                <!--#4DSCRIPT/webSelectCustomerRecord-->
+
+                <!--#4DHTML WAPI_includeAlertMessage-->
+                <script src="/app/js/bootstrap-auto-dismiss-alert.js"></script>
+                <!--MUST COME AFTER THE ALERT YOU WANT TO CLOSE -->
+
+                <h1>Update an eWire Request</h1>
+
+            </div>
+        </div>
+
+        <!--#4DSCRIPT/WAPI_4DInclude/customers/webewires-update-content.shtml-->
+
+
+    </main>
+
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/footer.shtml-->
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/dz_preview.shtml-->
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,1619 @@
+﻿{
+	"destination": "listScreen",
+	"inheritedForm": "ViewToolbar2",
+	"inheritedFormTable": 7,
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 52,
+	"markerBody": 528,
+	"markerBreak": 546,
+	"markerFooter": 566,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onUnload",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"customerID": {
+					"type": "input",
+					"top": 145,
+					"left": 155,
+					"width": 150,
+					"height": 15,
+					"dataSource": "[Wires:8]CustomerID:2",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#C0FFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID": {
+					"type": "input",
+					"top": 60,
+					"left": 155,
+					"width": 150,
+					"height": 15,
+					"dataSource": "[Wires:8]CXR_WireID:1",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFC0FF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID10": {
+					"type": "input",
+					"top": 80,
+					"left": 155,
+					"width": 150,
+					"height": 15,
+					"dataSource": "[Wires:8]CXR_InvoiceID:12",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#C5FFC0",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID11": {
+					"type": "input",
+					"top": 101,
+					"left": 155,
+					"width": 150,
+					"height": 15,
+					"dataSource": "[Wires:8]CXR_RegisterID:13",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#CCCCCC",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID15": {
+					"type": "input",
+					"top": 186,
+					"left": 155,
+					"width": 150,
+					"height": 15,
+					"dataSource": "[Wires:8]WireTransferDate:17",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"events": [
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"BankID16": {
+					"type": "input",
+					"top": 206,
+					"left": 155,
+					"width": 150,
+					"height": 15,
+					"dataSource": "[Wires:8]EstimatedValueDate:18",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"events": [
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"BankID12": {
+					"type": "input",
+					"top": 226,
+					"left": 155,
+					"width": 224,
+					"height": 20,
+					"dataSource": "[Wires:8]Amount:14",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#DDDDDD",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"entryFilter": "&\"0-9;.;-\"",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID13": {
+					"type": "input",
+					"top": 226,
+					"left": 384,
+					"width": 50,
+					"height": 20,
+					"dataSource": "[Wires:8]Currency:15",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"top": 226,
+					"left": 5,
+					"width": 140,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Amount "
+				},
+				"Text10": {
+					"type": "text",
+					"top": 101,
+					"left": 5,
+					"width": 140,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Register ID "
+				},
+				"Text13": {
+					"type": "text",
+					"top": 163,
+					"left": 5,
+					"width": 140,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Customer Name "
+				},
+				"Text15": {
+					"type": "text",
+					"top": 184,
+					"left": 5,
+					"width": 140,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Wire Date "
+				},
+				"Text16": {
+					"type": "text",
+					"top": 205,
+					"left": 5,
+					"width": 140,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Value Date"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 60,
+					"left": 5,
+					"width": 140,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Wire ID "
+				},
+				"BankID14": {
+					"type": "checkbox",
+					"top": 260,
+					"left": 155,
+					"width": 160,
+					"height": 23,
+					"dataSource": "[Wires:8]isOutgoingWire:16",
+					"text": "is Outgoing Wire",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"focusable": false,
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 80,
+					"left": 5,
+					"width": 140,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Invoice ID "
+				},
+				"ColorItem1": {
+					"type": "input",
+					"top": 168,
+					"left": 155,
+					"width": 284,
+					"height": 15,
+					"dataSource": "[Customers:3]FullName:40",
+					"stroke": "#444444",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#DFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_InvoiceID": {
+					"type": "button",
+					"top": 80,
+					"left": 152,
+					"width": 160,
+					"height": 20,
+					"class": "Fields",
+					"focusable": false,
+					"style": "custom",
+					"borderStyle": "raised",
+					"method": "ObjectMethods/b_InvoiceID.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_RegisterID": {
+					"type": "button",
+					"top": 101,
+					"left": 152,
+					"width": 160,
+					"height": 20,
+					"class": "Fields",
+					"focusable": false,
+					"style": "custom",
+					"borderStyle": "raised",
+					"method": "ObjectMethods/b_RegisterID.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_CustomerID": {
+					"type": "button",
+					"top": 145,
+					"left": 152,
+					"width": 160,
+					"height": 20,
+					"class": "Fields",
+					"focusable": false,
+					"style": "custom",
+					"borderStyle": "raised",
+					"method": "ObjectMethods/b_CustomerID.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 57,
+					"left": 325,
+					"width": 109,
+					"height": 20,
+					"dataSource": "Button1",
+					"text": "Print Wire",
+					"class": "Control",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_CustomerID": {
+					"type": "text",
+					"top": 142,
+					"left": 5,
+					"width": 140,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Customer ID"
+				},
+				"BankID2": {
+					"type": "input",
+					"top": 122,
+					"left": 155,
+					"width": 150,
+					"height": 15,
+					"dataSource": "[Wires:8]WireTemplateID:83",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFDF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 122,
+					"left": 5,
+					"width": 140,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Wire Template ID"
+				},
+				"b_WireTemplateID": {
+					"type": "button",
+					"top": 122,
+					"left": 152,
+					"width": 160,
+					"height": 20,
+					"class": "Fields",
+					"focusable": false,
+					"style": "custom",
+					"borderStyle": "raised",
+					"method": "ObjectMethods/b_WireTemplateID.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text8": {
+					"type": "text",
+					"top": 386,
+					"left": 17,
+					"width": 55,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": " Memo "
+				},
+				"BankID7": {
+					"type": "input",
+					"top": 411,
+					"left": 17,
+					"width": 388,
+					"height": 195,
+					"sizingY": "grow",
+					"dataSource": "[Wires:8]Memo:19",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"Line2": {
+					"type": "line",
+					"top": 20,
+					"left": 437,
+					"height": 599,
+					"sizingY": "grow",
+					"stroke": "#AAAAAA"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 412,
+					"left": 441,
+					"width": 361,
+					"height": 205,
+					"sizingY": "move",
+					"fill": "#C2E1DC",
+					"stroke": "#AAAAAA",
+					"borderRadius": 5
+				},
+				"Rectangle4": {
+					"type": "rectangle",
+					"top": 332,
+					"left": 441,
+					"width": 361,
+					"height": 78,
+					"sizingY": "move",
+					"fill": "#E1DCD8",
+					"stroke": "#AAAAAA",
+					"borderRadius": 5
+				},
+				"Rectangle6": {
+					"type": "rectangle",
+					"top": 192,
+					"left": 441,
+					"width": 361,
+					"height": 138,
+					"sizingY": "move",
+					"fill": "#E1DCD8",
+					"stroke": "#AAAAAA",
+					"borderRadius": 5
+				},
+				"Line": {
+					"type": "line",
+					"top": 439,
+					"left": 442,
+					"width": 358,
+					"stroke": "#666666"
+				},
+				"Line4": {
+					"type": "line",
+					"top": 217,
+					"left": 442,
+					"width": 359,
+					"stroke": "#666666"
+				},
+				"Line3": {
+					"type": "line",
+					"top": 357,
+					"left": 442,
+					"width": 359,
+					"stroke": "#666666"
+				},
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 6,
+					"left": 440,
+					"width": 361,
+					"height": 183,
+					"sizingY": "move",
+					"fill": "#E7F6F4",
+					"stroke": "#AAAAAA",
+					"borderRadius": 5
+				},
+				"Text31": {
+					"type": "text",
+					"top": 13,
+					"left": 468,
+					"width": 189,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Originator (Ordering Party)"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 31,
+					"left": 441,
+					"width": 359,
+					"stroke": "#666666"
+				},
+				"BankID18": {
+					"type": "input",
+					"top": 38,
+					"left": 568,
+					"width": 226,
+					"height": 15,
+					"dataSource": "[Wires:8]OriginatorFullName:34",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID19": {
+					"type": "input",
+					"top": 61,
+					"left": 568,
+					"width": 226,
+					"height": 15,
+					"dataSource": "[Wires:8]OriginatorIdentifier:35",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID28": {
+					"type": "input",
+					"top": 84,
+					"left": 568,
+					"width": 226,
+					"height": 30,
+					"dataSource": "[Wires:8]OriginatorAddress:36",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID32": {
+					"type": "input",
+					"top": 122,
+					"left": 568,
+					"width": 226,
+					"height": 15,
+					"dataSource": "[Wires:8]OriginatorCity:37",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID33": {
+					"type": "input",
+					"top": 144,
+					"left": 568,
+					"width": 80,
+					"height": 15,
+					"dataSource": "[Wires:8]OriginatorState:38",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID35": {
+					"type": "input",
+					"top": 144,
+					"left": 682,
+					"width": 112,
+					"height": 15,
+					"dataSource": "[Wires:8]OriginatorZIP:40",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID36": {
+					"type": "input",
+					"top": 166,
+					"left": 568,
+					"width": 40,
+					"height": 15,
+					"dataSource": "[Wires:8]OriginatorCountry:39",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID29": {
+					"type": "input",
+					"top": 224,
+					"left": 569,
+					"width": 226,
+					"height": 15,
+					"dataSource": "[Wires:8]OriginatingBankName:43",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID30": {
+					"type": "input",
+					"top": 247,
+					"left": 569,
+					"width": 226,
+					"height": 15,
+					"dataSource": "[Wires:8]OriginatingBankID:44",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID31": {
+					"type": "input",
+					"top": 270,
+					"left": 569,
+					"width": 226,
+					"height": 28,
+					"dataSource": "[Wires:8]OriginatingBankAddress:45",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID34": {
+					"type": "input",
+					"top": 306,
+					"left": 569,
+					"width": 40,
+					"height": 15,
+					"dataSource": "[Wires:8]OriginatingBankCountry:46",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID20": {
+					"type": "input",
+					"top": 364,
+					"left": 569,
+					"width": 226,
+					"height": 15,
+					"dataSource": "[Wires:8]CorrespondentBankName:41",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID24": {
+					"type": "input",
+					"top": 387,
+					"left": 569,
+					"width": 226,
+					"height": 15,
+					"dataSource": "[Wires:8]CorrespondentBankIdentifier:42",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID37": {
+					"type": "input",
+					"top": 447,
+					"left": 568,
+					"width": 227,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryBankName:3",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID21": {
+					"type": "input",
+					"top": 469,
+					"left": 568,
+					"width": 75,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryInstitutionNo:7",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID22": {
+					"type": "input",
+					"top": 491,
+					"left": 568,
+					"width": 227,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryBranchTransitNo:8",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID23": {
+					"type": "input",
+					"top": 513,
+					"left": 568,
+					"width": 227,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryAccountNo:9",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID25": {
+					"type": "input",
+					"top": 535,
+					"left": 568,
+					"width": 227,
+					"height": 30,
+					"dataSource": "[Wires:8]BeneficiaryBankAddress:4",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID26": {
+					"type": "input",
+					"top": 573,
+					"left": 568,
+					"width": 227,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryBankCityState:5",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID27": {
+					"type": "input",
+					"top": 595,
+					"left": 568,
+					"width": 59,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryBankCountryCode:77",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"Text19": {
+					"type": "text",
+					"top": 39,
+					"left": 466,
+					"width": 92,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Full Name"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 62,
+					"left": 466,
+					"width": 92,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Identifier"
+				},
+				"Text35": {
+					"type": "text",
+					"top": 84,
+					"left": 466,
+					"width": 92,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Address"
+				},
+				"Text36": {
+					"type": "text",
+					"top": 122,
+					"left": 466,
+					"width": 92,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "City"
+				},
+				"Text37": {
+					"type": "text",
+					"top": 143,
+					"left": 469,
+					"width": 89,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "State/Prov."
+				},
+				"Text38": {
+					"type": "text",
+					"top": 144,
+					"left": 653,
+					"width": 25,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "ZIP"
+				},
+				"Text39": {
+					"type": "text",
+					"top": 164,
+					"left": 466,
+					"width": 92,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Country Code"
+				},
+				"l_bankName": {
+					"type": "text",
+					"top": 447,
+					"left": 448,
+					"width": 109,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Bank Name "
+				},
+				"Text33": {
+					"type": "text",
+					"top": 536,
+					"left": 448,
+					"width": 109,
+					"height": 35,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Bank Address "
+				},
+				"Text34": {
+					"type": "text",
+					"top": 573,
+					"left": 448,
+					"width": 109,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Bank City/State "
+				},
+				"Text40": {
+					"type": "text",
+					"top": 594,
+					"left": 448,
+					"width": 109,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Bank Country "
+				},
+				"l_institutionNo": {
+					"type": "text",
+					"top": 470,
+					"left": 448,
+					"width": 109,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Bank Institution No"
+				},
+				"l_branchTransitNo": {
+					"type": "text",
+					"top": 493,
+					"left": 448,
+					"width": 109,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Branch Transit No"
+				},
+				"l_beneficiaryAccountNo": {
+					"type": "text",
+					"top": 515,
+					"left": 448,
+					"width": 109,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Account No"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 419,
+					"left": 448,
+					"width": 298,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Beneficiary (Ultimate Receiver of funds)"
+				},
+				"Text48": {
+					"type": "text",
+					"top": 199,
+					"left": 449,
+					"width": 249,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Originating Bank (Sender Entity)"
+				},
+				"Text49": {
+					"type": "text",
+					"top": 225,
+					"left": 447,
+					"width": 112,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Bank Name"
+				},
+				"Text50": {
+					"type": "text",
+					"top": 248,
+					"left": 447,
+					"width": 112,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Identifier"
+				},
+				"Text51": {
+					"type": "text",
+					"top": 270,
+					"left": 447,
+					"width": 112,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Address"
+				},
+				"Text44": {
+					"type": "text",
+					"top": 304,
+					"left": 447,
+					"width": 112,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Country Code"
+				},
+				"Text41": {
+					"type": "text",
+					"top": 339,
+					"left": 449,
+					"width": 249,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Correspondent Bank"
+				},
+				"Text42": {
+					"type": "text",
+					"top": 365,
+					"left": 447,
+					"width": 112,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Corr. Bank Name"
+				},
+				"Text43": {
+					"type": "text",
+					"top": 388,
+					"left": 447,
+					"width": 112,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Corr. Identifier"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 292,
+					"left": 442,
+					"width": 376,
+					"height": 140,
+					"fill": "#FFE8B3",
+					"stroke": "#AEAF00"
+				},
+				"Rectangle5": {
+					"type": "rectangle",
+					"top": 20,
+					"left": 442,
+					"width": 376,
+					"height": 270,
+					"fill": "#FFE8B3",
+					"stroke": "#AEAF00"
+				},
+				"l_BeneficiaryInstitutionNo": {
+					"type": "text",
+					"top": 380,
+					"left": 431,
+					"width": 151,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Institution No."
+				},
+				"l_branchTransitNo1": {
+					"type": "text",
+					"top": 406,
+					"left": 431,
+					"width": 151,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Branch Transit No"
+				},
+				"Text45": {
+					"type": "text",
+					"top": 298,
+					"left": 446,
+					"width": 91,
+					"height": 18,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Account No"
+				},
+				"Text46": {
+					"type": "text",
+					"top": 354,
+					"left": 431,
+					"width": 151,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Routing No"
+				},
+				"Text47": {
+					"type": "text",
+					"top": 327,
+					"left": 431,
+					"width": 151,
+					"height": 18,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " SWIFT Code / BIC"
+				},
+				"BankID39": {
+					"type": "input",
+					"top": 55,
+					"left": 548,
+					"width": 258,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryFullName:10",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFB893",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID40": {
+					"type": "input",
+					"top": 82,
+					"left": 548,
+					"width": 243,
+					"height": 64,
+					"dataSource": "[Wires:8]BeneficiaryAddress:26",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID41": {
+					"type": "input",
+					"top": 151,
+					"left": 548,
+					"width": 258,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryBankName:3",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFB893",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID42": {
+					"type": "input",
+					"top": 175,
+					"left": 548,
+					"width": 243,
+					"height": 64,
+					"dataSource": "[Wires:8]BeneficiaryBankAddress:4",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID43": {
+					"type": "input",
+					"top": 242,
+					"left": 548,
+					"width": 114,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryBankCountry:6",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID44": {
+					"type": "input",
+					"top": 242,
+					"left": 708,
+					"width": 98,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryBankCityState:5",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID45": {
+					"type": "input",
+					"top": 265,
+					"left": 549,
+					"width": 113,
+					"height": 15,
+					"dataSource": "[WireTemplates:42]Phone:15",
+					"stroke": "#444444",
+					"class": "Fields",
+					"fill": "#EEEEEE",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID46": {
+					"type": "input",
+					"top": 265,
+					"left": 708,
+					"width": 98,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryBranchFax:31",
+					"stroke": "#444444",
+					"class": "Fields",
+					"fill": "#EEEEEE",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID47": {
+					"type": "input",
+					"top": 300,
+					"left": 546,
+					"width": 260,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryAccountNo:9",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fontWeight": "bold",
+					"fill": "#FFB893",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID48": {
+					"type": "input",
+					"top": 326,
+					"left": 591,
+					"width": 179,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiarySWIFT:28",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID49": {
+					"type": "input",
+					"top": 352,
+					"left": 591,
+					"width": 179,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryRoutingCode:27",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID50": {
+					"type": "input",
+					"top": 379,
+					"left": 591,
+					"width": 91,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryInstitutionNo:7",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID51": {
+					"type": "input",
+					"top": 406,
+					"left": 591,
+					"width": 160,
+					"height": 15,
+					"dataSource": "[Wires:8]BeneficiaryBranchTransitNo:8",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"Text56": {
+					"type": "text",
+					"top": 152,
+					"left": 389,
+					"width": 147,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Bank Name"
+				},
+				"Text57": {
+					"type": "text",
+					"top": 174,
+					"left": 449,
+					"width": 87,
+					"height": 35,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Bank Address "
+				},
+				"Text58": {
+					"type": "text",
+					"top": 242,
+					"left": 666,
+					"width": 30,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "City"
+				},
+				"Text59": {
+					"type": "text",
+					"top": 265,
+					"left": 435,
+					"width": 93,
+					"height": 15,
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Phone"
+				},
+				"Text60": {
+					"type": "text",
+					"top": 265,
+					"left": 664,
+					"width": 32,
+					"height": 15,
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Fax"
+				},
+				"Text53": {
+					"type": "text",
+					"top": 82,
+					"left": 449,
+					"width": 85,
+					"height": 55,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Beneficiary Address"
+				},
+				"Text61": {
+					"type": "text",
+					"top": 27,
+					"left": 446,
+					"width": 145,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Beneficiary Full Name"
+				},
+				"Text62": {
+					"type": "text",
+					"top": 240,
+					"left": 389,
+					"width": 147,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Bank Country"
+				},
+				"BankID52": {
+					"type": "input",
+					"top": 444,
+					"left": 545,
+					"width": 255,
+					"height": 165,
+					"sizingY": "grow",
+					"dataSource": "[Wires:8]FurtherCreditTo:32",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"Text63": {
+					"type": "text",
+					"top": 444,
+					"left": 382,
+					"width": 151,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Further Credit to"
+				}
+			},
+			"entryOrder": [
+				"BankID39",
+				"BankID40",
+				"BankID41",
+				"BankID42",
+				"BankID43",
+				"BankID44",
+				"BankID45",
+				"BankID46",
+				"BankID47",
+				"BankID48",
+				"BankID49",
+				"BankID50",
+				"BankID51",
+				"BankID52"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Rectangle2",
+					"Rectangle5"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

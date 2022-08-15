@@ -1,0 +1,37 @@
+/* sanction list alerts Style - uses emojis*/
+.sanction-warning::after {
+    content: " \0274C";
+}
+
+.sanction-caution::after {
+    content: " \026A0";
+}
+
+.sanction-ok::after {
+    content: " \02705";
+}
+
+.sanction-unknown::after {
+    content: " \02753";
+}
+
+
+.bg-rates {
+    background-color: #3498db;
+}
+
+.bg-bookings {
+    background-color: #18bc9c;
+}
+
+.bg-requests {
+    background-color: #f39c12;
+}
+
+.bg-links {
+    background-color: #95a5a6;
+}
+
+.bg-wires {
+    background-color: #e74c3c;
+}

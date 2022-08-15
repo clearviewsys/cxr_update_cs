@@ -1,0 +1,205 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"b_ok": {
+					"type": "button",
+					"top": 620,
+					"left": 451,
+					"width": 95,
+					"height": 21,
+					"action": "cancel",
+					"text": "OK",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"defaultButton": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"copyright": {
+					"type": "text",
+					"top": 97,
+					"left": 25,
+					"width": 535,
+					"height": 208,
+					"stroke": "#000000",
+					"class": "Fields",
+					"text": "©2003-2018 Copyright Clear View Systems Ltd. \rVancouver, BC, Canada\r\rLead 4D developer & System Architect: Tiran Behrouz\rSenior 4D developer & System Integrator: Barclay Ian Berry\rSenior 4D Developer: Jaime Alvarez\rQA Engineer: Ehsan Malaki\r.NET Backend Cloud Services: Shaun Fallahi\r\rListMagic Component: © IBB Consulting LLC, developed by Barclay Ian Berry\rSync module: Developed by Jason Hect; modifications by Barclay Ian Berry\rCharting module: © BlueCompany, developed by Paul Kuhn"
+				},
+				"Text": {
+					"type": "text",
+					"top": 10,
+					"left": 25,
+					"width": 538,
+					"height": 64,
+					"stroke": "#00578B",
+					"fontFamily": "Segoe UI",
+					"fontSize": 24,
+					"fontWeight": "bold",
+					"text": "CurrencyXchanger\rProfessional Money Exchange Software"
+				},
+				"Picture14": {
+					"type": "picture",
+					"top": 339,
+					"left": 27,
+					"width": 120,
+					"height": 49,
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture14.png"
+				},
+				"Picture15": {
+					"type": "picture",
+					"top": 468,
+					"left": 25,
+					"width": 145,
+					"height": 32,
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture15.png"
+				},
+				"Picture17": {
+					"type": "picture",
+					"top": 402,
+					"left": 25,
+					"width": 122,
+					"height": 46,
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture17.png"
+				},
+				"b_BBB": {
+					"type": "button",
+					"top": 402,
+					"left": 25,
+					"width": 120,
+					"height": 46,
+					"display": false,
+					"method": "ObjectMethods/b_BBB.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"majorVersion": {
+					"type": "input",
+					"top": 12,
+					"left": 426,
+					"width": 136,
+					"height": 28,
+					"stroke": "#1C77B1",
+					"textAlign": "right",
+					"fontFamily": "Segoe UI",
+					"fontSize": 24,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/majorVersion.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Picture18": {
+					"type": "picture",
+					"top": 520,
+					"left": 23,
+					"width": 124,
+					"height": 71,
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture18.png"
+				},
+				"b_capterra": {
+					"type": "button",
+					"top": 520,
+					"left": 23,
+					"width": 124,
+					"height": 71,
+					"display": false,
+					"method": "ObjectMethods/b_capterra.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"build": {
+					"type": "input",
+					"top": 42,
+					"left": 426,
+					"width": 136,
+					"height": 15,
+					"stroke": "#1C77B1",
+					"textAlign": "right",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/build.4dm",
+					"events": [
+						"onLoad"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"majorVersion"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,470 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 5,
+	"bottomMargin": 5,
+	"markerBody": 40,
+	"markerBreak": 40,
+	"markerFooter": 40,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt",
+		"orientation": "landscape"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"BalanceRemaining9": {
+					"type": "input",
+					"top": 22,
+					"left": 605,
+					"width": 40,
+					"height": 15,
+					"dataSource": "vSumSalesProfits",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text13": {
+					"type": "text",
+					"top": 3,
+					"left": 605,
+					"width": 40,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"stroke": "#000000",
+					"class": "Label_print",
+					"textAlign": "center",
+					"text": "=Gross Profit "
+				},
+				"BalanceRemaining10": {
+					"type": "input",
+					"top": 22,
+					"left": 456,
+					"width": 60,
+					"height": 8,
+					"dataSource": "vSumInventory",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text16": {
+					"type": "text",
+					"top": 3,
+					"left": 648,
+					"width": 40,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"stroke": "#000000",
+					"class": "Label_print",
+					"textAlign": "center",
+					"text": "Sum of Fees"
+				},
+				"BalanceRemaining14": {
+					"type": "input",
+					"top": 22,
+					"left": 648,
+					"width": 40,
+					"height": 15,
+					"dataSource": "vSumFeesReceived",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"BalanceRemaining15": {
+					"type": "input",
+					"top": 22,
+					"left": 691,
+					"width": 40,
+					"height": 15,
+					"dataSource": "vSumNetProfits",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text18": {
+					"type": "text",
+					"top": 3,
+					"left": 691,
+					"width": 40,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"stroke": "#000000",
+					"class": "Label_print",
+					"textAlign": "center",
+					"text": "Net Profit"
+				},
+				"BalanceRemaining17": {
+					"type": "input",
+					"top": 30,
+					"left": 456,
+					"width": 60,
+					"height": 8,
+					"dataSource": "vSumInventoryShort",
+					"dataSourceTypeHint": "number",
+					"stroke": "#EE0000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"TotalBought10": {
+					"type": "input",
+					"top": 22,
+					"left": 562,
+					"width": 40,
+					"height": 15,
+					"dataSource": "vSUMCOGS",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text24": {
+					"type": "text",
+					"top": 3,
+					"left": 519,
+					"width": 40,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"stroke": "#000000",
+					"class": "Label_print",
+					"textAlign": "center",
+					"text": "Net Sales"
+				},
+				"Text26": {
+					"type": "text",
+					"top": 3,
+					"left": 562,
+					"width": 40,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"stroke": "#000000",
+					"class": "Label_print",
+					"textAlign": "center",
+					"text": "Sum of COGS"
+				},
+				"TotalBought11": {
+					"type": "input",
+					"top": 22,
+					"left": 519,
+					"width": 40,
+					"height": 15,
+					"dataSource": "vSumVolumeSold",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text11": {
+					"type": "text",
+					"top": 3,
+					"left": 456,
+					"width": 60,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"stroke": "#000000",
+					"class": "Label_print",
+					"textAlign": "center",
+					"text": "Sum of Over / Short"
+				},
+				"baseCurrency3": {
+					"type": "input",
+					"top": 10,
+					"left": 619,
+					"width": 15,
+					"height": 8,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"baseCurrency4": {
+					"type": "input",
+					"top": 9,
+					"left": 488,
+					"width": 15,
+					"height": 8,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"baseCurrency5": {
+					"type": "input",
+					"top": 10,
+					"left": 663,
+					"width": 15,
+					"height": 8,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"baseCurrency8": {
+					"type": "input",
+					"top": 10,
+					"left": 531,
+					"width": 18,
+					"height": 8,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"baseCurrency10": {
+					"type": "input",
+					"top": 10,
+					"left": 706,
+					"width": 15,
+					"height": 8,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"BalanceRemaining10",
+					"BalanceRemaining14",
+					"BalanceRemaining15",
+					"BalanceRemaining17",
+					"TotalBought10",
+					"TotalBought11",
+					"baseCurrency4",
+					"baseCurrency5"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

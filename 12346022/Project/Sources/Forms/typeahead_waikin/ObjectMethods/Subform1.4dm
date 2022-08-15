@@ -1,0 +1,1 @@
+Form:C1466.subform2:=handleTypeaheadSelectForm(Self:C308; ->[Countries:62]CountryName:2)

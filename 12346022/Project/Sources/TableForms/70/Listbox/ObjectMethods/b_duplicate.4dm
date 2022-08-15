@@ -1,0 +1,1 @@
+duplicateRecordTable(->[Branches:70]; ->[Branches:70]BranchID:1; "Branch ID")

@@ -1,0 +1,20 @@
+{
+	"forms": {
+		"Entry": {
+			"timeStamp": "2022-08-15T20:45:59.625Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-15T20:45:59.627Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T20:45:59.631Z",
+			"destination": "detailScreen"
+		},
+		"ListBox_old": {
+			"timeStamp": "2022-08-15T20:45:59.628Z",
+			"destination": "detailScreen"
+		}
+	}
+}
