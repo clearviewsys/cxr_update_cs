@@ -1,0 +1,32 @@
+{
+	"forms": {
+		"PickCommonLists": {
+			"timeStamp": "2022-08-15T21:00:19.573Z",
+			"destination": "detailScreen"
+		},
+		"Entry": {
+			"timeStamp": "2022-08-15T21:00:19.566Z",
+			"destination": "detailScreen"
+		},
+		"Listbox": {
+			"timeStamp": "2022-08-15T21:00:19.568Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T21:00:19.573Z",
+			"destination": "detailScreen"
+		},
+		"EntryBulk": {
+			"timeStamp": "2022-08-15T21:00:19.568Z",
+			"destination": "detailScreen"
+		},
+		"Listbox_old": {
+			"timeStamp": "2022-08-15T21:00:19.570Z",
+			"destination": "detailScreen"
+		},
+		"Pick": {
+			"timeStamp": "2022-08-15T21:00:19.571Z",
+			"destination": "detailScreen"
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+  "actionMac": "BUILD_COMPILED_STRUCTURE",
+  "actionWin": "BUILD_APP",
+  "appName": "CXR7",
+  "build": 12346023,
+  "version": "7.1.16",
+  "buildDestinationFolder": "MyBuild",
+  "uploadTo": "ftp://clearviewsys.4d.rs/CXR7/",
+  "maclicenses_URL": "https://www.adamov.co.rs/cxr/dev_v19_mac.zip",
+  "winlicenses_URL": "https://www.adamov.co.rs/cxr/dev_v19_win.zip",
+  "mac4D_URL": "https://www.adamov.co.rs/cxr/4D_19_2_mac.zip",
+  "win4D_URL": "https://www.adamov.co.rs/cxr/4D_19_2_win.zip",
+  "macServer_URL": "https://www.adamov.co.rs/cxr/4D_Server_19_2_mac.zip",
+  "winServer_URL": "https://www.adamov.co.rs/cxr/4D_Server_19_2_win.zip",
+  "macVL_URL": "https://www.adamov.co.rs/cxr/4D_Volume_Desktop_19_2_mac.zip",
+  "winVL_URL": "https://www.adamov.co.rs/cxr/4D_Volume_Desktop_19_2_win.zip"
+}

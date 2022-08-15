@@ -1,0 +1,123 @@
+{
+	"forms": {
+		"rep_XZreport": {
+			"timeStamp": "2022-08-15T21:00:19.678Z",
+			"destination": "detailScreen"
+		},
+		"Reconcile": {
+			"timeStamp": "2022-08-15T21:00:19.653Z",
+			"destination": "detailScreen"
+		},
+		"rep_accountPositions": {
+			"timeStamp": "2022-08-15T21:00:19.679Z",
+			"destination": "detailScreen"
+		},
+		"Subform_Summarizer": {
+			"timeStamp": "2022-08-15T21:00:19.657Z",
+			"destination": "listScreen"
+		},
+		"BranchBalances": {
+			"timeStamp": "2022-08-15T21:00:19.597Z",
+			"destination": "detailScreen"
+		},
+		"View_old": {
+			"timeStamp": "2022-08-15T21:00:19.667Z",
+			"destination": "detailScreen"
+		},
+		"Entry": {
+			"timeStamp": "2022-08-15T21:00:19.615Z",
+			"destination": "detailScreen"
+		},
+		"printPanel": {
+			"timeStamp": "2022-08-15T21:00:19.670Z",
+			"destination": "detailScreen"
+		},
+		"printMainAccounts": {
+			"timeStamp": "2022-08-15T21:00:19.669Z",
+			"destination": "listPrinter"
+		},
+		"ListBox_copy": {
+			"timeStamp": "2022-08-15T21:00:19.643Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-15T21:00:19.630Z",
+			"destination": "detailScreen"
+		},
+		"rep_SummaryDaily": {
+			"timeStamp": "2022-08-15T21:00:19.677Z",
+			"destination": "detailScreen"
+		},
+		"subForm_Agents": {
+			"timeStamp": "2022-08-15T21:00:19.680Z",
+			"destination": "detailScreen"
+		},
+		"Search": {
+			"timeStamp": "2022-08-15T21:00:19.656Z",
+			"destination": "detailScreen"
+		},
+		"rep_SummaryVars": {
+			"timeStamp": "2022-08-15T21:00:19.678Z",
+			"destination": "detailScreen"
+		},
+		"rep_CashAccounts": {
+			"timeStamp": "2022-08-15T21:00:19.677Z",
+			"destination": "detailScreen"
+		},
+		"PositionsList": {
+			"timeStamp": "2022-08-15T21:00:19.649Z",
+			"destination": "detailScreen"
+		},
+		"RemoteAccounts": {
+			"timeStamp": "2022-08-15T21:00:19.655Z"
+		},
+		"reconcile_array": {
+			"timeStamp": "2022-08-15T21:00:19.676Z",
+			"destination": "detailScreen"
+		},
+		"ES_ListBox": {
+			"timeStamp": "2022-08-15T21:00:19.608Z",
+			"destination": "detailScreen"
+		},
+		"List": {
+			"timeStamp": "2022-08-15T21:00:19.618Z",
+			"destination": "listScreen"
+		},
+		"rep_accounts": {
+			"timeStamp": "2022-08-15T21:00:19.680Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T21:00:19.660Z",
+			"destination": "detailScreen"
+		},
+		"SubForm_Branches": {
+			"timeStamp": "2022-08-15T21:00:19.656Z",
+			"destination": "listScreen"
+		},
+		"BranchUnrealizedGains": {
+			"timeStamp": "2022-08-15T21:00:19.598Z",
+			"destination": "detailScreen"
+		},
+		"View1": {
+			"timeStamp": "2022-08-15T21:00:19.664Z",
+			"destination": "detailScreen"
+		},
+		"SubForm_Currencies": {
+			"timeStamp": "2022-08-15T21:00:19.657Z",
+			"destination": "listScreen"
+		},
+		"Pick": {
+			"timeStamp": "2022-08-15T21:00:19.645Z",
+			"destination": "detailScreen"
+		},
+		"printAccountsList": {
+			"timeStamp": "2022-08-15T21:00:19.668Z",
+			"destination": "listScreen"
+		},
+		"CashInventory": {
+			"timeStamp": "2022-08-15T21:00:19.600Z",
+			"destination": "detailScreen"
+		}
+	}
+}

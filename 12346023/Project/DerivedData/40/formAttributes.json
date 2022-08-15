@@ -1,0 +1,40 @@
+{
+	"forms": {
+		"Entry": {
+			"timeStamp": "2022-08-15T21:00:18.723Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-15T21:00:18.729Z",
+			"destination": "detailScreen"
+		},
+		"Pay": {
+			"timeStamp": "2022-08-15T21:00:18.729Z",
+			"destination": "detailScreen"
+		},
+		"print": {
+			"timeStamp": "2022-08-15T21:00:18.733Z",
+			"destination": "listPrinter"
+		},
+		"Receive": {
+			"timeStamp": "2022-08-15T21:00:18.730Z",
+			"destination": "detailScreen"
+		},
+		"Subform_Items": {
+			"timeStamp": "2022-08-15T21:00:18.730Z",
+			"destination": "detailScreen"
+		},
+		"List": {
+			"timeStamp": "2022-08-15T21:00:18.728Z",
+			"destination": "listScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T21:00:18.732Z",
+			"destination": "detailScreen"
+		},
+		"Entry1": {
+			"timeStamp": "2022-08-15T21:00:18.727Z",
+			"destination": "detailScreen"
+		}
+	}
+}

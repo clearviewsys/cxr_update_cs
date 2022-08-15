@@ -1,0 +1,59 @@
+{
+	"forms": {
+		"View_noCC": {
+			"timeStamp": "2022-08-15T21:00:19.537Z",
+			"destination": "listScreen"
+		},
+		"Entry": {
+			"timeStamp": "2022-08-15T21:00:19.512Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-15T21:00:19.515Z",
+			"destination": "detailScreen"
+		},
+		"Pay": {
+			"timeStamp": "2022-08-15T21:00:19.523Z",
+			"destination": "detailScreen"
+		},
+		"CC_send": {
+			"timeStamp": "2022-08-15T21:00:19.509Z"
+		},
+		"printWireForm_Lotus": {
+			"timeStamp": "2022-08-15T21:00:19.545Z",
+			"destination": "detailScreen"
+		},
+		"printBanks": {
+			"timeStamp": "2022-08-15T21:00:19.538Z",
+			"destination": "listPrinter"
+		},
+		"Receive": {
+			"timeStamp": "2022-08-15T21:00:19.531Z",
+			"destination": "detailScreen"
+		},
+		"Search": {
+			"timeStamp": "2022-08-15T21:00:19.531Z",
+			"destination": "detailScreen"
+		},
+		"subform_customers": {
+			"timeStamp": "2022-08-15T21:00:19.548Z",
+			"destination": "detailScreen"
+		},
+		"SubForm_Banks": {
+			"timeStamp": "2022-08-15T21:00:19.532Z",
+			"destination": "listScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T21:00:19.534Z",
+			"destination": "detailScreen"
+		},
+		"ViewCash": {
+			"timeStamp": "2022-08-15T21:00:19.535Z",
+			"destination": "detailScreen"
+		},
+		"printWireForm": {
+			"timeStamp": "2022-08-15T21:00:19.542Z",
+			"destination": "detailScreen"
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"forms": {
+		"Entry": {
+			"timeStamp": "2022-08-15T21:00:18.109Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-15T21:00:18.110Z",
+			"destination": "detailScreen"
+		},
+		"List": {
+			"timeStamp": "2022-08-15T21:00:18.110Z",
+			"destination": "listScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-15T21:00:18.111Z",
+			"destination": "detailScreen"
+		},
+		"subform_users": {
+			"timeStamp": "2022-08-15T21:00:18.112Z",
+			"destination": "detailScreen"
+		}
+	}
+}

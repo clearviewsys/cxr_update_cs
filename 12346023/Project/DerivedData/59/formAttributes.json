@@ -1,0 +1,12 @@
+{
+	"forms": {
+		"FeeRules": {
+			"timeStamp": "2022-08-15T21:00:19.111Z",
+			"destination": "detailScreen"
+		},
+		"List": {
+			"timeStamp": "2022-08-15T21:00:19.112Z",
+			"destination": "listScreen"
+		}
+	}
+}
