@@ -1,1 +1,0 @@
-pickPaymentTypeCode(Self:C308)

@@ -1,2 +1,0 @@
-HandleEntryFormMethod
-handleKeywordsListboxTrans

@@ -1,1 +1,0 @@
-SET TEXT TO PASTEBOARD:C523([Registers:10]Comments:9)

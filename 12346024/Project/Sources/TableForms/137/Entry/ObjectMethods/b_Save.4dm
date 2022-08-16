@@ -1,2 +1,0 @@
-// validateAML_Reports
-handleSaveButton

@@ -1,2 +1,0 @@
-handleReceivedorPaidEntry
-applyFocusRect

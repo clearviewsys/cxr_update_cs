@@ -1,2 +1,0 @@
-//%attributes = {}
-allRecordsSync_Queue

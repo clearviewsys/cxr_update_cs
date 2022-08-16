@@ -1,1 +1,0 @@
-listbox_filterSelectedRows(->reg_RegistersListBox)

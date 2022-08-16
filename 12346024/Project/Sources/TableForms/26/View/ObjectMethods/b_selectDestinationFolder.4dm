@@ -1,1 +1,0 @@
-[ClientPrefs:26]PictureIDDestFolder:26:=Select folder:C670("Please select the location of Picture IDs destination folder")

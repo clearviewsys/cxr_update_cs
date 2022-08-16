@@ -1,2 +1,0 @@
-//validateLinks
-handleSaveLinksButton

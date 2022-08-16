@@ -1,3 +1,0 @@
-// validateOccupations
-handleSaveButton
-

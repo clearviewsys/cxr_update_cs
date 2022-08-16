@@ -1,2 +1,0 @@
-handleViewOCR_IdsViewMethod
-handleViewFormMethod

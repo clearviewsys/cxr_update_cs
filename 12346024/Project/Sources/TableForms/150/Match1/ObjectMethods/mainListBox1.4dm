@@ -1,1 +1,0 @@
-handledoubleclickevent(->[Registers:10])

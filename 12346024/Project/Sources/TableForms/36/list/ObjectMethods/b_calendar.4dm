@@ -1,1 +1,0 @@
-requestDateRangeTable(Current form table:C627; ->[CashTransactions:36]Date:5)

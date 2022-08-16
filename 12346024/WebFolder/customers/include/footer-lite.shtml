@@ -1,8 +1,0 @@
-<!-- DIALOG FOR MESSAGE -->
-<!--#4DSCRIPT/WAPI_4DInclude/app/wapi/message.shtml -->
-
-<!-- DIALOG FOR CONFIRMATION -->
-<!--#4DSCRIPT/WAPI_4DInclude/app/wapi/confirm.shtml -->
-
-<!-- GENERIC DIALOG -->
-<!--#4DSCRIPT/WAPI_4DInclude/app/wapi/modal-dialog.shtml-->

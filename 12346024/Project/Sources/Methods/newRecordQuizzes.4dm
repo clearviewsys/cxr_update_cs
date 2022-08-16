@@ -1,3 +1,0 @@
-//%attributes = {}
-//newRecord(->[Quizzes])
-createQuiz()

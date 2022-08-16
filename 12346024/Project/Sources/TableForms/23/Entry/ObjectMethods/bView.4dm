@@ -1,1 +1,0 @@
-OPEN URL:C673("http://www.banknotes.com/"+[BankNotes:23]CountryCode:2+String:C10([BankNotes:23]CatNo:3)+".JPG"; *)

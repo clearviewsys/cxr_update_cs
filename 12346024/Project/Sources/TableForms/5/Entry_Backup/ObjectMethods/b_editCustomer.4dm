@@ -1,2 +1,0 @@
-modifyRecordCustomerByID(vCustomerID)
-// getbuild

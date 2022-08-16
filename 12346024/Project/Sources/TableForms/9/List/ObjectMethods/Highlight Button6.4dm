@@ -1,1 +1,0 @@
-QUERY SELECTION BY FORMULA:C207(Current form table:C627->; getBankAccountBalance([Accounts:9]AccountID:1)#0)

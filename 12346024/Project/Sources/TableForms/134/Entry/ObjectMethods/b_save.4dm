@@ -1,2 +1,0 @@
-// validateList_Banks
-handleSaveButton

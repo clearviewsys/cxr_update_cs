@@ -1,2 +1,0 @@
-//%attributes = {}
-displayLBoxList_POT

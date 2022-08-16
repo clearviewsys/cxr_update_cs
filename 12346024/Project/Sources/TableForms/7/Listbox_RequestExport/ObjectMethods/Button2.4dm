@@ -1,1 +1,0 @@
-listbox_exportFormat:="TXT"

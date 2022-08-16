@@ -1,3 +1,0 @@
-
-handleFetchCurrencyRatesButton("$Currencies_LBSet")
-

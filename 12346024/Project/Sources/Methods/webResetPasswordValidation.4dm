@@ -1,3 +1,0 @@
-//%attributes = {}
-
-checkIfNullString(->webEmailAddress; "Email.")

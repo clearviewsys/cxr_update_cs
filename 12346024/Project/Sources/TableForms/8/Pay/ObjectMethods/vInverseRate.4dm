@@ -1,1 +1,0 @@
-[AccountInOuts:37]ourRate:13:=Round:C94(calcSafeDivide(1; vInverseRate); [Currencies:6]RoundDigit:27)

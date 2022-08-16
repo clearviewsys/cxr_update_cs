@@ -1,1 +1,0 @@
-[Cheques:1]DueDate:3:=Current date:C33

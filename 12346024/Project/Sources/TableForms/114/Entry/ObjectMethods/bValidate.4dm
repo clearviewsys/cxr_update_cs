@@ -1,2 +1,0 @@
-// validateIndustries
-handleSaveButton

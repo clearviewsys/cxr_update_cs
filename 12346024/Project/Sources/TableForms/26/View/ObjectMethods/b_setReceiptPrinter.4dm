@@ -1,1 +1,0 @@
-[ClientPrefs:26]receiptPrinterName:3:=vDefaultPrinterName{vDefaultPrinterName}

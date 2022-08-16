@@ -1,1 +1,0 @@
-handleListBoxObjectMethod(Self:C308; ->[KeyValues:115])

@@ -1,1 +1,0 @@
-sl_handleKYC2020ResponseType(Form event code:C388; "combo_K2020ResponseType"; Form:C1466.responseType)

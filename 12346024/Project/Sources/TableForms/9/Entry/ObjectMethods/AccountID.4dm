@@ -1,1 +1,0 @@
-titleCase(Self:C308)

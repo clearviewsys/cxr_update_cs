@@ -1,2 +1,0 @@
-handleListForm
-colourizeLineBG("backstripe")

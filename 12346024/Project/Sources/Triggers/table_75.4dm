@@ -1,3 +1,0 @@
-AUDIT_Trigger
-TriggerSync
-

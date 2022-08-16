@@ -1,1 +1,0 @@
-displaySelectedRecords(->[LinkedDocs:4])

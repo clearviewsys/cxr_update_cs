@@ -1,2 +1,0 @@
-loadLicensesArray
-allRecordsLicenses

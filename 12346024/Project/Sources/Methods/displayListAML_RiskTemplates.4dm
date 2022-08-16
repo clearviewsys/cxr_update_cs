@@ -1,2 +1,0 @@
-//%attributes = {}
-displayLBoxAML_RiskTemplates

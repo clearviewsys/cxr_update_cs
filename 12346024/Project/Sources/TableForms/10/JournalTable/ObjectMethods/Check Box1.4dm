@@ -1,4 +1,0 @@
-handleApplyDateRangeObject(Self:C308)
-selectAccountsInDateRange(vFromDate; vToDate; numToBoolean(cbApplyDateRange))
-
-reg_fillRegistersListBox

@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<settings-import-export char_display_format="decimal" encoding="UTF-8" format="4D" platform="automatic" table_no="19" table_name="Flags">
-	<text_settings with_column_title="false"/>
-	<field field_no="1" kind="alpha" table_no="19"/>
-	<field field_no="2" kind="alpha" table_no="19"/>
-	<field field_no="3" kind="alpha" table_no="19"/>
-	<field field_no="4" kind="picture" table_no="19"/>
-	<field field_no="5" kind="alpha" table_no="19"/>
-                  </settings-import-export>

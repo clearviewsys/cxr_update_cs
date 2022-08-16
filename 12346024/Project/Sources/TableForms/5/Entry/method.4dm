@@ -1,3 +1,0 @@
-
-handleInvoiceEntryFormMethod
-//HandleEntryFormMethod

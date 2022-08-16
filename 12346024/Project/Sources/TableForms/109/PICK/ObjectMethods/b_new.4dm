@@ -1,2 +1,0 @@
-handlePickNewButtonOCR_IdS
-

@@ -1,3 +1,0 @@
-
-AUS_HandleReportTypeCombobox
-

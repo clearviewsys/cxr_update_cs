@@ -1,1 +1,0 @@
-getKeyValue("email.configuration.booking.settlement")

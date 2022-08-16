@@ -1,2 +1,0 @@
-
-cropImageFromBottom(->docPhoto2)

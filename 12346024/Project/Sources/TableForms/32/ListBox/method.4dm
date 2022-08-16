@@ -1,2 +1,0 @@
-C_LONGINT:C283(mainListBox)
-handleListBoxFormMethod

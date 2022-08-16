@@ -1,2 +1,0 @@
-handleNameEntryField(Self:C308)
-makeThirdPartyName

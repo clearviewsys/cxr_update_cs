@@ -1,1 +1,0 @@
-[Cheques:1]PayTo:15:=<>COMPANYNAME

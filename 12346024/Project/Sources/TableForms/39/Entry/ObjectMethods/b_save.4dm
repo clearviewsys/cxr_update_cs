@@ -1,3 +1,0 @@
-
-// validateItems
-handleSaveButton

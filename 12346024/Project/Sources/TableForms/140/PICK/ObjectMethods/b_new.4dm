@@ -1,1 +1,0 @@
-handlePickNewButton(->[NoteTemplates:140]; ->[NoteTemplates:140]Notes:4)

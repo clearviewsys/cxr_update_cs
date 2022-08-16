@@ -1,2 +1,0 @@
-//%attributes = {}
-//setCustomerRiskRating (4)

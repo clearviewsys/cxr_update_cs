@@ -1,1 +1,0 @@
-sl_k20getReponseType
