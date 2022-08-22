@@ -1,0 +1,18 @@
+{
+	"newSession": "https://mgprofix.com/mg/CXR/IntegratedLogin.aspx",
+	"sendURL": "https://mgprofix.com/mg/CXR/IntegratedSend.aspx",
+	"receiveURL": "https://mgprofix.com/mg/CXR/IntegratedReceive.aspx",
+	"afterSendURL": "https://mgprofix.com/mg/Operator/QuickSend.aspx",
+	"afterReceiveURL": "https://mgprofix.com/mg/Operator/Receive.aspx",
+	"afterFinishURL": "https://mgprofix.com/mg/Operator/Default4D.aspx",
+	"baseURL": "https://mgprofix.com/mg/",
+	"loginURL": "https://mgprofix.com/mg/login.aspx",
+	"afterLoginURL": "https://mgprofix.com/mg/default.aspx",
+	"soap": {
+		"root": "soapenv:Envelope",
+		"namespace": "http://schemas.xmlsoap.org/soap/envelope/",
+		"namespaceName1": "xmlns:web",
+		"namespace1": "http://sb.com.ua/webservices/",
+		"soapURL": "https://sws.sb.com.ua/swws/swws.asmx"
+	}
+}
