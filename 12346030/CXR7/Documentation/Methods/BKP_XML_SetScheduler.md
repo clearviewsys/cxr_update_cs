@@ -1,1 +1,0 @@
-﻿IP2C_AddressToNumber(IPAddress) -> IPNumber  IP2C_AddressToNumber(String) -> Real    This method Returns the IP number for the IP address passed in $1.  Private Function.    This 'component' uses the IP-to-Country Database provided by Directi (http://directi.com), available from http://ip-to-country.directi.com.
