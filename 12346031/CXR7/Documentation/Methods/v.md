@@ -1,1 +1,0 @@
-﻿    Vector Calculations and Manipulations  Vectors must be created before being passed   Only pointers are passed    All operations are for Real Vectors
