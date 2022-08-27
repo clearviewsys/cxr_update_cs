@@ -1,0 +1,19 @@
+﻿
+{
+	"newSession": "https://tmg15.sb.com.ua/MG/CXR/IntegratedLogin.aspx",
+	"sendURL": "https://tmg15.sb.com.ua/MG/CXR/IntegratedSend.aspx",
+	"receiveURL": "https://tmg15.sb.com.ua/MG/CXR/IntegratedReceive.aspx",
+	"afterSendURL": "https://tmg15.sb.com.ua/MG/Operator/QuickSend.aspx",
+	"afterReceiveURL": "https://tmg15.sb.com.ua/MG/Operator/Receive.aspx",
+	"afterFinishURL": "https://tmg15.sb.com.ua/MG/Operator/Default4D.aspx",
+	"baseURL": "https://tmg15.sb.com.ua/",
+	"loginURL": "https://tmg15.sb.com.ua/MG/Login.aspx",
+	"afterLoginURL": "https://tmg15.sb.com.ua/MG/default.aspx",
+	"soap": {
+		"root": "soapenv:Envelope",
+		"namespace": "http://schemas.xmlsoap.org/soap/envelope/",
+		"namespaceName1": "xmlns:web",
+		"namespace1": "http://sb.com.ua/webservices/",
+		"soapURL": "https://tsws.sb.com.ua/swws/swws.asmx"
+	}
+}
