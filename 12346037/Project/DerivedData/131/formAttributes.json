@@ -1,0 +1,24 @@
+{
+	"forms": {
+		"ListBox2": {
+			"timeStamp": "2022-08-29T16:43:37Z",
+			"destination": "detailScreen"
+		},
+		"Entry": {
+			"timeStamp": "2022-08-29T16:43:37Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-29T16:43:37Z",
+			"destination": "detailScreen"
+		},
+		"ListBox123": {
+			"timeStamp": "2022-08-29T16:43:37Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-29T16:43:37Z",
+			"destination": "detailScreen"
+		}
+	}
+}

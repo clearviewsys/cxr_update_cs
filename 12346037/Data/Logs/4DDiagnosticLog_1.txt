@@ -1,0 +1,3 @@
+1 2022-08-29T16:45:57.578 [4D.HDLS] WARN - (QUIT 4D)[{"type":"projectMethod","name":"runHeadless","line":70,"database":"CXR7"},{"type":"databaseMethod","name":"On Startup","line":12,"database":"CXR7"}] ()
+2 2022-08-29T16:45:57.580 [4D.4DRT] ERROR - [-10716] Object or Collection Expected. (task=-4, taskName=$xx)
+3 2022-08-29T16:45:57.580 [4D.HDLS] ERROR - (Error: #-10716 Object or Collection Expected.)[{"type":"projectMethod","name":"LogUserLoggingOut","line":21,"database":"CXR7"},{"type":"databaseMethod","name":"On Exit","line":21,"database":"CXR7"}] ()
