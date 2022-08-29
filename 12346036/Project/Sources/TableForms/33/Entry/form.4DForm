@@ -1,0 +1,250 @@
+﻿{
+	"destination": "detailScreen",
+	"windowTitle": "Till Creation Form",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 146,
+	"markerBreak": 146,
+	"markerFooter": 156,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text4": {
+					"type": "text",
+					"top": 68,
+					"left": 15,
+					"width": 126,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"text": "Till ID"
+				},
+				"CashRegisterID": {
+					"type": "input",
+					"top": 65,
+					"left": 147,
+					"width": 25,
+					"height": 20,
+					"dataSource": "[CashRegisters:33]CashRegisterID:1",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 92,
+					"left": 147,
+					"width": 180,
+					"height": 20,
+					"dataSource": "[CashRegisters:33]CashRegisterName:7",
+					"class": "Fields_Large",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"sharetill": {
+					"type": "checkbox",
+					"top": 132,
+					"left": 15,
+					"width": 371,
+					"height": 20,
+					"dataSource": "[CashRegisters:33]isShared:8",
+					"text": "Shared Till (for all users)",
+					"class": "Fields_Large",
+					"method": "ObjectMethods/sharetill.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"l_reserved": {
+					"type": "checkbox",
+					"top": 155,
+					"left": 15,
+					"width": 371,
+					"height": 20,
+					"dataSource": "[CashRegisters:33]isAdminOnly:10",
+					"text": "Restricted to Administrators Only",
+					"class": "Fields_Large",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"createCashAccounts": {
+					"type": "checkbox",
+					"top": 178,
+					"left": 15,
+					"width": 371,
+					"height": 20,
+					"dataSource": "[CashRegisters:33]autoCreateCashAccounts:9",
+					"text": "Auto-create Cash Accounts",
+					"class": "Fields_Large",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 292,
+					"left": 306,
+					"width": 100,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"class": "Control_Large_",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 292,
+					"left": 206,
+					"width": 100,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 68,
+					"left": 182,
+					"width": 150,
+					"height": 26,
+					"class": "Tags_Small",
+					"text": "Please use 02, 03, etc format"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 92,
+					"left": 15,
+					"width": 126,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"text": "Name of Till"
+				},
+				"S2_Text": {
+					"type": "text",
+					"top": 218,
+					"left": 15,
+					"width": 391,
+					"height": 24,
+					"sizingX": "grow",
+					"fill": "#000E60",
+					"stroke": "#FFFFFF",
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"text": "User Signed in with this Till"
+				},
+				"S2_Field": {
+					"type": "input",
+					"top": 245,
+					"left": 15,
+					"width": 391,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "[CashRegisters:33]UserID:2",
+					"stroke": "#0000FF",
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

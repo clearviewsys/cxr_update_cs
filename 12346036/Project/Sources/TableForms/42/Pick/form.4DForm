@@ -1,0 +1,639 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_PICK",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vSearchText": {
+					"type": "input",
+					"top": 31,
+					"left": 276,
+					"width": 205,
+					"height": 21,
+					"dataSource": "vSearchText",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/vSearchText.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onBeforeKeystroke",
+						"onDataChange",
+						"onAfterKeystroke"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 523,
+					"left": 577,
+					"width": 303,
+					"height": 28,
+					"sizingY": "move",
+					"dataSource": "bAccept",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Pick Wire Template",
+					"class": "Control_Large_",
+					"defaultButton": true,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 523,
+					"left": 450,
+					"width": 122,
+					"height": 28,
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 31,
+					"left": 65,
+					"width": 191,
+					"height": 21,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Search For Wire Template"
+				},
+				"newButton": {
+					"type": "button",
+					"top": 523,
+					"left": 17,
+					"width": 234,
+					"height": 28,
+					"sizingY": "move",
+					"dataSource": "bNew",
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"class": "Control_Large_",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "New Wire Template",
+					"icon": "/RESOURCES/Images/library/toolbarNewRecord (24134).png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/newButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text17": {
+					"type": "text",
+					"top": 432,
+					"left": 382,
+					"width": 149,
+					"height": 20,
+					"sizingY": "move",
+					"fill": "#DDDDDD",
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Bank Name "
+				},
+				"Text12": {
+					"type": "text",
+					"top": 452,
+					"left": 382,
+					"width": 149,
+					"height": 20,
+					"sizingY": "move",
+					"fill": "#DDDDDD",
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Bank Institution No"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 472,
+					"left": 382,
+					"width": 149,
+					"height": 20,
+					"sizingY": "move",
+					"fill": "#DDDDDD",
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Branch Transit"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 492,
+					"left": 382,
+					"width": 149,
+					"height": 20,
+					"sizingY": "move",
+					"fill": "#DDDDDD",
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Account No"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 473,
+					"left": 13,
+					"width": 149,
+					"height": 20,
+					"sizingY": "move",
+					"fill": "#DDDDDD",
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Routing Code"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 493,
+					"left": 13,
+					"width": 149,
+					"height": 20,
+					"sizingY": "move",
+					"fill": "#DDDDDD",
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " SWIFT Code"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 433,
+					"left": 13,
+					"width": 149,
+					"height": 20,
+					"sizingY": "move",
+					"fill": "#DDDDDD",
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Wire Template "
+				},
+				"BankID9": {
+					"type": "input",
+					"top": 433,
+					"left": 173,
+					"width": 180,
+					"height": 14,
+					"sizingY": "move",
+					"dataSource": "[WireTemplates:42]WireTemplateID:1",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID10": {
+					"type": "input",
+					"top": 453,
+					"left": 173,
+					"width": 180,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "[WireTemplates:42]CustomerID:2",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"BankID1": {
+					"type": "input",
+					"top": 433,
+					"left": 542,
+					"width": 180,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "[WireTemplates:42]BankName:3",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID5": {
+					"type": "input",
+					"top": 452,
+					"left": 542,
+					"width": 180,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "[WireTemplates:42]BankInstitutionNo:4",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID6": {
+					"type": "input",
+					"top": 472,
+					"left": 542,
+					"width": 180,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "[WireTemplates:42]BranchTransitNo:5",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID7": {
+					"type": "input",
+					"top": 492,
+					"left": 542,
+					"width": 180,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "[WireTemplates:42]AccountNo:6",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID19": {
+					"type": "input",
+					"top": 473,
+					"left": 173,
+					"width": 180,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "[WireTemplates:42]RoutingCode:7",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID20": {
+					"type": "input",
+					"top": 493,
+					"left": 173,
+					"width": 180,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "[WireTemplates:42]SWIFT:8",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"top": 453,
+					"left": 13,
+					"width": 149,
+					"height": 20,
+					"sizingY": "move",
+					"fill": "#DDDDDD",
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Customer "
+				},
+				"slb_picker": {
+					"type": "listbox",
+					"top": 59,
+					"left": 7,
+					"width": 882,
+					"height": 368,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "slb_picker",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "25px",
+					"headerHeight": "2em",
+					"showFooters": true,
+					"footerHeight": "25px",
+					"lockedColumnCount": 2,
+					"table": 42,
+					"highlightSet": "$WireTemplates_LBSet",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"alternateFill": "#FEEEF3",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"method": "ObjectMethods/slb_picker.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"name": "Column6",
+							"dataSource": "[WireTemplates:42]WireTemplateID:1",
+							"width": 10,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"visibility": "hidden",
+							"fill": "#FEF5F6",
+							"alternateFill": "#EFDCE2",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header6",
+								"dataSource": "Header1",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer6",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#E8E2E3",
+								"textAlign": "center",
+								"fontFamily": "Tahoma",
+								"fontSize": 16,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "[WireTemplates:42]WireTemplateAlias:14",
+							"width": 281,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#FEEEF3",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header7",
+								"text": "Wire Template Name",
+								"dataSource": "Header1",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer1",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#E8E2E3",
+								"textAlign": "center",
+								"fontFamily": "Tahoma",
+								"fontSize": 16,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "[WireTemplates:42]BeneficiaryFullName:9",
+							"width": 284,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#FEEEF3",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header5",
+								"text": "Beneficiary Name",
+								"dataSource": "Header5",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#E8E2E3",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "[WireTemplates:42]BankName:3",
+							"width": 140,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#FEEEF3",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "Beneficiary Bank Name",
+								"dataSource": "Header5",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#E8E2E3",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "Column8",
+							"dataSource": "[WireTemplates:42]Remarks:13",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#FEEEF3",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header8",
+								"text": "Remarks",
+								"dataSource": "Header5",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#E8E2E3",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "[Customers:3]FullName:40",
+							"width": 146,
+							"minWidth": 4,
+							"maxWidth": 32000,
+							"fill": "#EEF7F9",
+							"alternateFill": "#DEDEE6",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Customer",
+								"dataSource": "Header3",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#E8E2E3",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						}
+					]
+				}
+			},
+			"entryOrder": [
+				"vSearchText",
+				"Button1",
+				"Button2",
+				"slb_picker"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

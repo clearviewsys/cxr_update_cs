@@ -1,0 +1,1 @@
+handleCurrencyObject(Self:C308)

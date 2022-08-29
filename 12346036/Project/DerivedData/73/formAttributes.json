@@ -1,0 +1,112 @@
+{
+	"forms": {
+		"SR_CustomerTransYearlyStats": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_CustomerTransFirstLast": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_BookingSummary": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"Entry": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_CustomerTransactionStats": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_UserTrans": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_Top100Customers": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"table_LCT": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"Listbox": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_CompletePLStatement": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_ExpenseIncomeSummary": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_SubAccountsSummary": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"Zreport": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_AnnualSummary": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_LCTByInvoice": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_CustomerTrans": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"PL_Items": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"rep_MiniTillReport": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_Currencies": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_LCTAggrCustomerDaily": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_TransactionSummary": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"PL_Currencies": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"table_eWireSentByCountry": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"Listbox_old": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"SR_CustomerGroups": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"rep_eWiresSentByCountry": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		}
+	}
+}

@@ -1,0 +1,1 @@
+pickCurrency(Self:C308)

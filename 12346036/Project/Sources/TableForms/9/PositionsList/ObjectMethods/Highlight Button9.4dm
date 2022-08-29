@@ -1,0 +1,1 @@
+listbox_filterSelectedRows(->acc_positionsListBox)

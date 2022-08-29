@@ -1,0 +1,345 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 10,
+	"bottomMargin": 4,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"TableName": {
+					"type": "input",
+					"top": 120,
+					"left": 0,
+					"width": 419,
+					"height": 15,
+					"visibility": "hidden",
+					"stroke": "#7170AA",
+					"class": "Label",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#EEEEEE",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/TableName.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Invisible Button": {
+					"type": "button",
+					"top": 75,
+					"left": 3,
+					"width": 30,
+					"height": 11,
+					"dataSource": "Invisible Button",
+					"shortcutKey": "[down arrow]",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/Invisible Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button2": {
+					"type": "button",
+					"top": 75,
+					"left": 43,
+					"width": 30,
+					"height": 11,
+					"dataSource": "Invisible Button",
+					"shortcutKey": "i",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/Invisible Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button3": {
+					"type": "button",
+					"top": 75,
+					"left": 83,
+					"width": 30,
+					"height": 11,
+					"dataSource": "Invisible Button",
+					"shortcutKey": "x",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/Invisible Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"newButton": {
+					"type": "button",
+					"top": 7,
+					"left": 7,
+					"width": 42,
+					"height": 60,
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "New",
+					"icon": "/RESOURCES/Images/library/tbar_new.4DMemoryBitmap",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/newButton.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"changeButton": {
+					"type": "button",
+					"top": 7,
+					"left": 51,
+					"width": 42,
+					"height": 60,
+					"shortcutKey": "e",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Edit",
+					"icon": "/RESOURCES/Images/library/tbar_edit.4DMemoryBitmap",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/changeButton.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"deleteButton": {
+					"type": "button",
+					"top": 7,
+					"left": 95,
+					"width": 42,
+					"height": 60,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Delete Selectio"
+					},
+					"shortcutKey": "[Backspace]",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Delete",
+					"icon": "/RESOURCES/Images/library/tbar_delete.4DMemoryBitmap",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/deleteButton.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"allButton": {
+					"type": "button",
+					"top": 7,
+					"left": 227,
+					"width": 42,
+					"height": 60,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Show All"
+					},
+					"shortcutKey": "a",
+					"shortcutAccel": true,
+					"shortcutShift": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "All",
+					"icon": "/RESOURCES/Images/library/tbar_all.4DMemoryBitmap",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/allButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"filterButton": {
+					"type": "button",
+					"top": 7,
+					"left": 271,
+					"width": 42,
+					"height": 60,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/getMarketRate"
+					},
+					"shortcutKey": "g",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Filter",
+					"icon": "/RESOURCES/Images/library/tbar_filter.4DMemoryBitmap",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/filterButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"findButton": {
+					"type": "button",
+					"top": 7,
+					"left": 139,
+					"width": 42,
+					"height": 60,
+					"shortcutKey": "f",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Find",
+					"icon": "/RESOURCES/Images/library/tbar_loop.4DMemoryBitmap",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/findButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"queryButton": {
+					"type": "button",
+					"top": 7,
+					"left": 183,
+					"width": 42,
+					"height": 60,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Query"
+					},
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Query",
+					"icon": "/RESOURCES/Images/library/tbar_query.4DMemoryBitmap",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/queryButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"reportButton": {
+					"type": "button",
+					"top": 7,
+					"left": 315,
+					"width": 42,
+					"height": 60,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report"
+					},
+					"shortcutKey": "r",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Report",
+					"icon": "/RESOURCES/Images/library/tbar_report.4DMemoryBitmap",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/reportButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"htmlButton": {
+					"type": "button",
+					"top": 7,
+					"left": 405,
+					"width": 42,
+					"height": 60,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Print Selection"
+					},
+					"shortcutKey": "p",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "html",
+					"icon": "/RESOURCES/Images/library/tbar_html.4DMemoryBitmap",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/htmlButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"printButton1": {
+					"type": "button",
+					"top": 7,
+					"left": 360,
+					"width": 42,
+					"height": 60,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Print Selection"
+					},
+					"shortcutKey": "p",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Print",
+					"icon": "/RESOURCES/Images/library/tbar_print.4DMemoryBitmap",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/printButton1.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

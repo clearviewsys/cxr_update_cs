@@ -1,0 +1,3 @@
+
+handleDeleteRowInvoice
+//relateManyRegistersForInvoice 

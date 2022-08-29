@@ -1,0 +1,40 @@
+<!--#4DCODE 
+viTable:=table(WAPI_getCurrTablePtr)
+viCount:=get last field number(viTable)
+vi:=1
+-->
+
+
+    <div class="container content">
+    <!--#4DHTML WAPI_includeAlertMessage-->
+
+<form id='modal-form' action="readRecord" method="post">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <span class="glyphicon glyphicon-print" aria-hidden="true"> </span> Viewing
+                    <!--#4DTEXT table name(viTable) -->
+                </h3>
+            </div>
+
+            <div class="panel-body">
+                <!--#4DLOOP (vi<=viCount)-->
+                <!--#4DIF (is field number valid(viTable;vi)) -->
+                <div class="form-group">
+                    <!--#4DCODE
+$ptrField:=Field(viTable;vi)
+vtField:=WAPI_Field2Txt($ptrField)
+vtInputGroup:=WAPI_formGroup("{field:"+vtField+", readonly:true}")
+-->
+                    <!--#4DHTML vtInputGroup-->
+                </div>
+                <!--#4DENDIF-->
+
+                <!--#4DEVAL vi:=vi+1 -->
+                <!--#4DENDLOOP-->
+            </div>
+
+        </div>
+</form>
+</div>
+

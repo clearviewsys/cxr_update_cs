@@ -1,0 +1,180 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Search",
+	"rightMargin": 0,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onPrintingDetail",
+		"onUnload",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "841pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 74,
+					"left": 1,
+					"width": 706,
+					"height": 258,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "24px",
+					"table": 35,
+					"highlightSet": "$CashInventory_LBSet",
+					"horizontalLineStroke": "transparent",
+					"alternateFill": "#EEEEEE",
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column10",
+							"dataSource": "[CashInventory:35]CashAccountID:2",
+							"width": 110,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_cashAcc",
+								"text": "Cash Account"
+							},
+							"footer": {
+								"name": "Footer10",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[CashInventory:35]Denomination:5",
+							"dataSourceTypeHint": "number",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_denomination",
+								"text": "Denomination"
+							},
+							"footer": {
+								"name": "Footer2",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "[CashInventory:35]SystemCount:6",
+							"dataSourceTypeHint": "integer",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_count",
+								"text": "Count"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "[CashInventory:35]SystemTotal:7",
+							"dataSourceTypeHint": "number",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_tvalue",
+								"text": "Total Value"
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "[CashInventory:35]Currency:4",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_currency",
+								"text": "💲",
+								"tooltip": "Currency",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						}
+					]
+				}
+			}
+		}
+	]
+}

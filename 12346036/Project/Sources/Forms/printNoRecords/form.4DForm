@@ -1,0 +1,171 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerBody": 133,
+	"markerBreak": 133,
+	"markerFooter": 155,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vDateTime": {
+					"type": "input",
+					"top": 6,
+					"left": 626,
+					"width": 100,
+					"height": 10,
+					"dataSource": "vDateTime",
+					"stroke": "#444444",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/vDateTime.4dm",
+					"events": [
+						"onLoad",
+						"onHeader",
+						"onPrintingBreak",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"vTitle": {
+					"type": "input",
+					"top": 26,
+					"left": 199,
+					"width": 381,
+					"height": 12,
+					"dataSource": "reportTitle",
+					"stroke": "#444444",
+					"class": "Titles_print",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/vTitle.4dm",
+					"events": [
+						"onLoad",
+						"onHeader",
+						"onPrintingBreak",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 77,
+					"left": 130,
+					"width": 518,
+					"height": 22,
+					"class": "Titles_print",
+					"textAlign": "center",
+					"text": "No Records Found"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 136,
+					"left": 7,
+					"width": 740
+				},
+				"Line2": {
+					"type": "line",
+					"top": 51,
+					"left": 7,
+					"width": 740
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 8,
+					"left": 107,
+					"width": 314,
+					"height": 15,
+					"dataSource": "<>CompanyName",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 8,
+					"left": 7,
+					"width": 99,
+					"height": 32,
+					"dataSource": "<>CompanyLogo",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

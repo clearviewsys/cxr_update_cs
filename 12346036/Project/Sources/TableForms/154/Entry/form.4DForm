@@ -1,0 +1,263 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Entry",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onDeactivate",
+		"onCloseBox",
+		"onUnload",
+		"onTimer"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"l_relationsType": {
+					"type": "text",
+					"top": 112,
+					"left": 9,
+					"width": 180,
+					"height": 19,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Relations Type"
+				},
+				"RelationsCustomer": {
+					"type": "input",
+					"top": 156,
+					"left": 209,
+					"width": 190,
+					"height": 20,
+					"dataSource": "[Relations:154]customerID:3",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/RelationsCustomer.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_pickCust": {
+					"type": "button",
+					"top": 151,
+					"left": 409,
+					"width": 92,
+					"height": 28,
+					"text": "Pick",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"method": "ObjectMethods/b_pickCust.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"RelationstoCustomer": {
+					"type": "input",
+					"top": 238,
+					"left": 209,
+					"width": 190,
+					"height": 20,
+					"dataSource": "[Relations:154]toCustomerID:4",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/RelationstoCustomer.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_picktoCust": {
+					"type": "button",
+					"top": 233,
+					"left": 409,
+					"width": 92,
+					"height": 28,
+					"text": "Pick",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"method": "ObjectMethods/b_picktoCust.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_save": {
+					"type": "button",
+					"top": 322,
+					"left": 386,
+					"width": 119,
+					"height": 27,
+					"action": "accept",
+					"text": "Save",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 322,
+					"left": 267,
+					"width": 119,
+					"height": 27,
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/b_cancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_Customer": {
+					"type": "text",
+					"top": 156,
+					"left": 9,
+					"width": 180,
+					"height": 19,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Customer"
+				},
+				"l_toCustomer": {
+					"type": "text",
+					"top": 238,
+					"left": 9,
+					"width": 180,
+					"height": 19,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "to Customer"
+				},
+				"customerFullName": {
+					"type": "input",
+					"top": 196,
+					"left": 209,
+					"width": 292,
+					"height": 20,
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onLoad"
+					]
+				},
+				"toCustomerFullName": {
+					"type": "input",
+					"top": 279,
+					"left": 209,
+					"width": 292,
+					"height": 20,
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onLoad"
+					]
+				},
+				"l_relationsTitle": {
+					"type": "text",
+					"top": 61,
+					"left": 184,
+					"width": 180,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"textDecoration": "underline",
+					"text": "Customer Relations"
+				},
+				"l_CustomerName": {
+					"type": "text",
+					"top": 197,
+					"left": 9,
+					"width": 180,
+					"height": 19,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Customer Name"
+				},
+				"l_ToCustomerName1": {
+					"type": "text",
+					"top": 280,
+					"left": 9,
+					"width": 180,
+					"height": 19,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "To Customer Name"
+				},
+				"relationType": {
+					"type": "input",
+					"top": 114,
+					"left": 209,
+					"width": 190,
+					"height": 20,
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onLoad"
+					]
+				},
+				"b_pickRelation": {
+					"type": "button",
+					"top": 108,
+					"left": 409,
+					"width": 92,
+					"height": 28,
+					"text": "Pick",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"method": "ObjectMethods/b_pickRelation.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

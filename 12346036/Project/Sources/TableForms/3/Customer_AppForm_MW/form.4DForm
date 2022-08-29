@@ -1,0 +1,1108 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 0,
+	"markerBody": 735,
+	"markerBreak": 735,
+	"markerFooter": 745,
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 69,
+					"left": 36,
+					"width": 535,
+					"height": 662,
+					"fill": "transparent"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 100,
+					"left": 47,
+					"width": 65,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "First Name:"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 124,
+					"left": 47,
+					"width": 181,
+					"height": 13,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Other Name(e.g. Middle) if applicable"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 149,
+					"left": 47,
+					"width": 73,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Street Address"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 174,
+					"left": 47,
+					"width": 45,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Province"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 199,
+					"left": 47,
+					"width": 207,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Nature of Principal Business or Occupation"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 224,
+					"left": 47,
+					"width": 147,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Email Address (if applicable)"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 249,
+					"left": 47,
+					"width": 239,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Telephone Number with Area Code (if applicable)"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 274,
+					"left": 47,
+					"width": 40,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Home:"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 70,
+					"left": 37,
+					"width": 533,
+					"height": 19,
+					"fill": "#F0F0EE",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 13,
+					"fontWeight": "bold",
+					"text": "   Client Information:"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 89,
+					"left": 37,
+					"width": 534
+				},
+				"Text2": {
+					"type": "text",
+					"top": 100,
+					"left": 300,
+					"width": 52,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Surname:"
+				},
+				"Line2": {
+					"type": "line",
+					"top": 112,
+					"left": 103,
+					"width": 190
+				},
+				"Line3": {
+					"type": "line",
+					"top": 112,
+					"left": 347,
+					"width": 210
+				},
+				"Line5": {
+					"type": "line",
+					"top": 136,
+					"left": 224,
+					"width": 105
+				},
+				"Text4": {
+					"type": "text",
+					"top": 124,
+					"left": 338,
+					"width": 140,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Date of Birth (DD/MM/YYYY)"
+				},
+				"Line6": {
+					"type": "line",
+					"top": 136,
+					"left": 466,
+					"width": 90
+				},
+				"Text12": {
+					"type": "text",
+					"top": 330,
+					"left": 47,
+					"width": 90,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Type of Document:"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 356,
+					"left": 47,
+					"width": 90,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Country of Issue:"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 382,
+					"left": 47,
+					"width": 73,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Expiry Date:"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 356,
+					"left": 300,
+					"width": 120,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Issuing Province/State:"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 447,
+					"left": 54,
+					"width": 280,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"text": "•   Purpose and Intended Nature of the Business Relationship:"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 447,
+					"left": 337,
+					"width": 200,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "The purpose and intended nature of the"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 149,
+					"left": 366,
+					"width": 73,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "City"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 174,
+					"left": 214,
+					"width": 60,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Postal Code"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 174,
+					"left": 378,
+					"width": 40,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Country"
+				},
+				"Text21": {
+					"type": "text",
+					"top": 274,
+					"left": 215,
+					"width": 40,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Cellular:"
+				},
+				"Text22": {
+					"type": "text",
+					"top": 274,
+					"left": 386,
+					"width": 45,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Business:"
+				},
+				"Text23": {
+					"type": "text",
+					"top": 330,
+					"left": 300,
+					"width": 100,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Document Number:"
+				},
+				"Line4": {
+					"type": "line",
+					"top": 161,
+					"left": 118,
+					"width": 230
+				},
+				"Line7": {
+					"type": "line",
+					"top": 161,
+					"left": 387,
+					"width": 170
+				},
+				"Line8": {
+					"type": "line",
+					"top": 184,
+					"left": 90,
+					"width": 115
+				},
+				"Line9": {
+					"type": "line",
+					"top": 186,
+					"left": 272,
+					"width": 98
+				},
+				"Line10": {
+					"type": "line",
+					"top": 186,
+					"left": 417,
+					"width": 130
+				},
+				"Line11": {
+					"type": "line",
+					"top": 211,
+					"left": 249,
+					"width": 307
+				},
+				"Line12": {
+					"type": "line",
+					"top": 236,
+					"left": 183,
+					"width": 371
+				},
+				"Line13": {
+					"type": "line",
+					"top": 286,
+					"left": 80,
+					"width": 120
+				},
+				"Line14": {
+					"type": "line",
+					"top": 286,
+					"left": 256,
+					"width": 120
+				},
+				"Line15": {
+					"type": "line",
+					"top": 286,
+					"left": 432,
+					"width": 120
+				},
+				"Text24": {
+					"type": "text",
+					"top": 298,
+					"left": 37,
+					"width": 533,
+					"height": 19,
+					"fill": "#F0F0EE",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 13,
+					"fontWeight": "bold",
+					"text": "   Identification:"
+				},
+				"Line16": {
+					"type": "line",
+					"top": 298,
+					"left": 37,
+					"width": 534
+				},
+				"Line17": {
+					"type": "line",
+					"top": 317,
+					"left": 37,
+					"width": 534
+				},
+				"Line18": {
+					"type": "line",
+					"top": 342,
+					"left": 136,
+					"width": 150
+				},
+				"Line19": {
+					"type": "line",
+					"top": 367,
+					"left": 128,
+					"width": 158,
+					"height": 1,
+					"startPoint": "bottomLeft"
+				},
+				"Line20": {
+					"type": "line",
+					"top": 394,
+					"left": 106,
+					"width": 180
+				},
+				"Line21": {
+					"type": "line",
+					"top": 342,
+					"left": 395,
+					"width": 160
+				},
+				"Line22": {
+					"type": "line",
+					"top": 368,
+					"left": 412,
+					"width": 143
+				},
+				"Text25": {
+					"type": "text",
+					"top": 411,
+					"left": 37,
+					"width": 533,
+					"height": 19,
+					"fill": "#F0F0EE",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 13,
+					"fontWeight": "bold",
+					"text": "   Purpose and Intended Nature of the Business Relationship / PEP / 3rd Party"
+				},
+				"Line23": {
+					"type": "line",
+					"top": 411,
+					"left": 37,
+					"width": 534
+				},
+				"Line24": {
+					"type": "line",
+					"top": 430,
+					"left": 37,
+					"width": 534
+				},
+				"Text26": {
+					"type": "text",
+					"top": 463,
+					"left": 64,
+					"width": 350,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "business relationship with MoneyWay Financial Group Corporation is:"
+				},
+				"Line25": {
+					"type": "line",
+					"top": 494,
+					"left": 64,
+					"width": 350
+				},
+				"Text27": {
+					"type": "text",
+					"top": 503,
+					"left": 54,
+					"width": 130,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"text": "•   Third Party Declaration:"
+				},
+				"Text28": {
+					"type": "text",
+					"top": 503,
+					"left": 183,
+					"width": 370,
+					"height": 12,
+					"class": "Fields_Small",
+					"text": "Will you be acting for, on behalf of, or on the instructions of another person or"
+				},
+				"Text29": {
+					"type": "text",
+					"top": 519,
+					"left": 64,
+					"width": 483,
+					"height": 12,
+					"class": "Fields_Small",
+					"text": "entity for any transactions during the business relationship with MoneyWay Financial Group Corporation? "
+				},
+				"Text30": {
+					"type": "text",
+					"top": 561,
+					"left": 54,
+					"width": 500,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"text": "•   Politically Exposed Person (PEP) and Head of an International Organization (HIO) Declaration:"
+				},
+				"Text31": {
+					"type": "text",
+					"top": 561,
+					"left": 496,
+					"width": 50,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Are you a"
+				},
+				"Text32": {
+					"type": "text",
+					"top": 577,
+					"left": 64,
+					"width": 500,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "foreign politically exposed person, a domestic politically esposed person, or a Head of an International"
+				},
+				"Text33": {
+					"type": "text",
+					"top": 594,
+					"left": 64,
+					"width": 500,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Organization; or a family member of or close associate of one of these persons?"
+				},
+				"Line26": {
+					"type": "line",
+					"top": 638,
+					"left": 37,
+					"width": 534
+				},
+				"Text34": {
+					"type": "text",
+					"top": 655,
+					"left": 45,
+					"width": 520,
+					"height": 13,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Client Acknowledgement: I hereby acknowledge that the foregoing information is accurate and that I agree"
+				},
+				"Text35": {
+					"type": "text",
+					"top": 672,
+					"left": 45,
+					"width": 500,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "to the Terms and Conditions of <>CompanyName. "
+				},
+				"Text36": {
+					"type": "text",
+					"top": 704,
+					"left": 64,
+					"width": 90,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Client's Signature:"
+				},
+				"Text37": {
+					"type": "text",
+					"top": 704,
+					"left": 317,
+					"width": 50,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Date:"
+				},
+				"Line27": {
+					"type": "line",
+					"top": 716,
+					"left": 153,
+					"width": 150
+				},
+				"Line28": {
+					"type": "line",
+					"top": 716,
+					"left": 349,
+					"width": 150
+				},
+				"Text38": {
+					"type": "text",
+					"top": 26,
+					"left": 206,
+					"width": 201,
+					"height": 17,
+					"textAlign": "center",
+					"fontFamily": "Calibri",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"text": "APPLICATION FORM INDIVIDUAL"
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 25,
+					"left": 437,
+					"width": 133,
+					"height": 42,
+					"dataSource": "<>CompanyAddress",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"multiline": "yes",
+					"wordwrap": "normal",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 3,
+					"left": 41,
+					"width": 96,
+					"height": 64,
+					"dataSource": "<>CompanyLogo",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#FFFFFF",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field": {
+					"type": "input",
+					"top": 95,
+					"left": 104,
+					"width": 189,
+					"height": 14,
+					"dataSource": "[Customers:3]FirstName:3",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 95,
+					"left": 348,
+					"width": 216,
+					"height": 14,
+					"dataSource": "[Customers:3]LastName:4",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 122,
+					"left": 468,
+					"width": 84,
+					"height": 14,
+					"dataSource": "[Customers:3]DOB:5",
+					"dataSourceTypeHint": "date",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 144,
+					"left": 119,
+					"width": 236,
+					"height": 14,
+					"dataSource": "[Customers:3]Address:7",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 145,
+					"left": 389,
+					"width": 163,
+					"height": 14,
+					"dataSource": "[Customers:3]City:8",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 172,
+					"left": 92,
+					"width": 109,
+					"height": 14,
+					"dataSource": "[Customers:3]Province:9",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 172,
+					"left": 274,
+					"width": 98,
+					"height": 14,
+					"dataSource": "[Customers:3]PostalCode:10",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field8": {
+					"type": "input",
+					"top": 172,
+					"left": 419,
+					"width": 128,
+					"height": 14,
+					"dataSource": "[Customers:3]CountryCode:113",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field9": {
+					"type": "input",
+					"top": 197,
+					"left": 251,
+					"width": 307,
+					"height": 14,
+					"dataSource": "[Customers:3]Occupation:21",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field10": {
+					"type": "input",
+					"top": 220,
+					"left": 184,
+					"width": 376,
+					"height": 14,
+					"dataSource": "[Customers:3]Email:17",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field11": {
+					"type": "input",
+					"top": 272,
+					"left": 83,
+					"width": 119,
+					"height": 14,
+					"dataSource": "[Customers:3]HomeTel:6",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field12": {
+					"type": "input",
+					"top": 272,
+					"left": 260,
+					"width": 116,
+					"height": 14,
+					"dataSource": "[Customers:3]CellPhone:13",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field13": {
+					"type": "input",
+					"top": 272,
+					"left": 432,
+					"width": 123,
+					"height": 14,
+					"dataSource": "[Customers:3]WorkTel:12",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field14": {
+					"type": "input",
+					"top": 328,
+					"left": 137,
+					"width": 150,
+					"height": 14,
+					"dataSource": "[Customers:3]PictureID_Type:70",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field15": {
+					"type": "input",
+					"top": 353,
+					"left": 129,
+					"width": 158,
+					"height": 14,
+					"dataSource": "[Customers:3]PictureID_IssueCountry:73",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 379,
+					"left": 107,
+					"width": 180,
+					"height": 14,
+					"dataSource": "[Customers:3]PictureID_ExpiryDate:71",
+					"dataSourceTypeHint": "date",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field16": {
+					"type": "input",
+					"top": 328,
+					"left": 396,
+					"width": 161,
+					"height": 14,
+					"dataSource": "[Customers:3]PictureID_Number:69",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field17": {
+					"type": "input",
+					"top": 353,
+					"left": 412,
+					"width": 143,
+					"height": 14,
+					"dataSource": "[Customers:3]PictureID_IssueState:72",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field18": {
+					"type": "input",
+					"top": 479,
+					"left": 64,
+					"width": 356,
+					"height": 14,
+					"dataSource": "[Customers:3]AML_NatureofBusRelationship:39",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"isPEP": {
+					"type": "checkbox",
+					"top": 609,
+					"left": 64,
+					"width": 120,
+					"height": 18,
+					"text": "PEP",
+					"class": "Fields",
+					"focusable": false,
+					"threeState": true,
+					"method": "ObjectMethods/isPEP.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"isHIO": {
+					"type": "checkbox",
+					"top": 609,
+					"left": 190,
+					"width": 160,
+					"height": 18,
+					"text": "HIO",
+					"class": "Fields",
+					"focusable": false,
+					"threeState": true,
+					"method": "ObjectMethods/isHIO.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"isThirdParty": {
+					"type": "checkbox",
+					"top": 536,
+					"left": 64,
+					"width": 211,
+					"height": 21,
+					"text": "Third Party Declaration",
+					"class": "Fields",
+					"focusable": false,
+					"threeState": true,
+					"method": "ObjectMethods/isThirdParty.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Field19": {
+					"type": "input",
+					"top": 71,
+					"left": 158,
+					"width": 171,
+					"height": 15,
+					"dataSource": "[Customers:3]CustomerID:1",
+					"class": "Fields_BOLD",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field20": {
+					"type": "input",
+					"top": 300,
+					"left": 129,
+					"width": 200,
+					"height": 14,
+					"dataSource": "[Customers:3]PictureID_TemplateID:15",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field21": {
+					"type": "input",
+					"top": 71,
+					"left": 413,
+					"width": 151,
+					"height": 15,
+					"dataSource": "[Customers:3]ExternalAccountNo:96",
+					"class": "Fields_BOLD",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	]
+}

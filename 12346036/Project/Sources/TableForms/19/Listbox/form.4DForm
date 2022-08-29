@@ -1,0 +1,270 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Search",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onBeforeKeystroke",
+		"onPrintingDetail",
+		"onUnload",
+		"onAfterKeystroke",
+		"onLoadRecord"
+	],
+	"method": "method.4dm",
+	"pages": [
+		null,
+		{
+			"objects": {
+				"objForceXmethodUpdate": {
+					"type": "button",
+					"top": 516,
+					"left": 407,
+					"width": 264,
+					"height": 27,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bForceXMethodUpdate",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"focusable": false,
+					"text": "Transfer Selection to Currency Module",
+					"textPlacement": "left",
+					"style": "roundedBevel",
+					"method": "ObjectMethods/objForceXmethodUpdate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_import": {
+					"type": "button",
+					"top": 516,
+					"left": 4,
+					"width": 120,
+					"height": 27,
+					"sizingY": "move",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"focusable": false,
+					"text": "Import",
+					"icon": "/RESOURCES/Images/library/toolbarSave.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "roundedBevel",
+					"method": "ObjectMethods/b_import.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"mainListBox": {
+					"type": "listbox",
+					"top": 75,
+					"left": 1,
+					"width": 700,
+					"height": 432,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"movableRows": false,
+					"rowHeight": "30px",
+					"headerHeight": "24px",
+					"showFooters": true,
+					"table": 19,
+					"highlightSet": "$Flags_LBSet",
+					"horizontalLineStroke": "transparent",
+					"alternateFill": "#EEEEEE",
+					"fontFamily": "Segoe UI",
+					"fontSize": 14,
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column10",
+							"dataSource": "[Flags:19]flag:4",
+							"dataSourceTypeHint": "picture",
+							"width": 79,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"pictureFormat": "proportionalCenter",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Segoe UI",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Flag",
+								"text": "🏁",
+								"tooltip": "Flag",
+								"fontFamily": "Segoe UI",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer10",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC",
+								"fontFamily": "Segoe UI",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[Flags:19]CurrencyCode:1",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Segoe UI",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Code",
+								"text": "Code",
+								"fontFamily": "Segoe UI",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer2",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC",
+								"fontFamily": "Segoe UI",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "[Flags:19]CurrencyName:2",
+							"width": 220,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Segoe UI",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_currency",
+								"text": "Currency Name",
+								"fontFamily": "Segoe UI",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC",
+								"fontFamily": "Segoe UI",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "[Flags:19]Country:3",
+							"width": 284,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Segoe UI",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Country",
+								"text": "Country",
+								"fontFamily": "Segoe UI",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC",
+								"fontFamily": "Segoe UI",
+								"fontSize": 14
+							}
+						}
+					]
+				},
+				"objForceXmethodUpdate2": {
+					"type": "button",
+					"top": 516,
+					"left": 128,
+					"width": 120,
+					"height": 27,
+					"sizingY": "move",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"focusable": false,
+					"text": "Load Flags Only",
+					"icon": "/RESOURCES/Images/library/toolbarSave.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "roundedBevel",
+					"method": "ObjectMethods/objForceXmethodUpdate2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_FixCurrencies": {
+					"type": "button",
+					"top": 516,
+					"left": 252,
+					"width": 120,
+					"height": 27,
+					"sizingY": "move",
+					"text": "Fix Currency Flags",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"method": "ObjectMethods/b_FixCurrencies.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

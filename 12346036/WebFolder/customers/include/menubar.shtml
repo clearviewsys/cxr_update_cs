@@ -1,0 +1,100 @@
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="logo pull-left hidden-xs" style='padding-top: 10px' href="<!--#4DSCRIPT/webGetKeyValue/web.configuration.header.URL-->"><img src="<!--#4DSCRIPT/webGetKeyValue/web.configuration.header.logo.url-->" height="40"></a>
+
+            <div class="logo pull-left visible-xs" style='padding-top: 10px'><img src="<!--#4DSCRIPT/webGetKeyValue/web.configuration.header.logo.url-->" height="40"></div>
+
+            <span class="logo-name pull-left" style='padding-top: 15px; padding-left: 5px; color: white'>
+                &nbsp;
+                <!--#4DSCRIPT/webGetKeyValue/web.configuration.header.name--></span>
+
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <!--#4DIF (webIsLoggedIn)-->
+                <li><a href="/customers/home.shtml">Dashboard</a></li>
+                <li><a href="/customers/links-list.shtml">Beneficiaries</a></li>
+                <li><a href="/customers/activity.shtml">Activity</a></li>
+                <!--<li><a href="/customers/currencies.shtml">Currencies</a></li>-->
+                <!--#4DELSE-->
+                <!--<li><a href="/customers/login/registration.shtml">Register</a></li>-->
+                <!--#4DENDIF-->
+            </ul>
+
+            <!--#4DIF webIsLoggedIn-->
+            <ul class='nav navbar-nav navbar-right'>
+                <li class='dropdown'>
+                    <a href='#' class='dropdown-toggle' role='button' data-toggle='dropdown'>Account<b class='caret'></b></a>
+                    <ul class='dropdown-menu' role='menu'>
+
+                        <li><a href="/customers/profile-update.shtml">Profile</a></li><!-- make this open a dialog in a div -->
+                        <li><a href="/customers/webResetPassword.asp">Change Password</a></li>
+                        <li><a href="webLogout">Log Off -
+                                <!--#4DTEXT webUsername--></a></li>
+                        <!--#4DIF false-->
+                        <li><a href="/customers/login.shtml">Login</a></li>
+                        <!--#4DENDIF-->
+
+                    </ul>
+                </li>
+            </ul>
+
+            <!--#4DELSE-->
+            <div class="navbar-text navbar-right" style="padding-right: 10px">
+                <p><a href="/customers/login.shtml" class="navbar-link">Log Off</a>&nbsp;&nbsp;</p>
+            </div>
+            <!--#4DENDIF-->
+
+
+
+        </div>
+        <!--/.nav-collapse -->
+
+
+    </div>
+</nav>
+
+
+<!--#4DIF false-->
+<div class="modal fade" id="accountModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 class="modal-title">Account Details</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="userId">User ID</label>
+                    <input class="form-control" id="userId" placeholder="User ID" type="text" value="<!--4DTEXT webusername-->">
+                </div>
+                <div class="form-group">
+                    <label for="userPassword">Password</label>
+                    <input class="form-control" id="userPassword" placeholder="Password" type="password">
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Email Address</label>
+                    <input class="form-control" id="userEmail" placeholder="Enter email" type="email">
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <a href="#" data-dismiss="modal" class="btn">Close</a>
+                <a href="#" class="btn btn-primary">Save</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--#4DENDIF-->

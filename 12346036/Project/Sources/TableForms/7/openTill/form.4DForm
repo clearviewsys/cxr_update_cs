@@ -1,0 +1,396 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"bValidate": {
+					"type": "button",
+					"top": 432,
+					"left": 473,
+					"width": 180,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Open Cash Register",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"focusable": false,
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 432,
+					"left": 381,
+					"width": 80,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 8,
+					"left": 13,
+					"width": 640,
+					"height": 24,
+					"fill": "#001274",
+					"stroke": "#FFFFFF",
+					"class": "Titles",
+					"textAlign": "center",
+					"text": "Opening Till "
+				},
+				"vInvoiceNumber": {
+					"type": "input",
+					"top": 9,
+					"left": 17,
+					"width": 116,
+					"height": 16,
+					"dataSource": "vInvoiceNumber",
+					"stroke": "#C5FFC0",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"accountsListBox": {
+					"type": "listbox",
+					"top": 37,
+					"left": 13,
+					"width": 640,
+					"height": 367,
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "accountsListBox",
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "24px",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "#555555",
+					"verticalLineStroke": "#999999",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"borderStyle": "solid",
+					"events": [
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "arrAccountNames",
+							"width": 130,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#444444",
+							"fill": "#FFFFFF",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "AccountsHeader",
+								"text": "Account Name",
+								"dataSource": "vAccountNames",
+								"stroke": "#444444",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrClosings",
+							"dataSourceTypeHint": "number",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textFormat": "|Currency (blank for 0)",
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#999999",
+							"fill": "#FFFFFF",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "accountsBalance",
+								"text": "Current Balance",
+								"dataSource": "vAccountBalances",
+								"stroke": "#444444",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "arrAdjustedBalances",
+							"dataSource": "arrOpenings",
+							"dataSourceTypeHint": "number",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"textFormat": "|Currency (blank for 0)",
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"method": "ObjectMethods/arrAdjustedBalances.4dm",
+							"header": {
+								"name": "adjustBalances",
+								"text": "Opening Balance",
+								"dataSource": "vAdjustedBalances",
+								"stroke": "#444444",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "arrOffBalances",
+							"dataSourceTypeHint": "number",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#0020CF",
+							"fill": "#FFFFFF",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"method": "ObjectMethods/Column3.4dm",
+							"header": {
+								"name": "Header1",
+								"text": "Transfer Amount",
+								"dataSource": "Header1",
+								"stroke": "#444444",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "arrCurrencies",
+							"width": 60,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"stroke": "#444444",
+							"fill": "#FFFFFF",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "currency",
+								"text": "Currency",
+								"dataSource": "vCurrencies",
+								"stroke": "#444444",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 409,
+					"left": 16,
+					"width": 330,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Transfer from Cash Register (Till)"
+				},
+				"vMainCashRegisterID": {
+					"type": "input",
+					"top": 409,
+					"left": 235,
+					"width": 66,
+					"height": 16,
+					"sizingY": "move",
+					"dataSource": "vMainCashRegisterID",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"contextMenu": "none",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 432,
+					"left": 13,
+					"width": 72,
+					"height": 23,
+					"sizingY": "move",
+					"dataSource": "Button1",
+					"shortcutKey": "e",
+					"shortcutAccel": true,
+					"text": "Edit Row",
+					"focusable": false,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"bValidate",
+				"bCancel",
+				"vInvoiceNumber",
+				"accountsListBox",
+				"Button1"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

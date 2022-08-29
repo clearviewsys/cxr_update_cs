@@ -1,0 +1,20 @@
+<!-- DIALOG FOR MESSAGE -->
+<div id='wapi-message-dialog' class='modal fade' tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <span id="wapi-message-icon" class="pull-left"></span>&nbsp;
+                <h2 class="modal-title" id="wapi-message-title" style="display:inline-block; vertical-align:middle;"> Title</h2>
+            </div>
+
+            <div class="modal-body" id='wapi-message-text'>
+                Message
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default" id='wapi-ok-button'>OK</button>
+            </div>
+        </div>
+    </div>
+</div>

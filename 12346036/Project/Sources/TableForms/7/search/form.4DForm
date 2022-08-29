@@ -1,0 +1,139 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"markerBody": 121,
+	"markerBreak": 121,
+	"markerFooter": 131,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text7": {
+					"type": "text",
+					"top": 20,
+					"left": 10,
+					"width": 85,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Search Text"
+				},
+				"Tel1": {
+					"type": "input",
+					"top": 20,
+					"left": 100,
+					"width": 240,
+					"height": 16,
+					"dataSource": "vSearchText",
+					"stroke": "#000000",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 50,
+					"left": 275,
+					"width": 68,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"text": "Search",
+					"textAlign": "center",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"focusable": false,
+					"defaultButton": true,
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 50,
+					"left": 200,
+					"width": 67,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"action": "cancel",
+					"text": "Cancel",
+					"textAlign": "center",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

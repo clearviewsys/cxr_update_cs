@@ -1,0 +1,248 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "ViewToolbar2",
+	"inheritedFormTable": 7,
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Field1": {
+					"type": "input",
+					"top": 78,
+					"left": 145,
+					"width": 54,
+					"height": 15,
+					"dataSource": "[FieldConstraints:69]TableNo:1",
+					"class": "Fields",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 104,
+					"left": 145,
+					"width": 54,
+					"height": 15,
+					"dataSource": "[FieldConstraints:69]FieldNo:2",
+					"class": "Fields",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 132,
+					"left": 145,
+					"width": 219,
+					"height": 15,
+					"dataSource": "[FieldConstraints:69]FieldLabel:3",
+					"class": "Fields",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 78,
+					"left": 29,
+					"width": 107,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Table No:"
+				},
+				"Field4": {
+					"type": "checkbox",
+					"top": 161,
+					"left": 143,
+					"width": 221,
+					"height": 30,
+					"dataSource": "[FieldConstraints:69]isMandatory:4",
+					"text": "Mandatory",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 104,
+					"left": 29,
+					"width": 107,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Field No: "
+				},
+				"Text5": {
+					"type": "text",
+					"top": 130,
+					"left": 29,
+					"width": 107,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Field Label"
+				},
+				"Field5": {
+					"type": "input",
+					"top": 78,
+					"left": 212,
+					"width": 152,
+					"height": 15,
+					"dataSource": "[FieldConstraints:69]TableName:5",
+					"class": "Fields",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 104,
+					"left": 212,
+					"width": 152,
+					"height": 15,
+					"dataSource": "[FieldConstraints:69]FieldName:6",
+					"class": "Fields",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Round Rectangle": {
+					"type": "rectangle",
+					"top": 200,
+					"left": 22,
+					"width": 350,
+					"height": 100,
+					"fill": "transparent",
+					"borderRadius": 5
+				},
+				"Field7": {
+					"type": "checkbox",
+					"top": 206,
+					"left": 37,
+					"width": 221,
+					"height": 30,
+					"dataSource": "[FieldConstraints:69]isConditional:7",
+					"text": "Conditional Constraint",
+					"class": "Fields",
+					"method": "ObjectMethods/Field7.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"conditionGroup": {
+					"type": "input",
+					"top": 241,
+					"left": 192,
+					"width": 170,
+					"height": 15,
+					"dataSource": "[FieldConstraints:69]GroupName:8",
+					"class": "Fields",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 241,
+					"left": 37,
+					"width": 167,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Condition Group Name"
+				},
+				"Text": {
+					"type": "text",
+					"top": 265,
+					"left": 39,
+					"width": 333,
+					"height": 27,
+					"class": "Tags",
+					"text": "conditional contraints are used by the AML Rule and get checked only a certain condition or rules apply. "
+				}
+			}
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group1": [
+				"Round Rectangle",
+				"Field7",
+				"conditionGroup",
+				"Text6",
+				"Text"
+			]
+		},
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

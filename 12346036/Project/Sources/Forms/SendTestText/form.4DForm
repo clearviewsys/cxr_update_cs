@@ -1,0 +1,99 @@
+{
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"f_message": {
+					"type": "input",
+					"top": 63,
+					"left": 23,
+					"width": 281,
+					"height": 33,
+					"dataSource": "Form:C1466.toNumber",
+					"textAlign": "center",
+					"fontFamily": "Arial",
+					"fontSize": 28,
+					"multiline": "yes",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_Send": {
+					"type": "button",
+					"top": 103,
+					"left": 184,
+					"width": 121,
+					"height": 30,
+					"action": "accept",
+					"text": "Send Direct 📱",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_Send.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 29,
+					"left": 23,
+					"width": 281,
+					"height": 24,
+					"class": "Titles",
+					"text": "Please enter cell phone no."
+				},
+				"b_Send1": {
+					"type": "button",
+					"top": 103,
+					"left": 22,
+					"width": 159,
+					"height": 30,
+					"action": "accept",
+					"text": "Send Notification 📱",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_Send1.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 19,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

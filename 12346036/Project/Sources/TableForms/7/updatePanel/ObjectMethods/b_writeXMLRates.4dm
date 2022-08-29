@@ -1,0 +1,2 @@
+writeXMLRatesForFlash
+handleRefreshRatesNow

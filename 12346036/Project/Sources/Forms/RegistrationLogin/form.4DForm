@@ -1,0 +1,182 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"h_ClientCode": {
+					"type": "text",
+					"top": 123,
+					"left": 40,
+					"width": 91,
+					"height": 28,
+					"class": "Fields_XtraLarge",
+					"text": "Client Code"
+				},
+				"h_ClientKey": {
+					"type": "text",
+					"top": 160,
+					"left": 40,
+					"width": 91,
+					"height": 28,
+					"class": "Fields_XtraLarge",
+					"text": "Client Key"
+				},
+				"Text": {
+					"type": "text",
+					"top": 65,
+					"left": 40,
+					"width": 494,
+					"height": 38,
+					"stroke": "#FF0000",
+					"class": "Control_Large_",
+					"textAlign": "center",
+					"text": "Registration data has not been found for this client, please enter your registration info below"
+				},
+				"f_ClienCode": {
+					"type": "input",
+					"top": 123,
+					"left": 140,
+					"width": 400,
+					"height": 29,
+					"dataSource": "Form:C1466.ClientCode",
+					"class": "Fields_XtraLarge",
+					"multiline": "no",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"f_ClientKey": {
+					"type": "input",
+					"top": 160,
+					"left": 140,
+					"width": 400,
+					"height": 29,
+					"dataSource": "Form:C1466.ClientKey",
+					"class": "Fields_XtraLarge",
+					"multiline": "no",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_submit": {
+					"type": "button",
+					"top": 213,
+					"left": 420,
+					"width": 120,
+					"height": 30,
+					"action": "accept",
+					"text": "Submit",
+					"class": "Control_Large_",
+					"focusable": false,
+					"defaultButton": true,
+					"method": "ObjectMethods/b_submit.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_forgot": {
+					"type": "button",
+					"top": 213,
+					"left": 292,
+					"width": 120,
+					"height": 30,
+					"text": "Forgot Key",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_forgot.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_new": {
+					"type": "button",
+					"top": 213,
+					"left": 164,
+					"width": 120,
+					"height": 30,
+					"text": "Sign Up",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_new.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button3": {
+					"type": "button",
+					"top": 213,
+					"left": 36,
+					"width": 120,
+					"height": 30,
+					"text": "Exit",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"title_ClientRegistration1": {
+					"type": "text",
+					"top": 21,
+					"left": 36,
+					"width": 498,
+					"height": 24,
+					"class": "Titles",
+					"textAlign": "center",
+					"text": "Client Registration"
+				},
+				"Button1": {
+					"type": "button",
+					"top": 16,
+					"left": 36,
+					"width": 95,
+					"height": 29,
+					"visibility": "hidden",
+					"text": "Bypass",
+					"focusable": false,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	]
+}

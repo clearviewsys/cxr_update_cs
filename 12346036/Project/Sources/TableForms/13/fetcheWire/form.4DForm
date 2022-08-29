@@ -1,0 +1,858 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 202,
+					"left": 10,
+					"width": 624,
+					"height": 115,
+					"fill": "transparent"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 382,
+					"left": 10,
+					"width": 624,
+					"height": 159,
+					"fill": "transparent"
+				},
+				"Text": {
+					"type": "text",
+					"top": 22,
+					"left": 19,
+					"width": 90,
+					"height": 30,
+					"class": "Fields_XtraLarge",
+					"text": "eWire ID"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 22,
+					"left": 294,
+					"width": 150,
+					"height": 29,
+					"class": "Fields_XtraLarge",
+					"textAlign": "right",
+					"text": "Security Code"
+				},
+				"l_customerID": {
+					"type": "text",
+					"top": 393,
+					"left": 19,
+					"width": 174,
+					"height": 28,
+					"stroke": "#304A6B",
+					"class": "Fields_XtraLarge",
+					"textAlign": "right",
+					"text": "Customer ID"
+				},
+				"Field": {
+					"type": "input",
+					"top": 22,
+					"left": 116,
+					"width": 184,
+					"height": 29,
+					"dataSource": "veWireID",
+					"class": "Fields_XtraLarge",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 21,
+					"left": 452,
+					"width": 66,
+					"height": 29,
+					"dataSource": "vSecurityCode",
+					"class": "Fields_XtraLarge",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"GeteWireStatus": {
+					"type": "button",
+					"top": 22,
+					"left": 534,
+					"width": 100,
+					"height": 30,
+					"text": "Get Status",
+					"method": "ObjectMethods/GeteWireStatus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"FETCH_PickCustomerID": {
+					"type": "input",
+					"top": 395,
+					"left": 200,
+					"width": 196,
+					"height": 29,
+					"dataSource": "vCustomerID",
+					"stroke": "#304A6B",
+					"class": "Fields_XtraLarge",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/FETCH_PickCustomerID.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"FETCH_FetcheWire": {
+					"type": "button",
+					"top": 546,
+					"left": 394,
+					"width": 240,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"text": "Fetch eWire & Link to Customer",
+					"method": "ObjectMethods/FETCH_FetcheWire.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 427,
+					"left": 200,
+					"width": 428,
+					"height": 25,
+					"sizingX": "grow",
+					"dataSource": "[Customers:3]FullName:40",
+					"stroke": "#304A6B",
+					"class": "Fields_XtraLarge",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 546,
+					"left": 10,
+					"width": 162,
+					"height": 30,
+					"sizingY": "move",
+					"dataSource": "Button",
+					"action": "cancel",
+					"text": "Close",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field14": {
+					"type": "input",
+					"top": 65,
+					"left": 554,
+					"width": 80,
+					"height": 19,
+					"sizingX": "move",
+					"dataSource": "vDate",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field16": {
+					"type": "input",
+					"top": 65,
+					"left": 153,
+					"width": 300,
+					"height": 19,
+					"sizingX": "grow",
+					"dataSource": "vSenderName",
+					"stroke": "#50695E",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field17": {
+					"type": "input",
+					"top": 92,
+					"left": 153,
+					"width": 300,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "vBeneficiaryName",
+					"stroke": "#50695E",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 207,
+					"left": 155,
+					"width": 140,
+					"height": 20,
+					"dataSource": "vFromAmount",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 207,
+					"left": 391,
+					"width": 166,
+					"height": 20,
+					"dataSource": "vToAmount",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 207,
+					"left": 565,
+					"width": 51,
+					"height": 20,
+					"dataSource": "vCurrency",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"fromCountryCode": {
+					"type": "input",
+					"top": 233,
+					"left": 155,
+					"width": 100,
+					"height": 20,
+					"dataSource": "vFromCountryCode",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field8": {
+					"type": "input",
+					"top": 234,
+					"left": 391,
+					"width": 100,
+					"height": 20,
+					"dataSource": "vToCountryCode",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field10": {
+					"type": "input",
+					"top": 460,
+					"left": 190,
+					"width": 438,
+					"height": 54,
+					"sizingY": "grow",
+					"dataSource": "vComments",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field12": {
+					"type": "input",
+					"top": 328,
+					"left": 291,
+					"width": 125,
+					"height": 23,
+					"dataSource": "vFetchDate",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field13": {
+					"type": "input",
+					"top": 328,
+					"left": 219,
+					"width": 45,
+					"height": 23,
+					"dataSource": "vFetchLocation",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text15": {
+					"type": "text",
+					"top": 65,
+					"left": 411,
+					"width": 135,
+					"height": 19,
+					"sizingX": "move",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Sent Date"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 65,
+					"left": 10,
+					"width": 135,
+					"height": 19,
+					"stroke": "#50695E",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Sender Name"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 93,
+					"left": 10,
+					"width": 135,
+					"height": 19,
+					"stroke": "#50695E",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Beneficiary Name"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 207,
+					"left": 19,
+					"width": 129,
+					"height": 20,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "From Amount"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 207,
+					"left": 252,
+					"width": 129,
+					"height": 20,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "To Amount"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 233,
+					"left": 19,
+					"width": 129,
+					"height": 20,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "From"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 234,
+					"left": 261,
+					"width": 120,
+					"height": 20,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "To"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 460,
+					"left": 19,
+					"width": 164,
+					"height": 20,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Special Instructions"
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"top": 344,
+					"left": 58,
+					"width": 285,
+					"height": 37,
+					"dataSource": "vIsSettled",
+					"text": "Paid (settled with beneficiary)",
+					"class": "Fields_Large",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_customerName": {
+					"type": "text",
+					"top": 427,
+					"left": 19,
+					"width": 174,
+					"height": 25,
+					"stroke": "#304A6B",
+					"class": "Fields_XtraLarge",
+					"textAlign": "right",
+					"text": "Customer Name"
+				},
+				"FETCH_PickCustomerBtn": {
+					"type": "button",
+					"top": 397,
+					"left": 405,
+					"width": 129,
+					"height": 25,
+					"dataSource": "Button",
+					"text": "Pick Customer",
+					"method": "ObjectMethods/FETCH_PickCustomerBtn.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"top": 325,
+					"left": 58,
+					"width": 221,
+					"height": 23,
+					"dataSource": "vIsFetched",
+					"text": "Fetched by branch",
+					"class": "Fields_Large",
+					"events": [
+						"onClick"
+					]
+				},
+				"missmatch": {
+					"type": "text",
+					"top": 517,
+					"left": 190,
+					"width": 438,
+					"height": 21,
+					"visibility": "hidden",
+					"sizingY": "move",
+					"stroke": "#EE0000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": "Beneficiary name does not match"
+				},
+				"beneficiaryAmendedName": {
+					"type": "input",
+					"top": 120,
+					"left": 153,
+					"width": 300,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "vBeneficiaryAmendedName",
+					"stroke": "#000099",
+					"class": "Fields_Large",
+					"fontWeight": "bold",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_beneficaryAmendedName": {
+					"type": "text",
+					"top": 121,
+					"left": 10,
+					"width": 135,
+					"height": 19,
+					"stroke": "#50695E",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Amended Name"
+				},
+				"Field7": {
+					"type": "input",
+					"top": 352,
+					"left": 399,
+					"width": 125,
+					"height": 20,
+					"dataSource": "vInvoiceNum",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field9": {
+					"type": "input",
+					"top": 92,
+					"left": 554,
+					"width": 75,
+					"height": 20,
+					"sizingX": "move",
+					"dataSource": "vToMOPCode",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 92,
+					"left": 460,
+					"width": 85,
+					"height": 20,
+					"sizingX": "move",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "To MOP"
+				},
+				"Field11": {
+					"type": "input",
+					"top": 261,
+					"left": 155,
+					"width": 225,
+					"height": 20,
+					"dataSource": "vBankName",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 261,
+					"left": 19,
+					"width": 129,
+					"height": 20,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Bank"
+				},
+				"Field15": {
+					"type": "input",
+					"top": 261,
+					"left": 391,
+					"width": 225,
+					"height": 20,
+					"dataSource": "vBankAccount",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text10": {
+					"type": "text",
+					"top": 288,
+					"left": 19,
+					"width": 129,
+					"height": 20,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Purpose"
+				},
+				"Field18": {
+					"type": "input",
+					"top": 328,
+					"left": 534,
+					"width": 100,
+					"height": 23,
+					"dataSource": "vStatus",
+					"class": "Fields_Large",
+					"fontWeight": "bold",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field19": {
+					"type": "input",
+					"top": 120,
+					"left": 459,
+					"width": 175,
+					"height": 20,
+					"sizingX": "move",
+					"dataSource": "vToMOP",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field20": {
+					"type": "input",
+					"top": 148,
+					"left": 153,
+					"width": 481,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "vBeneficiaryAddress",
+					"stroke": "#50695E",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"top": 147,
+					"left": 10,
+					"width": 135,
+					"height": 19,
+					"stroke": "#50695E",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Address"
+				},
+				"Field21": {
+					"type": "input",
+					"top": 288,
+					"left": 155,
+					"width": 461,
+					"height": 20,
+					"dataSource": "vPurpose",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field22": {
+					"type": "input",
+					"top": 175,
+					"left": 153,
+					"width": 125,
+					"height": 19,
+					"sizingX": "grow",
+					"dataSource": "vBeneficiaryCell",
+					"stroke": "#50695E",
+					"class": "Fields_Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text13": {
+					"type": "text",
+					"top": 175,
+					"left": 10,
+					"width": 135,
+					"height": 19,
+					"stroke": "#50695E",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Mobile Phone"
+				},
+				"FETCH_Status": {
+					"type": "input",
+					"top": 488,
+					"left": 29,
+					"width": 330,
+					"height": 40,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSourceTypeHint": "picture",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"events": [
+						"onDataChange"
+					]
+				}
+			},
+			"entryOrder": [
+				"Field",
+				"Field1",
+				"GeteWireStatus",
+				"FETCH_PickCustomerID",
+				"FETCH_FetcheWire",
+				"Field3",
+				"Button1",
+				"Check Box",
+				"FETCH_PickCustomerBtn",
+				"Check Box1"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Rectangle"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

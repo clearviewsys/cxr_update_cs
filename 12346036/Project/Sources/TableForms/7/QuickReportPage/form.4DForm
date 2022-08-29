@@ -1,0 +1,106 @@
+﻿{
+	"destination": "detailScreen",
+	"windowMinWidth": 400,
+	"windowMinHeight": 250,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Plugin Area": {
+					"type": "plugin",
+					"top": 75,
+					"left": 0,
+					"width": 971,
+					"height": 432,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "myQReport",
+					"pluginAreaKind": "%Report",
+					"borderStyle": "none",
+					"events": [
+						"onClick",
+						"onPluginArea"
+					]
+				},
+				"Popup Drop down List": {
+					"type": "dropdown",
+					"top": 42,
+					"left": 228,
+					"width": 645,
+					"height": 25,
+					"dataSource": "arrDocumentList",
+					"class": "Fields",
+					"method": "ObjectMethods/Popup Drop down List.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 48,
+					"left": 10,
+					"width": 206,
+					"height": 15,
+					"class": "Fields",
+					"text": "Please select a report from the list"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

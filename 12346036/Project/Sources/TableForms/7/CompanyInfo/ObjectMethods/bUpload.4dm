@@ -1,0 +1,1 @@
+openPictureID(->[CompanyInfo:7]Logo:8)

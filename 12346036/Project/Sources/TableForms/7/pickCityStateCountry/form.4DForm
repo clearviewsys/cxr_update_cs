@@ -1,0 +1,579 @@
+﻿{
+	"destination": "detailScreen",
+	"windowTitle": "Pick a City/ State/ Country",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 429,
+					"left": 11,
+					"width": 505,
+					"height": 101,
+					"sizingY": "move",
+					"fill": "#9BA3B2",
+					"stroke": "#666666"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 459,
+					"left": 21,
+					"width": 131,
+					"height": 16,
+					"sizingY": "move",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "State / Province : "
+				},
+				"Text15": {
+					"type": "text",
+					"top": 480,
+					"left": 21,
+					"width": 131,
+					"height": 16,
+					"sizingY": "move",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "Country Code : "
+				},
+				"Text16": {
+					"type": "text",
+					"top": 499,
+					"left": 21,
+					"width": 131,
+					"height": 16,
+					"sizingY": "move",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "County / District : "
+				},
+				"CityName": {
+					"type": "input",
+					"top": 435,
+					"left": 21,
+					"width": 481,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "[Cities:60]CityName:1",
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFC704",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"StateCode": {
+					"type": "input",
+					"top": 458,
+					"left": 157,
+					"width": 33,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "[Cities:60]StateCode:2",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#D2DFF6",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"County": {
+					"type": "input",
+					"top": 500,
+					"left": 157,
+					"width": 345,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "[Cities:60]County:5",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#D2DFF6",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"pick_vSearchText": {
+					"type": "input",
+					"top": 13,
+					"left": 85,
+					"width": 157,
+					"height": 16,
+					"dataSource": "pick_vSearchText",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/pick_vSearchText.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onBeforeKeystroke",
+						"onDataChange",
+						"onAfterKeystroke"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 13,
+					"left": 11,
+					"width": 80,
+					"height": 15,
+					"class": "Label",
+					"text": "Find City: "
+				},
+				"arrCityStateCountry": {
+					"type": "listbox",
+					"top": 188,
+					"left": 11,
+					"width": 505,
+					"height": 209,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "arrCityStateCountry",
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "24px",
+					"selectionMode": "single",
+					"horizontalLineStroke": "#AAAAAA",
+					"verticalLineStroke": "#AAAAAA",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"alternateFill": "#A6ADBC",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"method": "ObjectMethods/arrCityStateCountry.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDoubleClick",
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "arrCities",
+							"width": 183,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#444444",
+							"fill": "#FFFFFF",
+							"alternateFill": "#A6ADBC",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "City",
+								"dataSource": "Header1",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrStates",
+							"width": 145,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#A6ADBC",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "State / Province",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "arrCountries",
+							"width": 160,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#A6ADBC",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Country",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						}
+					]
+				},
+				"pick_bPick": {
+					"type": "button",
+					"top": 533,
+					"left": 429,
+					"width": 87,
+					"height": 24,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "pick_bPick",
+					"action": "accept",
+					"shortcutKey": "[Return]",
+					"text": "Pick",
+					"class": "Control",
+					"stroke": "#000000",
+					"method": "ObjectMethods/pick_bPick.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"cancelButton": {
+					"type": "button",
+					"top": 533,
+					"left": 332,
+					"width": 87,
+					"height": 24,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"action": "cancel",
+					"shortcutKey": ".",
+					"shortcutAccel": true,
+					"text": "Cancel",
+					"class": "Control",
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 13,
+					"left": 262,
+					"width": 119,
+					"height": 17,
+					"dataSource": "vMatches",
+					"stroke": "#666666",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"spellcheck": true,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CountryCode1": {
+					"type": "input",
+					"top": 479,
+					"left": 157,
+					"width": 33,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "[Countries:62]CountryCode:1",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#D2DFF6",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CountryCode2": {
+					"type": "input",
+					"top": 458,
+					"left": 192,
+					"width": 310,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "[States:61]StateName:3",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#D2DFF6",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Invisible Button3": {
+					"type": "button",
+					"top": 402,
+					"left": 11,
+					"width": 215,
+					"height": 27,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"dataSource": "Invisible Button3",
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"shortcutShift": true,
+					"class": "Control",
+					"focusable": false,
+					"text": "Display List of All Cities",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Invisible Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"newButton": {
+					"type": "button",
+					"top": 533,
+					"left": 11,
+					"width": 123,
+					"height": 24,
+					"dataSource": "bNew",
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"text": "Add New City",
+					"class": "Control",
+					"stroke": "#000000",
+					"method": "ObjectMethods/newButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"arrRecentPicks": {
+					"type": "listbox",
+					"top": 39,
+					"left": 11,
+					"width": 364,
+					"height": 143,
+					"sizingX": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "arrRecentPicks",
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "24px",
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"fill": "#FFFFFF",
+					"alternateFill": "#EEEEEE",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"method": "ObjectMethods/arrRecentPicks.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDoubleClick",
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"name": "Column4",
+							"dataSource": "arrRecentCities",
+							"width": 347,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#444444",
+							"fill": "#FFFFFF",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "Recent Picks",
+								"dataSource": "Header1",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#FFFFFF",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						}
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 39,
+					"left": 385,
+					"width": 131,
+					"height": 22,
+					"dataSource": "Button1",
+					"fontFamily": "Tahoma",
+					"fontSize": 10,
+					"focusable": false,
+					"text": "Clear Recent Picks",
+					"style": "bevel",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

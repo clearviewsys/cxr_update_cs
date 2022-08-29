@@ -1,0 +1,185 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Min",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 65,
+					"left": 0,
+					"width": 380,
+					"height": 359,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "mainListBox",
+					"movableRows": false,
+					"showFooters": true,
+					"table": 57,
+					"highlightSet": "$DateRanges_LBSet",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"alternateFill": "#EEEEEE",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column13",
+							"dataSource": "[DateRanges:57]DateRangeID:1",
+							"width": 145,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "l_dateRangeID",
+								"text": "Name",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer18",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column14",
+							"dataSource": "[DateRanges:57]fromDate:2",
+							"dataSourceTypeHint": "date",
+							"width": 110,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_fromdate",
+								"text": ":xliff:cvs_from_date",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer20",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "[DateRanges:57]toDate:3",
+							"dataSourceTypeHint": "date",
+							"width": 122,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_todate",
+								"text": ":xliff:cvs_to_date",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer9",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

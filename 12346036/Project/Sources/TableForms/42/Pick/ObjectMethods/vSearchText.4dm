@@ -1,0 +1,2 @@
+//handleAutoFillSearch (Self;Current form table;->[WireTemplates]WireTemplateID;->[WireTemplates]WireTemplateAlias;->[WireTemplates]WireTemplateID;->arrKey;->arrValue;"selectWireTemplatesForCustomer")
+handlePickFormSearchField(Self:C308; Current form table:C627; ->[WireTemplates:42]WireTemplateID:1; ->[WireTemplates:42]WireTemplateAlias:14; ->[WireTemplates:42]WireTemplateAlias:14; ->[WireTemplates:42]BeneficiaryFullName:9; ->[WireTemplates:42]BankName:3; ->[WireTemplates:42]AccountNo:6; ->[WireTemplates:42]AccountNo:6; "selectWireTemplatesForCustomer")

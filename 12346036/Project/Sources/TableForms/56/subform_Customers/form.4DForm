@@ -1,0 +1,307 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "subForm_Customers",
+	"inheritedFormTable": 7,
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 60,
+	"markerBody": 85,
+	"markerBreak": 85,
+	"markerFooter": 85,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDisplayDetail",
+		"onDoubleClick",
+		"onDragOver",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"S5_Field": {
+					"type": "input",
+					"top": 64,
+					"left": 309,
+					"width": 414,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "[Mailboxes:56]Comments:5",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S1_Field": {
+					"type": "input",
+					"top": 64,
+					"left": 3,
+					"width": 84,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Mailboxes:56]MailboxID:1",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S2_Field": {
+					"type": "input",
+					"top": 64,
+					"left": 101,
+					"width": 92,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "[Mailboxes:56]StartDate:3",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Splitter6": {
+					"type": "splitter",
+					"top": 1,
+					"left": 728,
+					"width": 1,
+					"height": 43,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter7": {
+					"type": "splitter",
+					"top": 40,
+					"left": 95,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button4": {
+					"type": "button",
+					"top": 40,
+					"left": 3,
+					"width": 90,
+					"height": 19,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Mailbox ID",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button4.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Splitter8": {
+					"type": "splitter",
+					"top": 40,
+					"left": 199,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button1": {
+					"type": "button",
+					"top": 40,
+					"left": 98,
+					"width": 99,
+					"height": 19,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Start Date",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button1.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"3D Button2": {
+					"type": "button",
+					"top": 40,
+					"left": 306,
+					"width": 420,
+					"height": 19,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Headings",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Comments",
+					"textPlacement": "right",
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Splitter9": {
+					"type": "splitter",
+					"top": 40,
+					"left": 728,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"S2_Field1": {
+					"type": "input",
+					"top": 64,
+					"left": 205,
+					"width": 92,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "[Mailboxes:56]ExpirationDate:4",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"3D Button3": {
+					"type": "button",
+					"top": 40,
+					"left": 202,
+					"width": 99,
+					"height": 19,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Exp. Date",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button3.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Splitter1": {
+					"type": "splitter",
+					"top": 40,
+					"left": 303,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

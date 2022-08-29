@@ -1,0 +1,1 @@
+listbox_deleteSelectedRows(->acc_AccountsListBox)

@@ -1,0 +1,1 @@
+bindPopUpToIntegerField(Self:C308; ->[ClientPrefs:26]chequeFormat:28)

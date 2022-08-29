@@ -1,0 +1,1 @@
+listbox_displayRecordOnDC(Self:C308; ->[Invoices:5]; ->acc_arrInvoiceIDs)

@@ -1,0 +1,267 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowMinHeight": 200,
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vSearchText": {
+					"type": "input",
+					"top": 32,
+					"left": 12,
+					"width": 97,
+					"height": 15,
+					"dataSource": "vSearchText",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/vSearchText.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onBeforeKeystroke",
+						"onDataChange",
+						"onAfterKeystroke"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 12,
+					"left": 39,
+					"width": 110,
+					"height": 15,
+					"fill": "#DDDDDD",
+					"textAlign": "center",
+					"text": "Cash Registers"
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 153,
+					"left": 10,
+					"width": 20,
+					"height": 15,
+					"dataSource": "Invisible Button1",
+					"shortcutKey": "[up arrow]",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Invisible Button2": {
+					"type": "button",
+					"top": 153,
+					"left": 30,
+					"width": 20,
+					"height": 15,
+					"dataSource": "Invisible Button1",
+					"shortcutKey": "[down arrow]",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button2.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 150,
+					"left": 70,
+					"width": 78,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "bAccept",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "OK",
+					"class": "Control",
+					"defaultButton": true,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Scrollable Area1": {
+					"type": "listbox",
+					"top": 70,
+					"left": 10,
+					"width": 140,
+					"height": 75,
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"showHeaders": false,
+					"scrollbarHorizontal": "hidden",
+					"scrollbarVertical": "hidden",
+					"horizontalLineStroke": "transparent",
+					"stroke": "#444444",
+					"fill": "#FFFFFF",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"method": "ObjectMethods/Scrollable Area1.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "Scrollable Area1_Column1",
+							"dataSource": "arrKey",
+							"width": 41,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#444444",
+							"fill": "#FFFFFF",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Header1",
+								"dataSource": "Header1",
+								"stroke": "#444444",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#444444",
+								"fill": "#FFFFFF",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "arrValue",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#444444",
+							"fill": "#FFFFFF",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header5",
+								"text": "Header5",
+								"stroke": "#444444",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#444444",
+								"fill": "#FFFFFF",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"Picture18": {
+					"type": "picture",
+					"top": 6,
+					"left": 8,
+					"width": 25,
+					"height": 25,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/_CashRegisters.png"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 55,
+					"left": 10,
+					"width": 40,
+					"height": 15,
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"textAlign": "center",
+					"text": "Machine"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 55,
+					"left": 51,
+					"width": 99,
+					"height": 15,
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"textAlign": "center",
+					"text": "Signed In User"
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 34,
+					"left": 129,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/micn Search.png"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,511 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"searchString": {
+					"type": "input",
+					"top": 12,
+					"left": 603,
+					"width": 243,
+					"height": 20,
+					"sizingX": "move",
+					"dataSource": "Form:C1466.searchString",
+					"class": "Control_Large_",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/searchString.4dm",
+					"events": [
+						"onDataChange",
+						"onAfterEdit"
+					]
+				},
+				"ListBox": {
+					"type": "listbox",
+					"top": 44,
+					"left": 8,
+					"width": 849,
+					"height": 295,
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "25px",
+					"dataSource": "Form:C1466.pickerList",
+					"currentItemSource": "Form:C1466.currentEntity",
+					"currentItemPositionSource": "Form:C1466.row",
+					"selectedItemsSource": "Form:C1466.selectedEntities",
+					"selectionMode": "single",
+					"horizontalLineStroke": "transparent",
+					"alternateFill": "#E8EAFD",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"method": "ObjectMethods/ListBox.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"name": "BranchID",
+							"dataSource": "This:C1470.BranchID",
+							"width": 32,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#EAE2DF",
+							"alternateFill": "#D5D8DA",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header7",
+								"text": "Br",
+								"dataSource": "Header6",
+								"fontFamily": "Arial",
+								"fontSize": 9
+							},
+							"footer": {
+								"name": "Footer10",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "isFlagged",
+							"dataSource": "This:C1470.isFlagged",
+							"width": 39,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#E8EAFD",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_flag",
+								"text": "flag",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer11",
+								"dataSource": "vTotalCount",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "count",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C2C8CD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "del",
+							"dataSource": "This:C1470.isCancelled",
+							"dataSourceTypeHint": "boolean",
+							"width": 41,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"alternateFill": "#E8EAFD",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Del",
+								"text": "Del.",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer9",
+								"dataSourceTypeHint": "boolean",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C2C8CD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "InvRef",
+							"dataSource": "This:C1470.InvoiceID",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#E8EAFD",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_InvRef",
+								"text": "Invoice Ref.",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer17",
+								"dataSourceTypeHint": "boolean",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C2C8CD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "serial",
+							"dataSource": "This:C1470.InvoiceSerial",
+							"width": 60,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#E8EAFD",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_serial",
+								"text": "Serial",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer8",
+								"dataSourceTypeHint": "boolean",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C2C8CD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "InvoiceDate",
+							"dataSource": "This:C1470.invoiceDate",
+							"dataSourceTypeHint": "date",
+							"width": 60,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#EDF7F9",
+							"alternateFill": "#D9E9F1",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_InvDate",
+								"text": "Date",
+								"fontFamily": "Arial",
+								"fontSize": 9
+							},
+							"footer": {
+								"name": "Footer12",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column13",
+							"dataSource": "This:C1470.CustomerFullName",
+							"width": 200,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#E8EAFD",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_CustomerName",
+								"text": "Customer ",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer13",
+								"dataSourceTypeHint": "boolean",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C2C8CD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column14",
+							"dataSource": "This:C1470.fromAmount",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#E8EAFD",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_fromAmount",
+								"text": "From Amount",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer14",
+								"dataSourceTypeHint": "boolean",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C2C8CD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column15",
+							"dataSource": "This:C1470.fromCurrency",
+							"width": 40,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#E8EAFD",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_frC",
+								"text": "fr. C",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer15",
+								"dataSourceTypeHint": "boolean",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C2C8CD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "This:C1470.toAmount",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#E8EAFD",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_toAmount",
+								"text": "To Amount",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"dataSourceTypeHint": "boolean",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C2C8CD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column16",
+							"dataSource": "This:C1470.toCurrency",
+							"width": 40,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#E8EAFD",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_toC",
+								"text": "to C.",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer16",
+								"dataSourceTypeHint": "boolean",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C2C8CD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"row": {
+					"type": "input",
+					"top": 356,
+					"left": 4,
+					"width": 82,
+					"height": 20,
+					"dataSource": "Form:C1466.row",
+					"class": "Fields_Large",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"row1": {
+					"type": "input",
+					"top": 356,
+					"left": 93,
+					"width": 142,
+					"height": 20,
+					"dataSource": "Form:C1466.pickerList.length",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Large",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/NumberNoZero"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_Pick": {
+					"type": "button",
+					"top": 351,
+					"left": 683,
+					"width": 163,
+					"height": 30,
+					"text": "Pick",
+					"class": "Control_Large_",
+					"focusable": false,
+					"defaultButton": true,
+					"method": "ObjectMethods/b_Pick.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_Cancel": {
+					"type": "button",
+					"top": 351,
+					"left": 516,
+					"width": 163,
+					"height": 30,
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"title": {
+					"type": "input",
+					"top": 11,
+					"left": 13,
+					"width": 518,
+					"height": 24,
+					"dataSource": "Form:C1466.title",
+					"class": "Titles",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_search": {
+					"type": "text",
+					"top": 11,
+					"left": 464,
+					"width": 125,
+					"height": 19,
+					"sizingX": "move",
+					"class": "Control_Large_",
+					"textAlign": "right",
+					"text": ":xliff:cvs_search"
+				}
+			}
+		}
+	]
+}

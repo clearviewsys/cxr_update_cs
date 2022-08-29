@@ -1,0 +1,299 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onHeader",
+		"onPrintingBreak",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onMenuSelect",
+		"onCloseBox",
+		"onUnload"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control1": {
+					"type": "tab",
+					"top": 110,
+					"left": 19,
+					"width": 600,
+					"height": 404,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Tab Control1",
+					"dataSourceTypeHint": "arrayText",
+					"labels": [
+						"Plain Text",
+						"Styled Text"
+					],
+					"class": "Label",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text13": {
+					"type": "text",
+					"top": 82,
+					"left": 18,
+					"width": 127,
+					"height": 15,
+					"class": "Label",
+					"text": "Recepients"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 57,
+					"left": 18,
+					"width": 127,
+					"height": 15,
+					"class": "Label",
+					"text": "Name of Template"
+				},
+				"Recepients": {
+					"type": "input",
+					"top": 57,
+					"left": 152,
+					"width": 360,
+					"height": 16,
+					"dataSource": "[LetterTemplates:53]TemplateName:1",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Subject": {
+					"type": "input",
+					"top": 82,
+					"left": 152,
+					"width": 360,
+					"height": 16,
+					"dataSource": "[LetterTemplates:53]recepient:2",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 529,
+					"left": 516,
+					"width": 103,
+					"height": 24,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"text": "Save",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"focusable": false,
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 529,
+					"left": 404,
+					"width": 103,
+					"height": 24,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 8,
+					"left": 568,
+					"width": 16,
+					"height": 14,
+					"dataSource": "Invisible Button1",
+					"shortcutKey": "1",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button2": {
+					"type": "button",
+					"top": 8,
+					"left": 587,
+					"width": 16,
+					"height": 14,
+					"dataSource": "Invisible Button1",
+					"shortcutKey": "2",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/Invisible Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Body": {
+					"type": "input",
+					"top": 140,
+					"left": 22,
+					"width": 578,
+					"height": 368,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[LetterTemplates:53]Body:3",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"printFrame": "variable",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Plugin Area1": {
+					"type": "plugin",
+					"top": 139,
+					"left": 23,
+					"width": 592,
+					"height": 370,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "BodyRichText",
+					"pluginAreaKind": "_4D Write",
+					"borderStyle": "sunken",
+					"events": [
+						"onClick",
+						"onPluginArea"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 9,
+					"left": 398,
+					"width": 217,
+					"height": 12,
+					"stroke": "#EE0000",
+					"class": "Tags_Small",
+					"textAlign": "right",
+					"text": "Requires Additional 4D Write License"
+				},
+				"Button1": {
+					"type": "button",
+					"top": 528,
+					"left": 19,
+					"width": 286,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Button1",
+					"text": "Copy styled text into plain text area",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"bValidate",
+					"bCancel"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

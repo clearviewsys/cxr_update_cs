@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--#4DSCRIPT/webRedirectIfNotAuthorized-->
+
+    <!--#4DSCRIPT/WAPI_4DInclude/agents/include/head.shtml -->
+
+    <!--#4DSCRIPT/WAPI_pageStart/{sessiontimer:true}-->
+
+    <!--#4DSCRIPT/webSelectAgentRecord-->
+
+    <!--PQ GRID LOADGRID -->
+    <script type="text/javascript">
+        function loadGrid(element, wapi_filter) {
+
+            console.trace();
+
+            var theFilter = element.id.replace("grid-", "");
+
+            if (theFilter === undefined) {
+                var theFilter = ''
+            }
+
+            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_gettablename.js-->
+            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_datepicker.js-->  
+            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_viewRecord.js-->  
+            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_commentRender.js--> 
+
+            //--------- INITIALIZATION FUNCTION -----------
+            var pqListbox = {
+                rpp: 100, //records per request.            
+                init: function() {
+                    this.totalRecords = 0;
+                    this.data = [];
+                    this.requestPage = 1;
+                }
+            };
+            pqListbox.init();
+
+
+            //--------- DEFINE GRID OBJECT -----------
+            //          NOTE: grid object var = obj
+            var obj = {
+                scrollModel: {
+                    autoFit: true
+                },
+                selectionModel: {
+                    type: 'row',
+                    mode: 'single',
+                    toggle: false
+                },
+                numberCell: {
+                    show: false
+                },
+                title: "Listing",
+                virtualX: true,
+                virtualY: true,
+                resizable: true,
+                columnTemplate: {
+                    render: commentRender
+                },
+
+                height: 'flex',
+                height: "100%",
+                width: '100%',
+                //flex: {one: true},
+                //pageModel: { type: "local", rPP: 50, rPPOptions: [10, 50, 100, 500, 1000] },            
+                showBottom: true,
+                showTop: true,
+                showHeader: true,
+                showTitle: false,
+                wrap: false,
+                hwrap: false,
+                editable: false,
+                bubble: false,
+                toolPanel: {
+                    show: false
+                },
+                collapsible: false,
+                stripRows: true,
+                roundCorners: false,
+                columnBorders: false,
+                rowBorders: true,
+
+                rowHt: 35,
+            };
+
+            // ------------- DEFINE FILTERMODEL -----------      
+            obj.filterModel = {
+                mode: 'AND',
+                oper: 'replace',
+                type: "remote"
+            }
+
+
+            //----------- CREATE EVENT  -- USED FOR TOOL TIP WIDGET -------------            
+
+
+            //----------- DATA READY EVENT (this sets the listbox title) --------------
+            obj.dataReady = function() {
+                <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_evtDataReady.js-->
+            };
+
+            //---------- BEFORE SORT EVENT ------------     
+            obj.beforeSort = function(evt) {
+                <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_evtBeforeSort.js-->
+            };
+
+            //---------- BEFORE TABLE VIEW EVENT ------------           
+            obj.beforeTableView = function(evt, ui) {
+                <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_evtBeforeTableView.js-->
+            };
+
+            //---------- BEFORE SORT FILTER EVENT ------------ 
+            // --- THIS WILL CLEAR THE LISTBOX SO ONLY NEW RECORDS ARE DISPLAYED ---
+            obj.beforeFilter = function(evt, ui) {
+                pqListbox.init();
+            };
+
+            //--------------CREATE TOOLBAR  ------------- 
+            obj.toolbar = {
+                items: [{
+                        type: 'select',
+                        label: 'Format: ',
+                        attr: 'id="export_format"',
+                        options: [{
+                            xlsx: 'Excel',
+                            csv: 'Csv',
+                            htm: 'Html',
+                            json: 'Json'
+                        }]
+                    },
+                    {
+                        type: 'button',
+                        label: "Export",
+                        icon: 'ui-icon-arrowthickstop-1-s',
+                        listener: function() {
+
+                            var format = $("#export_format").val(),
+                                blob = this.exportData({
+                                    //url: "/pro/demos/exportData",
+                                    format: format,
+                                    nopqdata: true, //applicable for JSON export.                        
+                                    render: true
+                                });
+                            if (typeof blob === "string") {
+                                blob = new Blob([blob]);
+                            }
+                            saveAs(blob, "pqGrid." + format);
+                        }
+                    },
+                    {
+                        type: 'button',
+                        icon: 'ui-icon-print',
+                        label: 'Print',
+                        listener: function() {
+                            var exportHtml = this.exportData({
+                                    title: 'jQuery grid',
+                                    format: 'htm',
+                                    render: true
+                                }),
+                                newWin = window.open('', '', 'width=1200, height=700'),
+                                doc = newWin.document.open();
+                            doc.write(exportHtml);
+                            doc.close();
+                            newWin.print();
+                        }
+                    },
+                    {
+                        type: '<span id="records-found" style = "display:inline; float: right"></span>',
+                    },
+                ]
+            };
+
+
+            //--------------- DEFINE COLUMN MODEL -------------------
+            obj.colModel = [
+
+                // ADD COLUMNS TO THE GRID HERE -- USE 4D TABLENAME___FIELDNAME 
+                // THE FIRST COLUMN SHOULD BE THE PK/ID FIELD FOR THE TABLE - YOU CAN SET HIDDEN:TRUE
+                // https://paramquery.com/pro/api#option-colModel <-- doc's and options
+
+
+                <!--#4DSCRIPT/WAPI_colModel/{field:ewires___ewireid, filter:false, hidden:true} -->,
+                <!--#4DSCRIPT/WAPI_colModel/{field:ewires___ewirestatus, filter:false, hidden:true} -->,
+                <!--#4DSCRIPT/WAPI_colModel/{field:ewires___ewireid,title:eWire-ID, filter:false, width:150} -->,
+                <!--#4DSCRIPT/WAPI_colModel/{field:ewires___senddate, title:Date ,filter:true, align:center, width:100} -->,   			
+                <!--#4DSCRIPT/WAPI_colModel/{field:ewires___iscancelled, title:Cancelled, filter:true, width:50} -->,
+
+                <!--#4DSCRIPT/WAPI_colModel/{field:ewires___senderName,title:Sender, filter:true, width:200} -->,
+                <!--#4DSCRIPT/WAPI_colModel/{field:ewires___beneficiaryFullName,title:Beneficiary, filter:true, width:200} -->,
+                <!--#4DSCRIPT/WAPI_colModel/{field:ewires___fromcountrycode,title:From, filter:true, width:50} -->,
+                <!--#4DSCRIPT/WAPI_colModel/{field:ewires___tocountrycode,title:To, filter:true, width:50} -->,
+
+                <!--#4DSCRIPT/WAPI_colModel/{field:ewires___toAmount,title:To-Amt, format:currency, filter:false, width:100} -->,
+                <!--#4DSCRIPT/WAPI_colModel/{field:ewires___currency,title:CCY, filter:false, width:50} -->,
+
+            ];
+
+            // ------------- DEFINE DATAMODEL ----------- Note: must come after columnModel
+            obj.dataModel = {
+                dataType: 'json',
+                location: 'remote',
+                url: '/getList',
+                method: 'POST',
+                recIndx: obj.colModel[0].dataIndx, //this gets the first column field/dataIndx
+                beforeSend: pqListbox.init,
+                postData: function() {
+                    return {
+                        pq_curpage: pqListbox.requestPage,
+                        pq_rpp: pqListbox.rpp,
+                        pq_table: getTableName(Object.keys(this.colIndxs)[0]), //this gets the first column field/dataIndx
+                        pq_map: JSON.stringify(Object.keys(this.colIndxs)),
+                        pq_session: '',
+                        //wapi_filter: JSON.stringify(wapi_filter.concat()), //wapi_filter,
+                        wapi_form: $(':input').serializeArray(), // convert to javascript function document.querySelectorAll
+                    };
+                },
+                //example based on virtual scrolling
+                getData: function(response) {
+
+                    var data = response.data,
+                        totalRecords = response.totalRecords,
+                        len = data.length,
+                        curPage = response.curPage,
+                        pq_data = pqListbox.data,
+                        init = (curPage - 1) * pqListbox.rpp;
+
+                    $('[id="records-found"]').html('Records: ' + totalRecords);
+
+                    if (!pqListbox.totalRecords) {
+                        //first time init the rows
+                        for (var i = len; i < totalRecords; i++) {
+                            pq_data[i + init] = {
+                                pq_empty: true
+                            };
+                        }
+                        pqListbox.totalRecords = totalRecords;
+                    }
+                    for (var i = 0; i < len; i++) {
+                        pq_data[i + init] = data[i];
+                        pq_data[i + init].pq_empty = false;
+                    }
+
+                    return {
+                        data: pq_data
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    //alert(errorThrown);
+                },
+            }
+
+
+
+            //--------------DEFINE SORTMODEL -------------
+            obj.sortModel = {
+                sorter: [{
+                    dataIndx: 'ewires___toCountry',
+                    dir: 'up'
+                }],
+            };
+
+            //--------------DEFINE GROUP MODEL -------------
+            // NONE
+
+
+            obj.rowDblClick = function(evt, ui) {
+
+                var id = ui.rowData.ewires___ewireid;
+                var name = ui.rowData.ewires___beneficiaryfullname;
+
+                var viewForm = new FormData();
+
+                viewForm.append('ewires___ewireid', id);
+                viewForm.append('table', 'ewires');
+                viewForm.append('primarykey', 'ewires___ewireid');
+                viewForm.append('action', 'view');
+                viewForm.append('readonly', 'true');
+                viewForm.append('form-post', 'agents/ewires-dialog.shtml');
+
+                var request = new XMLHttpRequest();
+
+                request.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        $('#dialog-ewires-body').html(request.responseText) //inject the response page into the dialog div                    
+                        $('#dialog-ewires').modal('show'); //bootstrap                    
+                    }
+
+                };
+
+                request.responseType = 'text';
+                request.open('POST', 'postPage');
+                request.send(viewForm);
+                request.response
+            };
+
+            obj.rowSelect = function(evt, ui) {
+
+                var row = ui.addList[0];
+                var id = row.rowData.ewires___ewireid;
+                var name = row.rowData.ewires___beneficiaryfullname;
+                var amt = row.rowData.ewires___toamount;
+
+                $("#ewire-cancel-button").val('Cancel the eWire for  ' + name + ' in the amount of ' + amt);
+                $('#wapi-confirm-message').html('Are you sure you want to cancel the eWire for  ' + name + ' in the amount of ' + amt);
+                $("#ewire-cancel-button").removeAttr('disabled');
+                $("[id=ewires___ewireid]").val(id);
+                $("[id=ewires___iscancelled]").val('true');
+                //alert(str)
+            };
+
+            //---------- INSERT THE GRID INTO THE DOM ---------------
+            theDiv = '#grid-' + theFilter;
+            $(theDiv).pqGrid(obj);
+        };
+
+    </script>
+
+    <!-- ON READY -->
+    <script type="text/javascript">
+        $(function() {
+
+            // ADD ON SHOW ACCORDIAN EVENT HERE -----         
+            var countryCode = '<!--4DTEXT [Agents]countrycode -->';
+            var agentid = '<!--#4DTEXT [Agents]agentid -->';
+
+
+            $('#grid-data-sent-submitted').on('show.bs.collapse', function() {
+                debugger;
+                if ($('#grid-sent-submitted').hasClass('pq-grid')) {
+                    pq.grid('#grid-sent-submitted').refreshDataAndView();
+                } else {
+                    loadGrid($('#grid-sent-submitted')[0]);
+                    var $grid = $('#grid-sent-submitted');
+                    var grid = $grid.pqGrid('getInstance').grid;
+
+                    grid.filter({
+                        oper: 'replace',
+                        mode: 'AND',
+                        rules: [{
+                            dataIndx: 'ewires___ewirestatus',
+                            condition: 'equal',
+                            value: '1'
+                        }, {
+                            dataIndx: 'ewires___fromcountrycode',
+                            condition: 'equal',
+                            value: countryCode,
+                        }, ]
+                    });
+                };
+
+                wapiSetSession('statusSelectedDiv', 'grid-data-sent-submitted');
+                $('#grid-data-received-approved').collapse('hide');
+                $('#grid-data-received-settled').collapse('hide');
+                $('#grid-data-sent-settled').collapse('hide');
+                $('#grid-data-cancelled').collapse('hide');
+
+            });
+
+            $('#grid-data-sent-settled').on('show.bs.collapse', function() {
+                debugger;
+                if ($('#grid-sent-settled').hasClass('pq-grid')) {
+                    pq.grid('#grid-sent-settled').refreshDataAndView();
+                } else {
+                    loadGrid($('#grid-sent-settled')[0]);
+                    var $grid = $('#grid-sent-settled');
+                    var grid = $grid.pqGrid('getInstance').grid;
+
+                    grid.filter({
+                        oper: 'replace',
+                        mode: 'AND',
+                        rules: [{
+                            dataIndx: 'ewires___ewirestatus',
+                            condition: 'equal',
+                            value: '3'
+                        }, {
+                            dataIndx: 'ewires___fromcountrycode',
+                            value: countryCode,
+                            condition: 'equal'
+                        }, ]
+                    });
+                };
+
+                wapiSetSession('statusSelectedDiv', 'grid-data-sent-settled');
+                $('#grid-data-sent-submitted').collapse('hide');
+                $('#grid-data-received-settled').collapse('hide');
+                $('#grid-data-received-approved').collapse('hide');
+                $('#grid-data-cancelled').collapse('hide')
+
+            });
+
+            $('#grid-data-received-approved').on('show.bs.collapse', function() {
+                debugger;
+                if ($('#grid-received-approved').hasClass('pq-grid')) {
+                    pq.grid('#grid-received-approved').refreshDataAndView();
+                } else {
+                    loadGrid($('#grid-received-approved')[0]);
+                    var $grid = $('#grid-received-approved');
+                    var grid = $grid.pqGrid('getInstance').grid;
+
+                    grid.filter({
+                        oper: 'replace',
+                        mode: 'AND',
+                        rules: [{
+                            dataIndx: 'ewires___ewirestatus',
+                            condition: 'equal',
+                            value: '2'
+                        }, {
+                            dataIndx: 'ewires___tocountrycode',
+                            value: countryCode,
+                            condition: 'equal'
+                        }, ]
+                    });
+                };
+
+                wapiSetSession('statusSelectedDiv', 'grid-data-received-approved');
+                $('#grid-data-sent-submitted').collapse('hide');
+                $('#grid-data-received-settled').collapse('hide');
+                $('#grid-data-sent-settled').collapse('hide');
+                $('#grid-data-cancelled').collapse('hide');
+
+            });
+
+            $('#grid-data-received-settled').on('show.bs.collapse', function() {
+                debugger;
+
+                if ($('#grid-received-settled').hasClass('pq-grid')) {
+                    pq.grid('#grid-received-settled').refreshDataAndView();
+                } else {
+                    loadGrid($('#grid-received-settled')[0]);
+                    var $grid = $('#grid-received-settled');
+                    var grid = $grid.pqGrid('getInstance').grid;
+
+                    grid.filter({
+                        oper: 'replace',
+                        mode: 'AND',
+                        rules: [{
+                            dataIndx: 'ewires___ewirestatus',
+                            condition: 'equal',
+                            value: '3'
+                        }, {
+                            dataIndx: 'ewires___tocountrycode',
+                            value: countryCode,
+                            condition: 'equal'
+                        }, ]
+                    });
+                };
+
+                wapiSetSession('statusSelectedDiv', 'grid-data-received-settled');
+                $('#grid-data-received-approved').collapse('hide');
+                $('#grid-data-sent-submitted').collapse('hide');
+                $('#grid-data-sent-settled').collapse('hide');
+                $('#grid-data-cancelled').collapse('hide');
+
+
+            });
+
+            $('#grid-data-cancelled').on('show.bs.collapse', function() {
+                debugger;
+
+                if ($('#grid-cancelled').hasClass('pq-grid')) {
+                    pq.grid('#grid-cancelled').refreshDataAndView();
+                } else {
+                    loadGrid($('#grid-cancelled')[0]);
+                    var $grid = $('#grid-cancelled');
+                    var grid = $grid.pqGrid('getInstance').grid;
+
+                    grid.filter({
+                        oper: 'replace',
+                        mode: 'AND',
+                        rules: [{
+                            dataIndx: 'ewires___ewirestatus',
+                            condition: 'equal',
+                            value: '-3'
+                        }, {
+                            dataIndx: 'ewires___fromcountrycode',
+                            value: countryCode,
+                            condition: 'equal'
+                        }, ]
+                    });
+                };
+
+                wapiSetSession('statusSelectedDiv', 'grid-data-cancelled');
+                $('#grid-data-sent-submitted').collapse('hide');
+                $('#grid-data-received-settled').collapse('hide');
+                $('#grid-data-received-approved').collapse('hide');
+                $('#grid-data-sent-settled').collapse('hide')
+
+            });
+
+            //open an accordian - maybe use user session setting
+            var theDiv = '<!--#4DSCRIPT/WAPI_getSession/statusSelectedDiv-->';
+
+            if (theDiv === undefined) {
+                var theDiv = 'grid-data-sent-submitted';
+            };
+
+            if (theDiv === '') {
+                var theDiv = 'grid-data-sent-submitted';
+            };
+
+            $('#' + theDiv).collapse('show');
+
+
+        })
+
+    </script>
+
+    <!-- pq-grid-header-table -->
+    <style>
+        pq-td-div {
+        background-color: aliceblue;
+            font-weight: bold,
+        };
+        pq-grid-header-table {
+        color: magenta;
+        font-style: italic;
+        font-weight: bold;
+        
+    }    
+    
+</style>
+
+</head>
+
+<body>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/agents/include/menubar.shtml -->
+    <main role="main">
+
+        <div class="page-header">
+            <!-- JUMBOTRON - WELCOME -->
+            <div class='container'>
+                <!--#4DSCRIPT/webSelectCustomerRecord-->
+                <!--#4DHTML WAPI_includeAlertMessage-->
+                <script src="/app/js/bootstrap-auto-dismiss-alert.js"></script>
+                <!--MUST COME AFTER THE ALERT YOU WANT TO CLOSE -->
+
+                <h1>eWire Activity Lists </h1>
+                <!--#4DTEXT [agents]fullname--> ||
+                <!--#4DTEXT [agents]country-->
+
+            </div>
+        </div>
+
+        <div class="container content">
+
+            <!--Row with two equal columns-->
+            <div class="row">
+
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <!-- must set height here for grid to honor-->
+
+                    <div class="panel-group" id="accordion-grids" role="tablist" aria-multiselectable='true'>
+
+                        <!-- GRID SENT-SUBMITTED HERE -->
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading" role="tab" id="grid-tab-sent-submitted">
+                                <h3 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-grids" href="#grid-data-sent-submitted" aria-expanded="false" aria-controls="grid-data-sent-submitted">
+                                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"> </span> Sent Pending Ewires </a>
+                                </h3>
+                            </div>
+
+                            <div id="grid-data-sent-submitted" class="panel-collapse collapse" role="tabpanel" aria-labelledby="grid-tab-sent-submitted">
+
+                                <div class="panel-body">
+
+                                    <div class='form-group' style='height: 300px'>
+                                        <div id="grid-sent-submitted"></div><!-- INSERT GRID HERE -->
+                                    </div>
+
+                                    <form enctype="multipart/form-data" id='ewire-cancel-form' action="/agents/updateRecord" method="post">
+
+                                        <!--#4DSCRIPT/WAPI_formHeader/{table:ewires, action:update, success:agents/ewires-list.shtml}-->
+
+                                        <div class="btn-group btn-group-justified" role="group" aria-label="cancel-ewire">
+                                            <div class="btn-group" role="group">
+                                                <input type="hidden" id="primarykey" name="primarykey" value="ewires___ewireid">
+                                                <input type="hidden" id="ewires___ewireid" name="ewires___ewireid" value="">
+                                                <input type="hidden" id="ewires___iscancelled" name="ewires___iscancelled" value="false">
+                                                <!--value set by row select of grid-->
+                                                <input id="ewire-cancel-button" class="btn btn-primary" type="submit" onclick="wapiConfirmOnSubmit(this)" value="Cancel eWire" style='display:block;' disabled>
+                                            </div>
+
+                                        </div>
+                                    </form>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- GRID SENT-SETTLED HERE -->
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading" role="tab" id="grid-tab-sent-settled">
+                                <h3 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-grids" href="#grid-data-sent-settled" aria-expanded="false" aria-controls="grid-data-sent-settled">
+                                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"> </span> Sent Settled Ewires </a>
+                                </h3>
+                            </div>
+
+                            <div id="grid-data-sent-settled" class="panel-collapse collapse" role="tabpanel" aria-labelledby="grid-tab-sent-settled">
+
+                                <div class="panel-body">
+
+                                    <div class='form-group' style='height: 300px'>
+                                        <div id="grid-sent-settled"></div><!-- INSERT GRID HERE -->
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- GRID RECEIVED-SETTLED HERE -->
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading" role="tab" id="grid-tab-received-settled">
+                                <h3 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-grids" href="#grid-data-received-settled" aria-expanded="false" aria-controls="grid-data-received-settled">
+                                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"> </span> Recieved and Settled Ewires</a>
+                                </h3>
+                            </div>
+
+                            <div id="grid-data-received-settled" class="panel-collapse collapse" role="tabpanel" aria-labelledby="grid-tab-received-settled">
+
+                                <div class="panel-body">
+
+                                    <div class='form-group' style='height: 300px'>
+                                        <div id="grid-received-settled"></div><!-- INSERT GRID HERE -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- GRID RECEIVED-APPROVED HERE -->
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading" role="tab" id="grid-tab-received-approved">
+                                <h3 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-grids" href="#grid-data-received-approved" aria-expanded="false" aria-controls="grid-data-received-approved">
+                                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"> </span> Received and Approved Ewires</a>
+                                </h3>
+                            </div>
+
+                            <div id="grid-data-received-approved" class="panel-collapse collapse" role="tabpanel" aria-labelledby="grid-tab-received-approved">
+
+                                <div class="panel-body">
+
+                                    <div class='form-group' style='height: 300px'>
+                                        <div id="grid-received-approved"></div><!-- INSERT GRID HERE -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- GRID CANCELLED HERE -->
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading" role="tab" id="grid-tab-cancelled">
+                                <h3 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-grids" href="#grid-data-cancelled" aria-expanded="false" aria-controls="grid-data-cancelled">
+                                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"> </span> Cancelled Ewires </a>
+                                </h3>
+                            </div>
+
+                            <div id="grid-data-cancelled" class="panel-collapse collapse" role="tabpanel" aria-labelledby="grid-tab-cancelled">
+
+                                <div class="panel-body">
+
+                                    <div class='form-group' style='height: 300px'>
+                                        <div id="grid-cancelled"></div><!-- INSERT GRID HERE -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="timerAlert" role='dialog'>
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        <h4 class="modal-title">Rates have refreshed.</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <p id='timerAlertText'></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" data-dismiss="modal" class="btn btn-default">Close</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!--DIALOG form when user double clicks a record in grid-->
+    <!--#4DSCRIPT/WAPI_4DInclude/agents/ewires-dialog-div.shtml -->
+
+    <!-- DIALOG FOR CONFIRMATION -->
+    <!--#4DSCRIPT/WAPI_4DInclude/wapi/confirm.shtml -->
+
+
+    <script type="text/javascript">
+        //wapiConfirmation('ewire-cancel-button');
+
+    </script>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/agents/include/footer.shtml -->
+</body>
+
+
+
+</html>

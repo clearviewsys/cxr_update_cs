@@ -1,0 +1,269 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Search",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 75,
+					"left": 0,
+					"width": 704,
+					"height": 414,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "2em",
+					"showFooters": true,
+					"lockedColumnCount": 3,
+					"table": 83,
+					"highlightSet": "$FilePaths_LBSet",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"alternateFill": "#D9E7F4",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDisplayDetail",
+						"onDoubleClick"
+					],
+					"columns": [
+						{
+							"name": "Column11",
+							"dataSource": "[FilePaths:83]isFlagged:4",
+							"dataSourceTypeHint": "boolean",
+							"width": 28,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"fill": "#B7C7D6",
+							"alternateFill": "#A8BACC",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_flag",
+								"text": "🏁",
+								"tooltip": "Flags",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer11",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "[FilePaths:83]FilePathID:1",
+							"width": 235,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_filePathID",
+								"text": "FilePath ID",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer4",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "[FilePaths:83]machineName:5",
+							"width": 132,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_workstation",
+								"text": ":xliff:cvs_workstation",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[FilePaths:83]FileName:2",
+							"width": 132,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_filename",
+								"text": "Filename",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "[FilePaths:83]FolderPath:3",
+							"width": 164,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_path",
+								"text": "File / Folder Path",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"b_selectComputer": {
+					"type": "button",
+					"top": 500,
+					"left": 6,
+					"width": 200,
+					"height": 24,
+					"sizingY": "move",
+					"text": "Select this Workstation",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/b_selectComputer.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_duplicate": {
+					"type": "button",
+					"top": 500,
+					"left": 211,
+					"width": 198,
+					"height": 24,
+					"sizingY": "move",
+					"text": "Duplicate Selected Record",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/b_duplicate.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

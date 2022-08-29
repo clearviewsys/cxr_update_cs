@@ -1,0 +1,1 @@
+QUERY:C277([Cheques:1]; [Cheques:1]chequeStatus:14=0)

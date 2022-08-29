@@ -1,0 +1,166 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Search",
+	"rightMargin": 0,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onPrintingDetail",
+		"onUnload",
+		"onAfterKeystroke",
+		"onLoadRecord"
+	],
+	"method": "method.4dm",
+	"pages": [
+		null,
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 75,
+					"left": 1,
+					"width": 706,
+					"height": 410,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "24px",
+					"table": 61,
+					"highlightSet": "$States_LBSet",
+					"horizontalLineStroke": "transparent",
+					"alternateFill": "#EEEEEE",
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDisplayDetail",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column10",
+							"dataSource": "[States:61]StateCode:1",
+							"width": 125,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Code",
+								"text": "State Code"
+							},
+							"footer": {
+								"name": "Footer10",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[States:61]StateName:3",
+							"width": 220,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Name",
+								"text": "State Name"
+							},
+							"footer": {
+								"name": "Footer2",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "[States:61]CountryCode:2",
+							"width": 125,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Ccode",
+								"text": "Country Code"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "[Countries:62]CountryName:2",
+							"width": 220,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_cName",
+								"text": "Country Name"
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

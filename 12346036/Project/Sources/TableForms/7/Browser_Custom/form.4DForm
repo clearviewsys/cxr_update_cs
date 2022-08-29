@@ -1,0 +1,385 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"rightMargin": 4,
+	"bottomMargin": 4,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"List Box1": {
+					"type": "listbox",
+					"top": 56,
+					"left": 4,
+					"width": 216,
+					"height": 417,
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "List Box1",
+					"movableRows": false,
+					"rowHeight": "40px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "24px",
+					"staticColumnCount": 1,
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"alternateFill": "#EEEEEE",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"method": "ObjectMethods/List Box1.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onUnload"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "arrModuleIcons",
+							"dataSourceTypeHint": "picture",
+							"width": 52,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"pictureFormat": "proportionalCenter",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"dataSource": "Header1",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrModuleNames",
+							"width": 153,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#DDDDDD",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Module",
+								"dataSource": "Header2",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "arrTableNums",
+							"dataSourceTypeHint": "number",
+							"width": 0,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Header3",
+								"dataSource": "Header3",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"Variable11": {
+					"type": "input",
+					"top": 4,
+					"left": 105,
+					"width": 96,
+					"height": 17,
+					"dataSource": "<>ApplicationUser",
+					"stroke": "#444444",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_lockScreen": {
+					"type": "pictureButton",
+					"top": 4,
+					"left": 198,
+					"width": 22,
+					"height": 19,
+					"picture": "/RESOURCES/Images/library/smallLock.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/b_lockScreen.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_switchSystemUser": {
+					"type": "button",
+					"top": 5,
+					"left": 105,
+					"width": 96,
+					"height": 18,
+					"display": false,
+					"method": "ObjectMethods/b_switchSystemUser.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_browseTables": {
+					"type": "button",
+					"top": 27,
+					"left": 75,
+					"width": 72,
+					"height": 19,
+					"class": "Control_Small",
+					"textAlign": "center",
+					"focusable": false,
+					"text": "Find",
+					"method": "ObjectMethods/b_browseTables.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_launchSumarizer": {
+					"type": "button",
+					"top": 27,
+					"left": 149,
+					"width": 71,
+					"height": 19,
+					"class": "Control_Small",
+					"textAlign": "center",
+					"focusable": false,
+					"text": "Summarizer",
+					"method": "ObjectMethods/b_launchSumarizer.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 4,
+					"left": 4,
+					"width": 69,
+					"height": 41,
+					"dataSource": "<>UserPicture",
+					"dataSourceTypeHint": "picture",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 34,
+					"left": 23,
+					"width": 32,
+					"height": 13,
+					"dataSource": "vCurrentVersion",
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 2,
+					"left": 75,
+					"width": 27,
+					"height": 26,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/adminIcon.png"
+				},
+				"b_displayAdminPanel": {
+					"type": "button",
+					"top": 5,
+					"left": 77,
+					"width": 25,
+					"height": 23,
+					"display": false,
+					"method": "ObjectMethods/b_displayAdminPanel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Picture2": {
+					"type": "picture",
+					"top": 477,
+					"left": 4,
+					"width": 24,
+					"height": 24,
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/sicn Calendar.png"
+				},
+				"b_launchCalendar": {
+					"type": "button",
+					"top": 478,
+					"left": 5,
+					"width": 23,
+					"height": 23,
+					"sizingY": "move",
+					"display": false,
+					"method": "ObjectMethods/b_launchCalendar.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group1": [
+				"Picture2",
+				"b_launchCalendar"
+			]
+		},
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

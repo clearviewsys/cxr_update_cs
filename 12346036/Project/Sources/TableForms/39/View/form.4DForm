@@ -1,0 +1,1631 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "ViewToolbar2",
+	"inheritedFormTable": 7,
+	"windowMinWidth": 850,
+	"windowMinHeight": 500,
+	"rightMargin": 5,
+	"bottomMargin": 5,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 198,
+	"markerBody": 449,
+	"markerBreak": 549,
+	"markerFooter": 574,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onBeforeKeystroke",
+		"onUnload",
+		"onSelectionChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt",
+		"scale": 65
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"l_Item_ID": {
+					"type": "text",
+					"top": 61,
+					"left": 3,
+					"width": 119,
+					"height": 15,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": ":xliff:cvs_item_id"
+				},
+				"l_item_name": {
+					"type": "text",
+					"top": 82,
+					"left": 3,
+					"width": 119,
+					"height": 15,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": ":xliff:cvs_item_name"
+				},
+				"l_category": {
+					"type": "text",
+					"top": 105,
+					"left": 3,
+					"width": 119,
+					"height": 15,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": ":xliff:cvs_category"
+				},
+				"l__sell_unit_price": {
+					"type": "text",
+					"top": 171,
+					"left": 3,
+					"width": 119,
+					"height": 15,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": ":xliff:cvs_sell_price"
+				},
+				"l_account_id": {
+					"type": "text",
+					"top": 127,
+					"left": 3,
+					"width": 119,
+					"height": 15,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": ":xliff:cvs_account_id"
+				},
+				"commission": {
+					"type": "text",
+					"top": 146,
+					"left": 339,
+					"width": 119,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right"
+				},
+				"l_fee_local": {
+					"type": "text",
+					"top": 169,
+					"left": 339,
+					"width": 119,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": ":xliff:cvs_fee_local"
+				},
+				"ItemID": {
+					"type": "input",
+					"top": 61,
+					"left": 128,
+					"width": 135,
+					"height": 15,
+					"dataSource": "[Items:39]ItemID:1",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"ItemName": {
+					"type": "input",
+					"top": 82,
+					"left": 128,
+					"width": 270,
+					"height": 15,
+					"dataSource": "[Items:39]ItemName:2",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"l_service": {
+					"type": "checkbox",
+					"top": 105,
+					"left": 315,
+					"width": 106,
+					"height": 16,
+					"dataSource": "[Items:39]isService:5",
+					"text": ":xliff:cvs_service",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fontWeight": "bold",
+					"focusable": false,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Category": {
+					"type": "input",
+					"top": 105,
+					"left": 128,
+					"width": 180,
+					"height": 15,
+					"dataSource": "[Items:39]Category:3",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Unit": {
+					"type": "input",
+					"top": 82,
+					"left": 402,
+					"width": 90,
+					"height": 15,
+					"dataSource": "[Items:39]Unit:6",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"SellUnitPrice": {
+					"type": "input",
+					"top": 170,
+					"left": 128,
+					"width": 152,
+					"height": 15,
+					"dataSource": "[Items:39]SellUnitPrice:7",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Currency": {
+					"type": "input",
+					"top": 147,
+					"left": 287,
+					"width": 38,
+					"height": 15,
+					"dataSource": "[Items:39]Currency:8",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"BuyAccountID": {
+					"type": "input",
+					"top": 126,
+					"left": 128,
+					"width": 180,
+					"height": 15,
+					"dataSource": "[Items:39]AccountID:12",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"PercentFee": {
+					"type": "input",
+					"top": 144,
+					"left": 464,
+					"width": 93,
+					"height": 15,
+					"dataSource": "[Items:39]PercentFee:10",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Percent"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"FeeLocal": {
+					"type": "input",
+					"top": 168,
+					"left": 464,
+					"width": 93,
+					"height": 15,
+					"dataSource": "[Items:39]FeeLocal:11",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"ItemID1": {
+					"type": "input",
+					"top": 12,
+					"left": 577,
+					"width": 307,
+					"height": 176,
+					"sizingX": "move",
+					"dataSource": "[Items:39]Picture:4",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "dotted",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"l_buy _unit_price": {
+					"type": "text",
+					"top": 148,
+					"left": 3,
+					"width": 119,
+					"height": 15,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": ":xliff:cvs_buy_price"
+				},
+				"SellUnitPrice1": {
+					"type": "input",
+					"top": 147,
+					"left": 128,
+					"width": 152,
+					"height": 15,
+					"dataSource": "[Items:39]BuyUnitPrice:18",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Currency1": {
+					"type": "input",
+					"top": 170,
+					"left": 287,
+					"width": 38,
+					"height": 15,
+					"dataSource": "[Items:39]Currency:8",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_close": {
+					"type": "button",
+					"top": 562,
+					"left": 730,
+					"width": 139,
+					"height": 22,
+					"sizingY": "move",
+					"action": "accept",
+					"class": "Control",
+					"stroke": "#222222",
+					"focusable": false,
+					"text": ":xliff:cvs_close",
+					"iconFrames": 4,
+					"events": [
+						"onClick"
+					]
+				},
+				"l_Period_Sum": {
+					"type": "text",
+					"top": 518,
+					"left": 26,
+					"width": 164,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": ":xliff:cvs_period_sum"
+				},
+				"Buy": {
+					"type": "text",
+					"top": 479,
+					"left": 205,
+					"width": 120,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "center",
+					"text": ":xliff:cvs_buy"
+				},
+				"Variable26": {
+					"type": "input",
+					"top": 519,
+					"left": 339,
+					"width": 120,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vSumQtyOut",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable27": {
+					"type": "input",
+					"top": 519,
+					"left": 205,
+					"width": 120,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vSumQtyIn",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Line11": {
+					"type": "line",
+					"top": 496,
+					"left": 4,
+					"width": 863,
+					"sizingY": "move",
+					"stroke": "#777777",
+					"strokeWidth": 2
+				},
+				"Variable28": {
+					"type": "input",
+					"top": 519,
+					"left": 739,
+					"width": 120,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vSumVolumeOut",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFDF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable29": {
+					"type": "input",
+					"top": 519,
+					"left": 605,
+					"width": 120,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vSumVolumeIn",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#DFE4FF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable30": {
+					"type": "input",
+					"top": 538,
+					"left": 339,
+					"width": 120,
+					"height": 15,
+					"visibility": "hidden",
+					"sizingY": "move",
+					"dataSource": "vSumTotalQtyOut",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable31": {
+					"type": "input",
+					"top": 538,
+					"left": 205,
+					"width": 120,
+					"height": 15,
+					"visibility": "hidden",
+					"sizingY": "move",
+					"dataSource": "vSumTotalQtyIn",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable32": {
+					"type": "input",
+					"top": 538,
+					"left": 739,
+					"width": 120,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vSumTotalVolumeOut",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable33": {
+					"type": "input",
+					"top": 538,
+					"left": 605,
+					"width": 120,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vSumTotalVolumeIn",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"l_ending_balance": {
+					"type": "text",
+					"top": 538,
+					"left": 26,
+					"width": 164,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": ":xliff:cvs_ending_balance"
+				},
+				"Sell": {
+					"type": "text",
+					"top": 479,
+					"left": 339,
+					"width": 120,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "center",
+					"text": ":xliff:cvs_sell"
+				},
+				"balance": {
+					"type": "text",
+					"top": 479,
+					"left": 471,
+					"width": 120,
+					"height": 13,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "center",
+					"text": ":xliff:cvs_balance"
+				},
+				"h_cost": {
+					"type": "text",
+					"top": 479,
+					"left": 605,
+					"width": 117,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "center",
+					"text": ":xliff:cvs_cost"
+				},
+				"Revenue": {
+					"type": "text",
+					"top": 479,
+					"left": 737,
+					"width": 117,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "center",
+					"text": ":xliff:cvs_revenue"
+				},
+				"Line12": {
+					"type": "line",
+					"top": 476,
+					"left": 597,
+					"height": 80,
+					"sizingY": "move",
+					"stroke": "#777777"
+				},
+				"Line13": {
+					"type": "line",
+					"top": 476,
+					"left": 197,
+					"height": 80,
+					"sizingY": "move",
+					"stroke": "#777777",
+					"strokeWidth": 3
+				},
+				"Line14": {
+					"type": "line",
+					"top": 536,
+					"left": 4,
+					"width": 863,
+					"sizingY": "move",
+					"stroke": "#777777",
+					"strokeWidth": 0.1
+				},
+				"Variable35": {
+					"type": "input",
+					"top": 501,
+					"left": 339,
+					"width": 120,
+					"height": 15,
+					"visibility": "hidden",
+					"sizingY": "move",
+					"dataSource": "vSumOpeningQtyOut",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable36": {
+					"type": "input",
+					"top": 500,
+					"left": 205,
+					"width": 120,
+					"height": 15,
+					"visibility": "hidden",
+					"sizingY": "move",
+					"dataSource": "vSumOpeningQtyIn",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable37": {
+					"type": "input",
+					"top": 501,
+					"left": 739,
+					"width": 120,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vSumOpeningVolumeOut",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFC0",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable38": {
+					"type": "input",
+					"top": 501,
+					"left": 605,
+					"width": 120,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vSumOpeningVolumeIn",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#C0CAFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"l_opening": {
+					"type": "text",
+					"top": 500,
+					"left": 26,
+					"width": 164,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": ":xliff:cvs_opening"
+				},
+				"Variable21": {
+					"type": "input",
+					"top": 501,
+					"left": 471,
+					"width": 120,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vSumOpeningInventory",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"l_from_date": {
+					"type": "text",
+					"top": 564,
+					"left": 2,
+					"width": 80,
+					"height": 14,
+					"sizingY": "move",
+					"class": "Fields",
+					"textAlign": "right",
+					"text": ":xliff:cvs_from_date"
+				},
+				"Field7": {
+					"type": "input",
+					"top": 564,
+					"left": 88,
+					"width": 105,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field7.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"l_to_date": {
+					"type": "text",
+					"top": 564,
+					"left": 194,
+					"width": 60,
+					"height": 14,
+					"sizingY": "move",
+					"class": "Fields",
+					"textAlign": "right",
+					"text": ":xliff:cvs_to_date"
+				},
+				"Field8": {
+					"type": "input",
+					"top": 566,
+					"left": 263,
+					"width": 105,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field8.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"cbApplyDateRange": {
+					"type": "checkbox",
+					"top": 564,
+					"left": 376,
+					"width": 220,
+					"height": 19,
+					"sizingY": "move",
+					"text": ":xliff:cvs_apply_date_range",
+					"class": "Fields",
+					"method": "ObjectMethods/cbApplyDateRange.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 538,
+					"left": 471,
+					"width": 120,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vSumTotalInventory",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 519,
+					"left": 471,
+					"width": 120,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vSumTotalInventory",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Line1": {
+					"type": "line",
+					"top": 476,
+					"left": 732,
+					"height": 80,
+					"sizingY": "move",
+					"stroke": "#777777"
+				},
+				"mainListBox": {
+					"type": "listbox",
+					"top": 195,
+					"left": 1,
+					"width": 883,
+					"height": 279,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "mainListBox",
+					"movableRows": false,
+					"rowHeight": "25px",
+					"headerHeight": "30px",
+					"showFooters": true,
+					"table": 40,
+					"highlightSet": "$ProductRows_LBSet",
+					"selectionMode": "single",
+					"horizontalLineStroke": "#EEEEEE",
+					"verticalLineStroke": "#CCCCCC",
+					"alternateFill": "#EEEEEE",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column13",
+							"dataSource": "[ItemInOuts:40]Date:3",
+							"dataSourceTypeHint": "date",
+							"width": 75,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "date",
+								"text": ":xliff:cvs_date",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer18",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column9",
+							"dataSource": "[ItemInOuts:40]InvoiceID:4",
+							"width": 112,
+							"maxWidth": 200,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#E2FFDF",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "invoice1",
+								"text": ":xliff:cvs_invoice",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer4",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "Num:C11(([ItemInOuts:40]isSold:7=False:C215))*[ItemInOuts:40]Qty:8",
+							"dataSourceTypeHint": "number",
+							"width": 79,
+							"maxWidth": 32000,
+							"numberFormat": "|NumberNoZero",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "qtyIn",
+								"text": ":xliff:cvs_buy",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer9",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "Num:C11(([ItemInOuts:40]isSold:7=True:C214))*[ItemInOuts:40]Qty:8",
+							"dataSourceTypeHint": "number",
+							"width": 74,
+							"maxWidth": 32000,
+							"numberFormat": "|NumberNoZero",
+							"dateFormat": "shortCentury",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "qtyOut",
+								"text": ":xliff:cvs_sell",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer10",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column8",
+							"dataSource": "[ItemInOuts:40]UnitPrice:9",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_price",
+								"text": ":xliff:cvs_price",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "count",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "[ItemInOuts:40]tax1:20",
+							"dataSourceTypeHint": "number",
+							"width": 0,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "tax1",
+								"text": ":xliff:cvs_tax1",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer11",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "[ItemInOuts:40]tax2:21",
+							"dataSourceTypeHint": "number",
+							"width": 0,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "tax2",
+								"text": ":xliff:cvs_tax2",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer12",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "[ItemInOuts:40]tax1:20+[ItemInOuts:40]tax2:21",
+							"dataSourceTypeHint": "number",
+							"width": 78,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "tax",
+								"text": ":xliff:cvs_tax",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer14",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "Num:C11(([ItemInOuts:40]isSold:7=False:C215))*[ItemInOuts:40]Amount:22",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#DFE4FF",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Cost",
+								"text": ":xliff:cvs_cost",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency_Dec",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "Num:C11(([ItemInOuts:40]isSold:7=True:C214))*[ItemInOuts:40]Amount:22",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#FFFFDF",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_revenue",
+								"text": ":xliff:cvs_revenue",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency_Dec",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column14",
+							"dataSource": "[ItemInOuts:40]memo:15",
+							"minWidth": 10,
+							"maxWidth": 3000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "comments",
+								"text": ":xliff:cvs_comments",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer20",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						}
+					]
+				},
+				"Line2": {
+					"type": "line",
+					"top": 476,
+					"left": 464,
+					"height": 80,
+					"sizingY": "move",
+					"stroke": "#777777"
+				},
+				"Line3": {
+					"type": "line",
+					"top": 476,
+					"left": 331,
+					"height": 80,
+					"sizingY": "move",
+					"stroke": "#777777"
+				},
+				"Line4": {
+					"type": "line",
+					"top": 476,
+					"left": 4,
+					"width": 863,
+					"sizingY": "move",
+					"stroke": "#777777",
+					"strokeWidth": 2
+				},
+				"Line5": {
+					"type": "line",
+					"top": 476,
+					"left": 2,
+					"height": 80,
+					"sizingY": "move",
+					"stroke": "#777777",
+					"strokeWidth": 3
+				},
+				"Line6": {
+					"type": "line",
+					"top": 476,
+					"left": 867,
+					"height": 80,
+					"sizingY": "move",
+					"stroke": "#777777"
+				},
+				"Line7": {
+					"type": "line",
+					"top": 556,
+					"left": 4,
+					"width": 863,
+					"sizingY": "move",
+					"stroke": "#777777",
+					"strokeWidth": 0.1
+				}
+			}
+		}
+	],
+	"editor": {
+		"defaultView": "View 1",
+		"activeView": "View 2",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Line11",
+					"Line14",
+					"Line2",
+					"Line3",
+					"Line4",
+					"Line5",
+					"Line6",
+					"Line7"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

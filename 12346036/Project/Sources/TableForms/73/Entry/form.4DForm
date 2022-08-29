@@ -1,0 +1,361 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onUnload"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"b_save": {
+					"type": "button",
+					"top": 623,
+					"left": 684,
+					"width": 85,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 623,
+					"left": 598,
+					"width": 85,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/b_cancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Picture362": {
+					"type": "picture",
+					"top": 628,
+					"left": 216,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BNextRec.png"
+				},
+				"Picture363": {
+					"type": "picture",
+					"top": 628,
+					"left": 231,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BLastRec.png"
+				},
+				"Picture364": {
+					"type": "picture",
+					"top": 628,
+					"left": 186,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BFirstRec.png"
+				},
+				"Picture361": {
+					"type": "picture",
+					"top": 628,
+					"left": 201,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BPrevRec.png"
+				},
+				"bFirst": {
+					"type": "button",
+					"top": 628,
+					"left": 186,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"display": false,
+					"method": "ObjectMethods/bFirst.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bNext": {
+					"type": "button",
+					"top": 628,
+					"left": 216,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"display": false,
+					"method": "ObjectMethods/bNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bPrevious": {
+					"type": "button",
+					"top": 628,
+					"left": 201,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"display": false,
+					"method": "ObjectMethods/bPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bLast": {
+					"type": "button",
+					"top": 628,
+					"left": 231,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"display": false,
+					"method": "ObjectMethods/bLast.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 627,
+					"left": 252,
+					"width": 84,
+					"height": 16,
+					"sizingY": "move",
+					"dataSource": "vRecNum",
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onHeader"
+					]
+				},
+				"bUpdate": {
+					"type": "button",
+					"top": 621,
+					"left": 108,
+					"width": 73,
+					"height": 25,
+					"sizingY": "move",
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"text": "Apply",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/bUpdate.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"b_savetroDisk": {
+					"type": "button",
+					"top": 617,
+					"left": 11,
+					"width": 45,
+					"height": 32,
+					"sizingY": "move",
+					"class": "toolbar",
+					"textAlign": "center",
+					"focusable": false,
+					"text": "Save",
+					"icon": "/RESOURCES/Images/library/toolbarSave.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/b_savetroDisk.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_loadFromDisk": {
+					"type": "button",
+					"top": 617,
+					"left": 57,
+					"width": 45,
+					"height": 32,
+					"sizingY": "move",
+					"class": "toolbar",
+					"textAlign": "center",
+					"focusable": false,
+					"text": "Load",
+					"icon": "/RESOURCES/Images/library/toolbarLoad.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/b_loadFromDisk.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Plugin Area": {
+					"type": "plugin",
+					"top": 59,
+					"left": 403,
+					"width": 369,
+					"height": 544,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "hmReport",
+					"pluginAreaKind": "_hmReport",
+					"borderStyle": "sunken",
+					"method": "ObjectMethods/Plugin Area.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDoubleClick",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDrop",
+						"onPluginArea",
+						"onDataChange",
+						"onDragOver",
+						"onPrintingDetail",
+						"onBeginDragOver"
+					]
+				},
+				"name": {
+					"type": "input",
+					"top": 27,
+					"left": 261,
+					"width": 250,
+					"height": 13,
+					"sizingX": "grow",
+					"dataSource": "[Reports:73]Name:2",
+					"stroke": "#005597",
+					"class": "Fields_Small",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"fill": "#DFFFFF",
+					"contextMenu": "none"
+				},
+				"Popup Drop down List": {
+					"type": "dropdown",
+					"top": 22,
+					"left": 625,
+					"width": 150,
+					"height": 23,
+					"sizingX": "move",
+					"dataSource": "RPT_iTables",
+					"dataSourceTypeHint": "integer",
+					"class": "Control_Small",
+					"method": "ObjectMethods/Popup Drop down List.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange",
+						"onUnload"
+					]
+				},
+				"Text19": {
+					"type": "text",
+					"top": 26,
+					"left": 167,
+					"width": 90,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Report Name"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 26,
+					"left": 523,
+					"width": 100,
+					"height": 15,
+					"sizingX": "move",
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Assigned Table"
+				},
+				"Palette": {
+					"type": "subform",
+					"top": 58,
+					"left": 1,
+					"width": 400,
+					"height": 544,
+					"sizingY": "grow",
+					"dataSourceTypeHint": "number",
+					"detailForm": "hmReports_Palette",
+					"focusable": false,
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "system",
+					"events": [
+						"onDataChange"
+					]
+				}
+			},
+			"entryOrder": [
+				"b_save",
+				"b_cancel",
+				"Variable3",
+				"bUpdate",
+				"Plugin Area",
+				"name",
+				"Palette"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

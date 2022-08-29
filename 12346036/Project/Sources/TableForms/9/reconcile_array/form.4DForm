@@ -1,0 +1,1894 @@
+﻿{
+	"destination": "detailScreen",
+	"windowTitle": "Reconciliation Window",
+	"windowMinWidth": 700,
+	"windowMinHeight": 400,
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onSelectionChange",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt",
+		"scale": 60
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Group Box3": {
+					"type": "groupBox",
+					"top": 30,
+					"left": 5,
+					"width": 301,
+					"height": 73,
+					"class": "Label"
+				},
+				"Picture12": {
+					"type": "picture",
+					"top": 47,
+					"left": 8,
+					"width": 101,
+					"height": 29,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/searchArea.png"
+				},
+				"lookFor": {
+					"type": "input",
+					"top": 53,
+					"left": 32,
+					"width": 69,
+					"height": 14,
+					"dataSource": "vLookFor",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"method": "ObjectMethods/lookFor.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Group Box2": {
+					"type": "groupBox",
+					"top": 107,
+					"left": 6,
+					"width": 976,
+					"height": 32,
+					"sizingX": "grow",
+					"class": "Label"
+				},
+				"Group Box4": {
+					"type": "groupBox",
+					"top": 30,
+					"left": 310,
+					"width": 376,
+					"height": 73,
+					"class": "Label"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 497,
+					"left": 279,
+					"width": 695,
+					"height": 25,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"fill": "#C4ADC6",
+					"stroke": "transparent",
+					"strokeWidth": 0.1
+				},
+				"Group Box1": {
+					"type": "groupBox",
+					"top": 458,
+					"left": 4,
+					"width": 269,
+					"height": 117,
+					"sizingY": "move",
+					"class": "Label"
+				},
+				"Variable30": {
+					"type": "input",
+					"top": 458,
+					"left": 504,
+					"width": 145,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "vSumTotalCredits",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text56": {
+					"type": "text",
+					"top": 458,
+					"left": 279,
+					"width": 220,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Ending Balance Sums"
+				},
+				"Variable22": {
+					"type": "input",
+					"top": 458,
+					"left": 801,
+					"width": 155,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "vSumTotalBalance",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"fontWeight": "bold",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text63": {
+					"type": "text",
+					"top": 143,
+					"left": 558,
+					"width": 265,
+					"height": 15,
+					"stroke": "#444444",
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Running Balance Opening"
+				},
+				"Variable21": {
+					"type": "input",
+					"top": 143,
+					"left": 833,
+					"width": 141,
+					"height": 15,
+					"dataSource": "vSumOpeningBalance",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"method": "ObjectMethods/Variable21.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 502,
+					"left": 365,
+					"width": 131,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Selection Sums"
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 501,
+					"left": 504,
+					"width": 145,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "vSumCredits_H",
+					"dataSourceTypeHint": "number",
+					"stroke": "#001274",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFDF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 501,
+					"left": 652,
+					"width": 145,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "vSumDebits_H",
+					"dataSourceTypeHint": "number",
+					"stroke": "#001274",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#DFE4FF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 501,
+					"left": 801,
+					"width": 155,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "vSumBalance_H",
+					"dataSourceTypeHint": "number",
+					"stroke": "#001274",
+					"class": "Fields",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"reconcileList": {
+					"type": "listbox",
+					"top": 164,
+					"left": 2,
+					"width": 992,
+					"height": 289,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "reconcileList",
+					"hideFocusRing": true,
+					"rowHeight": "25px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"rowControlSource": "arrHiddenRows",
+					"headerHeight": "25px",
+					"showFooters": true,
+					"footerHeight": "25px",
+					"lockedColumnCount": 3,
+					"horizontalLineStroke": "#DDDDDD",
+					"verticalLineStroke": "#AAAAAA",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"alternateFill": "#DEE3FF",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"method": "ObjectMethods/reconcileList.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange",
+						"onAfterSort",
+						"onRowMove"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "arrDates",
+							"dataSourceTypeHint": "date",
+							"width": 95,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#DDDDDD",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "dat_RegisterDate",
+								"text": "Date",
+								"dataSource": "Header1",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#C0C0C0",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "arrInvoiceNumbers",
+							"dataSourceTypeHint": "number",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#E5FFE2",
+							"alternateFill": "#C2E2BE",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "InvoiceNo",
+								"text": "Invoice",
+								"dataSource": "Invoice",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer2",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#C0C0C0",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "arrCustomers",
+							"width": 135,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#DDDDDD",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDoubleClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Customer",
+								"text": "Customer",
+								"dataSource": "Header4",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#C0C0C0",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column11",
+							"dataSource": "arrChequeNumbers",
+							"width": 70,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#F9FBFC",
+							"alternateFill": "#CED3D5",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"fontWeight": "bold",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "ChequeNumber",
+								"text": "Ext. Ref.",
+								"dataSource": "Header11",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#C0C0C0",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrValidator",
+							"width": 40,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#404040",
+							"fill": "#FFFFFF",
+							"alternateFill": "#DDDDDD",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onValidate",
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Validator",
+								"text": "User",
+								"dataSource": "Header2",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#C0C0C0",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column15",
+							"dataSource": "arrChecked",
+							"dataSourceTypeHint": "boolean",
+							"width": 26,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"controlType": "checkbox",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#DDDDDD",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"method": "ObjectMethods/Column15.4dm",
+							"header": {
+								"name": "bool_Validated2",
+								"text": "Rcnc",
+								"dataSource": "Header5",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer15",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#C0C0C0",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column14",
+							"dataSource": "arrOldChecked",
+							"dataSourceTypeHint": "boolean",
+							"width": 26,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"controlType": "checkbox",
+							"visibility": "hidden",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#DDDDDD",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "bool_Validated1",
+								"text": "old",
+								"dataSource": "Header5",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer14",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#C0C0C0",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "arrValidation",
+							"width": 75,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"stroke": "#000000",
+							"alternateFill": "#DDDDDD",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onValidate",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Validation",
+								"text": "Validation",
+								"dataSource": "Header6",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer10",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#C0C0C0",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column8",
+							"dataSource": "arrCredits",
+							"dataSourceTypeHint": "number",
+							"width": 140,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textFormat": "|Currency (blank for 0)",
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#FFFED7",
+							"alternateFill": "#DFDFB3",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Credit",
+								"text": "Withdraw",
+								"dataSource": "Header8",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer11",
+								"dataSource": "vSumCredits",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#E2E3C2",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "arrDebits",
+							"dataSourceTypeHint": "number",
+							"width": 140,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textFormat": "|Currency (blank for 0)",
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#D7DBFD",
+							"alternateFill": "#B6B8DF",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"fontWeight": "bold",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"method": "ObjectMethods/Column7.4dm",
+							"header": {
+								"name": "num_Debit",
+								"text": "Deposit",
+								"dataSource": "Header7",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer12",
+								"dataSource": "vSumDebits",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#C7CBEC",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column10",
+							"dataSource": "arrBalances",
+							"dataSourceTypeHint": "number",
+							"width": 140,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#DDDDDD",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"method": "ObjectMethods/Column10.4dm",
+							"header": {
+								"name": "num_RunningTotal",
+								"text": "Running Balance",
+								"dataSource": "Header10",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer13",
+								"dataSource": "vSumBalance",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#AAAAAA",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column9",
+							"dataSource": "arrRegisterIDs",
+							"width": 97,
+							"minWidth": 2,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#DDDDDD",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"method": "ObjectMethods/Column9.4dm",
+							"header": {
+								"name": "RegisterID",
+								"text": "Register ID",
+								"dataSource": "header9",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold",
+								"fontStyle": "italic"
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#CCCCCC",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column12",
+							"dataSource": "arrExternalRefs",
+							"width": 101,
+							"minWidth": 4,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#DDDDDD",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "ReferenceID",
+								"text": "System Ref.",
+								"dataSource": "Header12",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 12,
+								"fontWeight": "bold",
+								"fontStyle": "italic"
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#CCCCCC",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "arrHiddenRows",
+							"dataSourceTypeHint": "boolean",
+							"width": 30,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"visibility": "hidden",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#DDDDDD",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "bool_Hidden",
+								"text": "Hide",
+								"dataSource": "Header5",
+								"stroke": "#000000",
+								"fontFamily": "Arial",
+								"fontSize": 10,
+								"fontWeight": "bold",
+								"fontStyle": "italic"
+							},
+							"footer": {
+								"name": "Footer9",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#CCCCCC",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column13",
+							"dataSource": "arrComments",
+							"width": 91,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#DDDDDD",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDoubleClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Comments",
+								"text": "Comments",
+								"dataSource": "Header4",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold",
+								"fontStyle": "italic"
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#CCCCCC",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 36,
+					"left": 597,
+					"width": 83,
+					"height": 26,
+					"dataSource": "Button2",
+					"shortcutKey": "r",
+					"shortcutAccel": true,
+					"text": "Refresh",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"top": 112,
+					"left": 785,
+					"width": 181,
+					"height": 21,
+					"dataSource": "cbCalculateLive",
+					"text": "Live Calculations (slower)",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 547,
+					"left": 719,
+					"width": 247,
+					"height": 23,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "Button1",
+					"action": "accept",
+					"text": "Save Reconciled Rows",
+					"class": "Control",
+					"stroke": "#222222",
+					"focusable": false,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 547,
+					"left": 619,
+					"width": 95,
+					"height": 23,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "Button1",
+					"text": "Cancel",
+					"class": "Control",
+					"stroke": "#222222",
+					"focusable": false,
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 477,
+					"left": 279,
+					"width": 220,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Reconciled Rows Sums"
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 477,
+					"left": 504,
+					"width": 145,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "vSumCredits_C",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#DBDCB6",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable6": {
+					"type": "input",
+					"top": 477,
+					"left": 801,
+					"width": 155,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "vSumBalance_C",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable8": {
+					"type": "input",
+					"top": 502,
+					"left": 339,
+					"width": 55,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vSelectedRows",
+					"dataSourceTypeHint": "number",
+					"stroke": "#444444",
+					"class": "Label",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable10": {
+					"type": "input",
+					"top": 525,
+					"left": 804,
+					"width": 166,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "vOffBalance",
+					"dataSourceTypeHint": "number",
+					"stroke": "#EE0000",
+					"class": "Fields",
+					"fontWeight": "bold",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"top": 66,
+					"left": 117,
+					"width": 180,
+					"height": 16,
+					"dataSource": "cbSearchComments",
+					"text": "Search Remarks",
+					"class": "Control_Small",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box3": {
+					"type": "checkbox",
+					"top": 83,
+					"left": 117,
+					"width": 180,
+					"height": 16,
+					"dataSource": "cbSearchCheckmarked",
+					"text": "Search in reconciled rows",
+					"class": "Control_Small",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box4": {
+					"type": "checkbox",
+					"top": 33,
+					"left": 117,
+					"width": 180,
+					"height": 16,
+					"dataSource": "cbSearchDeposits",
+					"text": "Search Debit column",
+					"class": "Control_Small",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box5": {
+					"type": "checkbox",
+					"top": 49,
+					"left": 117,
+					"width": 180,
+					"height": 16,
+					"dataSource": "cbSearchWithdrawals",
+					"text": "Search Credit column",
+					"class": "Control_Small",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 525,
+					"left": 400,
+					"width": 397,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Statement off-balance to be reconciled"
+				},
+				"Variable7": {
+					"type": "input",
+					"top": 78,
+					"left": 12,
+					"width": 63,
+					"height": 15,
+					"dataSource": "vSelectedRows",
+					"stroke": "#888888",
+					"class": "Label",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable31": {
+					"type": "input",
+					"top": 458,
+					"left": 652,
+					"width": 145,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "vSumTotalDebits",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable4": {
+					"type": "input",
+					"top": 477,
+					"left": 652,
+					"width": 145,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "vSumDebits_C",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#BABFE5",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Picture Button2": {
+					"type": "pictureButton",
+					"top": 39,
+					"left": 323,
+					"width": 40,
+					"height": 20,
+					"dataSource": "Picture Button1",
+					"picture": "/RESOURCES/Images/library/micnDateRange.png",
+					"switchBackWhenReleased": true,
+					"borderStyle": "raised",
+					"method": "ObjectMethods/Picture Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"top": 36,
+					"left": 356,
+					"width": 45,
+					"height": 15,
+					"stroke": "#404040",
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "From"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 36,
+					"left": 406,
+					"width": 96,
+					"height": 15,
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#404040",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"events": [
+						"onLoad"
+					]
+				},
+				"Text10": {
+					"type": "text",
+					"top": 56,
+					"left": 356,
+					"width": 45,
+					"height": 15,
+					"stroke": "#404040",
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "To"
+				},
+				"Field2": {
+					"type": "input",
+					"top": 57,
+					"left": 406,
+					"width": 96,
+					"height": 15,
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#404040",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"events": [
+						"onLoad"
+					]
+				},
+				"AccountID": {
+					"type": "input",
+					"top": 2,
+					"left": 165,
+					"width": 463,
+					"height": 28,
+					"dataSource": "[Accounts:9]AccountID:1",
+					"stroke": "#FFFFFF",
+					"class": "Titles",
+					"focusable": false,
+					"fill": "#3C5C88",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Currency1": {
+					"type": "input",
+					"top": 2,
+					"left": 628,
+					"width": 60,
+					"height": 28,
+					"dataSource": "[Accounts:9]Currency:6",
+					"stroke": "#FFFFFF",
+					"class": "Titles",
+					"focusable": false,
+					"fill": "#3C5C88",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 2,
+					"left": 2,
+					"width": 163,
+					"height": 28,
+					"fill": "#3C5C88",
+					"stroke": "#FFFFFF",
+					"class": "Titles",
+					"textAlign": "center",
+					"text": " Reconciliation"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 70,
+					"left": 690,
+					"width": 155,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Statement Closing bal."
+				},
+				"Variable11": {
+					"type": "input",
+					"top": 50,
+					"left": 851,
+					"width": 131,
+					"height": 15,
+					"dataSource": "vOpeningBalance",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 72,
+					"left": 851,
+					"width": 131,
+					"height": 15,
+					"dataSource": "vTargetBalance",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 49,
+					"left": 690,
+					"width": 155,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Statement Opening bal."
+				},
+				"validationPrefixT": {
+					"type": "text",
+					"top": 485,
+					"left": 10,
+					"width": 129,
+					"height": 14,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label_Small",
+					"textAlign": "right",
+					"text": "Validation Prefix"
+				},
+				"validationNextT": {
+					"type": "text",
+					"top": 506,
+					"left": 10,
+					"width": 129,
+					"height": 14,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label_Small",
+					"textAlign": "right",
+					"text": "Next Validation  #"
+				},
+				"validationPrefix": {
+					"type": "input",
+					"top": 484,
+					"left": 153,
+					"width": 58,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vValidationPrefix",
+					"class": "Fields",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"validationStart": {
+					"type": "input",
+					"top": 506,
+					"left": 153,
+					"width": 58,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vValidationStart",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"3D Button1": {
+					"type": "button",
+					"top": 503,
+					"left": 215,
+					"width": 20,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "3D Button1",
+					"class": "Control",
+					"focusable": false,
+					"text": "-",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button2": {
+					"type": "button",
+					"top": 503,
+					"left": 238,
+					"width": 20,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "3D Button1",
+					"class": "Control",
+					"focusable": false,
+					"text": "+",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"validationFormat": {
+					"type": "input",
+					"top": 528,
+					"left": 153,
+					"width": 58,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vValidationFormat",
+					"class": "Fields",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"validationFormatT": {
+					"type": "text",
+					"top": 529,
+					"left": 10,
+					"width": 129,
+					"height": 14,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label_Small",
+					"textAlign": "right",
+					"text": "Validation Format"
+				},
+				"Check Box6": {
+					"type": "checkbox",
+					"top": 461,
+					"left": 8,
+					"width": 240,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "cbAutoValidate",
+					"text": "Automatic Validation Stamp",
+					"class": "Label_Small",
+					"focusable": false,
+					"method": "ObjectMethods/Check Box6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button5": {
+					"type": "button",
+					"top": 549,
+					"left": 133,
+					"width": 119,
+					"height": 22,
+					"sizingY": "move",
+					"dataSource": "Button2",
+					"text": "Check Selected Rows",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 549,
+					"left": 12,
+					"width": 118,
+					"height": 22,
+					"sizingY": "move",
+					"dataSource": "Button2",
+					"text": "Uncheck Selection",
+					"class": "Control_Small",
+					"focusable": false,
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box7": {
+					"type": "checkbox",
+					"top": 72,
+					"left": 319,
+					"width": 287,
+					"height": 22,
+					"dataSource": "cbdisplayUnreconciled",
+					"text": "Show unreconciled records from the past",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/Check Box7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"exportTable": {
+					"type": "button",
+					"top": 19,
+					"left": 829,
+					"width": 155,
+					"height": 24,
+					"dataSource": "Button7",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"focusable": false,
+					"text": "Export Table",
+					"icon": "/RESOURCES/Images/library/toolbarLoad.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/exportTable.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 548,
+					"left": 561,
+					"width": 28,
+					"height": 16,
+					"dataSource": "Invisible Button1",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button3": {
+					"type": "button",
+					"top": 111,
+					"left": 15,
+					"width": 94,
+					"height": 23,
+					"dataSource": "Button1",
+					"shortcutKey": "e",
+					"shortcutAccel": true,
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"text": "Edit Row",
+					"icon": "/RESOURCES/Images/library/toolbarChange.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"top": 111,
+					"left": 577,
+					"width": 160,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Unhide All Rows",
+					"class": "Control",
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button7": {
+					"type": "button",
+					"top": 111,
+					"left": 254,
+					"width": 160,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Hide Reconciled Rows",
+					"class": "Control",
+					"method": "ObjectMethods/Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button8": {
+					"type": "button",
+					"top": 111,
+					"left": 415,
+					"width": 160,
+					"height": 23,
+					"dataSource": "Button",
+					"text": "Hide Unreconciled Rows",
+					"class": "Control",
+					"method": "ObjectMethods/Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button9": {
+					"type": "button",
+					"top": 111,
+					"left": 114,
+					"width": 126,
+					"height": 23,
+					"dataSource": "Button1",
+					"shortcutKey": "e",
+					"shortcutAccel": true,
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"text": "View Record",
+					"icon": "/RESOURCES/Images/library/toolbarSearch.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button": {
+					"type": "button",
+					"top": 54,
+					"left": 13,
+					"width": 16,
+					"height": 14,
+					"dataSource": "Invisible Button",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"arrBranches": {
+					"type": "dropdown",
+					"top": 70,
+					"left": 597,
+					"width": 83,
+					"height": 25,
+					"dataSource": "arrBranches",
+					"focusable": false,
+					"choiceList": [
+						"All",
+						"Assets",
+						"Liabilities",
+						"Equities",
+						"Revenues",
+						"Expenses"
+					],
+					"class": "Control_Small",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/arrBranches.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				}
+			},
+			"entryOrder": [
+				"Variable30",
+				"Variable22",
+				"Variable1",
+				"Variable2",
+				"Variable5",
+				"reconcileList",
+				"Button2",
+				"Check Box1",
+				"Button1",
+				"Button4",
+				"Variable3",
+				"Variable6",
+				"Variable8",
+				"Variable10",
+				"Group1",
+				"Check Box2",
+				"Check Box3",
+				"Check Box4",
+				"Check Box5",
+				"Variable7",
+				"Variable31",
+				"Variable4",
+				"Field1",
+				"Field2",
+				"Check Box6",
+				"Button5",
+				"Button6",
+				"Check Box7",
+				"Button",
+				"Button7",
+				"Button8",
+				"arrBranches"
+			]
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group1": [
+				"Check Box2",
+				"Check Box3",
+				"Check Box4",
+				"Check Box5"
+			]
+		},
+		"defaultView": "View 1",
+		"activeView": "View 3",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Picture12",
+					"lookFor",
+					"Group1",
+					"exportTable",
+					"Invisible Button1",
+					"Button3",
+					"Button",
+					"Button7",
+					"Button8",
+					"Button9"
+				]
+			},
+			"View 3": {
+				"objects": [
+					"Group Box3",
+					"Group Box2",
+					"Group Box4",
+					"Group Box1",
+					"Invisible Button"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

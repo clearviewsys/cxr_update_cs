@@ -1,0 +1,1 @@
+duplicateRecordTable(Current form table:C627; ->[ClientPrefs:26]ClientName:1; "Computer Network Name?")

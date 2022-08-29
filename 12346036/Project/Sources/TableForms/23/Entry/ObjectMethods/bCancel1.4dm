@@ -1,0 +1,4 @@
+UNLOAD RECORD:C212([BankNotes:23])
+READ WRITE:C146([BankNotes:23])
+LOAD RECORD:C52([BankNotes:23])
+GOTO OBJECT:C206([BankNotes:23]BankNotesID:1)

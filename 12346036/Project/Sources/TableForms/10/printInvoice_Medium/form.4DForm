@@ -1,0 +1,283 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "printInvoice_Headerless",
+	"inheritedFormTable": 10,
+	"rightMargin": 5,
+	"bottomMargin": 5,
+	"markerHeader": 162,
+	"markerBody": 240,
+	"markerBreak": 314,
+	"markerFooter": 314,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A5",
+		"paperWidth": "420pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vDateTime": {
+					"type": "input",
+					"top": 66,
+					"left": 231,
+					"width": 131,
+					"height": 11,
+					"dataSource": "vDateTime",
+					"stroke": "#444444",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 8,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onHeader",
+						"onPrintingBreak"
+					]
+				},
+				"Line3": {
+					"type": "line",
+					"top": 80,
+					"left": 7,
+					"width": 355,
+					"sizingX": "grow"
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 2,
+					"left": 7,
+					"width": 112,
+					"height": 74,
+					"dataSource": "<>CompanyLogo",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 4,
+					"left": 121,
+					"width": 241,
+					"height": 15,
+					"dataSource": "<>CompanyName",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable4": {
+					"type": "input",
+					"top": 21,
+					"left": 121,
+					"width": 241,
+					"height": 24,
+					"dataSource": "env_CompanyAddress",
+					"class": "Titles_print",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 44,
+					"left": 121,
+					"width": 117,
+					"height": 10,
+					"dataSource": "vCompanyTel1",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 8,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/Variable9.4dm",
+					"events": [
+						"onHeader"
+					]
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 55,
+					"left": 121,
+					"width": 170,
+					"height": 10,
+					"dataSource": "<>CompanyWebAddress",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 8,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable6": {
+					"type": "input",
+					"top": 66,
+					"left": 121,
+					"width": 117,
+					"height": 10,
+					"dataSource": "<>CompanyeMail",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 8,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable7": {
+					"type": "input",
+					"top": 346,
+					"left": 264,
+					"width": 79,
+					"height": 10,
+					"dataSource": "<>CompanyFax",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 8,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/PhoneDisplay"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 346,
+					"left": 247,
+					"width": 17,
+					"height": 11,
+					"stroke": "#000000",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 8,
+					"text": "Fax"
+				}
+			},
+			"entryOrder": [
+				"vDateTime",
+				"Variable2",
+				"Variable3",
+				"Variable4",
+				"Variable9",
+				"Variable5",
+				"Variable6",
+				"Variable7"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

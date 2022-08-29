@@ -1,0 +1,1 @@
+bNextRecord(Current form table:C627)

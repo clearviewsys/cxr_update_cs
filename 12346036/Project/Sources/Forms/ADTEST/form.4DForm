@@ -1,0 +1,201 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"btnGetADUsers": {
+					"type": "button",
+					"top": 18,
+					"left": 7,
+					"width": 197,
+					"height": 30,
+					"text": "Get AD Users & Groups",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/btnGetADUsers.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"AD_Groups": {
+					"type": "listbox",
+					"top": 82,
+					"left": 6,
+					"width": 308,
+					"height": 512,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"movableRows": false,
+					"dataSource": "Form:C1466.groups",
+					"currentItemSource": "Form:C1466.currGroup",
+					"currentItemPositionSource": "Form:C1466.currGroupPos",
+					"selectedItemsSource": "Form:C1466.selectedGroups",
+					"scrollbarHorizontal": "automatic",
+					"method": "ObjectMethods/AD_Groups.4dm",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "This:C1470.name",
+							"width": 291,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "AD Groups"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				},
+				"AD_Members": {
+					"type": "listbox",
+					"top": 82,
+					"left": 355,
+					"width": 608,
+					"height": 512,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"movableRows": false,
+					"dataSource": "Form:C1466.members",
+					"currentItemSource": "Form:C1466.selectedMember",
+					"currentItemPositionSource": "Form:C1466.currGroupPos",
+					"selectedItemsSource": "Form:C1466.selectedGroups",
+					"scrollbarHorizontal": "automatic",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column2",
+							"dataSource": "This:C1470.sAMAccountName",
+							"width": 200,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "AD Group members"
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "This:C1470.allowLDAP",
+							"dataSourceTypeHint": "boolean",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"method": "ObjectMethods/Column3.4dm",
+							"header": {
+								"name": "Header3",
+								"text": "Allow LDAP connection"
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "This:C1470.inUsers",
+							"dataSourceTypeHint": "boolean",
+							"width": 241,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "In local Users table"
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				},
+				"Splitter": {
+					"type": "splitter",
+					"top": 64,
+					"left": 328,
+					"width": 5,
+					"height": 541,
+					"sizingY": "grow",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"method": "method.4dm",
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

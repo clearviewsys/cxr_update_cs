@@ -1,0 +1,1 @@
+bindPictureButtonToBooleanField(Self:C308; ->[ClientPrefs:26]isPrintCheque_portrait:15)

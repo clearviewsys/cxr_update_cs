@@ -1,0 +1,228 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Search",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 75,
+	"markerBody": 105,
+	"markerBreak": 381,
+	"markerFooter": 441,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onPrintingDetail",
+		"onUnload",
+		"onAfterKeystroke",
+		"onLoadRecord"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"slb_picker": {
+					"type": "listbox",
+					"top": 74,
+					"left": 3,
+					"width": 736,
+					"height": 309,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"movableRows": false,
+					"headerHeight": "24px",
+					"showFooters": true,
+					"table": 153,
+					"highlightSet": "$Confirmations_LBSet",
+					"horizontalLineStroke": "transparent",
+					"alternateFill": "#EEEEEE",
+					"method": "ObjectMethods/slb_picker.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column11",
+							"dataSource": "[Confirmations:153]confirmationID:2",
+							"width": 88,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_ConfID",
+								"text": "ConfirmationID"
+							},
+							"footer": {
+								"name": "vCount",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column17",
+							"dataSource": "[Confirmations:153]requestDate:3",
+							"dataSourceTypeHint": "date",
+							"width": 89,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_requestDate",
+								"text": "RequestDate"
+							},
+							"footer": {
+								"name": "Footer15",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column19",
+							"dataSource": "confirmationGetStatusText([Confirmations:153]status:12)",
+							"width": 96,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange",
+								"onHeaderClick"
+							],
+							"header": {
+								"name": "h_Status",
+								"text": "Status"
+							},
+							"footer": {
+								"name": "Footer17",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "c_Message",
+							"dataSource": "[Confirmations:153]confirmationMessage:6",
+							"width": 202,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Message",
+								"text": "Message"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "c_RequestUser",
+							"dataSource": "[Confirmations:153]requestUser:7",
+							"width": 78,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_RequestUser",
+								"text": "RequestedBy"
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column18",
+							"dataSource": "[Confirmations:153]confirmedDate:8",
+							"dataSourceTypeHint": "date",
+							"width": 86,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_ConfirmedDate",
+								"text": "ConfirmedDate"
+							},
+							"footer": {
+								"name": "Footer16",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "c_ConfirmedUser",
+							"dataSource": "[Confirmations:153]confirmedUser:10",
+							"width": 85,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_ConfirmedUser",
+								"text": "ConfirmedBy"
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

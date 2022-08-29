@@ -1,0 +1,829 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar",
+	"rightMargin": 0,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onUnload",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 75,
+					"left": 0,
+					"width": 1037,
+					"height": 383,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "mainListBox",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "2em",
+					"showFooters": true,
+					"footerHeight": "2em",
+					"table": 13,
+					"highlightSet": "$eWires_LBSet",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"alternateFill": "#D9E7F4",
+					"fontFamily": "Tahoma",
+					"fontSize": 10,
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column27",
+							"dataSource": "[eWires:13]BranchID:50",
+							"width": 28,
+							"maxWidth": 32000,
+							"fill": "#B7C7D6",
+							"alternateFill": "#A8BACC",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header12",
+								"text": "🏠",
+								"tooltip": "Branch",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer28",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column9",
+							"dataSource": "[eWires:13]isFlagged:27",
+							"width": 28,
+							"maxWidth": 32000,
+							"fill": "#B7C7D6",
+							"alternateFill": "#A8BACC",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header6",
+								"text": "🏁",
+								"tooltip": "Flags",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer23",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "[eWires:13]eWireID:1",
+							"width": 81,
+							"maxWidth": 32000,
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header7",
+								"text": "eWire ID",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer7",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"textAlign": "center",
+								"fontFamily": "Tahoma",
+								"fontSize": 14,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "col_securityCode",
+							"dataSource": "[eWires:13]securityChallengeCode:75",
+							"width": 5,
+							"maxWidth": 32000,
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Sec. Code",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer1",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"textAlign": "center",
+								"fontFamily": "Tahoma",
+								"fontSize": 14,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"header": {
+								"name": "Header18",
+								"text": "Status"
+							},
+							"name": "Column1",
+							"width": 54,
+							"dataSource": "[eWires:13]Status:22",
+							"footer": {
+								"name": "Footer10",
+								"fontFamily": "Tahoma",
+								"fontSize": 14,
+								"fill": "#A0CDE0"
+							}
+						},
+						{
+							"name": "Column24",
+							"dataSource": "[eWires:13]isSettled:23",
+							"dataSourceTypeHint": "boolean",
+							"width": 45,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"alternateFill": "#C9D9E8",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header10",
+								"text": "Settled",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer27",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column29",
+							"dataSource": "[eWires:13]InvoiceNumber:29",
+							"width": 79,
+							"maxWidth": 32000,
+							"fill": "#E9FDD5",
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header14",
+								"text": "Invoice",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer30",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[eWires:13]SendDate:2",
+							"dataSourceTypeHint": "date",
+							"width": 76,
+							"maxWidth": 32000,
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Send Date",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column8",
+							"dataSource": "[eWires:13]SenderName:7",
+							"width": 137,
+							"maxWidth": 32000,
+							"fill": "#E6FCF9",
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header13",
+								"text": "Sender Name",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column12",
+							"dataSource": "[eWires:13]fromCountryCode:111",
+							"width": 34,
+							"maxWidth": 32000,
+							"fill": "#E6FCF9",
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header8",
+								"text": "From",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer25",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column15",
+							"dataSource": "[eWires:13]toCountryCode:112",
+							"width": 35,
+							"maxWidth": 32000,
+							"fill": "#DEFBD9",
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header9",
+								"text": "to",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer26",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column10",
+							"dataSource": "[eWires:13]BeneficiaryFullName:5",
+							"width": 87,
+							"maxWidth": 32000,
+							"fill": "#DEFBD9",
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header17",
+								"text": "Beneficiary Name",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer9",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column30",
+							"dataSource": "[eWires:13]FromAmount:13",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#DDFCEC",
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header15",
+								"text": "From Amount",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer31",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column11",
+							"dataSource": "[eWires:13]ToAmount:14",
+							"dataSourceTypeHint": "number",
+							"width": 96,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#F5FDDC",
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header11",
+								"text": "To Amount",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer11",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "[eWires:13]Currency:12",
+							"width": 40,
+							"maxWidth": 32000,
+							"fill": "#F5FDDC",
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header5",
+								"text": "💲",
+								"tooltip": "Currency",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "[eWires:13]AccountID:30",
+							"width": 113,
+							"maxWidth": 32000,
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header16",
+								"text": "Account",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "[eWires:13]AgentID:26",
+							"width": 54,
+							"maxWidth": 32000,
+							"fill": "#FBE8F7",
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "Agent",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "[eWires:13]Subject:6",
+							"width": 100,
+							"maxWidth": 32000,
+							"alternateFill": "#D9E7F4",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Subject",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#A0CDE0",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						}
+					]
+				},
+				"Highlight Button6": {
+					"type": "button",
+					"top": 470,
+					"left": 354,
+					"width": 115,
+					"height": 25,
+					"sizingY": "move",
+					"text": "Cancelled eWires",
+					"method": "ObjectMethods/Highlight Button6.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_recPending": {
+					"type": "button",
+					"top": 470,
+					"left": 12,
+					"width": 115,
+					"height": 25,
+					"sizingY": "move",
+					"text": "Recvd. Pending",
+					"stroke": "#000000",
+					"focusable": false,
+					"method": "ObjectMethods/b_recPending.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 470,
+					"left": 126,
+					"width": 115,
+					"height": 25,
+					"sizingY": "move",
+					"text": "Sent Pending",
+					"stroke": "#000000",
+					"focusable": false,
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button3": {
+					"type": "button",
+					"top": 470,
+					"left": 240,
+					"width": 115,
+					"height": 25,
+					"sizingY": "move",
+					"text": "All eWires",
+					"stroke": "#000000",
+					"focusable": false,
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_recPaid": {
+					"type": "button",
+					"top": 494,
+					"left": 12,
+					"width": 115,
+					"height": 25,
+					"sizingY": "move",
+					"text": "Received Paid",
+					"stroke": "#000000",
+					"focusable": false,
+					"method": "ObjectMethods/b_recPaid.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button5": {
+					"type": "button",
+					"top": 494,
+					"left": 126,
+					"width": 115,
+					"height": 25,
+					"sizingY": "move",
+					"text": "Sent Paid",
+					"stroke": "#000000",
+					"focusable": false,
+					"method": "ObjectMethods/Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button13": {
+					"type": "button",
+					"top": 494,
+					"left": 240,
+					"width": 115,
+					"height": 25,
+					"sizingY": "move",
+					"text": "Unpaid eWires",
+					"stroke": "#000000",
+					"focusable": false,
+					"method": "ObjectMethods/Button13.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button7": {
+					"type": "button",
+					"top": 494,
+					"left": 354,
+					"width": 115,
+					"height": 25,
+					"sizingY": "move",
+					"text": "Flagged eWires",
+					"stroke": "#444444",
+					"method": "ObjectMethods/Highlight Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Pop-up/Drop-down List2": {
+					"type": "dropdown",
+					"top": 467,
+					"left": 758,
+					"width": 167,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "arrAgents",
+					"focusable": false,
+					"choiceList": [
+						"All",
+						"Assets",
+						"Liabilities",
+						"Equities",
+						"Revenues",
+						"Expenses"
+					],
+					"class": "Fields",
+					"method": "ObjectMethods/Pop-up%2FDrop-down List2.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 471,
+					"left": 602,
+					"width": 153,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Show eWires Pending for :"
+				},
+				"Pop-up/Drop-down List1": {
+					"type": "dropdown",
+					"top": 467,
+					"left": 935,
+					"width": 104,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "arrDirections",
+					"focusable": false,
+					"choiceList": [
+						"Both way",
+						"Sent",
+						"Received"
+					],
+					"class": "Fields",
+					"method": "ObjectMethods/Pop-up%2FDrop-down List1.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Highlight Button2": {
+					"type": "button",
+					"top": 494,
+					"left": 468,
+					"width": 115,
+					"height": 25,
+					"sizingY": "move",
+					"text": "Urgent eWires",
+					"stroke": "#444444",
+					"method": "ObjectMethods/Highlight Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"customerreport_b": {
+					"type": "button",
+					"top": 494,
+					"left": 582,
+					"width": 115,
+					"height": 25,
+					"sizingY": "move",
+					"text": "Custom Reports",
+					"focusable": false,
+					"method": "ObjectMethods/customerreport_b.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_Settle": {
+					"type": "button",
+					"top": 470,
+					"left": 468,
+					"width": 115,
+					"height": 25,
+					"sizingY": "move",
+					"text": "Force Settle",
+					"method": "ObjectMethods/b_Settle.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 2,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

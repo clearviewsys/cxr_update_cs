@@ -1,0 +1,1 @@
+handleTodayButton(Current form table:C627; ->[eWires:13]SendDate:2)

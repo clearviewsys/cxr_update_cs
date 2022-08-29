@@ -1,0 +1,200 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 33,
+					"left": 25,
+					"width": 548,
+					"height": 89,
+					"fill": "transparent"
+				},
+				"username": {
+					"type": "input",
+					"top": 44,
+					"left": 184,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.credentials.username",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"password": {
+					"type": "input",
+					"top": 68,
+					"left": 184,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.credentials.password",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"agentID": {
+					"type": "input",
+					"top": 93,
+					"left": 184,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.credentials.agentID",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"deviceIDs": {
+					"type": "dropdown",
+					"top": 93,
+					"left": 184,
+					"width": 384,
+					"height": 20,
+					"focusable": false,
+					"method": "ObjectMethods/deviceIDs.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_Cancel": {
+					"type": "button",
+					"top": 153,
+					"left": 327,
+					"width": 115,
+					"height": 30,
+					"shortcutKey": "[Esc]",
+					"text": "Cancel",
+					"method": "ObjectMethods/b_Cancel.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_Save": {
+					"type": "button",
+					"top": 153,
+					"left": 443,
+					"width": 125,
+					"height": 30,
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"method": "ObjectMethods/b_Save.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"l_username": {
+					"type": "text",
+					"top": 45,
+					"left": 27,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Username"
+				},
+				"l_password": {
+					"type": "text",
+					"top": 70,
+					"left": 27,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Password"
+				},
+				"l_agentID": {
+					"type": "text",
+					"top": 93,
+					"left": 27,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "AgentID"
+				},
+				"t_moneygramcredentials": {
+					"type": "text",
+					"top": 13,
+					"left": 24,
+					"width": 548,
+					"height": 15,
+					"sizingX": "grow",
+					"fill": "#DDA0DD",
+					"stroke": "#FFFFFF",
+					"textAlign": "center",
+					"text": "Enter yours MoneyGram Credentials"
+				},
+				"b_hiddenFillFromKeyValues": {
+					"type": "button",
+					"top": 136,
+					"left": 24,
+					"width": 2,
+					"height": 2,
+					"shortcutKey": "l",
+					"shortcutAccel": true,
+					"shortcutShift": true,
+					"display": false,
+					"method": "ObjectMethods/b_hiddenFillFromKeyValues.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"username",
+				"password",
+				"agentID",
+				"deviceIDs",
+				"b_Cancel",
+				"b_Save"
+			]
+		}
+	]
+}

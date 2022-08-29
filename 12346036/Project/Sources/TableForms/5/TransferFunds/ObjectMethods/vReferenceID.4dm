@@ -1,0 +1,2 @@
+C_TEXT:C284(vReferenceID)
+applyFocusRect

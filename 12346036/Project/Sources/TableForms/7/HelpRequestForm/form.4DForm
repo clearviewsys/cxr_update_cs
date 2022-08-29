@@ -1,0 +1,187 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Field2": {
+					"type": "input",
+					"top": 62,
+					"left": 100,
+					"width": 395,
+					"height": 105,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "vHelpRequest",
+					"class": "Fields",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"top": 291,
+					"left": 352,
+					"width": 146,
+					"height": 26,
+					"sizingY": "move",
+					"dataSource": "cbUrgent",
+					"text": "Urgent case",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 324,
+					"left": 352,
+					"width": 142,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "Button1",
+					"action": "accept",
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"text": "Send Request",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 7,
+					"left": 100,
+					"width": 394,
+					"height": 24,
+					"stroke": "#000000",
+					"class": "Titles",
+					"textAlign": "center",
+					"text": "Send a live support request"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 38,
+					"left": 100,
+					"width": 395,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Please briefly describe the problem: "
+				},
+				"Button2": {
+					"type": "button",
+					"top": 324,
+					"left": 255,
+					"width": 92,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "Button1",
+					"action": "cancel",
+					"text": "Cancel",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 256,
+					"left": 97,
+					"width": 394,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"text": "Toll Free Line: 1 (888) 390-0840"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 276,
+					"left": 97,
+					"width": 212,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"text": "International:  +1 (519) 971-5149"
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 7,
+					"left": 10,
+					"width": 70,
+					"height": 70,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/_CallLogs.png"
+				},
+				"Text": {
+					"type": "text",
+					"top": 170,
+					"left": 97,
+					"width": 398,
+					"height": 76,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"stroke": "#EE0000",
+					"text": "In order to expedite the support, we recommend that you send your TeamViewer ID and password to the support team. Please include a phone number (with country code) to sontact you at. "
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

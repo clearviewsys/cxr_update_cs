@@ -1,0 +1,896 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 525,
+	"markerBreak": 525,
+	"markerFooter": 535,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Round Rectangle": {
+					"type": "rectangle",
+					"top": 8,
+					"left": 567,
+					"width": 298,
+					"height": 163,
+					"fill": "#DDDDDD",
+					"stroke": "#CCCCCC",
+					"borderRadius": 5
+				},
+				"l_abbr": {
+					"type": "text",
+					"top": 57,
+					"left": 0,
+					"width": 240,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Template Name"
+				},
+				"l_picture ID_Type": {
+					"type": "text",
+					"top": 82,
+					"left": 0,
+					"width": 240,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Generic Type of Picture ID"
+				},
+				"l_defaultAuthority": {
+					"type": "text",
+					"top": 208,
+					"left": 0,
+					"width": 240,
+					"height": 21,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Issuing Authority"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 181,
+					"left": 0,
+					"width": 240,
+					"height": 21,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Default State"
+				},
+				"l_countrycode": {
+					"type": "text",
+					"top": 155,
+					"left": 0,
+					"width": 240,
+					"height": 21,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Country Code"
+				},
+				"l_sample": {
+					"type": "text",
+					"top": 186,
+					"left": 567,
+					"width": 157,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "left",
+					"text": "Sample Picture ID"
+				},
+				"isFlagged": {
+					"type": "checkbox",
+					"top": 30,
+					"left": 248,
+					"width": 112,
+					"height": 20,
+					"dataSource": "[PictureIDTypes:92]isFlagged:8",
+					"text": "Flag",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"PictureIDType": {
+					"type": "input",
+					"top": 57,
+					"left": 248,
+					"width": 91,
+					"height": 20,
+					"dataSource": "[PictureIDTypes:92]TemplateID:1",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFF0DF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/PictureIDType.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"DocumentName": {
+					"type": "input",
+					"top": 83,
+					"left": 248,
+					"width": 168,
+					"height": 20,
+					"dataSource": "[PictureIDTypes:92]PictureIDType:5",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFF0DF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/PictureIDTypes"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"entryFilter1": {
+					"type": "input",
+					"top": 110,
+					"left": 248,
+					"width": 315,
+					"height": 40,
+					"dataSource": "[PictureIDTypes:92]Description:14",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFF0DF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"defaultCountry": {
+					"type": "input",
+					"top": 158,
+					"left": 248,
+					"width": 27,
+					"height": 20,
+					"dataSource": "[PictureIDTypes:92]CountryCode:4",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/defaultCountry.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"defaultState": {
+					"type": "input",
+					"top": 183,
+					"left": 248,
+					"width": 27,
+					"height": 20,
+					"dataSource": "[PictureIDTypes:92]State:3",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"defaultCity": {
+					"type": "input",
+					"top": 209,
+					"left": 248,
+					"width": 307,
+					"height": 20,
+					"dataSource": "[PictureIDTypes:92]Authority:2",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"DocumentName1": {
+					"type": "input",
+					"top": 244,
+					"left": 248,
+					"width": 42,
+					"height": 20,
+					"dataSource": "[PictureIDTypes:92]GovernmentCode:15",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/PictureIDCode"
+					},
+					"fill": "#FFC0C0",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"fintrac_dd": {
+					"type": "dropdown",
+					"top": 241,
+					"left": 418,
+					"width": 137,
+					"height": 25,
+					"visibility": "hidden",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/FINTRAC ID List"
+					},
+					"class": "Fields",
+					"method": "ObjectMethods/fintrac_dd.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"PTR_DD": {
+					"type": "dropdown",
+					"top": 270,
+					"left": 418,
+					"width": 137,
+					"height": 25,
+					"visibility": "hidden",
+					"choiceList": [
+						"1 - Birth certificate",
+						"2 - Client code",
+						"A - Driver's licence",
+						"B - Government ID (example: Military ID, Police ID)",
+						"C - Identification card",
+						"D - Identification issued by Reporting Entity (example: bank card)",
+						"E - Other",
+						"F - Passport",
+						"G - Proof of address (utility bills, etc.)",
+						"K - RealMe",
+						"H - Suspected fraudulent",
+						"I - Tax identification card/number (social security card, IRD card, etc.)",
+						"J - Voter information/registrations",
+						"- - unknown"
+					],
+					"class": "Fields",
+					"method": "ObjectMethods/PTR_DD.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"entryFilter": {
+					"type": "input",
+					"top": 301,
+					"left": 248,
+					"width": 307,
+					"height": 20,
+					"dataSource": "[PictureIDTypes:92]EntryFilter:11",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"entryFilter2": {
+					"type": "input",
+					"top": 326,
+					"left": 248,
+					"width": 307,
+					"height": 20,
+					"dataSource": "[PictureIDTypes:92]DisplayFormat:13",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"defaultState1": {
+					"type": "input",
+					"top": 351,
+					"left": 248,
+					"width": 27,
+					"height": 20,
+					"defaultValue": "3",
+					"dataSource": "[PictureIDTypes:92]MinLength:12",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"min": 4,
+					"max": 40,
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"defaultState2": {
+					"type": "input",
+					"top": 376,
+					"left": 248,
+					"width": 27,
+					"height": 20,
+					"defaultValue": "8",
+					"dataSource": "[PictureIDTypes:92]MaxLength:21",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"min": 4,
+					"max": 40,
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"testString": {
+					"type": "input",
+					"top": 402,
+					"left": 248,
+					"width": 221,
+					"height": 20,
+					"class": "Fields_Large",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"popUpEntryFilters": {
+					"type": "dropdown",
+					"top": 428,
+					"left": 248,
+					"width": 307,
+					"height": 27,
+					"focusable": false,
+					"choiceList": [
+						"&\"1\"#&9#########",
+						"1-###-###-###"
+					],
+					"class": "Fields_Large",
+					"method": "ObjectMethods/popUpEntryFilters.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"isIssueDateMand": {
+					"type": "checkbox",
+					"top": 43,
+					"left": 575,
+					"width": 274,
+					"height": 20,
+					"dataSource": "[PictureIDTypes:92]isIssuingDateMandatory:20",
+					"text": "Issuing Date is Mandatory",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/PictureIDCode"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isExpDateM": {
+					"type": "checkbox",
+					"top": 66,
+					"left": 575,
+					"width": 274,
+					"height": 20,
+					"dataSource": "[PictureIDTypes:92]isExpiryDateMandatory:16",
+					"text": "Expiry Date is Mandatory",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/PictureIDCode"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isIssuingCountryM": {
+					"type": "checkbox",
+					"top": 97,
+					"left": 575,
+					"width": 274,
+					"height": 20,
+					"dataSource": "[PictureIDTypes:92]isIssuingCountryMandatory:18",
+					"text": "Issuing Country is Mandatory",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/PictureIDCode"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isIssuingStateMandatory": {
+					"type": "checkbox",
+					"top": 120,
+					"left": 575,
+					"width": 274,
+					"height": 20,
+					"dataSource": "[PictureIDTypes:92]isIssuingStateMandatory:17",
+					"text": "Issuing State is Mandatory",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/PictureIDCode"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isIssuingAuthMand": {
+					"type": "checkbox",
+					"top": 143,
+					"left": 575,
+					"width": 274,
+					"height": 20,
+					"dataSource": "[PictureIDTypes:92]isIssuingAuthMand:19",
+					"text": "Issuing Authority is Mandatory",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/PictureIDCode"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_browse": {
+					"type": "button",
+					"top": 181,
+					"left": 746,
+					"width": 121,
+					"height": 28,
+					"text": ":xliff:cvs_browse",
+					"class": "Control",
+					"method": "ObjectMethods/b_browse.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"SamplePicture": {
+					"type": "input",
+					"top": 214,
+					"left": 569,
+					"width": 298,
+					"height": 176,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[PictureIDTypes:92]SampleImage:6",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 408,
+					"left": 713,
+					"width": 154,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/OK"
+					},
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"class": "Control_Large_",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 408,
+					"left": 572,
+					"width": 140,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Cancel"
+					},
+					"shortcutKey": "\u0000",
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_text": {
+					"type": "text",
+					"top": 61,
+					"left": 344,
+					"width": 194,
+					"height": 15,
+					"text": "e.g: (DLUS for US Driver License)"
+				},
+				"l_entryFilter": {
+					"type": "text",
+					"top": 299,
+					"left": 0,
+					"width": 240,
+					"height": 21,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Entry Filter"
+				},
+				"l_entryFilter1": {
+					"type": "text",
+					"top": 403,
+					"left": 0,
+					"width": 240,
+					"height": 21,
+					"stroke": "#777777",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Try the entry filter here"
+				},
+				"l_entryFilter2": {
+					"type": "text",
+					"top": 433,
+					"left": 0,
+					"width": 240,
+					"height": 21,
+					"stroke": "#777777",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Example Entry Filters"
+				},
+				"l_desc": {
+					"type": "text",
+					"top": 110,
+					"left": 140,
+					"width": 100,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_description"
+				},
+				"l_code": {
+					"type": "text",
+					"top": 244,
+					"left": 0,
+					"width": 240,
+					"height": 19,
+					"stroke": "#9C0000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Standard Government Code"
+				},
+				"l_minLen": {
+					"type": "text",
+					"top": 351,
+					"left": 0,
+					"width": 240,
+					"height": 21,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Minimum Length"
+				},
+				"l_entryFilter3": {
+					"type": "text",
+					"top": 325,
+					"left": 0,
+					"width": 240,
+					"height": 21,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Display Format"
+				},
+				"l_text1": {
+					"type": "text",
+					"top": 87,
+					"left": 423,
+					"width": 112,
+					"height": 15,
+					"text": "e.g. Driver's License"
+				},
+				"fintrac_l": {
+					"type": "text",
+					"top": 247,
+					"left": 310,
+					"width": 99,
+					"height": 14,
+					"visibility": "hidden",
+					"class": "Fields_Small",
+					"textAlign": "right",
+					"text": "FINTRAC Codes"
+				},
+				"Line": {
+					"type": "line",
+					"top": 236,
+					"left": 26,
+					"width": 529
+				},
+				"l_mantatory": {
+					"type": "text",
+					"top": 17,
+					"left": 578,
+					"width": 271,
+					"height": 20,
+					"class": "Fields_Large",
+					"text": "Mandatory Fields"
+				},
+				"l_maxLength": {
+					"type": "text",
+					"top": 376,
+					"left": 0,
+					"width": 240,
+					"height": 21,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Maximum Length"
+				},
+				"PTR_l": {
+					"type": "text",
+					"top": 275,
+					"left": 310,
+					"width": 99,
+					"height": 14,
+					"visibility": "hidden",
+					"class": "Fields_Small",
+					"textAlign": "right",
+					"text": "PTR Reporting Codes"
+				}
+			},
+			"entryOrder": [
+				"isFlagged",
+				"PictureIDType",
+				"DocumentName",
+				"entryFilter1",
+				"defaultCountry",
+				"defaultState",
+				"defaultCity",
+				"DocumentName1",
+				"fintrac_dd",
+				"PTR_DD",
+				"entryFilter",
+				"entryFilter2",
+				"defaultState1",
+				"defaultState2",
+				"testString",
+				"popUpEntryFilters",
+				"isIssueDateMand",
+				"isExpDateM",
+				"isIssuingCountryM",
+				"isIssuingStateMandatory",
+				"isIssuingAuthMand",
+				"b_browse",
+				"SamplePicture",
+				"bValidate",
+				"bCancel"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"bValidate",
+					"bCancel"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

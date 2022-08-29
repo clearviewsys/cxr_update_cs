@@ -1,0 +1,1336 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"var_results1": {
+					"type": "input",
+					"top": 56,
+					"left": 140,
+					"width": 535,
+					"height": 18,
+					"sizingX": "move",
+					"dataSource": "Form:C1466.tid",
+					"class": "Fields_Medium",
+					"tooltip": "The transaction ID. This ID is for IdentityMind",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"var_user": {
+					"type": "input",
+					"top": 105,
+					"left": 140,
+					"width": 100,
+					"height": 18,
+					"dataSource": "Form:C1466.user",
+					"class": "Fields_Medium",
+					"tooltip": "The current reputation of the user",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"text_results2_4": {
+					"type": "text",
+					"top": 105,
+					"left": 15,
+					"width": 120,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Reputation:"
+				},
+				"text_results2": {
+					"type": "text",
+					"top": 85,
+					"left": 140,
+					"width": 100,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"text": "Current:"
+				},
+				"var_upr": {
+					"type": "input",
+					"top": 105,
+					"left": 250,
+					"width": 100,
+					"height": 18,
+					"dataSource": "Form:C1466.upr",
+					"class": "Fields_Medium",
+					"tooltip": "The previous reputation of the user when they were last evaluated.",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"text_results3": {
+					"type": "text",
+					"top": 85,
+					"left": 250,
+					"width": 100,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"text": "Previous:"
+				},
+				"var_results2": {
+					"type": "input",
+					"top": 105,
+					"left": 360,
+					"width": 315,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.erd",
+					"class": "Fields_Medium",
+					"tooltip": "A description of the reason for the user’s reputation.",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"text_results4": {
+					"type": "text",
+					"top": 83,
+					"left": 360,
+					"width": 315,
+					"height": 19,
+					"sizingX": "grow",
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"text": "Reason:"
+				},
+				"text_results1": {
+					"type": "text",
+					"top": 56,
+					"left": 15,
+					"width": 120,
+					"height": 19,
+					"sizingX": "move",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Transaction ID:"
+				},
+				"var_results3": {
+					"type": "input",
+					"top": 552,
+					"left": 188,
+					"width": 378,
+					"height": 18,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"dataSource": "Form:C1466.rcd",
+					"class": "Fields_Medium",
+					"tooltip": "The set of result codes from the evaluation of the current transaction.",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"text_results5": {
+					"type": "text",
+					"top": 552,
+					"left": 15,
+					"width": 168,
+					"height": 19,
+					"sizingY": "move",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Evalution Result Codes:"
+				},
+				"tab_results": {
+					"type": "tab",
+					"top": 130,
+					"left": 15,
+					"width": 660,
+					"height": 398,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSourceTypeHint": "arrayText",
+					"labels": [
+						"Fraud Rule",
+						"Externalized Rule",
+						"Test Results",
+						"Evaluated Test Results",
+						"Automated Review"
+					],
+					"class": "Control",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"text_title": {
+					"type": "text",
+					"top": 15,
+					"left": 15,
+					"width": 660,
+					"height": 19,
+					"sizingX": "grow",
+					"class": "Label_Large",
+					"textAlign": "center",
+					"text": "IdentityMind Full Report"
+				},
+				"var_state": {
+					"type": "input",
+					"top": 602,
+					"left": 14,
+					"width": 283,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.state",
+					"class": "Headings",
+					"textAlign": "center",
+					"tooltip": "The current state of the KYC. ",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"text_results6": {
+					"type": "text",
+					"top": 582,
+					"left": 15,
+					"width": 283,
+					"height": 19,
+					"sizingY": "move",
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"text": "KYC State"
+				},
+				"but_details": {
+					"type": "button",
+					"top": 548,
+					"left": 581,
+					"width": 94,
+					"height": 27,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Details...",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/but_details.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"but_close": {
+					"type": "button",
+					"top": 642,
+					"left": 550,
+					"width": 125,
+					"height": 27,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Close",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/but_close.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"text_results7": {
+					"type": "text",
+					"top": 582,
+					"left": 392,
+					"width": 283,
+					"height": 19,
+					"sizingX": "move",
+					"sizingY": "move",
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"text": "Result of Policy Evaluation"
+				},
+				"var_res": {
+					"type": "input",
+					"top": 602,
+					"left": 392,
+					"width": 283,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "Form:C1466.res",
+					"class": "Headings",
+					"textAlign": "center",
+					"tooltip": "Result of policy evaluation. Combines the result of fraud and automated review evaluations",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"var_environment": {
+					"type": "input",
+					"top": 682,
+					"left": 15,
+					"width": 453,
+					"height": 18,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"dataSource": "Form:C1466.environment",
+					"class": "Fields_Medium",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"text_intergrate": {
+					"type": "text",
+					"top": 682,
+					"left": 478,
+					"width": 88,
+					"height": 15,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Intergrated with:"
+				},
+				"pic_intergrated": {
+					"type": "picture",
+					"top": 676,
+					"left": 580,
+					"width": 95,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/identityMindLogo-small.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"var_frn": {
+					"type": "input",
+					"top": 170,
+					"left": 125,
+					"width": 540,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.frn",
+					"class": "Fields_Medium",
+					"tooltip": "The ID, if any, of the automated review rule that fired.",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"var_frd": {
+					"type": "input",
+					"top": 200,
+					"left": 125,
+					"width": 540,
+					"height": 270,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Form:C1466.frd",
+					"class": "Fields_Medium",
+					"tooltip": "The description of the fraud rule that fired.",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"text_basic1": {
+					"type": "text",
+					"top": 200,
+					"left": 20,
+					"width": 100,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Description:"
+				},
+				"text_basic0": {
+					"type": "text",
+					"top": 170,
+					"left": 20,
+					"width": 100,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Name:"
+				},
+				"var_frp": {
+					"type": "input",
+					"top": 487,
+					"left": 125,
+					"width": 540,
+					"height": 33,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"dataSource": "Form:C1466.frp",
+					"textAlign": "center",
+					"fontSize": 24,
+					"tooltip": "Result of fraud evaluation",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"text_er2": {
+					"type": "text",
+					"top": 200,
+					"left": 548,
+					"width": 32,
+					"height": 19,
+					"sizingX": "move",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "ID:"
+				},
+				"text_er1": {
+					"type": "text",
+					"top": 200,
+					"left": 20,
+					"width": 100,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Rule Name:"
+				},
+				"text_er3": {
+					"type": "text",
+					"top": 230,
+					"left": 20,
+					"width": 100,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Description:"
+				},
+				"text_er4": {
+					"type": "text",
+					"top": 260,
+					"left": 20,
+					"width": 100,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Details:"
+				},
+				"var_er1": {
+					"type": "input",
+					"top": 202,
+					"left": 126,
+					"width": 394,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.ednaScoreCard.er.reportedRule.name",
+					"class": "Fields_Medium",
+					"tooltip": "Rule name",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"var_er2": {
+					"type": "input",
+					"top": 202,
+					"left": 587,
+					"width": 78,
+					"height": 18,
+					"sizingX": "move",
+					"dataSource": "Form:C1466.ednaScoreCard.er.reportedRule.ruleId",
+					"class": "Fields_Medium",
+					"tooltip": "The complete set of rules that fired for this transaction.",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"var_er3": {
+					"type": "input",
+					"top": 232,
+					"left": 126,
+					"width": 539,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.ednaScoreCard.er.reportedRule.description",
+					"class": "Fields_Medium",
+					"tooltip": "The rule description.",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"var_er4": {
+					"type": "input",
+					"top": 260,
+					"left": 126,
+					"width": 539,
+					"height": 72,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Form:C1466.ednaScoreCard.er.reportedRule.details",
+					"class": "Fields_Medium",
+					"tooltip": "The rule description.",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"var_er0": {
+					"type": "input",
+					"top": 170,
+					"left": 126,
+					"width": 539,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.ednaScoreCard.er.profile",
+					"class": "Fields_Medium",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"text_er0": {
+					"type": "text",
+					"top": 170,
+					"left": 20,
+					"width": 100,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Profile:\r"
+				},
+				"v_er_resultCode": {
+					"type": "input",
+					"top": 486,
+					"left": 20,
+					"width": 645,
+					"height": 33,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"dataSource": "Form:C1466.ednaScoreCard.er.profile.reportedRule.resultCode",
+					"textAlign": "center",
+					"fontSize": 24,
+					"tooltip": "Result of rule.",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"list_sc1": {
+					"type": "listbox",
+					"top": 351,
+					"left": 20,
+					"width": 645,
+					"height": 129,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"movableRows": false,
+					"rowHeight": "20px",
+					"dataSource": "Form:C1466.ednaScoreCard.er.reportedRule.testResults",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onAfterSort",
+						"onSelectionChange",
+						"onColumnMove",
+						"onRowMove",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "col_sc6",
+							"dataSource": "This:C1470.fired",
+							"width": 60,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc6",
+								"text": "Fired?",
+								"tooltip": "Whether the condition fired or not.",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer19",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc7",
+							"dataSource": "This:C1470.test",
+							"width": 70,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc7",
+								"text": "Test ID",
+								"tooltip": "The ID of the security test or the key of the transaction data to which the condition applied.",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer20",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc8",
+							"dataSource": "This:C1470.waitingForData",
+							"width": 70,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc8",
+								"text": "Waiting?",
+								"tooltip": "Indicates that the result is waiting for an asynchronous response from the customer and/or third party service..",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer21",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc9",
+							"dataSource": "This:C1470.TestName",
+							"width": 200,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc9",
+								"text": "Name",
+								"tooltip": "Textual result of the condition.",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer22",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc10",
+							"dataSource": "This:C1470.stage",
+							"width": 55,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc10",
+								"text": "Stage",
+								"tooltip": "The KYC stage used in the application’s evaluation.",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer23",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc11",
+							"dataSource": "This:C1470.ts",
+							"width": 173,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc11",
+								"text": "Timestamp",
+								"tooltip": "The timestamp for the test.",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer24",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"list_sc": {
+					"type": "listbox",
+					"top": 170,
+					"left": 25,
+					"width": 640,
+					"height": 348,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"movableRows": false,
+					"rowHeight": "20px",
+					"dataSource": "Form:C1466.ednaScoreCard.sc",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onAfterSort",
+						"onSelectionChange",
+						"onColumnMove",
+						"onRowMove",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "col_sc0",
+							"dataSource": "This:C1470.fired",
+							"width": 60,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc0",
+								"text": "Fired?",
+								"tooltip": "Whether the condition fired or not.",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer13",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc1",
+							"dataSource": "This:C1470.test",
+							"width": 70,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc1",
+								"text": "Test ID",
+								"tooltip": "The ID of the security test or the key of the transaction data to which the condition applied.",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer14",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc2",
+							"dataSource": "This:C1470.waitingForData",
+							"width": 70,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc2",
+								"text": "Waiting?",
+								"tooltip": "Indicates that the result is waiting for an asynchronous response from the customer and/or third party service..",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer15",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc3",
+							"dataSource": "This:C1470.TestName",
+							"width": 200,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc3",
+								"text": "Name",
+								"tooltip": "Textual result of the condition.",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer16",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc4",
+							"dataSource": "This:C1470.stage",
+							"width": 55,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc4",
+								"text": "Stage",
+								"tooltip": "The KYC stage used in the application’s evaluation.",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer17",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc5",
+							"dataSource": "This:C1470.ts",
+							"width": 168,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc5",
+								"text": "Timestamp",
+								"tooltip": "The timestamp for the test.",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer18",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"list_sc2": {
+					"type": "listbox",
+					"top": 170,
+					"left": 25,
+					"width": 640,
+					"height": 348,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"movableRows": false,
+					"rowHeight": "20px",
+					"dataSource": "Form:C1466.ednaScoreCard.etr",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onAfterSort",
+						"onSelectionChange",
+						"onColumnMove",
+						"onRowMove",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "col_sc12",
+							"dataSource": "This:C1470.fired",
+							"width": 60,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc12",
+								"text": "Fired?",
+								"tooltip": "Whether the condition fired or not.",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc13",
+							"dataSource": "This:C1470.test",
+							"width": 70,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc13",
+								"text": "Test ID",
+								"tooltip": "The ID of the security test or the key of the transaction data to which the condition applied.",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc14",
+							"dataSource": "This:C1470.waitingForData",
+							"width": 70,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc14",
+								"text": "Waiting?",
+								"tooltip": "Indicates that the result is waiting for an asynchronous response from the customer and/or third party service..",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc15",
+							"dataSource": "This:C1470.TestName",
+							"width": 200,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc15",
+								"text": "Name",
+								"tooltip": "Textual result of the condition.",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc16",
+							"dataSource": "This:C1470.stage",
+							"width": 55,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc16",
+								"text": "Stage",
+								"tooltip": "The KYC stage used in the application’s evaluation.",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "col_sc17",
+							"dataSource": "This:C1470.ts",
+							"width": 168,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "head_sc17",
+								"text": "Timestamp",
+								"tooltip": "The timestamp for the test.",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"box_arp0": {
+					"type": "groupBox",
+					"top": 371,
+					"left": 20,
+					"width": 645,
+					"height": 150,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"class": "Fields_Medium",
+					"text": "Automated Reiew Rule:"
+				},
+				"box_ar0": {
+					"type": "groupBox",
+					"top": 170,
+					"left": 20,
+					"width": 645,
+					"height": 172,
+					"sizingX": "grow",
+					"class": "Fields_Medium",
+					"text": "Automated Reiew Policy:"
+				},
+				"var_ar0": {
+					"type": "input",
+					"top": 190,
+					"left": 125,
+					"width": 530,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.ednaScoreCard.ar.ruleId",
+					"class": "Fields_Medium",
+					"tooltip": "The unique rule identifier for the automated review policy for this transaction.",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"text_ar0": {
+					"type": "text",
+					"top": 190,
+					"left": 30,
+					"width": 90,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "ID:"
+				},
+				"var_ar1": {
+					"type": "input",
+					"top": 222,
+					"left": 125,
+					"width": 530,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.ednaScoreCard.ar.ruleName",
+					"class": "Fields_Medium",
+					"tooltip": "The rule name for the automated review policy for this transaction.",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"text_ar1": {
+					"type": "text",
+					"top": 220,
+					"left": 20,
+					"width": 100,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Rule Name:"
+				},
+				"var_ar2": {
+					"type": "input",
+					"top": 251,
+					"left": 125,
+					"width": 530,
+					"height": 36,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.ednaScoreCard.ar.ruleDescription",
+					"class": "Fields_Medium",
+					"tooltip": "The rule description for the automated review policy for this transaction.",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"text_arp1": {
+					"type": "text",
+					"top": 421,
+					"left": 20,
+					"width": 100,
+					"height": 19,
+					"sizingY": "move",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Description:"
+				},
+				"var_arp0": {
+					"type": "input",
+					"top": 391,
+					"left": 125,
+					"width": 530,
+					"height": 18,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"dataSource": "Form:C1466.arpid",
+					"class": "Fields_Medium",
+					"tooltip": "The ID, if any, of the automated review rule that fired.",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"var_arp1": {
+					"type": "input",
+					"top": 421,
+					"left": 125,
+					"width": 530,
+					"height": 36,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"dataSource": "Form:C1466.arpd",
+					"class": "Fields_Medium",
+					"tooltip": "The description, if any, of the automated review rule that fired.",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"text_ar2": {
+					"type": "text",
+					"top": 250,
+					"left": 20,
+					"width": 100,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Description:"
+				},
+				"text_arp0": {
+					"type": "text",
+					"top": 391,
+					"left": 22,
+					"width": 98,
+					"height": 19,
+					"sizingY": "move",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Rule ID:"
+				},
+				"var_arpr": {
+					"type": "input",
+					"top": 481,
+					"left": 125,
+					"width": 530,
+					"height": 15,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"dataSource": "Form:C1466.arpr",
+					"class": "Headings",
+					"textAlign": "center",
+					"tooltip": "Result of the automated review policy (ARP) evaluation..",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"var_ar_result": {
+					"type": "input",
+					"top": 307,
+					"left": 125,
+					"width": 530,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.ednaScoreCard.ar.result",
+					"class": "Headings",
+					"textAlign": "center",
+					"tooltip": "Result of rule.",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 10,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

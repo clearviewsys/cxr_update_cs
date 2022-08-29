@@ -1,0 +1,115 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_View",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Field": {
+					"type": "input",
+					"top": 78,
+					"left": 132,
+					"width": 323,
+					"height": 20,
+					"dataSource": "[KeyValues:115]Key:2",
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 107,
+					"left": 132,
+					"width": 323,
+					"height": 80,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[KeyValues:115]Value:3",
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_key": {
+					"type": "text",
+					"top": 78,
+					"left": 15,
+					"width": 110,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Key"
+				},
+				"l_key1": {
+					"type": "text",
+					"top": 105,
+					"left": 15,
+					"width": 110,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Value"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

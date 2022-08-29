@@ -1,0 +1,17 @@
+<!-- DIALOG FOR ALERTS -->
+
+    <div class='error-message'>
+        <div class='row'>
+            <div class='col-sm-12 col-md-12'>
+
+                <div class='alert alert-_CLASS_' data-auto-dismiss='7000'>
+                    <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>x</button>
+                    <span class='glyphicon glyphicon-_ICON_'></span>&nbsp;<strong>_SHORT_MESSAGE_</strong>
+                    <hr class='message-inner-separator'>
+                    <p>_LONG_MESSAGE_.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!-- END DIALOG FOR ALERTS -->

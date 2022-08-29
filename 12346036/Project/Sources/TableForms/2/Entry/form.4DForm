@@ -1,0 +1,336 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Entry",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"l_OccupationCode": {
+					"type": "text",
+					"top": 82,
+					"left": 7,
+					"width": 180,
+					"height": 19,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Occupation Code"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 108,
+					"left": 7,
+					"width": 180,
+					"height": 20,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": ":xliff:cvs_occupation"
+				},
+				"code": {
+					"type": "input",
+					"top": 82,
+					"left": 200,
+					"width": 72,
+					"height": 20,
+					"dataSource": "[Occupations:2]Code:2",
+					"class": "Fields_Large",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"isFlagged": {
+					"type": "checkbox",
+					"top": 21,
+					"left": 483,
+					"width": 112,
+					"height": 20,
+					"dataSource": "[Occupations:2]isFlagged:9",
+					"text": ":xliff:cvs_flag",
+					"class": "Fields_Large",
+					"focusable": false,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"occupation": {
+					"type": "input",
+					"top": 110,
+					"left": 200,
+					"width": 395,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "[Occupations:2]Occupation:3",
+					"class": "Fields_Large",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"method": "ObjectMethods/occupation.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"risk": {
+					"type": "input",
+					"top": 138,
+					"left": 200,
+					"width": 19,
+					"height": 20,
+					"dataSource": "[Occupations:2]AML_Risk:6",
+					"class": "Fields_Large",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"entryFilter": "&\"1;2;3;4;5\"#",
+					"method": "ObjectMethods/risk.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"code1": {
+					"type": "input",
+					"top": 172,
+					"left": 292,
+					"width": 104,
+					"height": 20,
+					"dataSource": "[Occupations:2]minAnnualSalary:10",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Large",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/CurrencyNoDec"
+					},
+					"entryFilter": "&9",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"code2": {
+					"type": "input",
+					"top": 199,
+					"left": 292,
+					"width": 104,
+					"height": 20,
+					"dataSource": "[Occupations:2]maxAnnualSalary:11",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Large",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/CurrencyNoDec"
+					},
+					"entryFilter": "&9",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"code3": {
+					"type": "input",
+					"top": 227,
+					"left": 292,
+					"width": 104,
+					"height": 20,
+					"dataSource": "[Occupations:2]medianAnnualSalary:12",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Large",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/CurrencyNoDec"
+					},
+					"entryFilter": "&9",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 267,
+					"left": 200,
+					"width": 395,
+					"height": 80,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[Occupations:2]Description:4",
+					"class": "Fields_Large",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_save": {
+					"type": "button",
+					"top": 355,
+					"left": 445,
+					"width": 150,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"text": ":xliff:cvs_save",
+					"class": "Control_Large_",
+					"defaultButton": true,
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 355,
+					"left": 293,
+					"width": 150,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": ":xliff:cvs_cancel",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/b_cancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 137,
+					"left": 7,
+					"width": 180,
+					"height": 20,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": ":xliff:cvs_risk"
+				},
+				"l_desc": {
+					"type": "text",
+					"top": 269,
+					"left": 7,
+					"width": 180,
+					"height": 20,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": ":xliff:cvs_description"
+				},
+				"l_minSalary": {
+					"type": "text",
+					"top": 171,
+					"left": 99,
+					"width": 180,
+					"height": 20,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Min. Annual Salary"
+				},
+				"l_maxSalary": {
+					"type": "text",
+					"top": 198,
+					"left": 99,
+					"width": 180,
+					"height": 20,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Max. Annual Salary"
+				},
+				"l_medianSalary": {
+					"type": "text",
+					"top": 226,
+					"left": 99,
+					"width": 180,
+					"height": 20,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Median Annual Salary"
+				},
+				"RiskLabel": {
+					"type": "text",
+					"top": 139,
+					"left": 227,
+					"width": 107,
+					"height": 19,
+					"class": "Fields_Large",
+					"text": "Undefined"
+				}
+			},
+			"entryOrder": [
+				"code",
+				"isFlagged",
+				"occupation",
+				"risk",
+				"code1",
+				"code2",
+				"code3",
+				"Field4",
+				"b_save",
+				"b_cancel"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

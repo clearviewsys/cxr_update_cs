@@ -1,0 +1,39 @@
+{
+	"forms": {
+		"Entry": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-29T16:33:23Z"
+		},
+		"print": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "listPrinter"
+		},
+		"Subform_Transactions": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "detailScreen"
+		},
+		"Subform_CashOut": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "detailScreen"
+		},
+		"Subform_CashInvoice": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "listScreen"
+		},
+		"Subform_CashTransactions": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "listScreen"
+		},
+		"Subform_CashIn": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "listScreen"
+		}
+	}
+}

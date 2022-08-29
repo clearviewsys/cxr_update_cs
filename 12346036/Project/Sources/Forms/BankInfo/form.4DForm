@@ -1,0 +1,249 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vAccountNo": {
+					"type": "input",
+					"top": 55,
+					"left": 183,
+					"width": 275,
+					"height": 20,
+					"dataSource": "vAccountNo",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fontWeight": "bold",
+					"fill": "#FFFFDF",
+					"placeholder": "Enter Acount Number",
+					"method": "ObjectMethods/vAccountNo.4dm",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"vBankName": {
+					"type": "input",
+					"top": 81,
+					"left": 183,
+					"width": 361,
+					"height": 18,
+					"dataSource": "vBankName",
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"fill": "#FFFFDF",
+					"placeholder": "Bank Name",
+					"method": "ObjectMethods/vBankName.4dm",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"vAccountName": {
+					"type": "input",
+					"top": 107,
+					"left": 183,
+					"width": 359,
+					"height": 18,
+					"dataSource": "vAccountName",
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"fill": "#FFFFFF",
+					"placeholder": "Account Name",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"vSwift": {
+					"type": "input",
+					"top": 134,
+					"left": 183,
+					"width": 215,
+					"height": 18,
+					"dataSource": "vSwift",
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"fill": "#FFFFFF",
+					"placeholder": "SWIFT",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"b_save": {
+					"type": "button",
+					"top": 183,
+					"left": 469,
+					"width": 75,
+					"height": 23,
+					"sizingY": "move",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 183,
+					"left": 370,
+					"width": 75,
+					"height": 23,
+					"sizingY": "move",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					],
+					"method": "ObjectMethods/b_cancel.4dm"
+				},
+				"b_validateIBAN": {
+					"type": "button",
+					"top": 54,
+					"left": 459,
+					"width": 88,
+					"height": 22,
+					"visibility": "hidden",
+					"text": "Validate IBAN",
+					"method": "ObjectMethods/b_validateIBAN.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_transit": {
+					"type": "text",
+					"top": 108,
+					"left": 11,
+					"width": 170,
+					"height": 18,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Account Name:"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 133,
+					"left": 9,
+					"width": 170,
+					"height": 23,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": " SWIFT Code"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 55,
+					"left": 9,
+					"width": 170,
+					"height": 23,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": " Account No / IBAN"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 82,
+					"left": 81,
+					"width": 91,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Bank Name"
+				},
+				"Text": {
+					"type": "text",
+					"top": 10,
+					"left": 24,
+					"width": 236,
+					"height": 15,
+					"fontFamily": "Segoe UI",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"text": "Bank Information:"
+				},
+				"Line": {
+					"type": "line",
+					"top": 171,
+					"left": 10,
+					"width": 534
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"l_transit",
+					"Text20",
+					"Text7",
+					"Text17"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

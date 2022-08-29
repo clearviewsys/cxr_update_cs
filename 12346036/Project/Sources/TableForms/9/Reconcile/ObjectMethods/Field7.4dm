@@ -1,0 +1,2 @@
+handleFromDateObject(Self:C308)
+handleAccountsViewRegisters

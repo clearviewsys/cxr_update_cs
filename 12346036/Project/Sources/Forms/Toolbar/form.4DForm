@@ -1,0 +1,200 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Simple",
+	"rightMargin": 2,
+	"bottomMargin": 5,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Button4": {
+					"type": "button",
+					"top": 32,
+					"left": 649,
+					"width": 24,
+					"height": 21,
+					"dataSource": "Button3",
+					"class": "toolbar",
+					"focusable": false,
+					"icon": "/RESOURCES/Images/library/tbar_today.4DMemoryBitmap",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Picture Button2": {
+					"type": "button",
+					"top": 8,
+					"left": 649,
+					"width": 24,
+					"height": 25,
+					"dataSource": "Picture Button1",
+					"focusable": false,
+					"icon": "/RESOURCES/Images/library/tbar_tinyCal.4DMemoryBitmap",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/Picture Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 9,
+					"left": 675,
+					"width": 85,
+					"height": 12,
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "toolbar",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "systemMedium",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field1.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 24,
+					"left": 675,
+					"width": 85,
+					"height": 12,
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "toolbar",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "systemMedium",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field2.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"top": 35,
+					"left": 677,
+					"width": 88,
+					"height": 23,
+					"dataSource": "cbApplyDateRange",
+					"text": "Apply Dates",
+					"class": "toolbar",
+					"focusable": false,
+					"method": "ObjectMethods/Check Box2.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"cbSearchSelection": {
+					"type": "checkbox",
+					"top": 35,
+					"left": 767,
+					"width": 125,
+					"height": 23,
+					"dataSource": "cbSearchSelection",
+					"text": "Search in Results",
+					"class": "toolbar",
+					"focusable": false,
+					"method": "ObjectMethods/cbSearchSelection.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Round Rectangle": {
+					"type": "rectangle",
+					"top": 4,
+					"left": 766,
+					"width": 129,
+					"height": 32,
+					"stroke": "#C0C0C0",
+					"strokeWidth": 2,
+					"borderRadius": 15
+				},
+				"searchArea": {
+					"type": "input",
+					"top": 11,
+					"left": 794,
+					"width": 94,
+					"height": 18,
+					"dataSource": "vSearchString",
+					"class": "Fields_Medium",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"hideFocusRing": true,
+					"placeholder": "Search",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/searchArea.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Oval": {
+					"type": "oval",
+					"top": 12,
+					"left": 773,
+					"width": 15,
+					"height": 15,
+					"fill": "transparent",
+					"stroke": "#696969",
+					"strokeWidth": 2
+				},
+				"Line2": {
+					"type": "line",
+					"top": 25,
+					"left": 786,
+					"width": 4,
+					"height": 4,
+					"stroke": "#696969",
+					"strokeWidth": 2
+				}
+			}
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group2": [
+				"Oval",
+				"Line2"
+			]
+		},
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

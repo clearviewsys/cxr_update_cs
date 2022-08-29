@@ -1,0 +1,1 @@
+waClickOnElement("mywa"; "submit")

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--#4DINCLUDE ../include/head_lite.shtml -->
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+
+
+    <div class="panel panel-primary">
+
+        <div class="panel-heading">Registration Form</div>
+
+        <div class="panel-body">
+
+            <form method="post" action="/4DACTION/webRegister">
+
+                <!--#4DHTML WAPI_includeAlertMessage-->
+
+                <!--#4DSCRIPT /webCaptchaValidation/submit-button-->
+                <!--#4DHTMLVAR captchaHtmlCode -->
+
+
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+                        <div class="row">
+
+
+                            <div class="col-sm-4 form-group">
+                                <label>User Name</label>
+
+                                <div class="input-group" data-validate="webUserName">
+
+                                    <input type="text" name="webUserName" id="webUserName"
+                                           placeholder="Enter User Name Here.."
+                                           value="<!--#4DVAR webUserName-->" required class="form-control">
+                                            <span class="input-group-addon default">
+                                                <span class="fas fa-user"></span>
+                                            </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-sm-4 form-group">
+                                <label>Password</label>
+
+                                <div class="input-group" data-validate="webPassword">
+
+                                    <input type="password" name="webPassword" id="webPassword"
+                                           placeholder="Enter password here.."
+                                           value="" required class="form-control">
+                                            <span class="input-group-addon default">
+                                                <span class="fas fa-unlock-alt"></span>
+                                            </span>
+                                </div>
+                            </div>
+
+                             <div class="col-sm-2 form-group">
+                                <label>&nbsp;</label>
+								        <span class="input-group-btn">
+									               <button type="button" id="btn-show-hide" class="btn btn-default btn-md"
+                                                           onclick="myFunction()">Show
+                                                   </button>
+                                        </span>
+                            </div>
+
+                            <script>
+
+                                function myFunction() {
+                                    var x = document.getElementById("webPassword");
+                                    if (x.type === "password") {
+                                        x.type = "text";
+                                        $("#btn-show-hide").html('Hide');
+                                    } else {
+                                        x.type = "password";
+                                        $("#btn-show-hide").html('Show');
+                                    }
+                                }
+                            </script>
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-sm-4 form-group">
+                                <label>eMail</label>
+
+                                <div class="input-group" data-validate="email">
+                                    <input type="text" name="webEmail" id="webEmail"
+                                           placeholder="Enter Email Address Here.."
+                                           value="<!--#4DVAR webEmail-->" required class="form-control">
+                                            <span class="input-group-addon danger">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </span>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-4 form-group">
+                                <label>Validate email</label>
+
+                                <div class="input-group" data-validate="webEmail_again">
+                                    <input type="text" name="webEmail_again" id="webEmail_again"
+                                           placeholder="Enter Email Address Here .."
+                                           value="" required class="form-control">
+                                            <span class="input-group-addon danger">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </span>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+                        <br/>
+
+                        <button type="Submit" id="submit-button" class="btn btn-success btn-md">Submit
+                            Registration
+                        </button>
+                    </div>
+
+
+                </div>
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+    <!--#4DINCLUDE ../include/footer.shtml -->
+</div>
+<script type="text/javascript">
+
+
+
+    $( document ).ready(function() {
+
+        $("#submit-button").prop("disabled",true);
+
+
+        $('#webEmail').on('keyup change',
+                function() {
+                    var ok = validateEmails("#webEmail");
+                    var btnStatus = $("#webEmail_again").val() == $("#webEmail").val();
+                    $("#submit-button").prop('disabled',!btnStatus );
+                }
+        );
+
+
+        $('#webEmail_again').on('keyup change',
+                function() {
+                    var ok = validateEmails("#webEmail_again");
+                    var btnStatus = $("#webEmail_again").val() == $("#webEmail").val();
+                    $("#submit-button").prop('disabled',!btnStatus );
+                }
+        );
+
+
+
+    });
+
+</script>
+</body>
+</html>
+ 

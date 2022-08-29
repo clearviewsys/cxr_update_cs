@@ -1,0 +1,99 @@
+
+<!--#4DIF ([webewires]status >= 10) | ([Webewires]status < 0)-->
+<div class="well">
+    <div class="table-responsive">
+        <label class="form-control-label">PayPal: <!--#4DHTML webGetWebewirePayStatus--></label>
+        <!--#4DHTML webGetWebewirePaymentData-->
+    </div>
+</div>
+<!--#4DELSE-->
+<div id="paypal-button-container" class="well text-center"></div>
+
+<script>
+    // assumes we have the [webewires] record loaded
+debugger;
+
+paypal.Buttons ({
+createOrder: function(data, actions) {
+return actions.order.create({
+    intent: "CAPTURE",
+    purchase_units: [{
+        reference_id: '<!--#4DTEXT [webewires]webewireid-->',
+        custom_id: '<!--#4DTEXT [webewires]customerid-->',
+        invoice_id: '',
+        description: 'Money transfer request',
+        amount: {
+            value: '<!--#4DTEXT [webewires]fromAmount-->',
+            currency_code: 'USD' //'<!--#4DTEXT [webewires]fromCCY-->'
+         },
+     }],
+
+     payer: {
+                                name: {
+                                    given_name: "<!--#4DTEXT [webewires]toParty.firstName-->",
+                                    surname: "<!--#4DTEXT [webewires]toParty.lastName-->"
+                                },
+                                address: {
+                                    address_line_1: "<!--#4DTEXT [webewires]toParty.address-->",
+                                    //address_line_2: "<!--#4DTEXT [webewires]toParty.address2-->",
+                                    admin_area_2: "<!--#4DTEXT [webewires]toParty.city-->",
+                                    admin_area_1: "<!--#4DTEXT [webewires]toParty.state-->",
+                                    postal_code: "<!--#4DTEXT [webewires]toParty.postalCode-->",
+                                    country_code: "<!--#4DTEXT [webewires]toParty.countryCode-->"
+                                },
+                                <!--#4DIF [webewires]toParty.email#""-->
+                                email_address: '<!--#4DTEXT [webewires]toParty.email-->',
+                                <!--#4DENDIF-->
+
+                                <!--#4DIF [webewires]toParty.cellPhone #""-->
+                                phone: {
+                                    phone_type: "MOBILE",
+                                    phone_number: {
+                                        national_number: '<!--#4DTEXT [webewires]toParty.cellPhone-->',
+                                    }
+                                }
+                                <!--#4DENDIF-->
+                            },
+
+});
+}, 
+
+onApprove: function (data, actions) {
+// payment approved - use objectMethod to post back to 4d
+    return actions.order.capture().then(function(details) {
+   // console.log(details);
+    orderId = details.id;
+    status = details.status;
+
+    debugger;
+//    alert('Thank you for your payment! Order ID: ' + orderId);
+
+    wapiPostHook('PayPal', 'approve', details);
+
+
+
+    }) 
+},
+
+onCancel: function (data) {
+// payment cancelled -- use objectMethod to post back to 4d
+debugger;
+//console.log(data);
+
+wapiPostHook('PayPal', 'cancel', data);
+},
+
+onError: function (err) {
+    //console.log(err);
+    //alert("Error with paypal");
+
+    wapiPostHook('PayPal', 'error', err);
+
+},
+
+
+}).render("#paypal-button-container");
+ 
+
+</script>
+<!--#4DENDIF-->

@@ -1,0 +1,225 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Question": {
+					"type": "input",
+					"left": 23,
+					"top": 85,
+					"width": 539,
+					"height": 64,
+					"dataSource": "[Questions:131]question:2",
+					"enterable": true
+				},
+				"Text": {
+					"type": "text",
+					"text": "Create a new Question",
+					"top": 15,
+					"left": 244,
+					"width": 190,
+					"height": 30
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Question:",
+					"top": 62,
+					"left": 23,
+					"width": 112,
+					"height": 15
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Answer 1:",
+					"top": 163,
+					"left": 23,
+					"width": 95,
+					"height": 30
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Answer 2:",
+					"top": 231,
+					"left": 23,
+					"width": 95,
+					"height": 30
+				},
+				"Text4": {
+					"type": "text",
+					"text": "Answer 3:",
+					"top": 301,
+					"left": 23,
+					"width": 95,
+					"height": 30
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Answer 4:",
+					"top": 369,
+					"left": 23,
+					"width": 95,
+					"height": 30
+				},
+				"Answer1": {
+					"type": "input",
+					"left": 23,
+					"top": 186,
+					"width": 438,
+					"height": 32,
+					"dataSource": "[Questions:131]answer1:3"
+				},
+				"Answer2": {
+					"type": "input",
+					"left": 23,
+					"top": 255,
+					"width": 438,
+					"height": 32,
+					"dataSource": "[Questions:131]answer2:4"
+				},
+				"Answer3": {
+					"type": "input",
+					"left": 23,
+					"top": 324,
+					"width": 438,
+					"height": 32,
+					"dataSource": "[Questions:131]answer3:5"
+				},
+				"Answer4": {
+					"type": "input",
+					"left": 23,
+					"top": 393,
+					"width": 438,
+					"height": 32,
+					"dataSource": "[Questions:131]answer4:6"
+				},
+				"Text6": {
+					"type": "text",
+					"text": "Correct Answer",
+					"top": 163,
+					"left": 478,
+					"width": 84,
+					"height": 15
+				},
+				"Answer1Checkbox": {
+					"type": "checkbox",
+					"text": "Answer 1",
+					"top": 190,
+					"left": 487,
+					"width": 75,
+					"height": 25,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.answer1Checkbox",
+					"method": "ObjectMethods/Answer1Checkbox.4dm"
+				},
+				"Answer2Checkbox": {
+					"type": "checkbox",
+					"text": "Answer 2",
+					"top": 259,
+					"left": 487,
+					"width": 75,
+					"height": 25,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.answer2Checkbox",
+					"method": "ObjectMethods/Answer2Checkbox.4dm"
+				},
+				"Answer3Checkbox": {
+					"type": "checkbox",
+					"text": "Answer 3",
+					"top": 328,
+					"left": 487,
+					"width": 75,
+					"height": 25,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.answer3Checkbox",
+					"method": "ObjectMethods/Answer3Checkbox.4dm"
+				},
+				"Answer4Checkbox": {
+					"type": "checkbox",
+					"text": "Answer 4",
+					"top": 397,
+					"left": 487,
+					"width": 75,
+					"height": 25,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.answer4Checkbox",
+					"method": "ObjectMethods/Answer4Checkbox.4dm"
+				},
+				"CancelButton": {
+					"type": "button",
+					"text": "Cancel",
+					"top": 450,
+					"left": 333,
+					"width": 101,
+					"height": 36,
+					"events": [
+						"onClick"
+					],
+					"action": "cancel",
+					"method": "ObjectMethods/CancelButton.4dm"
+				},
+				"Button": {
+					"type": "button",
+					"text": "Save",
+					"top": 450,
+					"left": 461,
+					"width": 101,
+					"height": 36,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				}
+			}
+		}
+	],
+	"geometryStamp": 1,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

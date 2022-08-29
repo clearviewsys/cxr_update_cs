@@ -1,0 +1,228 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 87,
+					"left": 12,
+					"width": 456,
+					"height": 19,
+					"fill": "#DDDDDD",
+					"strokeWidth": 0.1
+				},
+				"Text1": {
+					"type": "text",
+					"top": 90,
+					"left": 21,
+					"width": 178,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Fields_Small",
+					"text": "eWires Sent to Country"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 90,
+					"left": 219,
+					"width": 48,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Fields_Small",
+					"text": "Qty"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 90,
+					"left": 276,
+					"width": 166,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Fields_Small",
+					"text": "Amount"
+				},
+				"fromDate": {
+					"type": "input",
+					"top": 68,
+					"left": 100,
+					"width": 64,
+					"height": 11,
+					"sizingX": "move",
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 9,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"fromDate1": {
+					"type": "input",
+					"top": 68,
+					"left": 184,
+					"width": 69,
+					"height": 11,
+					"sizingX": "move",
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 9,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 68,
+					"left": 21,
+					"width": 75,
+					"height": 11,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 9,
+					"text": "Date Range :"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 67,
+					"left": 166,
+					"width": 14,
+					"height": 11,
+					"textAlign": "center",
+					"fontFamily": "Tahoma",
+					"fontSize": 9,
+					"text": "to"
+				},
+				"backStripe": {
+					"type": "rectangle",
+					"top": 107,
+					"left": 12,
+					"width": 456,
+					"height": 21,
+					"sizingY": "move",
+					"fill": "#EEEEEE",
+					"stroke": "transparent"
+				},
+				"Field3": {
+					"type": "input",
+					"top": 11,
+					"left": 12,
+					"width": 221,
+					"height": 10,
+					"dataSource": "<>CompanyName",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 30,
+					"left": 13,
+					"width": 449,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Central Bank Report - eWires sent by country"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Field3"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

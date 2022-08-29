@@ -1,0 +1,1 @@
+bindPopUpToIntegerField(Self:C308; ->[ServerPrefs:27]warningLevel:28; "WarningLevelList")

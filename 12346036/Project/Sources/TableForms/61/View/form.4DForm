@@ -1,0 +1,190 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "ViewToolbar2",
+	"inheritedFormTable": 7,
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 194,
+	"markerBreak": 194,
+	"markerFooter": 204,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text8": {
+					"type": "text",
+					"top": 129,
+					"left": 2,
+					"width": 167,
+					"height": 16,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "Country Code"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 98,
+					"left": 2,
+					"width": 167,
+					"height": 16,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "State/Province Name"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 69,
+					"left": 2,
+					"width": 167,
+					"height": 16,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "State Code"
+				},
+				"StateCode": {
+					"type": "input",
+					"top": 69,
+					"left": 174,
+					"width": 27,
+					"height": 16,
+					"dataSource": "[States:61]StateCode:1",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": "~A",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"State": {
+					"type": "input",
+					"top": 98,
+					"left": 174,
+					"width": 305,
+					"height": 16,
+					"dataSource": "[States:61]StateName:3",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CountryCode": {
+					"type": "input",
+					"top": 129,
+					"left": 174,
+					"width": 27,
+					"height": 16,
+					"dataSource": "[States:61]CountryCode:2",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": "~A",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CityName2": {
+					"type": "input",
+					"top": 129,
+					"left": 214,
+					"width": 265,
+					"height": 16,
+					"dataSource": "[Countries:62]CountryName:2",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

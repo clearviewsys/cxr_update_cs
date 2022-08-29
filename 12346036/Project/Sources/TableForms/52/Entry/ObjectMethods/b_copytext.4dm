@@ -1,0 +1,1 @@
+copy4DWriteTextIntoPlainText(bodyRichText; ->[Letters:52]Body:4)

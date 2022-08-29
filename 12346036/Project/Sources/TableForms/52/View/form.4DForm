@@ -1,0 +1,395 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "ViewToolbar2",
+	"inheritedFormTable": 7,
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control1": {
+					"type": "tab",
+					"top": 212,
+					"left": 19,
+					"width": 595,
+					"height": 380,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSourceTypeHint": "arrayText",
+					"labels": [
+						"Plain Text",
+						"Styled Text"
+					],
+					"class": "Control",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_prevPage": {
+					"type": "button",
+					"top": 212,
+					"left": 21,
+					"width": 16,
+					"height": 14,
+					"shortcutKey": "1",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/b_prevPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_nextPage": {
+					"type": "button",
+					"top": 212,
+					"left": 39,
+					"width": 16,
+					"height": 14,
+					"shortcutKey": "2",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/b_nextPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text10": {
+					"type": "text",
+					"top": 57,
+					"left": 19,
+					"width": 67,
+					"height": 15,
+					"class": "Label",
+					"text": "Letter ID"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 75,
+					"left": 19,
+					"width": 67,
+					"height": 15,
+					"class": "Label",
+					"text": "Date"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 93,
+					"left": 19,
+					"width": 67,
+					"height": 15,
+					"class": "Label",
+					"text": "Author"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 113,
+					"left": 19,
+					"width": 67,
+					"height": 15,
+					"class": "Label",
+					"text": "Recepient"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 130,
+					"left": 19,
+					"width": 67,
+					"height": 15,
+					"class": "Label",
+					"text": "Subject"
+				},
+				"LetterID": {
+					"type": "input",
+					"top": 57,
+					"left": 92,
+					"width": 270,
+					"height": 15,
+					"dataSource": "[Letters:52]LetterID:1",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"LetterDate": {
+					"type": "input",
+					"top": 75,
+					"left": 92,
+					"width": 131,
+					"height": 15,
+					"dataSource": "[Letters:52]LetterDate:2",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"author": {
+					"type": "input",
+					"top": 93,
+					"left": 92,
+					"width": 180,
+					"height": 15,
+					"dataSource": "[Letters:52]author:5",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Recepients": {
+					"type": "input",
+					"top": 111,
+					"left": 92,
+					"width": 257,
+					"height": 15,
+					"dataSource": "[Letters:52]Recepients:7",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Subject": {
+					"type": "input",
+					"top": 129,
+					"left": 92,
+					"width": 400,
+					"height": 15,
+					"dataSource": "[Letters:52]Subject:3",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Body1": {
+					"type": "input",
+					"top": 154,
+					"left": 19,
+					"width": 595,
+					"height": 48,
+					"dataSource": "[Letters:52]remarks:8",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Body": {
+					"type": "input",
+					"top": 277,
+					"left": 22,
+					"width": 574,
+					"height": 304,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[Letters:52]Body:4",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"spellcheck": true,
+					"printFrame": "variable",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_printRecord": {
+					"type": "button",
+					"top": 248,
+					"left": 25,
+					"width": 30,
+					"height": 26,
+					"display": false,
+					"method": "ObjectMethods/b_printRecord.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 252,
+					"left": 32,
+					"width": 17,
+					"height": 17,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/micn Printer.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Plugin Area1": {
+					"type": "plugin",
+					"top": 241,
+					"left": 20,
+					"width": 591,
+					"height": 350,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "BodyRichText",
+					"pluginAreaKind": "_4D Write",
+					"borderStyle": "sunken",
+					"events": [
+						"onClick",
+						"onPluginArea"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group1": [
+				"b_printRecord",
+				"Picture1"
+			]
+		},
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

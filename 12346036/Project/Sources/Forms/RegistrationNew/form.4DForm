@@ -1,0 +1,409 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 54,
+					"left": 9,
+					"width": 567,
+					"height": 19,
+					"sizingX": "grow",
+					"class": "Label_Large",
+					"textAlign": "center",
+					"text": "Please enter the registration data below to register a new client"
+				},
+				"h_Email": {
+					"type": "text",
+					"top": 98,
+					"left": 9,
+					"width": 180,
+					"height": 30,
+					"class": "Fields_XtraLarge",
+					"textAlign": "right",
+					"text": "> Email"
+				},
+				"h_ClientKey1": {
+					"type": "text",
+					"top": 133,
+					"left": 9,
+					"width": 180,
+					"height": 30,
+					"class": "Fields_XtraLarge",
+					"textAlign": "right",
+					"text": "> Client Key"
+				},
+				"h_Name": {
+					"type": "text",
+					"top": 168,
+					"left": 9,
+					"width": 180,
+					"height": 30,
+					"class": "Fields_XtraLarge",
+					"textAlign": "right",
+					"text": "> Full Name"
+				},
+				"h_CompanyName": {
+					"type": "text",
+					"top": 238,
+					"left": 9,
+					"width": 180,
+					"height": 30,
+					"class": "Fields_XtraLarge",
+					"textAlign": "right",
+					"text": "Company Name"
+				},
+				"h_Address": {
+					"type": "text",
+					"top": 308,
+					"left": 9,
+					"width": 180,
+					"height": 30,
+					"stroke": "#808080",
+					"class": "Fields_XtraLarge",
+					"textAlign": "right",
+					"text": "Address"
+				},
+				"h_City": {
+					"type": "text",
+					"top": 343,
+					"left": 9,
+					"width": 180,
+					"height": 30,
+					"stroke": "#808080",
+					"class": "Fields_XtraLarge",
+					"textAlign": "right",
+					"text": "City"
+				},
+				"h_ProvinceState": {
+					"type": "text",
+					"top": 378,
+					"left": 9,
+					"width": 180,
+					"height": 30,
+					"stroke": "#808080",
+					"class": "Fields_XtraLarge",
+					"textAlign": "right",
+					"text": "Province/State"
+				},
+				"h_Country": {
+					"type": "text",
+					"top": 413,
+					"left": 9,
+					"width": 180,
+					"height": 30,
+					"stroke": "#808080",
+					"class": "Fields_XtraLarge",
+					"textAlign": "right",
+					"text": "Country"
+				},
+				"h_PostalCode": {
+					"type": "text",
+					"top": 449,
+					"left": 9,
+					"width": 180,
+					"height": 30,
+					"stroke": "#808080",
+					"class": "Fields_XtraLarge",
+					"textAlign": "right",
+					"text": "Postal Code"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 499,
+					"left": 16,
+					"width": 293,
+					"height": 42,
+					"sizingY": "move",
+					"stroke": "#888888",
+					"class": "Fields",
+					"text": "Fields marked with > are required. \rThe Company Name is required if the client is to be registered is a company entity"
+				},
+				"f_Email": {
+					"type": "input",
+					"top": 97,
+					"left": 197,
+					"width": 379,
+					"height": 30,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.Email",
+					"class": "Fields_XtraLarge",
+					"fill": "#F8F8ED",
+					"multiline": "no",
+					"placeholder": "email",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"f_ClientKey1": {
+					"type": "input",
+					"top": 132,
+					"left": 197,
+					"width": 379,
+					"height": 30,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.ClientKey",
+					"class": "Fields_XtraLarge",
+					"fill": "#F8F8ED",
+					"multiline": "no",
+					"placeholder": "Client Key",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"f_Name": {
+					"type": "input",
+					"top": 167,
+					"left": 197,
+					"width": 379,
+					"height": 30,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.Name",
+					"class": "Fields_XtraLarge",
+					"fill": "#F8F8ED",
+					"multiline": "no",
+					"placeholder": "Full Name",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"top": 202,
+					"left": 197,
+					"width": 112,
+					"height": 30,
+					"dataSource": "Form:C1466.isCompany",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"f_Company": {
+					"type": "input",
+					"top": 237,
+					"left": 197,
+					"width": 379,
+					"height": 30,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.Company",
+					"class": "Fields_XtraLarge",
+					"fill": "#F8F8ED",
+					"multiline": "no",
+					"placeholder": "Company Name",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"f_Phone": {
+					"type": "input",
+					"top": 272,
+					"left": 197,
+					"width": 199,
+					"height": 30,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.Phone",
+					"class": "Fields_XtraLarge",
+					"multiline": "no",
+					"placeholder": "Phone",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"f_Address": {
+					"type": "input",
+					"top": 307,
+					"left": 197,
+					"width": 379,
+					"height": 30,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.Address",
+					"class": "Fields_XtraLarge",
+					"multiline": "no",
+					"placeholder": "Address",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"f_City": {
+					"type": "input",
+					"top": 342,
+					"left": 197,
+					"width": 379,
+					"height": 30,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.City",
+					"class": "Fields_XtraLarge",
+					"multiline": "no",
+					"placeholder": "City",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"f_Province": {
+					"type": "input",
+					"top": 377,
+					"left": 197,
+					"width": 379,
+					"height": 30,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.Province",
+					"class": "Fields_XtraLarge",
+					"multiline": "no",
+					"placeholder": "Province / State",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"f_Country": {
+					"type": "input",
+					"top": 413,
+					"left": 197,
+					"width": 379,
+					"height": 30,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.Country",
+					"class": "Fields_XtraLarge",
+					"multiline": "no",
+					"placeholder": "Country",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"f_PostalCode": {
+					"type": "input",
+					"top": 449,
+					"left": 197,
+					"width": 159,
+					"height": 30,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.PostalCode",
+					"class": "Fields_XtraLarge",
+					"multiline": "no",
+					"placeholder": "Zip / Postal",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 511,
+					"left": 477,
+					"width": 99,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"text": "Submit",
+					"class": "Control_Large_",
+					"focusable": false,
+					"defaultButton": true,
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button5": {
+					"type": "button",
+					"top": 511,
+					"left": 373,
+					"width": 99,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"text": "Back",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"title_ClientRegistration": {
+					"type": "text",
+					"top": 22,
+					"left": 9,
+					"width": 567,
+					"height": 24,
+					"sizingX": "grow",
+					"class": "Titles",
+					"textAlign": "center",
+					"text": "Client Registration"
+				},
+				"h_PhoneNumber": {
+					"type": "text",
+					"top": 273,
+					"left": 9,
+					"width": 180,
+					"height": 30,
+					"stroke": "#808080",
+					"class": "Fields_XtraLarge",
+					"textAlign": "right",
+					"text": "Phone Number"
+				},
+				"h_isCompany": {
+					"type": "text",
+					"top": 203,
+					"left": 9,
+					"width": 180,
+					"height": 30,
+					"class": "Fields_XtraLarge",
+					"textAlign": "right",
+					"text": "Company?"
+				}
+			}
+		}
+	]
+}

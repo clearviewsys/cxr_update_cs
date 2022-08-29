@@ -1,0 +1,35 @@
+
+<!-- Modal -->
+<div class="modal fade" id="wapi-modal" tabindex="-1" role="dialog" aria-labelledby="wapi-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="wapi-modal-title" id="wapi-modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body centered" id='wapi-modal-body'>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<footer class='page-footer bg-dark mt-4 mb-4'>
+		<div class="container-fluid">
+            <div class='bg-dark'>
+               
+            <div class='py-3'>
+                <hr>
+			<span class='text-muted'>Copyright (c) 2019 Copyright <strong> <a href="http://www.clearviewsys.com">Clear View Systems Ltd.</a></strong> All Rights Reserved.</span><span class='pull-right'><a href="contact.shtml">Contact Us</a></span>
+                
+            </div>
+                   
+            </div>
+		</div>
+   
+</footer>

@@ -1,0 +1,2 @@
+//%attributes = {}
+LaunchProcess("eventHandler"; "eventHandlerProcess")

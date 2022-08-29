@@ -1,0 +1,262 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Field2": {
+					"type": "input",
+					"top": 128,
+					"left": 210,
+					"width": 200,
+					"height": 20,
+					"dataSource": "[OCR_Fields:108]FieldCode:2",
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 167,
+					"left": 210,
+					"width": 451,
+					"height": 20,
+					"dataSource": "[OCR_Fields:108]Keyword:4",
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"min": 1,
+					"max": 99,
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bPick": {
+					"type": "button",
+					"top": 163,
+					"left": 676,
+					"width": 66,
+					"height": 28,
+					"dataSource": "bPick",
+					"text": ":xliff:cvs_pick",
+					"method": "ObjectMethods/bPick.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"[Market]MarketName2": {
+					"type": "input",
+					"top": 167,
+					"left": 774,
+					"width": 200,
+					"height": 20,
+					"dataSource": "[DB_Keywords:105]sourceText:4",
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"fieldRegExp": {
+					"type": "input",
+					"top": 215,
+					"left": 210,
+					"width": 771,
+					"height": 299,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[OCR_Fields:108]fieldRegExp:3",
+					"fontFamily": "Courier New",
+					"fontSize": 20,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "yes",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_save": {
+					"type": "button",
+					"top": 540,
+					"left": 851,
+					"width": 123,
+					"height": 28,
+					"sizingY": "move",
+					"dataSource": "b_Save",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": ":xliff:cvs_save",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_Cancel": {
+					"type": "button",
+					"top": 540,
+					"left": 726,
+					"width": 123,
+					"height": 28,
+					"sizingY": "move",
+					"dataSource": "b_Cancel",
+					"text": ":xliff:cvs_cancel",
+					"class": "Control_Large_",
+					"method": "ObjectMethods/b_Cancel.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"keyword_l": {
+					"type": "text",
+					"top": 167,
+					"left": 9,
+					"width": 181,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_keyword_id"
+				},
+				"fieldname_l": {
+					"type": "text",
+					"top": 128,
+					"left": 9,
+					"width": 181,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_code"
+				},
+				"regexp_l": {
+					"type": "text",
+					"top": 214,
+					"left": 9,
+					"width": 181,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_regular_expression"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

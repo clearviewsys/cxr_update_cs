@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--#4DSCRIPT/webRedirectIfNotAuthorized-->
+
+    <!--#4DINCLUDE /include/head.shtml -->
+
+    <!--#4DSCRIPT/webSelectAgentRecord-->
+
+</head>
+
+
+<body>
+
+    <!--#4DINCLUDE /include/menubar.shtml -->
+
+    <main role="main">
+
+        <div class="page-header">
+            <!-- HEADER - WELCOME -->
+            <div class='container'>
+
+                <!--#4DHTML WAPI_includeAlertMessage-->
+
+                <script src="/app/js/bootstrap-auto-dismiss-alert.js"></script>
+                <!--MUST COME AFTER THE ALERT YOU WANT TO CLOSE -->
+
+                <h1>Welcome
+                    <!--#4DTEXT [agents]fullname-->
+                </h1>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                    </div>
+
+                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ACCOUNT AND TRANSACTION PANELS -->
+        <div class="container" style="padding-bottom: 40px; padding-top: 0px">
+
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="panel panel-heading">
+                        <h2 class="panel-title">Account Profile</h2>
+                    </div>
+
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable='true'>
+
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="name-tab">
+                                <h3 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#name-data" aria-expanded="false" aria-controls="name-data">
+                                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login Credentials</a>
+                                </h3>
+                            </div>
+
+                            <div id="name-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="name-tab">
+
+
+
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <!--#4DSCRIPT/WAPI_formGroup/{field:agents___fullname, label:Agent-Name, readonly:true}-->
+                                    </div>
+
+
+
+                                    <form enctype="multipart/form-data" id='agent-form-name' action="/updateRecord" method="post">
+
+
+
+                                        <div>
+                                            <!--#4DSCRIPT/WAPI_formHeader/{table:agents, success:agents/profile.shtml}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:agents___address, label:Address, readonly:true}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:agents___city, label:City, readonly:true}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:agents___province, label:Province, readonly:true}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:agents___country, label:Country, readonly:true}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:agents___email, label:Email, readonly:true, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:agents___notes, label:Notes, readonly:true}-->
+                                        </div>
+
+
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:agents___password, label:Password, readonly:true, width:100}-->
+                                        </div>
+
+
+                                        <div class="btn-group pull-right" role="group" aria-label="profile-edit">
+                                            <a id="cancel-button-demographics" class="btn btn-default" role="button" style='display:none;' onclick="wapiObjectMethod(event)">Cancel</a>
+                                            <a id="edit-button-demographics" class="btn btn-primary" role="button" style='display:block;' onclick="wapiObjectMethod(event)">Edit</a>
+                                            <input id="save-button-demographics" class="btn btn-primary" type="submit" value="Save" style='display:none;'>
+                                        </div>
+                                    </form>
+
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="profile-id-tab">
+                                <h3 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#profile-id-data" aria-expanded="false" aria-controls="profile-id-data">
+                                        <span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Your ID</a>
+                                </h3>
+                            </div>
+
+                            <div id="profile-id-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="profile-id-tab">
+
+                                <form enctype="multipart/form-data" id='agent-form-id' action="/updateRecord" method="post">
+                                    <!-- id should be table name - form - a unique identifier - wapiObjectMethod will call the hook based on this -->
+                                    <div>
+                                        <!--#4DSCRIPT/WAPI_formHeader/{table:agents, success:agents/profile.shtml}-->
+                                    </div>
+
+                                    <div class="panel-body">
+
+                                        <div class="media" style="padding-bottom: 10px">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:agents___picture, label:none , readonly:true, image-width:310, image-height:0, image-compression:.5, image-upload:true}-->
+                                        </div>
+
+
+                                        <div class="btn-group pull-right" role="group" aria-label="agent-edit">
+                                            <!--#4DIF WAPI_isDebug-->
+                                            <input class="btn btn-primary" type="button" value="Debug-Print" form="agent-form-name" onclick="wapiPrintForm(true);" />
+                                            <!--#4DENDIF-->
+                                            <a id="cancel-button-id" class="btn btn-default" role="button" form="agent-form-name" style='display:none;' onclick="wapiObjectMethod(event)">Cancel</a>
+                                            <a id="edit-button-id" class="btn btn-primary" role="button" form="agent-form-name" style='display:block;' onclick="wapiObjectMethod(event)">Edit</a>
+                                            <input id="save-button-id" class="btn btn-primary" type="submit" value="Save" form="agent-form-name" style='display:none;'>
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="btn-group btn-group-justified" role="group" aria-label="booking">
+                        <a class="btn btn-primary" href="booking.shtml" role="button">Request a Booking</a>
+                        <a class="btn btn-primary" href="links.shtml" role="button">Add Counterparty</a>
+                        <a class="btn btn-primary" href="ewire.shtml" role="button">Request an Ewire</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <!--#4DINCLUDE /include/footer.shtml -->
+</body>
+
+
+</html>

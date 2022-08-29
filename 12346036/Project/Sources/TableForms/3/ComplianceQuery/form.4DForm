@@ -1,0 +1,153 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Check Box1": {
+					"type": "checkbox",
+					"top": 45,
+					"left": 35,
+					"width": 286,
+					"height": 32,
+					"dataSource": "Check Box1",
+					"text": "Missing Occupation",
+					"class": "Fields",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"top": 69,
+					"left": 35,
+					"width": 286,
+					"height": 32,
+					"dataSource": "Check Box1",
+					"text": "Missing Address",
+					"class": "Fields",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box3": {
+					"type": "checkbox",
+					"top": 93,
+					"left": 35,
+					"width": 286,
+					"height": 32,
+					"dataSource": "Check Box1",
+					"text": "Missing Picture ID No",
+					"class": "Fields",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box4": {
+					"type": "checkbox",
+					"top": 117,
+					"left": 35,
+					"width": 286,
+					"height": 32,
+					"dataSource": "Check Box1",
+					"text": "Missing Picture ID Exp",
+					"class": "Fields",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box5": {
+					"type": "checkbox",
+					"top": 141,
+					"left": 35,
+					"width": 286,
+					"height": 32,
+					"dataSource": "Check Box1",
+					"text": "MIssing Picture ID place of issue",
+					"class": "Fields",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box6": {
+					"type": "checkbox",
+					"top": 165,
+					"left": 35,
+					"width": 286,
+					"height": 32,
+					"dataSource": "Check Box1",
+					"text": "Missing SS Number",
+					"class": "Fields",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box7": {
+					"type": "checkbox",
+					"top": 193,
+					"left": 35,
+					"width": 286,
+					"height": 32,
+					"dataSource": "Check Box1",
+					"text": "Missing DOB",
+					"class": "Fields",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

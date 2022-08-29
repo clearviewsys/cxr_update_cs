@@ -1,0 +1,2 @@
+C_POINTER:C301(browseTablePtr)
+displayCurrentRecord(browseTablePtr)

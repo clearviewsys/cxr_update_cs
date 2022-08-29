@@ -1,0 +1,56 @@
+{
+	"forms": {
+		"Background": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "detailScreen"
+		},
+		"Deposit": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "listScreen"
+		},
+		"Entry": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "detailScreen"
+		},
+		"Pay": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "detailScreen"
+		},
+		"Transfer": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "listScreen"
+		},
+		"print": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "listPrinter"
+		},
+		"Receive": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "detailScreen"
+		},
+		"list": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "listScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "detailScreen"
+		},
+		"PayReceive": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "detailScreen"
+		},
+		"Withdraw": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "listScreen"
+		},
+		"Subform_CashInventory": {
+			"timeStamp": "2022-08-29T16:33:23Z",
+			"destination": "listScreen"
+		}
+	}
+}

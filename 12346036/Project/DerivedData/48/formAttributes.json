@@ -1,0 +1,20 @@
+{
+	"forms": {
+		"IntegrityChecksPanel": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"print": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "listPrinter"
+		},
+		"List": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-29T16:33:24Z",
+			"destination": "detailScreen"
+		}
+	}
+}

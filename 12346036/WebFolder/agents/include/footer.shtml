@@ -1,0 +1,38 @@
+<!-- DIALOG FOR MESSAGE -->
+<!--#4DSCRIPT/WAPI_4DInclude/app/wapi/message.shtml -->
+
+<!-- DIALOG FOR CONFIRMATION -->
+<!--#4DSCRIPT/WAPI_4DInclude/app/wapi/confirm.shtml -->
+
+<!-- GENERIC DIALOG -->
+<!--#4DSCRIPT/WAPI_4DInclude/app/wapi/modal-dialog.shtml-->
+
+
+<footer class='page-footer bg-dark mt-4 mb-4'>
+    <div class="container-fluid">
+        <div class='bg-dark'>
+
+            <div class='py-3'>
+                <hr>
+                <span class='text-muted'>Copyright (c)
+                    <!--#4DTEXT year of(current date)--> &nbsp; &nbsp; <strong>
+
+                        <a class="hidden-xs" href="<!--#4DSCRIPT/webGetKeyValue/web.configuration.footer.url-->">
+                            <!--#4DSCRIPT/webGetKeyValue/web.configuration.footer.name--> &nbsp; &nbsp;</a>
+
+                        <a class="visible-xs" href="">
+                            <!--#4DSCRIPT/webGetKeyValue/web.configuration.footer.name--></a>
+
+
+                    </strong> All Rights Reserved.</span><span class='pull-right hidden-xs'><a href="<!--#4DSCRIPT/webGetKeyValue/web.customers.contact.url-->">Contact Us</a></span>
+
+                <!--#4DIF WAPI_isDebug-->
+                <hr>
+                <!--#4DTEXT WAPI_getSessionInfo -->
+                <!--#4DENDIF-->
+            </div>
+
+        </div>
+    </div>
+
+</footer>

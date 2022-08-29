@@ -1,0 +1,1917 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 259,
+					"left": 7,
+					"width": 368,
+					"height": 370,
+					"fill": "#CCE7EE",
+					"stroke": "#AAAAAA",
+					"borderRadius": 5
+				}
+			}
+		},
+		{
+			"objects": {
+				"Round Rectangle1": {
+					"type": "rectangle",
+					"top": 307,
+					"left": 382,
+					"width": 342,
+					"height": 214,
+					"fill": "#EBEEF0",
+					"stroke": "#AAAAAA",
+					"borderRadius": 5
+				},
+				"Round Rectangle": {
+					"type": "rectangle",
+					"top": 208,
+					"left": 381,
+					"width": 342,
+					"height": 97,
+					"fill": "#EBEEF0",
+					"stroke": "#AAAAAA",
+					"borderRadius": 5
+				},
+				"Text14": {
+					"type": "text",
+					"top": 148,
+					"left": 0,
+					"width": 150,
+					"height": 21,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "Account"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 266,
+					"left": 36,
+					"width": 105,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Amount"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 123,
+					"left": 0,
+					"width": 150,
+					"height": 21,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Value Date"
+				},
+				"Text21": {
+					"type": "text",
+					"top": 556,
+					"left": 394,
+					"width": 299,
+					"height": 15,
+					"stroke": "#444444",
+					"class": "Label",
+					"text": "Memo / Printable on the Invoice"
+				},
+				"Currency": {
+					"type": "input",
+					"top": 266,
+					"left": 322,
+					"width": 45,
+					"height": 20,
+					"dataSource": "[AccountInOuts:37]Currency:8",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Date": {
+					"type": "input",
+					"top": 122,
+					"left": 160,
+					"width": 239,
+					"height": 20,
+					"dataSource": "[AccountInOuts:37]Date:3",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dateFormat": "systemLong",
+					"method": "ObjectMethods/Date.4dm",
+					"events": [
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"AccountID": {
+					"type": "input",
+					"top": 148,
+					"left": 160,
+					"width": 501,
+					"height": 25,
+					"dataSource": "[AccountInOuts:37]AccountID:6",
+					"stroke": "#000000",
+					"class": "Titles",
+					"fontWeight": "bold",
+					"fill": "#F0FAFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/AccountID.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"subAccountID": {
+					"type": "dropdown",
+					"top": 178,
+					"left": 159,
+					"width": 240,
+					"height": 24,
+					"class": "Fields_Large",
+					"method": "ObjectMethods/subAccountID.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"ReferenceNo": {
+					"type": "input",
+					"top": 220,
+					"left": 160,
+					"width": 207,
+					"height": 20,
+					"dataSource": "[AccountInOuts:37]ReferenceNo:22",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"fill": "#FEE98F",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"ReferenceNo1": {
+					"type": "input",
+					"top": 532,
+					"left": 676,
+					"width": 48,
+					"height": 20,
+					"dataSource": "[Invoices:5]AMLCountryCode:87",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"borderStyle": "sunken",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"method": "ObjectMethods/ReferenceNo1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Memo": {
+					"type": "input",
+					"top": 578,
+					"left": 394,
+					"width": 316,
+					"height": 45,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[AccountInOuts:37]Memo:10",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 628,
+					"left": 619,
+					"width": 108,
+					"height": 23,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 628,
+					"left": 508,
+					"width": 107,
+					"height": 23,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"vInverseRate": {
+					"type": "input",
+					"top": 407,
+					"left": 145,
+					"width": 134,
+					"height": 20,
+					"dataSource": "vInverseRate",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Large",
+					"fill": "#EEEEEE",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Rates"
+					},
+					"method": "ObjectMethods/vInverseRate.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text10": {
+					"type": "input",
+					"top": 51,
+					"left": 144,
+					"width": 150,
+					"height": 16,
+					"dataSource": "[AccountInOuts:37]RegisterID:5",
+					"stroke": "#555555",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text8": {
+					"type": "text",
+					"top": 51,
+					"left": 11,
+					"width": 125,
+					"height": 16,
+					"stroke": "#555555",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Register ID"
+				},
+				"Text5": {
+					"type": "input",
+					"top": 12,
+					"left": 144,
+					"width": 150,
+					"height": 16,
+					"dataSource": "[AccountInOuts:37]AccountInOutID:1",
+					"stroke": "#555555",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 12,
+					"left": 11,
+					"width": 125,
+					"height": 16,
+					"stroke": "#555555",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Transaction #"
+				},
+				"Text11": {
+					"type": "input",
+					"top": 32,
+					"left": 144,
+					"width": 150,
+					"height": 16,
+					"dataSource": "[AccountInOuts:37]InvoiceID:4",
+					"stroke": "#555555",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"top": 32,
+					"left": 11,
+					"width": 125,
+					"height": 16,
+					"stroke": "#555555",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Invoice"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 70,
+					"left": 11,
+					"width": 125,
+					"height": 16,
+					"stroke": "#555555",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Customer Name"
+				},
+				"ColorItem1": {
+					"type": "input",
+					"top": 70,
+					"left": 144,
+					"width": 325,
+					"height": 16,
+					"dataSource": "[Customers:3]FullName:40",
+					"stroke": "#555555",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"top": 303,
+					"left": 36,
+					"width": 105,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Balance before :"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 335,
+					"left": 36,
+					"width": 105,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Balance after"
+				},
+				"Currency1": {
+					"type": "input",
+					"top": 303,
+					"left": 322,
+					"width": 45,
+					"height": 20,
+					"dataSource": "[AccountInOuts:37]Currency:8",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Currency2": {
+					"type": "input",
+					"top": 335,
+					"left": 322,
+					"width": 45,
+					"height": 20,
+					"dataSource": "[AccountInOuts:37]Currency:8",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"calcField5": {
+					"type": "input",
+					"top": 464,
+					"left": 145,
+					"width": 110,
+					"height": 20,
+					"dataSource": "vAmountLocal_BF",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Large",
+					"fill": "#EEEEEE",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"method": "ObjectMethods/calcField5.4dm",
+					"events": [
+						"onLosingFocus",
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 525,
+					"left": 268,
+					"width": 35,
+					"height": 20,
+					"dataSource": "<>baseCurrency",
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"vTotalFees": {
+					"type": "input",
+					"top": 556,
+					"left": 145,
+					"width": 99,
+					"height": 20,
+					"dataSource": "vTotalFees",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 559,
+					"left": 268,
+					"width": 35,
+					"height": 20,
+					"dataSource": "<>baseCurrency",
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 368,
+					"left": 36,
+					"width": 105,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": " Exchange Rate  :"
+				},
+				"Field2": {
+					"type": "input",
+					"top": 589,
+					"left": 322,
+					"width": 35,
+					"height": 20,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text28": {
+					"type": "text",
+					"top": 435,
+					"left": 36,
+					"width": 105,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": " Spot Rate"
+				},
+				"Text29": {
+					"type": "text",
+					"top": 495,
+					"left": 36,
+					"width": 105,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Commission"
+				},
+				"CalcField1": {
+					"type": "input",
+					"top": 435,
+					"left": 145,
+					"width": 111,
+					"height": 20,
+					"dataSource": "[AccountInOuts:37]spotRate:14",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Rates"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 589,
+					"left": 36,
+					"width": 105,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Local Amount :"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 526,
+					"left": 36,
+					"width": 105,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Flat Fee"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 556,
+					"left": 36,
+					"width": 105,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Total Fees"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 403,
+					"left": 36,
+					"width": 105,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": " Inverse Rate  :"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 407,
+					"left": 332,
+					"width": 35,
+					"height": 20,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CalcField_1": {
+					"type": "input",
+					"top": 495,
+					"left": 213,
+					"width": 75,
+					"height": 20,
+					"dataSource": "vPercentFeeLocal",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text19": {
+					"type": "text",
+					"top": 495,
+					"left": 198,
+					"width": 15,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"text": "="
+				},
+				"Field5": {
+					"type": "input",
+					"top": 495,
+					"left": 291,
+					"width": 35,
+					"height": 20,
+					"dataSource": "<>baseCurrency",
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 464,
+					"left": 260,
+					"width": 35,
+					"height": 20,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"flag": {
+					"type": "input",
+					"top": 3,
+					"left": 571,
+					"width": 152,
+					"height": 75,
+					"sizingX": "move",
+					"dataSource": "[Currencies:6]Flag:3",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Currency3": {
+					"type": "input",
+					"top": 373,
+					"left": 332,
+					"width": 35,
+					"height": 20,
+					"dataSource": "[AccountInOuts:37]Currency:8",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Currency4": {
+					"type": "input",
+					"top": 407,
+					"left": 284,
+					"width": 35,
+					"height": 20,
+					"dataSource": "[AccountInOuts:37]Currency:8",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Radio Button6": {
+					"type": "radio",
+					"top": 259,
+					"left": 11,
+					"width": 17,
+					"height": 21,
+					"dataSource": "rb1",
+					"shortcutKey": "1",
+					"shortcutAccel": true,
+					"text": " ",
+					"events": [
+						"onClick"
+					]
+				},
+				"Radio Button7": {
+					"type": "radio",
+					"top": 367,
+					"left": 11,
+					"width": 17,
+					"height": 21,
+					"dataSource": "rb2",
+					"shortcutKey": "2",
+					"shortcutAccel": true,
+					"text": " ",
+					"events": [
+						"onClick"
+					]
+				},
+				"Radio Button8": {
+					"type": "radio",
+					"top": 523,
+					"left": 11,
+					"width": 17,
+					"height": 21,
+					"dataSource": "rb3",
+					"shortcutKey": "3",
+					"shortcutAccel": true,
+					"text": " ",
+					"events": [
+						"onClick"
+					]
+				},
+				"Radio Button9": {
+					"type": "radio",
+					"top": 553,
+					"left": 11,
+					"width": 17,
+					"height": 21,
+					"dataSource": "rb4",
+					"shortcutKey": "4",
+					"shortcutAccel": true,
+					"text": " ",
+					"events": [
+						"onClick"
+					]
+				},
+				"Radio Button10": {
+					"type": "radio",
+					"top": 586,
+					"left": 11,
+					"width": 17,
+					"height": 21,
+					"dataSource": "rb5",
+					"shortcutKey": "5",
+					"shortcutAccel": true,
+					"text": " ",
+					"events": [
+						"onClick"
+					]
+				},
+				"Amount": {
+					"type": "input",
+					"top": 267,
+					"left": 145,
+					"width": 170,
+					"height": 20,
+					"dataSource": "[AccountInOuts:37]Amount:7",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Large",
+					"fontWeight": "bold",
+					"fill": "#EEEEEE",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"entryFilter": "&\"0-9;.;-\"",
+					"method": "ObjectMethods/Amount.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"FromAccount2": {
+					"type": "input",
+					"top": 303,
+					"left": 145,
+					"width": 170,
+					"height": 20,
+					"dataSource": "vBalanceBefore",
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"FromAccount4": {
+					"type": "input",
+					"top": 335,
+					"left": 145,
+					"width": 170,
+					"height": 20,
+					"dataSource": "vBalanceAfter",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CalcField2": {
+					"type": "input",
+					"top": 373,
+					"left": 145,
+					"width": 134,
+					"height": 20,
+					"dataSource": "[AccountInOuts:37]ourRate:13",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Large",
+					"fill": "#EEEEEE",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Rates"
+					},
+					"method": "ObjectMethods/CalcField2.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CalcField_": {
+					"type": "input",
+					"top": 495,
+					"left": 145,
+					"width": 51,
+					"height": 20,
+					"dataSource": "[AccountInOuts:37]percentFee:15",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Large",
+					"fill": "#EEEEEE",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Percent"
+					},
+					"method": "ObjectMethods/CalcField_.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CalcField3": {
+					"type": "input",
+					"top": 526,
+					"left": 145,
+					"width": 99,
+					"height": 20,
+					"dataSource": "[AccountInOuts:37]feeLocal:16",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Large",
+					"fill": "#EEEEEE",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"method": "ObjectMethods/CalcField3.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CalcField4": {
+					"type": "input",
+					"top": 589,
+					"left": 145,
+					"width": 170,
+					"height": 20,
+					"dataSource": "[AccountInOuts:37]amountLocal:17",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Large",
+					"fontWeight": "bold",
+					"fill": "#EEEEEE",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field14": {
+					"type": "input",
+					"top": 373,
+					"left": 284,
+					"width": 35,
+					"height": 20,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#000000",
+					"class": "Fields_Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text13": {
+					"type": "text",
+					"top": 464,
+					"left": 36,
+					"width": 105,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": " Before Fees"
+				},
+				"Highlight Button5": {
+					"type": "button",
+					"top": 125,
+					"left": 420,
+					"width": 44,
+					"height": 16,
+					"dataSource": "Highlight Button1",
+					"shortcutKey": "t",
+					"shortcutAccel": true,
+					"class": "Fields_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Today",
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bIncreaseDate": {
+					"type": "pictureButton",
+					"top": 125,
+					"left": 465,
+					"width": 16,
+					"height": 15,
+					"dataSource": "vIncreaseDate",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyPlus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bIncreaseDate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bDecrDate": {
+					"type": "pictureButton",
+					"top": 124,
+					"left": 403,
+					"width": 16,
+					"height": 16,
+					"dataSource": "vDecrDate",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyMinus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bDecrDate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_chooseDate": {
+					"type": "pictureButton",
+					"top": 120,
+					"left": 484,
+					"width": 24,
+					"height": 24,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/calendar.png",
+					"loopBackToFirstFrame": true,
+					"method": "ObjectMethods/b_chooseDate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text22": {
+					"type": "text",
+					"top": 221,
+					"left": 0,
+					"width": 150,
+					"height": 21,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Reference #"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 181,
+					"left": 0,
+					"width": 150,
+					"height": 21,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Sub-Account ID"
+				},
+				"l_Link": {
+					"type": "text",
+					"top": 247,
+					"left": 387,
+					"width": 89,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Link"
+				},
+				"Country": {
+					"type": "input",
+					"top": 266,
+					"left": 542,
+					"width": 175,
+					"height": 15,
+					"dataSource": "[Links:17]Country:12",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Relationship": {
+					"type": "input",
+					"top": 284,
+					"left": 542,
+					"width": 175,
+					"height": 14,
+					"dataSource": "[Links:17]Relationship:26",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"multiline": "no",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"l_relationship": {
+					"type": "text",
+					"top": 284,
+					"left": 381,
+					"width": 160,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Relationship to customer"
+				},
+				"l_linkCountry": {
+					"type": "text",
+					"top": 266,
+					"left": 381,
+					"width": 160,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Country"
+				},
+				"Text27": {
+					"type": "text",
+					"top": 531,
+					"left": 391,
+					"width": 275,
+					"height": 18,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Source/Destin. Country"
+				},
+				"l_Links": {
+					"type": "text",
+					"top": 214,
+					"left": 385,
+					"width": 168,
+					"height": 14,
+					"text": "Counter-Party Link"
+				},
+				"Line": {
+					"type": "line",
+					"top": 235,
+					"left": 381,
+					"width": 342,
+					"stroke": "#AAAAAA"
+				},
+				"DD_Links": {
+					"type": "dropdown",
+					"top": 242,
+					"left": 482,
+					"width": 237,
+					"height": 24,
+					"class": "Fields_Large",
+					"method": "ObjectMethods/DD_Links.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"FirstName1": {
+					"type": "input",
+					"top": 214,
+					"left": 544,
+					"width": 175,
+					"height": 15,
+					"dataSource": "[AccountInOuts:37]LinkID:25",
+					"stroke": "#000000",
+					"class": "Fields",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_Account": {
+					"type": "button",
+					"top": 212,
+					"left": 544,
+					"width": 179,
+					"height": 17,
+					"focusable": false,
+					"style": "custom",
+					"borderStyle": "raised",
+					"method": "ObjectMethods/b_Account.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"DD_WireTemplates": {
+					"type": "dropdown",
+					"top": 311,
+					"left": 550,
+					"width": 169,
+					"height": 24,
+					"class": "Fields_Large",
+					"method": "ObjectMethods/DD_WireTemplates.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"l_BankInstNo": {
+					"type": "text",
+					"top": 432,
+					"left": 391,
+					"width": 151,
+					"height": 18,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Bank Institution No"
+				},
+				"l_BranchTransitNo": {
+					"type": "text",
+					"top": 449,
+					"left": 391,
+					"width": 151,
+					"height": 18,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Branch Transit No"
+				},
+				"Text30": {
+					"type": "text",
+					"top": 497,
+					"left": 391,
+					"width": 151,
+					"height": 18,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Account No"
+				},
+				"Text31": {
+					"type": "text",
+					"top": 465,
+					"left": 391,
+					"width": 151,
+					"height": 18,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " Routing Code"
+				},
+				"Text32": {
+					"type": "text",
+					"top": 481,
+					"left": 391,
+					"width": 151,
+					"height": 18,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": " SWIFT Code"
+				},
+				"BankID1": {
+					"type": "input",
+					"top": 395,
+					"left": 550,
+					"width": 153,
+					"height": 15,
+					"dataSource": "[WireTemplates:42]BankName:3",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID3": {
+					"type": "input",
+					"top": 415,
+					"left": 403,
+					"width": 139,
+					"height": 18,
+					"dataSource": "[WireTemplates:42]BankCity:11",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID4": {
+					"type": "input",
+					"top": 414,
+					"left": 550,
+					"width": 111,
+					"height": 15,
+					"dataSource": "[WireTemplates:42]BankCountry:12",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID5": {
+					"type": "input",
+					"top": 430,
+					"left": 550,
+					"width": 45,
+					"height": 15,
+					"dataSource": "[WireTemplates:42]BankInstitutionNo:4",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID6": {
+					"type": "input",
+					"top": 447,
+					"left": 550,
+					"width": 77,
+					"height": 15,
+					"dataSource": "[WireTemplates:42]BranchTransitNo:5",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID19": {
+					"type": "input",
+					"top": 464,
+					"left": 550,
+					"width": 152,
+					"height": 15,
+					"dataSource": "[WireTemplates:42]RoutingCode:7",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID7": {
+					"type": "input",
+					"top": 498,
+					"left": 550,
+					"width": 152,
+					"height": 15,
+					"dataSource": "[WireTemplates:42]AccountNo:6",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID20": {
+					"type": "input",
+					"top": 481,
+					"left": 550,
+					"width": 152,
+					"height": 15,
+					"dataSource": "[WireTemplates:42]SWIFT:8",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID8": {
+					"type": "input",
+					"top": 341,
+					"left": 550,
+					"width": 154,
+					"height": 15,
+					"dataSource": "[WireTemplates:42]BeneficiaryFullName:9",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID17": {
+					"type": "input",
+					"top": 361,
+					"left": 550,
+					"width": 153,
+					"height": 30,
+					"dataSource": "[WireTemplates:42]BeneficiaryAddress:19",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"Text23": {
+					"type": "text",
+					"top": 359,
+					"left": 394,
+					"width": 149,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Recepient Address"
+				},
+				"Text24": {
+					"type": "text",
+					"top": 341,
+					"left": 392,
+					"width": 149,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Beneficiary"
+				},
+				"BankID2": {
+					"type": "input",
+					"top": 394,
+					"left": 402,
+					"width": 139,
+					"height": 18,
+					"dataSource": "[WireTemplates:42]BankCity:11",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"l_Link1": {
+					"type": "text",
+					"top": 314,
+					"left": 394,
+					"width": 148,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Wire Template"
+				},
+				"b_selectAccount": {
+					"type": "button",
+					"top": 148,
+					"left": 27,
+					"width": 123,
+					"height": 21,
+					"display": false,
+					"method": "ObjectMethods/b_selectAccount.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"AccountID1": {
+					"type": "input",
+					"top": 148,
+					"left": 665,
+					"width": 58,
+					"height": 24,
+					"dataSource": "[AccountInOuts:37]Currency:8",
+					"stroke": "#000000",
+					"class": "Titles",
+					"fontWeight": "bold",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"stamp": {
+					"type": "input",
+					"top": 85,
+					"left": 522,
+					"width": 210,
+					"height": 55,
+					"sizingX": "move",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bBankInfo": {
+					"type": "button",
+					"top": 181,
+					"left": 420,
+					"width": 107,
+					"height": 23,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"text": "Bank Info",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bBankInfo.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"Date",
+				"AccountID",
+				"subAccountID",
+				"ReferenceNo",
+				"ReferenceNo1",
+				"Memo",
+				"bValidate",
+				"bCancel",
+				"Radio Button6",
+				"Radio Button7",
+				"Radio Button8",
+				"Radio Button9",
+				"Radio Button10",
+				"Amount",
+				"CalcField2",
+				"CalcField_",
+				"CalcField3",
+				"CalcField4",
+				"DD_Links",
+				"DD_WireTemplates",
+				"BankID1",
+				"BankID3",
+				"BankID4",
+				"BankID5",
+				"BankID6",
+				"BankID19",
+				"BankID7",
+				"BankID20",
+				"BankID8",
+				"BankID17",
+				"BankID2",
+				"bBankInfo"
+			]
+		}
+	],
+	"editor": {
+		"defaultView": "View 1",
+		"activeView": "View 2",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Rectangle2",
+					"Round Rectangle1",
+					"Round Rectangle",
+					"subAccountID",
+					"ReferenceNo",
+					"ReferenceNo1",
+					"flag",
+					"bIncreaseDate",
+					"bDecrDate",
+					"Text22",
+					"Text7",
+					"l_Link",
+					"Text27",
+					"l_Links",
+					"Line",
+					"FirstName1",
+					"DD_WireTemplates",
+					"BankID2",
+					"l_Link1",
+					"b_selectAccount",
+					"AccountID1",
+					"stamp"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

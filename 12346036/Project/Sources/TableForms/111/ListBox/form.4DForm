@@ -1,0 +1,397 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Listbox_complete",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDoubleClick",
+		"onBeforeKeystroke",
+		"onMenuSelect",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 75,
+					"left": 0,
+					"width": 1007,
+					"height": 317,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "mainListBox",
+					"movableRows": false,
+					"headerHeight": "2em",
+					"showFooters": true,
+					"table": 111,
+					"highlightSet": "$SanctionCheckLog_LBSet",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"alternateFill": "#EEEEEE",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"borderStyle": "none",
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDisplayDetail",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column4",
+							"dataSource": "[SanctionCheckLog:111]CheckDate:3",
+							"dataSourceTypeHint": "date",
+							"width": 81,
+							"minWidth": 10,
+							"maxWidth": 100,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"textAlign": "center",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "DateColumn",
+								"text": ":xliff:cvs_date",
+								"textAlign": "center",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "vCount",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "[SanctionCheckLog:111]CheckTime:4",
+							"dataSourceTypeHint": "time",
+							"width": 37,
+							"minWidth": 10,
+							"maxWidth": 100,
+							"enterable": false,
+							"timeFormat": "hh_mm",
+							"alternateFill": "#EEEEEE",
+							"textAlign": "center",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "TimeColumn",
+								"text": "🕒",
+								"textAlign": "center",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column8",
+							"dataSource": "[SanctionCheckLog:111]SanctionList:5",
+							"width": 98,
+							"minWidth": 10,
+							"maxWidth": 32500,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"textAlign": "left",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "sanctionlist_c",
+								"text": "Sanction List",
+								"textAlign": "center",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "ResultColumn2",
+							"dataSource": "[SanctionCheckLog:111]isEntity:11",
+							"dataSourceTypeHint": "boolean",
+							"width": 43,
+							"minWidth": 10,
+							"maxWidth": 100,
+							"enterable": false,
+							"controlType": "checkbox",
+							"alternateFill": "#EEEEEE",
+							"textAlign": "center",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "ResultColumn3",
+								"text": "Entity",
+								"textAlign": "center",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer10",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[SanctionCheckLog:111]FullName:9",
+							"width": 212,
+							"minWidth": 10,
+							"maxWidth": 32500,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"textAlign": "left",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "CustomerColumn",
+								"text": "Name Checked",
+								"textAlign": "center",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column10",
+							"dataSource": "Table name:C256([SanctionCheckLog:111]internalTableID:12)",
+							"width": 64,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_table",
+								"text": "Table",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer11",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column9",
+							"dataSource": "[SanctionCheckLog:111]InternalRecordID:2",
+							"width": 86,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_record",
+								"text": "Record ID",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "sanctionListResultPic",
+							"dataSourceTypeHint": "picture",
+							"width": 40,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"pictureFormat": "proportionalCenter",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onLoad",
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Check",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "[SanctionCheckLog:111]UserID:8",
+							"width": 102,
+							"minWidth": 10,
+							"maxWidth": 396,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"textAlign": "left",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "UserColumn",
+								"text": ":xliff:cvs_user",
+								"textAlign": "center",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "[SanctionCheckLog:111]ResponseText:6",
+							"width": 227,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Response",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 105,
+					"left": 696,
+					"width": 1,
+					"height": 1,
+					"fill": "transparent"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 105,
+					"left": 613,
+					"width": 1,
+					"height": 1,
+					"fill": "transparent"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,93 @@
+
+		<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+   
+    <div class="container-fluid">
+        <div class="navbar-header">
+            
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        <a class="logo pull-left" style='padding-top: 10px' href="#"><img src="/app/img/Clear-View-Systems-CVS-Logo.png" width="30" height="30"></a>
+        <span class="logo-name pull-left" style='padding-top: 15px; padding-left: 5px; color: white'> CurrencyXChanger</span>
+            
+        </div>
+          
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+		  <!--4DIF webIsSessionAlive-->
+            <li><a href="profile.shtml">Home</a></li>
+              <li><a href="/customers/currencies.shtml">Currencies</a></li>
+              <li><a href="linksList.shtml">Counterparty List</a></li> 
+            <li><a href="booking.shtml">Request Booking</a></li> 
+              <li><a href="bookingList.shtml">Booking Lists</a></li> 
+            
+            <li><a href="ewire.shtml">Request Ewire</a></li>
+              <li><a href="ewireList.shtml">Ewires Lists</a></li>
+
+			<!--4DELSE-->
+
+			<li><a href="/login/registration.shtml">Register</a></li>
+
+			
+			<!--4DENDIF-->
+          </ul>
+            
+            <ul class='nav navbar-nav navbar-right'>
+                <li class='dropdown'>
+                    <a href='#' class='dropdown-toggle' role='button' data-toggle='dropdown'>Account<b class='caret'></b></a>
+                <ul class='dropdown-menu' role='menu'>
+                <!--4DIF webIsSessionAlive-->
+                    <li><a href="/profile.shtml">Profile</a></li><!-- make this open a dialog in a div -->
+				    <li><a href="/webLogout">Log Off - <!--#4DTEXT webUsername--></a></li>
+                <!--4DELSE-->
+                    <li><a href="/webLogin">Login</a></li>
+                <!--4DENDIF-->
+                
+                    </ul>
+                </li>
+            </ul>
+            
+
+            
+            
+        </div><!--/.nav-collapse -->
+          
+          
+      </div>
+</nav>
+
+
+<div class="modal fade" id="accountModal">
+	<div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h4 class="modal-title">Account Details</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+    		<label for="userId">User ID</label>
+    		<input class="form-control" id="userId" placeholder="User ID" type="text" value="<!--4DTEXT webusername-->">
+  		  </div>
+		  <div class="form-group">
+		  	<label for="userPassword">Password</label>
+			<input class="form-control" id="userPassword" placeholder="Password" type="password">
+		  </div>
+        <div class="form-group">
+    		<label for="userEmail">Email Address</label>
+    		<input class="form-control" id="userEmail" placeholder="Enter email" type="email">
+  		  </div>
+            
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
+          <a href="#" class="btn btn-primary">Save</a>
+        </div>
+      </div>
+    </div>
+</div>

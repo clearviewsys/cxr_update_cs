@@ -1,0 +1,419 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "ListToolbar_Buttons",
+	"inheritedFormTable": 7,
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 89,
+	"markerBody": 115,
+	"markerBreak": 115,
+	"markerFooter": 158,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDragOver",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt",
+		"orientation": "landscape"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Splitter4": {
+					"type": "splitter",
+					"top": 68,
+					"left": 110,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button4": {
+					"type": "button",
+					"top": 68,
+					"left": 2,
+					"width": 106,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Call Log ID",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button4.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"S1_Field": {
+					"type": "input",
+					"top": 92,
+					"left": 5,
+					"width": 99,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[CallLogs:51]CallLogID:1",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Splitter1": {
+					"type": "splitter",
+					"top": 68,
+					"left": 281,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button1": {
+					"type": "button",
+					"top": 68,
+					"left": 113,
+					"width": 166,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Customer",
+					"textPlacement": "right",
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"S1_Field1": {
+					"type": "input",
+					"top": 92,
+					"left": 116,
+					"width": 159,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Customers:3]FullName:40",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Splitter2": {
+					"type": "splitter",
+					"top": 68,
+					"left": 372,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button2": {
+					"type": "button",
+					"top": 68,
+					"left": 284,
+					"width": 86,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Call Date",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button2.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"S1_Field2": {
+					"type": "input",
+					"top": 92,
+					"left": 287,
+					"width": 79,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[CallLogs:51]CallDate:3",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Splitter3": {
+					"type": "splitter",
+					"top": 68,
+					"left": 423,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button3": {
+					"type": "button",
+					"top": 68,
+					"left": 375,
+					"width": 46,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Time",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button3.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"S1_Field3": {
+					"type": "input",
+					"top": 92,
+					"left": 378,
+					"width": 39,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[CallLogs:51]CallTime:4",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Splitter5": {
+					"type": "splitter",
+					"top": 68,
+					"left": 633,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button5": {
+					"type": "button",
+					"top": 68,
+					"left": 426,
+					"width": 205,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Call Log",
+					"textPlacement": "right",
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"S1_Field4": {
+					"type": "input",
+					"top": 92,
+					"left": 444,
+					"width": 184,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[CallLogs:51]Notes:6",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Splitter6": {
+					"type": "splitter",
+					"top": 68,
+					"left": 724,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button6": {
+					"type": "button",
+					"top": 68,
+					"left": 636,
+					"width": 86,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Logged By",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button6.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"S1_Field5": {
+					"type": "input",
+					"top": 92,
+					"left": 639,
+					"width": 79,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[CallLogs:51]userID:5",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"blueDot": {
+					"type": "picture",
+					"top": 96,
+					"left": 429,
+					"width": 10,
+					"height": 10,
+					"visibility": "hidden",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/newMessage.png"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

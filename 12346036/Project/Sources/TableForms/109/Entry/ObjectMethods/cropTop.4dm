@@ -1,0 +1,2 @@
+
+cropImageFromTop(->docPhoto2)

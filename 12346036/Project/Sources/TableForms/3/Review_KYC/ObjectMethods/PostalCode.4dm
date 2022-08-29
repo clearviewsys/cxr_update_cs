@@ -1,0 +1,1 @@
+applyFocusRect("focusRect2")

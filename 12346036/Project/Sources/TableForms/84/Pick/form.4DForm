@@ -1,0 +1,170 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_PICK",
+	"width": 640,
+	"height": 480,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pages": [
+		null,
+		{
+			"objects": {
+				"b_new": {
+					"type": "button",
+					"top": 533,
+					"left": 16,
+					"width": 120,
+					"height": 30,
+					"sizingY": "move",
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"stroke": "#444444",
+					"focusable": false,
+					"text": ":xliff:cvs_new",
+					"icon": "/RESOURCES/Images/library/toolbarNewRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/b_new.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"PICK_SearchText": {
+					"type": "input",
+					"top": 44,
+					"left": 250,
+					"width": 372,
+					"height": 20,
+					"dataSource": "vPickSearchText",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/PICK_SearchText.4dm",
+					"events": [
+						"onLosingFocus",
+						"onAfterKeystroke"
+					]
+				},
+				"mainListBox": {
+					"type": "listbox",
+					"top": 71,
+					"left": 0,
+					"width": 640,
+					"height": 350,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "mainListBox",
+					"movableRows": false,
+					"dragging": "custom",
+					"rowHeight": "20px",
+					"showFooters": true,
+					"table": 100,
+					"highlightSet": "$mainListBoxUserSet",
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onBeforeKeystroke",
+						"onAfterSort",
+						"onSelectionChange",
+						"onColumnMove",
+						"onColumnResize",
+						"onRowMove",
+						"onHeaderClick",
+						"onBeginDragOver"
+					],
+					"columns": []
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 435,
+					"left": 376,
+					"width": 120,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"shortcutKey": "[Esc]",
+					"text": ":xliff:cvs_cancel",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_pick": {
+					"type": "button",
+					"top": 435,
+					"left": 504,
+					"width": 121,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": ":xliff:cvs_pick",
+					"defaultButton": true,
+					"method": "ObjectMethods/b_pick.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_search": {
+					"type": "text",
+					"top": 45,
+					"left": 80,
+					"width": 158,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_search"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

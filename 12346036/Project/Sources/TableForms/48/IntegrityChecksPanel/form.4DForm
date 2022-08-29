@@ -1,0 +1,472 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 501,
+	"markerBreak": 501,
+	"markerFooter": 501,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Button1": {
+					"type": "button",
+					"top": 520,
+					"left": 593,
+					"width": 220,
+					"height": 23,
+					"sizingY": "move",
+					"dataSource": "Button1",
+					"text": "Run Data Integrity Test",
+					"class": "Control",
+					"fontWeight": "bold",
+					"focusable": false,
+					"defaultButton": true,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"List Box1": {
+					"type": "listbox",
+					"top": 42,
+					"left": 10,
+					"width": 809,
+					"height": 308,
+					"resizingMode": "legacy",
+					"dataSource": "List Box1",
+					"focusable": false,
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "#AAAAAA",
+					"verticalLineStroke": "#AAAAAA",
+					"fill": "#FFFFFF",
+					"alternateFill": "#FBFFDD",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"method": "ObjectMethods/List Box1.4dm",
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "arrToCheck",
+							"dataSourceTypeHint": "boolean",
+							"width": 34,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"styledText": true,
+							"contextMenu": "none",
+							"controlType": "checkbox",
+							"fill": "#FFFFFF",
+							"alternateFill": "#FBFFDD",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"dataSource": "Header1",
+								"fontFamily": "Arial",
+								"fontSize": 11
+							},
+							"footer": {
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#000000",
+								"name": "Footer1"
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrCheckID",
+							"width": 162,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#FFFFFF",
+							"alternateFill": "#FBFFDD",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Integrity Check",
+								"dataSource": "Header2",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#000000"
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "arrDescription",
+							"width": 510,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#FFFFFF",
+							"alternateFill": "#FBFFDD",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Check Description",
+								"dataSource": "Header3",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "2",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#000000"
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "arrStatus",
+							"width": 88,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"styledText": true,
+							"contextMenu": "none",
+							"fill": "#FFFFFF",
+							"alternateFill": "#FBFFDD",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "Status",
+								"dataSource": "Header4",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#000000"
+							}
+						}
+					]
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 355,
+					"left": 10,
+					"width": 564,
+					"height": 188,
+					"sizingY": "grow",
+					"dataSourceTypeHint": "text",
+					"table": 49,
+					"listForm": "subform_IntegrityChecksPanel",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"selectionMode": "single",
+					"printFrame": "variable",
+					"borderStyle": "sunken"
+				},
+				"Button2": {
+					"type": "button",
+					"top": 383,
+					"left": 599,
+					"width": 105,
+					"height": 25,
+					"dataSource": "Button2",
+					"text": "List Failed",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button3": {
+					"type": "button",
+					"top": 383,
+					"left": 714,
+					"width": 105,
+					"height": 24,
+					"dataSource": "Button3",
+					"text": "Delete Failed",
+					"class": "Control",
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 16,
+					"left": 10,
+					"width": 81,
+					"height": 18,
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "From Date"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 16,
+					"left": 94,
+					"width": 125,
+					"height": 18,
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Medium",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field1.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange",
+						"onAfterKeystroke"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 16,
+					"left": 220,
+					"width": 56,
+					"height": 18,
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "To Date"
+				},
+				"Field2": {
+					"type": "input",
+					"top": 16,
+					"left": 281,
+					"width": 125,
+					"height": 18,
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Medium",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field2.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange",
+						"onAfterKeystroke"
+					]
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"top": 16,
+					"left": 412,
+					"width": 172,
+					"height": 18,
+					"dataSource": "cbApplyDateRange",
+					"text": "Apply Date Range",
+					"class": "Fields_Medium",
+					"method": "ObjectMethods/Check Box2.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 355,
+					"left": 599,
+					"width": 220,
+					"height": 25,
+					"dataSource": "Button2",
+					"text": "Toggle Checkmarks",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field": {
+					"type": "input",
+					"top": 16,
+					"left": 783,
+					"width": 36,
+					"height": 18,
+					"dataSource": "vBranchID",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_branchID": {
+					"type": "text",
+					"top": 16,
+					"left": 723,
+					"width": 56,
+					"height": 18,
+					"class": "Fields_Medium",
+					"textAlign": "right",
+					"text": "Branch ID"
+				},
+				"Button5": {
+					"type": "button",
+					"top": 411,
+					"left": 599,
+					"width": 105,
+					"height": 24,
+					"dataSource": "Button3",
+					"text": "Orphan Registers",
+					"class": "Control",
+					"method": "ObjectMethods/Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 411,
+					"left": 714,
+					"width": 105,
+					"height": 24,
+					"dataSource": "Button3",
+					"text": "Unbalanced Invoices",
+					"class": "Control",
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button7": {
+					"type": "button",
+					"top": 437,
+					"left": 599,
+					"width": 220,
+					"height": 25,
+					"dataSource": "Button2",
+					"text": "Show Unbalanced Registers",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button8": {
+					"type": "button",
+					"top": 464,
+					"left": 599,
+					"width": 220,
+					"height": 25,
+					"dataSource": "Button2",
+					"text": "Show Unbalanced Audit",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button9": {
+					"type": "button",
+					"top": 491,
+					"left": 599,
+					"width": 220,
+					"height": 25,
+					"dataSource": "Button2",
+					"text": "Fiix Unbalanced wth Audit",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 131,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

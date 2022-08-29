@@ -1,0 +1,171 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Search",
+	"windowSizingX": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 74,
+					"left": 0,
+					"width": 703,
+					"height": 459,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "mainListBox",
+					"movableRows": false,
+					"showFooters": true,
+					"table": 115,
+					"highlightSet": "$KeyValues_LBSet",
+					"horizontalLineStroke": "transparent",
+					"alternateFill": "#E6ECEC",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onAfterSort",
+						"onSelectionChange",
+						"onColumnMove",
+						"onRowMove",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "[KeyValues:115]Key:2",
+							"width": 285,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#E6ECEC",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Key",
+								"text": "Key",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer1",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D1DEDE",
+								"textAlign": "center",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[KeyValues:115]Value:3",
+							"width": 401,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#E6ECEC",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Value",
+								"text": "Value",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D1DEDE",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						}
+					]
+				},
+				"b_duplicate": {
+					"type": "button",
+					"top": 541,
+					"left": 9,
+					"width": 147,
+					"height": 34,
+					"sizingY": "move",
+					"text": "Duplicate",
+					"class": "Control_Large_",
+					"focusable": false,
+					"method": "ObjectMethods/b_duplicate.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

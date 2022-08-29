@@ -1,0 +1,108 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onLoadRecord"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"CountryCode": {
+					"type": "input",
+					"top": 8,
+					"left": 76,
+					"width": 64,
+					"height": 25,
+					"entryFilter": "&\"A-Z\"###",
+					"dragging": "none",
+					"dropping": "custom"
+				},
+				"searchText": {
+					"type": "input",
+					"top": 39,
+					"left": 5,
+					"width": 343,
+					"height": 25,
+					"multiline": "no",
+					"placeholder": "Please enter address search text",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"addressSearchResult": {
+					"type": "dropdown",
+					"top": 69,
+					"left": 5,
+					"width": 343,
+					"height": 25,
+					"visibility": "hidden",
+					"method": "ObjectMethods/addressSearchResult.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"addressRetrieveResult": {
+					"type": "dropdown",
+					"top": 98,
+					"left": 5,
+					"width": 417,
+					"height": 25,
+					"visibility": "hidden",
+					"method": "ObjectMethods/addressRetrieveResult.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"top": 39,
+					"left": 356,
+					"width": 66,
+					"height": 55,
+					"text": "Search",
+					"class": "Label_Medium",
+					"focusable": false,
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 9,
+					"left": 8,
+					"width": 59,
+					"height": 17,
+					"class": "Label_Medium",
+					"textAlign": "center",
+					"text": "Country"
+				}
+			}
+		}
+	]
+}

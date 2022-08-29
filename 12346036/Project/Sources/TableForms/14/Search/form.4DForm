@@ -1,0 +1,229 @@
+﻿{
+	"destination": "listScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"bCancel": {
+					"type": "button",
+					"top": 130,
+					"left": 93,
+					"width": 80,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"action": "cancel",
+					"text": "Cancel",
+					"textAlign": "center",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 130,
+					"left": 185,
+					"width": 80,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"text": "Search",
+					"textAlign": "center",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 17,
+					"left": 20,
+					"width": 98,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Login ID"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 41,
+					"left": 20,
+					"width": 98,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Password"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 65,
+					"left": 20,
+					"width": 98,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Email"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 89,
+					"left": 20,
+					"width": 98,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Allow Access"
+				},
+				"LoginID": {
+					"type": "input",
+					"top": 17,
+					"left": 124,
+					"width": 120,
+					"height": 16,
+					"dataSource": "[WebUsers:14]webUsername:1",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Password": {
+					"type": "input",
+					"top": 41,
+					"left": 124,
+					"width": 120,
+					"height": 16,
+					"dataSource": "[WebUsers:14]Password:2",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Email": {
+					"type": "input",
+					"top": 65,
+					"left": 124,
+					"width": 150,
+					"height": 16,
+					"dataSource": "[WebUsers:14]Email:3",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"AllowAccess": {
+					"type": "checkbox",
+					"top": 89,
+					"left": 124,
+					"width": 86,
+					"height": 16,
+					"dataSource": "[WebUsers:14]isAllowedAccess_NU:5",
+					"text": "Yes",
+					"stroke": "#000000",
+					"fontWeight": "bold",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,2 @@
+//%attributes = {}
+// FJ_isBankDraft

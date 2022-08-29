@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--#4DSCRIPT/webRedirectIfNotAuthorized-->
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/head.shtml -->
+
+    <!--#4DSCRIPT/webSelectCustomerRecord-->
+
+</head>
+
+
+<body>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/menubar.shtml -->
+
+    <main role="main">
+
+
+        <!-- ACCOUNT AND TRANSACTION PANELS -->
+        <div class="container" style="padding-bottom: 40px; padding-top: 0px">
+
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+                    <div class='panel panel-default'>
+
+                        <div class='panel-heading'>
+                            <div>
+                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+
+                                <!--#4DTEXT " "+[customers]firstname + " "+[customers]lastname-->
+                                <!--#4DIF [customers]iscompany-->
+                                <!--#4DTEXT " - "+[customers]companyname-->
+                                <!--#4DENDIF-->&nbsp;
+
+                                [
+                                <!--#4DSCRIPT/wapi_getsession/username-->]
+
+                                <span class="pull-right">
+                                    <!-- add country flag -->
+                                    <!--#4DTEXT webGetFlag_Customers-->
+                                </span>
+                            </div>
+
+
+                        </div>
+
+                        <div class='row'>
+                            <div class='col-lg-3 col-md-3 colsm-6 col-xs-6'>
+                                <div class='panel-body'>
+                                    <!--#4DSCRIPT/WAPI_textGroup/{field:customers___address}-->
+                                    <!--#4DSCRIPT/WAPI_textGroup/{field:customers___city, field2:customers___province, field3:customers___postalcode}-->
+                                    <!--#4DSCRIPT/WAPI_textGroup/{field:customers___country_obs}-->
+                                </div>
+                            </div>
+                            <div class='col-lg-3 col-md-3 colsm-6 col-xs-6'>
+                                <div class='panel-body'>
+                                    <!--#4DSCRIPT/WAPI_textGroup/{field:customers___customerid, label:ID}-->
+                                    <!--#4DSCRIPT/WAPI_textGroup/{field:customers___worktel, label:W}-->
+                                    <!--#4DSCRIPT/WAPI_textGroup/{field:customers___cellphone, label:M}-->
+                                    <!--#4DSCRIPT/WAPI_textGroup/{field:customers___email, label:Email}-->
+                                </div>
+                            </div>
+
+                            <div class='col-lg-3 col-md-3 colsm-6 col-xs-6'>
+                                <div class='panel-body'>
+                                    <!--#4DSCRIPT/WAPI_textGroup/{field:customers___pictureid_type, label:ID-Type}-->
+                                    <!--#4DSCRIPT/WAPI_textGroup/{field:customers___pictureid_number, label:ID-Num}-->
+                                    <!--#4DSCRIPT/WAPI_textGroup/{field:customers___pictureid_issuedate, label:Issued}-->
+                                    <!--#4DSCRIPT/WAPI_textGroup/{field:customers___documentsVerificationDate, label:Verified}-->
+                                    <!--#4DSCRIPT/WAPI_textGroup/{field:customers___documentsVerifiedBy, label:Verified-By}-->
+                                </div>
+                            </div>
+
+                            <div class='col-lg-3 col-md-3 colsm-6 col-xs-6'>
+                                <div class='panel-body'>
+                                    <!--#4DTEXT webGetPictureCustomer -->
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable='true'>
+
+                        <!-- CONTACT INFORMATION -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="profile-demographics-tab">
+                                <h3 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#profile-demographics-data" aria-expanded="false" aria-controls="profile-demographics-data">
+                                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp; Edit Your Contact Info
+                                        <span class="glyphicon glyphicon-pencil pull-right"></span></a>
+                                </h3>
+                            </div>
+
+                            <div id="profile-demographics-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="profile-demographics-tab">
+
+                                <form enctype="multipart/form-data" id='profile-demographics-form' action="/updateRecord" method="post">
+
+                                    <div>
+                                        <!--#4DSCRIPT/WAPI_formHeader/{table:customers, primarykey:customers___customerid, success:customers/home.shtml}-->
+                                    </div>
+
+
+                                    <div class="panel-body">
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___firstname, label:First-Name, readonly:true, pattern:alpha}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___lastname, label:Last-Name, readonly:true, pattern:alpha}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___email, label:Email-Address, locked:true, readonly:true}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___gender, choicelist:webGetChoiceListGender, readonly:false}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___occupation, width:100px, readonly:false}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___address, readonly:false}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___city, width:100px, readonly:false, pattern:alpha}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___province, readonly:false, pattern:alpha}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___dob, label:Date-of-birth, readonly:true, inputmask-selectyears:80, inputmask-startyear:1970, inputmask-min:true}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___hometel, label:Phone, readonly:false, pattern:phone}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___cellphone, label:Mobile, readonly:false, pattern:phone}-->
+                                        </div>
+
+
+                                        <div class="btn-group pull-right" role="group" aria-label="profile-edit">
+                                            <!--#4DIF false-->
+                                            <a id="cancel-button-demographics" class="btn btn-default" role="button" style='display:none;' onclick="wapiObjectMethod(event)">Cancel</a>
+
+                                            <a id="edit-button-demographics" class="btn btn-primary" role="button" style='display:none;' onclick="wapiObjectMethod(event)">Edit</a>
+                                            <!--#4DENDIF-->
+
+                                            <a class="btn btn-default" href="/customers/home.shtml" role="button">Cancel</a>
+
+                                            <input id="save-button-demographics" class="btn btn-primary" type="submit" value="Save" formprofile-demographics-form style='display:block;'>
+                                        </div>
+
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <!-- ID INFO AND PICTURE -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="profile-id-tab">
+                                <h3 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#profile-id-data" aria-expanded="false" aria-controls="profile-id-data">
+                                        <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>&nbsp;Your ID Documentation</a>
+                                </h3>
+                            </div>
+
+                            <div id="profile-id-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="profile-id-tab">
+
+                                <form enctype="multipart/form-data" id='profile-id-form' action="/updateRecord" method="post">
+
+                                    <div>
+                                        <!--#4DSCRIPT/WAPI_formHeader/{table:customers, primarykey:customers___customerid, success:customers/home.shtml}-->
+                                    </div>
+
+                                    <div class="panel-body">
+
+                                        <div class="media" style="padding-bottom: 10px">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_image, label:ID, readonly:true, image-width:310, image-height:0, image-compression:.5, image-upload:true}-->
+
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_issuedate, label:Issue-Date, readonly:true}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_number, label:ID-Number, readonly:true}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_expirydate, readonly:true}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_issuestate, readonly:true, pattern:alpha}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_issuecountry, readonly:true, pattern:alpha}-->
+                                        </div>
+
+                                        <!--#4DIF false-->
+                                        <div class="btn-group pull-right" role="group" aria-label="profile-edit">
+                                            <a id="cancel-button-id" class="btn btn-default" role="button" style='display:none;' onclick="wapiObjectMethod(event)">Cancel</a>
+
+                                            <a id="edit-button-id" class="btn btn-primary" role="button" style='display:block;' onclick="wapiObjectMethod(event)">Edit</a>
+
+                                            <input id="save-button-id" class="btn btn-primary" type="submit" value="Save" style='display:none;'>
+                                        </div>
+                                        <!--#4DENDIF-->
+
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </main>
+    <!--#4DSCRIPT/WAPI_formInit-->
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/footer.shtml -->
+</body>
+
+
+</html>

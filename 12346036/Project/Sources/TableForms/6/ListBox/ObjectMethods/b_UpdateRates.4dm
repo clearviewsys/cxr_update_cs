@@ -1,0 +1,3 @@
+
+handleFetchCurrencyRatesButton("$Currencies_LBSet")
+

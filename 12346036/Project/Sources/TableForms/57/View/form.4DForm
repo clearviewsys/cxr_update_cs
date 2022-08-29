@@ -1,0 +1,143 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "ViewToolbar2",
+	"inheritedFormTable": 7,
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 75,
+					"left": 39,
+					"width": 118,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Date Range Title:"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 103,
+					"left": 39,
+					"width": 118,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "From Date:"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 131,
+					"left": 39,
+					"width": 118,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "To Date:"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 76,
+					"left": 165,
+					"width": 202,
+					"height": 20,
+					"dataSource": "[DateRanges:57]DateRangeID:1",
+					"class": "Fields_Large",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 103,
+					"left": 165,
+					"width": 270,
+					"height": 20,
+					"dataSource": "[DateRanges:57]fromDate:2",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Large",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "shortCentury",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field2.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 130,
+					"left": 165,
+					"width": 270,
+					"height": 20,
+					"dataSource": "[DateRanges:57]toDate:3",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Large",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "shortCentury",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field3.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 160,
+					"left": 318,
+					"width": 117,
+					"height": 30,
+					"action": "cancel",
+					"text": "Close",
+					"class": "Control_Large_",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

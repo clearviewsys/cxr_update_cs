@@ -1,0 +1,45 @@
+<form id="modal-form">
+    <div id='wapi-modal-dialog' class='modal fade' role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Details</h4>
+                </div>
+
+
+                <div class="modal-body" id="wapi-modal-dialog-body">
+                    <!-- dialog form inserted here -->
+                </div>
+
+
+                <div class="modal-footer">
+                    <div class="btn-toolbar" role="toolbar" style="margin: 0;">
+                        <div class="button-group pull-right" role="group">
+
+                            <!--#4DIF WAPI_isDebug-->
+                            <input id="wapi-print-btn-debug" class="btn btn-primary" type="button" value="Debug-Print" onclick="wapiPrintForm(true);" form="modal-form" />
+                            <!--#4DENDIF-->
+
+
+                            <!--#4DIF false-->
+                            <input type="button" class="btn btn-primary" id="wapi-edit-btn" name="wapi-edit-btn" value="Edit" form="modal-form" onclick="wapiEditForm({'form':'wapi/update.shtml', 'table':'', 'action':'', 'primarykey':'', 'field':'value'})">
+                            <!--#4DENDIF-->
+
+                            <!--#4DIF true-->
+
+                            <input id="wapi-print-btn" class="btn btn-primary hidden-xs" type="button" value="Print" form="modal-form" onclick="wapiPrintForm(true);" />
+
+                            <!--#4DENDIF-->
+
+                            <button type="button" id="wapi-cancel-btn" class="btn btn-primary" data-dismiss='modal' form="modal-form">Close</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>

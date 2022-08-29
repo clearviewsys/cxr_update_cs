@@ -1,0 +1,546 @@
+﻿{
+	"destination": "detailScreen",
+	"windowMinWidth": 310,
+	"windowMinHeight": 200,
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onBeforeKeystroke",
+		"onDataChange",
+		"onDragOver",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vSearchText": {
+					"type": "input",
+					"top": 13,
+					"left": 263,
+					"width": 247,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "vSearchText",
+					"class": "Fields_Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/vSearchText.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onBeforeKeystroke",
+						"onDataChange",
+						"onAfterKeystroke"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 468,
+					"left": 572,
+					"width": 176,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bAccept",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Pick Currency",
+					"class": "Control",
+					"defaultButton": true,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 468,
+					"left": 483,
+					"width": 85,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Control",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 13,
+					"left": 9,
+					"width": 246,
+					"height": 15,
+					"class": "Label",
+					"textAlign": "left",
+					"text": "Search by code, currency, or country:"
+				},
+				"newButton": {
+					"type": "button",
+					"top": 470,
+					"left": 9,
+					"width": 165,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "bNew",
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"class": "Control",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Add new currency",
+					"icon": "/RESOURCES/Images/library/toolbarNewRecord (24134).png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/newButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"slb_picker": {
+					"type": "listbox",
+					"top": 42,
+					"left": 9,
+					"width": 738,
+					"height": 416,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "slb_picker",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "40px",
+					"headerHeight": "30px",
+					"footerHeight": "25px",
+					"lockedColumnCount": 2,
+					"table": 6,
+					"highlightSet": "$Currencies_LBSet",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"stroke": "#404040",
+					"fill": "#99C5E3",
+					"alternateFill": "#BDE7F9",
+					"fontFamily": "Tahoma",
+					"fontSize": 10,
+					"method": "ObjectMethods/slb_picker.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "[Currencies:6]Flag:3",
+							"dataSourceTypeHint": "picture",
+							"width": 60,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"pictureFormat": "proportionalCenter",
+							"stroke": "#404040",
+							"fill": "#E6F5F5",
+							"alternateFill": "#FFFFFF",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"dataSource": "Header1",
+								"stroke": "#404040",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer17",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#404040",
+								"fill": "#9DC6D9",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column18",
+							"dataSource": "[Currencies:6]CurrencyCode:1",
+							"width": 83,
+							"minWidth": 4,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"stroke": "#404040",
+							"fill": "#E6F5F5",
+							"alternateFill": "#FFFFFF",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header18",
+								"text": "Code",
+								"dataSource": "Header3",
+								"stroke": "#404040",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer18",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#404040",
+								"fill": "#9DC6D9",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column14",
+							"dataSource": "[Currencies:6]Name:2",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"stroke": "#404040",
+							"fill": "#E7F4F8",
+							"alternateFill": "#FFFFFF",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header14",
+								"text": "Currency",
+								"dataSource": "Header2",
+								"stroke": "#404040",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer14",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#404040",
+								"fill": "#9DC6D9",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "[Currencies:6]Country:22",
+							"width": 220,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"stroke": "#404040",
+							"fill": "#E7F4F8",
+							"alternateFill": "#FFFFFF",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Country",
+								"dataSource": "Header2",
+								"stroke": "#404040",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#404040",
+								"fill": "#9DC6D9",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[Currencies:6]SpotRateLocal:17",
+							"dataSourceTypeHint": "number",
+							"width": 110,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Rates",
+							"stroke": "#404040",
+							"fill": "#E6F5F5",
+							"alternateFill": "#F5F5F5",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "SPOT",
+								"dataSource": "Header7",
+								"stroke": "#404040",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer19",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#404040",
+								"fill": "#9DC6D9",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column8",
+							"dataSource": "[Currencies:6]spotRateInverse:41",
+							"dataSourceTypeHint": "number",
+							"width": 110,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Rates",
+							"stroke": "#404040",
+							"fill": "#E6F5F5",
+							"alternateFill": "#FFFFFF",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header8",
+								"text": "SPOT INV.",
+								"dataSource": "Header7",
+								"stroke": "#404040",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#404040",
+								"fill": "#9DC6D9",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column19",
+							"dataSource": "[Currencies:6]OurBuyRateLocal:7",
+							"dataSourceTypeHint": "number",
+							"width": 110,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Rates",
+							"stroke": "#00189C",
+							"fill": "#E6F5F5",
+							"alternateFill": "#F5F5F5",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_19",
+								"text": "BUY",
+								"dataSource": "Header5",
+								"stroke": "#404040",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#404040",
+								"fill": "#9DC6D9",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column9",
+							"dataSource": "[Currencies:6]OurSellRateLocal:8",
+							"dataSourceTypeHint": "number",
+							"width": 110,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Rates",
+							"stroke": "#5F6000",
+							"fill": "#E6F5F5",
+							"alternateFill": "#F5F5F5",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header9",
+								"text": "SELL",
+								"dataSource": "Header7",
+								"stroke": "#404040",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer9",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#404040",
+								"fill": "#9DC6D9",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "[Currencies:6]OurBuyRateInverse:25",
+							"dataSourceTypeHint": "number",
+							"width": 110,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Rates",
+							"stroke": "#000E60",
+							"fill": "#E6F5F5",
+							"alternateFill": "#FFFFFF",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header6",
+								"text": "BUY INV.",
+								"dataSource": "Header7",
+								"stroke": "#404040",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#404040",
+								"fill": "#9DC6D9",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column21",
+							"dataSource": "[Currencies:6]OurSellRateInverse:26",
+							"dataSourceTypeHint": "number",
+							"width": 110,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Rates",
+							"stroke": "#5F6000",
+							"fill": "#E6F5F5",
+							"alternateFill": "#FFFFFF",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header21",
+								"text": "SELL INV.",
+								"dataSource": "Header7",
+								"stroke": "#404040",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer21",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#404040",
+								"fill": "#9DC6D9",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

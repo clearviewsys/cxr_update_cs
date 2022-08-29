@@ -1,0 +1,657 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 477,
+					"height": 298,
+					"fill": "automatic",
+					"strokeDashArray": "1 1"
+				},
+				"Line2": {
+					"type": "line",
+					"top": 30,
+					"left": 60,
+					"height": 220,
+					"stroke": "#DDDDDD"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 40,
+					"left": 40,
+					"width": 420,
+					"stroke": "#A0FFFF"
+				},
+				"Line3": {
+					"type": "line",
+					"top": 70,
+					"left": 60,
+					"width": 400,
+					"stroke": "#DDDDDD"
+				},
+				"Line4": {
+					"type": "line",
+					"top": 80,
+					"left": 60,
+					"width": 400,
+					"stroke": "#DDDDDD"
+				},
+				"Line5": {
+					"type": "line",
+					"top": 250,
+					"left": 60,
+					"width": 400,
+					"stroke": "#DDDDDD"
+				},
+				"Button1": {
+					"type": "button",
+					"top": 260,
+					"left": 380,
+					"width": 80,
+					"height": 20,
+					"dataSource": "bNext",
+					"action": "nextPage",
+					"text": "Next",
+					"class": "Control",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 260,
+					"left": 60,
+					"width": 80,
+					"height": 20,
+					"dataSource": "bBack",
+					"action": "previousPage",
+					"text": "Back",
+					"class": "Control",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 15,
+					"left": 4,
+					"width": 49,
+					"height": 49,
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture1.pict"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 40,
+					"left": 60,
+					"width": 250,
+					"height": 27,
+					"fontFamily": "Arial",
+					"fontSize": 24,
+					"text": "Welcome to Setup Assistant"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 110,
+					"left": 60,
+					"width": 400,
+					"height": 75,
+					"class": "Fields",
+					"text": "This assistant will guide you through the basic steps required to setup and use this program. Please follow the instructions on this screen and then press the next Button to follow to the next level."
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 80,
+					"left": 60,
+					"width": 380,
+					"height": 16,
+					"dataSource": "vGreeting",
+					"focusable": false,
+					"fill": "transparent",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onLoad",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text3": {
+					"type": "text",
+					"top": 40,
+					"left": 60,
+					"width": 400,
+					"height": 27,
+					"fontFamily": "Arial",
+					"fontSize": 24,
+					"text": "Step 1 - Enter your Company Information"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 80,
+					"left": 60,
+					"width": 400,
+					"height": 75,
+					"class": "Fields",
+					"text": "In this step, you need to enter the name of your company as well as the address that will appear on your reports and check forms."
+				},
+				"Button3": {
+					"type": "button",
+					"top": 140,
+					"left": 180,
+					"width": 140,
+					"height": 20,
+					"dataSource": "Button3",
+					"text": "Enter Company Info",
+					"class": "Fields",
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text5": {
+					"type": "text",
+					"top": 40,
+					"left": 60,
+					"width": 400,
+					"height": 27,
+					"fontFamily": "Arial",
+					"fontSize": 24,
+					"text": "Step 2 - Enter your Bank infrmation"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 80,
+					"left": 60,
+					"width": 400,
+					"height": 75,
+					"text": "In this step, you need to define all the banks that you have an account with.\rYou also need a parent Cash Bank. This account is the parent of all Cash accounts defined in the system."
+				},
+				"Button Grid1": {
+					"type": "pictureButton",
+					"top": 170,
+					"left": 70,
+					"width": 70,
+					"height": 70,
+					"dataSource": "Button Grid1",
+					"picture": "/RESOURCES/Images/library/_Banks.png",
+					"loopBackToFirstFrame": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Button Grid1.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text21": {
+					"type": "text",
+					"top": 200,
+					"left": 150,
+					"width": 200,
+					"height": 15,
+					"text": "<- Click to Create Your Bank Accounts"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text7": {
+					"type": "text",
+					"top": 40,
+					"left": 60,
+					"width": 400,
+					"height": 27,
+					"fontFamily": "Arial",
+					"fontSize": 24,
+					"text": "Step 3 - Enter Bank Branches Information"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 80,
+					"left": 60,
+					"width": 400,
+					"height": 75,
+					"text": "You will need to create all the branches that you hold an account with. \rYou also need to create a sub-Cash and sub-Cheq Account. These are linked to the parent Cash Account"
+				},
+				"Button Grid2": {
+					"type": "pictureButton",
+					"top": 170,
+					"left": 70,
+					"width": 70,
+					"height": 70,
+					"dataSource": "Button Grid1",
+					"picture": "/RESOURCES/Images/library/_Branches.png",
+					"loopBackToFirstFrame": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Button Grid2.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Button5": {
+					"type": "button",
+					"top": 190,
+					"left": 190,
+					"width": 120,
+					"height": 20,
+					"dataSource": "Button3",
+					"text": "Create Cash Branch",
+					"method": "ObjectMethods/Button5.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 190,
+					"left": 320,
+					"width": 120,
+					"height": 20,
+					"dataSource": "Button3",
+					"text": "Create Cheque Account",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Line6": {
+					"type": "line",
+					"top": 170,
+					"left": 240,
+					"width": 40,
+					"height": 20,
+					"stroke": "#AAAAAA",
+					"strokeWidth": 2,
+					"startPoint": "bottomLeft"
+				},
+				"Line7": {
+					"type": "line",
+					"top": 170,
+					"left": 340,
+					"width": 40,
+					"height": 20,
+					"stroke": "#AAAAAA",
+					"strokeWidth": 2
+				},
+				"Text22": {
+					"type": "text",
+					"top": 160,
+					"left": 240,
+					"width": 150,
+					"height": 15,
+					"fill": "#DDDDDD",
+					"textAlign": "center",
+					"borderStyle": "solid",
+					"text": "Main Cash Account"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text9": {
+					"type": "text",
+					"top": 40,
+					"left": 60,
+					"width": 400,
+					"height": 27,
+					"fontFamily": "Arial",
+					"fontSize": 24,
+					"text": "Step 4 - Define your Accounts"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 80,
+					"left": 60,
+					"width": 400,
+					"height": 75,
+					"text": "Now you need to define all the accounts (both chequing/savings) that are associated with each branch. Remember that each account can keep a single currency. "
+				},
+				"Button Grid3": {
+					"type": "pictureButton",
+					"top": 170,
+					"left": 70,
+					"width": 70,
+					"height": 70,
+					"dataSource": "Button Grid1",
+					"picture": "/RESOURCES/Images/library/_CashRegisters.png",
+					"loopBackToFirstFrame": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Button Grid3.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text11": {
+					"type": "text",
+					"top": 40,
+					"left": 60,
+					"width": 400,
+					"height": 27,
+					"fontFamily": "Arial",
+					"fontSize": 24,
+					"text": "Step 5 - Add Your Currencies"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 80,
+					"left": 60,
+					"width": 400,
+					"height": 75,
+					"text": "In this step, you should introduce all the currencies that you deal with in your company. All currencies have a 3 letter symbol that is a standard way to refer to them. For example Canadian Dollar is referred to by the symbol CAD."
+				},
+				"Button Grid4": {
+					"type": "pictureButton",
+					"top": 170,
+					"left": 70,
+					"width": 70,
+					"height": 70,
+					"dataSource": "Button Grid1",
+					"picture": "/RESOURCES/Images/library/_currencies.png",
+					"loopBackToFirstFrame": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Button Grid4.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text13": {
+					"type": "text",
+					"top": 40,
+					"left": 60,
+					"width": 400,
+					"height": 27,
+					"fontFamily": "Arial",
+					"fontSize": 24,
+					"text": "Step 6 - Add your Customers Information"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 80,
+					"left": 60,
+					"width": 400,
+					"height": 75,
+					"text": "You need to have at least one customer defined in the system. Remember to add a generic (walk-in) customer. Customer IDs are created automatically."
+				},
+				"Button Grid5": {
+					"type": "pictureButton",
+					"top": 170,
+					"left": 70,
+					"width": 70,
+					"height": 70,
+					"dataSource": "Button Grid1",
+					"picture": "/RESOURCES/Images/library/_Customers.png",
+					"loopBackToFirstFrame": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Button Grid5.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text15": {
+					"type": "text",
+					"top": 40,
+					"left": 60,
+					"width": 400,
+					"height": 27,
+					"fontFamily": "Arial",
+					"fontSize": 24,
+					"text": "Congratulations!"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 80,
+					"left": 60,
+					"width": 400,
+					"height": 105,
+					"text": "Your basic setup is done. Now you can enter a new customer invoice. Basically From this point on you will only use the following modules:\r1 - Customers : for adding a new customer\r2 - Invoices : To add a new invoice for an exchange transaction\r3 - Cheque/Cash Register : To record a cheque / cash transaction\r4 - Transfer Funds : To transfer funds between your accounts\r"
+				},
+				"Button Grid6": {
+					"type": "pictureButton",
+					"top": 200,
+					"left": 100,
+					"width": 40,
+					"height": 40,
+					"dataSource": "Button Grid1",
+					"picture": "/RESOURCES/Images/library/_Customers.png",
+					"loopBackToFirstFrame": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Button Grid6.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Button Grid7": {
+					"type": "pictureButton",
+					"top": 200,
+					"left": 180,
+					"width": 40,
+					"height": 40,
+					"dataSource": "Button Grid1",
+					"picture": "/RESOURCES/Images/library/_Invoices.png",
+					"loopBackToFirstFrame": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Button Grid7.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Button Grid8": {
+					"type": "pictureButton",
+					"top": 200,
+					"left": 260,
+					"width": 40,
+					"height": 40,
+					"dataSource": "Button Grid1",
+					"picture": "/RESOURCES/Images/library/_Registers.png",
+					"loopBackToFirstFrame": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Button Grid8.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Button Grid9": {
+					"type": "pictureButton",
+					"top": 200,
+					"left": 350,
+					"width": 40,
+					"height": 40,
+					"dataSource": "Button Grid1",
+					"picture": "/RESOURCES/Images/library/_TransferTemplates.png",
+					"loopBackToFirstFrame": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Button Grid9.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text17": {
+					"type": "text",
+					"top": 240,
+					"left": 80,
+					"width": 80,
+					"height": 15,
+					"textAlign": "center",
+					"text": "Customers"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 240,
+					"left": 160,
+					"width": 80,
+					"height": 15,
+					"textAlign": "center",
+					"text": "Invoices"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 240,
+					"left": 240,
+					"width": 80,
+					"height": 15,
+					"textAlign": "center",
+					"text": "Registers"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 240,
+					"left": 330,
+					"width": 80,
+					"height": 15,
+					"textAlign": "center",
+					"text": "Transfers"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

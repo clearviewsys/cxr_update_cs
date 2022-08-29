@@ -1,0 +1,236 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 5,
+	"bottomMargin": 5,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Variable2": {
+					"type": "input",
+					"top": 10,
+					"left": 60,
+					"width": 360,
+					"height": 16,
+					"dataSource": "vFormTitle",
+					"stroke": "#9C0000",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 10,
+					"left": 9,
+					"width": 40,
+					"height": 40,
+					"dataSource": "vIcon",
+					"dataSourceTypeHint": "picture",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Picture362": {
+					"type": "picture",
+					"top": 29,
+					"left": 90,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BNextRec.png"
+				},
+				"Picture363": {
+					"type": "picture",
+					"top": 29,
+					"left": 105,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BLastRec.png"
+				},
+				"Picture364": {
+					"type": "picture",
+					"top": 29,
+					"left": 60,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BFirstRec.png"
+				},
+				"Picture361": {
+					"type": "picture",
+					"top": 29,
+					"left": 75,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BPrevRec.png"
+				},
+				"b_first": {
+					"type": "button",
+					"top": 29,
+					"left": 60,
+					"width": 16,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_first.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_next": {
+					"type": "button",
+					"top": 29,
+					"left": 90,
+					"width": 16,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_next.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_previous": {
+					"type": "button",
+					"top": 29,
+					"left": 75,
+					"width": 16,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_previous.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_last": {
+					"type": "button",
+					"top": 29,
+					"left": 105,
+					"width": 16,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_last.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable4": {
+					"type": "input",
+					"top": 31,
+					"left": 123,
+					"width": 69,
+					"height": 13,
+					"dataSource": "vRecNum",
+					"stroke": "#666666",
+					"textAlign": "right",
+					"fontFamily": "Arial",
+					"fontSize": 10,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 48,
+					"left": 7,
+					"width": 32,
+					"height": 13,
+					"shortcutKey": "w",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/b_cancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"TransLevelInfo": {
+					"type": "input",
+					"top": 48,
+					"left": 60,
+					"width": 167,
+					"height": 13,
+					"stroke": "#AAAAAA",
+					"class": "Control_Small",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/TransLevelInfo.4dm",
+					"events": [
+						"onLoad"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

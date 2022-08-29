@@ -1,0 +1,1124 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 0,
+	"markerHeader": 15,
+	"markerBody": 735,
+	"markerBreak": 735,
+	"markerFooter": 735,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Line": {
+					"type": "line",
+					"top": 104,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line10": {
+					"type": "line",
+					"top": 124,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line11": {
+					"type": "line",
+					"top": 144,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line12": {
+					"type": "line",
+					"top": 164,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line13": {
+					"type": "line",
+					"top": 184,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line14": {
+					"type": "line",
+					"top": 204,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line15": {
+					"type": "line",
+					"top": 224,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line16": {
+					"type": "line",
+					"top": 244,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line17": {
+					"type": "line",
+					"top": 264,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line18": {
+					"type": "line",
+					"top": 284,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line19": {
+					"type": "line",
+					"top": 304,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line20": {
+					"type": "line",
+					"top": 324,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line21": {
+					"type": "line",
+					"top": 344,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line22": {
+					"type": "line",
+					"top": 364,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line23": {
+					"type": "line",
+					"top": 384,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line25": {
+					"type": "line",
+					"top": 384,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line26": {
+					"type": "line",
+					"top": 404,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line27": {
+					"type": "line",
+					"top": 424,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line28": {
+					"type": "line",
+					"top": 444,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line29": {
+					"type": "line",
+					"top": 504,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line30": {
+					"type": "line",
+					"top": 524,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line31": {
+					"type": "line",
+					"top": 544,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line32": {
+					"type": "line",
+					"top": 564,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line33": {
+					"type": "line",
+					"top": 584,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line34": {
+					"type": "line",
+					"top": 604,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line35": {
+					"type": "line",
+					"top": 624,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line36": {
+					"type": "line",
+					"top": 644,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line37": {
+					"type": "line",
+					"top": 664,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line38": {
+					"type": "line",
+					"top": 684,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line39": {
+					"type": "line",
+					"top": 704,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line40": {
+					"type": "line",
+					"top": 724,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line41": {
+					"type": "line",
+					"top": 744,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line4": {
+					"type": "line",
+					"top": 4,
+					"left": 589,
+					"height": 773,
+					"visibility": "hidden",
+					"stroke": "#AAAAAA"
+				},
+				"l_title": {
+					"type": "text",
+					"top": 27,
+					"left": 56,
+					"width": 342,
+					"height": 25,
+					"fontFamily": "Segoe UI",
+					"fontSize": 20,
+					"fontWeight": "bold",
+					"text": "Customer KYC Form"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 74,
+					"left": 56,
+					"width": 533,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"class": "Titles_Small",
+					"textAlign": "center",
+					"text": "Customer Information"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 171,
+					"left": 56,
+					"width": 533,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"class": "Titles_Small",
+					"textAlign": "center",
+					"text": "Contact Info"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 349,
+					"left": 56,
+					"width": 533,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"class": "Titles_Small",
+					"textAlign": "center",
+					"text": "KYC Information"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 503,
+					"left": 56,
+					"width": 533,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"class": "Titles_Small",
+					"textAlign": "center",
+					"text": "Client Signature"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 624,
+					"left": 56,
+					"width": 533,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"class": "Titles_Small",
+					"textAlign": "center",
+					"text": "Reserved for internal use"
+				},
+				"Field11": {
+					"type": "input",
+					"top": 56,
+					"left": 56,
+					"width": 114,
+					"height": 15,
+					"dataSource": "[Customers:3]CustomerID:1",
+					"class": "Fields",
+					"showSelection": true,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field": {
+					"type": "input",
+					"top": 93,
+					"left": 141,
+					"width": 448,
+					"height": 16,
+					"dataSource": "[Customers:3]FullName:40",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 115,
+					"left": 141,
+					"width": 21,
+					"height": 13,
+					"dataSource": "[Customers:3]Gender:120",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 115,
+					"left": 313,
+					"width": 24,
+					"height": 13,
+					"dataSource": "[Customers:3]CountryOfBirthCode:18",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 115,
+					"left": 497,
+					"width": 92,
+					"height": 13,
+					"dataSource": "[Customers:3]PictureID_Type:70",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 133,
+					"left": 141,
+					"width": 87,
+					"height": 13,
+					"dataSource": "[Customers:3]DOB:5",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 133,
+					"left": 313,
+					"width": 92,
+					"height": 13,
+					"dataSource": "[Customers:3]PictureID_Number:69",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 133,
+					"left": 497,
+					"width": 92,
+					"height": 13,
+					"dataSource": "[Customers:3]PictureID_Authority:116",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 151,
+					"left": 141,
+					"width": 87,
+					"height": 13,
+					"dataSource": "[Customers:3]PictureID_IssueDate:16",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field8": {
+					"type": "input",
+					"top": 151,
+					"left": 313,
+					"width": 92,
+					"height": 13,
+					"dataSource": "[Customers:3]PictureID_ExpiryDate:71",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field10": {
+					"type": "input",
+					"top": 192,
+					"left": 141,
+					"width": 304,
+					"height": 13,
+					"dataSource": "[Customers:3]Address:7",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field15": {
+					"type": "input",
+					"top": 209,
+					"left": 141,
+					"width": 127,
+					"height": 13,
+					"dataSource": "[Customers:3]City:8",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field22": {
+					"type": "input",
+					"top": 209,
+					"left": 271,
+					"width": 92,
+					"height": 13,
+					"dataSource": "[Customers:3]Province:9",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field25": {
+					"type": "input",
+					"top": 209,
+					"left": 366,
+					"width": 55,
+					"height": 13,
+					"dataSource": "[Customers:3]PostalCode:10",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field9": {
+					"type": "input",
+					"top": 209,
+					"left": 424,
+					"width": 21,
+					"height": 13,
+					"dataSource": "[Customers:3]CountryCode:113",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field12": {
+					"type": "input",
+					"top": 227,
+					"left": 141,
+					"width": 222,
+					"height": 13,
+					"dataSource": "[Customers:3]Email:17",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field18": {
+					"type": "input",
+					"top": 251,
+					"left": 141,
+					"width": 87,
+					"height": 13,
+					"dataSource": "[Customers:3]PictureID_IssueDate:16",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field17": {
+					"type": "input",
+					"top": 250,
+					"left": 496,
+					"width": 92,
+					"height": 13,
+					"dataSource": "[Customers:3]WorkTel:12",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field13": {
+					"type": "input",
+					"top": 271,
+					"left": 141,
+					"width": 87,
+					"height": 13,
+					"dataSource": "[Customers:3]CellPhone:13",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field19": {
+					"type": "input",
+					"top": 270,
+					"left": 313,
+					"width": 87,
+					"height": 13,
+					"dataSource": "[Customers:3]Occupation:21",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field21": {
+					"type": "input",
+					"top": 269,
+					"left": 495,
+					"width": 94,
+					"height": 13,
+					"dataSource": "[Customers:3]JobTitle:23",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field20": {
+					"type": "input",
+					"top": 330,
+					"left": 313,
+					"width": 87,
+					"height": 13,
+					"dataSource": "[Customers:3]CompanyName:42",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"PIN": {
+					"type": "input",
+					"top": 369,
+					"left": 326,
+					"width": 218,
+					"height": 16,
+					"dataSource": "[Customers:3]AML_NatureofBusRelationship:39",
+					"stroke": "#000000",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"POT_Cash": {
+					"type": "input",
+					"top": 389,
+					"left": 326,
+					"width": 218,
+					"height": 16,
+					"dataSource": "[Customers:3]AML_POT:45",
+					"stroke": "#000000",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"POT_EFT": {
+					"type": "input",
+					"top": 409,
+					"left": 326,
+					"width": 218,
+					"height": 16,
+					"dataSource": "[Customers:3]AML_POT_EFT:105",
+					"stroke": "#000000",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"SOF": {
+					"type": "input",
+					"top": 429,
+					"left": 326,
+					"width": 218,
+					"height": 16,
+					"dataSource": "[Customers:3]AML_SOF_SOW:38",
+					"stroke": "#000000",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 94,
+					"left": 56,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Full Name"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 115,
+					"left": 56,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Gender"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 115,
+					"left": 233,
+					"width": 73,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Nationality"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 133,
+					"left": 56,
+					"width": 80,
+					"height": 16,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Date of birth"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 133,
+					"left": 233,
+					"width": 118,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Picture ID No"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 115,
+					"left": 411,
+					"width": 85,
+					"height": 16,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Picture ID Type"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 133,
+					"left": 411,
+					"width": 85,
+					"height": 16,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Issuing Authority"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 151,
+					"left": 56,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Issue Date"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 151,
+					"left": 233,
+					"width": 118,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Expiry Date"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 191,
+					"left": 56,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Address"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 227,
+					"left": 56,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "email"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 270,
+					"left": 55,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "mobile"
+				},
+				"Text25": {
+					"type": "text",
+					"top": 249,
+					"left": 411,
+					"width": 83,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Work Phone"
+				},
+				"l_jobTitle": {
+					"type": "text",
+					"top": 268,
+					"left": 410,
+					"width": 84,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Job Title"
+				},
+				"Text27": {
+					"type": "text",
+					"top": 330,
+					"left": 411,
+					"width": 100,
+					"height": 16,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "City of Work"
+				},
+				"Text31": {
+					"type": "text",
+					"top": 250,
+					"left": 56,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Main Phone"
+				},
+				"Text32": {
+					"type": "text",
+					"top": 270,
+					"left": 233,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Occupation"
+				},
+				"Text33": {
+					"type": "text",
+					"top": 330,
+					"left": 233,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Company"
+				},
+				"Text37": {
+					"type": "text",
+					"top": 547,
+					"left": 56,
+					"width": 84,
+					"height": 16,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Yes my name is: "
+				},
+				"Text38": {
+					"type": "text",
+					"top": 571,
+					"left": 56,
+					"width": 440,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Authentication that all information contained in this form is true and accurate and must be signed"
+				},
+				"Text39": {
+					"type": "text",
+					"top": 651,
+					"left": 56,
+					"width": 84,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Reference number"
+				},
+				"Text40": {
+					"type": "text",
+					"top": 671,
+					"left": 56,
+					"width": 256,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "The necessary documents have been received"
+				},
+				"Text41": {
+					"type": "text",
+					"top": 652,
+					"left": 253,
+					"width": 84,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Employee Name"
+				},
+				"Text42": {
+					"type": "text",
+					"top": 651,
+					"left": 410,
+					"width": 84,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Signature"
+				},
+				"Text43": {
+					"type": "text",
+					"top": 669,
+					"left": 410,
+					"width": 84,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Signature"
+				},
+				"Text44": {
+					"type": "text",
+					"top": 671,
+					"left": 253,
+					"width": 84,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Manager Name"
+				},
+				"Line42": {
+					"type": "line",
+					"top": 663,
+					"left": 135,
+					"width": 98,
+					"strokeWidth": 0.1
+				},
+				"Line43": {
+					"type": "line",
+					"top": 663,
+					"left": 496,
+					"width": 93,
+					"strokeWidth": 0.1
+				},
+				"Line44": {
+					"type": "line",
+					"top": 684,
+					"left": 497,
+					"width": 93,
+					"strokeWidth": 0.1
+				},
+				"Line45": {
+					"type": "line",
+					"top": 559,
+					"left": 127,
+					"width": 462,
+					"strokeWidth": 0.1
+				},
+				"Line46": {
+					"type": "line",
+					"top": 583,
+					"left": 456,
+					"width": 133,
+					"strokeWidth": 0.1
+				},
+				"l_POT3": {
+					"type": "text",
+					"top": 389,
+					"left": 102,
+					"width": 220,
+					"height": 15,
+					"fill": "automatic",
+					"textAlign": "right",
+					"text": "Purpose of Transaction (General)"
+				},
+				"l_SOF": {
+					"type": "text",
+					"top": 429,
+					"left": 102,
+					"width": 220,
+					"height": 15,
+					"fill": "automatic",
+					"textAlign": "right",
+					"text": "Source of Funds/Wealth"
+				},
+				"l_POT2": {
+					"type": "text",
+					"top": 410,
+					"left": 102,
+					"width": 220,
+					"height": 15,
+					"fill": "automatic",
+					"textAlign": "right",
+					"text": "Purpose of Transaction (EFT)"
+				},
+				"l_POT1": {
+					"type": "text",
+					"top": 369,
+					"left": 22,
+					"width": 300,
+					"height": 15,
+					"fill": "automatic",
+					"textAlign": "right",
+					"text": "Purpose of of Business Relationship (PIN)"
+				}
+			},
+			"entryOrder": [
+				"Field11",
+				"Field",
+				"Field1",
+				"Field2",
+				"Field3",
+				"Field4",
+				"Field5",
+				"Field6",
+				"Field7",
+				"Field8",
+				"Field10",
+				"Field15",
+				"Field22",
+				"Field25",
+				"Field9",
+				"Field12",
+				"Field18",
+				"Field17",
+				"Field13",
+				"Field19",
+				"Field21",
+				"Field20",
+				"PIN",
+				"POT_Cash",
+				"POT_EFT",
+				"SOF"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"Guides": {
+				"selectable": false,
+				"objects": [
+					"Line",
+					"Line10",
+					"Line11",
+					"Line12",
+					"Line13",
+					"Line14",
+					"Line15",
+					"Line16",
+					"Line17",
+					"Line18",
+					"Line19",
+					"Line20",
+					"Line21",
+					"Line22",
+					"Line23",
+					"Line25",
+					"Line26",
+					"Line27",
+					"Line28",
+					"Line29",
+					"Line30",
+					"Line31",
+					"Line32",
+					"Line33",
+					"Line34",
+					"Line35",
+					"Line36",
+					"Line37",
+					"Line38",
+					"Line39",
+					"Line40",
+					"Line41",
+					"Line4"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,290 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"mywa": {
+					"type": "webArea",
+					"top": 12,
+					"left": 7,
+					"width": 915,
+					"height": 665,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"webEngine": "embedded",
+					"contextMenu": "none",
+					"method": "ObjectMethods/mywa.4dm",
+					"events": [
+						"onEndURLLoading",
+						"onWindowOpeningDenied"
+					]
+				},
+				"msgArea": {
+					"type": "input",
+					"top": 296,
+					"left": 22,
+					"width": 892,
+					"height": 270,
+					"dataSource": "Form:C1466.msg",
+					"stroke": "#DC143C",
+					"fontFamily": "Tahoma",
+					"fontSize": 24,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"btndisplayform4": {
+					"type": "button",
+					"top": 22,
+					"left": 589,
+					"width": 97,
+					"height": 31,
+					"text": "get cookies",
+					"focusable": false,
+					"method": "ObjectMethods/btndisplayform4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btndisplayform5": {
+					"type": "button",
+					"top": 22,
+					"left": 729,
+					"width": 97,
+					"height": 31,
+					"text": "set cookies",
+					"focusable": false,
+					"method": "ObjectMethods/btndisplayform5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btndisplayform3": {
+					"type": "button",
+					"top": 22,
+					"left": 838,
+					"width": 97,
+					"height": 31,
+					"text": "get results",
+					"focusable": false,
+					"method": "ObjectMethods/btndisplayform3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnlogin": {
+					"type": "button",
+					"top": 585,
+					"left": 48,
+					"width": 97,
+					"height": 31,
+					"sizingY": "move",
+					"text": "login page",
+					"focusable": false,
+					"method": "ObjectMethods/btnlogin.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btndisplayform1": {
+					"type": "button",
+					"top": 585,
+					"left": 574,
+					"width": 97,
+					"height": 31,
+					"sizingY": "move",
+					"text": "submit form",
+					"focusable": false,
+					"method": "ObjectMethods/btndisplayform1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btndisplayform2": {
+					"type": "button",
+					"top": 585,
+					"left": 698,
+					"width": 97,
+					"height": 31,
+					"sizingY": "move",
+					"text": "after submit",
+					"focusable": false,
+					"method": "ObjectMethods/btndisplayform2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btndisplayform6": {
+					"type": "button",
+					"top": 585,
+					"left": 441,
+					"width": 97,
+					"height": 31,
+					"sizingY": "move",
+					"text": "display form",
+					"focusable": false,
+					"method": "ObjectMethods/btndisplayform6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnfillcredentials": {
+					"type": "button",
+					"top": 585,
+					"left": 172,
+					"width": 97,
+					"height": 31,
+					"sizingY": "move",
+					"text": "fill credentials",
+					"focusable": false,
+					"method": "ObjectMethods/btnfillcredentials.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnsubmitloginform": {
+					"type": "button",
+					"top": 585,
+					"left": 311,
+					"width": 97,
+					"height": 31,
+					"sizingY": "move",
+					"text": "submit login",
+					"focusable": false,
+					"method": "ObjectMethods/btnsubmitloginform.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnlogin1": {
+					"type": "button",
+					"top": 585,
+					"left": 48,
+					"width": 97,
+					"height": 31,
+					"sizingY": "move",
+					"text": "login page",
+					"focusable": false,
+					"method": "ObjectMethods/btnlogin1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btndisplayform7": {
+					"type": "button",
+					"top": 585,
+					"left": 574,
+					"width": 97,
+					"height": 31,
+					"sizingY": "move",
+					"text": "submit form",
+					"focusable": false,
+					"method": "ObjectMethods/btndisplayform7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btndisplayform8": {
+					"type": "button",
+					"top": 585,
+					"left": 698,
+					"width": 97,
+					"height": 31,
+					"sizingY": "move",
+					"text": "after submit",
+					"focusable": false,
+					"method": "ObjectMethods/btndisplayform8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btndisplayform9": {
+					"type": "button",
+					"top": 585,
+					"left": 441,
+					"width": 97,
+					"height": 31,
+					"sizingY": "move",
+					"text": "display form",
+					"focusable": false,
+					"method": "ObjectMethods/btndisplayform9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnfillcredentials1": {
+					"type": "button",
+					"top": 585,
+					"left": 172,
+					"width": 97,
+					"height": 31,
+					"sizingY": "move",
+					"text": "fill credentials",
+					"focusable": false,
+					"method": "ObjectMethods/btnfillcredentials1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnsubmitloginform1": {
+					"type": "button",
+					"top": 585,
+					"left": 311,
+					"width": 97,
+					"height": 31,
+					"sizingY": "move",
+					"text": "submit login",
+					"focusable": false,
+					"method": "ObjectMethods/btnsubmitloginform1.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	]
+}

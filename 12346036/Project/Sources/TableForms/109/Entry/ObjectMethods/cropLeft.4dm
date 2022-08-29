@@ -1,0 +1,3 @@
+
+
+cropImageFromLeft(->docPhoto2)

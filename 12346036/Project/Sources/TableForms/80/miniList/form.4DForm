@@ -1,0 +1,412 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 4,
+	"bottomMargin": 4,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Round Rectangle2": {
+					"type": "rectangle",
+					"top": 25,
+					"left": 273,
+					"width": 31,
+					"height": 16,
+					"fill": "#B1B4DC",
+					"stroke": "transparent",
+					"borderRadius": 5
+				},
+				"Round Rectangle1": {
+					"type": "rectangle",
+					"top": 6,
+					"left": 273,
+					"width": 31,
+					"height": 16,
+					"fill": "#B1B4DC",
+					"stroke": "transparent",
+					"borderRadius": 5
+				},
+				"List Box1": {
+					"type": "listbox",
+					"top": 54,
+					"left": 4,
+					"width": 301,
+					"height": 125,
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "lbMiniCalEvent",
+					"movableRows": false,
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"stroke": "#2E4C80",
+					"alternateFill": "#CED1FF",
+					"fontFamily": "Tahoma",
+					"fontSize": 10,
+					"method": "ObjectMethods/List Box1.4dm",
+					"events": [
+						"onDoubleClick"
+					],
+					"columns": [
+						{
+							"name": "Column3",
+							"dataSource": "arrEventID",
+							"width": 2,
+							"minWidth": 2,
+							"maxWidth": 32000,
+							"resizable": false,
+							"stroke": "#2E4C80",
+							"alternateFill": "#CED1FF",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "ID",
+								"dataSource": "Header3",
+								"stroke": "#2E4C80",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#2E4C80",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "arrTask",
+							"width": 19,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#2E4C80",
+							"alternateFill": "#CED1FF",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"dataSource": "Header4",
+								"stroke": "#2E4C80",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#2E4C80",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "arrEvent",
+							"width": 176,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#2E4C80",
+							"alternateFill": "#CED1FF",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Event",
+								"dataSource": "Header1",
+								"stroke": "#2E4C80",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#2E4C80",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrTime",
+							"width": 89,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#2E4C80",
+							"alternateFill": "#CED1FF",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Time Slot",
+								"dataSource": "Header2",
+								"stroke": "#2E4C80",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#2E4C80",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						}
+					]
+				},
+				"Picture Button1": {
+					"type": "pictureButton",
+					"top": 6,
+					"left": 4,
+					"width": 18,
+					"height": 18,
+					"dataSource": "Picture Button1",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/calendar.png",
+					"switchContinuously": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"b_calendar": {
+					"type": "button",
+					"top": 6,
+					"left": 5,
+					"width": 17,
+					"height": 18,
+					"display": false,
+					"method": "ObjectMethods/b_calendar.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_today": {
+					"type": "button",
+					"top": 7,
+					"left": 44,
+					"width": 44,
+					"height": 17,
+					"class": "Fields_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Today",
+					"style": "bevel",
+					"method": "ObjectMethods/b_today.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bIncreaseDate": {
+					"type": "pictureButton",
+					"top": 7,
+					"left": 89,
+					"width": 16,
+					"height": 16,
+					"dataSource": "vIncreaseDate",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyPlus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bIncreaseDate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bDecrDate": {
+					"type": "pictureButton",
+					"top": 7,
+					"left": 27,
+					"width": 16,
+					"height": 16,
+					"dataSource": "vDecrDate",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyMinus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bDecrDate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 28,
+					"left": 4,
+					"width": 240,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "vEventCalendarDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Label",
+					"fontWeight": "bold",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dateFormat": "systemLong",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 8,
+					"left": 164,
+					"width": 107,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"textAlign": "right",
+					"text": "Same day "
+				},
+				"Field2": {
+					"type": "input",
+					"top": 8,
+					"left": 276,
+					"width": 24,
+					"height": 12,
+					"dataSource": "vTodaysEvents",
+					"dataSourceTypeHint": "number",
+					"stroke": "#62647A",
+					"textAlign": "center",
+					"fontFamily": "Tahoma",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 28,
+					"left": 163,
+					"width": 107,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"textAlign": "right",
+					"text": "Next day"
+				},
+				"Field3": {
+					"type": "input",
+					"top": 27,
+					"left": 276,
+					"width": 24,
+					"height": 12,
+					"dataSource": "vTomorrowsEvents",
+					"dataSourceTypeHint": "number",
+					"stroke": "#62647A",
+					"textAlign": "center",
+					"fontFamily": "Tahoma",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_newCalendarEvent": {
+					"type": "pictureButton",
+					"top": 182,
+					"left": 4,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyPlus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/b_newCalendarEvent.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group1": [
+				"Picture Button1",
+				"b_calendar"
+			]
+		},
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"bIncreaseDate",
+					"bDecrDate",
+					"b_newCalendarEvent"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

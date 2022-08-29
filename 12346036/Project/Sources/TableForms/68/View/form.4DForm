@@ -1,0 +1,406 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "ViewToolbar2",
+	"inheritedFormTable": 7,
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 463,
+	"markerBreak": 463,
+	"markerFooter": 473,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"bCancel": {
+					"type": "button",
+					"top": 431,
+					"left": 473,
+					"width": 90,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Cancel"
+					},
+					"action": "cancel",
+					"text": "Close",
+					"class": "Control_Large_",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"top": 67,
+					"left": 20,
+					"width": 114,
+					"height": 15,
+					"class": "Label",
+					"text": "Control Box ID"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 86,
+					"left": 20,
+					"width": 114,
+					"height": 15,
+					"class": "Label",
+					"text": "Date"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 107,
+					"left": 20,
+					"width": 114,
+					"height": 15,
+					"class": "Label",
+					"text": "Invoice ID"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 128,
+					"left": 20,
+					"width": 114,
+					"height": 15,
+					"class": "Label",
+					"text": "InvoiceSerial"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 179,
+					"left": 20,
+					"width": 114,
+					"height": 15,
+					"class": "Label",
+					"text": "Input String"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 259,
+					"left": 20,
+					"width": 114,
+					"height": 15,
+					"class": "Label",
+					"text": "Output String"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 403,
+					"left": 20,
+					"width": 114,
+					"height": 15,
+					"sizingY": "move",
+					"class": "Label",
+					"text": "Error String"
+				},
+				"ControlBoxID": {
+					"type": "input",
+					"top": 67,
+					"left": 140,
+					"width": 172,
+					"height": 15,
+					"dataSource": "[ControlBoxLog:68]ControlBoxID:1",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Date": {
+					"type": "input",
+					"top": 86,
+					"left": 140,
+					"width": 96,
+					"height": 15,
+					"dataSource": "[ControlBoxLog:68]Date:2",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Time": {
+					"type": "input",
+					"top": 86,
+					"left": 238,
+					"width": 62,
+					"height": 15,
+					"dataSource": "[ControlBoxLog:68]Time:3",
+					"dataSourceTypeHint": "time",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"InvoiceID": {
+					"type": "input",
+					"top": 107,
+					"left": 140,
+					"width": 160,
+					"height": 15,
+					"dataSource": "[ControlBoxLog:68]InvoiceID:7",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#C5FFC0",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"InvoiceSerial": {
+					"type": "input",
+					"top": 128,
+					"left": 140,
+					"width": 160,
+					"height": 15,
+					"dataSource": "[ControlBoxLog:68]InvoiceSerial:8",
+					"dataSourceTypeHint": "integer",
+					"class": "Fields",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"inputString": {
+					"type": "input",
+					"top": 179,
+					"left": 140,
+					"width": 408,
+					"height": 75,
+					"sizingX": "grow",
+					"dataSource": "[ControlBoxLog:68]inputString:4",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "dotted",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"outputString": {
+					"type": "input",
+					"top": 259,
+					"left": 140,
+					"width": 408,
+					"height": 135,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[ControlBoxLog:68]outputString:5",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "dotted",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"errorString": {
+					"type": "input",
+					"top": 403,
+					"left": 140,
+					"width": 408,
+					"height": 15,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"dataSource": "[ControlBoxLog:68]errorString:6",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"spellcheck": true,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isSuccessful": {
+					"type": "checkbox",
+					"top": 142,
+					"left": 140,
+					"width": 172,
+					"height": 30,
+					"dataSource": "[ControlBoxLog:68]isSuccessful:9",
+					"text": "SUCCESSFUL",
+					"stroke": "#000000",
+					"class": "Label",
+					"fontWeight": "bold",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_InvoiceID": {
+					"type": "button",
+					"top": 104,
+					"left": 140,
+					"width": 160,
+					"height": 20,
+					"focusable": false,
+					"style": "custom",
+					"borderStyle": "raised",
+					"method": "ObjectMethods/b_InvoiceID.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"bCancel"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

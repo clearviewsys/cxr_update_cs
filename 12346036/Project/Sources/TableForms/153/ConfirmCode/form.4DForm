@@ -1,0 +1,236 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"width": 600,
+	"height": 500,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onOutsideCall"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Accept": {
+					"type": "button",
+					"top": 559,
+					"left": 261,
+					"width": 133,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Accept",
+					"class": "Control_Large_",
+					"stroke": "#008000",
+					"focusable": false,
+					"method": "ObjectMethods/Accept.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Deny": {
+					"type": "button",
+					"top": 559,
+					"left": 16,
+					"width": 133,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Deny",
+					"class": "Control_Large_",
+					"stroke": "#FF0000",
+					"focusable": false,
+					"method": "ObjectMethods/Deny.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Cancel": {
+					"type": "button",
+					"top": 446,
+					"left": 15,
+					"width": 150,
+					"height": 34,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Cancel",
+					"class": "Control_Large_",
+					"focusable": false,
+					"defaultButton": true,
+					"method": "ObjectMethods/Cancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text22": {
+					"type": "text",
+					"top": 11,
+					"left": 15,
+					"width": 570,
+					"height": 24,
+					"sizingX": "grow",
+					"fill": "#005597",
+					"stroke": "#FFFFFF",
+					"class": "Titles",
+					"textAlign": "center",
+					"text": "Confirmation"
+				},
+				"Confirmed_Reason": {
+					"type": "input",
+					"top": 387,
+					"left": 15,
+					"width": 570,
+					"height": 32,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"class": "Message_Text",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_amount1": {
+					"type": "text",
+					"top": 74,
+					"left": 15,
+					"width": 563,
+					"height": 135,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"class": "Message_Text",
+					"text": "<confirmationMessage>"
+				},
+				"Approve_Color": {
+					"type": "rectangle",
+					"top": 446,
+					"left": 383,
+					"width": 200,
+					"height": 34,
+					"fill": "#00A800",
+					"stroke": "transparent",
+					"borderRadius": 5
+				},
+				"Text": {
+					"type": "text",
+					"top": 451,
+					"left": 383,
+					"width": 200,
+					"height": 24,
+					"stroke": "#FFFFFF",
+					"class": "Titles",
+					"textAlign": "center",
+					"text": "Approve"
+				},
+				"btn_approve": {
+					"type": "button",
+					"top": 446,
+					"left": 383,
+					"width": 200,
+					"height": 31,
+					"display": false,
+					"method": "ObjectMethods/btn_approve.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Deny_Color": {
+					"type": "rectangle",
+					"top": 446,
+					"left": 174,
+					"width": 200,
+					"height": 34,
+					"fill": "#D90000",
+					"stroke": "transparent",
+					"borderRadius": 5
+				},
+				"Text1": {
+					"type": "text",
+					"top": 451,
+					"left": 174,
+					"width": 200,
+					"height": 24,
+					"stroke": "#FFFFFF",
+					"class": "Titles",
+					"textAlign": "center",
+					"text": "Deny"
+				},
+				"btn_deny": {
+					"type": "button",
+					"top": 446,
+					"left": 174,
+					"width": 200,
+					"height": 31,
+					"display": false,
+					"method": "ObjectMethods/btn_deny.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_amount3": {
+					"type": "text",
+					"top": 50,
+					"left": 15,
+					"width": 300,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Requested Details:"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 16,
+					"left": 428,
+					"width": 150,
+					"height": 13,
+					"stroke": "#FFFFFF",
+					"class": "Label_Small",
+					"textAlign": "right",
+					"text": "[<confirmationID>]"
+				},
+				"CONFIRM_Code": {
+					"type": "input",
+					"top": 360,
+					"left": 399,
+					"width": 186,
+					"height": 20,
+					"class": "Fields_Large",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/CONFIRM_Code.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_amount6": {
+					"type": "text",
+					"top": 360,
+					"left": 15,
+					"width": 300,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Enter confirmation code to approve request:"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 287,
+					"left": 17,
+					"width": 568,
+					"height": 60,
+					"text": "You will need to get the confirmation code from a manager to approve this request. Once received enter the code below and click Approve. If you wish to cancel this confirmation request click Cancel. Use the comments box to enter any details provided by the manager or notes you wish to track."
+				}
+			}
+		}
+	]
+}

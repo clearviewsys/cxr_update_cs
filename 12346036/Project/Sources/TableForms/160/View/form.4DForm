@@ -1,0 +1,248 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_View",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Field": {
+					"type": "input",
+					"top": 68,
+					"left": 135,
+					"width": 420,
+					"height": 20,
+					"dataSource": "[Licenses:160]LicenseID:2",
+					"class": "Fields_Large",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 95,
+					"left": 135,
+					"width": 420,
+					"height": 60,
+					"dataSource": "[Licenses:160]Value:3",
+					"class": "Fields_Large",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 162,
+					"left": 135,
+					"width": 197,
+					"height": 20,
+					"dataSource": "[Licenses:160]ExpiryDate:4",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Large",
+					"enterable": false,
+					"dateFormat": "systemLong",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 189,
+					"left": 135,
+					"width": 197,
+					"height": 20,
+					"dataSource": "[Licenses:160]MonthlyHit:5",
+					"class": "Fields_Large",
+					"enterable": false,
+					"entryFilter": "&9",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 216,
+					"left": 135,
+					"width": 197,
+					"height": 20,
+					"dataSource": "[Licenses:160]MaxMonthlyHit:6",
+					"class": "Fields_Large",
+					"enterable": false,
+					"entryFilter": "&9",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 243,
+					"left": 135,
+					"width": 197,
+					"height": 20,
+					"dataSource": "[Licenses:160]TotalHit:7",
+					"class": "Fields_Large",
+					"enterable": false,
+					"entryFilter": "&9",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 270,
+					"left": 135,
+					"width": 197,
+					"height": 20,
+					"dataSource": "[Licenses:160]MaxTotalHit:8",
+					"class": "Fields_Large",
+					"enterable": false,
+					"entryFilter": "&9",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_license": {
+					"type": "text",
+					"top": 68,
+					"left": 19,
+					"width": 110,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": "License"
+				},
+				"l_value": {
+					"type": "text",
+					"top": 95,
+					"left": 19,
+					"width": 110,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": "Value"
+				},
+				"l_expiryDate": {
+					"type": "text",
+					"top": 162,
+					"left": 19,
+					"width": 110,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Expiry Date"
+				},
+				"l_monthlyHit": {
+					"type": "text",
+					"top": 189,
+					"left": 1,
+					"width": 128,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Monthly Hits"
+				},
+				"l_maxMonthly": {
+					"type": "text",
+					"top": 216,
+					"left": -4,
+					"width": 133,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Monthly Hit Limit"
+				},
+				"l_totalHit": {
+					"type": "text",
+					"top": 243,
+					"left": 19,
+					"width": 110,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Total Hits"
+				},
+				"l_maxTotalHits": {
+					"type": "text",
+					"top": 270,
+					"left": 19,
+					"width": 110,
+					"height": 19,
+					"class": "Fields_Large",
+					"textAlign": "right",
+					"text": "Total Hit Limit"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

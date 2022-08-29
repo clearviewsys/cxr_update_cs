@@ -1,0 +1,1 @@
+displayRecordID([Registers:10]InternalTableNumber:17; [Registers:10]InternalRecordID:18)

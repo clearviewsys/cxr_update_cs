@@ -1,0 +1,1 @@
+queryAML_ReportType(OBJECT Get title:C1068(Self:C308->)+"@")

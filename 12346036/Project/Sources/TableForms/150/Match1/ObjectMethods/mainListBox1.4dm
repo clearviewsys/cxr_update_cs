@@ -1,0 +1,1 @@
+handledoubleclickevent(->[Registers:10])

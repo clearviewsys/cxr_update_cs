@@ -1,0 +1,369 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onSelectionChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Variable2": {
+					"type": "input",
+					"top": 7,
+					"left": 10,
+					"width": 277,
+					"height": 16,
+					"dataSource": "vFormTitle",
+					"stroke": "#444444",
+					"class": "Titles_Small",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 9,
+					"left": 291,
+					"width": 74,
+					"height": 13,
+					"dataSource": "vRecNum",
+					"stroke": "#444444",
+					"class": "Tags_Small",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onLoad",
+						"onSelectionChange"
+					]
+				},
+				"importButton": {
+					"type": "button",
+					"top": 32,
+					"left": 6,
+					"width": 41,
+					"height": 35,
+					"dataSource": "bImp",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Import"
+					},
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Import",
+					"icon": "/RESOURCES/Images/library/toolbarSave.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/importButton.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"allButton": {
+					"type": "button",
+					"top": 32,
+					"left": 377,
+					"width": 41,
+					"height": 35,
+					"dataSource": "showAllB",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Show All"
+					},
+					"shortcutKey": "a",
+					"shortcutAccel": true,
+					"shortcutShift": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "All",
+					"icon": "/RESOURCES/Images/library/toolbarSelectAll.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/allButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"printButton": {
+					"type": "button",
+					"top": 32,
+					"left": 418,
+					"width": 41,
+					"height": 35,
+					"dataSource": "bPrint",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Print Selection"
+					},
+					"shortcutKey": "p",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Print",
+					"icon": "/RESOURCES/Images/library/toolbarPrinter.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/printButton.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"deleteButton": {
+					"type": "button",
+					"top": 32,
+					"left": 90,
+					"width": 41,
+					"height": 35,
+					"dataSource": "bDelete",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Delete Selectio"
+					},
+					"shortcutKey": "[Backspace]",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Delete",
+					"icon": "/RESOURCES/Images/library/toolbarDelete.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/deleteButton.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"findButton": {
+					"type": "button",
+					"top": 32,
+					"left": 213,
+					"width": 41,
+					"height": 35,
+					"dataSource": "bFind",
+					"shortcutKey": "f",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Find",
+					"icon": "/RESOURCES/Images/library/toolbarFind.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/findButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"exportButton": {
+					"type": "button",
+					"top": 32,
+					"left": 48,
+					"width": 41,
+					"height": 35,
+					"dataSource": "bExp",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Export"
+					},
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Export",
+					"icon": "/RESOURCES/Images/library/toolbarLoad.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/exportButton.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"newButton": {
+					"type": "button",
+					"top": 32,
+					"left": 131,
+					"width": 41,
+					"height": 35,
+					"dataSource": "bNew",
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "New",
+					"icon": "/RESOURCES/Images/library/toolbarNewRecord (24134).png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/newButton.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"changeButton": {
+					"type": "button",
+					"top": 32,
+					"left": 172,
+					"width": 41,
+					"height": 35,
+					"dataSource": "bChange",
+					"shortcutKey": "m",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Edit",
+					"icon": "/RESOURCES/Images/library/toolbarChange.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/changeButton.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"reportButton": {
+					"type": "button",
+					"top": 32,
+					"left": 295,
+					"width": 41,
+					"height": 35,
+					"dataSource": "bReport",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report"
+					},
+					"shortcutKey": "r",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Report",
+					"icon": "/RESOURCES/Images/library/toolbarReport.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/reportButton.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"sortButton": {
+					"type": "button",
+					"top": 32,
+					"left": 336,
+					"width": 41,
+					"height": 35,
+					"dataSource": "bSort",
+					"shortcutKey": "o",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Sort",
+					"icon": "/RESOURCES/Images/library/toolbarSort.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/sortButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"queryButton": {
+					"type": "button",
+					"top": 32,
+					"left": 254,
+					"width": 41,
+					"height": 35,
+					"dataSource": "bQuery",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Query"
+					},
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "Query",
+					"icon": "/RESOURCES/Images/library/toolbarQuery.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/queryButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 7,
+					"left": 248,
+					"width": 15,
+					"height": 13,
+					"dataSource": "Invisible Button1",
+					"shortcutKey": "w",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}
