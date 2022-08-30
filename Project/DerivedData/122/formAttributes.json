@@ -1,0 +1,12 @@
+{
+	"forms": {
+		"ListBox": {
+			"timeStamp": "2022-08-30T09:21:22Z",
+			"destination": "detailScreen"
+		},
+		"Output": {
+			"timeStamp": "2022-08-30T09:21:22Z",
+			"destination": "detailScreen"
+		}
+	}
+}

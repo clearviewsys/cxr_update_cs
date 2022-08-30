@@ -1,0 +1,16 @@
+{
+	"forms": {
+		"subform": {
+			"timeStamp": "2022-08-30T09:21:23Z",
+			"destination": "detailScreen"
+		},
+		"List": {
+			"timeStamp": "2022-08-30T09:21:23Z",
+			"destination": "listScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-30T09:21:23Z",
+			"destination": "detailScreen"
+		}
+	}
+}
