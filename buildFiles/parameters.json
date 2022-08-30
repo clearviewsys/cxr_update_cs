@@ -2,7 +2,7 @@
   "actionMac": "BUILD_COMPILED_STRUCTURE",
   "actionWin": "BUILD_APP",
   "appName": "CXR7",
-  "build": 12346043,
+  "build": 12346044,
   "version": "7.1.20",
   "buildDestinationFolder": "MyBuild",
   "uploadTo": "ftp://clearviewsys.4d.rs/CXR7/",
