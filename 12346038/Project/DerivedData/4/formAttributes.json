@@ -1,0 +1,68 @@
+{
+	"forms": {
+		"Subform_Entry": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "listScreen"
+		},
+		"HybridViewPic_File": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "detailScreen"
+		},
+		"SF_Listbox_View1": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "detailScreen"
+		},
+		"Entry": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "detailScreen"
+		},
+		"SF_Customers_View": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "detailScreen"
+		},
+		"customerDocsTest2": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "detailScreen"
+		},
+		"Entry_OLD": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "detailScreen"
+		},
+		"print": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "listPrinter"
+		},
+		"EntryFileAttachment": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "detailScreen"
+		},
+		"SF_Invoice_Bkup": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "detailScreen"
+		},
+		"pickPictureFromFile": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "detailScreen"
+		},
+		"customerDocsTest": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "detailScreen"
+		},
+		"SF_Listbox_View": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "detailScreen"
+		},
+		"tinyView": {
+			"timeStamp": "2022-08-30T05:00:33Z",
+			"destination": "detailScreen"
+		}
+	}
+}
