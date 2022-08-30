@@ -1,27 +1,27 @@
 {
 	"forms": {
 		"Subform_CashRegisters": {
-			"timeStamp": "2022-08-30T09:21:22Z",
+			"timeStamp": "2022-08-30T09:38:14Z",
 			"destination": "listScreen"
 		},
 		"Entry": {
-			"timeStamp": "2022-08-30T09:21:22Z",
+			"timeStamp": "2022-08-30T09:38:14Z",
 			"destination": "detailScreen"
 		},
 		"ListBox": {
-			"timeStamp": "2022-08-30T09:21:22Z",
+			"timeStamp": "2022-08-30T09:38:14Z",
 			"destination": "detailScreen"
 		},
 		"print": {
-			"timeStamp": "2022-08-30T09:21:22Z",
+			"timeStamp": "2022-08-30T09:38:14Z",
 			"destination": "listPrinter"
 		},
 		"List": {
-			"timeStamp": "2022-08-30T09:21:22Z",
+			"timeStamp": "2022-08-30T09:38:14Z",
 			"destination": "listScreen"
 		},
 		"View": {
-			"timeStamp": "2022-08-30T09:21:22Z",
+			"timeStamp": "2022-08-30T09:38:14Z",
 			"destination": "detailScreen"
 		}
 	}
