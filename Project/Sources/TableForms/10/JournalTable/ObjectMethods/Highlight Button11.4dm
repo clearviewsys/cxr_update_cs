@@ -1,2 +1,0 @@
-bQueryRecords
-reg_fillRegistersListBox

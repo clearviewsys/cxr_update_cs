@@ -1,1 +1,0 @@
-handlePickNewButton(->[Countries:62]; ->[Countries:62]CountryName:2)

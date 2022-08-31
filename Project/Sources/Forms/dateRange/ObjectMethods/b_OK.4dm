@@ -1,2 +1,0 @@
-C_LONGINT:C283(bOK)
-bOK:=1

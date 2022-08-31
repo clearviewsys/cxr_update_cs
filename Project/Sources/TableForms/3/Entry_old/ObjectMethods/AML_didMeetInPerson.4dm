@@ -1,1 +1,0 @@
-handleTristateCheckBox(Self:C308; ->[Customers:3]AML_didMeetInPerson:30; "Tick to determine whether you met this customer or not!"; "Yes I met this customer in person (Face to Face)"; "No I didn't meet this customer face to face!")

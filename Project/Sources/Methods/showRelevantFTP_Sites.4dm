@@ -1,2 +1,0 @@
-//%attributes = {}
-allRecordsFTP_Sites

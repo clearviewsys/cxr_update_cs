@@ -1,2 +1,0 @@
-//%attributes = {}
-searchTable(->[CSMRelations:89]; ->[CSMRelations:89]CSMRelationID:1; ->[CSMRelations:89]CustomerID1:2; ->[CSMRelations:89]CustomerID2:3; ->[CSMRelations:89]FullName1:4; ->[CSMRelations:89]FullName2:5; ->[CSMRelations:89]relationType:6)

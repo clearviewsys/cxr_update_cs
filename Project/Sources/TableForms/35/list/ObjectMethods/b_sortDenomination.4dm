@@ -1,1 +1,0 @@
-handleSortButton(->[CashInventory:35]DenominationID:3)

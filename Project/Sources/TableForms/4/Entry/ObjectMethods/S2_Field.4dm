@@ -1,1 +1,0 @@
-pickPictureIDTypes(Self:C308)

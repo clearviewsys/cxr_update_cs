@@ -1,1 +1,0 @@
-pickCashRegisters(Self:C308)

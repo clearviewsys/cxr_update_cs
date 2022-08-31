@@ -1,1 +1,0 @@
-pickList_POT(->[eWires:13]PurposeOfTransaction:65; True:C214)

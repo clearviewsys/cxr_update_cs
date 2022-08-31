@@ -1,2 +1,0 @@
-handlePhoneField(Self:C308)
-applyFocusRect

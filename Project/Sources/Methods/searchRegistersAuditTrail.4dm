@@ -1,2 +1,0 @@
-//%attributes = {}
-searchTable(->[RegistersAuditTrail:88]; ->[RegistersAuditTrail:88]AuditTrailID:46; ->[RegistersAuditTrail:88]ActionTrigger:47; ->[RegistersAuditTrail:88]orig_RegisterID:1; ->[RegistersAuditTrail:88]orig_CustomerID:5; ->[RegistersAuditTrail:88]orig_AccountID:6; ->[RegistersAuditTrail:88]orig_InvoiceNumber:12)

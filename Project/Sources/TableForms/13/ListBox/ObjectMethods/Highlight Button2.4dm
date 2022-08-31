@@ -1,2 +1,0 @@
-selectUrgenteWires
-//ewr_filleWiresListBox 

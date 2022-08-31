@@ -1,5 +1,0 @@
-//%attributes = {}
-C_LONGINT:C283(<>LOGOFFPID)
-If (<>LOGOFFPID#0)
-	DELAY PROCESS:C323(<>LOGOFFPID; 0)
-End if 

@@ -1,1 +1,0 @@
-duplicateRecordTable(->[Items:39]; ->[Items:39]ItemID:1; "Item ID")

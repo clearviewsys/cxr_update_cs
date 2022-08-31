@@ -1,1 +1,0 @@
-pickCountry(Self:C308)

@@ -1,3 +1,0 @@
-// validateDB_CodeRevisions
-
-handleSaveButton

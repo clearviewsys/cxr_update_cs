@@ -1,1 +1,0 @@
-K20_displayRecordDetails(Form:C1466.RecordDetails[Form:C1466.smartScan["Search Reference ID"]])

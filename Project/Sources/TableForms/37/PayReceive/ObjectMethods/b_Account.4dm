@@ -1,1 +1,0 @@
-displayCurrentRecord(->[Links:17])

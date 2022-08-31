@@ -1,1 +1,0 @@
-PRINT LABEL:C39([Customers:3]; "Labels")

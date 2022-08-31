@@ -1,3 +1,0 @@
-If (Form event code:C388=On Mouse Enter:K2:33)
-	Form:C1466.statusDetails:="These emails are impossible to validate without sending a real email and waiting for a bounce. The term Catch-all means that the email server tells you that the email is valid, whether it's valid or invalid. If you want to email these addresses, I sug"+"gest you segment them into a catch-all group and know that some of these will most likely bounce."
-End if 

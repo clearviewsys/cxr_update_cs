@@ -1,1 +1,0 @@
-requestDateRangeTable(Current form table:C627; ->[SystemLogs:21]Date:2)

@@ -1,2 +1,0 @@
-requestDateRange
-handleSearchInSummarizer

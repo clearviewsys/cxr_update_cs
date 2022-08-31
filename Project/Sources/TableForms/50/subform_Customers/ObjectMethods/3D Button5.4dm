@@ -1,1 +1,0 @@
-handleSortButton(->[Bookings:50]ourRate:11)

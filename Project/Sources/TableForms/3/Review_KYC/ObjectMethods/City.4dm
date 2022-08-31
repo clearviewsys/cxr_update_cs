@@ -1,2 +1,0 @@
-pickCustomerCity
-applyFocusRect("focusRect2")

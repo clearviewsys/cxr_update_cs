@@ -1,1 +1,0 @@
-handlePickNewButton(Current form table:C627; ->[List_SOF:129]Source:3)

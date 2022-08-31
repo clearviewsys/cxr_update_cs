@@ -1,1 +1,0 @@
-XB_Clear(SYNC_tConfigBag)

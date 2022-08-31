@@ -1,1 +1,0 @@
-openFormWindow(->[CashTransactions:36]; "transfer")

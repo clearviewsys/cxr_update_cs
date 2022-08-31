@@ -1,2 +1,0 @@
-handleEditEntryInInvoice
-relateManyRegistersForInvoice

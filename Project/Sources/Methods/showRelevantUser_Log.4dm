@@ -1,2 +1,0 @@
-//%attributes = {}
-allRecordsUser_Log

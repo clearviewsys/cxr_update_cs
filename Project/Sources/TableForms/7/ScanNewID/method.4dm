@@ -1,2 +1,0 @@
-handleOCRScanNewIDEntryMethod
-HandleEntryFormMethod

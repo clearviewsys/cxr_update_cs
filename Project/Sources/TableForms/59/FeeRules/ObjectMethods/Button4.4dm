@@ -1,1 +1,0 @@
-listbox_deleteSelectedRows(->feeRulesListBox)

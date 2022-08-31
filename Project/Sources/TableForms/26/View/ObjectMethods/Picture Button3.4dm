@@ -1,1 +1,0 @@
-bindPictureButtonToBooleanField(Self:C308; ->[ClientPrefs:26]isPrintReceipt_portrait:16)

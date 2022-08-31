@@ -1,2 +1,0 @@
-//%attributes = {}
-allRecordsAuditControls

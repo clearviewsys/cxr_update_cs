@@ -1,2 +1,0 @@
-//%attributes = {}
-displayLBoxSync_Queue

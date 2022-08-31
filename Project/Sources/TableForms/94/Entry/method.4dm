@@ -1,1 +1,0 @@
-HandleEntryForm(Current form table:C627)

@@ -1,1 +1,0 @@
-pickCurrency(Self:C308)

@@ -1,2 +1,0 @@
-//%attributes = {}
-allRecordsIM_TransferLog

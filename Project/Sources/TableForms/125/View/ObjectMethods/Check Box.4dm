@@ -1,1 +1,0 @@
-handleTristateCheckBox(Self:C308; ->[AML_ReviewLog:125]isHighRisk:10; "Undefined Risk"; "High Risk"; "Not High Risk"; Black:K11:16; Red:K11:4; Blue:K11:7)

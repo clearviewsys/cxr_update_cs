@@ -1,1 +1,0 @@
-pickCustomerTypes(Self:C308)

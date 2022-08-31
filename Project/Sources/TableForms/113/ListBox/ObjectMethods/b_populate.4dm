@@ -1,2 +1,0 @@
-//populateSanctionLists
-sl_popluateSLFromServer

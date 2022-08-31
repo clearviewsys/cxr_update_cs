@@ -1,1 +1,0 @@
-addToTableFavorite(->[eWires:13]; ->[eWires:13]isFlagged:27)

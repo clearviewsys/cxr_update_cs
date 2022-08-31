@@ -1,2 +1,0 @@
-//%attributes = {}
-displayLBoxIM_TransferLog

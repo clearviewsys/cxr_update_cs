@@ -1,3 +1,0 @@
-C_BOOLEAN:C305(isPrintDefaultPortrait)
-isPrintDefaultPortrait:=getClientReceiptOrientation
-bindPictureButtonToBooleanField(Self:C308; ->isPrintDefaultPortrait)

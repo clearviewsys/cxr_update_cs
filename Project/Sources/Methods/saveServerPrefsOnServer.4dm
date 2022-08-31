@@ -1,2 +1,0 @@
-//%attributes = {"executedOnServer":true}
-assignServerPrefsVarsToFields

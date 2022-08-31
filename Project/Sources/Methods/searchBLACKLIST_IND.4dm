@@ -1,2 +1,0 @@
-//%attributes = {}
-//searchTable (->[Occupations];->[Occupations]occupationID;->[Occupations]Code;->[Occupations]Occupation;->[Occupations]Description;->[Occupations]IndustryID;->[Occupations]AML_Risk;->[Occupations];->[Occupations]_SYNC_ID;->[Occupations];->[Occupations])

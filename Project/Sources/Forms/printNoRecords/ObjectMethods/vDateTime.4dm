@@ -1,1 +1,0 @@
-vDateTime:=String:C10(Current date:C33)+" at "+String:C10(Current time:C178)

@@ -1,1 +1,0 @@
-setRadioButtonStatesInInvoice(3)

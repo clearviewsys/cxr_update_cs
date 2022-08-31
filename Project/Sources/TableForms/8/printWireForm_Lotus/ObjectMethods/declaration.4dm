@@ -1,1 +1,0 @@
-Self:C308->:=getKeyValue("email.configuration.booking.declaration")

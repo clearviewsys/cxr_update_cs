@@ -1,2 +1,0 @@
-selectSentMessages
-orderMessages

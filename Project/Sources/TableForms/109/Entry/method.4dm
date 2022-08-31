@@ -1,3 +1,0 @@
-
-handleOCR_IdsEntryFormMethod
-HandleEntryFormMethod

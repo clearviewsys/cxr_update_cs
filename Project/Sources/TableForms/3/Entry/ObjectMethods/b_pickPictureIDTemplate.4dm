@@ -1,1 +1,0 @@
-handlePickPictureIDTemplate(True:C214)

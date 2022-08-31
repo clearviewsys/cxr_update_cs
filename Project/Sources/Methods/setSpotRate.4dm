@@ -1,2 +1,0 @@
-//%attributes = {}
-// look at setCurrencySpotRate

@@ -1,2 +1,0 @@
-selectReceivedMessages
-orderMessages

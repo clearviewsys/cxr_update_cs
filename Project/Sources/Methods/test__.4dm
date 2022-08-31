@@ -1,2 +1,0 @@
-//%attributes = {}
-// just for testing

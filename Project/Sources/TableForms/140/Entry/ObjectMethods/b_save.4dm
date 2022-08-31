@@ -1,4 +1,0 @@
-// validate NoteTemplates
-
-handleSaveButton
-

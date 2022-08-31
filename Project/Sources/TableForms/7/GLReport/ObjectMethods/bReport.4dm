@@ -1,3 +1,0 @@
-
-
-JAM_HandleGenerateGLReport

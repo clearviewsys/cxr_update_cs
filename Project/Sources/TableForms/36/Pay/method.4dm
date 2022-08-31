@@ -1,2 +1,0 @@
-
-handleCashTransactionsFormMetho(False:C215)

@@ -1,3 +1,0 @@
-//%attributes = {}
-// see applyFocusRect
-applyFocusRect
