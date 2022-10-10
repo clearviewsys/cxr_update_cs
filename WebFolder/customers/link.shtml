@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--#4DSCRIPT/webRedirectIfNotAuthorized-->
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/head.shtml -->
+
+    <script type="text/javascript">
+        $(function() {
+
+            if (wapi_filter === undefined) {
+                var wapi_filter = {
+                    customers___customerid: '<!--#4DTEXT [Customers]customerid -->'
+                };
+            };
+
+            <!--#4DINCLUDE ../pq/include/pq_gettablename.js-->
+            <!--#4DINCLUDE ../pq/include/pq_datepicker.js-->  
+            <!--#4DINCLUDE ../pq/include/pq_viewRecord.js-->  
+            <!--#4DINCLUDE ../pq/include/pq_commentRender.js--> 
+
+            //--------- INITIALIZATION FUNCTION -----------
+            <!--#4DINCLUDE ../pq/include/pq_initGrid.js-->
+
+
+            //--------- DEFINE GRID OBJECT -----------
+            //          NOTE: grid object var = obj
+            var obj = {
+                //create grid with defaults
+                <!--#4DINCLUDE ../pq/include/pq_createGrid.js--> 
+                //set override - additional options
+                height: "100%",
+                showTitle: false,
+                rowHt: 35,
+            };
+
+            //----------- CREATE EVENT  -- USED FOR TOOL TIP WIDGET -------------            
+
+
+            //----------- DATA READY EVENT (this sets the listbox title) --------------
+            obj.dataReady = function() {
+                <!--#4DINCLUDE ../pq/include/pq_evtDataReady.js-->
+            };
+
+            //---------- BEFORE SORT EVENT ------------     
+            obj.beforeSort = function(evt) {
+                <!--#4DINCLUDE ../pq/include/pq_evtBeforeSort.js-->
+            };
+
+            //---------- BEFORE TABLE VIEW EVENT ------------           
+            obj.beforeTableView = function(evt, ui) {
+                <!--#4DINCLUDE ../pq/include/pq_evtBeforeTableView.js-->
+            };
+
+            //---------- DOUBLE CLICK EVENT ------------
+            obj.cellDblClick = function(evt, ui) {
+                <!--#4DINCLUDE ../pq/include/pq_evtDoubleClick.js-->   
+            };
+
+            //--------------CREATE TOOLBAR  ------------- 
+
+
+            //--------------- DEFINE COLUMN MODEL -------------------
+            obj.colModel = [
+
+                // ADD COLUMNS TO THE GRID HERE -- USE 4D TABLENAME___FIELDNAME 
+                // THE FIRST COLUMN SHOULD BE THE PK/ID FIELD FOR THE TABLE - YOU CAN SET HIDDEN:TRUE
+                // https://paramquery.com/pro/api#option-colModel <-- doc's and options
+
+
+                <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___linkid, filter:false, hidden:true} -->,
+                <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___fullname, title:Name ,filter:false} -->,   			
+                <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___relationship, title:Relationship, filter:false} -->,
+                <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___city,title:City, filter:false} -->,
+                <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___country,title:Country, filter:false} -->,
+                <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___mainphone,title:Main-Phone, filter:false} -->,
+                <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___email,title:Email, filter:false} -->,
+
+            ];
+
+            // ------------- DEFINE DATAMODEL -----------
+            obj.dataModel = {
+                <!--#4DINCLUDE ../pq/include/pq_dataModel.js--> 
+            };
+
+
+            //--------------DEFINE SORTMODEL -------------
+            obj.sortModel = {
+                <!--#4DINCLUDE ../pq/include/pq_sortModel.js-->
+
+                type: 'remote',
+                sorter: [{
+                    dataIndx: 'links___fullname',
+                    dir: 'up'
+                }],
+            };
+
+
+            obj.filterModel = {
+                header: false,
+                on: false,
+            }
+
+            //--------------DEFINE GROUP MODEL -------------
+            // NONE
+
+
+
+            //---------- INSERT THE GRID INTO THE DOM ---------------
+            var linksGrid = pq.grid("div#links-grid", obj);
+
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        //document.getElementById('expiretimer').innerHTML =05 + ":" + 00;
+        //startTimer();
+
+        function startTimer() {
+            var presentTime = document.getElementById('expiretimer').innerHTML;
+            if (presentTime == " ") {
+                presentTime = "01:00";
+            } else {
+                if (presentTime == "") {
+                    presentTime = "01:00";
+                }
+            };
+
+            var timeArray = presentTime.split(/[:]+/);
+            var m = timeArray[0];
+            var s = checkSecond((timeArray[1] - 1));
+
+            if (s == 59) {
+                m = m - 1
+            }
+
+            if (m < 0) {
+                wapiObjectMethod() //refresh the form
+                m = 1;
+                s = 00;
+                document.getElementById('expiretimer').innerHTML = "";
+            } else {
+                document.getElementById('expiretimer').innerHTML = m + ":" + s;
+                if (timer === undefined) {
+                    var timer = setTimeout(startTimer, 1000);
+                }
+            }
+        }
+
+        function checkSecond(sec) {
+            if (sec < 10 && sec >= 0) {
+                sec = "0" + sec
+            }; // add zero in front of numbers < 10
+            if (sec < 0) {
+                sec = "59"
+            };
+            return sec;
+        }
+
+    </script>
+
+
+
+    <script type="text/javascript">
+        function wapiObjectMethod(event) {
+            var formData = $("form").serializeArray();
+
+            if (event === undefined) {
+                $.post('objectmethod', {
+                        form: $("form").attr('id'),
+                        evt: 'expire',
+                        source: 'timer',
+                        userInput: formData
+                    })
+                    .done(function(data) {
+                        eval(data); //execute the javascript sent back from 4D
+                    });
+            };
+
+            if (event !== undefined) {
+                $.post('objectmethod', {
+                        form: $("form").attr('id'),
+                        evt: event.type,
+                        source: event.target.id,
+                        userInput: formData
+                    })
+                    .done(function(data) {
+                        eval(data); //execute the javascript sent back from 4D
+                    });
+            };
+        }
+
+    </script>
+
+
+    <script>
+        $(document).ready(function(){
+       wapiObjectMethod(event); //get current rates and values applied right away from 4D
+    });
+</script>
+
+
+</head>
+
+<body>
+
+    <!--#4DINCLUDE include/menubar.shtml -->
+
+    <main role="main">
+
+        <div class="page-header">
+
+            <div class='container'>
+                <!--#4DSCRIPT/webSelectCustomerRecord-->
+                <!--#4DHTML WAPI_includeAlertMessage-->
+                <script src="/app/js/bootstrap-auto-dismiss-alert.js"></script>
+                <!--MUST COME AFTER THE ALERT YOU WANT TO CLOSE -->
+                <h1>Add a Counterparty </h1>
+            </div>
+        </div>
+
+        <div class="container content">
+
+            <!--Row with two equal columns-->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    <form id='links-form' action="/createRecord" method="post">
+
+                        <div>
+                            <!--#4DSCRIPT/WAPI_formHeader/{table:links, field:customers___customerid}-->
+                        </div>
+
+
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable='true'>
+
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading" role="tab" id="name-tab">
+                                    <h3 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#name-data" aria-expanded="true" aria-controls="name-data">
+                                            <span class="glyphicon glyphicon-user" aria-hidden="true"> </span> Add a counterparty</a>
+                                    </h3>
+                                </div>
+
+                                <div id="name-data" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="name-tab">
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___salutation, label:Salutation, onchange:wapiObjectMethod, placeholder:Salutation, width:100px, choicelist:titles-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___firstname, label:First-Name, placeholder:First-name-of-counterparty}}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___lastname, label:Last-Name, placeholder:Last-name-of-counterparty}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___gender, label:Gender, placeholder:Gender, choicelist:|Male|Female}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___dob, label:Date-of-birth, placeholder:Date-of-birth}-->
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="demographics">
+                                    <h3 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#demographic-data" aria-expanded="false" aria-controls="demographic-data">
+                                            <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Demographics</a>
+                                    </h3>
+                                </div>
+
+                                <div id="demographic-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="demographics">
+                                    <div class="panel-body">
+
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___occupation, label:Occupation, placeholder:Occupation-of-counterparty, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___relationship, label:Relationship, placeholder:Relationship-to-customer}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___companyname, label:Company-Name, placeholder:Company-name-<OPTONAL>, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___country, label:Country, placeholder:Country-of-residence}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___city, label:City/Province-or-State, placeholder:City-and-province-state-of-residence}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___address, label:Address, placeholder:Address-of-residence}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___email, label:Email, placeholder:Email-address, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___mainphone, label:Main-Phone, placeholder:Primary-phone-of-customer}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___nationality, label:Nationality, placeholder:Nationality-of-customer, width:100}-->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading" role="tab" id="banking">
+                                    <h3 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#banking-data" aria-expanded="false" aria-controls="banking-data">
+                                            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Financials</a>
+                                    </h3>
+                                </div>
+
+                                <div id="banking-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="banking">
+                                    <div class="panel-body">
+
+
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankname, label:Bank-Name, placeholder:Bank-name, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankaccountno, label:Account-Number, placeholder:Bank-account-number, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___banktransitcode, label:Transit-Number, placeholder:SWIFT-BIC-Transit-numbers, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankaddress, label:Bank Address, placeholder:Bank-address}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankingdetails, label:Banking-Details, placeholder:Bank-details}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___defaultpurposeoftransaction, label:Usual-Purpose-Of-Your-Transactions, placeholder:Usual-purpose-of-transactions}-->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading" role="tab" id="picture">
+                                    <h3 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#picture-data" aria-expanded="false" aria-controls="picture-data">
+                                            <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Picture ID</a>
+                                    </h3>
+                                </div>
+
+                                <div id="picture-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="picture">
+                                    <div class="panel-body">
+
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___pictureidtype, label:Government-ID-Type, placeholder:ie.-license-passport, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___pictureidno, label:Government-ID-No, placeholder:Bank-name, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___pictureidissuedin, label:Country-of-Issue, placeholder:Country-issuing-your-ID, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:links___pictureidexpdate, label:Expiry-Date}-->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="panel panel-default">
+
+                            <div class='panel-heading'>Terms and Conditions</div>
+
+                            <div class='panel-body'>
+                                <div>
+                                    <!--#4DHTMLVAR <>DISCLAIMER-->
+                                </div>
+                                <div class="form-check" style="padding-top: 10px">
+                                    <label class="form-check-label" for="agreement-input">
+                                        <input type="checkbox" class="form-check-input" id="agreement-input" name="agreement-input" onchange="wapiObjectMethod(event)">
+                                        By checking this you agree to the terms specified above</label>
+                                </div>
+                            </div>
+
+                            <div class='panel-footer clearfix'>
+                                <div class='text-muted' style="padding-bottom: 4px">
+                                    <span id='expirewarning'></span>
+                                    <span class='pull-right' id='expiretimer'></span>
+                                </div>
+
+                                <div class="pull-right">
+                                    <a class="btn btn-default" href="/profile.shtml" role="button">Cancel</a>
+                                    <button type="submit" class="btn btn-primary" id="submit-input" name="submit-input" disabled>Add Counterparty</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p></p>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/footer.shtml -->
+</body>
+
+
+
+</html>

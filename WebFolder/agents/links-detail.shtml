@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--#4DSCRIPT/webRedirectIfNotAuthorized-->
+    <!--#4DSCRIPT/WAPI_4DInclude/agents/include/head.shtml-->
+    <!--#4DSCRIPT/WAPI_pageStart/{onload:true, sessiontimer:true, dropzone-div:links-form-picture}-->
+</head>
+
+<body>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/agents/include/menubar.shtml-->
+
+    <div class="container content">
+        <!--#4DSCRIPT/webSelectAgentRecord-->
+
+        <div class="row" style="padding-top: 50px">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                <!-- CLIENT/LINK BASIC INFO-->
+                <div class='panel panel-default'>
+
+                    <div class='panel-heading'>
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        <!--#4DTEXT " "+[Links]firstname + " "+[Links]lastname-->
+                        <!--#4DIF [links]iscompany-->
+                        <!--#4DTEXT " - "+[Links]companyname-->
+                        <!--#4DENDIF-->
+                        
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-lg-3 col-md-3 colsm-6 col-xs-6'>
+                            <div class='panel-body'>
+                                <!--#4DTEXT [Links]address--><br>
+                                <!--#4DTEXT [Links]city--><br>
+                                <!--#4DTEXT [Links]country-->
+                            </div>
+                        </div>
+                        <div class='col-lg-3 col-md-3 colsm-6 col-xs-6'>
+                            <div class='panel-body'>
+                                ID:
+                                <!--#4DTEXT [links]linkid--><br>
+                                <!--#4DTEXT [Links]mainphone--><br>
+                                <!--#4DTEXT [Links]email-->
+                            </div>
+                        </div>
+
+                        <div class='col-lg-3 col-md-3 colsm-6 col-xs-6'>
+                            <div class='panel-body'>
+                                On Hold:
+                                <!--#4DTEXT string([Links]aml_isonhold)--><br>
+                                Notes:
+                                <!--#4DTEXT [Links]aml_statusnotes-->
+                            </div>
+                        </div>
+
+                        <div class='col-lg-3 col-md-3 colsm-6 col-xs-6'>
+                            <div class='panel-body'>
+                                <!--#4DTEXT webGetPictureLink -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--Row with two equal columns-->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    <div>
+                        <!--#4DSCRIPT/WAPI_formHeader/{table:links, primarykey:links___linkid, field:customers___customerid, success:agents/home.shtml}-->
+                    </div>
+
+                    <!--#4DIF true-->
+                    <!--#4DSCRIPT/WAPI_4DInclude/agents/links-form.shtml-->
+<!--#4DENDIF-->
+
+                
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!--#4DSCRIPT/WAPI_4DInclude/agents/include/footer.shtml-->
+    <!--#4DSCRIPT/WAPI_4DInclude/agents/include/dz_preview.shtml-->
+    <!--#4DSCRIPT/WAPI_formInit-->
+</body>
+
+
+
+</html>

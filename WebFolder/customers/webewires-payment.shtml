@@ -1,0 +1,47 @@
+<!--#4DIF (webgetkeyvalue("web.customers.webewires.paymentgateway")="false")-->
+
+<!--#4DIF wapi_isdebug-->
+NO PAYMENT GATEWAY DEFINED
+<!--#4DENDIF-->
+
+<!--#4DTEXT webGetWebewirePayStatus-->
+
+
+<!--#4DELSEIF webGetWebewirePayGateway="polipayapi"-->
+<!--#4DSCRIPT/WAPI_4DInclude/customers/payment-polipay-api.shtml-->
+
+<!--#4DELSEIF webGetWebewirePayGateway="polipaylink"-->
+<!--#4DSCRIPT/WAPI_4DInclude/customers/payment-polipay-link.shtml-->
+
+<!--#4DELSEIF webGetWebewirePayGateway="paymark"-->
+<!--#4DSCRIPT/WAPI_4DInclude/customers/payment-paymark.shtml-->
+
+<!--#4DELSEIF webGetWebewirePayGateway="account"-->
+<!--#4DSCRIPT/WAPI_4DInclude/customers/payment-account.shtml-->
+
+<!--#4DELSEIF webGetWebewirePayGateway="paypal"-->
+<!--#4DSCRIPT/WAPI_4DInclude/customers/payment-paypal.shtml-->
+
+<!--#4DELSEIF webGetWebewirePayGateway="square"-->
+<!--#4DSCRIPT/WAPI_4DInclude/customers/payment-square.shtml-->
+
+<!--#4DELSE-->
+
+<div class="panel panel-default">
+    <div class="panel panel-heading">
+        <h3 class="panel-title">
+            <span class="fa fa-money"></span>
+            Transaction Status
+            <div class="pull-right">
+                [<!--#4DTEXT webGetWebewirePayStatus-->]
+            </div>
+        </h3>
+    </div>
+</div>
+
+<!--#4DIF wapi_isdebug-->
+UNKNOWN PAYMENT GATEWAY FOR TRANSACTION
+<!--#4DTEXT webGetWebewirePayGateway-->
+<!--#4DENDIF-->
+
+<!--#4DENDIF-->

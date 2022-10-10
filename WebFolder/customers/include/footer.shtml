@@ -1,0 +1,67 @@
+
+<!--#4DSCRIPT/WAPI_4DInclude/customers/include/footer-lite.shtml-->
+
+<style>
+    #spinner-overlay {
+      position: fixed;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 2;
+      cursor: pointer;
+    }
+    
+    #spinner{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 50px;
+      color: white;
+      transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+    }
+    </style>
+
+<div id="spinner-overlay" style="display: none;">
+    <div id="spinner" class="fa fa-spinner fa-spin" style="font-size: 48px;"></div>
+</div>
+
+<footer class='page-footer bg-dark mt-4 mb-4'>
+    <div class="container-fluid">
+        <div class='bg-dark'>
+
+            <div class='py-3'>
+                <hr>
+                <span class='text-muted'>Copyright (c)
+                    <!--#4DTEXT year of(current date)--> &nbsp; <strong>
+
+                        <a class="hidden-xs" href="<!--#4DSCRIPT/webGetKeyValue/web.configuration.footer.url-->">
+                            <!--#4DSCRIPT/webGetKeyValue/web.configuration.footer.name--> &nbsp;</a>
+
+                        <a class="visible-xs" href="">
+                            <!--#4DSCRIPT/webGetKeyValue/web.configuration.footer.name--></a>
+
+                        <a class="visible-xs" href="tel:<!--#4DSCRIPT/webGetKeyValue/web.customers.contact.phone-->"><!--#4DSCRIPT/webGetKeyValue/web.customers.contact.phone--></a>
+
+                    </strong> All Rights Reserved.
+                </span>
+                    <span class='pull-right hidden-xs'>
+                        <a href="<!--#4DSCRIPT/webGetKeyValue/web.customers.contact.url-->">Contact Us</a>
+                    </span>
+                    <hr>
+
+                    <span class="pull-right"><small><em>Powered by CurrencyXchanger <!--#4DTEXT getCurrentVersion--></em></small></span>
+                <!--#4DIF WAPI_isDebug-->
+                <!--#4DTEXT WAPI_getSessionInfo -->
+                <!--#4DENDIF-->
+            </div>
+
+        </div>
+    </div>
+
+</footer>
