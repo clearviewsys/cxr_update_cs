@@ -3,7 +3,7 @@ dataType: 'json',
     url: '/getList',
     method: 'POST',
     recIndx: obj.colModel[0].dataIndx, //this gets the first column field/dataIndx
-    beforeSend: pqListbox.init,
+    //beforeSend: pqListbox.init,
     postData: function () {
         return {
             pq_curpage: pqListbox.requestPage,

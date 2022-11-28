@@ -91,7 +91,7 @@
                                 <div class="panel-body">
 
                                     <div class="form-group">
-                                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___DOB, label:Date-of-birth, inputmask-selectyears:50, inputmask-startyear:1900, readonly:false, label:Your-birth-date}-->
+                                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___DOB, label:Date-of-birth, inputmask-selectyears:60, inputmask-max:-3650, readonly:false, label:Your-birth-date}-->
                                     </div>
 
                                     <div class="form-group">

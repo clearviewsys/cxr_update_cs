@@ -65,14 +65,54 @@
                 <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_evtDataReady.js-->
             };
 
+            // ----------SORT MODEL -----------
+            obj.sortModel = {
+                    type: 'remote',
+                     //  sorter: [{
+                      //     dataIndx: 'invoices___invoicedate',
+                     //      dir: 'down'
+                    // }],
+                 };
+
             //---------- BEFORE SORT EVENT ------------     
             obj.beforeSort = function(evt) {
-                <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_evtBeforeSort.js-->
+                if (evt.originalEvent) {  //only if sorting done through header cell click.
+                    pqListbox.init();
+                }
+            };
+
+            // ----------- BEFORE FILTER EVENT ------
+            obj.beforeFilter = function(){
+pqListbox.init();
             };
 
             //---------- BEFORE TABLE VIEW EVENT ------------           
             obj.beforeTableView = function(evt, ui) {
-                <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_evtBeforeTableView.js-->
+                var initV = ui.initV,
+                    finalV = ui.finalV,
+                    data = pqListbox.data,
+                    rpp = pqListbox.rpp,
+                    requestPage;
+
+                if (initV != null) {
+                    //if records to be displayed in viewport are not present in local cache,
+                    //then fetch them from remote database/server.
+                    if (data[initV] && data[initV].pq_empty) {
+                        requestPage = Math.floor(initV / rpp) + 1;
+                    }
+                    else if (data[finalV] && data[finalV].pq_empty) {
+                        requestPage = Math.floor(finalV / rpp) + 1;
+                    }
+
+                    if (requestPage >= 1) {
+                        if (pqListbox.requestPage != requestPage) {     
+                            pqListbox.requestPage = requestPage;
+                            //initiate remote request.                    
+                            this.refreshDataAndView();
+                        }
+                    }
+                };
+   
             };
 
 
@@ -107,12 +147,7 @@
                         <!--#4DSCRIPT/WAPI_ColModel/{field:invoices___printRemarks, title:Notes, filter:true, hidden:false, width:300} -->,
                     ];
 
-                    obj.sortModel = {
-                        sorter: [{
-                            dataIndx: 'invoices___invoicedate',
-                            dir: 'down'
-                        }],
-                    };
+
 
                     obj.rowDblClick = function(evt, ui) {
 
@@ -876,15 +911,14 @@ debugger;
             // ------------- DEFINE DATAMODEL -----------
             obj.dataModel = {
                 <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_dataModel.js--> 
-                //postData: {table:'customers', recnum:'1'}
-            };
+             };
 
 
 
             // ------------- DEFINE FILTERMODEL -----------      
             obj.filterModel = {
                 header: false,
-                on: true,
+                //on: true,
                 type: 'remote',
                 menuIcon: true,
             }

@@ -20,6 +20,28 @@
 
     </style>
 
+    	   <!--#4DIF true-->
+           <script>
+            window.dataLayer= window.dataLayer || []
+            window.dataLayer.push({
+            'event': 'confirmation',
+            'payment_method;: <!--#4DTEXT [webewires]paymentInfo.deliveryMethod-->,
+            'bookedtosell' : <!--#4DTEXT [webewires]toamount-->;
+            'bookedtosell_currency': <!--#4DTEXT [webewires]toccy-->,
+            'direct_rate': <!--#4DTEXT [webewires]directrate-->,
+            'inverse_rate': <!--#4DTEXT [webewires]inverserate-->,
+            'booking_fee': <!--#4DTEXT [webewires]fromfee-->,
+            'booking_fee_currency': <!--#4DTEXT [webewires]fromccy-->,
+            'commission': 0,
+            'local_amount': <!--#4DTEXT [webewires]fromamount-->,
+            'local_amount_currency': <!--#4DTEXT [webewires]fromccy-->,
+            'local_amount_currency_in_cad': <!--#4DTEXT [webewires]fromamount-->
+            
+            });
+            
+            </script>
+        <!--#4DENDIF-->
+
 </head>
 
 <body>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--#4DSCRIPT/WAPI_4DInclude/sanction/include/head.shtml-->
+    <!--#4DSCRIPT/WAPI_pageStart/{onload:true, sessiontimer:false}-->
+</head>
+
+<body>
+    <!--#4DSCRIPT/WAPI_4DInclude/sanction/include/menubar.shtml-->
+
+    <main role="main">
+
+        <div class='container'>
+            <form id="sanction-screen" name="sanction-screens">
+                <!--#4DHTML WAPI_includeAlertMessage-->
+
+                <!-- DASHBOARD OPTONS -->
+                <div class="row" style="padding-top: 10px">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span
+                                        class="fa fa-check-square"></span>
+                                    Sanction Screening</h3>
+                            </div>
+                            <div class="panel-body">
+
+
+                                <div class="form-group">
+                                    <label class="form-control-label" for="sanction-oracle-id-search-input"
+                                        id="sanction-oracle-id-search-label">Oracle Customer ID</label> <input type="text"
+                                        class="form-control wapi-pattern" id="sanction-oracle-id-search-input"
+                                        name="sanction-oracle-id-search-input" placeholder="Oracle customer id to search"
+                                        onchange="wapiShowProcessing(true) ;wapiObjectMethod(event)"> <span id="sanction-oracle-id-search-input-help-block"
+                                        class="help-block"></span>
+                                </div>
+                               
+
+                                <div id="sanction-oracle-id-data"></div>
+                                <div id="sanction-oracle-id-data-hidden">
+                                    <input type="hidden" id="sanction-oracle-id-input" name="sanction-oracle-id-input" value="">
+                                </div>
+                                <div id="sanction-oracle-id-results"></div>
+
+                                <div style="padding-top: 10px">
+                                    <input type="button" class="btn btn-primary btn-block" id="sanction-screen-btn"
+                                        name="sanction-screen-btn" value="Screen"
+                                        onclick="wapiShowProcessing(true) ;wapiObjectMethod(event)" disabled>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+        </div>
+
+        </form>
+        </div>
+    </main>
+
+
+    <!--FOOTER-->
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/footer.shtml-->
+
+
+</body>
+
+
+</html>

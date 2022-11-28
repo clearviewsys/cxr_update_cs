@@ -1,0 +1,103 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<!-- Bootstrap -->
+<!--<link href="/app/css/bootstrap.min.css" rel="stylesheet">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Jquery 2.2.4 -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+<!-- Bootstrap JS -- load after jquery -->
+<!-- <script src="/app/js/bootstrap.min.js"></script>-->
+<!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!--   WAPI -->
+<script type="text/javascript" src="/app/wapi/js/wapi.js"></script>
+
+<link rel="stylesheet" href="/app/css/styles.css" />
+<script type="text/javascript" src='https://www.google.com/recaptcha/api.js'></script>
+
+
+<!-- Icons -->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+
+<!-- Validations -->
+<script type="text/javascript" src="/app/js/common.js"></script>
+
+<!--PASSWORD COMPLEXITY-->
+<script type="text/javascript" src="/app/wapi/js/jquery.passwordRequirements.js"></script>
+<link rel="stylesheet" href="/app/wapi/css/jquery.passwordRequirements.css" />
+
+<style type="text/css">
+    body {
+        padding-top: 70px;
+        /* Margin bottom by footer height */
+        margin-bottom: 60px;
+    }
+
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        background-color: #f5f5f5;
+    }
+
+    .logo {
+        padding: 10px 10px 0 10px;
+    }
+
+    .logo-name {
+        font-size: 14px;
+        color: whitesmoke;
+        padding-top: 15px;
+        padding-right: 15px;
+    }
+
+</style>
+
+<!--CUSTOM OVERRIDES-->
+<link rel="stylesheet" href="/custom/customers/css/custom.css">
+
+
+<script>
+    /* trigger when page is ready */
+    $(document).ready(function() {
+        $("#userPassword").passwordRequirements({
+            numCharacters: <!--#4DSCRIPT/webGetKeyValue/web.configuration.password.numCharacters-->,
+                useLowercase: <!--#4DSCRIPT/webGetKeyValue/web.configuration.password.useLowercase-->,
+                useUppercase: <!--#4DSCRIPT/webGetKeyValue/web.configuration.password.useUppercase-->,
+                useNumbers: <!--#4DSCRIPT/webGetKeyValue/web.configuration.password.useNumbers-->,
+                useSpecial: <!--#4DSCRIPT/webGetKeyValue/web.configuration.password.useSpecial-->,
+                style: "light",
+            infoMessage: 'hello'
+            //style: "<!--#4DSCRIPT/webGetKeyValue/web.configuration.password.style-->",
+            //fadeTime: <!--#4DSCRIPT/webGetKeyValue/web.configuration.password.fadeTime-->
+        });
+    });
+
+</script>

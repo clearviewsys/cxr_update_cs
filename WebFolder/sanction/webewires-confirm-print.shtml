@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--#4DSCRIPT/webRedirectIfNotAuthorized-->
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/head.shtml-->
+
+    <style type="text/css">
+        body {
+            padding-top: 5px;
+            /* Margin bottom by footer height */
+            margin-bottom: 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="container content">
+
+            <div class="panel panel-default" id="webewire-receipt">
+                <div class="panel-body">
+                    <h4>eWire Confirmation Receipt
+                        <span class="pull-right">
+                            <small style="border: .5px solid black; padding: 3px;">#
+                                <!--#4DSCRIPT/WAPI_formField/webewires___webewireid--> on
+                                <!--#4DTEXT string([webewires]creationdate)-->
+                            </small>
+                        </span>
+                    </h4>
+
+                    <table style="margin-bottom: 0px;" width='100%' class="table table-condensed small" style="border: .5px solid black;">
+                        <thead class="h3">
+                            <tr style="background-color:rgb(255, 255, 255)">
+                                <td colspan="2"><img src="data:image/jpg;base64, <!--#4DTEXT WAPI_pict2Base64(-><>CompanyLogo)-->">
+                                    <!--#4DTEXT <>CompanyName-->
+                                </td>
+
+
+                            </tr>
+                        </thead>
+
+                        <thead class="h4">
+                            <tr style="background-color: darkgray">
+                                <td colspan="1">Web eWire</td>
+
+                                <td>
+                                    <!--#4DTEXT getWebeWireStatusText-->
+                                </td>
+                            </tr>
+                        </thead>
+
+                        <!--Sender Info-->
+                        <tbody>
+                            <tr>
+                                <td width='50%'>
+
+                                    <table class="table table-condensed small" style="margin-bottom: 0px;" style="border-collapse: collapse">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div>Sender Full Name:</div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <!--#4DSCRIPT/WAPI_formField/webewires___fromparty___fullname-->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>Customer ID:</div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <!--#4DSCRIPT/WAPI_formField/webewires___author-->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>Occupation:</div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <!-- #4DTEXT [customers]Occupation -->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+
+
+                                <td width='50%'>
+                                    <!--RECEIVER-->
+                                    <table style="margin-bottom: 0px;" class="table table-condensed small">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div>Phone:</div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <!--#4DSCRIPT/WAPI_formField/webewires___fromparty___cellphone-->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>Email:</div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <!--#4DSCRIPT/WAPI_formField/webewires___fromparty___email-->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>Address:</div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <!--#4DSCRIPT/WAPI_formField/webewires___fromparty___address-->
+                                                    </div>
+                                                    <div>
+                                                        <!--#4DSCRIPT/WAPI_formField/webewires___fromparty___city-->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>Country:</div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <!--#4DSCRIPT/WAPI_formField/webewires___fromcountrycode-->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+
+                            </tr>
+
+                            <!-- Wire Amounts Info -->
+                            <tr style="border-top: .5px solid black;">
+
+                                <td colspan="2">
+                                    <center>
+                                        <div style="margin-left: 20%; margin-right: 25%; border: .5px solid black;">
+                                            <table class="table table-condensed small" style="margin-bottom: 2px;">
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            Amount Sent:
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <!--#4DSCRIPT/WAPI_formField/webewires___toamount-->
+                                                            <!--#4DSCRIPT/WAPI_formField/webewires___toccy-->
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            Destination Country:
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <!--#4DSCRIPT/WAPI_formField/webewires___tocountrycode-->
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </center>
+                            </tr>
+                            <tr>
+                                <table style="margin-bottom: 0px; align: center;" class="table table-condensed small">
+                                    <tbody>
+                                        <tr>
+                                            <td width="50%">
+                                                <div class="pull-right">
+                                                    Direct Rate:
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <!--#4DSCRIPT/WAPI_formField/webewires___directrate-->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="pull-right">
+                                                    Inverse Rate:
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <!--#4DSCRIPT/WAPI_formField/webewires___inverseRate-->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="pull-right">
+                                                    Total Fees:
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <!--#4DSCRIPT/WAPI_formField/webewires___fromfee-->
+                                                    <!--#4DSCRIPT/WAPI_formField/webewires___fromccy-->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="pull-right">
+                                                    Total Amount Payable:
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <!--#4DSCRIPT/WAPI_formField/webewires___fromamount-->
+                                                    <!--#4DSCRIPT/WAPI_formField/webewires___fromccy-->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </tr>
+
+
+
+                            <!-- Beneficiary Info -->
+
+                            <tr>
+                                <td colspan="1">
+                                    <table width="100%" style="margin-bottom: 0px; border-top: .5px solid black;" class="table table-condensed small">
+                                        <tbody>
+                                            <tr>
+                                                <td width="100%" style="padding:0px;">
+                                                    <div style="margin: 0px; font-size: 15px; ">Beneficiary Info</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td colspan="2">
+                                    <table width='100%' style="margin-bottom: 0px;" class="table table-condensed small">
+                                        <tr>
+                                            <td width='60%'>
+                                                <table style="margin-bottom: 0px;" class="table table-condensed small">
+                                                    <tr>
+                                                        <td>
+                                                            <div>Beneficiary Full Name:</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <!--#4DSCRIPT/WAPI_formField/webewires___toparty___fullname-->
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div>Address:</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <!--#4DSCRIPT/WAPI_formField/webewires___toparty___address--><br>
+                                                                <!--#4DSCRIPT/WAPI_formField/webewires___toparty___city-->
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div>Country:</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <!--#4DSCRIPT/WAPI_formField/webewires___toparty___countrycode-->
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td width="40%">
+                                                <table style="margin-bottom: 0px;" class="table table-condensed small">
+                                                    <tr>
+                                                        <td>
+                                                            <div>
+                                                                Beneficiary is an Organization:
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <!--#4DSCRIPT/WAPI_formField/webewires___toparty___isCompany-->
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div>Email:</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <!--#4DSCRIPT/WAPI_formField/webewires___toparty___email-->
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div>Phone Number:</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <!--#4DSCRIPT/WAPI_formField/webewires___toparty___cellphone-->
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+
+                            <!-- Banking Info -->
+
+                            <!--#4DIF ([WebEWires]toBankingInfo["doTransferToBank"]="on")-->
+
+                            <tr>
+                                <table style="margin-bottom: 0px; align: center;" class="table table-condensed small">
+                                    <tbody>
+                                        <tr>
+                                            <td width="50%">
+                                                <div class="pull-right">
+                                                    Direct Deposit into Bank:
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <input type='checkbox' onclick="return false;" checked />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="pull-right">
+                                                    Bank:
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <!--#4DSCRIPT/WAPI_formField/webewires___tobankinginfo___bankname-->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="pull-right">
+                                                    Account #:
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <!--#4DSCRIPT/WAPI_formField/webewires___tobankinginfo___accountno-->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="pull-right">
+                                                    Swift:
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <!--#4DSCRIPT/WAPI_formField/webewires___tobankinginfo___swift-->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </tr>
+
+                            <!--#4DELSE-->
+                            <tr>
+                                <table style="margin-bottom: 0px; align: center;" class="table table-condensed small">
+                                    <tbody>
+                                        <tr>
+                                            <td width="50%">
+                                                <div class="pull-right">
+                                                    Direct Deposit into Bank:
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <input type='checkbox' onclick="return false;" />
+                                                </div>
+                                            <td>
+                                        </tr>
+                                </table>
+                            </tr>
+                            <!--#4DENDIF-->
+
+
+                            <!-- Beneficiary Relationship -->
+                            <tr>
+                                <td colspan="2">
+                                    <table width='100%' style="margin-bottom: 0px; border-top: .5px solid black;" class="table table-condensed small">
+                                        <tr>
+                                            <td width='60%'>
+                                                <table style="margin-bottom: 0px;" class="table table-condensed small">
+                                                    <tr>
+                                                        <td>
+                                                            <div>
+                                                                Relationship with Sender:
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <!--#4DSCRIPT/WAPI_formField/webewires___toparty___relationship-->
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div>
+                                                                Source of Funds:
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <!--#4DSCRIPT/WAPI_formField/webewires___aml_info___sourceoffunds-->
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div>
+                                                                Purpose of Transaction:
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <!--#4DSCRIPT/WAPI_formField/webewires___aml_info___purposeoftransaction-->
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                </table>
+                                            </td>
+                                            <td width="40%">
+                                                <table style="margin-bottom: 0px;" class="table table-condensed small">
+                                                    <tr>
+                                                        <td>
+                                                            <div>
+                                                                Notes:
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                            <td>
+                                                <div>
+                                                    <!--#4DSCRIPT/WAPI_formField/webewires___notes-->
+                                                </div>
+                                            </td>
+                                    </table>
+                                </td>
+                            </tr>
+                    </table>
+                    </td>
+                    </tr>
+
+                    <!-- Terms and Conditions -->
+                    <tr>
+                        <td colspan="2">
+                            <div style="font-size:x-small">
+                                Terms and Conditions:
+                                <!--#4DTEXT webgetkeyvalue("web.customers.webewires.terms")-->
+                            </div>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                    </table>
+                    <Center style="font-size: x-small; margin-top: 3px;">Powered by eWire and CurrencyXChanger by Clear View Systems Ltd., BC</Center>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

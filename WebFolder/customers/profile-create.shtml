@@ -8,7 +8,9 @@
     <!--#4DSCRIPT/WAPI_4DInclude/customers/include/head.shtml -->
 
     <!--#4DSCRIPT/webSelectWebUserRecord-->
-    <!--#4DSCRIPT/WAPI_pageStart/{onload:true, sessiontimer:true, dz-div:profile-create-form, dz-post:true, dz-maxfilesize:10, dz-maxfiles:4, dz-onaddedfile:addDropZone, dz-addremovelinks:false}-->
+    <!--#4DSCRIPT/WAPI_pageStart/{onload:true, sessiontimer:true, dz-div:profile-create-form, dz-post:true, dz-maxfilesize:15, dz-maxfiles:4, dz-onaddedfile:addDropZone, dz-onremovedfile:removeDropZone, dz-addremovelinks:false, dz-resizewidth:1500}-->
+
+    <!-- dz-onremovedfile:removeDropZone,-->
 
 
     <script type="text/javascript">
@@ -17,6 +19,8 @@
             $('[role=tabpanel]').on('shown.bs.collapse', function () {
                 $('input:visible:enabled:first', this).focus();
             });
+
+            //wapi_dropzone.disable();
         });
     </script>
 
@@ -147,8 +151,6 @@
                 <div class="row" id='profile-create-row' style='display: none;'>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-
 
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -375,33 +377,42 @@
                                         <div id="wapi-dropzone-group">
                                             <div class="dropzone-previews"></div>
 
-                                            <div class="dz-clickable" id="wapi-dropzone">
-                                                <div class="btn btn-default btn-block btn-lg"
-                                                    style="padding-bottom: 12px">
-                                                    <span id="profile-dropzone-btn">Click or Drop Files Here</span>
-                                                    <script>
-                                                        if (jQuery.browser.mobile) {
-                                                            $('#profile-dropzone-btn').html(
-                                                                'Click to take picture');
-                                                        }
-                                                    </script>
+                                            <div id="wapi-dropzone-select-group">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="profile-id-type-select"
+                                                        id="profile-id-type-label">Select the type of ID you will
+                                                        upload</label>
+                                                    <select class="form-control custom-select"
+                                                        style="text-align-last:center;" id="profile-id-type-select"
+                                                        name="profile-id-type-select"
+                                                        onchange="$('#wapi-dropzone-drop-group').show();wapiObjectMethod(event)">
+                                                        <option value="" label=""></option>
+                                                    </select>
+                                                    <span id="profile-id-type-select-help-block"
+                                                        class="help-block"></span>
                                                 </div>
                                             </div>
 
-                                            <div class="form-group fallback">
-                                                <input id='dropzone-upload-file' type="file" multiple />
+                                            <div id="wapi-dropzone-drop-group">
+                                                <div class="dz-clickable" id="wapi-dropzone">
+                                                    <div class="btn btn-default btn-block btn-lg"
+                                                        style="padding-bottom: 12px">
+                                                        <span id="profile-dropzone-btn">Click or Drop Files Here</span>
+                                                        <script>
+                                                            if (jQuery.browser.mobile) {
+                                                                $('#profile-dropzone-btn').html(
+                                                                    'Click to take picture');
+                                                            }
+                                                        </script>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group fallback">
+                                                    <input id='dropzone-upload-file' type="file" multiple />
+                                                </div>
                                             </div>
-
-
                                         </div>
 
-                                        <div id="profile-id-extra-group" style="display: none">
-                                            <div class="form-group">
-                                                <label id="profile-id-extra-alert" class="text-danger">Drivers
-                                                    License Requires an additional form of ID. Please include one
-                                                    additional document.</label>
-                                            </div>
-                                        </div>
                                     </div>
 
                                     <div class="panel-footer">
@@ -504,7 +515,7 @@
                         <img class="img-thumbnail" data-dz-thumbnail />
                         <div class="small" style="padding-bottom: 20px; padding-top: 0px">[<span data-dz-size></span>]
                         </div>
-                        <input class="btn btn-default" type="button" value="Remove ID" data-dz-remove>
+                        <input class="btn btn-default" id="dz-remove-btn" name="dz-remove-btn" type="button" value="Remove ID" data-dz-remove>
                     </div>
                     <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
                     <div class="dz-success-mark"><span></span></div>
@@ -515,31 +526,47 @@
 
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                 <div class="well">
-                    <div class="form-group">
-                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_templateid, label:ID-Type, choicelist:webGetChoiceListPictureTypes, readonly:false, onchange:wapiObjectMethod}-->
+                    <div class="form-group" id="customers-pictureid_templatename-group">
+                        <label class="form-control-label" for="customers-pictureid_templatename-input"
+                            id="customers-pictureid_templatename-label">Picture ID Type</label> <input type="text"
+                            class="form-control wapi-pattern" id="customers-pictureid_templatename-input"
+                            name="customers-pictureid_templatename-input" readonly> <span
+                            id="customers-pictureid_templatename-input-help-block" class="help-block"></span>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hidden" id="customers-pictureid_templateid-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_templateid, label:ID-Type, readonly:true, hidden:true}-->
+                    </div>
+
+                    <div class="form-group" id="customers-pictureid_number-group">
                         <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_number, label:ID-Number, readonly:false}-->
                     </div>
 
-                    <div class="form-group">
-                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_issuedate, label:Issue-Date, readonly:false, inputmask-selectyears:10}-->
+                    <div class="form-group" id="customers-pictureid_issuedate-group">
+                        <label class="form-control-label" for="customers-pictureid_issuedate-input"
+                            id="customers-pictureid_issuedate-label">Issue Date</label> <input type="text"
+                            class="form-control" id="customers-pictureid_issuedate-input"
+                            name="customers-pictureid_issuedate-input" style="background-color:white"> <span
+                            id="customers-pictureid_issuedate-input-help-block" class="help-block"></span>
                     </div>
 
-
-
-                    <div class="form-group">
-                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___PictureID_ExpiryDate, label:Expiration-Date, readonly:false, inputmask-selectyears:10, inputmask-min:true}-->
+                    <div class="form-group" id="customers-picture_expirydate-group">
+                        <label class="form-control-label" for="customers-pictureid_expirydate-input"
+                            id="customers-pictureid_expirydate-label">Expiry Date</label> <input type="text"
+                            class="form-control" id="customers-pictureid_expirydate-input"
+                            name="customers-pictureid_expirydate-input" style="background-color:white"> <span
+                            id="customers-pictureid_expirydate-input-help-block" class="help-block"></span>
                     </div>
 
-                    <!--#4DIF false-->
-                    <div class="form-group">
+                    <div class="form-group" id="customers-picture_authority-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_authority, label:Issued-By-Authority, readonly:false}-->
+                    </div>
+
+                    <div class="form-group" id="customers-picture_issuestate-group">
                         <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_issuestate, label:Issued-By-State, readonly:false}-->
                     </div>
-                    <!--#4DENDIF-->
 
-                    <div class="form-group">
+                    <div class="form-group" id="customers-pictureid_countrycode-group">
                         <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_countrycode, label:Issued-By-Country, choicelist:webGetChoiceListCountries, readonly:false}-->
                     </div>
                 </div>
@@ -574,53 +601,83 @@
     </script>
 
     <script>
-        function addDropZone() {
+        function addDropZone(file) {
             debugger;
             let currId = wapi_dropzone.files.length;
-            let issueOptions = {
-                format: 'dd/mm/yyyy',
-                editable: false,
-                selectYears: 10,
-                selectMonths: true,
-                formatSubmit: 'yyyy-mm-ddT00:00:00',
-                hiddenName: true,
-                min: -3650,
-                max: true,
-                showMonthsShort: true
-            }
-            let expiryOptions = {
-                format: 'dd/mm/yyyy',
-                editable: false,
-                selectYears: 10,
-                selectMonths: true,
-                formatSubmit: 'yyyy-mm-ddT00:00:00',
-                hiddenName: true,
-                min: -365,
-                max: 3650,
-                showMonthsShort: true
-            }
+  
 
-            $('[id=customers-pictureid_issuedate-input]').pickadate(issueOptions);
-            $('[id=customers-pictureid_expirydate-input]').pickadate(expiryOptions);
+            let theID = wapi_dropzone.previewsContainer.getElementsByClassName("row")[currId - 1];
+            let inputs = theID.getElementsByTagName("input");
+            inputs['customers-pictureid_templateid-input'].value = $('#profile-id-type-select').val();
 
-            if (currId > 1) {
-
-                let theID = wapi_dropzone.previewsContainer.getElementsByClassName("row")[currId - 1];
-                let inputs = theID.getElementsByTagName("input");
+            if (currId > 0) {
 
                 for (var i = 0; i < inputs.length; i++) {
-                    inputs[i].id = inputs[i].id + '[' + currId + ']';
-                    inputs[i].name = inputs[i].name + '[' + currId + ']';
+                    inputs[i].id = inputs[i].id + '--' + currId;
+                    inputs[i].name = inputs[i].name + '--' + currId;
                 };
 
                 let selects = theID.getElementsByTagName("select");
                 for (var i = 0; i < selects.length; i++) {
-                    selects[i].id = selects[i].id + '[' + currId + ']';
-                    selects[i].name = selects[i].name + '[' + currId + ']';
+                    selects[i].id = selects[i].id + '--' + currId;
+                    selects[i].name = selects[i].name + '--' + currId;
+                };
+
+                let labels = theID.getElementsByClassName("form-control-label")
+                for (var i = 0; i < labels.length; i++) {
+                    labels[i].id = labels[i].id + '--' + currId;
+                };
+
+                let helps = theID.getElementsByClassName("help-block")
+                for (var i = 0; i < helps.length; i++) {
+                    helps[i].id = helps[i].id.replace('-help-block', '') + '--' + currId +'-help-block';
                 };
 
             };
 
+            //wapi_dropzone.disable();
+            // $('#profile-id-type-select').val('');
+
+            // let issueOptions = {
+            //     format: 'dd/mm/yyyy',
+            //     editable: false,
+            //     selectYears: 10,
+            //     selectMonths: true,
+            //     formatSubmit: 'yyyy-mm-ddT00:00:00',
+            //     hiddenName: true,
+            //     min: -3650,
+            //     max: true,
+            //     showMonthsShort: true
+            // }
+            // let expiryOptions = {
+            //     format: 'dd/mm/yyyy',
+            //     editable: false,
+            //     selectYears: 10,
+            //     selectMonths: true,
+            //     formatSubmit: 'yyyy-mm-ddT00:00:00',
+            //     hiddenName: true,
+            //     min: -365,
+            //     max: 3650,
+            //     showMonthsShort: true
+            // }
+
+            // let issueDateId = "customers-pictureid_issuedate-input--"+currId;
+            // let expiryDateId = "customers-pictureid_expirydate-input--"+currId;
+
+            // $('[id='+issueDateId+']').pickadate(issueOptions);
+            // $('[id='+expiryDateId+']').pickadate(expiryOptions);
+
+            wapiObjectMethod(event);
+
+        }
+    </script>
+
+    <script>
+        function removeDropZone(file) {
+            debugger;
+            wapiObjectMethod(event);
+           // $("#wapi-dropzone-add-group").show();
+           // $('#profile-id-type-select').val(''); 
         }
     </script>
 
@@ -633,9 +690,8 @@
     </script>
 
     <script type="text/javascript">
-        console.trace;
         $('.btnNext').click(function () {
-            debugger;
+
             let thePill = $('.nav-pills > .active').next('li').find('a');
             thePill.trigger('click');
             $('html, body').animate({
@@ -651,6 +707,64 @@
                 scrollTop: 200
             }, '300');
         });
+    </script>
+
+    <script>
+        function addDropZone2(file) {
+            //addedfile(file) {
+            debugger;
+            if (this.element === this.previewsContainer) {
+                this.element.classList.add("dz-started");
+            }
+
+            if (this.previewsContainer && !this.options.disablePreviews) {
+                file.previewElement = Dropzone.createElement(
+                    this.options.previewTemplate.trim()
+                );
+                file.previewTemplate = file.previewElement; // Backwards compatibility
+
+                this.previewsContainer.appendChild(file.previewElement);
+                for (var node of file.previewElement.querySelectorAll("[data-dz-name]")) {
+                    node.textContent = file.name;
+                }
+                for (node of file.previewElement.querySelectorAll("[data-dz-size]")) {
+                    node.innerHTML = this.filesize(file.size);
+                }
+
+                if (this.options.addRemoveLinks) {
+                    file._removeLink = Dropzone.createElement(
+                        `<a class="dz-remove" href="javascript:undefined;" data-dz-remove>${this.options.dictRemoveFile}</a>`
+                    );
+                    file.previewElement.appendChild(file._removeLink);
+                }
+
+                let removeFileEvent = (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (file.status === Dropzone.UPLOADING) {
+                        return Dropzone.confirm(
+                            this.options.dictCancelUploadConfirmation,
+                            () => this.removeFile(file)
+                        );
+                    } else {
+                        if (this.options.dictRemoveFileConfirmation) {
+                            return Dropzone.confirm(
+                                this.options.dictRemoveFileConfirmation,
+                                () => this.removeFile(file)
+                            );
+                        } else {
+                            return this.removeFile(file);
+                        }
+                    }
+                };
+
+                for (let removeLink of file.previewElement.querySelectorAll(
+                        "[data-dz-remove]"
+                    )) {
+                    removeLink.addEventListener("click", removeFileEvent);
+                }
+            }
+        }
     </script>
 
 

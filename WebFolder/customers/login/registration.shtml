@@ -58,7 +58,7 @@
                                         <label>Username</label>
                                         <div class="input-group" data-validate="webUserName">
                                             <input type="text" name="userName" id="userName"
-                                                placeholder="Enter username" value="" required class="form-control"
+                                                placeholder="Enter username.." value="" required class="form-control"
                                                 onchange="wapiObjectMethod(event)">
                                             <span class="input-group-addon default">
                                                 <span class="fas fa-user"></span>
@@ -90,7 +90,7 @@
                                             </div>
 
                                             <input type="text" class="form-control" name="userPhone" id="userPhone"
-                                                placeholder="Enter a contact phone number" value="" required
+                                                placeholder="Enter a contact phone number.." value="" required
                                                 class="form-control" onchange="wapiObjectMethod(event)">
                                             <div class="input-group-addon">
                                                 <span class="fa fa-phone"></span>
@@ -138,11 +138,11 @@
                                 <div class="row">
 
                                     <div class="col-sm-12 form-group">
-                                        <label>eMail</label>
+                                        <label>Email</label>
 
                                         <div class="input-group" data-validate="email">
                                             <input type="text" name="userEmail" id="userEmail"
-                                                placeholder="Enter Email Address Here.." value="" required
+                                                placeholder="Enter email address here.." value="" required
                                                 class="form-control">
                                             <span class="input-group-addon danger">
                                                 <span class="glyphicon glyphicon-remove"></span>
@@ -157,11 +157,11 @@
 
 
                                     <div class="col-sm-12 form-group">
-                                        <label>Validate email</label>
+                                        <label>Validate Email</label>
 
                                         <div class="input-group" data-validate="userEmail_again">
                                             <input type="text" name="userEmail_again" id="userEmail_again"
-                                                placeholder="Enter Email Address Here .." value="" required
+                                                placeholder="Enter email address here .." value="" required
                                                 class="form-control" onchange="wapiObjectMethod(event)">
                                             <span class="input-group-addon danger">
                                                 <span class="glyphicon glyphicon-remove"></span>

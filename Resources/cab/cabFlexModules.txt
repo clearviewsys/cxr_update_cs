@@ -1,0 +1,125 @@
+MODULE_ID	MODULE_DESC
+AC	Accounting
+AE	Auto End of Day
+AM	Asset Management
+AO	Account Origination
+BC	Bills and Collections
+BL	Billing
+BR	Brokerage
+CA	CASA
+CB	Cobranza
+CC	Connector Oracle Identity Manager
+CD	Corporate Deposits
+CF	The ICCF
+CG	CLEARING
+CH	Commercial Leasing
+CI	Islamic Financing
+CJ	Commercial Loans
+CK	Commercial Loans Origination
+CL	Retail Lending
+CM	Cash Management
+CN	Collections
+CO	Core Services
+CP	Credit Lines Origination
+CS	Core
+CV	Conversion
+CY	The ccy
+DA	Discount Accrual
+DD	Demand Draft
+DE	Data Entry
+DL	Deposit Locker
+DV	Derivatives
+DX	Data Extraction
+EC	ETD for Currency Futures & Options
+ED	Exchange Traded Derivatives
+EE	ETD  Equity&Index Futures&Options
+EF	ETD for Commodity Futures & Options
+EI	End of Cycle
+EN	EXCHANGE DERIVATIVES
+EP	ETD Portfolio Product
+ET	ETD Deal Product
+FA	Fixed Assets
+FI	Islamic Assets
+FS	FX Settlements
+FT	Funds Transfer
+FX	Foreign Exchange
+GA	Cost Allocation
+GC	Global Exposure
+GE	Global Exposure
+GI	Generic Interface
+GL	Gen Led
+IA	Islamic Asset Management
+IB	Islamic Bills and Collections
+IC	Interest And Charges
+ID	Islamic Derivatives
+IF	Interfaces
+II	Islamic Integrated Liq Management
+IL	Integrated Liquidity Management
+IN	Intermediary
+IP	Profit and Charges
+IR	Interactive Voice Response
+IS	Settlement Instructions
+IT	Interactions
+IV	Inventory
+IZ	Islamic Securitization of Loans
+LC	Letters Of Credit
+LD	Loans and Deposits
+LE	Leasing
+LI	Islamic Letters Of Credit
+LL	Participant Tranches and Drawdowns
+LM	Limits
+LN	Loan Syndication
+LO	Letters of Credit Origination
+LQ	Receivable Liquidation
+LS	Syndication Loans and Commitments
+MB	Millionaire Certificates
+MC	Islamic Money Market
+MF	Micro Finance
+MG	Margin Management
+MI	Management Information System
+MM	Money Market
+MO	Mortgages
+MS	Messaging
+NR	Reconciliation System
+NT	Netting Across Modules
+OB	Security Management System
+OF	Testing Workbench
+OI	OTC Interest Rate Options
+OP	Branch Vault
+OR	Origination
+OT	OTC Options
+PC	Local Payments
+PD	Post Dated Cheques
+PI	Product Interfacing
+PM	Flexcube Payments
+PR	Rtgs Payments
+PS	Point of Sale Interface
+PX	Cross Border Payments
+RB	Retail Bills
+RD	Development Workbench
+RE	Reconciliation System
+RF	Retail Funds Transfer
+RP	Reporting System
+RR	Relationship Pricing
+RT	Retail Teller
+SD	Securities Deal Module
+SE	SECURITIES
+SF	Structure Deposit
+SI	Standing Instruction
+SL	SALARY CREDIT
+SM	Security Management System
+SP	Securities Portfolio Module
+SR	Securities Repo and Reverse Repo
+SS	Securities Security Module
+ST	Static Maintenance
+SV	Signature Verification
+SW	Switch Interface
+SZ	Securitization of Loans
+TA	The Tax
+UP	Utility Payments
+VP	Vendor Payment
+WB	FLEXCUBE Web Branch
+XP	Expense Processing
+GW	Gateway Maintenance
+UD	User Defined Fields
+DQ	Delinquency

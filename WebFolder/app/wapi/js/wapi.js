@@ -228,7 +228,7 @@ function wapiSubmitFormData(theForm) {
 
 //wapiObjectMethod CODE -->
 function wapiObjectMethod(event) {
-    //debugger;
+    debugger;
 
     var isOnLoad = false;
 
@@ -238,11 +238,15 @@ function wapiObjectMethod(event) {
     } else if ((event.type == 'DOMContentLoaded') || (event.type == 'readystatechange')) {
         var theForm = $('form').attr('id');
         isOnLoad = true;
+    } else if (this.event.target.id.startsWith('dz-remove-btn')) {
+	    var theForm = wapi_dropzone.element.id
     } else {
         var theForm = this.event.target.closest('form').id;
     };
 
+if (theForm !== ''){
     var formData = wapiGetFormData(theForm);
+    };
 
     if ((event === undefined) || (isOnLoad == true)) {
         $.post('objectmethod', {

@@ -86,7 +86,7 @@
                     </div>
                 </div>
 
-
+<!--#4DIF (webIsUserApproved)-->
                 <!-- DASHBOARD OPTONS -->
                 <div class="row" style="padding-top: 10px">
 
@@ -645,7 +645,7 @@
                     <!--#4DENDIF-->
 
                 </div>
-
+<!--#4DENDIF-->
 
         </div>
 

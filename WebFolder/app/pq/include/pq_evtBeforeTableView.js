@@ -1,4 +1,4 @@
-           obj.beforeTableView = function (evt, ui) {
+
 
                 var initV = ui.initV,
                     finalV = ui.finalV,
@@ -7,8 +7,6 @@
                     requestPage;
 
                 if (initV != null) {
-
-
                     //if records to be displayed in viewport are not present in local cache,
                     //then fetch them from remote database/server.
 
@@ -30,4 +28,4 @@
                     }
                 };
                 
-            };     
+ 

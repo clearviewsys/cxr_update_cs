@@ -1,0 +1,15 @@
+<div class="container content">
+    <!--#4DSCRIPT/webRedirectIfNotAuthorized-->
+    <!--#4DSCRIPT/webSelectAgentRecord-->
+
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+            <!--#4DSCRIPT/WAPI_formHeader/{form:modal-form, table:links, primarykey:links___linkid, success:home.shtml, print:/customers/links-print.shtml, readonly:true, onload:true}-->
+
+            <!--#4DSCRIPT/WAPI_4DInclude/customers/links-form.shtml-->
+
+        </div>
+    </div>
+
+</div>
