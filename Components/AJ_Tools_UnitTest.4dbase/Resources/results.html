@@ -474,8 +474,8 @@
 
 <body>
   
-  <span class="badge badge-success">Total : 4</span>
-  <span class="badge badge-success">Pass : 4</span>
+  <span class="badge badge-success">Total : 13</span>
+  <span class="badge badge-success">Pass : 13</span>
   <span class="badge badge-danger">Fail : 0</span>
   
   
@@ -486,13 +486,13 @@
       <div class="card-header text-white bg-success" id="category0_header"
         data-toggle="collapse" data-target="#category0_body" aria-expanded="true"
         aria-controls="category0_body">
-        <span style="font-size:21pt"><b>Validation</b></span>
+        <span style="font-size:21pt"><b>Utilities</b></span>
       </div>
       <div id="category0_body" class="collapse show" aria-labelledby="category0_header">
         <div class="card-body">
 
-          <span class="badge badge-success">Total : 4</span>
-          <span class="badge badge-success">Pass : 4</span>
+          <span class="badge badge-success">Total : 13</span>
+          <span class="badge badge-success">Pass : 13</span>
           <span class="badge badge-danger">Fail : 0</span>
 
           
@@ -503,9 +503,9 @@
               <div class="card-header text-white bg-success" id="description0_0_header"
                 data-toggle="collapse" data-target="#description0_0_body" aria-expanded="true"
                 aria-controls="description0_0_body">
-                <span style="font-size:17pt">Validate JSON With File</span>
+                <span style="font-size:17pt">utils_getValueFromObject</span>
                 <button onClick="methodButton_cb(event)"
-                  data-methodname="ut_valdiateJsonWithFile"
+                  data-methodname="ut_getValueFromObject"
                   class="methodButton btn btn-primary">Open Method</button>
               </div>
               <div id="description0_0_body" class="collapse show"
@@ -513,9 +513,9 @@
                 <div class="card-body">
 
                   <span class="badge badge-success">Total :
-                    4</span>
+                    13</span>
                   <span class="badge badge-success">Pass :
-                    4</span>
+                    13</span>
                   <span class="badge badge-danger">Fail :
                     0</span>
 
@@ -529,17 +529,17 @@
                       <div class="card-header text-white bg-success" id="test0_0_0_header"
                         data-toggle="collapse" data-target="#test0_0_0_body" aria-expanded="true"
                         aria-controls="test0_0_0_body">
-                        #1 ok - Given Schema not found: should error object
+                        #1 ok - Given null object: should return default
                       </div>
                       <div id="test0_0_0_body" class="collapse hide"
                         aria-labelledby="test0_0_0_header">
                         <div class="card-body">
                           <div class="text-success">Expected : <br />
-                            <div class="expected">{"success":false,"errors":[{"message":"The system cannot find the file specified.\r\n"}]}</div>
+                            <div class="expected">2</div>
                           </div>
                           <br />
                           <div class="text-success"> Actual : <br />
-                            <div class="actual success">{"success":false,"errors":[{"message":"The system cannot find the file specified.\r\n"}]}</div>
+                            <div class="actual success">2</div>
                           </div>
                         </div>
                       </div>
@@ -555,17 +555,17 @@
                       <div class="card-header text-white bg-success" id="test0_0_1_header"
                         data-toggle="collapse" data-target="#test0_0_1_body" aria-expanded="true"
                         aria-controls="test0_0_1_body">
-                        #2 ok - Given Schema is malformed: should error object
+                        #2 ok - Given unknown key: should return default
                       </div>
                       <div id="test0_0_1_body" class="collapse hide"
                         aria-labelledby="test0_0_1_header">
                         <div class="card-body">
                           <div class="text-success">Expected : <br />
-                            <div class="expected">{"success":false,"errors":[{"message":"JSON malformed. Was expecting: \" }."}]}</div>
+                            <div class="expected">20</div>
                           </div>
                           <br />
                           <div class="text-success"> Actual : <br />
-                            <div class="actual success">{"success":false,"errors":[{"message":"JSON malformed. Was expecting: \" }."}]}</div>
+                            <div class="actual success">20</div>
                           </div>
                         </div>
                       </div>
@@ -581,17 +581,17 @@
                       <div class="card-header text-white bg-success" id="test0_0_2_header"
                         data-toggle="collapse" data-target="#test0_0_2_body" aria-expanded="true"
                         aria-controls="test0_0_2_body">
-                        #3 ok - Given No JSON: should error object
+                        #3 ok - Given mismatch value type: should return default
                       </div>
                       <div id="test0_0_2_body" class="collapse hide"
                         aria-labelledby="test0_0_2_header">
                         <div class="card-body">
                           <div class="text-success">Expected : <br />
-                            <div class="expected">{"success":false,"errors":[{"message":"JSON is a null object."}]}</div>
+                            <div class="expected">default</div>
                           </div>
                           <br />
                           <div class="text-success"> Actual : <br />
-                            <div class="actual success">{"success":false,"errors":[{"message":"JSON is a null object."}]}</div>
+                            <div class="actual success">default</div>
                           </div>
                         </div>
                       </div>
@@ -607,17 +607,251 @@
                       <div class="card-header text-white bg-success" id="test0_0_3_header"
                         data-toggle="collapse" data-target="#test0_0_3_body" aria-expanded="true"
                         aria-controls="test0_0_3_body">
-                        #4 ok - Given Invlid JSON: should error object
+                        #4 ok - Given match value: should return value
                       </div>
                       <div id="test0_0_3_body" class="collapse hide"
                         aria-labelledby="test0_0_3_header">
                         <div class="card-body">
                           <div class="text-success">Expected : <br />
-                            <div class="expected">{"success":false,"errors":[{"jsonPath":"name","code":20,"message":"Incorrect type. Expected type is: string","schemaPaths":"properties.name.type"}]}</div>
+                            <div class="expected">5</div>
                           </div>
                           <br />
                           <div class="text-success"> Actual : <br />
-                            <div class="actual success">{"success":false,"errors":[{"jsonPath":"name","code":20,"message":"Incorrect type. Expected type is: string","schemaPaths":"properties.name.type"}]}</div>
+                            <div class="actual success">5</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  
+                  
+
+                  <div class="accordion" id="test0_0_4">
+                    <div class="card border-success">
+                      <div class="card-header text-white bg-success" id="test0_0_4_header"
+                        data-toggle="collapse" data-target="#test0_0_4_body" aria-expanded="true"
+                        aria-controls="test0_0_4_body">
+                        #5 ok - Given unknown child key: should return default
+                      </div>
+                      <div id="test0_0_4_body" class="collapse hide"
+                        aria-labelledby="test0_0_4_header">
+                        <div class="card-body">
+                          <div class="text-success">Expected : <br />
+                            <div class="expected">20</div>
+                          </div>
+                          <br />
+                          <div class="text-success"> Actual : <br />
+                            <div class="actual success">20</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  
+                  
+
+                  <div class="accordion" id="test0_0_5">
+                    <div class="card border-success">
+                      <div class="card-header text-white bg-success" id="test0_0_5_header"
+                        data-toggle="collapse" data-target="#test0_0_5_body" aria-expanded="true"
+                        aria-controls="test0_0_5_body">
+                        #6 ok - Given unknown child leaf key: should return default
+                      </div>
+                      <div id="test0_0_5_body" class="collapse hide"
+                        aria-labelledby="test0_0_5_header">
+                        <div class="card-body">
+                          <div class="text-success">Expected : <br />
+                            <div class="expected">20</div>
+                          </div>
+                          <br />
+                          <div class="text-success"> Actual : <br />
+                            <div class="actual success">20</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  
+                  
+
+                  <div class="accordion" id="test0_0_6">
+                    <div class="card border-success">
+                      <div class="card-header text-white bg-success" id="test0_0_6_header"
+                        data-toggle="collapse" data-target="#test0_0_6_body" aria-expanded="true"
+                        aria-controls="test0_0_6_body">
+                        #7 ok - Given mismatch child leaf value type: should return default
+                      </div>
+                      <div id="test0_0_6_body" class="collapse hide"
+                        aria-labelledby="test0_0_6_header">
+                        <div class="card-body">
+                          <div class="text-success">Expected : <br />
+                            <div class="expected">default</div>
+                          </div>
+                          <br />
+                          <div class="text-success"> Actual : <br />
+                            <div class="actual success">default</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  
+                  
+
+                  <div class="accordion" id="test0_0_7">
+                    <div class="card border-success">
+                      <div class="card-header text-white bg-success" id="test0_0_7_header"
+                        data-toggle="collapse" data-target="#test0_0_7_body" aria-expanded="true"
+                        aria-controls="test0_0_7_body">
+                        #8 ok - Given match child leaf value: should return value
+                      </div>
+                      <div id="test0_0_7_body" class="collapse hide"
+                        aria-labelledby="test0_0_7_header">
+                        <div class="card-body">
+                          <div class="text-success">Expected : <br />
+                            <div class="expected">1</div>
+                          </div>
+                          <br />
+                          <div class="text-success"> Actual : <br />
+                            <div class="actual success">1</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  
+                  
+
+                  <div class="accordion" id="test0_0_8">
+                    <div class="card border-success">
+                      <div class="card-header text-white bg-success" id="test0_0_8_header"
+                        data-toggle="collapse" data-target="#test0_0_8_body" aria-expanded="true"
+                        aria-controls="test0_0_8_body">
+                        #9 ok - Given unknown child branch key: should return default
+                      </div>
+                      <div id="test0_0_8_body" class="collapse hide"
+                        aria-labelledby="test0_0_8_header">
+                        <div class="card-body">
+                          <div class="text-success">Expected : <br />
+                            <div class="expected">20</div>
+                          </div>
+                          <br />
+                          <div class="text-success"> Actual : <br />
+                            <div class="actual success">20</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  
+                  
+
+                  <div class="accordion" id="test0_0_9">
+                    <div class="card border-success">
+                      <div class="card-header text-white bg-success" id="test0_0_9_header"
+                        data-toggle="collapse" data-target="#test0_0_9_body" aria-expanded="true"
+                        aria-controls="test0_0_9_body">
+                        #10 ok - Given grandchild key is a leaf: should return default
+                      </div>
+                      <div id="test0_0_9_body" class="collapse hide"
+                        aria-labelledby="test0_0_9_header">
+                        <div class="card-body">
+                          <div class="text-success">Expected : <br />
+                            <div class="expected">20</div>
+                          </div>
+                          <br />
+                          <div class="text-success"> Actual : <br />
+                            <div class="actual success">20</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  
+                  
+
+                  <div class="accordion" id="test0_0_10">
+                    <div class="card border-success">
+                      <div class="card-header text-white bg-success" id="test0_0_10_header"
+                        data-toggle="collapse" data-target="#test0_0_10_body" aria-expanded="true"
+                        aria-controls="test0_0_10_body">
+                        #11 ok - Given unknown grandchild leaf key: should return default
+                      </div>
+                      <div id="test0_0_10_body" class="collapse hide"
+                        aria-labelledby="test0_0_10_header">
+                        <div class="card-body">
+                          <div class="text-success">Expected : <br />
+                            <div class="expected">20</div>
+                          </div>
+                          <br />
+                          <div class="text-success"> Actual : <br />
+                            <div class="actual success">20</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  
+                  
+
+                  <div class="accordion" id="test0_0_11">
+                    <div class="card border-success">
+                      <div class="card-header text-white bg-success" id="test0_0_11_header"
+                        data-toggle="collapse" data-target="#test0_0_11_body" aria-expanded="true"
+                        aria-controls="test0_0_11_body">
+                        #12 ok - Given mismatch grandchild leaf value type: should return default
+                      </div>
+                      <div id="test0_0_11_body" class="collapse hide"
+                        aria-labelledby="test0_0_11_header">
+                        <div class="card-body">
+                          <div class="text-success">Expected : <br />
+                            <div class="expected">default</div>
+                          </div>
+                          <br />
+                          <div class="text-success"> Actual : <br />
+                            <div class="actual success">default</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  
+                  
+
+                  <div class="accordion" id="test0_0_12">
+                    <div class="card border-success">
+                      <div class="card-header text-white bg-success" id="test0_0_12_header"
+                        data-toggle="collapse" data-target="#test0_0_12_body" aria-expanded="true"
+                        aria-controls="test0_0_12_body">
+                        #13 ok - Given match grandchild leaf key: should return value
+                      </div>
+                      <div id="test0_0_12_body" class="collapse hide"
+                        aria-labelledby="test0_0_12_header">
+                        <div class="card-body">
+                          <div class="text-success">Expected : <br />
+                            <div class="expected">4</div>
+                          </div>
+                          <br />
+                          <div class="text-success"> Actual : <br />
+                            <div class="actual success">4</div>
                           </div>
                         </div>
                       </div>

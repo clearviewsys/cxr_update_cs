@@ -147,8 +147,6 @@ pqListbox.init();
                         <!--#4DSCRIPT/WAPI_ColModel/{field:invoices___printRemarks, title:Notes, filter:true, hidden:false, width:300} -->,
                     ];
 
-
-
                     obj.rowDblClick = function(evt, ui) {
 
                         var id = ui.rowData.invoices___invoiceid;
@@ -334,11 +332,11 @@ pqListbox.init();
 
                         <!--#4DSCRIPT/WAPI_getColModelColumn/{field:webewires___webewireid, filter:false, hidden:false, width:100} -->,
 
-                        <!--#4DSCRIPT/WAPI_getColModelColumn/{function:webGetWebewireMgReferenceNum, title:MG-Ref-Num, filter:false, hidden:false, width:110} -->,
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{function:webGetWebewireMgReferenceNum, title:MG-Ref-Num, filter:false, hidden:true, width:110} -->,
                         
                         <!--#4DSCRIPT/WAPI_getColModelColumn/{field:webewires___creationdate, title:Date ,filter:false, align:center, width:80} -->,   		
 
-                        <!--#4DSCRIPT/WAPI_ColModel/{field:webewires___status, title:Status, filter:false, width:120} -->,
+                        <!--#4DSCRIPT/WAPI_ColModel/{field:webewires___status, title:Status, filter:false, width:120, hidden:true} -->,
 
                         <!--#4DSCRIPT/WAPI_getColModelColumn/{function:webGetWebewireStatusText, title:Status, filter:false, hidden:false, width:120} -->,
 
@@ -347,8 +345,8 @@ pqListbox.init();
                         <!--#4DSCRIPT/WAPI_getColModelColumn/{field:webewires___fromCCY,title:From CCY, filter:false} -->,
                         <!--#4DSCRIPT/WAPI_getColModelColumn/{field:webewires___toCCY,title:To CCY, filter:false} -->,
 
-                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:webewires___directrate,title:Rate, filter:false, maxWidth:50} -->,
-                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:webewires___fromamount,title:From-Amt, format:currency , filter:false, width:80} -->,
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:webewires___directrate,title:Rate, filter:false, width:100} -->,
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:webewires___fromamount,title:From-Amt, filter:false, width:80} -->,
                         <!--#4DSCRIPT/WAPI_getColModelColumn/{field:webewires___toamount,title:To-Amt, format:currency, filter:false, width:80} -->,
 
                         <!--#4DSCRIPT/WAPI_getColModelColumn/{field:webewires___notes,title:Notes, filter:false, width:300} -->,
