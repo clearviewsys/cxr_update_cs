@@ -4,6 +4,31 @@
 <head>
     <!--#4DSCRIPT/WAPI_4DInclude/sanction/include/head.shtml-->
     <!--#4DSCRIPT/WAPI_pageStart/{onload:true, sessiontimer:false}-->
+
+<!-- PQGRID FUNCTION -->
+<script> 
+   function loadGrid() {
+        var data =[];
+
+        var obj = {
+            width: "100%",
+            height: 200,
+            resizable: true,
+            title: "Grid From JSON",
+            showBottom: false,
+            scrollModel: { autoFit: true },
+            dataModel: { data: data }
+        };
+        $("#sanction-screen-results").pqGrid(obj);
+    }
+</script>
+
+<script>
+    $(document).ready(function(){
+        loadGrid(); //get current rates and values applied right away from 4D
+    });
+</script>
+
 </head>
 
 <body>
@@ -28,38 +53,56 @@
                             </div>
                             <div class="panel-body">
 
-
                                 <div class="form-group">
-                                    <label class="form-control-label" for="sanction-oracle-id-search-input"
-                                        id="sanction-oracle-id-search-label">Oracle Customer ID</label> <input type="text"
-                                        class="form-control wapi-pattern" id="sanction-oracle-id-search-input"
-                                        name="sanction-oracle-id-search-input" placeholder="Oracle customer id to search"
-                                        onchange="wapiShowProcessing(true) ;wapiObjectMethod(event)"> <span id="sanction-oracle-id-search-input-help-block"
+                                    <label class="form-control-label" for="sanction-firstname-input"
+                                        id="sanction-firstname-label">First Name</label> <input type="text"
+                                        class="form-control wapi-pattern" id="sanction-firstname-input"
+                                        name="sanction-firstname-input" placeholder="first name to search"> <span id="sanction-firstname-input-help-block"
                                         class="help-block"></span>
                                 </div>
                                
+                                <div class="form-group">
+                                    <label class="form-control-label" for="sanction-lastname-input"
+                                        id="sanction-lastname-label">Last Name</label> <input type="text"
+                                        class="form-control wapi-pattern" id="sanction-lastname-input"
+                                        name="sanction-lastname-input" placeholder="Last name to search"> <span id="sanction-lastname-input-help-block"
+                                        class="help-block"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-control-label" for="sanction-country-input"
+                                        id="sanction-country-label">Country</label> <input type="text"
+                                        class="form-control wapi-pattern" id="sanction-country-input"
+                                        name="sanction-country-input" placeholder="Country to search"> <span id="sanction-country-input-help-block"
+                                        class="help-block"></span>
+                                </div>
+
+                                <div style="padding-top: 10px">
+                                    <input type="button" class="btn btn-primary btn-block" id="sanction-screen-btn"
+                                        name="sanction-screen-btn" value="Screen"
+                                        onclick="updateGrid()">
+                                </div>
 
                                 <div id="sanction-oracle-id-data"></div>
                                 <div id="sanction-oracle-id-data-hidden">
                                     <input type="hidden" id="sanction-oracle-id-input" name="sanction-oracle-id-input" value="">
                                 </div>
-                                <div id="sanction-oracle-id-results"></div>
-
-                                <div style="padding-top: 10px">
-                                    <input type="button" class="btn btn-primary btn-block" id="sanction-screen-btn"
-                                        name="sanction-screen-btn" value="Screen"
-                                        onclick="wapiShowProcessing(true) ;wapiObjectMethod(event)" disabled>
-                                </div>
 
                             </div>
                         </div>
 
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div id="sanction-screen-results"></div>
+
+                        <div style="padding-top: 10px">
+                            <input type="button" class="btn btn-primary btn-block" id="sanction-update-btn" name="sanction-update-btn" value="Update Test - Save Results" onclick="updateGrid()">
+                        </div>
+                        </div>
+                        </div>
                     </div>
 
-
                 </div>
-
-
         </div>
 
         </form>
@@ -73,5 +116,33 @@
 
 </body>
 
+<script>
+function updateGrid() {
+//setter
+debugger;
+var data = [
+            { rank: 1, company: 'Exxon Mobil', revenues: 339938.0, profits: 36130.0 },
+            { rank: 2, company: 'Wal-Mart Stores', revenues: 315654.0, profits: 11231.0 },
+            { rank: 3, company: 'Dutch Shell', revenues: 306731.0, profits: 25311.0 }];
+
+            var obj = {
+            width: "100%",
+            height: 200,
+            resizable: true,
+            title: "Grid From JSON",
+            showBottom: false,
+            scrollModel: { autoFit: true },
+            dataModel: { data: data }
+        };
+
+        $("#sanction-screen-results").pqGrid( "destroy" );
+        $("#sanction-screen-results").pqGrid(obj);
+
+
+//pq.grid('#sanction-screen-results').option( "dataModel.data", data );
+//setter of dataModel.data is followed by refreshDataAndView method call.
+//pq.grid('#sanction-screen-results').refreshDataAndView()
+}
+</script>
 
 </html>
