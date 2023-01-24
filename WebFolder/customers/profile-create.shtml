@@ -287,7 +287,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <!--#4DIF false-->
+                                            <!--#4DIF (webgetkeyvalue("web.customers.module.quotes.useCustomerCountry")="true")-->
                                             <!--#4DSCRIPT/WAPI_formGroup/{field:customers___countrycode, label:Country, choicelist:webGetChoiceListCountries, readonly:false}-->
                                             <!--#4DELSE-->
                                             <label class="form-control-label" for="customers-countrycode-input"
@@ -298,19 +298,18 @@
                                             <!--#4DENDIF-->
                                         </div>
 
-
                                         <div class="form-group">
                                             <!--#4DSCRIPT/WAPI_formGroup/{field:customers___citizenshipcountrycode, label:Citizenship-Country, choicelist:webGetChoiceListCountries, readonly:false, tooltip:This-is-the-country-that-you-are-currently-a-citizen-of}-->
                                         </div>
-
-
 
                                         <div class="form-group">
                                             <!--#4DSCRIPT/WAPI_formGroup/{field:customers___countryofbirthcode, label:Country-of-Birth, choicelist:webGetChoiceListCountries, readonly:false, tooltip:This-is-the-country-that-you-were-born-in}-->
                                         </div>
 
+                                        <!--#4DIF false-->
+                                        <!--map country of residence to mailing country-->
                                         <div class="form-group">
-                                            <!--#4DIF false-->
+                                            <!--#4DIF (webgetkeyvalue("web.customers.module.quotes.useCustomerCountry")="true")-->
                                             <!--#4DSCRIPT/WAPI_formGroup/{field:customers___countryofresidencecode, label:Country-of-Residence, choicelist:webGetChoiceListCountries, readonly:false, tooltip:This-is-the-country-that-you-are-currently-a-resident-of}-->
                                             <!--#4DELSE-->
                                             <label class="form-control-label"
@@ -322,7 +321,7 @@
                                                 value="<!--#4DVAR <>CountryCode-->" readonly>
                                             <!--#4DENDIF-->
                                         </div>
-
+<!--#4DENDIF-->
 
                                     </div>
 
