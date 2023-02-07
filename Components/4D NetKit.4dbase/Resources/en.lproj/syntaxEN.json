@@ -1,21 +1,5 @@
 {
 	"_method_": {
-		"New OAuth2 provider": {
-			"Syntax": "**New OAuth2 provider**(*inParameters* : Object)->provider : Object",
-			"Params": [
-				[
-					"inParameters",
-					"Object",
-					"->"
-				],
-				[
-					"provider",
-					"Object",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
 		"New Office365 provider": {
 			"Syntax": "**New Office365 provider**(*inOAuth2Provider* : cs.NetKit.OAuth2Provider; *inParameters* : Object)->provider : Object",
 			"Params": [
@@ -36,12 +20,21 @@
 				]
 			],
 			"Summary": ""
-		}
-	},
-	"_BaseClass": {
-		"new()": {
-			"Syntax": "**.new**()",
-			"Params": [],
+		},
+		"New OAuth2 provider": {
+			"Syntax": "**New OAuth2 provider**(*inParameters* : Object)->provider : Object",
+			"Params": [
+				[
+					"inParameters",
+					"Object",
+					"->"
+				],
+				[
+					"provider",
+					"Object",
+					"<-"
+				]
+			],
 			"Summary": ""
 		}
 	},
@@ -85,9 +78,16 @@
 			"Summary": ""
 		}
 	},
-	"_GraphAPI": {
+	"_BaseClass": {
 		"new()": {
-			"Syntax": "**.new**(*inOAuth2Provider* : cs.NetKit.OAuth2Provider; *inURL* : Text)",
+			"Syntax": "**.new**()",
+			"Params": [],
+			"Summary": ""
+		}
+	},
+	"_UserInformationList": {
+		"new()": {
+			"Syntax": "**.new**(*inOAuth2Provider* : cs.NetKit.OAuth2Provider; *inURL* : Text; *inHeaders* : Object)",
 			"Params": [
 				[
 					"inOAuth2Provider",
@@ -98,6 +98,58 @@
 					"inURL",
 					"Text",
 					"->"
+				],
+				[
+					"inHeaders",
+					"Object",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"previous()": {
+			"Syntax": "**.previous**() : Boolean",
+			"Params": [
+				[
+					"",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"next()": {
+			"Syntax": "**.next**() : Boolean",
+			"Params": [
+				[
+					"",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"_inheritedFrom_": "_GraphAPI"
+	},
+	"OAuth2Provider": {
+		"new()": {
+			"Syntax": "**.new**(*inParams* : Object)",
+			"Params": [
+				[
+					"inParams",
+					"Object",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"getToken()": {
+			"Syntax": "**.getToken**()->result : Object",
+			"Params": [
+				[
+					"result",
+					"Object",
+					"<-"
 				]
 			],
 			"Summary": ""
@@ -219,9 +271,9 @@
 		},
 		"_inheritedFrom_": "_GraphAPI"
 	},
-	"_UserInformationList": {
+	"_GraphAPI": {
 		"new()": {
-			"Syntax": "**.new**(*inOAuth2Provider* : cs.NetKit.OAuth2Provider; *inURL* : Text; *inHeaders* : Object)",
+			"Syntax": "**.new**(*inOAuth2Provider* : cs.NetKit.OAuth2Provider; *inURL* : Text)",
 			"Params": [
 				[
 					"inOAuth2Provider",
@@ -232,58 +284,6 @@
 					"inURL",
 					"Text",
 					"->"
-				],
-				[
-					"inHeaders",
-					"Object",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"previous()": {
-			"Syntax": "**.previous**() : Boolean",
-			"Params": [
-				[
-					"",
-					"Boolean",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"next()": {
-			"Syntax": "**.next**() : Boolean",
-			"Params": [
-				[
-					"",
-					"Boolean",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"_inheritedFrom_": "_GraphAPI"
-	},
-	"OAuth2Provider": {
-		"new()": {
-			"Syntax": "**.new**(*inParams* : Object)",
-			"Params": [
-				[
-					"inParams",
-					"Object",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"getToken()": {
-			"Syntax": "**.getToken**()->result : Object",
-			"Params": [
-				[
-					"result",
-					"Object",
-					"<-"
 				]
 			],
 			"Summary": ""
