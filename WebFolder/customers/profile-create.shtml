@@ -321,7 +321,7 @@
                                                 value="<!--#4DVAR <>CountryCode-->" readonly>
                                             <!--#4DENDIF-->
                                         </div>
-<!--#4DENDIF-->
+                                        <!--#4DENDIF-->
 
                                     </div>
 
@@ -514,7 +514,8 @@
                         <img class="img-thumbnail" data-dz-thumbnail />
                         <div class="small" style="padding-bottom: 20px; padding-top: 0px">[<span data-dz-size></span>]
                         </div>
-                        <input class="btn btn-default" id="dz-remove-btn" name="dz-remove-btn" type="button" value="Remove ID" data-dz-remove>
+                        <input class="btn btn-default" id="dz-remove-btn" name="dz-remove-btn" type="button"
+                            value="Remove ID" data-dz-remove>
                     </div>
                     <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
                     <div class="dz-success-mark"><span></span></div>
@@ -538,7 +539,7 @@
                     </div>
 
                     <div class="form-group" id="customers-pictureid_number-group">
-                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_number, label:ID-Number, readonly:false}-->
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_number, label:ID-Number, readonly:false, onchange:updatePictureId}-->
                     </div>
 
                     <div class="form-group" id="customers-pictureid_issuedate-group">
@@ -600,10 +601,17 @@
     </script>
 
     <script>
+        function updatePictureId(theEvent) {
+            debugger;
+            $('[id^=customers-pictureid_number-input]').val($(theEvent.target).val());
+        }
+    </script>
+
+    <script>
         function addDropZone(file) {
             debugger;
             let currId = wapi_dropzone.files.length;
-  
+
 
             let theID = wapi_dropzone.previewsContainer.getElementsByClassName("row")[currId - 1];
             let inputs = theID.getElementsByTagName("input");
@@ -629,7 +637,7 @@
 
                 let helps = theID.getElementsByClassName("help-block")
                 for (var i = 0; i < helps.length; i++) {
-                    helps[i].id = helps[i].id.replace('-help-block', '') + '--' + currId +'-help-block';
+                    helps[i].id = helps[i].id.replace('-help-block', '') + '--' + currId + '-help-block';
                 };
 
             };
@@ -675,8 +683,8 @@
         function removeDropZone(file) {
             debugger;
             wapiObjectMethod(event);
-           // $("#wapi-dropzone-add-group").show();
-           // $('#profile-id-type-select').val(''); 
+            // $("#wapi-dropzone-add-group").show();
+            // $('#profile-id-type-select').val(''); 
         }
     </script>
 
