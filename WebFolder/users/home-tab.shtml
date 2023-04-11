@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--#4DSCRIPT/webRedirectIfNotAuthorized-->
+
+    <!--#4DSCRIPT/WAPI_4DInclude/agents/include/head.shtml-->
+
+    <!--#4DSCRIPT/webSelectAgentRecord-->
+
+    <!-- PQGRID FUNCTION - LOADGRID -->
+    <script type="text/javascript">
+        function loadGrid(element, wapi_filter) {
+
+            var theTable = element.id.replace("grid-data-", ""); //get the 4D table name
+
+            if (theTable === undefined) {
+                var theTable = '';
+            };
+
+            var theGrid = theTable
+            var thePos = theTable.indexOf('-');
+            if (thePos >= 0) {
+                theTable = theTable.slice(0, thePos);
+            };
+
+            if (wapi_filter === undefined) {
+                var wapi_filter = {
+                    customers___customerid: "<!--#4DTEXT [Customers]customerid -->"
+                };
+            };
+
+
+            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_gettablename.js-->
+            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_datepicker.js-->  
+            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_viewRecord.js-->  
+            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_commentRender.js--> 
+
+            //--------- INITIALIZATION FUNCTION -----------
+            <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_initGrid.js-->
+
+
+            //--------- DEFINE GRID OBJECT -----------
+            //          NOTE: grid object var = obj
+            var obj = {
+                //create grid with defaults
+                <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_createGrid.js--> 
+                //set override - additional options
+                height: "100%",
+                showTitle: false,
+                rowHt: 35,
+                scrollModel: {
+                    autoFit: false
+                },
+            };
+
+            //----------- CREATE EVENT  -- USED FOR TOOL TIP WIDGET -------------            
+
+
+            //----------- DATA READY EVENT (this sets the listbox title) --------------
+            obj.dataReady = function() {
+                <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_evtDataReady.js-->
+            };
+
+            //---------- BEFORE SORT EVENT ------------     
+            obj.beforeSort = function(evt) {
+                <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_evtBeforeSort.js-->
+            };
+
+            //---------- BEFORE TABLE VIEW EVENT ------------           
+            obj.beforeTableView = function(evt, ui) {
+                <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_evtBeforeTableView.js-->
+            };
+
+            //---------- BEFORE SORT FILTER EVENT ------------ 
+            // --- THIS WILL CLEAR THE LISTBOX SO ONLY NEW RECORDS ARE DISPLAYED ---
+            obj.beforeFilter = function(evt, ui) {
+                pqListbox.init();
+            };
+
+
+
+            //--------------- DEFINE COLUMN MODEL -------------------
+            // ADD COLUMNS TO THE GRID HERE -- USE 4D TABLENAME___FIELDNAME 
+            // THE FIRST COLUMN SHOULD BE THE PK/ID FIELD FOR THE TABLE - YOU CAN SET HIDDEN:TRUE
+            // https://paramquery.com/pro/api#option-colModel <-- doc's and options
+
+
+            switch (theTable) {
+
+                case 'ewires':
+                    obj.colModel = [
+
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:ewires___ewireid, filter:false, hidden:true} -->,
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:ewires___ewireid,title:eWire-ID, filter:false, width:150} -->,
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:ewires___senddate, title:Date ,filter:false, align:center, width:120} -->,   		
+
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:ewires___beneficiaryFullName,title:Beneficiary, filter:false, minWidth:225} -->,
+
+                        //<!--#4DSCRIPT/WAPI_getColModelColumn/{field:customers___fullname,title:Customer, filter:false} -->,           
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:ewires___fromCountryCode,title:From, filter:false, width:75} -->,
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:ewires___toAmount,title:Amt, format:currency, filter:false, width:120} -->,
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:ewires___currency,title:CCY, filter:false, width:75} -->,  
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:ewires___doTransferToBank,title:Bank, filter:false, width:75} -->,  
+                        /*    
+                        { title: "", editable: false, minWidth: 165, sortable: false,
+                                        render: function (ui) {
+                                            return "<button type='button' class='clear_btn'>Clear</button>";
+                                        },
+                                    },
+                            */
+                    ];
+
+                    obj.sortModel = {
+                        sorter: [{
+                            dataIndx: 'ewires___senddate',
+                            dir: 'down'
+                        }],
+                    };
+
+                    switch (wapi_filter) {
+                        case 'received-approved': //ewires to be settled
+                            obj.rowDblClick = function(evt, ui) {
+
+                                var id = ui.rowData.ewires___ewireid;
+                                var name = ui.rowData.ewires___beneficiaryfullname;
+
+                                var viewForm = new FormData();
+
+                                viewForm.append('ewires___ewireid', id);
+                                viewForm.append('table', 'ewires');
+                                viewForm.append('primarykey', 'ewires___ewireid');
+                                viewForm.append('action', 'view');
+                                viewForm.append('readonly', 'true');
+                                viewForm.append('form-post', 'agents/ewires-dialog.shtml');
+
+                                var request = new XMLHttpRequest();
+
+                                request.onreadystatechange = function() {
+                                    if (this.readyState == 4 && this.status == 200) {
+                                        $('#dialog-ewires-body').html(request.responseText) //inject the response page into the dialog div                    
+                                        $('#dialog-ewires').modal('show'); //bootstrap                    
+                                    }
+
+                                };
+
+                                request.responseType = 'text';
+                                request.open('POST', 'postPage');
+                                request.send(viewForm);
+                                request.response
+                            };
+
+                            obj.rowSelect = function(evt, ui) {
+
+                                var row = ui.addList[0];
+                                var id = row.rowData.ewires___ewireid;
+                                var name = row.rowData.ewires___beneficiaryfullname;
+                                var amt = row.rowData.ewires___toamount;
+
+                                $("#ewire-settle-button").val('Settle eWire:   ' + name + ' in the amount of ' + amt);
+                                $("#ewire-settle-button").removeAttr('disabled');
+                                $("[id=ewires-ewireid-input]").val(id);
+                                //alert(str)
+                            };
+                            break;
+
+                        case 'sent-submitted': // ewires to be approved
+                            obj.rowDblClick = function(evt, ui) {
+
+                                var id = ui.rowData.ewires___ewireid;
+                                var name = ui.rowData.ewires___beneficiaryfullname;
+
+                                var viewForm = new FormData();
+
+                                viewForm.append('ewires___ewireid', id);
+                                viewForm.append('table', 'ewires');
+                                viewForm.append('primarykey', 'ewires___ewireid');
+                                viewForm.append('action', 'view');
+                                viewForm.append('readonly', 'true');
+                                viewForm.append('form-post', 'agents/ewires-dialog.shtml');
+
+                                var request = new XMLHttpRequest();
+
+                                request.onreadystatechange = function() {
+                                    if (this.readyState == 4 && this.status == 200) {
+                                        $('#dialog-ewires-body').html(request.responseText) //inject the response page into the dialog div                    
+                                        $('#dialog-ewires').modal('show'); //bootstrap                    
+                                    }
+
+                                };
+
+                                request.responseType = 'text';
+                                request.open('POST', 'postPage');
+                                request.send(viewForm);
+                                request.response
+                            };
+
+                            obj.rowSelect = function(evt, ui) {
+
+                                var row = ui.addList[0];
+                                var id = row.rowData.ewires___ewireid;
+                                var name = row.rowData.ewires___beneficiaryfullname;
+                                var amt = row.rowData.ewires___toamount;
+
+                                $("#ewire-approve-button").val('Approve eWire:   ' + name + ' in the amount of ' + amt);
+                                $("#ewire-approve-button").removeAttr('disabled');
+                                $("[id=ewires-ewireid-input]").val(id);
+                                //alert(str)
+                            };
+                            break;
+                    };
+
+                    //--------------CREATE TOOLBAR  ------------- 
+                    obj.toolbar = {
+                        items: [{
+                                type: 'select',
+                                label: 'Format: ',
+                                attr: 'id="export_format"',
+                                options: [{
+                                    xlsx: 'Excel',
+                                    csv: 'Csv',
+                                    htm: 'Html',
+                                    json: 'Json'
+                                }]
+                            },
+                            {
+                                type: 'button',
+                                label: "Export",
+                                icon: 'ui-icon-arrowthickstop-1-s',
+                                listener: function() {
+
+                                    var format = $("#export_format").val(),
+                                        blob = this.exportData({
+                                            //url: "/pro/demos/exportData",
+                                            format: format,
+                                            nopqdata: true, //applicable for JSON export.                        
+                                            render: true
+                                        });
+                                    if (typeof blob === "string") {
+                                        blob = new Blob([blob]);
+                                    }
+                                    saveAs(blob, "pqGrid." + format);
+                                }
+                            },
+                            {
+                                type: 'button',
+                                icon: 'ui-icon-print',
+                                label: 'Print',
+                                listener: function() {
+                                    var exportHtml = this.exportData({
+                                            title: 'jQuery grid',
+                                            format: 'htm',
+                                            render: true
+                                        }),
+                                        newWin = window.open('', '', 'width=1200, height=700'),
+                                        doc = newWin.document.open();
+                                    doc.write(exportHtml);
+                                    doc.close();
+                                    newWin.print();
+                                }
+                            },
+                        ]
+                    };
+
+                    break;
+
+
+                case 'links':
+                    obj.colModel = [
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___linkid, filter:false, hidden:true} -->,
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___aml_isonhold, title:On-Hold, filter:false, hidden:false} -->,
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___linkid, title:Client-Num, filter:true, hidden:false, width:110} -->,
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___pictureidno, title:ID-Num, filter:false, hidden:false, width:110} -->,
+
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___fullname, title:Client-Name ,filter:true, width:160} -->,
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___companyname, title:Company ,filter:true, width:150} -->,
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___city,title:City, filter:true, width:120} -->,
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___countrycode,title:Country, filter:false, width:60} -->,
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___mainphone,title:Phone, filter:true, width:120} -->,
+                        //<!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___email,title:Email, filter:true} -->,
+
+                        <!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___mainphone,title:Sender-Phone, filter:true, width:120} -->,
+                        //<!--#4DSCRIPT/WAPI_getColModelColumn/{field:links___countrycode,title:Country, filter:false, maxWidth:100} -->,
+
+                    ];
+
+                    obj.sortModel = {
+                        sorter: [{
+                            dataIndx: 'links___fullname',
+                            dir: 'up'
+                        }],
+                    };
+
+                    obj.rowDblClick = function(evt, ui) {
+
+                        var id = ui.rowData.links___linkid;
+                        var name = ui.rowData.ewires___beneficiaryfullname;
+
+                        var viewForm = new FormData();
+
+                        viewForm.append('links___linkid', id);
+                        viewForm.append('table', 'links');
+                        viewForm.append('primarykey', 'links___linkid');
+                        viewForm.append('action', 'view');
+                        viewForm.append('readonly', 'true');
+                        viewForm.append('form-post', 'agents/links-dialog.shtml');
+
+                        var request = new XMLHttpRequest();
+
+                        request.onreadystatechange = function() {
+                            if (this.readyState == 4 && this.status == 200) {
+                                // document.open(); // opens the form and replaces current page
+                                // document.write(request.responseText);
+                                // document.close();
+
+                                $('#dialog-body').html(request.responseText) //inject the response page into the dialog div
+                                //$('#dialog').dialog('option','width', 500); //jquery
+                                //$('#dialog').dialog();
+
+                                $('#dialog').modal('show'); //bootstrap
+
+                            }
+                        };
+
+
+                        request.responseType = 'text';
+                        request.open('POST', 'postPage');
+                        request.send(viewForm);
+                        request.response
+
+                    };
+
+                    obj.rowSelect = function(evt, ui) {
+
+                        var row = ui.addList[0];
+                        var id = row.rowData.links___linkid;
+                        var clientname = row.rowData.links___fullname;
+                        var onhold = row.rowData.links___aml_isonhold;
+
+                        if (onhold === true) {
+                            $("#ewire-send-button").val('ON HOLD: ' + clientname);
+                            $("#ewire-send-button").prop('disabled', 'disabled');
+                        } else {
+                            $("#ewire-send-button").val('Send eWire from: ' + clientname);
+                            $("#ewire-send-button").prop('disabled', '');
+                        };
+
+                        $("#links-update-button").val('Edit: ' + clientname);
+                        $("#links-update-button").prop('disabled', '');
+                        $("#links-read-button").val('View: ' + clientname);
+                        $("#links-read-button").prop('disabled', '');
+
+                        $("[id=ewires-linkid-input]").val(id);
+                        $("[id=links-linkid-input]").val(id);
+
+                    };
+
+                    break;
+
+
+            };
+
+
+
+            // ------------- DEFINE DATAMODEL -----------
+            obj.dataModel = {
+                <!--#4DSCRIPT/WAPI_4DInclude/app/pq/include/pq_dataModel.js--> 
+                //postData: {table:'customers', recnum:'1'}
+            };
+
+
+
+            // ------------- DEFINE FILTERMODEL -----------      
+            obj.filterModel = {
+                header: true,
+                on: true,
+                type: 'remote',
+                menuIcon: true,
+            }
+
+            //--------------DEFINE GROUP MODEL -------------
+            // NONE
+
+
+
+            //---------- INSERT THE GRID INTO THE DOM ---------------
+            //var theGrid = pq.grid("div#grid-" + theGrid, obj);
+            theDiv = '#grid-' + theGrid;
+            $(theDiv).pqGrid(obj);
+        };
+
+    </script>
+
+    <!-- ON READY -- ADD ON SHOW ACCORDIAN EVENT HERE -->
+    <script type="text/javascript">
+        $(function() {
+            console.trace();
+            // ADD ON SHOW ACCORDIAN EVENT HERE -----  
+
+            var countryCode = '<!--4DTEXT [Agents]countrycode -->';
+
+            loadGrid($('#grid-data-ewires-settle')[0], 'received-approved');
+            loadGrid($('#grid-data-ewires-approve')[0], 'sent-submitted');
+            loadGrid($('#grid-data-links')[0], {
+                links___countrycode: countryCode
+            });
+
+            $('#grid-data-ewires-settle').click(function(e) {
+                e.preventDefault();
+                $(this).tab('show');
+
+            });
+
+            $('#grid-data-ewires-approve').click(function(e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+
+            $('#grid-data-links').click(function(e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+
+
+            /*
+            //these are ready to settle/pay out
+            $('#grid-data-ewires-settle').on('shown.bs.tab', function() {
+                if ($('#grid-ewires-settle').hasClass('pq-grid')) {
+                    pq.grid('#grid-ewires-settle').refreshDataAndView();
+                };
+                wapiSetSession('homeSelectedDiv', 'grid-data-ewires-settle');
+                $('#grid-data-ewires-approve').tab('hide');
+                $('#grid-data-links').tab('hide');
+            });
+
+            //these are in need of approval - agent sent these but must approve
+            $('#grid-data-ewires-approve').on('shown.bs.tab', function() {
+                if ($('#grid-ewires-approve').hasClass('pq-grid')) {
+                    pq.grid('#grid-ewires-approve').refreshDataAndView();
+                };
+                wapiSetSession('homeSelectedDiv', 'grid-data-ewires-approve');
+                $('#grid-data-links').tab('hide');
+                $('#grid-data-ewires-settle').tab('hide');
+            });
+
+            $('#grid-data-links').on('shown.bs.tab', function() {
+
+                if ($('#grid-links').hasClass('pq-grid')) { // the grid is initialized
+                    var $grid = $('#grid-links');
+                    var grid = $grid.pqGrid('getInstance').grid;
+                    grid.refreshDataAndView();
+                };
+                wapiSetSession('homeSelectedDiv', 'grid-data-ewires-settle');
+                $('#grid-data-ewires-approve').tab('hide');
+                $('#grid-data-ewires-settle').tab('hide');
+
+            });
+            
+            */
+
+
+            //open an accordian - maybe use user session setting
+            var theDiv = '<!--#4DSCRIPT/WAPI_getSession/homeSelectedDiv-->';
+
+            if (theDiv === undefined) {
+                var theDiv = 'grid-data-ewires-settle';
+            };
+
+            if (theDiv === '') {
+                var theDiv = 'grid-data-ewires-settle';
+            };
+
+            $('#' + theDiv).tab('show');
+
+
+
+
+
+        })
+
+    </script>
+
+    <!--#4DSCRIPT/WAPI_pageStart/{sessiontimer:true}-->
+
+
+    <style>
+        .container{
+  margin:50px;
+}
+
+@media(min-width:768px){
+  .panel-heading{
+    display:none;
+  }  
+  .panel{
+    border:none;
+    box-shadow:none;
+  }
+  .panel-collapse{
+    height:auto;
+    &.collapse{
+      display:block;
+    }
+  }
+}
+
+@media(max-width:767px){
+  .tab-content{
+    .tab-pane{
+       display:block;
+    }    
+  }
+   .nav-tabs{
+      display:none;
+  }
+  .panel-title a{
+    display:block;
+  }
+  .panel{
+    margin:0;
+    box-shadow:none;
+    border-radius:0;
+     margin-top:-2px;
+  }
+  .tab-pane{
+     &:first-child{
+      .panel{
+        border-radius:5px 5px 0 0;
+      }
+    }
+    &:last-child{
+      .panel{
+        border-radius:0 0 5px 5px;
+      }
+    }  
+  }
+}
+ </style>
+
+
+</head>
+
+
+<body>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/agents/include/menubar.shtml-->
+
+
+    <main role="main">
+
+        <div class="page-header">
+            <!-- JUMBOTRON - WELCOME -->
+            <div class='container'>
+
+                <!--#4DHTML WAPI_includeAlertMessage-->
+                <script src="/app/js/bootstrap-auto-dismiss-alert.js"></script>
+                <!--MUST COME AFTER THE ALERT YOU WANT TO CLOSE!! -->
+
+                <h1>Welcome
+                    <!--#4DTEXT [Agents]fullname-->
+                </h1>
+            </div>
+        </div>
+
+
+        <!-- ACCOUNT AND TRANSACTION PANELS -->
+        <div class="container" style="padding-bottom: 40px; padding-top: 0px">
+
+
+            <div class='row'>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <!-- RELATED AGENT TABLES -->
+
+                    <div class="panel panel-heading">
+                        <h2 class="panel-title">Account Transactions</h2>
+                    </div>
+
+
+                    <ul class='nav nav-tabs'>
+                        <li class='active'><a href='#tab1' data-toggle='tab'>To Be Settled</a></li>
+                        <li><a href='#tab2' data-toggle='tab'>To Be Approved</a></li>
+                        <li><a href='#tab3' data-toggle='tab'>Clients</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+
+                        <!-- <div class="panel-group" id="accordion-related" role="tablist" aria-multiselectable='true'>-->
+
+                        <!--EWIRES TO BE SETTLED-->
+                        <div class="tab-pane active" id="tab1">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" id="grid-tab-ewires-settle">
+                                    <h3 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#tab1" href="#grid-data-ewires-settle" aria-expanded="true" aria-controls="grid-data-ewires-settle">
+                                            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"> </span> eWires to be Settled</a>
+                                    </h3>
+                                </div>
+
+                                <div id="grid-data-ewires-settle" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="grid-tab-ewires-settle">
+
+                                    <div class="panel-body">
+
+                                        <div class='form-group' style='height: 300px'>
+                                            <div id="grid-ewires-settle"></div><!-- INSERT EWIRES GRID HERE -->
+                                        </div>
+
+                                        <form enctype="multipart/form-data" id='ewire-settle-form' action="postPage" method="post">
+
+                                            <!--#4DSCRIPT/WAPI_formHeader/{table:ewires, action:edit, post:agents/ewires-settle.shtml}-->
+
+                                            <div class="btn-group btn-group-justified" role="group" aria-label="settle-ewire">
+                                                <div class="btn-group" role="group">
+                                                    <input type="hidden" id="primarykey" name="primarykey" value="ewires-ewireid-input">
+                                                    <input type="hidden" id="ewires-ewireid-input" name="ewires-ewireid-input" value="">
+                                                    <!--value set by row select of grid-->
+                                                    <input id="ewire-settle-button" class="btn btn-primary" type="submit" value="Settle" style='display:block;' disabled>
+                                                </div>
+
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--EWIRES TO BE APPROVED-->
+                        <div class="tab-pane" id="tab2">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="grid-tab-ewires-approve">
+                                    <h3 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#tab2" href="#grid-data-ewires-approve" aria-expanded="false" aria-controls="grid-data-ewires-approve">
+                                            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"> </span> eWires to be Approved</a>
+                                    </h3>
+                                </div>
+
+                                <div id="grid-data-ewires-approve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="grid-tab-ewires-approve">
+
+                                    <div class="panel-body">
+
+                                        <div class='form-group' style='height: 300px'>
+                                            <div id="grid-ewires-approve"></div><!-- INSERT EWIRES GRID HERE -->
+                                        </div>
+
+                                        <form enctype="multipart/form-data" id='ewire-approve-form' action="postPage" method="post">
+
+                                            <!--#4DSCRIPT/WAPI_formHeader/{table:ewires, action:edit, post:agents/ewires-update.shtml}-->
+
+                                            <div class="btn-group btn-group-justified" role="group" aria-label="approve-ewire">
+                                                <div class="btn-group" role="group">
+                                                    <input type="hidden" id="primarykey" name="primarykey" value="ewires-ewireid-input">
+                                                    <input type="hidden" id="ewires-ewireid-input" name="ewires-ewireid-input" value="">
+                                                    <!--value set by row select of grid-->
+                                                    <input id="ewire-approve-button" class="btn btn-primary" type="submit" value="Approve" style='display:block;' disabled>
+                                                </div>
+
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--CLIENT LIST - LINKS-->
+                        <div class="tab-pane" id="tab3">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="grid-tab-links">
+                                    <h3 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#tab3" href="#grid-data-links" aria-expanded="false" aria-controls="grid-data-links">
+                                            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"> </span> Agent Client List</a>
+                                    </h3>
+                                </div>
+
+                                <div id="grid-data-links" class="panel-collapse collapse" role="tabpanel" aria-labelledby="grid-tab-links">
+                                    <div class="panel-body">
+
+                                        <div class='form-group' style='height: 300px'>
+                                            <div id="grid-links"></div><!-- INSERT WIRES GRID HERE -->
+                                        </div>
+
+                                        <div class="btn-group btn-group-justified" role="group" aria-label="ewire-toolbar">
+
+                                            <div class="btn-group" role="group" style="padding-right: 5px">
+                                                <form enctype="multipart/form-data" id='ewire-send-form' action="postPage" method="post">
+                                                    <!--#4DSCRIPT/WAPI_formHeader/{table:ewires, action:create, post:agents/ewires-create.shtml}-->
+                                                    <input type="hidden" id="ewires-linkid-input" name="ewires-linkid-input" value="">
+                                                    <input id="ewire-send-button" class="btn btn-primary" type="submit" value="Send" style='display:block;' disabled>
+                                                </form>
+                                            </div>
+
+
+                                            <div class="btn-group" role="group" style="padding-right: 5px">
+                                                <form enctype="multipart/form-data" id='links-update-form' action="postPage" method="post">
+                                                    <!--#4DSCRIPT/WAPI_formHeader/{table:links, primarykey:links___linkid, action:update, post:agents/links-update.shtml}-->
+                                                    <input id="links-update-button" class="btn btn-primary" type="submit" value="Edit" style='display:block;' disabled>
+                                                </form>
+                                            </div>
+
+                                            <div class="btn-group" role="group" style="padding-right: 5px">
+                                                <form enctype="multipart/form-data" id='links-create-form' action="postPage" method="post">
+                                                    <!--#4DSCRIPT/WAPI_formHeader/{table:links, action:create, post:agents/links-create.shtml}-->
+                                                    <input id="links-create-button" class="btn btn-primary" type="submit" value="Add Client" style='display:block;'>
+                                                </form>
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                        <!-- END ACCORDIAN-->
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- DIALOG FOR LINKS -->
+        <!--#4DSCRIPT/WAPI_4DInclude/agents/links-dialog-div.shtml-->
+
+        <!-- DIALOG FOR EWIRES -->
+        <!--#4DSCRIPT/WAPI_4DInclude/agents/ewires-dialog-div.shtml-->
+    </main>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/agents/include/footer.shtml-->
+
+</body>
+
+
+</html>

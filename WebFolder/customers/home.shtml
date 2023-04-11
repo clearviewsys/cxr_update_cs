@@ -30,8 +30,7 @@
                                             data-parent='#accordian-customer' href='#customer-data'
                                             aria-expanded='false' aria-controls='customer-data'>
                                             <span class="fa fa-user" aria-hidden="true"></span>&nbsp;
-
-                                            <!--#4DTEXT " "+[customers]firstname + " "+[customers]lastname-->
+                                            <!--#4DTEXT [customers]firstname + " "+[customers]lastname-->
                                             <!--#4DIF [customers]iscompany-->
                                             <!--#4DTEXT " - "+[customers]companyname-->
                                             <!--#4DENDIF-->

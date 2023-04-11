@@ -611,8 +611,6 @@
         function addDropZone(file) {
             debugger;
             let currId = wapi_dropzone.files.length;
-
-
             let theID = wapi_dropzone.previewsContainer.getElementsByClassName("row")[currId - 1];
             let inputs = theID.getElementsByTagName("input");
             inputs['customers-pictureid_templateid-input'].value = $('#profile-id-type-select').val();

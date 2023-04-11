@@ -1314,15 +1314,7 @@
                             <div id="grid-data-links" class="panel-collapse collapse" role="tabpanel" aria-labelledby="grid-tab-links">
                                 <div class="panel-body">
 
-                                    <div class='form-group' style='height: 300px'>
-                                        <div id="grid-links"></div><!-- INSERT LINKS GRID HERE -->
-                                    </div>
-
-                                    <div class="btn-group btn-group-justified" role="group" aria-label="ewire-toolbar">
-
-                                        <div class="btn-group" role="group" style="padding-right: 5px">
-                                            <input type="button" class="btn btn-primary btn-block" id="webewires-send-button" name="webewires-send-button" data-wapi-record='' data-wapi-table='webewires' data-wapi-primarykey='webewires___webewireid' data-wapi-webewires___linkid="" data-wapi-request='agents/webewires-create.shtml' data-wapi-action='create' value="New eWire Request" onclick="wapiCreateForm()" disabled>
-                                        </div>
+                                    <div class="btn-group pull-right" role="group" aria-label="customer-toolbar">
 
                                         <div class="btn-group" role="group" style="padding-right: 5px">
                                             <input type="button" class="btn btn-primary btn-block" id="links-update-button" name="links-update-button" data-wapi-record='' data-wapi-table='links' data-wapi-primarykey='links___linkid' data-wapi-request='agents/links-update.shtml' data-wapi-action='read' value="Update" onclick="wapiEditForm()" disabled>
@@ -1332,9 +1324,30 @@
                                             <input type="button" class="btn btn-primary btn-block" id="links-create-button" name="links-create-button" data-wapi-record='' data-wapi-table='links' data-wapi-primarykey='links___linkid' data-wapi-request='agents/links-create.shtml' data-wapi-action='create' value="New Client" onclick="wapiCreateForm()">
                                         </div>
 
+                                    </div>
+                                </div>
 
+                                <div class="panel-body">
+
+                                    <div class='form-group' style='height: 300px'>
+                                        <div id="grid-links"></div><!-- INSERT LINKS GRID HERE -->
                                     </div>
 
+                                    <div class="btn-group btn-group-justified" role="group" aria-label="ewire-toolbar">
+
+                                        <div class="btn-group" role="group" style="padding-right: 5px">
+                                            <input type="button" class="btn btn-primary btn-block" id="webewires-send-button" name="webewires-send-button" data-wapi-record='' data-wapi-table='webewires' data-wapi-primarykey='webewires___webewireid' data-wapi-webewires___linkid="" data-wapi-request='agents/webewires-create.shtml' data-wapi-action='create' value="Send eWire" onclick="wapiCreateForm()" disabled>
+                                        </div>
+
+                                        <div class="btn-group" role="group" style="padding-right: 5px">
+                                            <input type="button" class="btn btn-primary btn-block" id="webewires-send-button" name="webewires-send-button" data-wapi-record='' data-wapi-table='webewires' data-wapi-primarykey='webewires___webewireid' data-wapi-webewires___linkid="" data-wapi-request='agents/webewires-create.shtml' data-wapi-action='create' value="Send Wire" onclick="wapiCreateForm()" disabled>
+                                        </div>
+
+                                        <div class="btn-group" role="group" style="padding-right: 5px">
+                                            <input type="button" class="btn btn-primary btn-block" id="webewires-send-button" name="webewires-send-button" data-wapi-record='' data-wapi-table='webewires' data-wapi-primarykey='webewires___webewireid' data-wapi-webewires___linkid="" data-wapi-request='agents/webewires-create.shtml' data-wapi-action='create' value="Send MoneyGram" onclick="wapiCreateForm()" disabled>
+                                        </div>
+
+                                    </div>
 
                                 </div>
                             </div>

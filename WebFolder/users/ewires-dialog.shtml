@@ -1,0 +1,18 @@
+<!--#4DSCRIPT/webRedirectIfNotAuthorized-->
+<div class="container content">
+
+    <!--Row with two equal columns-->
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <form enctype="multipart/form-data" id='ewires-form' action="viewRecord" method="post">
+                <div>
+                    <!--#4DSCRIPT/WAPI_formHeader/{table:ewires, primarykey:ewires___ewireid, field:agents___agentid, success:home.shtml, print:/agents/ewires-confirm-print.shtml, readonly:true, form:ewires-form}-->
+                </div>
+
+                <!--#4DSCRIPT/WAPI_4DInclude/agents/ewires-form.shtml -->
+            </form>
+        </div>
+
+    </div>
+
+</div>
