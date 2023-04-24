@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings-import-export table_no="31" format="4D" file_path="Denominations.4ie" char_display_format="character" platform="automatic" all_records="true">
+<field table_no="31" field_no="1" kind="alpha"/>
+<field table_no="31" field_no="2" kind="alpha"/>
+<field table_no="31" field_no="3" kind="real"/>
+<field table_no="31" field_no="4" kind="boolean"/>
+<field table_no="31" field_no="6" kind="alpha"/>
+<field table_no="31" field_no="8" kind="text"/>
+<field table_no="31" field_no="9" kind="text"/>
+</settings-import-export>

@@ -1,0 +1,94 @@
+{
+"type": "array",
+"minItems": 1,
+"uniqueItems": true,
+"items": {
+"type": "object",
+"required": [
+"transaction"
+],
+"properties": {
+"transaction": {
+"type": "object",
+"required": [
+"branch_code",
+"record_id",
+"transaction_id",
+"transaction_type",
+"creation_date_stamp",
+"transaction_date_stamp",
+"value_date",
+"flex_module",
+"transaction_code",
+"flex_customer_id",
+"flex_account_id",
+"foreign_currency_amount",
+"dr_br_ind",
+"exchange_rate",
+"local_currency_amount",
+"currency",
+"flex_user_id",
+"meta-data"
+],
+"properties": {
+"branch_code": {
+"type": "string"
+},
+"record_id": {
+"type": "string"
+},
+"transaction_id": {
+"type": "string"
+},
+"transaction_type": {
+"type": "string"
+},
+"creation_date_stamp": {
+"type": "string"
+},
+"transaction_date_stamp": {
+"type": "string"
+},
+"value_date": {
+"type": "string"
+},
+"flex_module": {
+"type": "string"
+},
+"transaction_code": {
+"type": "string"
+},
+"flex_customer_id": {
+"type": "string"
+},
+"flex_account_id": {
+"type": "string"
+},
+"foreign_currency_amount": {
+"type": "integer"
+},
+"dr_br_ind": {
+"type": "string"
+},
+"exchange_rate": {
+"type": "number"
+},
+"local_currency_amount": {
+"type": "integer"
+},
+"currency": {
+"type": "string"
+},
+"flex_user_id": {
+"type": "string"
+},
+"meta-data": {
+"type": "object",
+"properties": {
+}
+}
+}
+}
+}
+}
+}

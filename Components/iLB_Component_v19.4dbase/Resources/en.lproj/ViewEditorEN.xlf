@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+   <!--    Translation file for ListMagic.   Copyright (C) 2010 ibb Consulting, LLC.-->
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+   <file datatype="x-STR#" original="undefined" source-language="en-US" target-language="en-US">
+      <header>
+         <prop-group name="Xliff-Editor.4dbase">
+            <prop prop-type="version">1.0</prop>
+         </prop-group>
+         <note>The character &quot;%&quot; (out of a numerical context) is a meta-character that will be replaced (often by a numeric value) before the string is displayed</note>
+         <note>Text between less than (&lt;) and greater than (&gt;) symbols is a variable&apos;s name and must not be localised</note>
+         <note>\r, \t and \n are meta-characters.</note>
+      </header>
+      <body>
+         <group id="1" resname="iLB_ViewEditor">
+            <trans-unit id="1" resname="iLB_ViewNameLabel">
+               <source>View Name:</source>
+               <target>View Name:</target>
+            </trans-unit>
+            <trans-unit id="2" resname="iLB_TablePopupLabel">
+               <source>Table:</source>
+               <target>Table:</target>
+            </trans-unit>
+            <trans-unit id="3" resname="iLB_FieldListLabel">
+               <source>Field List:</source>
+               <target>Field List:</target>
+            </trans-unit>
+            <trans-unit id="4" resname="iLB_FormulaLabel">
+               <source>Formula</source>
+               <target>Formula</target>
+            </trans-unit>
+            <trans-unit id="5" resname="iLB_PreviewLabel">
+               <source>Preview:</source>
+               <target>Preview:</target>
+            </trans-unit>
+            <trans-unit id="6" resname="iLB_TestButton">
+               <source>Test</source>
+               <target>Test</target>
+            </trans-unit>
+            <trans-unit id="7" resname="iLB_FormulaHelpText">
+               <source>Hold the &quot;alt&quot; key or &quot;option&quot; key down while dragging the formula and let go before dropping.</source>
+               <target>Hold the &quot;alt&quot; key or &quot;option&quot; key down while dragging the formula and let go before dropping.</target>
+            </trans-unit>
+            <trans-unit id="8" resname="iLB_ApplyToHeader">
+               <source>Apply to Header</source>
+               <target>Apply to Header</target>
+            </trans-unit>
+            <trans-unit id="9" resname="iLB_Bold">
+               <source>Bold</source>
+               <target>Bold</target>
+            </trans-unit>
+            <trans-unit id="10" resname="iLB_Italic">
+               <source>Italic</source>
+               <target>Italic</target>
+            </trans-unit>
+            <trans-unit id="11" resname="iLB_Underline">
+               <source>Underline</source>
+               <target>Underline</target>
+            </trans-unit>
+            <trans-unit id="12" resname="iLB_AltRowColor">
+               <source>Alt row color</source>
+               <target>Alt row color</target>
+            </trans-unit>
+            <trans-unit id="13" resname="iLB_RowColor">
+               <source>Background Color</source>
+               <target>Background Color</target>
+            </trans-unit>
+            <trans-unit id="14" resname="iLB_RowHeight">
+               <source>Row height</source>
+               <target>Row height</target>
+            </trans-unit>
+            <trans-unit id="15" resname="iLB_SaveButton">
+               <source>Save</source>
+               <target>Save</target>
+            </trans-unit>
+            <trans-unit id="16" resname="iLB_ApplyButton">
+               <source>Apply</source>
+               <target>Apply</target>
+            </trans-unit>
+            <trans-unit id="17" resname="iLB_CancelButton">
+               <source>Cancel</source>
+               <target>Cancel</target>
+            </trans-unit>
+            <trans-unit id="18" resname="iLB_HGrid">
+               <source>Horizontal Grid</source>
+               <target>Horizontal Grid</target>
+            </trans-unit>
+            <trans-unit id="19" resname="iLB_VGrid">
+               <source>Vertical Grid</source>
+               <target>Vertical Grid</target>
+            </trans-unit>
+            <trans-unit id="20" resname="iLB_TextColor">
+               <source>Text Color</source>
+               <target>Text Color</target>
+            </trans-unit>
+            <trans-unit id="21" resname="iLB_ShowHeaders">
+               <source>Show Headers</source>
+               <target>Show Headers</target>
+            </trans-unit>
+            <trans-unit id="22" resname="iLB_HScrollbars">
+               <source>Horizontal Scrollbars</source>
+               <target>Horizontal Scrollbars</target>
+            </trans-unit>
+            <trans-unit id="23" resname="iLB_VScrollbars">
+               <source>Vertical Scrollbars</source>
+               <target>Vertical Scrollbars</target>
+            </trans-unit>
+            <trans-unit id="24" resname="iLB_HGridColor">
+               <source>Horizontal Grid Color</source>
+               <target>Horizontal Grid Color</target>
+            </trans-unit>
+            <trans-unit id="25" resname="iLB_VGridColor">
+               <source>Vertical Grid Color</source>
+               <target>Vertical Grid Color</target>
+            </trans-unit>
+            <trans-unit id="21" resname="iLB_ShowFooters">
+               <source>Show Footers</source>
+               <target>Show Footers</target>
+            </trans-unit>
+            <trans-unit id="22" resname="iLB_HeaderHeight">
+               <source>Header Height</source>
+               <target>Header Height</target>
+            </trans-unit>
+            <trans-unit id="23" resname="iLB_FooterHeight">
+               <source>Footer Height</source>
+               <target>Footer Height</target>
+            </trans-unit>
+            <trans-unit id="24" resname="iLB_LockColumns">
+               <source>Lock columns</source>
+               <target>Lock columns</target>
+            </trans-unit>
+            <trans-unit id="30" resname="iLB_FieldLabel">
+               <source>Select a field to add</source>
+               <target>Select a field to add</target>
+            </trans-unit>
+            <trans-unit id="31" resname="iLB_PrintOrientation">
+               <source>Print Landscape?</source>
+               <target>Print Landscape?</target>
+            </trans-unit>
+            <trans-unit id="32" resname="iLB_BodyFormatLabel">
+               <source>Body Formatting</source>
+               <target>Body Formatting</target>
+            </trans-unit>
+            <trans-unit id="33" resname="iLB_HeadFormatLabel">
+               <source>Header Formatting</source>
+               <target>Header Formatting</target>
+            </trans-unit>
+            <trans-unit id="29" resname="iLB_FootFormatLabel">
+               <source>Footer Formatting</source>
+               <target>Footer Formatting</target>
+            </trans-unit>
+            <trans-unit id="34" resname="iLB_MiscFormatLabel">
+               <source>Miscellaneous</source>
+               <target>Miscellaneous</target>
+            </trans-unit>
+         </group>
+         <group id="2" resname="iLB_ViewEditor_FontAttrib">
+            <trans-unit id="35" resname="iLB_ApplicationFont">
+               <source>Application Font</source>
+               <target>Application Font</target>
+            </trans-unit>
+            <trans-unit id="36" resname="iLB_SystemFont">
+               <source>System Font</source>
+               <target>System Font</target>
+            </trans-unit>
+            <trans-unit id="40" resname="iLB_AlignDefault">
+               <source>Default</source>
+               <target>Default</target>
+            </trans-unit>
+            <trans-unit id="41" resname="iLB_AlignLeft">
+               <source>Left</source>
+               <target>Left</target>
+            </trans-unit>
+            <trans-unit id="42" resname="iLB_AlignCenter">
+               <source>Center</source>
+               <target>Center</target>
+            </trans-unit>
+            <trans-unit id="43" resname="iLB_AlignRight">
+               <source>Right</source>
+               <target>Right</target>
+            </trans-unit>
+         </group>
+         <group id="3" resname="iLB_ViewEditor_Tips">
+            <trans-unit id="50" resname="iLB_ExportTip">
+               <source>Export this View to a disk file</source>
+               <target>Export this View to a disk file</target>
+            </trans-unit>
+            <trans-unit id="51" resname="iLB_ImportTip">
+               <source>Import a View from a disk file</source>
+               <target>Import a View from a disk file</target>
+            </trans-unit>
+            <trans-unit id="52" resname="iLB_TestTip">
+               <source>Test the formula</source>
+               <target>Test the formula</target>
+            </trans-unit>
+            <trans-unit id="53" resname="iLB_CopyViewTip">
+               <source>Copy this view to the clipboard</source>
+               <target>Copy this view to the clipboard</target>
+            </trans-unit>
+         </group>
+         <group id="3" resname="iLB_ViewEditor_DefinitionPopUp">
+            <trans-unit id="61" resname="iLB_CopyDefinition">
+               <source>Copy Definition</source>
+               <target>Copy Definition</target>
+            </trans-unit>
+            <trans-unit id="62" resname="iLB_ImportDefinition">
+               <source>Import Definition</source>
+               <target>Import Definition</target>
+            </trans-unit>
+            <trans-unit id="63" resname="iLB_ExportDefinition">
+               <source>Export Definition</source>
+               <target>Export Definition</target>
+            </trans-unit>
+         </group>
+         <group id="4" resname="iLB_ViewEditor_ColumnHeaderPopUp">
+            <trans-unit id="64" resname="iLB_HeaderFormula">
+               <source>Edit Formula</source>
+               <target>Edit Formula</target>
+            </trans-unit>
+            <trans-unit id="65" resname="iLB_HeaderTitle">
+               <source>Edit Header Name</source>
+               <target>Edit Header Name</target>
+            </trans-unit>
+            <trans-unit id="66" resname="iLB_HeaderDelColumn">
+               <source>Delete column</source>
+               <target>Delete column</target>
+            </trans-unit>
+            <trans-unit id="67" resname="iLB_HeaderColWidth">
+               <source>Set Column Width</source>
+               <target>Set Column Width</target>
+            </trans-unit>
+            <trans-unit id="68" resname="iLB_HeaderAlignment">
+               <source>Alignment</source>
+               <target>Alignment</target>
+            </trans-unit>
+         </group>
+         <group id="5" resname="iLB_ViewEditor_ColumnBodyPopUp">
+            <trans-unit id="69" resname="iLB_BodyAutoCalc">
+               <source>Auto Calc Total</source>
+               <target>Auto Calc Total</target>
+            </trans-unit>
+            <trans-unit id="70" resname="iLB_BodyEnterable">
+               <source>Enterable</source>
+               <target>Enterable</target>
+            </trans-unit>
+            <trans-unit id="71" resname="iLB_BodyFontColor">
+               <source>Font Color</source>
+               <target>Font Color</target>
+            </trans-unit>
+            <trans-unit id="72" resname="iLB_BodyAlignment">
+               <source>Alignment</source>
+               <target>Alignment</target>
+            </trans-unit>
+            <trans-unit id="73" resname="iLB_BodyStyle">
+               <source>Style</source>
+               <target>Style</target>
+            </trans-unit>
+            <trans-unit id="74" resname="iLB_BodyFormat">
+               <source>Display Format</source>
+               <target>Display Format</target>
+            </trans-unit>
+            <trans-unit id="75" resname="iLB_BodyFilter">
+               <source>Entry Filter</source>
+               <target>Entry Filter</target>
+            </trans-unit>
+            <trans-unit id="76" resname="iLB_DefaultSort">
+               <source>Default Sort</source>
+               <target>Default Sort</target>
+            </trans-unit>
+         </group>
+         <group id="6" resname="iLB_ViewEditor_ColumnBodyStylePopUp">
+            <trans-unit id="76" resname="iLB_BodyStylePlain">
+               <source>Plain</source>
+               <target>Plain</target>
+            </trans-unit>
+            <trans-unit id="77" resname="iLB_BodyStyleBold">
+               <source>Bold</source>
+               <target>Bold</target>
+            </trans-unit>
+            <trans-unit id="78" resname="iLB_BodyStyleItalic">
+               <source>Italic</source>
+               <target>Italic</target>
+            </trans-unit>
+            <trans-unit id="79" resname="iLB_BodyStyleUnderline">
+               <source>Underline</source>
+               <target>Underline</target>
+            </trans-unit>
+         </group>
+         <group id="7" resname="iLB_ViewEditor_ColumnBodyFilterFormat">
+            <trans-unit id="80" resname="iLB_BodyFiltFormCustom">
+               <source>User Defined</source>
+               <target>User Defined</target>
+            </trans-unit>
+            <trans-unit id="81" resname="iLB_BodyFiltFormCurrency">
+               <source>Currency</source>
+               <target>Currency</target>
+            </trans-unit>
+         </group>
+         <group id="8" resname="iLB_ViewEditor_SelectedRecs">
+            <trans-unit id="81" resname="iLB_InfoBarSelRecs">
+               <source>selected of</source>
+               <target>selected of</target>
+            </trans-unit>
+         </group>
+         <group id="9" resname="iLB_ViewEditor_FormulaReturnValue">
+            <trans-unit id="82" resname="iLB_RealReturnValue">
+               <source>Real</source>
+               <target>Real</target>
+            </trans-unit>
+            <trans-unit id="83" resname="iLB_TextReturnValue">
+               <source>Text</source>
+               <target>Text</target>
+            </trans-unit>
+            <trans-unit id="84" resname="iLB_PictReturnValue">
+               <source>Picture</source>
+               <target>Picture</target>
+            </trans-unit>
+            <trans-unit id="85" resname="iLB_DateReturnValue">
+               <source>Date</source>
+               <target>Date</target>
+            </trans-unit>
+            <trans-unit id="86" resname="iLB_BoolReturnValue">
+               <source>Boolean</source>
+               <target>Boolean</target>
+            </trans-unit>
+            <trans-unit id="87" resname="iLB_TimeReturnValue">
+               <source>Time</source>
+               <target>Time</target>
+            </trans-unit>
+            <trans-unit id="88" resname="iLB_AlphaReturnValue">
+               <source>Alpha</source>
+               <target>Alpha</target>
+            </trans-unit>
+            <trans-unit id="89" resname="iLB_IntReturnValue">
+               <source>Integer</source>
+               <target>Integer</target>
+            </trans-unit>
+         </group>
+         <group id="10" resname="iLB_ViewEditor_ViewPopUp">
+            <trans-unit id="100" resname="iLB_EditView">
+               <source>Edit Current View</source>
+               <target>Edit Current View</target>
+            </trans-unit>
+            <trans-unit id="101" resname="iLB_AddView">
+               <source>Add New View</source>
+               <target>Add New View</target>
+            </trans-unit>
+            <trans-unit id="102" resname="iLB_WindowTitle">
+               <source>View Editor</source>
+               <target>View Editor</target>
+            </trans-unit>
+         </group>
+         <group id="11" resname="iLB_PrintOptions">
+            <trans-unit id="105" resname="iLB_Print">
+               <source>Print</source>
+               <target>Print</target>
+            </trans-unit>
+            <trans-unit id="106" resname="iLB_SaveToDisk">
+               <source>Save to disk</source>
+               <target>Save to disk</target>
+            </trans-unit>
+            <trans-unit id="107" resname="iLB_SaveAsHtml">
+               <source>Save as HTML</source>
+               <target>Save as HTML</target>
+            </trans-unit>
+         </group>
+         <group id="12" resname="iLB_Browser">
+            <trans-unit id="110" resname="iLB_SmartSearch">
+               <source>Smart Search</source>
+               <target>Smart Search</target>
+            </trans-unit>
+            <trans-unit id="111" resname="iLB_PrintEnterTitle">
+               <source>Enter a title for this report.</source>
+               <target>Enter a title for this report.</target>
+            </trans-unit>
+            <trans-unit id="112" resname="iLB_DeleteConfirm">
+               <source>Are you sure you want to delete ^1 records?</source>
+               <target>Are you sure you want to delete ^1 records?</target>
+            </trans-unit>
+            <trans-unit id="113" resname="iLB_PrintFooterLeft">
+               <source>Printed:</source>
+               <target>Printed:</target>
+            </trans-unit>
+            <trans-unit id="114" resname="iLB_PrintFooterRight">
+               <source>Page:</source>
+               <target>Page:</target>
+            </trans-unit>
+         </group>
+         <group id="13" resname="iLB_UtilityMenu">
+            <trans-unit id="119" resname="CustomMenuName">
+               <source>Utilities</source>
+               <target>Utilities</target>
+            </trans-unit>
+            <trans-unit id="120" resname="iLB_ShowAll">
+               <source>Show All</source>
+               <target>Show All</target>
+            </trans-unit>
+            <trans-unit id="121" resname="iLB_ShowSubset">
+               <source>Show Subset</source>
+               <target>Show Subset</target>
+            </trans-unit>
+            <trans-unit id="122" resname="iLB_OmitSubset">
+               <source>Omit Subset</source>
+               <target>Omit Subset</target>
+            </trans-unit>
+            <trans-unit id="123" resname="iLB_QueryEditor">
+               <source>Query Editor</source>
+               <target>Query Editor</target>
+            </trans-unit>
+            <trans-unit id="124" resname="iLB_Sort">
+               <source>Sort</source>
+               <target>Sort</target>
+            </trans-unit>
+            <trans-unit id="125" resname="iLB_PrintThisView">
+               <source>Print this view</source>
+               <target>Print this view</target>
+            </trans-unit>
+            <trans-unit id="126" resname="iLB_QuickReport">
+               <source>Quick Report</source>
+               <target>Quick Report</target>
+            </trans-unit>
+            <trans-unit id="127" resname="iLB_GraphData">
+               <source>Graph Data</source>
+               <target>Graph Data</target>
+            </trans-unit>
+            <trans-unit id="128" resname="iLB_LabelEditor">
+               <source>Label Editor</source>
+               <target>Label Editor</target>
+            </trans-unit>
+            <trans-unit id="129" resname="iLB_ImportData">
+               <source>Import Data</source>
+               <target>Import Data</target>
+            </trans-unit>
+            <trans-unit id="130" resname="iLB_ExportData">
+               <source>Export Data</source>
+               <target>Export Data</target>
+            </trans-unit>
+            <trans-unit id="131" resname="iLB_ApplyToSelection">
+               <source>Apply to Selection</source>
+               <target>Apply to Selection</target>
+            </trans-unit>
+            <trans-unit id="131" resname="iLB_iQuery">
+               <source>iQ Query</source>
+               <target>iQ Query</target>
+            </trans-unit>
+         </group>
+         <group id="14" resname="iLB_FooterCalculations">
+            <trans-unit id="140" resname="iLB_FooterCalcType">
+               <source>Calculation Type</source>
+               <target>Calculation Type</target>
+            </trans-unit>
+            <trans-unit id="141" resname="iLB_FooterCustom">
+               <source>Custom</source>
+               <target>Custom</target>
+            </trans-unit>
+            <trans-unit id="142" resname="iLB_FooterMin">
+               <source>Minimum</source>
+               <target>Minimum</target>
+            </trans-unit>
+            <trans-unit id="143" resname="iLB_FooterMax">
+               <source>Maximum</source>
+               <target>Maximum</target>
+            </trans-unit>
+            <trans-unit id="144" resname="iLB_FooterSum">
+               <source>Sum</source>
+               <target>Sum</target>
+            </trans-unit>
+            <trans-unit id="145" resname="iLB_FooterCount">
+               <source>Count</source>
+               <target>Count</target>
+            </trans-unit>
+            <trans-unit id="146" resname="iLB_FooterAverage">
+               <source>Average</source>
+               <target>Average</target>
+            </trans-unit>
+            <trans-unit id="147" resname="iLB_FooterStandardDeviation">
+               <source>Standard Deviation</source>
+               <target>Standard Deviation</target>
+            </trans-unit>
+            <trans-unit id="148" resname="iLB_FooterVariance">
+               <source>Variance</source>
+               <target>Variance</target>
+            </trans-unit>
+            <trans-unit id="149" resname="iLB_FooterSumSquares">
+               <source>Sum Squares</source>
+               <target>Sum Squares</target>
+            </trans-unit>
+            <trans-unit id="150" resname="iLB_FooterLabel">
+               <source>Label</source>
+               <target>Label</target>
+            </trans-unit>
+         </group>
+         <group id="15" resname="iLB_ViewMenu">
+            <trans-unit id="112" resname="ILB_NewView">
+               <source>New View...</source>
+               <target>New View...</target>
+            </trans-unit>
+            <trans-unit id="113" resname="ILB_EditView">
+               <source>Edit View...</source>
+               <target>Edit View...</target>
+            </trans-unit>
+            <trans-unit id="114" resname="iLB_DeleteView">
+               <source>Delete View...</source>
+               <target>Delete View...</target>
+            </trans-unit>
+            <trans-unit id="115" resname="iLB_RenameView">
+               <source>Rename View...</source>
+               <target>Rename View...</target>
+            </trans-unit>
+            <trans-unit id="116" resname="iLB_DuplicateView">
+               <source>Save As...</source>
+               <target>Save As...</target>
+            </trans-unit>
+            <trans-unit id="117" resname="iLB_EnterNewView">
+               <source>Enter a name for the view.</source>
+               <target>Enter a name for the view.</target>
+            </trans-unit>
+            <trans-unit id="118" resname="iLB_EnterRenameView">
+               <source>Enter a new name for the view.</source>
+               <target>Enter a new name for the view.</target>
+            </trans-unit>
+            <trans-unit id="119" resname="iLB_ConfirmDeleteView">
+               <source>Are you sure you want to delete the view: </source>
+               <target>Are you sure you want to delete the view: </target>
+            </trans-unit>
+            <trans-unit id="120" resname="iLB_EnterSaveAsView">
+               <source>Enter a name for the view.</source>
+               <target>Enter a name for the view.</target>
+            </trans-unit>
+         </group>
+      </body>
+   </file>
+</xliff>
