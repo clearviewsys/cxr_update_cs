@@ -1,0 +1,1635 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 19,
+	"markerBody": 340,
+	"markerBreak": 340,
+	"markerFooter": 382,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 142,
+					"left": 13,
+					"width": 594,
+					"height": 418,
+					"dataSource": "Tab Control",
+					"dataSourceTypeHint": "arrayText",
+					"labels": [
+						"Print Options",
+						"Misc Settings"
+					],
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_autoFillComputerName": {
+					"type": "button",
+					"top": 49,
+					"left": 249,
+					"width": 358,
+					"height": 29,
+					"text": "Automatically fill-in the computer name",
+					"method": "ObjectMethods/b_autoFillComputerName.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 32,
+					"left": 72,
+					"width": 163,
+					"height": 14,
+					"class": "Label_Light",
+					"textAlign": "right",
+					"text": "Computer Name"
+				},
+				"clientName": {
+					"type": "input",
+					"top": 32,
+					"left": 249,
+					"width": 358,
+					"height": 15,
+					"dataSource": "[ClientPrefs:26]ClientName:1",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"computerAlias": {
+					"type": "input",
+					"top": 80,
+					"left": 154,
+					"width": 453,
+					"height": 20,
+					"dataSource": "[ClientPrefs:26]ComputerAlias:33",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clientName17": {
+					"type": "input",
+					"top": 120,
+					"left": 300,
+					"width": 44,
+					"height": 15,
+					"dataSource": "[ClientPrefs:26]BranchID:32",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/clientName17.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_viewBranches": {
+					"type": "button",
+					"top": 132,
+					"left": 505,
+					"width": 102,
+					"height": 24,
+					"text": "View Branches",
+					"class": "Small",
+					"focusable": false,
+					"method": "ObjectMethods/b_viewBranches.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_Save": {
+					"type": "button",
+					"top": 564,
+					"left": 482,
+					"width": 125,
+					"height": 30,
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"class": "Large",
+					"method": "ObjectMethods/b_Save.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_Cancel": {
+					"type": "button",
+					"top": 564,
+					"left": 366,
+					"width": 115,
+					"height": 30,
+					"shortcutKey": "[Esc]",
+					"text": "Cancel",
+					"class": "Large",
+					"method": "ObjectMethods/b_Cancel.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Picture362": {
+					"type": "picture",
+					"top": 570,
+					"left": 130,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BNextRec.png"
+				},
+				"Picture363": {
+					"type": "picture",
+					"top": 570,
+					"left": 145,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BLastRec.png"
+				},
+				"Picture364": {
+					"type": "picture",
+					"top": 570,
+					"left": 100,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BFirstRec.png"
+				},
+				"Picture361": {
+					"type": "picture",
+					"top": 570,
+					"left": 115,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BPrevRec.png"
+				},
+				"b_first": {
+					"type": "button",
+					"top": 570,
+					"left": 100,
+					"width": 16,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_first.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_next": {
+					"type": "button",
+					"top": 570,
+					"left": 130,
+					"width": 16,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_next.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_previous": {
+					"type": "button",
+					"top": 570,
+					"left": 115,
+					"width": 16,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_previous.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_last": {
+					"type": "button",
+					"top": 570,
+					"left": 145,
+					"width": 16,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_last.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 570,
+					"left": 166,
+					"width": 69,
+					"height": 13,
+					"dataSource": "vRecNum",
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onHeader"
+					]
+				},
+				"b_Update": {
+					"type": "button",
+					"top": 563,
+					"left": 13,
+					"width": 80,
+					"height": 30,
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"text": "Apply",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_Update.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Text24": {
+					"type": "text",
+					"top": 120,
+					"left": 42,
+					"width": 249,
+					"height": 15,
+					"class": "Label",
+					"textAlign": "right",
+					"text": "This computer is located in branch :"
+				},
+				"clientName19": {
+					"type": "input",
+					"top": 120,
+					"left": 354,
+					"width": 253,
+					"height": 15,
+					"dataSource": "[Branches:70]BranchName:2",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text26": {
+					"type": "text",
+					"top": 104,
+					"left": 154,
+					"width": 453,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Fields_Small",
+					"text": "Computer alias is a nickname for the computer (eg. Sam's computer)"
+				},
+				"b_stampComputerAlias": {
+					"type": "button",
+					"top": 78,
+					"left": 13,
+					"width": 133,
+					"height": 25,
+					"text": "Computer Alias",
+					"method": "ObjectMethods/b_stampComputerAlias.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"clientName20": {
+					"type": "checkbox",
+					"top": 6,
+					"left": 527,
+					"width": 80,
+					"height": 18,
+					"dataSource": "[ClientPrefs:26]isFlagged:34",
+					"text": "Flagged",
+					"stroke": "#000000",
+					"class": "Fields",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			},
+			"entryOrder": [
+				"b_autoFillComputerName",
+				"clientName",
+				"computerAlias",
+				"clientName17",
+				"b_viewBranches",
+				"b_Save",
+				"b_Cancel",
+				"Variable2",
+				"b_Update",
+				"b_stampComputerAlias",
+				"clientName20"
+			]
+		},
+		{
+			"objects": {
+				"Popup Drop down List1": {
+					"type": "dropdown",
+					"top": 205,
+					"left": 27,
+					"width": 281,
+					"height": 21,
+					"dataSource": "vDefaultPrinterName",
+					"class": "Fields",
+					"method": "ObjectMethods/Popup Drop down List1.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Picture Button1": {
+					"type": "pictureButton",
+					"top": 232,
+					"left": 489,
+					"width": 22,
+					"height": 22,
+					"dataSource": "vPrintDefaultOrientation",
+					"rowCount": 2,
+					"picture": "/RESOURCES/Images/library/printOrientation2.png",
+					"method": "ObjectMethods/Picture Button1.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Picture Button2": {
+					"type": "pictureButton",
+					"top": 258,
+					"left": 489,
+					"width": 22,
+					"height": 22,
+					"dataSource": "vPrintDefaultOrientation2",
+					"rowCount": 2,
+					"picture": "/RESOURCES/Images/library/printOrientation2.png",
+					"method": "ObjectMethods/Picture Button2.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Picture Button3": {
+					"type": "pictureButton",
+					"top": 285,
+					"left": 489,
+					"width": 22,
+					"height": 22,
+					"dataSource": "vPrintDefaultOrientation3",
+					"rowCount": 2,
+					"picture": "/RESOURCES/Images/library/printOrientation2.png",
+					"method": "ObjectMethods/Picture Button3.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Line1": {
+					"type": "line",
+					"top": 226,
+					"left": 333,
+					"height": 72,
+					"strokeWidth": 3
+				},
+				"Line2": {
+					"type": "line",
+					"top": 297,
+					"left": 333,
+					"width": 14,
+					"strokeWidth": 3
+				},
+				"Line3": {
+					"type": "line",
+					"top": 272,
+					"left": 333,
+					"width": 14,
+					"strokeWidth": 3
+				},
+				"Line4": {
+					"type": "line",
+					"top": 246,
+					"left": 333,
+					"width": 14,
+					"strokeWidth": 3
+				},
+				"b_setDefaultPageFormat": {
+					"type": "button",
+					"top": 237,
+					"left": 326,
+					"width": 18,
+					"height": 19,
+					"display": false,
+					"method": "ObjectMethods/b_setDefaultPageFormat.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_setChequePageFormat": {
+					"type": "button",
+					"top": 261,
+					"left": 326,
+					"width": 18,
+					"height": 19,
+					"display": false,
+					"method": "ObjectMethods/b_setChequePageFormat.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_setReceiptPageFormat": {
+					"type": "button",
+					"top": 286,
+					"left": 326,
+					"width": 18,
+					"height": 21,
+					"display": false,
+					"method": "ObjectMethods/b_setReceiptPageFormat.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Popup Drop down List2": {
+					"type": "dropdown",
+					"top": 204,
+					"left": 316,
+					"width": 137,
+					"height": 21,
+					"dataSource": "arrPageOptions",
+					"class": "Fields",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"clientName1": {
+					"type": "input",
+					"top": 235,
+					"left": 144,
+					"width": 171,
+					"height": 15,
+					"dataSource": "[ClientPrefs:26]defaultPrinterName:4",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clientName10": {
+					"type": "input",
+					"top": 234,
+					"left": 349,
+					"width": 120,
+					"height": 15,
+					"dataSource": "[ClientPrefs:26]defaultPageFormat:17",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clientName13": {
+					"type": "input",
+					"top": 236,
+					"left": 525,
+					"width": 34,
+					"height": 15,
+					"defaultValue": "100",
+					"dataSource": "[ClientPrefs:26]defaultPrintScale:20",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clientName2": {
+					"type": "input",
+					"top": 260,
+					"left": 144,
+					"width": 171,
+					"height": 15,
+					"dataSource": "[ClientPrefs:26]chequePrinterName:2",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clientName11": {
+					"type": "input",
+					"top": 260,
+					"left": 349,
+					"width": 120,
+					"height": 15,
+					"dataSource": "[ClientPrefs:26]chequePageFormat:18",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clientName14": {
+					"type": "input",
+					"top": 263,
+					"left": 525,
+					"width": 34,
+					"height": 15,
+					"defaultValue": "100",
+					"dataSource": "[ClientPrefs:26]chequePrintScale:21",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clientName3": {
+					"type": "input",
+					"top": 285,
+					"left": 144,
+					"width": 171,
+					"height": 15,
+					"dataSource": "[ClientPrefs:26]receiptPrinterName:3",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clientName12": {
+					"type": "input",
+					"top": 286,
+					"left": 349,
+					"width": 120,
+					"height": 15,
+					"dataSource": "[ClientPrefs:26]receiptPageFormat:19",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clientName15": {
+					"type": "input",
+					"top": 290,
+					"left": 525,
+					"width": 34,
+					"height": 15,
+					"defaultValue": "100",
+					"dataSource": "[ClientPrefs:26]receiptPrintScale:22",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text14": {
+					"type": "text",
+					"top": 218,
+					"left": 525,
+					"width": 34,
+					"height": 14,
+					"class": "Label_Small",
+					"textAlign": "right",
+					"text": "Scale %"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 233,
+					"left": 27,
+					"width": 114,
+					"height": 15,
+					"class": "Label",
+					"textAlign": "left",
+					"text": "Default Printer"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 261,
+					"left": 27,
+					"width": 114,
+					"height": 15,
+					"class": "Label",
+					"textAlign": "left",
+					"text": "Cheque Printer "
+				},
+				"Text3": {
+					"type": "text",
+					"top": 286,
+					"left": 27,
+					"width": 114,
+					"height": 15,
+					"class": "Label",
+					"textAlign": "left",
+					"text": "Receipt Printer "
+				},
+				"Text7": {
+					"type": "text",
+					"top": 173,
+					"left": 27,
+					"width": 155,
+					"height": 20,
+					"class": "Label_Large",
+					"textAlign": "left",
+					"text": "Printers"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 349,
+					"left": 27,
+					"width": 192,
+					"height": 17,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Invoice receipt format"
+				},
+				"l_formats": {
+					"type": "text",
+					"top": 173,
+					"left": 313,
+					"width": 96,
+					"height": 20,
+					"class": "Label_Large",
+					"textAlign": "left",
+					"text": "Page formats "
+				},
+				"clientName6": {
+					"type": "input",
+					"top": 347,
+					"left": 229,
+					"width": 285,
+					"height": 18,
+					"defaultValue": "printInvoice_Large",
+					"dataSource": "[ClientPrefs:26]InvoiceFormName:5",
+					"stroke": "#000000",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/InvoicePrintForms"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clientName16": {
+					"type": "input",
+					"top": 372,
+					"left": 229,
+					"width": 285,
+					"height": 18,
+					"dataSource": "[ClientPrefs:26]InvoiceEntryForm:23",
+					"stroke": "#000000",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/InvoiceEntryForms"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CLIENTPREFS_BrowserForm": {
+					"type": "dropdown",
+					"top": 395,
+					"left": 227,
+					"width": 287,
+					"height": 23,
+					"dataSource": "CLIENTPREFS_BrowserForm",
+					"choiceList": [
+						"Default Browser",
+						"Simple Browser (No Accounting)",
+						"Simple Browser (+Accounts)",
+						"Browser Complete (All Modules)",
+						"Custom Browser"
+					],
+					"method": "ObjectMethods/CLIENTPREFS_BrowserForm.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"CLIENTPREFS_ChequeFormat": {
+					"type": "dropdown",
+					"top": 423,
+					"left": 227,
+					"width": 287,
+					"height": 23,
+					"dataSource": "CLIENTPREFS_ChequeFormat",
+					"choiceList": [
+						"Normal Cheque (+stub)",
+						"Computer Cheques (name / amount)",
+						"Computer Cheques (amount / name)"
+					],
+					"method": "ObjectMethods/CLIENTPREFS_ChequeFormat.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"clientName7": {
+					"type": "checkbox",
+					"top": 476,
+					"left": 331,
+					"width": 18,
+					"height": 18,
+					"dataSource": "[ClientPrefs:26]previewInvoiceAfterSave:11",
+					"text": " ",
+					"stroke": "#000000",
+					"class": "Fields",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_setDefaultPrinterName": {
+					"type": "button",
+					"top": 234,
+					"left": 27,
+					"width": 114,
+					"height": 21,
+					"display": false,
+					"method": "ObjectMethods/b_setDefaultPrinterName.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_setChequePrinterName": {
+					"type": "button",
+					"top": 258,
+					"left": 27,
+					"width": 114,
+					"height": 22,
+					"display": false,
+					"method": "ObjectMethods/b_setChequePrinterName.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_setReceiptPrinter": {
+					"type": "button",
+					"top": 283,
+					"left": 26,
+					"width": 114,
+					"height": 20,
+					"display": false,
+					"method": "ObjectMethods/b_setReceiptPrinter.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text13": {
+					"type": "text",
+					"top": 374,
+					"left": 27,
+					"width": 192,
+					"height": 17,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Invoice entry format"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 476,
+					"left": 25,
+					"width": 299,
+					"height": 14,
+					"class": "Control",
+					"textAlign": "right",
+					"text": "Preview invoice after saving"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 501,
+					"left": 25,
+					"width": 299,
+					"height": 14,
+					"class": "Control",
+					"textAlign": "right",
+					"text": "Automatically open a new invoice after saving"
+				},
+				"clientName8": {
+					"type": "checkbox",
+					"top": 500,
+					"left": 331,
+					"width": 18,
+					"height": 18,
+					"dataSource": "[ClientPrefs:26]repeatNewInvoice:12",
+					"text": " ",
+					"stroke": "#000000",
+					"class": "Fields",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clientName4": {
+					"type": "input",
+					"top": 289,
+					"left": 565,
+					"width": 20,
+					"height": 15,
+					"dataSource": "[ClientPrefs:26]copiesPerInvoice:6",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"min": 0,
+					"max": 5,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clientName5": {
+					"type": "input",
+					"top": 263,
+					"left": 565,
+					"width": 20,
+					"height": 15,
+					"dataSource": "[ClientPrefs:26]copiesPerCheque:7",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"min": 0,
+					"max": 5,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text15": {
+					"type": "text",
+					"top": 400,
+					"left": 27,
+					"width": 192,
+					"height": 17,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Module Launcher Style"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 426,
+					"left": 27,
+					"width": 192,
+					"height": 17,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Cheque format"
+				},
+				"Field4": {
+					"type": "input",
+					"top": 427,
+					"left": 519,
+					"width": 34,
+					"height": 15,
+					"dataSource": "[ClientPrefs:26]chequeFormat:28",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text21": {
+					"type": "text",
+					"top": 501,
+					"left": 376,
+					"width": 160,
+					"height": 14,
+					"class": "Control",
+					"textAlign": "right",
+					"text": "Ask to print Wire"
+				},
+				"clientName18": {
+					"type": "checkbox",
+					"top": 501,
+					"left": 547,
+					"width": 18,
+					"height": 18,
+					"dataSource": "[ClientPrefs:26]doPrintWireAfterSave:29",
+					"text": " ",
+					"stroke": "#000000",
+					"class": "Fields",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 232,
+					"left": 565,
+					"width": 37,
+					"height": 28,
+					"class": "Label_Small",
+					"textAlign": "left",
+					"text": "Extra Copies"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 476,
+					"left": 376,
+					"width": 160,
+					"height": 14,
+					"class": "Control",
+					"textAlign": "right",
+					"text": "Ask to print cheque"
+				},
+				"Text22": {
+					"type": "text",
+					"top": 527,
+					"left": 25,
+					"width": 299,
+					"height": 14,
+					"class": "Control",
+					"textAlign": "right",
+					"text": "Automatically print Invoice after saving"
+				},
+				"Text23": {
+					"type": "text",
+					"top": 526,
+					"left": 376,
+					"width": 160,
+					"height": 14,
+					"class": "Control",
+					"textAlign": "right",
+					"text": "Ask to print eWire"
+				},
+				"clientName9": {
+					"type": "checkbox",
+					"top": 476,
+					"left": 547,
+					"width": 18,
+					"height": 18,
+					"dataSource": "[ClientPrefs:26]doPrintChequeAfterSave:27",
+					"text": " ",
+					"stroke": "#000000",
+					"class": "Fields",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clientName21": {
+					"type": "checkbox",
+					"top": 525,
+					"left": 331,
+					"width": 18,
+					"height": 18,
+					"dataSource": "[ClientPrefs:26]doPrintInvoiceAfterSave:13",
+					"text": " ",
+					"stroke": "#000000",
+					"class": "Fields",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clientName22": {
+					"type": "checkbox",
+					"top": 524,
+					"left": 547,
+					"width": 18,
+					"height": 18,
+					"dataSource": "[ClientPrefs:26]doAutoPrinteWire:31",
+					"text": " ",
+					"stroke": "#000000",
+					"class": "Fields",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Line5": {
+					"type": "line",
+					"top": 226,
+					"left": 128,
+					"height": 72,
+					"strokeWidth": 3
+				},
+				"Line8": {
+					"type": "line",
+					"top": 297,
+					"left": 128,
+					"width": 14,
+					"strokeWidth": 3
+				},
+				"Line9": {
+					"type": "line",
+					"top": 272,
+					"left": 128,
+					"width": 14,
+					"strokeWidth": 3
+				},
+				"Line10": {
+					"type": "line",
+					"top": 246,
+					"left": 128,
+					"width": 14,
+					"strokeWidth": 3
+				},
+				"Text5": {
+					"type": "text",
+					"top": 204,
+					"left": 450,
+					"width": 94,
+					"height": 14,
+					"class": "Label_Small",
+					"textAlign": "center",
+					"text": "Orientation"
+				},
+				"Line6": {
+					"type": "line",
+					"top": 314,
+					"left": 25,
+					"width": 537,
+					"stroke": "#777777"
+				},
+				"Line7": {
+					"type": "line",
+					"top": 464,
+					"left": 25,
+					"width": 537,
+					"stroke": "#777777"
+				}
+			},
+			"entryOrder": [
+				"Popup Drop down List1",
+				"Popup Drop down List2",
+				"clientName1",
+				"clientName10",
+				"clientName13",
+				"clientName2",
+				"clientName11",
+				"clientName14",
+				"clientName3",
+				"clientName12",
+				"clientName15",
+				"clientName6",
+				"clientName16",
+				"CLIENTPREFS_BrowserForm",
+				"CLIENTPREFS_ChequeFormat",
+				"clientName7",
+				"clientName8",
+				"clientName4",
+				"clientName5",
+				"clientName18",
+				"clientName9",
+				"clientName21",
+				"clientName22"
+			]
+		},
+		{
+			"objects": {
+				"Group Box4": {
+					"type": "groupBox",
+					"top": 325,
+					"left": 20,
+					"width": 583,
+					"height": 176,
+					"class": "Label",
+					"text": "Picture IDs Folders"
+				},
+				"Field1": {
+					"type": "checkbox",
+					"top": 182,
+					"left": 27,
+					"width": 478,
+					"height": 25,
+					"dataSource": "[ClientPrefs:26]displayCurrencyPanelAtStartup:8",
+					"text": "Display Currencies Panel on startup",
+					"class": "Fields",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "checkbox",
+					"top": 208,
+					"left": 27,
+					"width": 478,
+					"height": 25,
+					"dataSource": "[ClientPrefs:26]displayRatesPanelAtStartup:9",
+					"text": "Display Rates Panel on startup",
+					"class": "Fields",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "checkbox",
+					"top": 234,
+					"left": 27,
+					"width": 478,
+					"height": 25,
+					"dataSource": "[ClientPrefs:26]displayInvoicesAtStartup:10",
+					"text": "Display invoices on startup",
+					"class": "Fields",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "checkbox",
+					"top": 261,
+					"left": 27,
+					"width": 478,
+					"height": 25,
+					"dataSource": "[ClientPrefs:26]displayInvoicesAtStartup:10",
+					"text": "Perform integrity checks at startup on this workstation",
+					"class": "Fields",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_selectMainFolder": {
+					"type": "button",
+					"top": 378,
+					"left": 27,
+					"width": 100,
+					"height": 20,
+					"text": "Select Folder",
+					"class": "Small",
+					"focusable": false,
+					"method": "ObjectMethods/b_selectMainFolder.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"WebAddress3": {
+					"type": "input",
+					"top": 354,
+					"left": 158,
+					"width": 371,
+					"height": 15,
+					"dataSource": "[ClientPrefs:26]PictureIDSourceFolder:25",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"b_selectArchiveFolder": {
+					"type": "button",
+					"top": 457,
+					"left": 27,
+					"width": 100,
+					"height": 20,
+					"text": "Select Folder",
+					"class": "Small",
+					"focusable": false,
+					"method": "ObjectMethods/b_selectArchiveFolder.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"WebAddress4": {
+					"type": "input",
+					"top": 437,
+					"left": 158,
+					"width": 371,
+					"height": 15,
+					"dataSource": "[ClientPrefs:26]PictureIDDestFolder:26",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Text16": {
+					"type": "text",
+					"top": 356,
+					"left": 30,
+					"width": 120,
+					"height": 15,
+					"class": "Label",
+					"textAlign": "left",
+					"text": "Main Folder"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 437,
+					"left": 30,
+					"width": 120,
+					"height": 15,
+					"class": "Label",
+					"textAlign": "left",
+					"text": "Archive Folder"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 378,
+					"left": 158,
+					"width": 400,
+					"height": 26,
+					"class": "Tags_Small",
+					"text": "The main picture ID Folder is the folder where all picture IDs are scanned into. \rIt is recommended to archive the pictures once they are attached to the profile.   "
+				},
+				"Text19": {
+					"type": "text",
+					"top": 457,
+					"left": 158,
+					"width": 400,
+					"height": 39,
+					"class": "Tags_Small",
+					"text": "The archive folder is the destination folder where picture IDS are moved after clicking the archive button in the customer profiles. "
+				},
+				"b_openMainFolder": {
+					"type": "button",
+					"top": 354,
+					"left": 538,
+					"width": 55,
+					"height": 19,
+					"text": "Open",
+					"class": "Small",
+					"focusable": false,
+					"method": "ObjectMethods/b_openMainFolder.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_openArchiveFolder": {
+					"type": "button",
+					"top": 433,
+					"left": 538,
+					"width": 55,
+					"height": 19,
+					"text": "Open",
+					"class": "Small",
+					"focusable": false,
+					"method": "ObjectMethods/b_openArchiveFolder.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field6": {
+					"type": "checkbox",
+					"top": 288,
+					"left": 27,
+					"width": 478,
+					"height": 25,
+					"dataSource": "[ClientPrefs:26]autoRefreshBrowser:37",
+					"text": "Auto refresh browser for sync and notifications",
+					"class": "Fields",
+					"events": [
+						"onDataChange"
+					]
+				}
+			},
+			"entryOrder": [
+				"Field1",
+				"Field2",
+				"Field3",
+				"Field5",
+				"b_selectMainFolder",
+				"WebAddress3",
+				"b_selectArchiveFolder",
+				"WebAddress4",
+				"b_openMainFolder",
+				"b_openArchiveFolder",
+				"Field6"
+			]
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group1": [
+				"Line5",
+				"Line8",
+				"Line9",
+				"Line10"
+			],
+			"Group2": [
+				"Line1",
+				"Line2",
+				"Line3",
+				"Line4"
+			]
+		},
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 2,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

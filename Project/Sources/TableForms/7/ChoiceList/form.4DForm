@@ -1,0 +1,165 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Button1": {
+					"type": "button",
+					"top": 306,
+					"left": 419,
+					"width": 90,
+					"height": 22,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "Button1",
+					"action": "accept",
+					"text": "Okay",
+					"class": "Control",
+					"focusable": false,
+					"defaultButton": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 3,
+					"left": 3,
+					"width": 153,
+					"height": 64,
+					"dataSource": "<>CompanyLogo",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalTopLeft",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Hierarchical List": {
+					"type": "list",
+					"top": 87,
+					"left": 30,
+					"width": 466,
+					"height": 180,
+					"dataSource": "hlChoices",
+					"hideFocusRing": true,
+					"scrollbarVertical": "visible",
+					"scrollbarHorizontal": "hidden",
+					"class": "Control",
+					"borderStyle": "none",
+					"method": "ObjectMethods/Hierarchical List.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onSelectionChange"
+					]
+				},
+				"CancelButton": {
+					"type": "button",
+					"top": 306,
+					"left": 317,
+					"width": 90,
+					"height": 22,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "CancelButton",
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Control",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 52,
+					"left": 164,
+					"width": 345,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "vDlogTitle",
+					"stroke": "#5200FF",
+					"class": "Headings",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 275,
+					"left": 30,
+					"width": 464,
+					"height": 12,
+					"class": "Small",
+					"text": "Double-click items to select."
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

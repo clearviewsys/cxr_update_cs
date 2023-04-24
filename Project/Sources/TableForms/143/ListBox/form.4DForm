@@ -1,0 +1,135 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onUnload"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"grid": {
+					"type": "listbox",
+					"left": 0,
+					"top": 67,
+					"width": 958,
+					"height": 517,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "currentSelection",
+					"table": "OpeningBalances",
+					"horizontalLineStroke": "automatic",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"alternateFill": "#D8F0EE",
+					"class": "Fields",
+					"headerHeight": "25px",
+					"focusable": false,
+					"showFooters": true,
+					"horizontalPadding": 2,
+					"verticalPadding": 2,
+					"columns": [
+						{
+							"header": {
+								"text": ":xliff:cvs_account",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1",
+								"variableCalculation": "count"
+							},
+							"dataSource": "[OpeningBalances:143]accountID:2",
+							"width": 435,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": ":xliff:cvs_date"
+							},
+							"name": "Column2",
+							"dataSource": "[OpeningBalances:143]date:3",
+							"footer": {
+								"name": "Footer2"
+							},
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Opening Balance"
+							},
+							"name": "Column4",
+							"dataSource": "[OpeningBalances:143]openingBalance:4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"width": 173,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Closing Balance"
+							},
+							"name": "Column3",
+							"dataSource": "[OpeningBalances:143]closingBalance:5",
+							"footer": {
+								"name": "Footer3"
+							},
+							"width": 177,
+							"enterable": false
+						}
+					]
+				},
+				"buildCache": {
+					"type": "button",
+					"text": "Rebuild Cache from Scratch",
+					"top": 593,
+					"left": 8,
+					"width": 239,
+					"height": 29,
+					"events": [
+						"onClick"
+					],
+					"sizingY": "move",
+					"method": "ObjectMethods/buildCache.4dm"
+				}
+			}
+		}
+	],
+	"geometryStamp": 33,
+	"method": "method.4dm",
+	"inheritedForm": "Toolbar",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"menuBar": "Menu Bar #1"
+}

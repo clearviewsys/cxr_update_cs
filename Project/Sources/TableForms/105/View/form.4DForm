@@ -1,0 +1,488 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_View",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"bCancel": {
+					"type": "button",
+					"top": 671,
+					"left": 839,
+					"width": 150,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"action": "cancel",
+					"text": "Cancel",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Line": {
+					"type": "line",
+					"top": 651,
+					"left": 19,
+					"width": 966,
+					"sizingY": "move"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 69,
+					"left": 18,
+					"width": 150,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_uid"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 182,
+					"left": 18,
+					"width": 150,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Keyword ID"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 218,
+					"left": 18,
+					"width": 150,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_type"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 111,
+					"left": 18,
+					"width": 150,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Source Text"
+				},
+				"ID": {
+					"type": "input",
+					"top": 69,
+					"left": 200,
+					"width": 48,
+					"height": 20,
+					"dataSource": "[DB_Keywords:105]KeywordID:1",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "solid",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"sourceText": {
+					"type": "input",
+					"top": 109,
+					"left": 200,
+					"width": 636,
+					"height": 58,
+					"dataSource": "[DB_Keywords:105]sourceText:4",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#DFE4FF",
+					"borderStyle": "solid",
+					"showSelection": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/sourceText.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onBeforeKeystroke",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"keywordID": {
+					"type": "input",
+					"top": 181,
+					"left": 200,
+					"width": 403,
+					"height": 20,
+					"dataSource": "[DB_Keywords:105]Keyword:3",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Type": {
+					"type": "input",
+					"top": 221,
+					"left": 200,
+					"width": 405,
+					"height": 20,
+					"dataSource": "[DB_Keywords:105]Type:2",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 365,
+					"left": 18,
+					"width": 150,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Translations"
+				},
+				"Type1": {
+					"type": "input",
+					"top": 183,
+					"left": 786,
+					"width": 168,
+					"height": 20,
+					"dataSource": "[DB_Keywords:105]creationDate:5",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 183,
+					"left": 616,
+					"width": 150,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Created On:"
+				},
+				"keywordID1": {
+					"type": "input",
+					"top": 254,
+					"left": 200,
+					"width": 763,
+					"height": 80,
+					"dataSource": "[DB_Keywords:105]Comments:6",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 255,
+					"left": 17,
+					"width": 150,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_comments"
+				},
+				"LbTranslations": {
+					"type": "listbox",
+					"top": 365,
+					"left": 200,
+					"width": 763,
+					"height": 266,
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "LbTranslations",
+					"movableRows": false,
+					"rowHeight": "25px",
+					"headerHeight": "25px",
+					"lockedColumnCount": 1,
+					"table": 110,
+					"selectionMode": "single",
+					"alternateFill": "#DFE4FF",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"method": "ObjectMethods/LbTranslations.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange",
+						"onUnload",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "arrTargetLangs",
+							"dataSource": "[DB_Translations:110]languageCode:3",
+							"width": 69,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"alternateFill": "#DFE4FF",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "code",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "Translation",
+							"dataSource": "[DB_Translations:110]Translation:4",
+							"width": 268,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#DFE4FF",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"method": "ObjectMethods/Translation.4dm",
+							"header": {
+								"name": "Header2",
+								"text": "Translation",
+								"dataSource": "Header3",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "arrIsConfirmed",
+							"dataSource": "[DB_Translations:110]isConfirmed:5",
+							"dataSourceTypeHint": "boolean",
+							"width": 85,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"controlType": "checkbox",
+							"alternateFill": "#DFE4FF",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"method": "ObjectMethods/arrIsConfirmed.4dm",
+							"header": {
+								"name": "Header3",
+								"text": "Confirmed",
+								"dataSource": "Header3",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "arrTrans",
+							"dataSource": "[DB_Translations:110]Comments:6",
+							"width": 324,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#DFE4FF",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"method": "ObjectMethods/arrTrans.4dm",
+							"header": {
+								"name": "Header4",
+								"text": "Comments",
+								"dataSource": "Header4",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

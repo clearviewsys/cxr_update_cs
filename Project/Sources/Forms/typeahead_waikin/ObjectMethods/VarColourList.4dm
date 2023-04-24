@@ -1,0 +1,1 @@
+handleTypeAheadListVariable(Self:C308; Load list:C383("ColourList"))

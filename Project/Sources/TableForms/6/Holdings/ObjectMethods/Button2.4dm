@@ -1,0 +1,1 @@
+listbox_requestExport(->holdingsListBox; "Currencies Summary Report")

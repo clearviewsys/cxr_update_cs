@@ -1,0 +1,203 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onDeactivate",
+		"onCloseBox",
+		"onUnload"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"b_cancel": {
+					"type": "button",
+					"top": 520,
+					"left": 327,
+					"width": 119,
+					"height": 32,
+					"text": "Cancel",
+					"class": "Control",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_save": {
+					"type": "button",
+					"top": 520,
+					"left": 453,
+					"width": 119,
+					"height": 32,
+					"action": "accept",
+					"text": "Search",
+					"class": "Control",
+					"events": [
+						"onClick"
+					]
+				},
+				"stamp_Status": {
+					"type": "input",
+					"top": 173,
+					"left": 32,
+					"width": 325,
+					"height": 110,
+					"dataSourceTypeHint": "picture",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text22": {
+					"type": "text",
+					"top": 61,
+					"left": 15,
+					"width": 570,
+					"height": 24,
+					"sizingX": "grow",
+					"fill": "#808080",
+					"stroke": "#FFFFFF",
+					"class": "Titles",
+					"textAlign": "center",
+					"text": "Confirmation Request: "
+				},
+				"Confirmed_Reason": {
+					"type": "input",
+					"top": 419,
+					"left": 15,
+					"width": 570,
+					"height": 46,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[Confirmations:153]confirmedReason:11",
+					"class": "Message_Text",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_amount": {
+					"type": "text",
+					"top": 387,
+					"left": 15,
+					"width": 500,
+					"height": 21,
+					"class": "Message_Text",
+					"text": "<requestUser> on <requestDate> at <requestTime>"
+				},
+				"l_amount1": {
+					"type": "text",
+					"top": 124,
+					"left": 15,
+					"width": 358,
+					"height": 225,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"class": "Message_Text",
+					"text": "<confirmationMessage>"
+				},
+				"Confirmed_Auth": {
+					"type": "text",
+					"top": 473,
+					"left": 15,
+					"width": 500,
+					"height": 21,
+					"class": "Message_Text",
+					"text": "Response by: <confirmedUser> on <confirmedDate> at <confirmedTime>"
+				},
+				"l_amount2": {
+					"type": "text",
+					"top": 366,
+					"left": 15,
+					"width": 500,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Requested by:"
+				},
+				"l_amount3": {
+					"type": "text",
+					"top": 100,
+					"left": 15,
+					"width": 300,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Requested Details:"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 66,
+					"left": 428,
+					"width": 150,
+					"height": 13,
+					"stroke": "#FFFFFF",
+					"class": "Label_Small",
+					"textAlign": "right",
+					"text": "[<confirmationID>]"
+				},
+				"CONFIRM_AttachmentList": {
+					"type": "list",
+					"top": 122,
+					"left": 388,
+					"width": 197,
+					"height": 224,
+					"sizingX": "move",
+					"sizingY": "grow",
+					"enterable": false,
+					"focusable": false,
+					"scrollbarVertical": "visible",
+					"scrollbarHorizontal": "hidden",
+					"class": "Medium",
+					"events": [
+						"onDoubleClick"
+					]
+				},
+				"l_amount4": {
+					"type": "text",
+					"top": 101,
+					"left": 388,
+					"width": 200,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Attachments:"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

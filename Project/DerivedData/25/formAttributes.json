@@ -1,0 +1,32 @@
+{
+	"forms": {
+		"Entry": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"subform": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"Entry_old": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"List": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "listScreen"
+		},
+		"View": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"Entry1": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		}
+	}
+}

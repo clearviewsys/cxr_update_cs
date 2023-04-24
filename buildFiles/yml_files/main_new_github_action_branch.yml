@@ -1,0 +1,65 @@
+name: CXR7 release builder
+
+on:
+  # push:
+    # branches: 
+      # - main
+  workflow_dispatch:
+  # schedule:
+    # - cron: '30 4 * * *' #build every day at 4:30 UTC
+
+jobs:
+  build-on-mac:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Action Mac
+        env:
+          WHO_TO_TRUST: ${{secrets.MYTOKEN}}
+          RUNNER_ACTOR: ${{github.actor}}
+          RUNNER: GIT
+          BINARIES_USER: ${{secrets.BINARIES_USER}}
+          BINARIES_PASSWORD: ${{secrets.BINARIES_PASSWORD}}
+          UPLOAD_USER: ${{secrets.UPLOAD_USER}}
+          UPLOAD_PASSWORD: ${{secrets.UPLOAD_PASSWORD}}
+        run: |
+         workingDirectory=$(pwd)
+         cd CXR7
+         echo "Actor is $RUNNER_ACTOR"
+         mkdir $HOME/Documents/artifacts
+         ls -alR > $HOME/Documents/artifacts/repolisting.txt
+         ./buildFiles/scripts/build_all.sh
+         STATUSFILE=/Users/runner/Documents/artifacts/status.log
+         if [[ -f "$STATUSFILE" ]]; then
+           msg="*Compilation or build failed!* at $(date)"
+         else
+           ./buildFiles/scripts/postBuild.sh
+           ./buildFiles/scripts/incbuildnumber.sh
+           echo "🐚: POSTBUILD done at $(date)"
+         fi
+
+      - uses: actions/upload-artifact@v3
+        with:
+         name: 'Uploading macOS artifacts'
+         path: /Users/runner/Documents/artifacts/           
+
+  build-on-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Action Windows
+        env:
+          WHO_TO_TRUST: ${{secrets.MYTOKEN}}
+          RUNNER_ACTOR: ${{github.actor}}
+          RUNNER: GIT
+          BINARIES_USER: ${{secrets.BINARIES_USER}}
+          BINARIES_PASSWORD: ${{secrets.BINARIES_PASSWORD}}
+          UPLOAD_USER: ${{secrets.UPLOAD_USER}}
+          UPLOAD_PASSWORD: ${{secrets.UPLOAD_PASSWORD}}
+        run: |
+         ./My4DApp/buildFiles/scripts/mainyml.bat
+
+      - uses: actions/upload-artifact@v3
+        with:
+         name: 'Uploading Windows artifacts'
+         path: C:\Users\runneradmin\Documents\artifacts\

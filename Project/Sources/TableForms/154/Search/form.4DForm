@@ -1,0 +1,189 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"b_cancel": {
+					"type": "button",
+					"top": 274,
+					"left": 254,
+					"width": 119,
+					"height": 32,
+					"text": "Cancel",
+					"class": "Control",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_save": {
+					"type": "button",
+					"top": 274,
+					"left": 380,
+					"width": 119,
+					"height": 32,
+					"action": "accept",
+					"text": "Search",
+					"class": "Control",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable": {
+					"type": "input",
+					"top": 142,
+					"left": 196,
+					"width": 250,
+					"height": 20,
+					"dataSource": "Form:C1466.customerFullName",
+					"class": "Large",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom"
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 223,
+					"left": 196,
+					"width": 250,
+					"height": 20,
+					"dataSource": "Form:C1466.toCustomerFullName",
+					"class": "Large",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom"
+				},
+				"l_relationsType1": {
+					"type": "text",
+					"top": 59,
+					"left": 3,
+					"width": 180,
+					"height": 19,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Relations Type"
+				},
+				"RelationsCustomer1": {
+					"type": "input",
+					"top": 100,
+					"left": 196,
+					"width": 250,
+					"height": 20,
+					"dataSource": "[Relations:154]customerID:3",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom"
+				},
+				"RelationstoCustomer1": {
+					"type": "input",
+					"top": 182,
+					"left": 196,
+					"width": 250,
+					"height": 20,
+					"dataSource": "[Relations:154]toCustomerID:4",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom"
+				},
+				"l_Customer1": {
+					"type": "text",
+					"top": 100,
+					"left": 3,
+					"width": 180,
+					"height": 19,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Customer ID"
+				},
+				"l_toCustomer1": {
+					"type": "text",
+					"top": 182,
+					"left": 3,
+					"width": 180,
+					"height": 19,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "to Customer ID"
+				},
+				"l_CustomerName": {
+					"type": "text",
+					"top": 141,
+					"left": 3,
+					"width": 180,
+					"height": 19,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Customer Name"
+				},
+				"l_ToCustomerName1": {
+					"type": "text",
+					"top": 224,
+					"left": 3,
+					"width": 180,
+					"height": 19,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "To Customer Name"
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 60,
+					"left": 196,
+					"width": 250,
+					"height": 20,
+					"dataSource": "Form:C1466.relationType",
+					"class": "Large",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

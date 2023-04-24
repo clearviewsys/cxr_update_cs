@@ -1,0 +1,441 @@
+﻿{
+	"destination": "listScreen",
+	"rightMargin": 16,
+	"bottomMargin": 10,
+	"markerHeader": [
+		88,
+		88
+	],
+	"markerBody": 112,
+	"markerBreak": 115,
+	"markerFooter": 115,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text10": {
+					"type": "text",
+					"top": 10,
+					"left": 24,
+					"width": 576,
+					"height": 62,
+					"sizingX": "grow",
+					"class": "Titles",
+					"text": "Teller Proof Records"
+				},
+				"Picture8": {
+					"type": "picture",
+					"top": 35,
+					"left": 0,
+					"width": 849,
+					"height": 53,
+					"sizingX": "grow",
+					"pictureFormat": "scaled"
+				},
+				"S1_Text": {
+					"type": "text",
+					"top": 40,
+					"left": 24,
+					"width": 105,
+					"height": 53,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "TellerProofID : "
+				},
+				"S2_Text": {
+					"type": "text",
+					"top": 40,
+					"left": 141,
+					"width": 68,
+					"height": 53,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "Date : "
+				},
+				"S3_Text": {
+					"type": "text",
+					"top": 40,
+					"left": 271,
+					"width": 140,
+					"height": 53,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "Teller : "
+				},
+				"S4_Text": {
+					"type": "text",
+					"top": 40,
+					"left": 423,
+					"width": 105,
+					"height": 53,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "ManualBalance : "
+				},
+				"S5_Text": {
+					"type": "text",
+					"top": 40,
+					"left": 550,
+					"width": 100,
+					"height": 53,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "SystemBalance : "
+				},
+				"S6_Text": {
+					"type": "text",
+					"top": 40,
+					"left": 672,
+					"width": 77,
+					"height": 53,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "isMatching : "
+				},
+				"S7_Text": {
+					"type": "text",
+					"top": 40,
+					"left": 771,
+					"width": 62,
+					"height": 53,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "isFinal : "
+				},
+				"S1_Field": {
+					"type": "input",
+					"top": 92,
+					"left": 24,
+					"width": 105,
+					"height": 13,
+					"dataSource": "[TellerProof:78]TellerProofID:1",
+					"class": "Fields_Small",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S2_Field": {
+					"type": "input",
+					"top": 92,
+					"left": 141,
+					"width": 73,
+					"height": 13,
+					"dataSource": "[TellerProof:78]Date:10",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Small",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S3_Field": {
+					"type": "input",
+					"top": 92,
+					"left": 271,
+					"width": 140,
+					"height": 13,
+					"dataSource": "[TellerProof:78]Teller:2",
+					"class": "Fields_Small",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S4_Field": {
+					"type": "input",
+					"top": 92,
+					"left": 423,
+					"width": 110,
+					"height": 13,
+					"dataSource": "[TellerProof:78]ManualBalance:8",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Small",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S5_Field": {
+					"type": "input",
+					"top": 92,
+					"left": 545,
+					"width": 105,
+					"height": 13,
+					"dataSource": "[TellerProof:78]SystemBalance:7",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Small",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S6_Field": {
+					"type": "checkbox",
+					"top": 92,
+					"left": 677,
+					"width": 62,
+					"height": 15,
+					"dataSource": "[TellerProof:78]isMatching:6",
+					"text": "Yes",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S7_Field": {
+					"type": "checkbox",
+					"top": 92,
+					"left": 771,
+					"width": 62,
+					"height": 15,
+					"dataSource": "[TellerProof:78]isEODBalance:5",
+					"text": "Yes",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Line11": {
+					"type": "line",
+					"top": 35,
+					"left": 0,
+					"height": 77,
+					"stroke": "#A8A8A8"
+				},
+				"Line12": {
+					"type": "line",
+					"top": 35,
+					"left": 849,
+					"height": 77,
+					"sizingX": "move",
+					"stroke": "#A8A8A8"
+				},
+				"Line13": {
+					"type": "line",
+					"top": 35,
+					"left": 755,
+					"height": 77,
+					"stroke": "#A8A8A8"
+				},
+				"Line14": {
+					"type": "line",
+					"top": 35,
+					"left": 661,
+					"height": 77,
+					"stroke": "#A8A8A8"
+				},
+				"Line15": {
+					"type": "line",
+					"top": 35,
+					"left": 539,
+					"height": 77,
+					"stroke": "#A8A8A8"
+				},
+				"Line16": {
+					"type": "line",
+					"top": 35,
+					"left": 417,
+					"height": 77,
+					"stroke": "#A8A8A8"
+				},
+				"Line17": {
+					"type": "line",
+					"top": 35,
+					"left": 265,
+					"height": 77,
+					"stroke": "#A8A8A8"
+				},
+				"Line18": {
+					"type": "line",
+					"top": 35,
+					"left": 135,
+					"height": 77,
+					"stroke": "#A8A8A8"
+				},
+				"S2_Field1": {
+					"type": "input",
+					"top": 92,
+					"left": 218,
+					"width": 44,
+					"height": 13,
+					"sizingX": "grow",
+					"dataSource": "[TellerProof:78]Time:11",
+					"dataSourceTypeHint": "time",
+					"class": "Fields_Small",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"timeFormat": "hh_mm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 6,
+					"left": 661,
+					"width": 188,
+					"height": 24,
+					"dataSource": "Button1",
+					"text": "Teller Proof",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line": {
+					"type": "line",
+					"top": 568,
+					"left": 600,
+					"width": 55
+				},
+				"Button": {
+					"type": "button",
+					"top": 5,
+					"left": 557,
+					"width": 98,
+					"height": 25,
+					"dataSource": "Button",
+					"text": "Delete",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Text10"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

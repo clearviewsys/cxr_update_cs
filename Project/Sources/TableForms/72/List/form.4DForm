@@ -1,0 +1,307 @@
+﻿{
+	"destination": "listScreen",
+	"rightMargin": 16,
+	"bottomMargin": 10,
+	"markerHeader": 54,
+	"markerBody": 74,
+	"markerBreak": 77,
+	"markerFooter": 77,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text7": {
+					"type": "text",
+					"top": 10,
+					"left": 24,
+					"width": 576,
+					"height": 27,
+					"sizingX": "grow",
+					"class": "Titles",
+					"text": "ClosingBalances"
+				},
+				"Picture5": {
+					"type": "picture",
+					"top": 35,
+					"left": 0,
+					"width": 714,
+					"height": 19,
+					"sizingX": "grow",
+					"pictureFormat": "scaled"
+				},
+				"S1_Text": {
+					"type": "text",
+					"top": 40,
+					"left": 24,
+					"width": 70,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "MemoryLabel : "
+				},
+				"S2_Text": {
+					"type": "text",
+					"top": 40,
+					"left": 126,
+					"width": 68,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "Date : "
+				},
+				"S3_Text": {
+					"type": "text",
+					"top": 40,
+					"left": 226,
+					"width": 350,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "AccountID : "
+				},
+				"S4_Text": {
+					"type": "text",
+					"top": 40,
+					"left": 608,
+					"width": 90,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "Label_Small",
+					"text": "Balance : "
+				},
+				"Rectangle6": {
+					"type": "rectangle",
+					"top": 54,
+					"left": 0,
+					"width": 714,
+					"height": 20,
+					"sizingX": "grow",
+					"stroke": "#FFFFFF"
+				},
+				"S1_Field": {
+					"type": "input",
+					"top": 58,
+					"left": 24,
+					"width": 70,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[BalanceSnapshots:72]MemoryLabel:4",
+					"class": "Fields_Small",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S2_Field": {
+					"type": "input",
+					"top": 58,
+					"left": 126,
+					"width": 68,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[BalanceSnapshots:72]Date:1",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Small",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S3_Field": {
+					"type": "input",
+					"top": 58,
+					"left": 226,
+					"width": 350,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[BalanceSnapshots:72]AccountID:2",
+					"class": "Fields_Small",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S4_Field": {
+					"type": "input",
+					"top": 58,
+					"left": 608,
+					"width": 90,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[BalanceSnapshots:72]Balance:3",
+					"dataSourceTypeHint": "number",
+					"class": "Fields_Small",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Line8": {
+					"type": "line",
+					"top": 35,
+					"left": 0,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line9": {
+					"type": "line",
+					"top": 35,
+					"left": 714,
+					"height": 39,
+					"sizingX": "move",
+					"stroke": "#A8A8A8"
+				},
+				"Line10": {
+					"type": "line",
+					"top": 35,
+					"left": 592,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Splitter2": {
+					"type": "button",
+					"top": 35,
+					"left": 591,
+					"width": 3,
+					"height": 39,
+					"dataSource": "Splitter2",
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Line11": {
+					"type": "line",
+					"top": 35,
+					"left": 210,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Splitter3": {
+					"type": "button",
+					"top": 35,
+					"left": 209,
+					"width": 3,
+					"height": 39,
+					"dataSource": "Splitter3",
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Line12": {
+					"type": "line",
+					"top": 35,
+					"left": 110,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Splitter4": {
+					"type": "button",
+					"top": 35,
+					"left": 109,
+					"width": 3,
+					"height": 39,
+					"dataSource": "Splitter4",
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Text7"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

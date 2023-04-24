@@ -1,0 +1,110 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Entry",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Field": {
+					"type": "input",
+					"top": 88,
+					"left": 157,
+					"width": 308,
+					"height": 20,
+					"dataSource": "[Tags:162]Tag:1",
+					"class": "Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 123,
+					"left": 157,
+					"width": 150,
+					"height": 30,
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 123,
+					"left": 315,
+					"width": 150,
+					"height": 30,
+					"action": "accept",
+					"text": "Save",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 88,
+					"left": 37,
+					"width": 100,
+					"height": 19,
+					"class": "Label_Large",
+					"text": "Tags Text:"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 34,
+					"left": 169,
+					"width": 5,
+					"height": 15
+				}
+			}
+		}
+	]
+}

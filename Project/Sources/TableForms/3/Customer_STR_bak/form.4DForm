@@ -1,0 +1,1158 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 0,
+	"markerHeader": 15,
+	"markerBody": 735,
+	"markerBreak": 735,
+	"markerFooter": 735,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Line": {
+					"type": "line",
+					"top": 104,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line10": {
+					"type": "line",
+					"top": 124,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line11": {
+					"type": "line",
+					"top": 144,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line12": {
+					"type": "line",
+					"top": 164,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line13": {
+					"type": "line",
+					"top": 184,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line14": {
+					"type": "line",
+					"top": 204,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line15": {
+					"type": "line",
+					"top": 224,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line16": {
+					"type": "line",
+					"top": 244,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line17": {
+					"type": "line",
+					"top": 264,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line18": {
+					"type": "line",
+					"top": 284,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line19": {
+					"type": "line",
+					"top": 304,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line20": {
+					"type": "line",
+					"top": 324,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line21": {
+					"type": "line",
+					"top": 344,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line22": {
+					"type": "line",
+					"top": 364,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line23": {
+					"type": "line",
+					"top": 384,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line25": {
+					"type": "line",
+					"top": 384,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line26": {
+					"type": "line",
+					"top": 404,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line27": {
+					"type": "line",
+					"top": 424,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line28": {
+					"type": "line",
+					"top": 444,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line29": {
+					"type": "line",
+					"top": 504,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line30": {
+					"type": "line",
+					"top": 524,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line31": {
+					"type": "line",
+					"top": 544,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line32": {
+					"type": "line",
+					"top": 564,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line33": {
+					"type": "line",
+					"top": 584,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line34": {
+					"type": "line",
+					"top": 604,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line35": {
+					"type": "line",
+					"top": 624,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line36": {
+					"type": "line",
+					"top": 644,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line37": {
+					"type": "line",
+					"top": 664,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line38": {
+					"type": "line",
+					"top": 684,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line39": {
+					"type": "line",
+					"top": 704,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line40": {
+					"type": "line",
+					"top": 724,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line41": {
+					"type": "line",
+					"top": 744,
+					"left": 3,
+					"width": 611,
+					"stroke": "#DDDDDD"
+				},
+				"Line4": {
+					"type": "line",
+					"top": 4,
+					"left": 589,
+					"height": 773,
+					"visibility": "hidden",
+					"stroke": "#AAAAAA"
+				},
+				"l_title": {
+					"type": "text",
+					"top": 27,
+					"left": 38,
+					"width": 342,
+					"height": 25,
+					"fontFamily": "Segoe UI",
+					"fontSize": 20,
+					"fontWeight": "bold",
+					"text": "Suspicious Transaction Report (STR)"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 75,
+					"left": 36,
+					"width": 552,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"class": "Titles_Small",
+					"textAlign": "center",
+					"text": "1. Customer Information"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 266,
+					"left": 36,
+					"width": 552,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"class": "Titles_Small",
+					"textAlign": "center",
+					"text": "2. Transaction Type"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 309,
+					"left": 38,
+					"width": 552,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"class": "Titles_Small",
+					"textAlign": "center",
+					"text": "3. Suspicious Amount"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 540,
+					"left": 38,
+					"width": 272,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"class": "Titles_Small",
+					"textAlign": "center",
+					"text": "Reviewed by",
+					"visibility": "hidden"
+				},
+				"Field11": {
+					"type": "input",
+					"top": 31,
+					"left": 383,
+					"width": 114,
+					"height": 16,
+					"dataSource": "[Customers:3]CustomerID:1",
+					"class": "Fields",
+					"showSelection": true,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field": {
+					"type": "input",
+					"top": 107,
+					"left": 141,
+					"width": 442,
+					"height": 13,
+					"dataSource": "[Customers:3]FullName:40",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 128,
+					"left": 393,
+					"width": 190,
+					"height": 14,
+					"dataSource": "[Customers:3]Nationality:91",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 148,
+					"left": 141,
+					"width": 87,
+					"height": 14,
+					"dataSource": "[Customers:3]PictureID_Type:70",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 128,
+					"left": 141,
+					"width": 87,
+					"height": 13,
+					"dataSource": "[Customers:3]DOB:5",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 147,
+					"left": 305,
+					"width": 81,
+					"height": 13,
+					"dataSource": "[Customers:3]PictureID_Number:69",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field8": {
+					"type": "input",
+					"top": 148,
+					"left": 476,
+					"width": 108,
+					"height": 13,
+					"dataSource": "[Customers:3]PictureID_ExpiryDate:71",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field10": {
+					"type": "input",
+					"top": 230,
+					"left": 141,
+					"width": 304,
+					"height": 13,
+					"dataSource": "[Customers:3]Address:7",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field15": {
+					"type": "input",
+					"top": 247,
+					"left": 141,
+					"width": 127,
+					"height": 13,
+					"dataSource": "[Customers:3]City:8",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field22": {
+					"type": "input",
+					"top": 247,
+					"left": 271,
+					"width": 92,
+					"height": 13,
+					"dataSource": "[Customers:3]Province:9",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field25": {
+					"type": "input",
+					"top": 247,
+					"left": 366,
+					"width": 55,
+					"height": 13,
+					"dataSource": "[Customers:3]PostalCode:10",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field9": {
+					"type": "input",
+					"top": 247,
+					"left": 424,
+					"width": 21,
+					"height": 13,
+					"dataSource": "[Customers:3]CountryCode:113",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field12": {
+					"type": "input",
+					"top": 208,
+					"left": 141,
+					"width": 241,
+					"height": 14,
+					"dataSource": "[Customers:3]Email:17",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field18": {
+					"type": "input",
+					"top": 187,
+					"left": 141,
+					"width": 87,
+					"height": 13,
+					"dataSource": "[Customers:3]HomeTel:6",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field17": {
+					"type": "input",
+					"top": 187,
+					"left": 305,
+					"width": 81,
+					"height": 14,
+					"dataSource": "[Customers:3]WorkTel:12",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field13": {
+					"type": "input",
+					"top": 189,
+					"left": 478,
+					"width": 87,
+					"height": 13,
+					"dataSource": "[Customers:3]CellPhone:13",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 108,
+					"left": 38,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Full Name"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 128,
+					"left": 238,
+					"width": 73,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Nationality"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 128,
+					"left": 38,
+					"width": 80,
+					"height": 16,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Date of birth"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 147,
+					"left": 238,
+					"width": 69,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Legal Doc No."
+				},
+				"Text11": {
+					"type": "text",
+					"top": 148,
+					"left": 38,
+					"width": 99,
+					"height": 15,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Legal Document Type"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 147,
+					"left": 392,
+					"width": 78,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Expiration Date"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 229,
+					"left": 38,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Address"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 208,
+					"left": 38,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "email"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 188,
+					"left": 392,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Mobile"
+				},
+				"Text25": {
+					"type": "text",
+					"top": 187,
+					"left": 238,
+					"width": 65,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Work Phone"
+				},
+				"Text31": {
+					"type": "text",
+					"top": 186,
+					"left": 38,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Main Phone"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 91,
+					"left": 38,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Customer Type:"
+				},
+				"chkisIndividual": {
+					"type": "checkbox",
+					"top": 92,
+					"left": 141,
+					"width": 100,
+					"height": 11,
+					"dataSource": "chkisIndividual",
+					"text": "Individual",
+					"stroke": "#000000",
+					"class": "Medium",
+					"method": "ObjectMethods/chkisIndividual.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					],
+					"enterable": false,
+					"focusable": false,
+					"fontSize": 10,
+					"dataSourceTypeHint": "integer"
+				},
+				"chkisCompany": {
+					"type": "checkbox",
+					"top": 92,
+					"left": 263,
+					"width": 100,
+					"height": 11,
+					"dataSource": "chkisCompany",
+					"text": "Legal Entity",
+					"stroke": "#000000",
+					"class": "Medium",
+					"method": "ObjectMethods/chkisCompany.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					],
+					"enterable": false,
+					"focusable": false,
+					"fontSize": 10,
+					"dataSourceTypeHint": "integer"
+				},
+				"Field14": {
+					"type": "input",
+					"top": 168,
+					"left": 141,
+					"width": 442,
+					"height": 14,
+					"dataSource": "[Customers:3]Occupation:21",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text17": {
+					"type": "text",
+					"top": 168,
+					"left": 38,
+					"width": 80,
+					"height": 16,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Occupation:"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 287,
+					"left": 38,
+					"width": 80,
+					"height": 14,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Transaction Type:"
+				},
+				"chkLoan": {
+					"type": "checkbox",
+					"text": "Loan",
+					"top": 289,
+					"left": 139,
+					"width": 80,
+					"height": 10,
+					"events": [
+						"onClick"
+					]
+				},
+				"chkDeposit": {
+					"type": "checkbox",
+					"text": "Deposit/Saving",
+					"top": 289,
+					"left": 211,
+					"width": 80,
+					"height": 10,
+					"events": [
+						"onClick"
+					]
+				},
+				"chkTransfer": {
+					"type": "checkbox",
+					"text": "Transfer",
+					"top": 289,
+					"left": 305,
+					"width": 58,
+					"height": 10,
+					"events": [
+						"onClick"
+					]
+				},
+				"chkTransfer1": {
+					"type": "checkbox",
+					"text": "Other:",
+					"top": 289,
+					"left": 383,
+					"width": 80,
+					"height": 10,
+					"events": [
+						"onClick"
+					]
+				},
+				"Input": {
+					"type": "input",
+					"left": 438,
+					"top": 287,
+					"width": 145,
+					"height": 14,
+					"fontSize": 10,
+					"fontFamily": "Lucida"
+				},
+				"Field16": {
+					"type": "input",
+					"top": 328,
+					"left": 142,
+					"width": 131,
+					"height": 13,
+					"dataSource": "sumDebitLocal",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"dataSourceTypeHint": "number"
+				},
+				"Text21": {
+					"type": "text",
+					"top": 328,
+					"left": 39,
+					"width": 93,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Suspicious Amount:"
+				},
+				"Text22": {
+					"type": "text",
+					"top": 349,
+					"left": 39,
+					"width": 552,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"class": "Titles_Small",
+					"textAlign": "center",
+					"text": "4. Reason for Suspicious"
+				},
+				"Field23": {
+					"type": "input",
+					"top": 371,
+					"left": 142,
+					"width": 441,
+					"height": 50,
+					"dataSource": "suspiciousNotes",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"dataSourceTypeHint": "text"
+				},
+				"Text23": {
+					"type": "text",
+					"top": 370,
+					"left": 40,
+					"width": 93,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Reason: "
+				},
+				"Text24": {
+					"type": "text",
+					"top": 434,
+					"left": 40,
+					"width": 272,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"class": "Titles_Small",
+					"textAlign": "center",
+					"text": "Prepared by"
+				},
+				"Text26": {
+					"type": "text",
+					"top": 501,
+					"left": 44,
+					"width": 93,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Name/Signature"
+				},
+				"Text28": {
+					"type": "text",
+					"top": 501,
+					"left": 321,
+					"width": 93,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Name/Signature"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 497,
+					"left": 44,
+					"width": 267,
+					"height": 1
+				},
+				"Line2": {
+					"type": "line",
+					"top": 497,
+					"left": 321,
+					"width": 267,
+					"height": 1
+				},
+				"Text29": {
+					"type": "text",
+					"top": 501,
+					"left": 198,
+					"width": 93,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Date:"
+				},
+				"Text30": {
+					"type": "text",
+					"top": 501,
+					"left": 491,
+					"width": 93,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Date:"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 540,
+					"left": 312,
+					"width": 272,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"class": "Titles_Small",
+					"textAlign": "center",
+					"text": "Approved by",
+					"visibility": "hidden"
+				},
+				"Text27": {
+					"type": "text",
+					"top": 434,
+					"left": 315,
+					"width": 272,
+					"height": 15,
+					"fill": "#C0CAFF",
+					"class": "Titles_Small",
+					"textAlign": "center",
+					"text": "Compliance Officer"
+				},
+				"Text32": {
+					"type": "text",
+					"top": 599,
+					"left": 43,
+					"width": 93,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Name/Signature",
+					"visibility": "hidden"
+				},
+				"Text33": {
+					"type": "text",
+					"top": 599,
+					"left": 320,
+					"width": 93,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Name/Signature",
+					"visibility": "hidden"
+				},
+				"Line3": {
+					"type": "line",
+					"top": 595,
+					"left": 43,
+					"width": 267,
+					"height": 1,
+					"visibility": "hidden"
+				},
+				"Line5": {
+					"type": "line",
+					"top": 595,
+					"left": 320,
+					"width": 267,
+					"height": 1,
+					"visibility": "hidden"
+				},
+				"Text34": {
+					"type": "text",
+					"top": 599,
+					"left": 197,
+					"width": 93,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Date:",
+					"visibility": "hidden"
+				},
+				"Text35": {
+					"type": "text",
+					"top": 599,
+					"left": 490,
+					"width": 93,
+					"height": 13,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Date:",
+					"visibility": "hidden"
+				},
+				"Text36": {
+					"type": "text",
+					"top": 631,
+					"left": 40,
+					"width": 543,
+					"height": 50,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "Note: Employees in charge of reporting shall notify the compliance officer immediately by telephone and send this report by e-mail. Please send report to compliance officer as soon as possible. Attach all revelant document of client.\r"
+				},
+				"Text37": {
+					"type": "text",
+					"top": 683,
+					"left": 447,
+					"width": 128,
+					"height": 17,
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"text": "AML –STR Form (01)"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 127,
+					"left": 306,
+					"width": 81,
+					"height": 14,
+					"dataSource": "[Customers:3]CountryOfBirthCode:18",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 328,
+					"left": 290,
+					"width": 131,
+					"height": 13,
+					"dataSource": "[CompanyInfo:7]Currency:11",
+					"class": "Fields_Small",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"dataSourceTypeHint": "text"
+				}
+			},
+			"entryOrder": [
+				"Field11",
+				"Field",
+				"Field2",
+				"Field3",
+				"Field4",
+				"Field5",
+				"Field8",
+				"Field10",
+				"Field15",
+				"Field22",
+				"Field25",
+				"Field9",
+				"Field12",
+				"Field18",
+				"Field17",
+				"Field13",
+				"chkisIndividual",
+				"chkisCompany",
+				"Field14",
+				"chkLoan",
+				"chkDeposit",
+				"chkTransfer",
+				"chkTransfer1",
+				"Input",
+				"Field16",
+				"Field23",
+				"Field1",
+				"Field6"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"Guides": {
+				"selectable": false,
+				"objects": [
+					"Line",
+					"Line10",
+					"Line11",
+					"Line12",
+					"Line13",
+					"Line14",
+					"Line15",
+					"Line16",
+					"Line17",
+					"Line18",
+					"Line19",
+					"Line20",
+					"Line21",
+					"Line22",
+					"Line23",
+					"Line25",
+					"Line26",
+					"Line27",
+					"Line28",
+					"Line29",
+					"Line30",
+					"Line31",
+					"Line32",
+					"Line33",
+					"Line34",
+					"Line35",
+					"Line36",
+					"Line37",
+					"Line38",
+					"Line39",
+					"Line40",
+					"Line41",
+					"Line4"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"method": "method.4dm",
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 1020
+}

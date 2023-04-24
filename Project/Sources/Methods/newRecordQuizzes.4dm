@@ -1,0 +1,3 @@
+//%attributes = {}
+//newRecord(->[Quizzes])
+createQuiz()

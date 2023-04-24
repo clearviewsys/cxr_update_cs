@@ -1,0 +1,655 @@
+﻿{
+	"destination": "detailScreen",
+	"windowTitle": "<None>",
+	"inheritedForm": "subForm_Customers",
+	"inheritedFormTable": 7,
+	"rightMargin": 0,
+	"bottomMargin": 20,
+	"markerHeader": 60,
+	"markerBody": 85,
+	"markerBreak": 85,
+	"markerFooter": 85,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"S2_Text": {
+					"type": "text",
+					"top": 280,
+					"left": 92,
+					"width": 79,
+					"height": 17,
+					"sizingX": "move",
+					"fill": "#000000",
+					"stroke": "#FFDFFF",
+					"class": "Label",
+					"textAlign": "center",
+					"text": "Wire Date"
+				},
+				"S3_Text": {
+					"type": "text",
+					"top": 280,
+					"left": 2,
+					"width": 89,
+					"height": 17,
+					"sizingX": "move",
+					"fill": "#000000",
+					"stroke": "#FFDFFF",
+					"class": "Label",
+					"textAlign": "center",
+					"text": "Invoice"
+				},
+				"S2_Field": {
+					"type": "input",
+					"top": 62,
+					"left": 95,
+					"width": 73,
+					"height": 17,
+					"sizingX": "move",
+					"dataSource": "[Wires:8]WireTransferDate:17",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S3_Field": {
+					"type": "input",
+					"top": 62,
+					"left": 5,
+					"width": 83,
+					"height": 17,
+					"sizingX": "move",
+					"dataSource": "[Wires:8]CXR_InvoiceID:12",
+					"stroke": "#000E60",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S3_Text2": {
+					"type": "text",
+					"top": 280,
+					"left": 547,
+					"width": 134,
+					"height": 17,
+					"sizingX": "move",
+					"fill": "#000000",
+					"stroke": "#FFFFFF",
+					"class": "Label",
+					"textAlign": "center",
+					"text": "Sent"
+				},
+				"S3_Field2": {
+					"type": "input",
+					"top": 62,
+					"left": 550,
+					"width": 128,
+					"height": 16,
+					"sizingX": "move",
+					"dataSource": "vAmountPaid",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000E60",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S3_Text3": {
+					"type": "text",
+					"top": 280,
+					"left": 682,
+					"width": 45,
+					"height": 17,
+					"sizingX": "move",
+					"fill": "#000000",
+					"stroke": "#FFFFFF",
+					"class": "Label",
+					"textAlign": "center",
+					"text": "Cur"
+				},
+				"S3_Field3": {
+					"type": "input",
+					"top": 62,
+					"left": 690,
+					"width": 33,
+					"height": 17,
+					"sizingX": "move",
+					"dataSource": "[Wires:8]Currency:15",
+					"stroke": "#000E60",
+					"textAlign": "center",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S3_Text4": {
+					"type": "text",
+					"top": 280,
+					"left": 412,
+					"width": 134,
+					"height": 17,
+					"sizingX": "move",
+					"fill": "#000000",
+					"stroke": "#FFFFFF",
+					"class": "Label",
+					"textAlign": "center",
+					"text": "Received"
+				},
+				"S3_Field1": {
+					"type": "input",
+					"top": 62,
+					"left": 415,
+					"width": 128,
+					"height": 16,
+					"sizingX": "move",
+					"dataSource": "vAmountReceived",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000E60",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_sortInvoice": {
+					"type": "button",
+					"top": 280,
+					"left": 2,
+					"width": 89,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_sortInvoice.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_sortWireDate": {
+					"type": "button",
+					"top": 280,
+					"left": 92,
+					"width": 79,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_sortWireDate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line3": {
+					"type": "line",
+					"top": 280,
+					"left": 171,
+					"height": 43,
+					"stroke": "#AAAAAA"
+				},
+				"Line4": {
+					"type": "line",
+					"top": 280,
+					"left": 91,
+					"height": 43,
+					"stroke": "#AAAAAA"
+				},
+				"Line5": {
+					"type": "line",
+					"top": 280,
+					"left": 411,
+					"height": 43,
+					"stroke": "#AAAAAA"
+				},
+				"Line6": {
+					"type": "line",
+					"top": 280,
+					"left": 546,
+					"height": 43,
+					"stroke": "#AAAAAA"
+				},
+				"Line7": {
+					"type": "line",
+					"top": 280,
+					"left": 681,
+					"height": 43,
+					"stroke": "#AAAAAA"
+				},
+				"Line8": {
+					"type": "line",
+					"top": 280,
+					"left": 727,
+					"height": 43,
+					"stroke": "#AAAAAA"
+				},
+				"S2_Field1": {
+					"type": "input",
+					"top": 62,
+					"left": 175,
+					"width": 126,
+					"height": 17,
+					"sizingX": "move",
+					"dataSource": "[Wires:8]BeneficiaryFullName:10",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S3_Text1": {
+					"type": "text",
+					"top": 280,
+					"left": 172,
+					"width": 138,
+					"height": 17,
+					"sizingX": "move",
+					"fill": "#000000",
+					"stroke": "#FFFFFF",
+					"class": "Label",
+					"textAlign": "center",
+					"text": "Receiver Name"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 280,
+					"left": 310,
+					"height": 43,
+					"stroke": "#AAAAAA"
+				},
+				"S2_Field2": {
+					"type": "input",
+					"top": 62,
+					"left": 313,
+					"width": 95,
+					"height": 17,
+					"sizingX": "move",
+					"dataSource": "[Wires:8]BeneficiaryFullName:10",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S3_Text5": {
+					"type": "text",
+					"top": 280,
+					"left": 312,
+					"width": 98,
+					"height": 17,
+					"sizingX": "move",
+					"fill": "#000000",
+					"stroke": "#FFFFFF",
+					"class": "Label",
+					"textAlign": "center",
+					"text": "Account #"
+				},
+				"Splitter3": {
+					"type": "splitter",
+					"top": 40,
+					"left": 93,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_sortInvoice1": {
+					"type": "button",
+					"top": 40,
+					"left": 5,
+					"width": 86,
+					"height": 19,
+					"sizingX": "grow",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Invoice",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/b_sortInvoice1.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"b_sortWireDate1": {
+					"type": "button",
+					"top": 40,
+					"left": 96,
+					"width": 74,
+					"height": 19,
+					"sizingX": "grow",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Wire Date",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/b_sortWireDate1.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Splitter9": {
+					"type": "splitter",
+					"top": 40,
+					"left": 172,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_sortbeneficiaryName": {
+					"type": "button",
+					"top": 40,
+					"left": 175,
+					"width": 133,
+					"height": 19,
+					"sizingX": "grow",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Beneficiary Name",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/b_sortbeneficiaryName.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Splitter5": {
+					"type": "splitter",
+					"top": 40,
+					"left": 310,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_sortAccount": {
+					"type": "button",
+					"top": 40,
+					"left": 313,
+					"width": 96,
+					"height": 19,
+					"sizingX": "grow",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Account #",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/b_sortAccount.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Splitter12": {
+					"type": "splitter",
+					"top": 40,
+					"left": 411,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_receivedIn": {
+					"type": "button",
+					"top": 40,
+					"left": 414,
+					"width": 130,
+					"height": 19,
+					"sizingX": "grow",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Received In",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/b_receivedIn.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Splitter10": {
+					"type": "splitter",
+					"top": 40,
+					"left": 546,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_sentOut": {
+					"type": "button",
+					"top": 40,
+					"left": 549,
+					"width": 131,
+					"height": 19,
+					"sizingX": "grow",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Sent Out",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/b_sentOut.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Splitter13": {
+					"type": "splitter",
+					"top": 40,
+					"left": 682,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_sortCurrency": {
+					"type": "button",
+					"top": 40,
+					"left": 685,
+					"width": 41,
+					"height": 19,
+					"sizingX": "grow",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Curr",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/b_sortCurrency.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Splitter1": {
+					"type": "splitter",
+					"top": 40,
+					"left": 728,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

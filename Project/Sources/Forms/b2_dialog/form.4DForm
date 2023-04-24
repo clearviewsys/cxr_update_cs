@@ -1,0 +1,390 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"windowTitle": "B2 Cloud",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"localFiles_lb": {
+					"type": "listbox",
+					"left": 15,
+					"top": 50,
+					"width": 550,
+					"height": 400,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.localFiles",
+					"sizingY": "grow",
+					"headerHeight": "2em",
+					"currentItemSource": "Form:C1466.currLocalFile",
+					"selectedItemsSource": "Form:C1466.selectedLocalFiles",
+					"method": "ObjectMethods/localFiles_lb.4dm",
+					"rowStyleSource": "b2_listboxStyleExpression",
+					"sizingX": "grow",
+					"columns": [
+						{
+							"header": {
+								"text": "File name",
+								"name": "Header1",
+								"fontWeight": "bold",
+								"fontSize": 14
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"width": 265,
+							"dataSource": "This:C1470.fileName",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Date created",
+								"fontWeight": "bold",
+								"fontSize": 14
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.dateCreated",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Size MB",
+								"fontWeight": "bold",
+								"fontSize": 14
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "This:C1470.fileSize",
+							"enterable": false
+						}
+					]
+				},
+				"remoteFiles_lb": {
+					"type": "listbox",
+					"left": 605,
+					"top": 50,
+					"width": 523,
+					"height": 396,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.remoteFiles",
+					"sizingY": "grow",
+					"headerHeight": "2em",
+					"method": "ObjectMethods/remoteFiles_lb.4dm",
+					"currentItemSource": "Form:C1466.currRemoteFile",
+					"selectedItemsSource": "Form:C1466.selectedRemoteFiles",
+					"sizingX": "grow",
+					"columns": [
+						{
+							"header": {
+								"text": "File name",
+								"name": "Header4",
+								"fontWeight": "bold",
+								"fontSize": 14
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"width": 250,
+							"dataSource": "This:C1470.fileName",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header5",
+								"text": "Date created",
+								"fontWeight": "bold",
+								"fontSize": 14
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer5"
+							},
+							"dataSource": "This:C1470.dateCreated",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header6",
+								"text": "Size MB",
+								"fontWeight": "bold",
+								"fontSize": 14
+							},
+							"name": "Column6",
+							"footer": {
+								"name": "Footer6"
+							},
+							"dataSource": "This:C1470.fileSize",
+							"enterable": false
+						}
+					]
+				},
+				"Text": {
+					"type": "text",
+					"text": "Local Files",
+					"top": 12,
+					"left": 13,
+					"width": 519,
+					"height": 31,
+					"fontWeight": "bold",
+					"fontSize": 18,
+					"textAlign": "center"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Remote Files",
+					"top": 12,
+					"left": 605,
+					"width": 519,
+					"height": 31,
+					"fontWeight": "bold",
+					"fontSize": 18,
+					"textAlign": "center"
+				},
+				"btnUploadToCloud": {
+					"type": "button",
+					"text": "Upload to Cloud",
+					"top": 461,
+					"left": 240,
+					"width": 164,
+					"height": 29,
+					"events": [
+						"onClick"
+					],
+					"sizingY": "move",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"method": "ObjectMethods/btnUploadToCloud.4dm"
+				},
+				"btnDownloadFromCloud": {
+					"type": "button",
+					"text": "Download from Cloud",
+					"top": 466,
+					"left": 769,
+					"width": 219,
+					"height": 29,
+					"events": [
+						"onClick"
+					],
+					"sizingY": "move",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"borderStyle": "none",
+					"method": "ObjectMethods/btnDownloadFromCloud.4dm"
+				},
+				"btnRefresh": {
+					"type": "button",
+					"text": "Refresh",
+					"top": 12,
+					"left": 610,
+					"width": 119,
+					"height": 28,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnRefresh.4dm"
+				},
+				"backupdestlabel": {
+					"type": "text",
+					"text": "Files in backup destination folder",
+					"top": 455,
+					"left": 17,
+					"width": 332,
+					"height": 31,
+					"sizingY": "move"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Files in b2 downloads folder",
+					"top": 475,
+					"left": 17,
+					"width": 332,
+					"height": 31,
+					"fontStyle": "italic",
+					"sizingY": "move"
+				},
+				"Text4": {
+					"type": "text",
+					"text": "Key ID:",
+					"top": 508,
+					"left": 19,
+					"width": 109,
+					"height": 16,
+					"sizingY": "move"
+				},
+				"bskeyID": {
+					"type": "input",
+					"left": 97,
+					"top": 508,
+					"width": 229,
+					"height": 17,
+					"dataSource": "Form:C1466.b2.keyID",
+					"enterable": false,
+					"sizingY": "move"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Key name:",
+					"top": 544,
+					"left": 19,
+					"width": 109,
+					"height": 16,
+					"sizingY": "move"
+				},
+				"b2KeyName": {
+					"type": "input",
+					"left": 97,
+					"top": 544,
+					"width": 229,
+					"height": 17,
+					"dataSource": "Form:C1466.b2.keyName",
+					"enterable": false,
+					"sizingY": "move"
+				},
+				"Text6": {
+					"type": "text",
+					"text": "Key:",
+					"top": 508,
+					"left": 350,
+					"width": 89,
+					"height": 16,
+					"sizingY": "move"
+				},
+				"b2Key": {
+					"type": "input",
+					"left": 428,
+					"top": 508,
+					"width": 249,
+					"height": 17,
+					"dataSource": "Form:C1466.b2.key",
+					"enterable": false,
+					"sizingY": "move"
+				},
+				"Text7": {
+					"type": "text",
+					"text": "Bucket:",
+					"top": 543,
+					"left": 350,
+					"width": 89,
+					"height": 16,
+					"sizingY": "move"
+				},
+				"b2bucketName": {
+					"type": "input",
+					"left": 428,
+					"top": 543,
+					"width": 249,
+					"height": 17,
+					"dataSource": "Form:C1466.b2.bucketName",
+					"enterable": false,
+					"sizingY": "move"
+				},
+				"btnBackupPrefs": {
+					"type": "button",
+					"text": "Open backup prefs",
+					"top": 525,
+					"left": 915,
+					"width": 129,
+					"height": 34,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnBackupPrefs.4dm",
+					"sizingX": "move"
+				},
+				"btnShowFolder": {
+					"type": "button",
+					"text": "Open enclosing folder",
+					"top": 458,
+					"left": 410,
+					"width": 149,
+					"height": 34,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnShowFolder.4dm",
+					"sizingX": "move"
+				},
+				"btnEnterKeyValues": {
+					"type": "button",
+					"text": "Modify credentials",
+					"top": 515,
+					"left": 697,
+					"width": 129,
+					"height": 34,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnEnterKeyValues.4dm",
+					"sizingX": "move"
+				},
+				"Splitter": {
+					"type": "splitter",
+					"left": 581,
+					"top": 25,
+					"width": 4,
+					"height": 442
+				}
+			}
+		}
+	],
+	"geometryStamp": 194,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"menuBar": "Menu Bar #1",
+	"method": "method.4dm"
+}

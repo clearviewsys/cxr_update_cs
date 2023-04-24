@@ -1,0 +1,322 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "subForm_Customers",
+	"inheritedFormTable": 7,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 60,
+	"markerBody": 85,
+	"markerBreak": 85,
+	"markerFooter": 85,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDragOver",
+		"onOpenDetail",
+		"onLoadRecord",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"BankID9": {
+					"type": "input",
+					"top": 62,
+					"left": 490,
+					"width": 117,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[WireTemplates:42]AccountNo:6",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID1": {
+					"type": "input",
+					"top": 62,
+					"left": 3,
+					"width": 125,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[WireTemplates:42]WireTemplateAlias:14",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID5": {
+					"type": "input",
+					"top": 62,
+					"left": 313,
+					"width": 156,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[WireTemplates:42]BankName:3",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID8": {
+					"type": "input",
+					"top": 62,
+					"left": 140,
+					"width": 160,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[WireTemplates:42]BeneficiaryFullName:9",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"BankID4": {
+					"type": "input",
+					"top": 62,
+					"left": 625,
+					"width": 95,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[WireTemplates:42]BankCountry:12",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onValidate",
+						"onDataChange"
+					]
+				},
+				"Line6": {
+					"type": "line",
+					"top": 160,
+					"left": 727,
+					"height": 43,
+					"stroke": "#AAAAAA"
+				},
+				"Splitter4": {
+					"type": "splitter",
+					"top": 40,
+					"left": 135,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button4": {
+					"type": "button",
+					"top": 40,
+					"left": 3,
+					"width": 130,
+					"height": 19,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Account Alias",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button4.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"3D Button1": {
+					"type": "button",
+					"top": 40,
+					"left": 138,
+					"width": 168,
+					"height": 19,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Account Holder Name",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button1.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Splitter1": {
+					"type": "splitter",
+					"top": 40,
+					"left": 308,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button2": {
+					"type": "button",
+					"top": 40,
+					"left": 311,
+					"width": 168,
+					"height": 19,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Bank Name",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button2.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Splitter2": {
+					"type": "splitter",
+					"top": 40,
+					"left": 481,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button3": {
+					"type": "button",
+					"top": 40,
+					"left": 484,
+					"width": 128,
+					"height": 19,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Account #",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button3.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Splitter3": {
+					"type": "splitter",
+					"top": 40,
+					"left": 614,
+					"width": 1,
+					"height": 45,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button5": {
+					"type": "button",
+					"top": 40,
+					"left": 617,
+					"width": 108,
+					"height": 19,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Headings",
+					"stroke": "#880088",
+					"focusable": false,
+					"text": "Country",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button5.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Splitter5": {
+					"type": "splitter",
+					"top": 40,
+					"left": 727,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

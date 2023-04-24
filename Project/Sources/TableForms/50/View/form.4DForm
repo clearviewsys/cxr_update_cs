@@ -1,0 +1,1187 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "ViewToolbar2",
+	"inheritedFormTable": 7,
+	"rightMargin": 19,
+	"bottomMargin": 19,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 214,
+	"markerBody": 771,
+	"markerBreak": 771,
+	"markerFooter": 771,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text24": {
+					"type": "text",
+					"top": 60,
+					"left": 12,
+					"width": 113,
+					"height": 15,
+					"class": "Label",
+					"text": "Booking ID"
+				},
+				"Text25": {
+					"type": "text",
+					"top": 79,
+					"left": 12,
+					"width": 113,
+					"height": 15,
+					"class": "Label",
+					"text": "Booking Date"
+				},
+				"Text35": {
+					"type": "text",
+					"top": 98,
+					"left": 12,
+					"width": 105,
+					"height": 15,
+					"class": "Label",
+					"text": "Expiry Date"
+				},
+				"isFlagged": {
+					"type": "checkbox",
+					"top": 18,
+					"left": 394,
+					"width": 144,
+					"height": 23,
+					"dataSource": "[Bookings:50]isFlagged:20",
+					"text": "Flagged",
+					"stroke": "#000000",
+					"class": "Large",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"BookingID": {
+					"type": "input",
+					"top": 59,
+					"left": 112,
+					"width": 133,
+					"height": 15,
+					"dataSource": "[Bookings:50]BookingID:1",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"BookingDate": {
+					"type": "input",
+					"top": 78,
+					"left": 112,
+					"width": 215,
+					"height": 15,
+					"dataSource": "[Bookings:50]BookingDate:3",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"BookingTime": {
+					"type": "input",
+					"top": 79,
+					"left": 329,
+					"width": 54,
+					"height": 15,
+					"dataSource": "[Bookings:50]BookingTime:4",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"expiryDate": {
+					"type": "input",
+					"top": 97,
+					"left": 112,
+					"width": 215,
+					"height": 15,
+					"dataSource": "[Bookings:50]expiryDate:16",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"expiryTime": {
+					"type": "input",
+					"top": 97,
+					"left": 329,
+					"width": 54,
+					"height": 15,
+					"dataSource": "[Bookings:50]expiryTime:17",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"invoiceID": {
+					"type": "input",
+					"top": 58,
+					"left": 439,
+					"width": 125,
+					"height": 16,
+					"dataSource": "[Bookings:50]invoiceID:19",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#E2FFDF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text37": {
+					"type": "text",
+					"top": 58,
+					"left": 368,
+					"width": 76,
+					"height": 15,
+					"class": "Label",
+					"text": "invoice ID"
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 709,
+					"left": 428,
+					"width": 140,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"action": "cancel",
+					"text": "Close",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"BookingID1": {
+					"type": "input",
+					"top": 59,
+					"left": 249,
+					"width": 48,
+					"height": 15,
+					"dataSource": "[Bookings:50]BranchID:25",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_InvoiceID": {
+					"type": "button",
+					"top": 57,
+					"left": 436,
+					"width": 129,
+					"height": 19,
+					"focusable": false,
+					"borderStyle": "raised",
+					"method": "ObjectMethods/b_InvoiceID.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					],
+					"style": "toolbar"
+				},
+				"b_emailBooking": {
+					"type": "button",
+					"top": 130,
+					"left": 415,
+					"width": 150,
+					"height": 30,
+					"sizingX": "move",
+					"shortcutKey": "p",
+					"shortcutAccel": true,
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "eMail Booking",
+					"icon": "/RESOURCES/Images/library/sendEmail (32795).png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/b_emailBooking.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_SMSConfirm": {
+					"type": "button",
+					"top": 165,
+					"left": 415,
+					"width": 150,
+					"height": 30,
+					"sizingX": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "SMS Confirmation",
+					"icon": "/RESOURCES/Images/library/toolbarOK.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/b_SMSConfirm.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 379,
+					"left": 34,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Direct Rate (LC)"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 457,
+					"left": 37,
+					"width": 157,
+					"height": 23,
+					"stroke": "#005F60",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "% Commission"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 516,
+					"left": 35,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Local Amount"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 485,
+					"left": 34,
+					"width": 157,
+					"height": 23,
+					"stroke": "#005F60",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Flat Fee"
+				},
+				"Text36": {
+					"type": "text",
+					"top": 405,
+					"left": 34,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": " Inverse Rate"
+				},
+				"Text43": {
+					"type": "text",
+					"top": 272,
+					"left": 34,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": " Amount"
+				},
+				"Text44": {
+					"type": "text",
+					"top": 432,
+					"left": 33,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Before fees"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 299,
+					"left": 34,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Currency"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 326,
+					"left": 34,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Payment Method"
+				},
+				"Text27": {
+					"type": "text",
+					"top": 150,
+					"left": 78,
+					"width": 113,
+					"height": 20,
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Customer"
+				},
+				"BookingDate1": {
+					"type": "input",
+					"top": 122,
+					"left": 201,
+					"width": 185,
+					"height": 21,
+					"dataSource": "[Bookings:50]ValueDate:26",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"CustomerID": {
+					"type": "input",
+					"top": 149,
+					"left": 201,
+					"width": 146,
+					"height": 20,
+					"dataSource": "[Bookings:50]CustomerID:2",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#DFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CalcField7": {
+					"type": "input",
+					"top": 274,
+					"left": 200,
+					"width": 182,
+					"height": 20,
+					"dataSource": "[Bookings:50]Amount:9",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CalcField1": {
+					"type": "input",
+					"top": 301,
+					"left": 200,
+					"width": 50,
+					"height": 20,
+					"dataSource": "[Bookings:50]Currency:10",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"BookingMethod1": {
+					"type": "input",
+					"top": 328,
+					"left": 200,
+					"width": 150,
+					"height": 20,
+					"dataSource": "[Bookings:50]PaymentMethod:8",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/PaymentMethods"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CalcField8": {
+					"type": "input",
+					"top": 379,
+					"left": 200,
+					"width": 150,
+					"height": 20,
+					"dataSource": "[Bookings:50]ourRate:11",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#E3F9E5",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Rates"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"vInverseRate1": {
+					"type": "input",
+					"top": 406,
+					"left": 200,
+					"width": 150,
+					"height": 20,
+					"dataSource": "[Bookings:50]inverseRate:29",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"focusable": false,
+					"fill": "#CCF7CD",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Rates"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"calcField2": {
+					"type": "input",
+					"top": 433,
+					"left": 200,
+					"width": 183,
+					"height": 20,
+					"dataSource": "vAmountLocal_BF",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onLosingFocus",
+						"onDataChange"
+					]
+				},
+				"CalcField_2": {
+					"type": "input",
+					"top": 458,
+					"left": 200,
+					"width": 56,
+					"height": 20,
+					"dataSource": "[Bookings:50]percentFee:21",
+					"dataSourceTypeHint": "number",
+					"stroke": "#EE0000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Percent"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CalcField9": {
+					"type": "input",
+					"top": 486,
+					"left": 200,
+					"width": 117,
+					"height": 20,
+					"dataSource": "[Bookings:50]feeLocal:22",
+					"dataSourceTypeHint": "number",
+					"stroke": "#EE0000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CalcField11": {
+					"type": "input",
+					"top": 519,
+					"left": 200,
+					"width": 181,
+					"height": 20,
+					"dataSource": "[Bookings:50]amountLocal:23",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ourRemarks": {
+					"type": "input",
+					"top": 545,
+					"left": 200,
+					"width": 349,
+					"height": 54,
+					"sizingX": "grow",
+					"dataSource": "[Bookings:50]ourRemarks:13",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"BookingMethod": {
+					"type": "input",
+					"top": 675,
+					"left": 200,
+					"width": 121,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "[Bookings:50]BookingMethod:6",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isConfirmed": {
+					"type": "checkbox",
+					"top": 704,
+					"left": 200,
+					"width": 191,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "[Bookings:50]isConfirmed:15",
+					"text": "Confirmed",
+					"stroke": "#000000",
+					"class": "Large",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"S4_Field": {
+					"type": "input",
+					"top": 171,
+					"left": 15,
+					"width": 398,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "[Customers:3]FullName:40",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CalcField_3": {
+					"type": "input",
+					"top": 454,
+					"left": 276,
+					"width": 70,
+					"height": 20,
+					"dataSource": "vPercentFeeLocal",
+					"dataSourceTypeHint": "number",
+					"stroke": "#005F60",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field18": {
+					"type": "input",
+					"top": 486,
+					"left": 328,
+					"width": 35,
+					"height": 20,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#005F60",
+					"class": "Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text28": {
+					"type": "text",
+					"top": 674,
+					"left": 37,
+					"width": 157,
+					"height": 20,
+					"sizingY": "move",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Booking Method"
+				},
+				"Text40": {
+					"type": "text",
+					"top": 545,
+					"left": 20,
+					"width": 164,
+					"height": 21,
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Printable Remarks"
+				},
+				"BookingMethod2": {
+					"type": "input",
+					"top": 674,
+					"left": 333,
+					"width": 135,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "[Bookings:50]BookedByUser:5",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 122,
+					"left": 78,
+					"width": 113,
+					"height": 20,
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Value Date"
+				},
+				"ourRemarks1": {
+					"type": "input",
+					"top": 607,
+					"left": 200,
+					"width": 349,
+					"height": 54,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[Bookings:50]customerRemarks:14",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 607,
+					"left": 7,
+					"width": 177,
+					"height": 38,
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Customer Remarks"
+				},
+				"b_printBooking": {
+					"type": "button",
+					"top": 200,
+					"left": 415,
+					"width": 150,
+					"height": 30,
+					"sizingX": "move",
+					"shortcutKey": "p",
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Print Booking",
+					"icon": "/RESOURCES/Images/library/toolbarPrinter.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/b_printBooking.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_CustomerID": {
+					"type": "button",
+					"top": 147,
+					"left": 200,
+					"width": 150,
+					"height": 24,
+					"focusable": false,
+					"style": "custom",
+					"borderStyle": "raised",
+					"method": "ObjectMethods/b_CustomerID.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"[Customers]FullName5": {
+					"type": "input",
+					"top": 191,
+					"left": 15,
+					"width": 325,
+					"height": 20,
+					"dataSource": "[Customers:3]Email:17",
+					"stroke": "#405EFF",
+					"class": "Large",
+					"textAlign": "automatic",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_email": {
+					"type": "button",
+					"top": 192,
+					"left": 15,
+					"width": 297,
+					"height": 19,
+					"display": false,
+					"method": "ObjectMethods/b_email.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"isFlagged1": {
+					"type": "checkbox",
+					"top": 351,
+					"left": 200,
+					"width": 233,
+					"height": 20,
+					"dataSource": "[Bookings:50]isOpenBooking:34",
+					"text": "Open Booking (Rateless)",
+					"stroke": "#000000",
+					"class": "Large",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"stamp": {
+					"type": "input",
+					"top": 273,
+					"left": 392,
+					"width": 173,
+					"height": 80,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"isConfirmed1": {
+					"type": "checkbox",
+					"top": 727,
+					"left": 200,
+					"width": 191,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "[Bookings:50]isHonored:18",
+					"text": "Honored",
+					"stroke": "#000000",
+					"class": "Large",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"stamp_buy": {
+					"type": "input",
+					"top": 219,
+					"left": 15,
+					"width": 549,
+					"height": 48,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_newInvoice": {
+					"type": "button",
+					"top": 95,
+					"left": 415,
+					"width": 150,
+					"height": 30,
+					"sizingY": "fixed",
+					"dataSource": "",
+					"text": "New Invoice +",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/b_newInvoice.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					],
+					"sizingX": "move"
+				}
+			},
+			"entryOrder": [
+				"isFlagged",
+				"bCancel",
+				"BookingDate1",
+				"CustomerID",
+				"BookingMethod",
+				"isConfirmed",
+				"Field18",
+				"isFlagged1",
+				"isConfirmed1",
+				"b_newInvoice"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"bCancel"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 81,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

@@ -1,0 +1,1 @@
+[ClientPrefs:26]chequePrinterName:2:=rdcSetPrinterName(vDefaultPrinterName{vDefaultPrinterName})

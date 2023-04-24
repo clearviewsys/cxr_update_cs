@@ -1,0 +1,184 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 25,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"List Box": {
+					"type": "listbox",
+					"left": 26,
+					"top": 2,
+					"width": 650,
+					"height": 493,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.matches",
+					"right": 676,
+					"bottom": 495,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"hideExtraBlankRows": true,
+					"columns": [
+						{
+							"header": {
+								"text": "Customer ID",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.id",
+							"enterable": false,
+							"width": 280,
+							"minWidth": 280
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Match DOB"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.dobMatch",
+							"dataSourceTypeHint": "boolean",
+							"enterable": false,
+							"minWidth": 100
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Match Nationality"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"enterable": false,
+							"dataSource": "This:C1470.nationalityMatch",
+							"dataSourceTypeHint": "boolean",
+							"minWidth": 100
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Is Exact Match"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "This:C1470.isExact",
+							"dataSourceTypeHint": "boolean",
+							"enterable": false,
+							"width": 100,
+							"minWidth": 100
+						}
+					]
+				},
+				"Text": {
+					"type": "text",
+					"text": "Similar Matches",
+					"top": 500,
+					"left": 0,
+					"width": 98,
+					"height": 17,
+					"class": "Label_Medium"
+				},
+				"Input": {
+					"type": "input",
+					"left": 106,
+					"top": 500,
+					"width": 83,
+					"height": 16,
+					"class": "Fields_Medium",
+					"dataSource": "Form:C1466.similiar"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Exact Matches",
+					"top": 500,
+					"left": 271,
+					"width": 98,
+					"height": 17,
+					"class": "Label_Medium"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 377,
+					"top": 500,
+					"width": 83,
+					"height": 16,
+					"class": "Fields_Medium",
+					"dataSource": "Form:C1466.exact"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Total Matches:",
+					"top": 500,
+					"left": 511,
+					"width": 98,
+					"height": 17,
+					"class": "Label_Medium"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 617,
+					"top": 500,
+					"width": 83,
+					"height": 16,
+					"class": "Fields_Medium",
+					"dataSource": "Form:C1466.total"
+				}
+			}
+		}
+	],
+	"geometryStamp": 48,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

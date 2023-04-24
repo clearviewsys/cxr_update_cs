@@ -1,0 +1,350 @@
+﻿{
+	"destination": "listScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 2,
+	"markerHeader": 19,
+	"markerBody": 70,
+	"markerBreak": 74,
+	"markerFooter": 74,
+	"events": [
+		"onLoad",
+		"onDisplayDetail",
+		"onDataChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"S4_Field4": {
+					"type": "input",
+					"top": 21,
+					"left": 81,
+					"width": 114,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Registers:10]AccountID:6",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "#C0C0C0",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLosingFocus"
+					]
+				},
+				"S4_Field13": {
+					"type": "input",
+					"top": 21,
+					"left": 196,
+					"width": 67,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Registers:10]RegisterDate:2",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "#DDDDDD",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": "!0&9##/##/##",
+					"events": [
+						"onLoad",
+						"onLosingFocus"
+					]
+				},
+				"S4_Field14": {
+					"type": "input",
+					"top": 21,
+					"left": 265,
+					"width": 105,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Registers:10]Debit:8",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#C0CAFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus"
+					]
+				},
+				"S1_Field5": {
+					"type": "input",
+					"top": 21,
+					"left": 404,
+					"width": 105,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Registers:10]Credit:7",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "#FFFFC0",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus"
+					]
+				},
+				"S1_Text6": {
+					"type": "text",
+					"top": 1,
+					"left": 81,
+					"width": 114,
+					"height": 15,
+					"sizingX": "grow",
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"textAlign": "center",
+					"text": "Account ID"
+				},
+				"S1_Text8": {
+					"type": "text",
+					"top": 1,
+					"left": 1,
+					"width": 79,
+					"height": 15,
+					"sizingX": "grow",
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"textAlign": "center",
+					"text": "Register"
+				},
+				"S1_Text10": {
+					"type": "text",
+					"top": 1,
+					"left": 264,
+					"width": 139,
+					"height": 15,
+					"sizingX": "grow",
+					"fill": "#444444",
+					"stroke": "#DFE4FF",
+					"textAlign": "center",
+					"text": "Amount Received"
+				},
+				"S1_Text11": {
+					"type": "text",
+					"top": 1,
+					"left": 196,
+					"width": 67,
+					"height": 15,
+					"sizingX": "grow",
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"textAlign": "center",
+					"text": "Due Date"
+				},
+				"S1_Text13": {
+					"type": "text",
+					"top": 1,
+					"left": 404,
+					"width": 134,
+					"height": 15,
+					"sizingX": "grow",
+					"fill": "#444444",
+					"stroke": "#FFA140",
+					"textAlign": "center",
+					"text": "Amount Paid"
+				},
+				"S4_Field1": {
+					"type": "input",
+					"top": 21,
+					"left": 374,
+					"width": 26,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Registers:10]Currency:19",
+					"stroke": "#0128FF",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S4_Field2": {
+					"type": "input",
+					"top": 21,
+					"left": 507,
+					"width": 28,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Registers:10]Currency:19",
+					"stroke": "#884500",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S4_Field3": {
+					"type": "input",
+					"top": 38,
+					"left": 196,
+					"width": 340,
+					"height": 32,
+					"sizingX": "grow",
+					"dataSource": "[Registers:10]Comments:9",
+					"stroke": "#777777",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus"
+					]
+				},
+				"S4_Field6": {
+					"type": "input",
+					"top": 53,
+					"left": 81,
+					"width": 114,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Registers:10]InternalRecordID:18",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLosingFocus"
+					]
+				},
+				"S4_Field7": {
+					"type": "input",
+					"top": 38,
+					"left": 81,
+					"width": 114,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "vExternalTableName",
+					"stroke": "#000000",
+					"fontFamily": "Arial",
+					"fontSize": 10,
+					"focusable": false,
+					"fill": "#DDDDDD",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"S4_Field10": {
+					"type": "input",
+					"top": 36,
+					"left": 1,
+					"width": 79,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Registers:10]RegisterType:4",
+					"stroke": "#777777",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#DDDDDD",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/PayablesType"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"S4_Field5": {
+					"type": "input",
+					"top": 21,
+					"left": 1,
+					"width": 79,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Registers:10]RegisterID:1",
+					"stroke": "#777777",
+					"focusable": false,
+					"fill": "#DDDDDD",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLosingFocus"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 53,
+					"left": 3,
+					"width": 74,
+					"height": 15,
+					"stroke": "#666666",
+					"textAlign": "right",
+					"text": "Source Ref#"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

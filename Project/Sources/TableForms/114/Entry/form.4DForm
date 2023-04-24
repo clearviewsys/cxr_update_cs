@@ -1,0 +1,208 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Entry",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text11": {
+					"type": "text",
+					"top": 84,
+					"left": 23,
+					"width": 146,
+					"height": 30,
+					"stroke": "#000000",
+					"class": "ExtraLarge",
+					"textAlign": "right",
+					"text": ":xliff:cvs_industry"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 121,
+					"left": 25,
+					"width": 146,
+					"height": 30,
+					"stroke": "#000000",
+					"class": "ExtraLarge",
+					"textAlign": "right",
+					"text": ":xliff:cvs_risk"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 50,
+					"left": 25,
+					"width": 146,
+					"height": 30,
+					"stroke": "#000000",
+					"class": "ExtraLarge",
+					"textAlign": "right",
+					"text": ":xliff:cvs_code"
+				},
+				"Risk1": {
+					"type": "input",
+					"top": 51,
+					"left": 184,
+					"width": 88,
+					"height": 29,
+					"dataSource": "[Industries:114]Code:6",
+					"stroke": "#000000",
+					"class": "ExtraLarge",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"Description": {
+					"type": "input",
+					"top": 86,
+					"left": 184,
+					"width": 435,
+					"height": 29,
+					"dataSource": "[Industries:114]Industry:2",
+					"stroke": "#000000",
+					"class": "ExtraLarge",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Description.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Risk": {
+					"type": "input",
+					"top": 122,
+					"left": 184,
+					"width": 35,
+					"height": 29,
+					"dataSource": "[Industries:114]AML_Risk:3",
+					"stroke": "#000000",
+					"class": "ExtraLarge",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 155,
+					"left": 492,
+					"width": 127,
+					"height": 35,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/OK"
+					},
+					"action": "accept",
+					"shortcutKey": "\u0000",
+					"text": "Save",
+					"class": "ExtraLarge",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 155,
+					"left": 380,
+					"width": 107,
+					"height": 35,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Cancel"
+					},
+					"shortcutKey": "\u0000",
+					"text": "Cancel",
+					"class": "ExtraLarge",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"bValidate",
+					"bCancel"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+handleAutoFillSearch(Self:C308; Current form table:C627; ->[TransferTemplates:54]TransferTemplateID:1; ->[TransferTemplates:54]Description:2; ->[TransferTemplates:54]TransferTemplateID:1; ->arrKey; ->arrValue)

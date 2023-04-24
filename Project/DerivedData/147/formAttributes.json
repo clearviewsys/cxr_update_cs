@@ -1,0 +1,46 @@
+{
+	"forms": {
+		"AddressProximityDemo": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"Entry": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"Entry2": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"ListBoxForm": {
+			"timeStamp": "2023-04-24T12:23:47Z"
+		},
+		"AddressDistanceDemo": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"AddressGeocodeDemo": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2023-04-24T12:23:47Z"
+		},
+		"CustomerAddressProximityDemo": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"new": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"AddressSearch": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		}
+	}
+}

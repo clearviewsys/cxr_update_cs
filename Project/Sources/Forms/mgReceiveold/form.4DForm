@@ -1,0 +1,704 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 24,
+					"left": 12,
+					"width": 550,
+					"height": 308,
+					"fill": "transparent"
+				},
+				"referenceNumber": {
+					"type": "input",
+					"top": 38,
+					"left": 167,
+					"width": 384,
+					"height": 18,
+					"dataSource": "Form:C1466.object.referenceNumber",
+					"stroke": "#444444",
+					"class": "Medium",
+					"contextMenu": "none",
+					"method": "ObjectMethods/referenceNumber.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverCountry": {
+					"type": "input",
+					"top": 64,
+					"left": 167,
+					"width": 53,
+					"height": 18,
+					"dataSource": "Form:C1466.object.receiverCountry",
+					"stroke": "#000000",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/receiverCountry.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverCity": {
+					"type": "input",
+					"top": 89,
+					"left": 167,
+					"width": 384,
+					"height": 18,
+					"dataSource": "Form:C1466.object.receiverCity",
+					"stroke": "#444444",
+					"class": "Medium",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverAddress": {
+					"type": "input",
+					"top": 114,
+					"left": 167,
+					"width": 384,
+					"height": 18,
+					"dataSource": "Form:C1466.object.receiverAddress",
+					"stroke": "#444444",
+					"class": "Medium",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverZipCode": {
+					"type": "input",
+					"top": 138,
+					"left": 167,
+					"width": 384,
+					"height": 18,
+					"dataSource": "Form:C1466.object.receiverZipCode",
+					"stroke": "#444444",
+					"class": "Medium",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverPhoneCountryCode": {
+					"type": "input",
+					"top": 164,
+					"left": 167,
+					"width": 73,
+					"height": 18,
+					"dataSource": "Form:C1466.object.receiverPhoneCountryCode",
+					"stroke": "#000000",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverPhone": {
+					"type": "input",
+					"top": 163,
+					"left": 369,
+					"width": 182,
+					"height": 18,
+					"dataSource": "Form:C1466.object.receiverPhone",
+					"stroke": "#444444",
+					"class": "Medium",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverDOB": {
+					"type": "input",
+					"top": 190,
+					"left": 167,
+					"width": 133,
+					"height": 18,
+					"dataSource": "Form:C1466.object.receiverDOB",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"entryFilter": "DateInput MMDDYYYY",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverBirthCountry": {
+					"type": "input",
+					"top": 217,
+					"left": 166,
+					"width": 53,
+					"height": 18,
+					"dataSource": "Form:C1466.object.receiverBirthCountry",
+					"stroke": "#000000",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/receiverBirthCountry.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverPhotoIdType": {
+					"type": "input",
+					"top": 250,
+					"left": 167,
+					"width": 73,
+					"height": 18,
+					"dataSource": "Form:C1466.object.receiverPhotoIdType",
+					"stroke": "#000000",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverPhotoIdNumber": {
+					"type": "input",
+					"top": 250,
+					"left": 369,
+					"width": 182,
+					"height": 18,
+					"dataSource": "Form:C1466.object.receiverPhotoIdNumber",
+					"stroke": "#444444",
+					"class": "Medium",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverPhotoIdIssueDate": {
+					"type": "input",
+					"top": 276,
+					"left": 167,
+					"width": 133,
+					"height": 18,
+					"dataSource": "Form:C1466.object.receiverPhotoIdIssueDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"entryFilter": "DateInput MMDDYYYY",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverPhotoIdExpDate": {
+					"type": "input",
+					"top": 276,
+					"left": 409,
+					"width": 142,
+					"height": 18,
+					"dataSource": "Form:C1466.object.receiverPhotoIdExpDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#444444",
+					"class": "Medium",
+					"contextMenu": "none",
+					"entryFilter": "DateInput MMDDYYYY",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverPhotoIdCountry": {
+					"type": "input",
+					"top": 301,
+					"left": 167,
+					"width": 53,
+					"height": 18,
+					"dataSource": "Form:C1466.object.receiverPhotoIdCountry",
+					"stroke": "#000000",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/receiverPhotoIdCountry.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"username": {
+					"type": "input",
+					"top": 368,
+					"left": 152,
+					"width": 384,
+					"height": 18,
+					"dataSource": "Form:C1466.credentials.username",
+					"stroke": "#444444",
+					"class": "Medium",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"password": {
+					"type": "input",
+					"top": 392,
+					"left": 152,
+					"width": 384,
+					"height": 18,
+					"dataSource": "Form:C1466.credentials.password",
+					"stroke": "#444444",
+					"class": "Medium",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"agentID": {
+					"type": "input",
+					"top": 417,
+					"left": 152,
+					"width": 384,
+					"height": 18,
+					"dataSource": "Form:C1466.credentials.agentID",
+					"stroke": "#444444",
+					"class": "Medium",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"btn_cancel": {
+					"type": "button",
+					"top": 452,
+					"left": 13,
+					"width": 150,
+					"height": 46,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"shortcutKey": "[Esc]",
+					"text": ":xliff:cvs_cancel",
+					"class": "Large",
+					"events": [
+						"onClick"
+					]
+				},
+				"receiverCountryName": {
+					"type": "input",
+					"top": 64,
+					"left": 227,
+					"width": 324,
+					"height": 18,
+					"stroke": "#444444",
+					"class": "Medium",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_first": {
+					"type": "text",
+					"top": 37,
+					"left": 10,
+					"width": 150,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Reference Number"
+				},
+				"l_last3": {
+					"type": "text",
+					"top": 64,
+					"left": 10,
+					"width": 150,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Country"
+				},
+				"l_last5": {
+					"type": "text",
+					"top": 89,
+					"left": 10,
+					"width": 150,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "City"
+				},
+				"l_last7": {
+					"type": "text",
+					"top": 114,
+					"left": 10,
+					"width": 150,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Address"
+				},
+				"l_last8": {
+					"type": "text",
+					"top": 138,
+					"left": 10,
+					"width": 150,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Postal Code"
+				},
+				"l_last9": {
+					"type": "text",
+					"top": 164,
+					"left": 10,
+					"width": 150,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Phone Country Code"
+				},
+				"l_last10": {
+					"type": "text",
+					"top": 163,
+					"left": 232,
+					"width": 130,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Phone"
+				},
+				"l_last11": {
+					"type": "text",
+					"top": 250,
+					"left": 10,
+					"width": 150,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Photo ID Type"
+				},
+				"l_last12": {
+					"type": "text",
+					"top": 250,
+					"left": 232,
+					"width": 130,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Photo ID Num"
+				},
+				"l_last13": {
+					"type": "text",
+					"top": 276,
+					"left": 10,
+					"width": 150,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Photo ID Issue"
+				},
+				"l_last14": {
+					"type": "text",
+					"top": 276,
+					"left": 232,
+					"width": 170,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Photo ID Expiry"
+				},
+				"receiverPhotoIdCountryName": {
+					"type": "input",
+					"top": 301,
+					"left": 227,
+					"width": 324,
+					"height": 18,
+					"stroke": "#444444",
+					"class": "Medium",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_last15": {
+					"type": "text",
+					"top": 301,
+					"left": 10,
+					"width": 150,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Photo ID Country"
+				},
+				"l_last16": {
+					"type": "text",
+					"top": 190,
+					"left": 10,
+					"width": 150,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Date of birth"
+				},
+				"receiverBirthCountryName": {
+					"type": "input",
+					"top": 217,
+					"left": 226,
+					"width": 324,
+					"height": 18,
+					"stroke": "#444444",
+					"class": "Medium",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_last17": {
+					"type": "text",
+					"top": 217,
+					"left": 9,
+					"width": 150,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Country of birth"
+				},
+				"Text53": {
+					"type": "text",
+					"top": 10,
+					"left": 11,
+					"width": 551,
+					"height": 19,
+					"sizingX": "grow",
+					"fill": "#5B89C9",
+					"stroke": "#FFFFFF",
+					"class": "Fields_Large1",
+					"textAlign": "center",
+					"text": "Receiver"
+				},
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 357,
+					"left": 13,
+					"width": 548,
+					"height": 89,
+					"fill": "transparent"
+				},
+				"l_first3": {
+					"type": "text",
+					"top": 369,
+					"left": -5,
+					"width": 150,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Username"
+				},
+				"l_last22": {
+					"type": "text",
+					"top": 394,
+					"left": -5,
+					"width": 150,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Password"
+				},
+				"l_last23": {
+					"type": "text",
+					"top": 417,
+					"left": -5,
+					"width": 150,
+					"height": 17,
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "AgentID"
+				},
+				"t_IM_fraudRule2": {
+					"type": "text",
+					"top": 339,
+					"left": 12,
+					"width": 548,
+					"height": 17,
+					"sizingX": "grow",
+					"fill": "#DDA0DD",
+					"stroke": "#FFFFFF",
+					"class": "Medium",
+					"textAlign": "center",
+					"text": "MoneyGram Credentials"
+				},
+				"btn_receive2": {
+					"type": "button",
+					"top": 452,
+					"left": 203,
+					"width": 150,
+					"height": 46,
+					"sizingX": "move",
+					"sizingY": "move",
+					"shortcutKey": "[Esc]",
+					"text": "Receive semi-automaitic",
+					"class": "Large",
+					"method": "ObjectMethods/btn_receive2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btn_cancel2": {
+					"type": "button",
+					"top": 452,
+					"left": 393,
+					"width": 150,
+					"height": 46,
+					"sizingX": "move",
+					"sizingY": "move",
+					"shortcutKey": "[Esc]",
+					"text": "Receive",
+					"class": "Large",
+					"method": "ObjectMethods/btn_cancel2.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"referenceNumber",
+				"receiverCountry",
+				"receiverCity",
+				"receiverAddress",
+				"receiverZipCode",
+				"receiverPhoneCountryCode",
+				"receiverPhone",
+				"receiverDOB",
+				"receiverBirthCountry",
+				"receiverPhotoIdType",
+				"receiverPhotoIdNumber",
+				"receiverPhotoIdIssueDate",
+				"receiverPhotoIdExpDate",
+				"receiverPhotoIdCountry",
+				"username",
+				"password",
+				"agentID",
+				"btn_cancel",
+				"btn_receive2",
+				"btn_cancel2"
+			]
+		},
+		{
+			"objects": {
+				"btn_receive1": {
+					"type": "pictureButton",
+					"top": 452,
+					"left": 288,
+					"width": 211,
+					"height": 46,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"picture": "/RESOURCES/MG/mg_logo_nt_cxr.png",
+					"loopBackToFirstFrame": true,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"btn_cancel"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

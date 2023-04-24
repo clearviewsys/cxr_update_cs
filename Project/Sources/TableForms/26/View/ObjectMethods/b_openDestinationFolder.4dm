@@ -1,0 +1,1 @@
+SHOW ON DISK:C922([ClientPrefs:26]PictureIDDestFolder:26; *)

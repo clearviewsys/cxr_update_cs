@@ -1,0 +1,1 @@
+bindPopUpToIntegerField(Self:C308; ->[ServerPrefs:27]defaultLanguage:44)

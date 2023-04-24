@@ -1,0 +1,149 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"text": "You will be able to change the options by clicking the gear icon in the Invoices module",
+					"top": 223,
+					"left": 45,
+					"width": 463,
+					"height": 15,
+					"fontTheme": "normal",
+					"fontSize": 12
+				},
+				"b_save": {
+					"type": "button",
+					"text": "Continue",
+					"top": 251,
+					"left": 406,
+					"width": 123,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"action": "cancel",
+					"method": "ObjectMethods/b_save.4dm"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Please select what information you would like to include in your printed invoice:",
+					"top": 29,
+					"left": 29,
+					"width": 523,
+					"height": 50,
+					"fontTheme": "main",
+					"fontSize": 18
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"text": "Include Customer Address",
+					"top": 99,
+					"left": 45,
+					"width": 201,
+					"height": 28,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.isDisplayAddress",
+					"dataSourceTypeHint": "boolean"
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"text": "Don't ask me again",
+					"top": 187,
+					"left": 45,
+					"width": 201,
+					"height": 28,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.isDoNotAskAgain",
+					"dataSourceTypeHint": "boolean"
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"text": "Include Purpose of Transaction",
+					"top": 132,
+					"left": 291,
+					"width": 201,
+					"height": 28,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.isDisplayPurposeOfTransaction",
+					"dataSourceTypeHint": "boolean"
+				},
+				"Check Box3": {
+					"type": "checkbox",
+					"text": "Include Source of Funds",
+					"top": 99,
+					"left": 291,
+					"width": 201,
+					"height": 28,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.isDisplaySourceOfFunds",
+					"dataSourceTypeHint": "boolean"
+				},
+				"Check Box4": {
+					"type": "checkbox",
+					"text": "Include Customer Phone Number",
+					"top": 132,
+					"left": 45,
+					"width": 201,
+					"height": 28,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.isDisplayPhone",
+					"dataSourceTypeHint": "boolean"
+				}
+			}
+		}
+	],
+	"geometryStamp": 87,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

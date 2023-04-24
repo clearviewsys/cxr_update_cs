@@ -1,0 +1,467 @@
+{
+	"destination": "detailScreen",
+	"windowTitle": "Date Range",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 59,
+					"left": 26,
+					"width": 56,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "From"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 88,
+					"left": 27,
+					"width": 55,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "To "
+				},
+				"Text3": {
+					"type": "text",
+					"top": 4,
+					"left": 16,
+					"width": 565,
+					"height": 22,
+					"fill": "#DDDDDD",
+					"class": "Titles",
+					"textAlign": "center",
+					"text": " Select a Date Range "
+				},
+				"vFromDate": {
+					"type": "input",
+					"top": 63,
+					"left": 90,
+					"width": 315,
+					"height": 20,
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "Large",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"method": "ObjectMethods/vFromDate.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"vToDate": {
+					"type": "input",
+					"top": 90,
+					"left": 90,
+					"width": 315,
+					"height": 20,
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "Large",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"method": "ObjectMethods/vToDate.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"b_OK": {
+					"type": "button",
+					"top": 429,
+					"left": 461,
+					"width": 120,
+					"height": 25,
+					"action": "accept",
+					"text": "OK",
+					"class": "Large",
+					"defaultButton": true,
+					"method": "ObjectMethods/b_OK.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_Cance": {
+					"type": "button",
+					"top": 429,
+					"left": 333,
+					"width": 120,
+					"height": 25,
+					"action": "cancel",
+					"shortcutKey": ".",
+					"shortcutAccel": true,
+					"text": "Cancel",
+					"class": "Large",
+					"method": "ObjectMethods/b_Cance.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"shortcuts1": {
+					"type": "text",
+					"top": 273,
+					"left": 23,
+					"width": 166,
+					"height": 126,
+					"class": "Fields",
+					"text": "Key\tAction\r T\tToday\r ; \tBack one day\r '  \tGo forward one day\r [\tGo back 1 month\r ] \tGo forward 1 month\r - \tto add 1 year. \r = \tto subtract 1 year"
+				},
+				"b_dayminus": {
+					"type": "button",
+					"top": 187,
+					"left": 26,
+					"width": 100,
+					"height": 25,
+					"text": "Day -",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_dayminus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_DayPlus": {
+					"type": "button",
+					"top": 187,
+					"left": 127,
+					"width": 100,
+					"height": 25,
+					"text": "Day +",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_DayPlus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_MonthMinus": {
+					"type": "button",
+					"top": 214,
+					"left": 26,
+					"width": 100,
+					"height": 25,
+					"text": "Month -",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_MonthMinus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_MonthPlus": {
+					"type": "button",
+					"top": 214,
+					"left": 127,
+					"width": 100,
+					"height": 25,
+					"text": "Month +",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_MonthPlus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_YearMinus": {
+					"type": "button",
+					"top": 241,
+					"left": 26,
+					"width": 100,
+					"height": 25,
+					"text": "Year -",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_YearMinus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_YearPlus": {
+					"type": "button",
+					"top": 241,
+					"left": 127,
+					"width": 100,
+					"height": 25,
+					"text": "Year +",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_YearPlus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_BOM": {
+					"type": "button",
+					"top": 214,
+					"left": 228,
+					"width": 125,
+					"height": 25,
+					"text": "BOMonth",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_BOM.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_EOM": {
+					"type": "button",
+					"top": 214,
+					"left": 354,
+					"width": 125,
+					"height": 25,
+					"text": "EOMonth",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_EOM.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_BOY": {
+					"type": "button",
+					"top": 241,
+					"left": 228,
+					"width": 125,
+					"height": 25,
+					"text": "BOYear",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_BOY.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_EOY": {
+					"type": "button",
+					"top": 241,
+					"left": 354,
+					"width": 125,
+					"height": 25,
+					"text": "EOYear",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_EOY.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_Today": {
+					"type": "button",
+					"top": 187,
+					"left": 228,
+					"width": 251,
+					"height": 25,
+					"text": "Today",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_Today.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button1": {
+					"type": "pictureButton",
+					"top": 60,
+					"left": 413,
+					"width": 24,
+					"height": 24,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/calendar.png",
+					"loopBackToFirstFrame": true,
+					"method": "ObjectMethods/3D Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button2": {
+					"type": "pictureButton",
+					"top": 87,
+					"left": 413,
+					"width": 24,
+					"height": 24,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/calendar.png",
+					"loopBackToFirstFrame": true,
+					"method": "ObjectMethods/3D Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"vDFromDate": {
+					"type": "input",
+					"top": 66,
+					"left": 440,
+					"width": 141,
+					"height": 15,
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "systemMedium",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"vDToDate": {
+					"type": "input",
+					"top": 96,
+					"left": 440,
+					"width": 141,
+					"height": 15,
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "systemMedium",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 156,
+					"left": 46,
+					"width": 159,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Number of days:"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 156,
+					"left": 214,
+					"width": 120,
+					"height": 20,
+					"dataSource": "vNumberOfDays",
+					"dataSourceTypeHint": "number",
+					"class": "Large",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"spellcheck": true,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"shortcuts2": {
+					"type": "text",
+					"top": 273,
+					"left": 304,
+					"width": 206,
+					"height": 112,
+					"class": "Fields",
+					"text": "Key\tAction\rY\tBeginning of Year\rR \tEnd of Year\r\rB\tBeginning of Month\rE \tEnd of Month"
+				},
+				"dd_dateRanges": {
+					"type": "dropdown",
+					"top": 117,
+					"left": 214,
+					"width": 195,
+					"height": 24,
+					"focusable": false,
+					"class": "Medium",
+					"method": "ObjectMethods/dd_dateRanges.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 117,
+					"left": 55,
+					"width": 150,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Date Range"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 77,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

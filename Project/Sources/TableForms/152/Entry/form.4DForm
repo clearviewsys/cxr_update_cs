@@ -1,0 +1,380 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 131,
+	"markerBreak": 131,
+	"markerFooter": 141,
+	"events": [
+		"onLoad",
+		"onDeactivate",
+		"onCloseBox",
+		"onUnload"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text10": {
+					"type": "text",
+					"top": 94,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Username"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 67,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Site Name"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 287,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "SFTP?"
+				},
+				"SiteName": {
+					"type": "input",
+					"top": 68,
+					"left": 131,
+					"width": 275,
+					"height": 16,
+					"dataSource": "[FTP_Sites:152]siteName:2",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"Username": {
+					"type": "input",
+					"top": 95,
+					"left": 131,
+					"width": 157,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]username:3",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"SFTP_first": {
+					"type": "radio",
+					"top": 288,
+					"left": 131,
+					"width": 35,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]isSFTP:12",
+					"text": "Yes",
+					"stroke": "#000000",
+					"radioGroup": "SFTP_group"
+				},
+				"SFTP": {
+					"type": "radio",
+					"top": 288,
+					"left": 186,
+					"width": 65,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "Not:C34([FTP_Sites:152]isSFTP:12)",
+					"text": "No",
+					"stroke": "#000000",
+					"radioGroup": "SFTP_group"
+				},
+				"Button": {
+					"type": "button",
+					"top": 229,
+					"left": 413,
+					"width": 95,
+					"height": 20,
+					"sizingX": "move",
+					"dataSource": "Button",
+					"text": "Browse Folder",
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 344,
+					"left": 405,
+					"width": 97,
+					"height": 22,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/OK"
+					},
+					"action": "accept",
+					"shortcutKey": "\u0000",
+					"text": "Save",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 344,
+					"left": 312,
+					"width": 90,
+					"height": 22,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Cancel"
+					},
+					"action": "cancel",
+					"shortcutKey": "\u0000",
+					"text": "Cancel",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 315,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Passive Mode?"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 121,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Password"
+				},
+				"Password": {
+					"type": "input",
+					"top": 122,
+					"left": 130,
+					"width": 158,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]password:6",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Password.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 148,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Host URL"
+				},
+				"HostURL": {
+					"type": "input",
+					"top": 149,
+					"left": 131,
+					"width": 275,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]hostURL:7",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 203,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Public URL"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 175,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Root URL"
+				},
+				"RootURL": {
+					"type": "input",
+					"top": 176,
+					"left": 131,
+					"width": 275,
+					"height": 16,
+					"dataSource": "[FTP_Sites:152]rootURL:8",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"PublicURL": {
+					"type": "input",
+					"top": 204,
+					"left": 131,
+					"width": 275,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]publicURL:9",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 231,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Local File Path"
+				},
+				"LocalFilePath": {
+					"type": "input",
+					"top": 232,
+					"left": 131,
+					"width": 275,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]localFilePath:10",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 259,
+					"left": 10,
+					"width": 100,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Local Server Name"
+				},
+				"LocalServerName": {
+					"type": "input",
+					"top": 260,
+					"left": 131,
+					"width": 275,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]localServerName:11",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"SFTP1_first": {
+					"type": "radio",
+					"top": 316,
+					"left": 131,
+					"width": 35,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[FTP_Sites:152]isPassiveMode:13",
+					"text": "Yes",
+					"stroke": "#000000",
+					"radioGroup": "SFTP1_group"
+				},
+				"SFTP1": {
+					"type": "radio",
+					"top": 316,
+					"left": 186,
+					"width": 65,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "Not:C34([FTP_Sites:152]isPassiveMode:13)",
+					"text": "No",
+					"stroke": "#000000",
+					"radioGroup": "SFTP1_group"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"bValidate",
+					"bCancel"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

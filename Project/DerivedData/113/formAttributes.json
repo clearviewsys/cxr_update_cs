@@ -1,0 +1,16 @@
+{
+	"forms": {
+		"Entry": {
+			"timeStamp": "2023-04-24T12:23:46Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2023-04-24T12:23:46Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2023-04-24T12:23:46Z",
+			"destination": "detailScreen"
+		}
+	}
+}

@@ -1,0 +1,176 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 0,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Highlight Button16": {
+					"type": "button",
+					"top": 71,
+					"left": 17,
+					"width": 305,
+					"height": 25,
+					"dataSource": "Highlight Button1",
+					"class": "Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Register ID",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button16.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button1": {
+					"type": "button",
+					"top": 147,
+					"left": 17,
+					"width": 305,
+					"height": 25,
+					"dataSource": "Highlight Button1",
+					"class": "Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Same Reference",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"top": 181,
+					"left": 222,
+					"width": 100,
+					"height": 26,
+					"dataSource": "Button",
+					"action": "cancel",
+					"text": "Close",
+					"events": [
+						"onClick"
+					]
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 342,
+					"height": 36,
+					"fill": "#EE0000",
+					"stroke": "transparent"
+				},
+				"Text": {
+					"type": "text",
+					"top": 10,
+					"left": 15,
+					"width": 307,
+					"height": 16,
+					"stroke": "#FFFFFF",
+					"textAlign": "center",
+					"text": "Find Duplicate Registers"
+				},
+				"Highlight Button4": {
+					"type": "button",
+					"top": 101,
+					"left": 17,
+					"width": 305,
+					"height": 25,
+					"dataSource": "Highlight Button1",
+					"class": "Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "SYNC ID",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line1": {
+					"type": "line",
+					"top": 136,
+					"left": 16,
+					"width": 306
+				},
+				"b_duplicateUUID": {
+					"type": "button",
+					"top": 41,
+					"left": 17,
+					"width": 305,
+					"height": 25,
+					"class": "Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "UUID",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/b_duplicateUUID.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Highlight Button16"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

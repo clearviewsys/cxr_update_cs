@@ -1,0 +1,254 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_PICK",
+	"rightMargin": 0,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vSearchText": {
+					"type": "input",
+					"top": 39,
+					"left": 163,
+					"width": 274,
+					"height": 20,
+					"dataSource": "vSearchText",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/vSearchText.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onBeforeKeystroke",
+						"onDataChange",
+						"onAfterKeystroke"
+					]
+				},
+				"slb_picker": {
+					"type": "listbox",
+					"top": 69,
+					"left": 2,
+					"width": 611,
+					"height": 416,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "slb_picker",
+					"movableRows": false,
+					"headerHeight": "24px",
+					"table": 114,
+					"highlightSet": "$ListboxSet0",
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"fill": "#DDDDDD",
+					"alternateFill": "#EEEEEE",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"method": "ObjectMethods/slb_picker.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "[Industries:114]Code:6",
+							"width": 96,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"fill": "#DDDDDD",
+							"alternateFill": "#EEEEEE",
+							"textAlign": "center",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_code",
+								"text": ":xliff:cvs_code",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							},
+							"footer": {
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[Industries:114]Industry:2",
+							"width": 498,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#DDDDDD",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_industry",
+								"text": ":xliff:cvs_industry",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DDDDDD",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						}
+					]
+				},
+				"b_pick": {
+					"type": "button",
+					"top": 495,
+					"left": 478,
+					"width": 120,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": ":xliff:cvs_pick",
+					"class": "Control",
+					"defaultButton": true,
+					"method": "ObjectMethods/b_pick.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 495,
+					"left": 357,
+					"width": 120,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"text": ":xliff:cvs_cancel",
+					"class": "Control",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_new": {
+					"type": "button",
+					"top": 495,
+					"left": 7,
+					"width": 120,
+					"height": 25,
+					"sizingY": "move",
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"class": "Control",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": ":xliff:cvs_new",
+					"icon": "/RESOURCES/Images/library/toolbarNewRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/b_new.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_search": {
+					"type": "text",
+					"top": 40,
+					"left": 10,
+					"width": 144,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_search"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,254 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Field1": {
+					"type": "input",
+					"top": 77,
+					"left": 97,
+					"width": 194,
+					"height": 32,
+					"dataSource": "ds:C1482.Users.query(\"UserID=\"+[TestRun:100]userID:2).first().UserName",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"enterable": false
+				},
+				"Field2": {
+					"type": "input",
+					"top": 187,
+					"left": 385,
+					"width": 194,
+					"height": 32,
+					"dataSource": "[TestRun:100]testResult:3*100",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"enterable": false
+				},
+				"Field3": {
+					"type": "input",
+					"top": 129,
+					"left": 97,
+					"width": 194,
+					"height": 32,
+					"dataSource": "[TestRun:100]quizID:4",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"enterable": false
+				},
+				"Field4": {
+					"type": "input",
+					"top": 129,
+					"left": 385,
+					"width": 194,
+					"height": 32,
+					"dataSource": "[TestRun:100]testRunID:1",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"enterable": false
+				},
+				"Text2": {
+					"type": "text",
+					"top": 196,
+					"left": 317,
+					"width": 64,
+					"height": 15,
+					"text": "Result"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 138,
+					"left": 18,
+					"width": 62,
+					"height": 15,
+					"text": "Quiz ID"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 138,
+					"left": 317,
+					"width": 69,
+					"height": 15,
+					"text": "Test Run ID"
+				},
+				"listbox": {
+					"type": "listbox",
+					"dataSource": "Form:C1466.currentTestRun",
+					"top": 247,
+					"left": 10,
+					"width": 600,
+					"height": 300,
+					"visibility": "visible",
+					"sizingX": "fixed",
+					"sizingY": "grow",
+					"headerHeight": "2em",
+					"listboxType": "collection",
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"resizingMode": "legacy",
+					"columns": [
+						{
+							"name": "questionID",
+							"dataSource": "This:C1470.questionID",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Question id",
+								"name": "6"
+							},
+							"footer": {
+								"name": "7"
+							}
+						},
+						{
+							"name": "question",
+							"dataSource": "This:C1470.question",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Question",
+								"name": "4"
+							},
+							"footer": {
+								"name": "5"
+							}
+						},
+						{
+							"name": "chosenAnswer",
+							"dataSource": "This:C1470.chosenAnswer",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Chosen Answer",
+								"name": "Header1"
+							},
+							"footer": {
+								"name": "1"
+							}
+						},
+						{
+							"name": "correctAnswer",
+							"dataSource": "This:C1470.correctAnswer",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Correct Answer",
+								"name": "2"
+							},
+							"footer": {
+								"name": "3"
+							}
+						}
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 86,
+					"left": 18,
+					"width": 72,
+					"height": 15,
+					"text": "UserName"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 86,
+					"left": 317,
+					"width": 72,
+					"height": 15,
+					"text": "UserID"
+				},
+				"Field5": {
+					"type": "input",
+					"top": 77,
+					"left": 385,
+					"width": 194,
+					"height": 32,
+					"dataSource": "[TestRun:100]userID:2",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"enterable": false
+				},
+				"Field6": {
+					"type": "input",
+					"top": 187,
+					"left": 97,
+					"width": 194,
+					"height": 32,
+					"dataSource": "[TestRun:100]creationDate:5",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"enterable": false
+				},
+				"Text5": {
+					"type": "text",
+					"top": 196,
+					"left": 29,
+					"width": 64,
+					"height": 15,
+					"text": "Date Taken:"
+				}
+			}
+		}
+	],
+	"inheritedForm": "Toolbar_View",
+	"geometryStamp": 43,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

@@ -1,0 +1,2 @@
+// getBuild
+handleRegistersViewFormMethod

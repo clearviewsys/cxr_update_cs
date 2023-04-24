@@ -1,0 +1,758 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "ListToolbar_Buttons",
+	"inheritedFormTable": 7,
+	"windowMinWidth": 750,
+	"windowMaxWidth": 1000,
+	"windowMinHeight": 250,
+	"windowMaxHeight": 2000,
+	"rightMargin": 16,
+	"bottomMargin": 20,
+	"markerHeader": 89,
+	"markerBody": 115,
+	"markerBreak": 115,
+	"markerFooter": 178,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onDataChange",
+		"onDragOver",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt",
+		"orientation": "landscape"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Highlight Button4": {
+					"type": "button",
+					"top": 119,
+					"left": 430,
+					"width": 98,
+					"height": 20,
+					"dataSource": "Highlight Button1",
+					"text": "Receivables",
+					"class": "Control",
+					"stroke": "#444444",
+					"method": "ObjectMethods/Highlight Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button6": {
+					"type": "button",
+					"top": 119,
+					"left": 530,
+					"width": 95,
+					"height": 20,
+					"dataSource": "Highlight Button1",
+					"text": "Payables",
+					"class": "Control",
+					"stroke": "#444444",
+					"method": "ObjectMethods/Highlight Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Picture Button1": {
+					"type": "pictureButton",
+					"top": 189,
+					"left": 491,
+					"width": 40,
+					"height": 20,
+					"dataSource": "Picture Button1",
+					"picture": "/RESOURCES/Images/library/micnDateRange.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Picture Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button8": {
+					"type": "button",
+					"top": 155,
+					"left": 66,
+					"width": 70,
+					"height": 20,
+					"dataSource": "Highlight Button1",
+					"text": "Pending",
+					"class": "Control",
+					"stroke": "#000000",
+					"method": "ObjectMethods/Highlight Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button11": {
+					"type": "button",
+					"top": 155,
+					"left": 138,
+					"width": 70,
+					"height": 20,
+					"dataSource": "Highlight Button1",
+					"text": "Cleared",
+					"class": "Control",
+					"stroke": "#000000",
+					"method": "ObjectMethods/Highlight Button11.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button12": {
+					"type": "button",
+					"top": 436,
+					"left": 5,
+					"width": 30,
+					"height": 20,
+					"dataSource": "Highlight Button1",
+					"text": "All",
+					"class": "Control",
+					"stroke": "#444444",
+					"method": "ObjectMethods/Highlight Button12.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button9": {
+					"type": "button",
+					"top": 155,
+					"left": 210,
+					"width": 70,
+					"height": 20,
+					"dataSource": "Highlight Button1",
+					"text": "Bounced",
+					"class": "Control",
+					"stroke": "#000000",
+					"method": "ObjectMethods/Highlight Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 212,
+					"left": 482,
+					"width": 60,
+					"height": 14,
+					"class": "Label_Small",
+					"textAlign": "center",
+					"text": "Date Range"
+				},
+				"Button5": {
+					"type": "button",
+					"top": 189,
+					"left": 545,
+					"width": 63,
+					"height": 18,
+					"dataSource": "Button5",
+					"text": "Due",
+					"class": "Small",
+					"stroke": "#000000",
+					"method": "ObjectMethods/Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 189,
+					"left": 616,
+					"width": 63,
+					"height": 18,
+					"dataSource": "Button5",
+					"text": "Overdue",
+					"class": "Small",
+					"stroke": "#CF0000",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button14": {
+					"type": "button",
+					"top": 149,
+					"left": 594,
+					"width": 128,
+					"height": 20,
+					"dataSource": "Highlight Button1",
+					"text": "Clear Cheques",
+					"class": "Control",
+					"stroke": "#000000",
+					"method": "ObjectMethods/Highlight Button14.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 90,
+					"left": 428,
+					"width": 99,
+					"height": 24,
+					"sizingX": "grow",
+					"fill": "#DFE4FF",
+					"stroke": "transparent"
+				},
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 90,
+					"left": 528,
+					"width": 99,
+					"height": 24,
+					"sizingX": "grow",
+					"fill": "#FFFFDF",
+					"stroke": "transparent"
+				},
+				"Splitter1": {
+					"type": "splitter",
+					"top": 68,
+					"left": 427,
+					"width": 1,
+					"height": 47,
+					"sizingX": "grow",
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter2": {
+					"type": "splitter",
+					"top": 68,
+					"left": 527,
+					"width": 1,
+					"height": 47,
+					"sizingX": "grow",
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"S2_Field": {
+					"type": "input",
+					"top": 92,
+					"left": 105,
+					"width": 75,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Cheques:1]IssueDate:16",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"S3_Field": {
+					"type": "input",
+					"top": 92,
+					"left": 267,
+					"width": 156,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Customers:3]FullName:40",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"S4_Field3": {
+					"type": "input",
+					"top": 92,
+					"left": 14,
+					"width": 25,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Cheques:1]ChequeID:1",
+					"stroke": "#333333",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"S3_Field2": {
+					"type": "input",
+					"top": 93,
+					"left": 533,
+					"width": 89,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "vAmountPaid",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"S3_Field3": {
+					"type": "input",
+					"top": 92,
+					"left": 630,
+					"width": 43,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Cheques:1]Currency:9",
+					"stroke": "#000000",
+					"class": "Fields",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"S3_Field1": {
+					"type": "input",
+					"top": 92,
+					"left": 434,
+					"width": 89,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "vAmountReceived",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"S3_Field4": {
+					"type": "input",
+					"top": 92,
+					"left": 684,
+					"width": 78,
+					"height": 15,
+					"dataSource": "vChequeStatus",
+					"stroke": "#000000",
+					"class": "Fields",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"S2_Field1": {
+					"type": "input",
+					"top": 92,
+					"left": 187,
+					"width": 71,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Cheques:1]DueDate:3",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Highlight Button10": {
+					"type": "button",
+					"top": 68,
+					"left": 5,
+					"width": 35,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Chq ID",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button10.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button2": {
+					"type": "button",
+					"top": 68,
+					"left": 265,
+					"width": 160,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Customer",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button3": {
+					"type": "button",
+					"top": 68,
+					"left": 105,
+					"width": 75,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Issued",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button5": {
+					"type": "button",
+					"top": 68,
+					"left": 630,
+					"width": 45,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Curr",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button7": {
+					"type": "button",
+					"top": 68,
+					"left": 680,
+					"width": 87,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Status",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button13": {
+					"type": "button",
+					"top": 68,
+					"left": 185,
+					"width": 75,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Due",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button13.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter3": {
+					"type": "splitter",
+					"top": 68,
+					"left": 262,
+					"width": 1,
+					"height": 47,
+					"sizingX": "grow",
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter4": {
+					"type": "splitter",
+					"top": 68,
+					"left": 182,
+					"width": 1,
+					"height": 47,
+					"sizingX": "grow",
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter5": {
+					"type": "splitter",
+					"top": 68,
+					"left": 42,
+					"width": 1,
+					"height": 47,
+					"sizingX": "grow",
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter6": {
+					"type": "splitter",
+					"top": 68,
+					"left": 627,
+					"width": 1,
+					"height": 47,
+					"sizingX": "grow",
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter7": {
+					"type": "splitter",
+					"top": 68,
+					"left": 677,
+					"width": 1,
+					"height": 47,
+					"sizingX": "grow",
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"flag": {
+					"type": "picture",
+					"top": 92,
+					"left": 2,
+					"width": 12,
+					"height": 18,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/flag.png"
+				},
+				"Highlight Button16": {
+					"type": "button",
+					"top": 68,
+					"left": 45,
+					"width": 55,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Chq #",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button16.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter8": {
+					"type": "splitter",
+					"top": 68,
+					"left": 102,
+					"width": 1,
+					"height": 47,
+					"sizingX": "grow",
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"S4_Field1": {
+					"type": "input",
+					"top": 92,
+					"left": 45,
+					"width": 53,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Cheques:1]ChequeNumber:4",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Highlight Button17": {
+					"type": "button",
+					"top": 68,
+					"left": 430,
+					"width": 95,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Received",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button17.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button18": {
+					"type": "button",
+					"top": 68,
+					"left": 530,
+					"width": 95,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Paid",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button18.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line3": {
+					"type": "line",
+					"top": 533,
+					"left": 184,
+					"width": 483
+				},
+				"Splitter9": {
+					"type": "splitter",
+					"top": 68,
+					"left": 769,
+					"width": 1,
+					"height": 47,
+					"sizingX": "grow",
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

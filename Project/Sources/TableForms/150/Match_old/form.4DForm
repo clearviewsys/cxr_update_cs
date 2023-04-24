@@ -1,0 +1,2820 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 23,
+					"left": 1,
+					"width": 1009,
+					"height": 634,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSourceTypeHint": "arrayText",
+					"labels": [
+						"Prototyper",
+						"Query Results"
+					],
+					"class": "Large",
+					"action": "GotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": -1,
+					"left": 0,
+					"width": 1009,
+					"height": 25,
+					"sizingX": "grow",
+					"fill": "#86B5CE",
+					"stroke": "#FFFFFF",
+					"class": "Label_Large",
+					"textAlign": "center",
+					"text": "AML/KYC Rule Prototyper"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 82,
+					"left": 4,
+					"width": 300,
+					"height": 442,
+					"fill": "#E7D8F1",
+					"stroke": "transparent"
+				},
+				"row": {
+					"type": "input",
+					"top": 55,
+					"left": 7,
+					"width": 37,
+					"height": 18,
+					"dataSource": "Form:C1466.Rule.rowNo",
+					"class": "Medium",
+					"placeholder": "Rule Name",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable8": {
+					"type": "input",
+					"top": 55,
+					"left": 49,
+					"width": 255,
+					"height": 18,
+					"dataSource": "Form:C1466.Rule.ruleName",
+					"class": "Medium",
+					"placeholder": "Rule Name",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_description": {
+					"type": "input",
+					"top": 55,
+					"left": 308,
+					"width": 604,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.Rule.description",
+					"class": "Medium",
+					"placeholder": "Description of Rule",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 77,
+					"left": 772,
+					"width": 235,
+					"height": 447,
+					"sizingX": "grow",
+					"fill": "#C1D9E6",
+					"stroke": "transparent"
+				},
+				"l_test": {
+					"type": "text",
+					"top": 77,
+					"left": 772,
+					"width": 235,
+					"height": 19,
+					"fill": "#AACBDD",
+					"class": "Large",
+					"textAlign": "center",
+					"text": "Test Rule"
+				},
+				"isActive": {
+					"type": "checkbox",
+					"top": 50,
+					"left": 922,
+					"width": 81,
+					"height": 27,
+					"sizingX": "move",
+					"dataSource": "Form:C1466.Rule.isActive",
+					"text": "Active",
+					"class": "Medium",
+					"fontWeight": "bold",
+					"events": [
+						"onClick"
+					]
+				},
+				"ifByInvoice": {
+					"type": "checkbox",
+					"top": 99,
+					"left": 15,
+					"width": 279,
+					"height": 16,
+					"dataSource": "Form:C1466.Rule.ifIsByInvoice",
+					"text": "Rule Applies to Single Invoice Only",
+					"class": "Fields",
+					"events": [
+						"onClick"
+					]
+				},
+				"branchID": {
+					"type": "input",
+					"top": 121,
+					"left": 156,
+					"width": 44,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.ifBranchID",
+					"class": "Fields",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/branchID.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 77,
+					"left": 536,
+					"width": 235,
+					"height": 447,
+					"fill": "#E4FAC7",
+					"stroke": "transparent"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 77,
+					"left": 305,
+					"width": 230,
+					"height": 447,
+					"fill": "#CFE0DE",
+					"stroke": "transparent"
+				},
+				"inDays": {
+					"type": "input",
+					"top": 141,
+					"left": 156,
+					"width": 44,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.inDays",
+					"class": "Fields",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable11": {
+					"type": "input",
+					"top": 161,
+					"left": 156,
+					"width": 124,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.ifAccountID",
+					"class": "Fields",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable12": {
+					"type": "input",
+					"top": 181,
+					"left": 156,
+					"width": 45,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.ifCurrency",
+					"class": "Fields",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable12.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"top": 196,
+					"left": 55,
+					"width": 224,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.ifIsReceived",
+					"text": "Received (Incoming)",
+					"class": "Fields",
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"EFT": {
+					"type": "checkbox",
+					"top": 215,
+					"left": 55,
+					"width": 224,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.ifIsEFT",
+					"text": "EFT only",
+					"class": "Fields",
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"isCash": {
+					"type": "checkbox",
+					"top": 234,
+					"left": 55,
+					"width": 224,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.ifIsCash",
+					"text": "Cash only",
+					"class": "Fields",
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"AmountThreshold": {
+					"type": "input",
+					"top": 257,
+					"left": 156,
+					"width": 124,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.ifAmountGTOE",
+					"dataSourceTypeHint": "integer",
+					"class": "Fields",
+					"contextMenu": "none",
+					"numberFormat": "###,##0.00 ;###,##0.00-",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"AmountThreshold1": {
+					"type": "input",
+					"top": 277,
+					"left": 156,
+					"width": 96,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.ifValueGTOE",
+					"dataSourceTypeHint": "integer",
+					"class": "Fields",
+					"contextMenu": "none",
+					"numberFormat": "###,##0;(###,##0.00)",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 277,
+					"left": 255,
+					"width": 25,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.toCurrency",
+					"class": "Fields",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"VolumeThreshold": {
+					"type": "input",
+					"top": 297,
+					"left": 156,
+					"width": 124,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.ifVolumeGTOE",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"contextMenu": "none",
+					"numberFormat": "###,##0;(###,##0.00)",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"VolumeThreshold1": {
+					"type": "input",
+					"top": 316,
+					"left": 156,
+					"width": 124,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.ifUpperBound",
+					"dataSourceTypeHint": "number",
+					"class": "Fields",
+					"contextMenu": "none",
+					"numberFormat": "###,##0;(###,##0.00)",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"QtyThreshold": {
+					"type": "input",
+					"top": 337,
+					"left": 156,
+					"width": 44,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.ifQtyGTOE",
+					"dataSourceTypeHint": "integer",
+					"class": "Fields",
+					"contextMenu": "none",
+					"numberFormat": "###,##0",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"cust.is": {
+					"type": "checkbox",
+					"top": 396,
+					"left": 9,
+					"width": 107,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.ifIsWalkin",
+					"text": "Walk-In",
+					"class": "Fields",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 160,
+					"left": 9,
+					"width": 140,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "If Account ID is"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 337,
+					"left": 9,
+					"width": 140,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Number of Trans >="
+				},
+				"Text9": {
+					"type": "text",
+					"top": 298,
+					"left": 9,
+					"width": 140,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "if Volume LC >="
+				},
+				"Text10": {
+					"type": "text",
+					"top": 140,
+					"left": 9,
+					"width": 140,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "In the Past n Days"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 180,
+					"left": 9,
+					"width": 140,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "if Currency is"
+				},
+				"l_amount": {
+					"type": "text",
+					"top": 258,
+					"left": 9,
+					"width": 140,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "if Amount >="
+				},
+				"l_amount1": {
+					"type": "text",
+					"top": 278,
+					"left": 9,
+					"width": 140,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "if Transaction Value >="
+				},
+				"b_save": {
+					"type": "button",
+					"top": 530,
+					"left": 659,
+					"width": 110,
+					"height": 25,
+					"class": "Control",
+					"focusable": false,
+					"text": "Save Rule",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_duplicate": {
+					"type": "button",
+					"top": 530,
+					"left": 5,
+					"width": 105,
+					"height": 25,
+					"class": "Control",
+					"focusable": false,
+					"text": "Duplicate Rule",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/b_duplicate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"cust.is1": {
+					"type": "checkbox",
+					"top": 417,
+					"left": 9,
+					"width": 107,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.ifIsInsider",
+					"text": "Insider",
+					"class": "Fields",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"cust.isCompany": {
+					"type": "checkbox",
+					"top": 438,
+					"left": 9,
+					"width": 107,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.ifIsCompany",
+					"text": "Company",
+					"class": "Fields",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"cust.isSuspicious": {
+					"type": "checkbox",
+					"top": 488,
+					"left": 9,
+					"width": 107,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.ifIsSuspicious",
+					"text": "Suspicious",
+					"class": "Fields",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"cust.isHighRisk": {
+					"type": "checkbox",
+					"top": 466,
+					"left": 9,
+					"width": 107,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.ifIsHighRisk",
+					"text": "High Risk",
+					"class": "Fields",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 399,
+					"left": 196,
+					"width": 104,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.ifCustomerID",
+					"class": "Fields",
+					"placeholder": "Customer ID",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"customerID2": {
+					"type": "input",
+					"top": 420,
+					"left": 196,
+					"width": 104,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.ifGroup",
+					"class": "Fields",
+					"placeholder": "Group",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/customerID2.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 441,
+					"left": 196,
+					"width": 104,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.ifOccupation",
+					"class": "Fields",
+					"placeholder": "Occupation",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable4": {
+					"type": "input",
+					"top": 461,
+					"left": 276,
+					"width": 24,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.ifIndustryCode",
+					"class": "Fields",
+					"placeholder": "Industry Code",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 481,
+					"left": 276,
+					"width": 24,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.ifNationality",
+					"class": "Fields",
+					"placeholder": "Nationality",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable5.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable7": {
+					"type": "input",
+					"top": 501,
+					"left": 276,
+					"width": 24,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.ifRelationType",
+					"class": "Fields",
+					"placeholder": "Nationality",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_delete": {
+					"type": "button",
+					"top": 530,
+					"left": 137,
+					"width": 25,
+					"height": 25,
+					"class": "Control",
+					"focusable": false,
+					"text": "-",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/b_delete.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bAdd": {
+					"type": "button",
+					"top": 530,
+					"left": 111,
+					"width": 25,
+					"height": 25,
+					"class": "Control",
+					"focusable": false,
+					"text": "+",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/bAdd.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"volumeBuy": {
+					"type": "input",
+					"top": 262,
+					"left": 865,
+					"width": 124,
+					"height": 18,
+					"dataSource": "Form:C1466.stats.volumeBuy",
+					"dataSourceTypeHint": "number",
+					"class": "Label_Medium",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"placeholder": "0",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"volumeSell": {
+					"type": "input",
+					"top": 288,
+					"left": 865,
+					"width": 124,
+					"height": 18,
+					"dataSource": "Form:C1466.stats.volumeSell",
+					"dataSourceTypeHint": "number",
+					"class": "Label_Medium",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"placeholder": "0",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"stamp_OK": {
+					"type": "input",
+					"top": 402,
+					"left": 791,
+					"width": 197,
+					"height": 60,
+					"dataSourceTypeHint": "picture",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"customerID": {
+					"type": "input",
+					"top": 136,
+					"left": 865,
+					"width": 124,
+					"height": 18,
+					"dataSource": "Form:C1466.customerID",
+					"class": "Label_Medium",
+					"fill": "#ECFFFB",
+					"placeholder": "Customer ID",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/customerID.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"customerID1": {
+					"type": "input",
+					"top": 187,
+					"left": 865,
+					"width": 124,
+					"height": 18,
+					"dataSource": "Form:C1466.group",
+					"class": "Label_Medium",
+					"focusable": false,
+					"fill": "#ECFFFB",
+					"enterable": false,
+					"placeholder": "Group",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/customerID1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"invoiceID": {
+					"type": "input",
+					"top": 159,
+					"left": 865,
+					"width": 124,
+					"height": 18,
+					"dataSource": "Form:C1466.invoiceID",
+					"class": "Label_Medium",
+					"fill": "#EDFEF2",
+					"placeholder": "Invoice ID",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/invoiceID.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"totalCount": {
+					"type": "input",
+					"top": 314,
+					"left": 865,
+					"width": 64,
+					"height": 18,
+					"dataSource": "Form:C1466.stats.totalCount",
+					"dataSourceTypeHint": "number",
+					"class": "Label_Medium",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"placeholder": "0",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency_NoDec"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"sumDebit1": {
+					"type": "input",
+					"top": 211,
+					"left": 865,
+					"width": 124,
+					"height": 18,
+					"dataSource": "Form:C1466.stats.sumDebit",
+					"dataSourceTypeHint": "number",
+					"class": "Label_Medium",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"placeholder": "0",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"sumCredit1": {
+					"type": "input",
+					"top": 236,
+					"left": 865,
+					"width": 124,
+					"height": 18,
+					"dataSource": "Form:C1466.stats.sumCredit",
+					"dataSourceTypeHint": "number",
+					"class": "Label_Medium",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"placeholder": "0",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 214,
+					"left": 780,
+					"width": 80,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Bought"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 239,
+					"left": 780,
+					"width": 80,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Sold"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 264,
+					"left": 780,
+					"width": 80,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Buy Volume"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 290,
+					"left": 780,
+					"width": 80,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Sell Volume"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 316,
+					"left": 780,
+					"width": 80,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "No of Trx"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 161,
+					"left": 780,
+					"width": 80,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Invoice"
+				},
+				"b_match1": {
+					"type": "button",
+					"top": 362,
+					"left": 863,
+					"width": 125,
+					"height": 25,
+					"class": "Fields",
+					"focusable": false,
+					"text": "Evaluate Rule",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/b_match1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 372,
+					"left": 305,
+					"width": 230,
+					"height": 19,
+					"fill": "#A2BFBD",
+					"class": "Large",
+					"textAlign": "center",
+					"text": "EDD Requirements"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 77,
+					"left": 305,
+					"width": 230,
+					"height": 19,
+					"fill": "#A2BFBD",
+					"class": "Large",
+					"textAlign": "center",
+					"text": "KYC Requirements"
+				},
+				"Check Box14": {
+					"type": "checkbox",
+					"top": 99,
+					"left": 314,
+					"width": 213,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequireKYC.pictureID",
+					"text": "Picture ID",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box5": {
+					"type": "checkbox",
+					"top": 120,
+					"left": 314,
+					"width": 213,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequireKYC.occupation",
+					"text": "Occupation",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box10": {
+					"type": "checkbox",
+					"top": 140,
+					"left": 314,
+					"width": 213,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequireKYC.DOB",
+					"text": "Date of Birth",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box11": {
+					"type": "checkbox",
+					"top": 161,
+					"left": 314,
+					"width": 213,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequireKYC.SIN",
+					"text": "Social Security / SIN",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box4": {
+					"type": "checkbox",
+					"top": 181,
+					"left": 314,
+					"width": 213,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequireKYC.address",
+					"text": "Address",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box6": {
+					"type": "checkbox",
+					"top": 202,
+					"left": 314,
+					"width": 213,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequireKYC.countryCode",
+					"text": "Country of Residence",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box7": {
+					"type": "checkbox",
+					"top": 223,
+					"left": 314,
+					"width": 213,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequireKYC.nationality",
+					"text": "Nationality",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box8": {
+					"type": "checkbox",
+					"top": 244,
+					"left": 314,
+					"width": 213,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequireKYC.citizenship",
+					"text": "Citizenship",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box9": {
+					"type": "checkbox",
+					"top": 265,
+					"left": 314,
+					"width": 213,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequireKYC.PIN",
+					"text": "Purp. of Bus. Relationship (PIN)",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box12": {
+					"type": "checkbox",
+					"top": 288,
+					"left": 314,
+					"width": 213,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequireKYC.phone",
+					"text": "Main phone - landline",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box13": {
+					"type": "checkbox",
+					"top": 310,
+					"left": 314,
+					"width": 213,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequireKYC.cell",
+					"text": "Cell",
+					"focusable": false,
+					"threeState": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"thenEDD": {
+					"type": "checkbox",
+					"top": 402,
+					"left": 314,
+					"width": 210,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenEDD",
+					"text": "Enhanced Due Diligence",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"cb_POT": {
+					"type": "checkbox",
+					"top": 424,
+					"left": 314,
+					"width": 210,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequirePOT",
+					"text": "Purpose of Transaction",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"cb_SOF": {
+					"type": "checkbox",
+					"top": 446,
+					"left": 314,
+					"width": 210,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequireSOF",
+					"text": "Source of Funds",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"cb_TPD": {
+					"type": "checkbox",
+					"top": 469,
+					"left": 314,
+					"width": 210,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequireTPD",
+					"text": "3rd Party Determination",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"cb_PEP": {
+					"type": "checkbox",
+					"top": 492,
+					"left": 314,
+					"width": 210,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequirePEP",
+					"text": "Ask for PEP Determination",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"thenWarn": {
+					"type": "checkbox",
+					"top": 99,
+					"left": 544,
+					"width": 180,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenWarn",
+					"text": "Display Warning",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"warningMsg": {
+					"type": "input",
+					"top": 122,
+					"left": 544,
+					"width": 200,
+					"height": 60,
+					"dataSource": "Form:C1466.Rule.WarningMessage",
+					"class": "Fields",
+					"placeholder": "Warning Message",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"thenRequireApproval": {
+					"type": "checkbox",
+					"top": 184,
+					"left": 544,
+					"width": 220,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenRequireApproval",
+					"text": "Require Manager's Approval",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"thenRequireApproval1": {
+					"type": "checkbox",
+					"top": 205,
+					"left": 544,
+					"width": 220,
+					"height": 20,
+					"text": "Require Approval by Email",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"thenAMLAlert": {
+					"type": "checkbox",
+					"top": 228,
+					"left": 544,
+					"width": 220,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenAML_Alert",
+					"text": "Generate AML Alert",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"thenSetFlag": {
+					"type": "checkbox",
+					"top": 250,
+					"left": 564,
+					"width": 200,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenSetFlag",
+					"text": "Flag Invoice",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"thenSetLCT": {
+					"type": "checkbox",
+					"top": 269,
+					"left": 564,
+					"width": 200,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenSetLCT",
+					"text": "Set LCT flag",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"thenSetEFT": {
+					"type": "checkbox",
+					"top": 289,
+					"left": 564,
+					"width": 200,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenSetEFT",
+					"text": "Set EFT flag",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"thenSetSTR": {
+					"type": "checkbox",
+					"top": 308,
+					"left": 564,
+					"width": 200,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenSetSTR",
+					"text": "Set Suspicious flag",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"thenSetReportable": {
+					"type": "checkbox",
+					"top": 331,
+					"left": 544,
+					"width": 220,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenSetReportable",
+					"text": "Mark Transaction to be reported!",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"inDays1": {
+					"type": "input",
+					"top": 354,
+					"left": 716,
+					"width": 44,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.thenReportInDays",
+					"class": "Fields",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"thenReject": {
+					"type": "checkbox",
+					"top": 376,
+					"left": 544,
+					"width": 220,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.thenReject",
+					"text": "Reject Transaction!",
+					"class": "Fields",
+					"fontWeight": "bold",
+					"stroke": "#FF0000",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"addTag": {
+					"type": "input",
+					"top": 406,
+					"left": 639,
+					"width": 125,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.thenAddTag",
+					"class": "Fields",
+					"placeholder": "Industry Code",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"addTag1": {
+					"type": "input",
+					"top": 426,
+					"left": 614,
+					"width": 150,
+					"height": 15,
+					"dataSource": "Form:C1466.Rule.thenExecuteMethod",
+					"class": "Fields",
+					"placeholder": "Industry Code",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Popup Dropdown List": {
+					"type": "dropdown",
+					"top": 444,
+					"left": 545,
+					"width": 220,
+					"height": 22,
+					"dataSource": "Form:C1466.action",
+					"focusable": false,
+					"choiceList": [
+						"",
+						"notifyUser"
+					],
+					"events": [
+						"onDataChange"
+					]
+				},
+				"thenStop": {
+					"type": "checkbox",
+					"top": 469,
+					"left": 543,
+					"width": 208,
+					"height": 24,
+					"dataSource": "Form:C1466.Rule.thenStop",
+					"text": "Stop Evaluating Rules",
+					"class": "Large",
+					"fontWeight": "bold",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"addTag2": {
+					"type": "input",
+					"top": 530,
+					"left": 543,
+					"width": 108,
+					"height": 20,
+					"dataSource": "Form:C1466.Rule.chainToRuleID",
+					"class": "Large",
+					"placeholder": "Industry Code",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"lb_rules": {
+					"type": "listbox",
+					"top": 560,
+					"left": 2,
+					"width": 1007,
+					"height": 93,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"movableRows": false,
+					"dataSource": "Form:C1466.rules",
+					"currentItemSource": "Form:C1466.Rule",
+					"selectedItemsSource": "Form:C1466.selectedRules",
+					"scrollbarHorizontal": "automatic",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#C0C0C0",
+					"fill": "#DFECF2",
+					"alternateFill": "automatic",
+					"rowFillSource": "This_RuleColour",
+					"method": "ObjectMethods/lb_rules.4dm",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onRowMove",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column3",
+							"dataSource": "This:C1470.rowNo",
+							"dataSourceTypeHint": "number",
+							"width": 53,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#DFECF2",
+							"alternateFill": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_row",
+								"text": "Row"
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DFECF2"
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "This:C1470.isActive",
+							"dataSourceTypeHint": "boolean",
+							"width": 33,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"controlType": "checkbox",
+							"fill": "#DFECF2",
+							"alternateFill": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "ON"
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DFECF2"
+							}
+						},
+						{
+							"name": "Column13",
+							"dataSource": "This:C1470.ruleName",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#DFECF2",
+							"alternateFill": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header13",
+								"text": "Rule Name"
+							},
+							"footer": {
+								"name": "Footer9",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DFECF2"
+							}
+						},
+						{
+							"name": "Column20",
+							"dataSource": "This:C1470.ifIsByInvoice",
+							"dataSourceTypeHint": "boolean",
+							"width": 53,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"fill": "#DFECF2",
+							"alternateFill": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header20",
+								"text": "By Inv."
+							},
+							"footer": {
+								"name": "Footer13",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DFECF2"
+							}
+						},
+						{
+							"name": "Column21",
+							"dataSource": "This:C1470.ifIsReceived",
+							"dataSourceTypeHint": "number",
+							"width": 63,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"fill": "#DFECF2",
+							"alternateFill": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header21",
+								"text": "Incoming"
+							},
+							"footer": {
+								"name": "Footer14",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DFECF2"
+							}
+						},
+						{
+							"name": "Column14",
+							"dataSource": "This:C1470.ifAmountGTOE",
+							"dataSourceTypeHint": "number",
+							"width": 82,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#DFECF2",
+							"alternateFill": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header14",
+								"text": "Amount >="
+							},
+							"footer": {
+								"name": "Footer10",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DFECF2"
+							}
+						},
+						{
+							"name": "Column17",
+							"dataSource": "This:C1470.ifVolumeGTOE",
+							"dataSourceTypeHint": "number",
+							"width": 88,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#DFECF2",
+							"alternateFill": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header17",
+								"text": "Volume >="
+							},
+							"footer": {
+								"name": "Footer11",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DFECF2"
+							}
+						},
+						{
+							"name": "Column18",
+							"dataSource": "This:C1470.ifValueGTOE",
+							"dataSourceTypeHint": "number",
+							"width": 88,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#DFECF2",
+							"alternateFill": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header18",
+								"text": "Value >="
+							},
+							"footer": {
+								"name": "Footer12",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DFECF2"
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "This:C1470.toCurrency",
+							"dataSourceTypeHint": "number",
+							"width": 46,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"fill": "#DFECF2",
+							"alternateFill": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "to CCY"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DFECF2"
+							}
+						},
+						{
+							"name": "Column12",
+							"dataSource": "This:C1470.ifIsCash",
+							"dataSourceTypeHint": "number",
+							"width": 53,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"fill": "#DFECF2",
+							"alternateFill": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header12",
+								"text": "Cash"
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DFECF2"
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "This:C1470.ifIsEFT",
+							"dataSourceTypeHint": "number",
+							"width": 53,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"fill": "#DFECF2",
+							"alternateFill": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "EFT"
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DFECF2"
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "This:C1470.thenStop",
+							"dataSourceTypeHint": "boolean",
+							"width": 36,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"controlType": "checkbox",
+							"fill": "#DFECF2",
+							"alternateFill": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_stop",
+								"text": "Stop"
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DFECF2"
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "This:C1470.description",
+							"width": 222,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#DFECF2",
+							"alternateFill": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header5",
+								"text": "Description"
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DFECF2"
+							}
+						}
+					]
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"top": 104,
+					"left": 785,
+					"width": 132,
+					"height": 29,
+					"dataSource": "cb_Connected",
+					"text": "Connected",
+					"class": "Medium",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"top": 662,
+					"left": 837,
+					"width": 152,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"text": "Close",
+					"class": "Large",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"sumGains": {
+					"type": "input",
+					"top": 340,
+					"left": 865,
+					"width": 124,
+					"height": 18,
+					"dataSource": "Form:C1466.stats.sumGains",
+					"dataSourceTypeHint": "number",
+					"class": "Label_Medium",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"placeholder": "0",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text13": {
+					"type": "text",
+					"top": 342,
+					"left": 780,
+					"width": 80,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Gains"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 77,
+					"left": 536,
+					"width": 235,
+					"height": 19,
+					"fill": "#808080",
+					"stroke": "#FFFFFF",
+					"class": "Large",
+					"textAlign": "center",
+					"text": "Actions"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 77,
+					"left": 4,
+					"width": 300,
+					"height": 19,
+					"fill": "#D8BEE9",
+					"class": "Large",
+					"textAlign": "center",
+					"text": "Criteria (Conditions)"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 372,
+					"left": 4,
+					"width": 300,
+					"height": 19,
+					"fill": "#D8BEE9",
+					"class": "Large",
+					"textAlign": "center",
+					"text": "Scope (Customers)"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 398,
+					"left": 110,
+					"width": 80,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Customer ID"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 418,
+					"left": 110,
+					"width": 80,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Group"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 440,
+					"left": 110,
+					"width": 80,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Occupation"
+				},
+				"Text21": {
+					"type": "text",
+					"top": 461,
+					"left": 150,
+					"width": 120,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Industry Code"
+				},
+				"Text22": {
+					"type": "text",
+					"top": 482,
+					"left": 150,
+					"width": 120,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Nationality Code"
+				},
+				"Text24": {
+					"type": "text",
+					"top": 426,
+					"left": 544,
+					"width": 53,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "left",
+					"text": "Execute"
+				},
+				"Text25": {
+					"type": "text",
+					"top": 406,
+					"left": 545,
+					"width": 84,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "left",
+					"text": "Tag Customer"
+				},
+				"Text26": {
+					"type": "text",
+					"top": 139,
+					"left": 780,
+					"width": 80,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Customer"
+				},
+				"Text27": {
+					"type": "text",
+					"top": 190,
+					"left": 780,
+					"width": 80,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Group"
+				},
+				"l_amount2": {
+					"type": "text",
+					"top": 355,
+					"left": 547,
+					"width": 161,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Must be reported in (days)"
+				},
+				"Text23": {
+					"type": "text",
+					"top": 122,
+					"left": 9,
+					"width": 140,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Branch"
+				},
+				"Variable6": {
+					"type": "input",
+					"top": 27,
+					"left": 873,
+					"width": 132,
+					"height": 18,
+					"dataSource": "Form:C1466.Rule.ruleID",
+					"class": "Medium",
+					"placeholder": "Rule Name",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_states1": {
+					"type": "button",
+					"top": 106,
+					"left": 907,
+					"width": 82,
+					"height": 25,
+					"class": "Fields",
+					"focusable": false,
+					"text": "Calc Stats",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/b_states1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text28": {
+					"type": "text",
+					"top": 316,
+					"left": 9,
+					"width": 140,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "Fields",
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": "Upper Bound (<)"
+				},
+				"lb_relationType": {
+					"type": "text",
+					"top": 502,
+					"left": 150,
+					"width": 120,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": "Relation Type"
+				}
+			},
+			"entryOrder": [
+				"row",
+				"Variable8",
+				"l_description",
+				"isActive",
+				"ifByInvoice",
+				"branchID",
+				"inDays",
+				"Variable11",
+				"Variable12",
+				"Check Box",
+				"EFT",
+				"isCash",
+				"AmountThreshold",
+				"AmountThreshold1",
+				"Variable1",
+				"VolumeThreshold",
+				"VolumeThreshold1",
+				"QtyThreshold",
+				"cust.is",
+				"cust.is1",
+				"cust.isCompany",
+				"cust.isSuspicious",
+				"cust.isHighRisk",
+				"Variable3",
+				"customerID2",
+				"Variable2",
+				"Variable4",
+				"Variable5",
+				"Variable7",
+				"Check Box14",
+				"Check Box5",
+				"Check Box10",
+				"Check Box11",
+				"Check Box4",
+				"Check Box6",
+				"Check Box7",
+				"Check Box8",
+				"Check Box9",
+				"Check Box12",
+				"Check Box13",
+				"thenEDD",
+				"cb_POT",
+				"cb_SOF",
+				"cb_TPD",
+				"cb_PEP",
+				"thenWarn",
+				"warningMsg",
+				"thenRequireApproval",
+				"thenRequireApproval1",
+				"thenAMLAlert",
+				"thenSetFlag",
+				"thenSetLCT",
+				"thenSetEFT",
+				"thenSetSTR",
+				"thenSetReportable",
+				"inDays1",
+				"thenReject",
+				"addTag",
+				"addTag1",
+				"Popup Dropdown List",
+				"thenStop",
+				"addTag2",
+				"lb_rules",
+				"Check Box1",
+				"Button"
+			]
+		},
+		{
+			"objects": {
+				"Listbox_registers": {
+					"type": "listbox",
+					"top": 52,
+					"left": 4,
+					"width": 1004,
+					"height": 603,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "25px",
+					"showFooters": true,
+					"footerHeight": "25px",
+					"table": 10,
+					"highlightSet": "$Registers_LBSet",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"alternateFill": "#EEEEEE",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"method": "ObjectMethods/Listbox_registers.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column22",
+							"dataSource": "[Registers:10]BranchID:39",
+							"width": 0,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#DDE8EE",
+							"alternateFill": "#CCD6DC",
+							"textAlign": "center",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_branchID",
+								"text": "Br",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer20",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column23",
+							"dataSource": "[Registers:10]RegisterID:1",
+							"width": 0,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#DDE8EE",
+							"alternateFill": "#CCD6DC",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_registerID",
+								"text": "Register ID",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "f_counter",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "count",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "branchID1",
+							"dataSource": "[Registers:10]BranchID:39",
+							"width": 52,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"textAlign": "left",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_BranchID1",
+								"text": "Branch",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer7",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "count",
+								"textFormat": " ",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column33",
+							"dataSource": "[Registers:10]RegisterDate:2",
+							"dataSourceTypeHint": "date",
+							"width": 97,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"textAlign": "left",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_valueDate",
+								"text": "Value Date",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer24",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "count",
+								"textFormat": " ",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column36",
+							"dataSource": "[Registers:10]InvoiceNumber:10",
+							"width": 82,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#666666",
+							"fill": "#F9FEF0",
+							"alternateFill": "#EFF5E3",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_invoiceID",
+								"text": "Invoice",
+								"textAlign": "center",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer27",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column30",
+							"dataSource": "[Registers:10]AccountID:6",
+							"width": 157,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_account",
+								"text": "Account",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "AccountFooter4",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column31",
+							"dataSource": "[Registers:10]SubAccountID:58",
+							"width": 0,
+							"maxWidth": 500,
+							"enterable": false,
+							"stroke": "#777777",
+							"alternateFill": "#EEEEEE",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_subAccountID",
+								"text": "Sub-Account",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "AccountFooter3",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column34",
+							"dataSource": "[Registers:10]CustomerID:5",
+							"width": 90,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#E8FFFE",
+							"alternateFill": "#DBE7E8",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header22",
+								"text": "Cust ID",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer25",
+								"dataSource": "vFooterText",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column37",
+							"dataSource": "[Registers:10]isTransfer:3",
+							"dataSourceTypeHint": "boolean",
+							"width": 29,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"alternateFill": "#EEEEEE",
+							"textAlign": "center",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_isTransfer",
+								"text": "Tr.",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer28",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column38",
+							"dataSource": "[Registers:10]Debit:8",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#DFE4FF",
+							"alternateFill": "#C5C7F2",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_received",
+								"text": "Received",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "vSumDebit",
+								"dataSource": "vSumDebit",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column39",
+							"dataSource": "[Registers:10]Credit:7",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#FFFFDF",
+							"alternateFill": "#F8F6BC",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_paid",
+								"text": "Paid",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "vSumCredit",
+								"dataSource": "vSumCredit",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column40",
+							"dataSource": "[Registers:10]Currency:19",
+							"width": 40,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"textAlign": "center",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_ccy",
+								"text": "CCY",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer29",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column29",
+							"dataSource": "[Registers:10]OurRate:25",
+							"dataSourceTypeHint": "number",
+							"width": 70,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Rates",
+							"alternateFill": "#E2E8EB",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_rate",
+								"text": "Rate",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer17",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[Registers:10]UnrealizedGain:56",
+							"dataSourceTypeHint": "number",
+							"width": 93,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_gains",
+								"text": "Gains",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "SumTotalFees2",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column41",
+							"dataSource": "[Registers:10]DebitLocal:23",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#DFE4FF",
+							"alternateFill": "#D1D7F7",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_DebitLC",
+								"text": "Debit LC",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "SumDebitLocal1",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column42",
+							"dataSource": "[Registers:10]CreditLocal:24",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#FFFFDF",
+							"alternateFill": "#F9F7CE",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_creditLC",
+								"text": "Credit LC",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "SumCreditLocal2",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column44",
+							"dataSource": "[Registers:10]totalFees:30",
+							"dataSourceTypeHint": "number",
+							"width": 65,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_totalFee",
+								"text": "Total Fees",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "SumTotalFees1",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column46",
+							"dataSource": "[Registers:10]Comments:9",
+							"width": 55,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"verticalAlign": "middle",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Comments",
+								"text": "Comments",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer21",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#B6C1D8",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Rectangle",
+					"Rectangle3",
+					"l_test",
+					"Rectangle2",
+					"Rectangle1",
+					"Text2",
+					"Text3",
+					"Text14",
+					"Text16",
+					"Text1"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,763 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar",
+	"rightMargin": 0,
+	"bottomMargin": 5,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onHeader",
+		"onDoubleClick",
+		"onDataChange",
+		"onUnload"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 75,
+					"left": 0,
+					"width": 902,
+					"height": 417,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "mainListBox",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "2em",
+					"showFooters": true,
+					"table": 1,
+					"highlightSet": "$Cheques_LBSet",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"alternateFill": "#EFEEE1",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column10",
+							"dataSource": "[Cheques:1]BranchID:25",
+							"width": 28,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#F4F0DD",
+							"alternateFill": "#DDDBCD",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header10",
+								"text": "🏠",
+								"tooltip": "Branch",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer10",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column11",
+							"dataSource": "[Cheques:1]isFlagged:24",
+							"dataSourceTypeHint": "boolean",
+							"width": 28,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"fill": "#F4F0DD",
+							"alternateFill": "#DDDBCD",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header11",
+								"text": "🏁",
+								"tooltip": "Flags",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer11",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column8",
+							"dataSource": "[Cheques:1]ChequeID:1",
+							"width": 98,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#F4F0DD",
+							"alternateFill": "#DDDBCD",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header8",
+								"text": "CXR ID",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer8",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"textAlign": "center",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column13",
+							"dataSource": "[Cheques:1]DueDate:3",
+							"dataSourceTypeHint": "date",
+							"width": 87,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EFEEE1",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header13",
+								"text": "Due Date",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer13",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "[Customers:3]FullName:40",
+							"width": 118,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#E3FBFF",
+							"alternateFill": "#C9DAD0",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Customer",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column18",
+							"dataSource": "[Cheques:1]AccountID:7",
+							"width": 129,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EFEEE1",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header18",
+								"text": "CXR Account Name",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer18",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column16",
+							"dataSource": "[Cheques:1]SubAccountID:29",
+							"width": 75,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EFEEE1",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header16",
+								"text": "Sub Account",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer16",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "[Cheques:1]isPaid:11",
+							"dataSourceTypeHint": "boolean",
+							"width": 29,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"alternateFill": "#EFEEE1",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "Paid",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "[Cheques:1]ChequeNumber:4",
+							"width": 76,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#FEE98F",
+							"alternateFill": "#F3DF7D",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Cheque No.",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "[Cheques:1]InvoiceID:5",
+							"width": 92,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#EEFFEA",
+							"alternateFill": "#D7EAD1",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header5",
+								"text": "Invoice ID",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column17",
+							"dataSource": "[Cheques:1]Amount:8",
+							"dataSourceTypeHint": "number",
+							"width": 102,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EFEEE1",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header17",
+								"text": "Amount",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer17",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "[Cheques:1]Currency:9",
+							"width": 33,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EFEEE1",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header6",
+								"text": "💲",
+								"tooltip": "Currency",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column15",
+							"dataSource": "[Cheques:1]chequeType:13",
+							"width": 63,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EFEEE1",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header15",
+								"text": "Type",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer15",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "[Cheques:1]ourRate:19",
+							"dataSourceTypeHint": "number",
+							"width": 65,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Rates",
+							"alternateFill": "#EFEEE1",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header7",
+								"text": "Rate",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[Cheques:1]DepositDate:17",
+							"dataSourceTypeHint": "date",
+							"width": 90,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EFEEE1",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Deposited On",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column9",
+							"dataSource": "[Cheques:1]amountLocal:23",
+							"dataSourceTypeHint": "number",
+							"width": 102,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EFEEE1",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header9",
+								"text": "Amount LC",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer9",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column14",
+							"dataSource": "[Cheques:1]feeLocal:21",
+							"dataSourceTypeHint": "number",
+							"width": 102,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EFEEE1",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header14",
+								"text": "Fee LC",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer14",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column12",
+							"dataSource": "[Cheques:1]Memo:10",
+							"width": 120,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EFEEE1",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header12",
+								"text": "Remarks",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer12",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#D2D1C6",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"Highlight Button4": {
+					"type": "button",
+					"top": 500,
+					"left": 485,
+					"width": 130,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"text": "Cheques Received",
+					"class": "Control",
+					"stroke": "#444444",
+					"focusable": false,
+					"method": "ObjectMethods/Highlight Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button6": {
+					"type": "button",
+					"top": 500,
+					"left": 618,
+					"width": 130,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"text": "Cheques paid out",
+					"class": "Control",
+					"stroke": "#444444",
+					"focusable": false,
+					"method": "ObjectMethods/Highlight Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button8": {
+					"type": "button",
+					"top": 500,
+					"left": 312,
+					"width": 84,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"text": "Pending",
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"method": "ObjectMethods/Highlight Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button11": {
+					"type": "button",
+					"top": 500,
+					"left": 399,
+					"width": 84,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"text": "Cleared",
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"method": "ObjectMethods/Highlight Button11.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button14": {
+					"type": "button",
+					"top": 500,
+					"left": 751,
+					"width": 130,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"text": "Clear Cheques",
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"method": "ObjectMethods/Highlight Button14.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Round Rectangle": {
+					"type": "rectangle",
+					"top": 496,
+					"left": 3,
+					"width": 306,
+					"height": 29,
+					"sizingY": "move",
+					"fill": "#DCE8EB",
+					"stroke": "#AAAAAA",
+					"borderRadius": 5
+				},
+				"QuerySelection": {
+					"type": "checkbox",
+					"top": 500,
+					"left": 161,
+					"width": 137,
+					"height": 23,
+					"sizingY": "move",
+					"dataSource": "cbQuerySelection",
+					"text": "Filter within selection",
+					"class": "Small",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"arrBranches": {
+					"type": "dropdown",
+					"top": 501,
+					"left": 68,
+					"width": 88,
+					"height": 22,
+					"sizingY": "move",
+					"dataSource": "arrBranches",
+					"focusable": false,
+					"choiceList": [
+						"All",
+						"Assets",
+						"Liabilities",
+						"Equities",
+						"Revenues",
+						"Expenses"
+					],
+					"class": "Small",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/arrBranches.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 504,
+					"left": 10,
+					"width": 69,
+					"height": 13,
+					"sizingY": "move",
+					"stroke": "#404040",
+					"class": "Small",
+					"text": "Filter by:"
+				},
+				"cb_ShowCustomerNames": {
+					"type": "checkbox",
+					"top": 54,
+					"left": 677,
+					"width": 163,
+					"height": 18,
+					"text": "Show Customer Names",
+					"class": "Small",
+					"focusable": false,
+					"method": "ObjectMethods/cb_ShowCustomerNames.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

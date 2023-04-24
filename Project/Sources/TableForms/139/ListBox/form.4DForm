@@ -1,0 +1,403 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onHeader",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onUnload"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 74,
+					"left": 0,
+					"width": 1013,
+					"height": 463,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "",
+					"movableRows": false,
+					"rowHeight": "20px",
+					"showFooters": true,
+					"table": "CAB_Batch_Logs",
+					"highlightSet": "$CAB_Batch_Logs_LBSet",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"alternateFill": "#EEEEEE",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDoubleClick",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"headerHeight": "2em",
+					"columns": [
+						{
+							"name": "batchID1",
+							"dataSource": "[CAB_Batch_Logs:139]BatchID:2",
+							"width": 186,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "WorkstationH1",
+								"text": "Batch ID",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer8",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number"
+							}
+						},
+						{
+							"name": "date",
+							"dataSource": "[CAB_Batch_Logs:139]DateStamp:3",
+							"width": 151,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"dateFormat": "shortCentury",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "DateH",
+								"text": ":xliff:cvs_date",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer10",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"enterable": false,
+							"textFormat": "####-##-## | ##:##:##"
+						},
+						{
+							"name": "status",
+							"dataSource": "[CAB_Batch_Logs:139]Status:4",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "CommentsH1",
+								"text": ":xliff:cvs_status",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "noRecords",
+							"dataSource": "[CAB_Batch_Logs:139]NumOfRecords:6",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "CommentsH2",
+								"text": "No of Records",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"variableCalculation": "sum"
+							}
+						},
+						{
+							"name": "imported",
+							"dataSource": "[CAB_Batch_Logs:139]Imported:8",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#E3F3F4",
+							"alternateFill": "#CAE9EA",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "DebitH1",
+								"text": "Imported",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"enterable": false,
+							"controlType": "checkbox"
+						},
+						{
+							"name": "validated",
+							"dataSource": "[CAB_Batch_Logs:139]isValidated:9",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#E3F3F4",
+							"alternateFill": "#CAE9EA",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "DebitH2",
+								"text": "Valid",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"controlType": "checkbox",
+							"enterable": false
+						},
+						{
+							"name": "registersImported",
+							"dataSource": "[CAB_Batch_Logs:139]isRegistersCreated:10",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#E3F3F4",
+							"alternateFill": "#CAE9EA",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "DebitH4",
+								"text": "Regs",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"controlType": "checkbox",
+							"enterable": false
+						},
+						{
+							"name": "invoiceImported",
+							"dataSource": "[CAB_Batch_Logs:139]isInvoicesCreated:11",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#E3F3F4",
+							"alternateFill": "#CAE9EA",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "DebitH5",
+								"text": "Invs",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"controlType": "checkbox",
+							"enterable": false
+						},
+						{
+							"name": "customerPulled",
+							"dataSource": "[CAB_Batch_Logs:139]isCustomersPulled:12",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#E3F3F4",
+							"alternateFill": "#CAE9EA",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "DebitH3",
+								"text": "Cus",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"controlType": "checkbox",
+							"enterable": false
+						},
+						{
+							"name": "processed",
+							"dataSource": "[CAB_Batch_Logs:139]isProcessed:13",
+							"width": 47,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#E3F3F4",
+							"alternateFill": "#CAE9EA",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "DebitH",
+								"text": "Done",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer12",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"controlType": "checkbox"
+						},
+						{
+							"name": "batchID",
+							"dataSource": "[CAB_Batch_Logs:139]ErrorText:15",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "WorkstationH",
+								"text": "Error",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer20",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12,
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 49,
+	"inheritedForm": "Toolbar",
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"menuBar": "Menu Bar #1"
+}

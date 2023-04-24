@@ -1,0 +1,2 @@
+//%attributes = {}
+allRecordsAML_AggrRules

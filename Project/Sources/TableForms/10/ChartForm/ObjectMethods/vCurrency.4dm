@@ -1,0 +1,2 @@
+pickCurrency(Self:C308)
+handleDrawChartButton

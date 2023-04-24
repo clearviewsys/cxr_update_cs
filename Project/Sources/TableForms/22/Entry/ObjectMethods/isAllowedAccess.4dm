@@ -1,0 +1,1 @@
+enableButtonForAdminOnly("isAllowedAccess")

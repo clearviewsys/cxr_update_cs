@@ -1,0 +1,214 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Search",
+	"windowMinHeight": 150,
+	"rightMargin": 0,
+	"bottomMargin": 5,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 75,
+					"left": 1,
+					"width": 703,
+					"height": 398,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"movableRows": false,
+					"headerHeight": "25px",
+					"showFooters": true,
+					"table": 130,
+					"highlightSet": "$List_PIN_LBSet",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"fill": "#F3F3E9",
+					"alternateFill": "#EEEEDD",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"borderStyle": "none",
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column6",
+							"dataSource": "[List_PIN:130]Code:2",
+							"width": 81,
+							"maxWidth": 100,
+							"enterable": false,
+							"fill": "#F3F3E9",
+							"alternateFill": "#EEEEDD",
+							"textAlign": "center",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "CodeColum",
+								"text": ":xliff:cvs_code",
+								"textAlign": "center",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer5",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#F3F3E9",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "[List_PIN:130]isHighRisk:4",
+							"dataSourceTypeHint": "boolean",
+							"width": 60,
+							"maxWidth": 396,
+							"enterable": false,
+							"controlType": "checkbox",
+							"fill": "#F3F3E9",
+							"alternateFill": "#EEEEDD",
+							"textAlign": "left",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "ClassCol",
+								"text": "🚥",
+								"textAlign": "center",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#F3F3E9",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[List_PIN:130]Purpose:3",
+							"width": 545,
+							"minWidth": 10,
+							"maxWidth": 32500,
+							"enterable": false,
+							"fill": "#F3F3E9",
+							"alternateFill": "#EEEEDD",
+							"textAlign": "left",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "OccupationColumn",
+								"text": "Purpose of Business Relationship ❓",
+								"textAlign": "center",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#F3F3E9",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						}
+					]
+				},
+				"b_PopulatePIN": {
+					"type": "dropdown",
+					"top": 479,
+					"left": 5,
+					"width": 327,
+					"height": 30,
+					"sizingY": "move",
+					"choiceList": [
+						"Populate"
+					],
+					"class": "Control",
+					"method": "ObjectMethods/b_PopulatePIN.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

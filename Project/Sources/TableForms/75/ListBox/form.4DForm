@@ -1,0 +1,501 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar",
+	"rightMargin": 2,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onPrintingDetail",
+		"onUnload",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onLoadRecord",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Round Rectangle": {
+					"type": "rectangle",
+					"top": 378,
+					"left": 0,
+					"width": 306,
+					"height": 29,
+					"sizingY": "move",
+					"fill": "#DCE8EB",
+					"stroke": "#AAAAAA",
+					"borderRadius": 5
+				},
+				"mainListBox": {
+					"type": "listbox",
+					"top": 75,
+					"left": 0,
+					"width": 901,
+					"height": 298,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "mainListBox",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "2em",
+					"showFooters": true,
+					"lockedColumnCount": 6,
+					"table": 75,
+					"highlightSet": "$ExceptionsLog_LBSet",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"alternateFill": "#DBECEA",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDisplayDetail",
+						"onDoubleClick",
+						"onUnload",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column10",
+							"dataSource": "[ExceptionsLog:75]BranchID:12",
+							"width": 28,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"fill": "#DDF2EF",
+							"alternateFill": "#CCDFDC",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header10",
+								"text": "🏠",
+								"dataSource": "Header10",
+								"tooltip": "Branches",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer10",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C4D3D2",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "[ExceptionsLog:75]isFlagged:9",
+							"dataSourceTypeHint": "boolean",
+							"width": 28,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"fill": "#DDF2EF",
+							"alternateFill": "#CCDFDC",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header5",
+								"text": "🏁",
+								"dataSource": "Header11",
+								"tooltip": "Flags",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C4D3D2",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "[ExceptionsLog:75]ExceptionLogID:1",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"fill": "#DDF2EF",
+							"alternateFill": "#CCDFDC",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Exception ID",
+								"dataSource": "Header1",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C4D3D2",
+								"textAlign": "center",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column11",
+							"dataSource": "[ExceptionsLog:75]isReviewed:10",
+							"dataSourceTypeHint": "boolean",
+							"width": 40,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"fill": "#D6D1E7",
+							"alternateFill": "#C6CCDF",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header11",
+								"text": "Chk",
+								"dataSource": "Header11",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer11",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C4D3D2",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[ExceptionsLog:75]Date:2",
+							"dataSourceTypeHint": "date",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#DBECEA",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Date",
+								"dataSource": "Header2",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C4D3D2",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "[ExceptionsLog:75]Time:3",
+							"dataSourceTypeHint": "time",
+							"width": 54,
+							"minWidth": 4,
+							"maxWidth": 32000,
+							"alternateFill": "#DBECEA",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Time",
+								"dataSource": "Header3",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C4D3D2",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "[ExceptionsLog:75]ExceptionType:4",
+							"width": 229,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#813135",
+							"fill": "#F2E7F2",
+							"alternateFill": "#CCC9DE",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header6",
+								"text": "Exception Type",
+								"dataSource": "Header6",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C4D3D2",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "[ExceptionsLog:75]UserID:5",
+							"width": 71,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Rates",
+							"alternateFill": "#DBECEA",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "Caused by",
+								"dataSource": "Header7",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C4D3D2",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "[ExceptionsLog:75]ReviewerUserID:15",
+							"width": 85,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Rates",
+							"alternateFill": "#DBECEA",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header7",
+								"text": "Reviewed by",
+								"dataSource": "Header7",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C4D3D2",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column12",
+							"dataSource": "[ExceptionsLog:75]Description:8",
+							"width": 169,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#DBECEA",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header12",
+								"text": "Detail",
+								"dataSource": "Header12",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer12",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C4D3D2",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"arrBranches": {
+					"type": "dropdown",
+					"top": 381,
+					"left": 67,
+					"width": 88,
+					"height": 22,
+					"sizingY": "move",
+					"dataSource": "arrBranches",
+					"focusable": false,
+					"choiceList": [
+						"All",
+						"Assets",
+						"Liabilities",
+						"Equities",
+						"Revenues",
+						"Expenses"
+					],
+					"class": "Small",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/arrBranches.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"QuerySelection": {
+					"type": "checkbox",
+					"top": 380,
+					"left": 160,
+					"width": 137,
+					"height": 23,
+					"sizingY": "move",
+					"dataSource": "cbQuerySelection",
+					"text": "Filter within selection",
+					"class": "Small",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button6": {
+					"type": "button",
+					"top": 378,
+					"left": 657,
+					"width": 100,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Pending Review",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button1": {
+					"type": "button",
+					"top": 378,
+					"left": 760,
+					"width": 95,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"class": "Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Reviewed",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 384,
+					"left": 9,
+					"width": 69,
+					"height": 13,
+					"sizingY": "move",
+					"stroke": "#404040",
+					"class": "Small",
+					"text": "Filter by:"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Highlight Button6"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

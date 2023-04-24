@@ -1,0 +1,336 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 700,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "Sanction Screening Result",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"txt_list_match_heading": {
+					"type": "input",
+					"top": 0,
+					"left": 5,
+					"width": 700,
+					"height": 24,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.title",
+					"class": "Titles",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FD9B2F",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"right": 705
+				},
+				"b_close": {
+					"type": "button",
+					"top": 688,
+					"left": 529,
+					"width": 162,
+					"height": 27,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"text": ":xliff:cvs_close",
+					"class": "Large",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"lb_summary": {
+					"type": "listbox",
+					"left": 5,
+					"top": 58,
+					"width": 699,
+					"height": 86,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"selectionMode": "single",
+					"staticColumnCount": 1,
+					"method": "ObjectMethods/lb_summary.4dm",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"showFooters": false,
+					"alternateFill": "#FFF0F2",
+					"fontSize": 14,
+					"fill": "automatic",
+					"hideExtraBlankRows": true,
+					"columns": [
+						{
+							"header": {
+								"text": "Server",
+								"name": "Header1"
+							},
+							"name": "col_server",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": [
+								""
+							],
+							"width": 48,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Status"
+							},
+							"name": "col_status",
+							"footer": {
+								"name": "Footer4"
+							},
+							"width": 50,
+							"enterable": false,
+							"minWidth": 50
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Sanction List"
+							},
+							"name": "col_name",
+							"footer": {
+								"name": "Footer2"
+							},
+							"enterable": false,
+							"width": 157,
+							"minWidth": 150
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Message"
+							},
+							"name": "col_message",
+							"footer": {
+								"name": "Footer3"
+							},
+							"width": 421,
+							"enterable": false,
+							"minWidth": 400
+						}
+					]
+				},
+				"Splitter": {
+					"type": "splitter",
+					"left": 0,
+					"top": 150,
+					"width": 710,
+					"height": 2,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"right": 710
+				},
+				"Text": {
+					"type": "text",
+					"text": "DOB:",
+					"top": 31,
+					"left": 5,
+					"width": 51,
+					"height": 15,
+					"class": ""
+				},
+				"Input": {
+					"type": "input",
+					"left": 65,
+					"top": 30,
+					"width": 103,
+					"height": 16,
+					"enterable": false,
+					"dataSource": "Form:C1466.data.dob",
+					"dataSourceTypeHint": "date"
+				},
+				"Text4": {
+					"type": "text",
+					"text": "Address:",
+					"top": 31,
+					"left": 182,
+					"width": 51,
+					"height": 15,
+					"class": ""
+				},
+				"Input1": {
+					"type": "input",
+					"left": 242,
+					"top": 30,
+					"width": 103,
+					"height": 16,
+					"enterable": false,
+					"dataSource": "Form:C1466.data.address"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Nationality",
+					"top": 31,
+					"left": 359,
+					"width": 51,
+					"height": 15,
+					"class": ""
+				},
+				"Input2": {
+					"type": "input",
+					"left": 419,
+					"top": 30,
+					"width": 103,
+					"height": 16,
+					"enterable": false,
+					"dataSource": "Form:C1466.data.nationality"
+				},
+				"Text6": {
+					"type": "text",
+					"text": "Id:",
+					"top": 31,
+					"left": 536,
+					"width": 51,
+					"height": 15,
+					"class": ""
+				},
+				"Input3": {
+					"type": "input",
+					"left": 596,
+					"top": 30,
+					"width": 103,
+					"height": 16,
+					"enterable": false,
+					"dataSource": "Form:C1466.data.idNumber"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Subform1": {
+					"type": "subform",
+					"left": 5,
+					"top": 160,
+					"width": 701,
+					"height": 525,
+					"detailForm": "SanctionResultV2",
+					"bottom": 685,
+					"dataSource": "Form:C1466.cxrBlacklistJson",
+					"sizingX": "grow",
+					"sizingY": "grow"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "(CXR Blacklist Screen results are combined into one report)",
+					"top": 685,
+					"left": 1,
+					"width": 525,
+					"height": 15,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"textAlign": "center"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "(ctr click to clear all Sanction List to show all)",
+					"top": 702,
+					"left": 2,
+					"width": 525,
+					"height": 15,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"textAlign": "center"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Subform": {
+					"type": "subform",
+					"left": 5,
+					"top": 160,
+					"width": 701,
+					"height": 525,
+					"detailForm": "SanctionResultKYC2020",
+					"bottom": 685,
+					"dataSource": "Form:C1466.KYC2020",
+					"right": 706,
+					"sizingX": "grow",
+					"sizingY": "grow"
+				}
+			}
+		},
+		{
+			"objects": {
+				"sf_openSanctions": {
+					"type": "subform",
+					"left": 5,
+					"top": 160,
+					"width": 701,
+					"height": 525,
+					"detailForm": "SanctionResultOpenSanction",
+					"bottom": 685,
+					"dataSource": "Form:C1466.openSanctions",
+					"right": 706,
+					"sizingX": "grow",
+					"sizingY": "grow"
+				}
+			}
+		},
+		{
+			"objects": {
+				"sf_local": {
+					"type": "subform",
+					"left": 5,
+					"top": 160,
+					"width": 701,
+					"height": 525,
+					"detailForm": "SanctionResultLocalBlackList",
+					"bottom": 685,
+					"dataSource": "Form:C1466.localBlackList",
+					"right": 706,
+					"sizingX": "grow",
+					"sizingY": "grow"
+				}
+			}
+		}
+	],
+	"geometryStamp": 254,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

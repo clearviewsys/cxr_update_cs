@@ -1,0 +1,1 @@
+util_openURL(Form:C1466.selectedList.list_url)

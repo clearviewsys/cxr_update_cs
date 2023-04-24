@@ -1,0 +1,211 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Search",
+	"windowSizingX": "fixed",
+	"windowMinHeight": 150,
+	"rightMargin": 0,
+	"bottomMargin": 5,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 75,
+					"left": 1,
+					"width": 701,
+					"height": 378,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"movableRows": false,
+					"headerHeight": "25px",
+					"showFooters": true,
+					"table": 132,
+					"highlightSet": "$List_RiskFactors_LBSet",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"alternateFill": "#EEEBDF",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"borderStyle": "none",
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDisplayDetail",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column6",
+							"dataSource": "[List_RiskFactors:132]Code:2",
+							"width": 81,
+							"minWidth": 10,
+							"maxWidth": 100,
+							"enterable": false,
+							"alternateFill": "#EEEBDF",
+							"textAlign": "center",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "CodeColum",
+								"text": ":xliff:cvs_code",
+								"textAlign": "center",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer5",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[List_RiskFactors:132]RiskFactor:3",
+							"width": 505,
+							"minWidth": 10,
+							"maxWidth": 32500,
+							"enterable": false,
+							"alternateFill": "#EEEBDF",
+							"textAlign": "left",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "OccupationColumn",
+								"text": "Risk Factors",
+								"textAlign": "center",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "[List_RiskFactors:132]isRiskReducing:4",
+							"dataSourceTypeHint": "boolean",
+							"width": 98,
+							"minWidth": 10,
+							"maxWidth": 396,
+							"enterable": false,
+							"controlType": "checkbox",
+							"alternateFill": "#EEEBDF",
+							"textAlign": "left",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "ClassCol",
+								"text": "Risk Reducing?",
+								"textAlign": "center",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Tahoma",
+								"fontSize": 14
+							}
+						}
+					]
+				},
+				"b_PopulateRF": {
+					"type": "dropdown",
+					"top": 459,
+					"left": 5,
+					"width": 327,
+					"height": 30,
+					"sizingY": "move",
+					"choiceList": [
+						"Populate"
+					],
+					"class": "Control",
+					"method": "ObjectMethods/b_PopulateRF.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

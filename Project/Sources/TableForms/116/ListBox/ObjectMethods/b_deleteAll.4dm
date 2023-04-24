@@ -1,0 +1,1 @@
+deleteAllRecordsTable(Current form table:C627)

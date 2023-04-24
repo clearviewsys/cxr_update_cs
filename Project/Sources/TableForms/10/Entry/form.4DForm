@@ -1,0 +1,1059 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 361,
+	"markerBreak": 361,
+	"markerFooter": 371,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDataChange",
+		"onCloseBox",
+		"onTimer",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Group Box1": {
+					"type": "groupBox",
+					"top": 468,
+					"left": 33,
+					"width": 415,
+					"height": 74
+				},
+				"Text16": {
+					"type": "text",
+					"top": 60,
+					"left": 35,
+					"width": 150,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Date"
+				},
+				"RegisterID": {
+					"type": "input",
+					"top": 34,
+					"left": 195,
+					"width": 112,
+					"height": 15,
+					"defaultValue": "#n",
+					"dataSource": "[Registers:10]RegisterID:1",
+					"stroke": "#444444",
+					"class": "Fields",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#DDDDDD",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Date": {
+					"type": "input",
+					"top": 60,
+					"left": 195,
+					"width": 180,
+					"height": 15,
+					"dataSource": "[Registers:10]RegisterDate:2",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text17": {
+					"type": "text",
+					"top": 127,
+					"left": 33,
+					"width": 150,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Register Type"
+				},
+				"paidLabel": {
+					"type": "text",
+					"top": 287,
+					"left": 33,
+					"width": 150,
+					"height": 15,
+					"stroke": "#5F6000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Paid to / Withdraw"
+				},
+				"ReceivedLabel": {
+					"type": "text",
+					"top": 312,
+					"left": 33,
+					"width": 150,
+					"height": 15,
+					"stroke": "#001BB0",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Received from / Deposit"
+				},
+				"RegisterType": {
+					"type": "input",
+					"top": 127,
+					"left": 193,
+					"width": 180,
+					"height": 15,
+					"dataSource": "[Registers:10]RegisterType:4",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/PayablesType"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"PaidAmount": {
+					"type": "input",
+					"top": 287,
+					"left": 193,
+					"width": 160,
+					"height": 15,
+					"dataSource": "[Registers:10]Credit:7",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFDF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"ReceivedAmount": {
+					"type": "input",
+					"top": 312,
+					"left": 193,
+					"width": 160,
+					"height": 15,
+					"dataSource": "[Registers:10]Debit:8",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#DFE4FF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"PaidCurrency": {
+					"type": "input",
+					"top": 287,
+					"left": 358,
+					"width": 75,
+					"height": 15,
+					"dataSource": "[Registers:10]Currency:19",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 232,
+					"left": 193,
+					"width": 255,
+					"height": 15,
+					"dataSource": "[Customers:3]FullName:40",
+					"stroke": "#444444",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#DFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 207,
+					"left": 33,
+					"width": 150,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Customer ID"
+				},
+				"AmountReceived2": {
+					"type": "input",
+					"top": 182,
+					"left": 193,
+					"width": 100,
+					"height": 15,
+					"dataSource": "[Registers:10]InvoiceNumber:10",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#C5FFC0",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 182,
+					"left": 33,
+					"width": 150,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Related to Invoice #"
+				},
+				"ReceivedCurrency": {
+					"type": "input",
+					"top": 312,
+					"left": 358,
+					"width": 75,
+					"height": 15,
+					"dataSource": "[Registers:10]Currency:19",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Date1": {
+					"type": "input",
+					"top": 81,
+					"left": 193,
+					"width": 180,
+					"height": 15,
+					"dataSource": "[Registers:10]CreationTime:15",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Date2": {
+					"type": "input",
+					"top": 102,
+					"left": 193,
+					"width": 180,
+					"height": 15,
+					"dataSource": "[Registers:10]CreatedByUserID:16",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"top": 81,
+					"left": 33,
+					"width": 150,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Time"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 102,
+					"left": 33,
+					"width": 150,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Created by"
+				},
+				"CheqDate": {
+					"type": "input",
+					"top": 152,
+					"left": 193,
+					"width": 180,
+					"height": 15,
+					"dataSource": "[Registers:10]RegisterDate:2",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CheqDateLabel": {
+					"type": "text",
+					"top": 152,
+					"left": 33,
+					"width": 150,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Due Date"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 282,
+					"left": 28,
+					"width": 420,
+					"stroke": "#AAAAAA"
+				},
+				"Line2": {
+					"type": "line",
+					"top": 307,
+					"left": 28,
+					"width": 420,
+					"stroke": "#AAAAAA"
+				},
+				"Line3": {
+					"type": "line",
+					"top": 332,
+					"left": 28,
+					"width": 420,
+					"stroke": "#AAAAAA"
+				},
+				"AmountReceived1": {
+					"type": "input",
+					"top": 492,
+					"left": 173,
+					"width": 265,
+					"height": 16,
+					"dataSource": "vExternalTableName",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "#DDDDDD",
+					"borderStyle": "raised",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 492,
+					"left": 43,
+					"width": 130,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Source Table"
+				},
+				"AmountReceived3": {
+					"type": "input",
+					"top": 517,
+					"left": 173,
+					"width": 130,
+					"height": 15,
+					"dataSource": "[Registers:10]InternalRecordID:18",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#DFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 517,
+					"left": 173,
+					"width": 130,
+					"height": 18,
+					"focusable": false,
+					"style": "custom",
+					"borderStyle": "raised",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 517,
+					"left": 43,
+					"width": 130,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Source Reference #"
+				},
+				"b_Invoice": {
+					"type": "button",
+					"top": 182,
+					"left": 193,
+					"width": 100,
+					"height": 18,
+					"focusable": false,
+					"style": "custom",
+					"borderStyle": "raised",
+					"method": "ObjectMethods/b_Invoice.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"v3DButton3": {
+					"type": "button",
+					"top": 492,
+					"left": 173,
+					"width": 265,
+					"height": 18,
+					"focusable": false,
+					"style": "custom",
+					"borderStyle": "raised",
+					"method": "ObjectMethods/v3DButton3.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 35,
+					"left": 35,
+					"width": 150,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Journal Register ID"
+				},
+				"Text21": {
+					"type": "text",
+					"top": 362,
+					"left": 43,
+					"width": 150,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Comments"
+				},
+				"AmountReceived4": {
+					"type": "input",
+					"top": 207,
+					"left": 193,
+					"width": 100,
+					"height": 15,
+					"dataSource": "[Registers:10]CustomerID:5",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#DFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 257,
+					"left": 33,
+					"width": 150,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Account ID"
+				},
+				"Comments1": {
+					"type": "input",
+					"top": 257,
+					"left": 193,
+					"width": 255,
+					"height": 15,
+					"dataSource": "[Registers:10]AccountID:6",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_CustomerID": {
+					"type": "button",
+					"top": 207,
+					"left": 193,
+					"width": 100,
+					"height": 18,
+					"focusable": false,
+					"style": "custom",
+					"borderStyle": "raised",
+					"method": "ObjectMethods/b_CustomerID.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 232,
+					"left": 33,
+					"width": 150,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Customer Name"
+				},
+				"Field2": {
+					"type": "checkbox",
+					"top": 14,
+					"left": 327,
+					"width": 85,
+					"height": 16,
+					"dataSource": "[Registers:10]isFlagged:11",
+					"text": "Flagged",
+					"class": "Fields",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field1": {
+					"type": "checkbox",
+					"top": 341,
+					"left": 123,
+					"width": 325,
+					"height": 16,
+					"dataSource": "[Registers:10]AutoComments:12",
+					"text": "Automatically Generate Comments",
+					"class": "Fields",
+					"method": "ObjectMethods/Field1.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Comments": {
+					"type": "input",
+					"top": 362,
+					"left": 123,
+					"width": 325,
+					"height": 42,
+					"dataSource": "[Registers:10]Comments:9",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Field5": {
+					"type": "checkbox",
+					"top": 422,
+					"left": 174,
+					"width": 117,
+					"height": 16,
+					"dataSource": "[Registers:10]isValidated:35",
+					"text": "Validated",
+					"class": "Fields",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "checkbox",
+					"top": 34,
+					"left": 327,
+					"width": 115,
+					"height": 16,
+					"dataSource": "[Registers:10]isTransfer:3",
+					"text": "Transfer",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 11,
+					"left": 422,
+					"width": 20,
+					"height": 20,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/flag.png"
+				},
+				"Field6": {
+					"type": "input",
+					"top": 446,
+					"left": 174,
+					"width": 117,
+					"height": 15,
+					"dataSource": "[Registers:10]validationCode:36",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text8": {
+					"type": "text",
+					"top": 447,
+					"left": 59,
+					"width": 114,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Validation Code"
+				},
+				"Picture362": {
+					"type": "picture",
+					"top": 559,
+					"left": 137,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BNextRec.png"
+				},
+				"Picture363": {
+					"type": "picture",
+					"top": 559,
+					"left": 152,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BLastRec.png"
+				},
+				"Picture364": {
+					"type": "picture",
+					"top": 559,
+					"left": 107,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BFirstRec.png"
+				},
+				"Picture361": {
+					"type": "picture",
+					"top": 559,
+					"left": 122,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BPrevRec.png"
+				},
+				"bFirst": {
+					"type": "button",
+					"top": 559,
+					"left": 107,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"display": false,
+					"method": "ObjectMethods/bFirst.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bNext": {
+					"type": "button",
+					"top": 559,
+					"left": 137,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"display": false,
+					"method": "ObjectMethods/bNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bPrevious": {
+					"type": "button",
+					"top": 559,
+					"left": 122,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"display": false,
+					"method": "ObjectMethods/bPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bLast": {
+					"type": "button",
+					"top": 559,
+					"left": 152,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"display": false,
+					"method": "ObjectMethods/bLast.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 559,
+					"left": 174,
+					"width": 69,
+					"height": 14,
+					"sizingY": "move",
+					"dataSource": "vRecNum",
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onHeader"
+					]
+				},
+				"bUpdate": {
+					"type": "button",
+					"top": 557,
+					"left": 20,
+					"width": 80,
+					"height": 20,
+					"sizingY": "move",
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"text": "Apply",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/bUpdate.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 545,
+					"left": 368,
+					"width": 80,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 545,
+					"left": 263,
+					"width": 104,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"AmountReceived1",
+				"Field2",
+				"Field1",
+				"Comments",
+				"Field5",
+				"Field6",
+				"Variable2",
+				"bUpdate",
+				"bValidate",
+				"bCancel"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

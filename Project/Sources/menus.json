@@ -1,0 +1,4953 @@
+{
+	"bars": [
+		{
+			"id": 1,
+			"name": "Menu Bar #1",
+			"items": [
+				{
+					"link": 11482
+				},
+				{
+					"link": 27547
+				},
+				{
+					"link": 6481
+				},
+				{
+					"link": 17046
+				},
+				{
+					"link": 344
+				},
+				{
+					"link": 19305
+				},
+				{
+					"link": 2314
+				},
+				{
+					"link": 32006
+				},
+				{
+					"link": 32039
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "Menu Bar #2",
+			"items": [
+				{
+					"link": 32007
+				},
+				{
+					"link": 32008
+				},
+				{
+					"link": 32009
+				},
+				{
+					"link": 32010
+				},
+				{
+					"link": 32011
+				},
+				{
+					"link": 32012
+				},
+				{
+					"link": 32013
+				},
+				{
+					"link": 32014
+				}
+			]
+		},
+		{
+			"id": 3,
+			"name": "Menu Bar #3",
+			"items": [
+				{
+					"link": 32015
+				},
+				{
+					"link": 32016
+				},
+				{
+					"link": 32017
+				},
+				{
+					"link": 32018
+				},
+				{
+					"link": 32019
+				},
+				{
+					"link": 32020
+				},
+				{
+					"link": 32021
+				},
+				{
+					"link": 32022
+				}
+			]
+		},
+		{
+			"id": 4,
+			"name": "Menu Bar #4",
+			"items": [
+				{
+					"link": 32023
+				},
+				{
+					"link": 32024
+				},
+				{
+					"link": 32025
+				},
+				{
+					"link": 32026
+				},
+				{
+					"link": 32027
+				},
+				{
+					"link": 32028
+				},
+				{
+					"link": 32029
+				},
+				{
+					"link": 32030
+				}
+			]
+		},
+		{
+			"id": 5,
+			"name": "Menu Bar #4",
+			"items": [
+				{
+					"link": 32031
+				},
+				{
+					"link": 32032
+				},
+				{
+					"link": 32033
+				},
+				{
+					"link": 32034
+				},
+				{
+					"link": 32035
+				},
+				{
+					"link": 32036
+				},
+				{
+					"link": 32037
+				},
+				{
+					"link": 32038
+				}
+			]
+		}
+	],
+	"menus": [
+		{
+			"link": 11482,
+			"title": ":79,1",
+			"items": [
+				{
+					"title": "About this Version",
+					"method": "displaySplashScreen",
+					"startNewProcess": true
+				},
+				{
+					"title": "Open Data File...",
+					"method": "openDataFile"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Remote eWires",
+					"method": "display_eWireRemoteRecords",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fetch eWire",
+					"method": "fetcheWire"
+				},
+				{
+					"title": "New Invoice",
+					"method": "newRecordInvoices",
+					"shortcutAccel": true,
+					"shortcutKey": "N",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Backup Preferences",
+					"method": "open4DBackupPreferences"
+				},
+				{
+					"title": "Backup Now",
+					"method": "backupNow"
+				},
+				{
+					"title": "Restore Backup Archive...",
+					"method": "restoreFile"
+				},
+				{
+					"title": "Backup Log...",
+					"method": "displayListBackupLogs"
+				},
+				{
+					"title": "Database Log File",
+					"method": "displayDatabaseLogFile"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Export Data...",
+					"method": "exportData"
+				},
+				{
+					"title": "Import Data...",
+					"method": "importData"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Server Preferences...",
+					"method": "displayServerPrefs",
+					"shortcutAccel": true,
+					"shortcutKey": ";"
+				},
+				{
+					"title": "Client Preferences...",
+					"method": "displayListClientPrefs",
+					"shortcutAccel": true,
+					"shortcutKey": ","
+				},
+				{
+					"title": "Database Settings...",
+					"action": "databaseSettings"
+				},
+				{
+					"title": "Item 30",
+					"isSeparator": true
+				},
+				{
+					"title": "Sync Preferences",
+					"method": "SYNC_displayBasicConfig"
+				},
+				{
+					"title": "Sync Monitor",
+					"method": "SYNC_displayMonitor"
+				},
+				{
+					"title": "Item 34",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Define Branches",
+					"method": "displayListBranches"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Switch User",
+					"method": "switchSystemUser",
+					"shortcutAccel": true,
+					"shortcutKey": "L"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": ":131,27",
+					"shortcutAccel": true,
+					"shortcutKey": "Y",
+					"action": "design"
+				},
+				{
+					"title": ":131,28",
+					"shortcutShift": true,
+					"shortcutAccel": true,
+					"shortcutKey": "U",
+					"action": "userMode"
+				},
+				{
+					"title": ":131,29",
+					"state": "checked",
+					"shortcutShift": true,
+					"shortcutAccel": true,
+					"shortcutKey": "I",
+					"action": "application"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Control Box Settings- Sweden",
+					"method": "displayControlBoxPrefs"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": ":131,30",
+					"shortcutAccel": true,
+					"shortcutKey": "Q",
+					"action": "quit"
+				}
+			]
+		},
+		{
+			"link": 27547,
+			"title": ":79,5",
+			"items": [
+				{
+					"title": ":131,18",
+					"shortcutAccel": true,
+					"shortcutKey": "Z",
+					"action": "undo"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true
+				},
+				{
+					"title": ":131,20",
+					"shortcutAccel": true,
+					"shortcutKey": "X",
+					"action": "cut"
+				},
+				{
+					"title": ":131,21",
+					"shortcutAccel": true,
+					"shortcutKey": "C",
+					"action": "copy"
+				},
+				{
+					"title": ":131,22",
+					"shortcutAccel": true,
+					"shortcutKey": "V",
+					"action": "paste"
+				},
+				{
+					"title": ":131,23",
+					"action": "clear"
+				},
+				{
+					"title": ":131,24",
+					"shortcutAccel": true,
+					"shortcutKey": "A",
+					"action": "selectAll"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true
+				},
+				{
+					"title": ":131,25",
+					"action": "showClipboard"
+				}
+			]
+		},
+		{
+			"link": 6481,
+			"title": "View",
+			"items": [
+				{
+					"title": "Show Modules",
+					"method": "launchBrowser",
+					"shortcutAccel": true,
+					"shortcutKey": "B"
+				},
+				{
+					"title": "Show Update Minipanel",
+					"method": "displayUpdatePanel"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Toolbar",
+					"method": "display4dToolbar"
+				},
+				{
+					"title": "Hide Toolbar",
+					"method": "hide4dToolbar"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "View Currency Board",
+					"method": "displayCurrenciesPanel_",
+					"startNewProcess": true
+				},
+				{
+					"title": "View Currency Flags",
+					"method": "displayListFlags"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Unrealized Profit by branch",
+					"method": "displayBranchUnrealGains"
+				},
+				{
+					"title": "Cash Balances by branch",
+					"method": "displayBranchBalances"
+				},
+				{
+					"title": "View Remote Server Balances",
+					"method": "displayRemoteAccounts"
+				},
+				{
+					"title": "View Accounts Grid (Beta)",
+					"method": "acc_displayGrid",
+					"startNewProcess": true
+				},
+				{
+					"title": "View Sub-Ledger Grid (Beta)",
+					"method": "displayGrid_Accounts",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "View Currency Holdings",
+					"method": "displayCurrencyHoldings",
+					"startNewProcess": true
+				},
+				{
+					"title": "Tellerproof",
+					"method": "displayListTellerProof"
+				}
+			]
+		},
+		{
+			"link": 17046,
+			"title": "Admin",
+			"items": [
+				{
+					"title": "Change Administrator Password",
+					"method": "changeAdminUserPassword"
+				},
+				{
+					"title": "Set Startup Message",
+					"method": "setClientStartupMessage"
+				},
+				{
+					"title": "Manage Users & Privileges",
+					"method": "displayListUsers"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Customize Printed receipt",
+					"method": "displayCustomizeReceiptForm",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customize Cheque format",
+					"method": "editFormchequePrint",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customize Envelope format",
+					"method": "editFormEnvelope",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Define Rule-based Commission Policies",
+					"method": "displayFeeRules",
+					"startNewProcess": true
+				},
+				{
+					"title": "Define Rule-based AML Policies",
+					"method": "displayListAMLRules",
+					"startNewProcess": true
+				},
+				{
+					"title": "Define Database Field Constraints",
+					"method": "displayListFieldConstraints"
+				},
+				{
+					"title": "Define Manual Fee Structures",
+					"method": "displayListFeeStructures"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Normalize PictureIDs",
+					"method": "normalizeAllPictureIDs"
+				},
+				{
+					"title": "Rename an Account ID",
+					"method": "renameAccountID",
+					"startNewProcess": true
+				},
+				{
+					"title": "Merge two Customers",
+					"method": "mergeCustomers",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Edit Currency Rates",
+					"method": "displayCurrencyRateSheet",
+					"startNewProcess": true
+				},
+				{
+					"title": "https://www.facebook.com/watch/?v=641190113264187&extid=mBnwRF4VCcr870vY",
+					"isSeparator": true
+				},
+				{
+					"title": "Test Birthday Email",
+					"method": "sendBirthdayCardTest",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 1",
+					"isSeparator": true
+				},
+				{
+					"title": "Update Custom Folders",
+					"method": "initCustomFolders"
+				},
+				{
+					"title": "Cloud Backup file listing",
+					"method": "b2_openDialog",
+					"startNewProcess": true
+				}
+			]
+		},
+		{
+			"link": 344,
+			"title": "Reports",
+			"items": [
+				{
+					"title": "Currency Summary by Customer Type",
+					"method": "rep_printSummaryByCustType"
+				},
+				{
+					"title": "Query Account Positions",
+					"method": "rep_printAccountsByQuery",
+					"startNewProcess": true
+				},
+				{
+					"title": "Selected Account Positions",
+					"method": "rep_printAccountsBySelector",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account Balances Report",
+					"method": "rep_printAccountBalances",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account Positions Report",
+					"method": "rep_printAccountPositions",
+					"startNewProcess": true
+				},
+				{
+					"title": "Single Account Details",
+					"method": "rep_printAccountDetail",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Till Summary by date",
+					"method": "rep_printTillSummary"
+				},
+				{
+					"title": "Daily Till",
+					"method": "printDailyCashRegisters",
+					"startNewProcess": true
+				},
+				{
+					"title": "Quick Till Balance-thermal",
+					"method": "rep_printMiniTillReport"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Print Customer Dues",
+					"method": "rep_printCustomerDues",
+					"startNewProcess": true
+				},
+				{
+					"title": "Print Agent Payment Order",
+					"method": "displayAgentPOList",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "X Report (Sweden only)",
+					"method": "rep_printXreport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Z Report",
+					"method": "rep_printZreport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 18",
+					"isSeparator": true
+				},
+				{
+					"title": "Screen Reports",
+					"fontWeight": "bold",
+					"enabled": false
+				},
+				{
+					"title": "P&L statement for currencies",
+					"method": "display_PL_Currencies",
+					"startNewProcess": true
+				},
+				{
+					"title": "Complete Profit & Loss",
+					"method": "display_SR_CompletePLStatement",
+					"startNewProcess": true
+				},
+				{
+					"title": "P&L statement for Items",
+					"method": "display_PL_Items",
+					"startNewProcess": true
+				},
+				{
+					"title": "Currencies' Summary",
+					"method": "display_SR_CurrencyTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Summary of Bookings",
+					"method": "display_SR_BookingSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Summary of Income/Expenses",
+					"method": "display_SR_ExpenseIncomeSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Currencies Annual Summary",
+					"method": "display_SR_AnnualSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer's Summary",
+					"method": "display_SR_CustomerTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Stats",
+					"method": "display_SR_CustomerTransReport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Yearly Stats",
+					"method": "display_SR_CustomerTransReport2",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customers First Last Transaction",
+					"method": "display_SR_CustomerFirstLastTra",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Groups's Summary",
+					"method": "display_SR_CustomerGroups",
+					"startNewProcess": true
+				},
+				{
+					"title": "User Transactions' Summary",
+					"method": "display_SR_UserTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account & Sub-Accounts Summary",
+					"method": "display_SR_SubAcountsSum",
+					"startNewProcess": true
+				},
+				{
+					"title": "LCT aggregated by Invoice",
+					"method": "display_SR_LCTByInvoice",
+					"startNewProcess": true
+				},
+				{
+					"title": "LCT aggregated by customer for same day",
+					"method": "display_SR_LCTByCustomer",
+					"startNewProcess": true
+				},
+				{
+					"title": "Transaction Summary",
+					"method": "display_SR_TransactionSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Top 100 Customers",
+					"method": "display_SR_CustomerTop100"
+				},
+				{
+					"title": "Item 23",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Hourly Traffic Chart",
+					"method": "displayHourlyTrafficChart",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 28",
+					"isSeparator": true
+				},
+				{
+					"title": "CAB Reports",
+					"method": "CAB_DisplayCABReportPage"
+				},
+				{
+					"title": "FINTRAC LCTR & EFT Reports",
+					"method": "FT_ShowReportWin"
+				},
+				{
+					"title": "New Zealand  Prescribed Transaction Reports",
+					"method": "GoAMLReport"
+				},
+				{
+					"title": "Fiji FIU Transactions Reports",
+					"method": "FJ_ShowReportWin"
+				},
+				{
+					"title": "AUSTRAC Transaction Reports",
+					"method": "AUS_ShowReportWin"
+				},
+				{
+					"title": "Export ASCII for BOJ Accounting System",
+					"method": "JAM_ShowGLReport"
+				}
+			]
+		},
+		{
+			"link": 19305,
+			"title": "Integrity",
+			"items": [
+				{
+					"title": "Fix Invoices",
+					"method": "fixInvoices",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix Registers",
+					"method": "fixRegisters",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix eWire Customer IDs",
+					"method": "fixeWireCustomerIDs",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix Cheque Accounts",
+					"method": "fixChequeAccounts",
+					"startNewProcess": true
+				},
+				{
+					"title": "Compress Attached Docs",
+					"method": "updateNCompressAttachedDocs"
+				},
+				{
+					"title": "Add Branch ID to records",
+					"method": "prependBIDAllTables"
+				},
+				{
+					"title": "Upgrade old database Addresses",
+					"method": "regenerateAddressesForCustomers"
+				},
+				{
+					"isSeparator": true
+				},
+				{
+					"title": "Recreate Customers From Invoices",
+					"method": "recreateCustomersFromInvoices"
+				},
+				{
+					"title": "Recreate Accounts From Registers",
+					"method": "recreateAccountsFromRegisters"
+				},
+				{
+					"title": "Recreate Cheques from Registers",
+					"method": "recreateChequesFromRegisters"
+				},
+				{
+					"title": "Recreate Invoice from Orphaned Registers",
+					"method": "recreateInvoiceFromRegisters"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Auto Reconcile Account",
+					"method": "autoReconcileDataRange"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Integrity Check Panel",
+					"method": "displayIntegrityChecksPanel"
+				}
+			]
+		},
+		{
+			"link": 2314,
+			"title": "Support",
+			"items": [
+				{
+					"title": "Configure Company Info",
+					"method": "displayCompanyInfoPage"
+				},
+				{
+					"title": "Initial Configurations",
+					"method": "displayInitialConfigurations",
+					"startNewProcess": true
+				},
+				{
+					"title": "Ask for Live Support",
+					"method": "displayHelpRequestForm"
+				},
+				{
+					"title": "Registration and Licensing",
+					"method": "RAL2_loadUserCompanyInfoForm"
+				},
+				{
+					"title": "Check Registration",
+					"method": "RAL2_checkRegistration"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Authorize Workstations",
+					"method": "displayLBoxMacs"
+				},
+				{
+					"title": "Enable Authorization",
+					"method": "createTablePermissionRecord"
+				},
+				{
+					"title": "Show MAC Address",
+					"method": "displayMACAddress"
+				},
+				{
+					"title": "Reset Sequence Nums",
+					"method": "UTIL_resetSequenceNums"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Restart Client",
+					"method": "restartClient"
+				},
+				{
+					"title": "Restart Server",
+					"method": "restartServer"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Show 4D Folder",
+					"method": "open4DFolder"
+				},
+				{
+					"title": "Start Web Server",
+					"method": "startwebServer"
+				},
+				{
+					"title": "Stop Web Server",
+					"method": "stopWebServer"
+				},
+				{
+					"title": "Test Localhost:8080",
+					"method": "gotoLocalHost"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Execute 4D Method",
+					"method": "ExecuteMethod"
+				},
+				{
+					"title": "Create Starter Database",
+					"method": "createStarterDbase"
+				},
+				{
+					"title": "Delete all Transactions",
+					"method": "deleleAllTransactions"
+				}
+			]
+		},
+		{
+			"link": 32036,
+			"title": "Integrity",
+			"items": [
+				{
+					"title": "Fix Invoices",
+					"method": "fixInvoices",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix Registers",
+					"method": "fixRegisters",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix eWire Customer IDs",
+					"method": "fixeWireCustomerIDs",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix Cheque Accounts",
+					"method": "fixChequeAccounts",
+					"startNewProcess": true
+				},
+				{
+					"title": "Compress Attached Docs",
+					"method": "updateNCompressAttachedDocs"
+				},
+				{
+					"title": "Add Branch ID to records",
+					"method": "prependBIDAllTables"
+				},
+				{
+					"title": "Upgrade old database Addresses",
+					"method": "regenerateAddressesForCustomers"
+				},
+				{
+					"isSeparator": true
+				},
+				{
+					"title": "Recreate Customers From Invoices",
+					"method": "recreateCustomersFromInvoices"
+				},
+				{
+					"title": "Recreate Accounts From Registers",
+					"method": "recreateAccountsFromRegisters"
+				},
+				{
+					"title": "Recreate Invoice from Orphaned Registers",
+					"method": "recreateInvoiceFromRegisters"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Auto Reconcile Account",
+					"method": "autoReconcileDataRange"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Integrity Check Panel",
+					"method": "displayIntegrityChecksPanel"
+				}
+			]
+		},
+		{
+			"link": 32033,
+			"title": "View",
+			"items": [
+				{
+					"title": "Show Modules",
+					"method": "launchBrowser",
+					"shortcutAccel": true,
+					"shortcutKey": "B"
+				},
+				{
+					"title": "Show Update Minipanel",
+					"method": "displayUpdatePanel"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Toolbar",
+					"method": "display4dToolbar"
+				},
+				{
+					"title": "Hide Toolbar",
+					"method": "hide4dToolbar"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "View Currency Board",
+					"method": "displayCurrenciesPanel_",
+					"startNewProcess": true
+				},
+				{
+					"title": "View Currency Flags",
+					"method": "displayListFlags"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Unrealized Profit by branch",
+					"method": "displayBranchUnrealGains"
+				},
+				{
+					"title": "Cash Balances by branch",
+					"method": "displayBranchBalances"
+				},
+				{
+					"title": "View Remote Server Balances",
+					"method": "displayRemoteAccounts"
+				},
+				{
+					"title": "View Sub-Ledger Grid (Beta)",
+					"method": "displayGrid_Accounts",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "View Currency Holdings",
+					"method": "displayCurrencyHoldings",
+					"startNewProcess": true
+				},
+				{
+					"title": "Tellerproof",
+					"method": "displayListTellerProof"
+				}
+			]
+		},
+		{
+			"link": 32038,
+			"title": "Developer",
+			"items": [
+				{
+					"title": "ListMagic",
+					"method": "displayDesignBrowser"
+				},
+				{
+					"title": "Code Revisions",
+					"method": "displayLBoxDB_CodeRevisions"
+				},
+				{
+					"title": "Fix missing country codes",
+					"method": "fixMissingCountryCodes"
+				},
+				{
+					"title": "Item 2",
+					"isSeparator": true
+				},
+				{
+					"title": "Keywords",
+					"method": "displayLBox_DB_Keywords"
+				},
+				{
+					"title": "Item 6",
+					"isSeparator": true
+				},
+				{
+					"title": "ID FIelds for OCR",
+					"method": "displayLBox_OCR_Fields"
+				},
+				{
+					"title": "Define New ID Type For OCR",
+					"method": "displayLBox_OCR_Ids"
+				},
+				{
+					"title": "Sync-Create Seed Database",
+					"method": "SYNC_createSeedDatabase"
+				},
+				{
+					"title": "Sync-Set Defaults for Tables",
+					"method": "SYNC_createDefaultTables"
+				},
+				{
+					"title": "Chat",
+					"method": "iM_Chat"
+				},
+				{
+					"title": "Notify Test",
+					"method": "iH_aaTest"
+				},
+				{
+					"title": "Reset All UUIDs",
+					"method": "UTIL_resetUUIDs",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 3",
+					"isSeparator": true
+				},
+				{
+					"title": "Administration Panel",
+					"method": "handleAdministrationButton"
+				}
+			]
+		},
+		{
+			"link": 32029,
+			"title": "Support",
+			"items": [
+				{
+					"title": "Configure Company Info",
+					"method": "displayCompanyInfoPage"
+				},
+				{
+					"title": "Initial Configurations",
+					"method": "displayInitialConfigurations",
+					"startNewProcess": true
+				},
+				{
+					"title": "Ask for Live Support",
+					"method": "displayHelpRequestForm"
+				},
+				{
+					"title": "Registration and Licensing",
+					"method": "RAL2_loadUserCompanyInfoForm"
+				},
+				{
+					"title": "Check Registration",
+					"method": "RAL2_checkRegistration"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Authorize Workstations",
+					"method": "displayLBoxMacs"
+				},
+				{
+					"title": "Enable Authorization",
+					"method": "createTablePermissionRecord"
+				},
+				{
+					"title": "Show MAC Address",
+					"method": "displayMACAddress"
+				},
+				{
+					"title": "Reset Sequence Nums",
+					"method": "UTIL_resetSequenceNums"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Restart Client",
+					"method": "restartClient"
+				},
+				{
+					"title": "Restart Server",
+					"method": "restartServer"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Show 4D Folder",
+					"method": "open4DFolder"
+				},
+				{
+					"title": "Start Web Server",
+					"method": "startwebServer"
+				},
+				{
+					"title": "Stop Web Server",
+					"method": "stopWebServer"
+				},
+				{
+					"title": "Test Localhost:8080",
+					"method": "gotoLocalHost"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Execute 4D Method",
+					"method": "ExecuteMethod"
+				},
+				{
+					"title": "Create Starter Database",
+					"method": "createStarterDbase"
+				},
+				{
+					"title": "Delete all Transactions",
+					"method": "deleleAllTransactions"
+				},
+				{
+					"title": "Item 1",
+					"isSeparator": true
+				},
+				{
+					"title": "Fix QR ExportToHTML bug",
+					"method": "fixQR_ExportToHTMLBug"
+				}
+			]
+		},
+		{
+			"link": 32028,
+			"title": "Integrity",
+			"items": [
+				{
+					"title": "Fix Invoices",
+					"method": "fixInvoices",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix Registers",
+					"method": "fixRegisters",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix eWire Customer IDs",
+					"method": "fixeWireCustomerIDs",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix Cheque Accounts",
+					"method": "fixChequeAccounts",
+					"startNewProcess": true
+				},
+				{
+					"title": "Compress Attached Docs",
+					"method": "updateNCompressAttachedDocs"
+				},
+				{
+					"title": "Add Branch ID to records",
+					"method": "prependBIDAllTables"
+				},
+				{
+					"title": "Upgrade old database Addresses",
+					"method": "regenerateAddressesForCustomers"
+				},
+				{
+					"isSeparator": true
+				},
+				{
+					"title": "Recreate Customers From Invoices",
+					"method": "recreateCustomersFromInvoices"
+				},
+				{
+					"title": "Recreate Accounts From Registers",
+					"method": "recreateAccountsFromRegisters"
+				},
+				{
+					"title": "Recreate Invoice from Orphaned Registers",
+					"method": "recreateInvoiceFromRegisters"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Auto Reconcile Account",
+					"method": "autoReconcileDataRange"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Integrity Check Panel",
+					"method": "displayIntegrityChecksPanel"
+				}
+			]
+		},
+		{
+			"link": 32027,
+			"title": "Reports",
+			"items": [
+				{
+					"title": "Currency Summary by Customer Type",
+					"method": "rep_printSummaryByCustType"
+				},
+				{
+					"title": "Query Account Positions",
+					"method": "rep_printAccountsByQuery",
+					"startNewProcess": true
+				},
+				{
+					"title": "Selected Account Positions",
+					"method": "rep_printAccountsBySelector",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account Balances Report",
+					"method": "rep_printAccountBalances",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account Positions Report",
+					"method": "rep_printAccountPositions",
+					"startNewProcess": true
+				},
+				{
+					"title": "Single Account Details",
+					"method": "rep_printAccountDetail",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Till Summary by date",
+					"method": "rep_printTillSummary"
+				},
+				{
+					"title": "Daily Till",
+					"method": "printDailyCashRegisters",
+					"startNewProcess": true
+				},
+				{
+					"title": "Quick Till Balance-thermal",
+					"method": "rep_printMiniTillReport"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Print Customer Dues",
+					"method": "rep_printCustomerDues",
+					"startNewProcess": true
+				},
+				{
+					"title": "Print Agent Payment Order",
+					"method": "displayAgentPOList",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "X Report (Sweden only)",
+					"method": "rep_printXreport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Z Report",
+					"method": "rep_printZreport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 18",
+					"isSeparator": true
+				},
+				{
+					"title": "Screen Reports",
+					"fontWeight": "bold",
+					"enabled": false
+				},
+				{
+					"title": "P&L statement for currencies",
+					"method": "display_PL_Currencies",
+					"startNewProcess": true
+				},
+				{
+					"title": "Complete Profit & Loss",
+					"method": "display_SR_CompletePLStatement",
+					"startNewProcess": true
+				},
+				{
+					"title": "P&L statement for Items",
+					"method": "display_PL_Items",
+					"startNewProcess": true
+				},
+				{
+					"title": "Currencies' Summary",
+					"method": "display_SR_CurrencyTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Summary of Bookings",
+					"method": "display_SR_BookingSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Summary of Income/Expenses",
+					"method": "display_SR_ExpenseIncomeSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Currencies Annual Summary",
+					"method": "display_SR_AnnualSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer's Summary",
+					"method": "display_SR_CustomerTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Stats",
+					"method": "display_SR_CustomerTransReport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Yearly Stats",
+					"method": "display_SR_CustomerTransReport2",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customers First Last Transaction",
+					"method": "display_SR_CustomerFirstLastTra",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Groups's Summary",
+					"method": "display_SR_CustomerGroups",
+					"startNewProcess": true
+				},
+				{
+					"title": "User Transactions' Summary",
+					"method": "display_SR_UserTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account & Sub-Accounts Summary",
+					"method": "display_SR_SubAcountsSum",
+					"startNewProcess": true
+				},
+				{
+					"title": "LCT aggregated by Invoice",
+					"method": "display_SR_LCTByInvoice",
+					"startNewProcess": true
+				},
+				{
+					"title": "LCT aggregated by customer for same day",
+					"method": "display_SR_LCTByCustomer",
+					"startNewProcess": true
+				},
+				{
+					"title": "Transaction Summary",
+					"method": "display_SR_TransactionSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Top100 Customers",
+					"method": "display_SR_CustomerTop100",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 23",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Hourly Traffic Chart",
+					"method": "displayHourlyTrafficChart",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 28",
+					"isSeparator": true
+				},
+				{
+					"title": "CAB Reports",
+					"method": "CAB_DisplayCABReportPage"
+				},
+				{
+					"title": "FINTRAC LCTR & EFT Reports",
+					"method": "FT_ShowReportWin"
+				},
+				{
+					"title": "New Zealand  Prescribed Transaction Reports",
+					"method": "GoAMLReport"
+				},
+				{
+					"title": "Fiji FIU Transactions Reports",
+					"method": "FJ_ShowReportWin"
+				},
+				{
+					"title": "AUSTRAC Transaction Reports",
+					"method": "AUS_ShowReportWin"
+				},
+				{
+					"title": "Export ASCII for BOJ Accounting System",
+					"method": "JAM_ShowGLReport"
+				}
+			]
+		},
+		{
+			"link": 32025,
+			"title": "View",
+			"items": [
+				{
+					"title": "Show Modules",
+					"method": "launchBrowser",
+					"shortcutAccel": true,
+					"shortcutKey": "B"
+				},
+				{
+					"title": "Show Update Minipanel",
+					"method": "displayUpdatePanel"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Toolbar",
+					"method": "display4dToolbar"
+				},
+				{
+					"title": "Hide Toolbar",
+					"method": "hide4dToolbar"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "View Currency Board",
+					"method": "displayCurrenciesPanel_",
+					"startNewProcess": true
+				},
+				{
+					"title": "View Currency Flags",
+					"method": "displayListFlags"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Unrealized Profit by branch",
+					"method": "displayBranchUnrealGains"
+				},
+				{
+					"title": "Cash Balances by branch",
+					"method": "displayBranchBalances"
+				},
+				{
+					"title": "View Remote Server Balances",
+					"method": "displayRemoteAccounts"
+				},
+				{
+					"title": "View Sub-Ledger Grid (Beta)",
+					"method": "displayGrid_Accounts",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "View Currency Holdings",
+					"method": "displayCurrencyHoldings",
+					"startNewProcess": true
+				},
+				{
+					"title": "Tellerproof",
+					"method": "displayListTellerProof"
+				}
+			]
+		},
+		{
+			"link": 32026,
+			"title": "Admin",
+			"items": [
+				{
+					"title": "Change Administrator Password",
+					"method": "changeAdminUserPassword"
+				},
+				{
+					"title": "Set Startup Message",
+					"method": "setClientStartupMessage"
+				},
+				{
+					"title": "Manage Users & Privileges",
+					"method": "displayListUsers"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Customize Printed receipt",
+					"method": "displayCustomizeReceiptForm",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customize Cheque format",
+					"method": "editFormchequePrint",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customize Envelope format",
+					"method": "editFormEnvelope",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Define Rule-based Commission Policies",
+					"method": "displayFeeRules",
+					"startNewProcess": true
+				},
+				{
+					"title": "Define Rule-based AML Policies",
+					"method": "displayListAMLRules",
+					"startNewProcess": true
+				},
+				{
+					"title": "Define Database Field Constraints",
+					"method": "displayListFieldConstraints"
+				},
+				{
+					"title": "Define Manual Fee Structures",
+					"method": "displayListFeeStructures"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Normalize PictureIDs",
+					"method": "normalizeAllPictureIDs"
+				},
+				{
+					"title": "Rename an Account ID",
+					"method": "renameAccountID",
+					"startNewProcess": true
+				},
+				{
+					"title": "Merge two Customers",
+					"method": "mergeCustomers",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Edit Currency Rates",
+					"method": "displayCurrencyRateSheet",
+					"startNewProcess": true
+				},
+				{
+					"title": "https://www.facebook.com/watch/?v=641190113264187&extid=mBnwRF4VCcr870vY",
+					"isSeparator": true
+				},
+				{
+					"title": "Test Birthday Email",
+					"method": "sendBirthdayCardTest",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 1",
+					"isSeparator": true
+				},
+				{
+					"title": "Update Custom Folders",
+					"method": "initCustomFolders"
+				}
+			]
+		},
+		{
+			"link": 32034,
+			"title": "Admin",
+			"items": [
+				{
+					"title": "Change Administrator Password",
+					"method": "changeAdminUserPassword"
+				},
+				{
+					"title": "Set Startup Message",
+					"method": "setClientStartupMessage"
+				},
+				{
+					"title": "Manage Users & Privileges",
+					"method": "displayListUsers"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Customize Printed receipt",
+					"method": "displayCustomizeReceiptForm",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customize Cheque format",
+					"method": "editFormchequePrint",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customize Envelope format",
+					"method": "editFormEnvelope",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Define Rule-based Commission Policies",
+					"method": "displayFeeRules",
+					"startNewProcess": true
+				},
+				{
+					"title": "Define Rule-based AML Policies",
+					"method": "displayListAMLRules",
+					"startNewProcess": true
+				},
+				{
+					"title": "Define Database Field Constraints",
+					"method": "displayListFieldConstraints"
+				},
+				{
+					"title": "Define Manual Fee Structures",
+					"method": "displayListFeeStructures"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Normalize PictureIDs",
+					"method": "normalizeAllPictureIDs"
+				},
+				{
+					"title": "Rename an Account ID",
+					"method": "renameAccountID",
+					"startNewProcess": true
+				},
+				{
+					"title": "Merge two Customers",
+					"method": "mergeCustomers",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Edit Currency Rates",
+					"method": "displayCurrencyRateSheet",
+					"startNewProcess": true
+				},
+				{
+					"title": "https://www.facebook.com/watch/?v=641190113264187&extid=mBnwRF4VCcr870vY",
+					"isSeparator": true
+				},
+				{
+					"title": "Test Birthday Email",
+					"method": "sendBirthdayCardTest",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 1",
+					"isSeparator": true
+				},
+				{
+					"title": "Update Custom Folders",
+					"method": "initCustomFolders"
+				}
+			]
+		},
+		{
+			"link": 32030,
+			"title": "Developer",
+			"items": [
+				{
+					"title": "ListMagic",
+					"method": "displayDesignBrowser"
+				},
+				{
+					"title": "Code Revisions",
+					"method": "displayLBoxDB_CodeRevisions"
+				},
+				{
+					"title": "Fix missing country codes",
+					"method": "fixMissingCountryCodes"
+				},
+				{
+					"title": "Item 2",
+					"isSeparator": true
+				},
+				{
+					"title": "Keywords",
+					"method": "displayLBox_DB_Keywords"
+				},
+				{
+					"title": "Item 6",
+					"isSeparator": true
+				},
+				{
+					"title": "ID FIelds for OCR",
+					"method": "displayLBox_OCR_Fields"
+				},
+				{
+					"title": "Define New ID Type For OCR",
+					"method": "displayLBox_OCR_Ids"
+				},
+				{
+					"title": "Sync-Create Seed Database",
+					"method": "SYNC_createSeedDatabase"
+				},
+				{
+					"title": "Sync-Set Defaults for Tables",
+					"method": "SYNC_createDefaultTables"
+				},
+				{
+					"title": "Chat",
+					"method": "iM_Chat"
+				},
+				{
+					"title": "Notify Test",
+					"method": "iH_aaTest"
+				},
+				{
+					"title": "Reset All UUIDs",
+					"method": "UTIL_resetUUIDs",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 3",
+					"isSeparator": true
+				},
+				{
+					"title": "Administration Panel",
+					"method": "handleAdministrationButton"
+				}
+			]
+		},
+		{
+			"link": 32031,
+			"title": ":79,1",
+			"items": [
+				{
+					"title": "About this Version",
+					"method": "displaySplashScreen",
+					"startNewProcess": true
+				},
+				{
+					"title": "Open Data File...",
+					"method": "openDataFile"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Remote eWires",
+					"method": "display_eWireRemoteRecords",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fetch eWire",
+					"method": "fetcheWire"
+				},
+				{
+					"title": "New Invoice",
+					"method": "newRecordInvoices",
+					"shortcutAccel": true,
+					"shortcutKey": "N",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Backup Preferences",
+					"method": "open4DBackupPreferences"
+				},
+				{
+					"title": "Backup Now",
+					"method": "backupNow"
+				},
+				{
+					"title": "Restore Backup Archive...",
+					"method": "restoreFile"
+				},
+				{
+					"title": "Backup Log...",
+					"method": "displayListBackupLogs"
+				},
+				{
+					"title": "Database Log File",
+					"method": "displayDatabaseLogFile"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Export Data...",
+					"method": "exportData"
+				},
+				{
+					"title": "Import Data...",
+					"method": "importData"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Server Preferences...",
+					"method": "displayServerPrefs",
+					"shortcutAccel": true,
+					"shortcutKey": ";"
+				},
+				{
+					"title": "Client Preferences...",
+					"method": "displayListClientPrefs",
+					"shortcutAccel": true,
+					"shortcutKey": ","
+				},
+				{
+					"title": "Database Settings...",
+					"action": "databaseSettings"
+				},
+				{
+					"title": "Item 30",
+					"isSeparator": true
+				},
+				{
+					"title": "Sync Preferences",
+					"method": "SYNC_displayBasicConfig"
+				},
+				{
+					"title": "Sync Monitor",
+					"method": "SYNC_displayMonitor"
+				},
+				{
+					"title": "Item 34",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Define Branches",
+					"method": "displayListBranches"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Switch User",
+					"method": "switchSystemUser",
+					"shortcutAccel": true,
+					"shortcutKey": "L"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": ":131,27",
+					"shortcutAccel": true,
+					"shortcutKey": "Y",
+					"action": "design"
+				},
+				{
+					"title": ":131,28",
+					"shortcutShift": true,
+					"shortcutAccel": true,
+					"shortcutKey": "U",
+					"action": "userMode"
+				},
+				{
+					"title": ":131,29",
+					"state": "checked",
+					"shortcutShift": true,
+					"shortcutAccel": true,
+					"shortcutKey": "I",
+					"action": "application"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Control Box Settings- Sweden",
+					"method": "displayControlBoxPrefs"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": ":131,30",
+					"shortcutAccel": true,
+					"shortcutKey": "Q",
+					"action": "quit"
+				}
+			]
+		},
+		{
+			"link": 32037,
+			"title": "Support",
+			"items": [
+				{
+					"title": "Configure Company Info",
+					"method": "displayCompanyInfoPage"
+				},
+				{
+					"title": "Initial Configurations",
+					"method": "displayInitialConfigurations",
+					"startNewProcess": true
+				},
+				{
+					"title": "Ask for Live Support",
+					"method": "displayHelpRequestForm"
+				},
+				{
+					"title": "Registration and Licensing",
+					"method": "RAL2_loadUserCompanyInfoForm"
+				},
+				{
+					"title": "Check Registration",
+					"method": "RAL2_checkRegistration"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Authorize Workstations",
+					"method": "displayLBoxMacs"
+				},
+				{
+					"title": "Enable Authorization",
+					"method": "createTablePermissionRecord"
+				},
+				{
+					"title": "Show MAC Address",
+					"method": "displayMACAddress"
+				},
+				{
+					"title": "Reset Sequence Nums",
+					"method": "UTIL_resetSequenceNums"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Restart Client",
+					"method": "restartClient"
+				},
+				{
+					"title": "Restart Server",
+					"method": "restartServer"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Show 4D Folder",
+					"method": "open4DFolder"
+				},
+				{
+					"title": "Start Web Server",
+					"method": "startwebServer"
+				},
+				{
+					"title": "Stop Web Server",
+					"method": "stopWebServer"
+				},
+				{
+					"title": "Test Localhost:8080",
+					"method": "gotoLocalHost"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Execute 4D Method",
+					"method": "ExecuteMethod"
+				},
+				{
+					"title": "Create Starter Database",
+					"method": "createStarterDbase"
+				},
+				{
+					"title": "Delete all Transactions",
+					"method": "deleleAllTransactions"
+				},
+				{
+					"title": "Item 1",
+					"isSeparator": true
+				},
+				{
+					"title": "Fix QR ExportToHTML bug",
+					"method": "fixQR_ExportToHTMLBug"
+				}
+			]
+		},
+		{
+			"link": 32024,
+			"title": ":79,5",
+			"items": [
+				{
+					"title": ":131,18",
+					"shortcutAccel": true,
+					"shortcutKey": "Z",
+					"action": "undo"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true
+				},
+				{
+					"title": ":131,20",
+					"shortcutAccel": true,
+					"shortcutKey": "X",
+					"action": "cut"
+				},
+				{
+					"title": ":131,21",
+					"shortcutAccel": true,
+					"shortcutKey": "C",
+					"action": "copy"
+				},
+				{
+					"title": ":131,22",
+					"shortcutAccel": true,
+					"shortcutKey": "V",
+					"action": "paste"
+				},
+				{
+					"title": ":131,23",
+					"action": "clear"
+				},
+				{
+					"title": ":131,24",
+					"shortcutAccel": true,
+					"shortcutKey": "A",
+					"action": "selectAll"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true
+				},
+				{
+					"title": ":131,25",
+					"action": "showClipboard"
+				}
+			]
+		},
+		{
+			"link": 32035,
+			"title": "Reports",
+			"items": [
+				{
+					"title": "Currency Summary by Customer Type",
+					"method": "rep_printSummaryByCustType"
+				},
+				{
+					"title": "Query Account Positions",
+					"method": "rep_printAccountsByQuery",
+					"startNewProcess": true
+				},
+				{
+					"title": "Selected Account Positions",
+					"method": "rep_printAccountsBySelector",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account Balances Report",
+					"method": "rep_printAccountBalances",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account Positions Report",
+					"method": "rep_printAccountPositions",
+					"startNewProcess": true
+				},
+				{
+					"title": "Single Account Details",
+					"method": "rep_printAccountDetail",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Till Summary by date",
+					"method": "rep_printTillSummary"
+				},
+				{
+					"title": "Daily Till",
+					"method": "printDailyCashRegisters",
+					"startNewProcess": true
+				},
+				{
+					"title": "Quick Till Balance-thermal",
+					"method": "rep_printMiniTillReport"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Print Customer Dues",
+					"method": "rep_printCustomerDues",
+					"startNewProcess": true
+				},
+				{
+					"title": "Print Agent Payment Order",
+					"method": "displayAgentPOList",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "X Report (Sweden only)",
+					"method": "rep_printXreport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Z Report",
+					"method": "rep_printZreport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 18",
+					"isSeparator": true
+				},
+				{
+					"title": "Screen Reports",
+					"fontWeight": "bold",
+					"enabled": false
+				},
+				{
+					"title": "P&L statement for currencies",
+					"method": "display_PL_Currencies",
+					"startNewProcess": true
+				},
+				{
+					"title": "Complete Profit & Loss",
+					"method": "display_SR_CompletePLStatement",
+					"startNewProcess": true
+				},
+				{
+					"title": "P&L statement for Items",
+					"method": "display_PL_Items",
+					"startNewProcess": true
+				},
+				{
+					"title": "Currencies' Summary",
+					"method": "display_SR_CurrencyTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Summary of Bookings",
+					"method": "display_SR_BookingSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Summary of Income/Expenses",
+					"method": "display_SR_ExpenseIncomeSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Currencies Annual Summary",
+					"method": "display_SR_AnnualSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer's Summary",
+					"method": "display_SR_CustomerTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Stats",
+					"method": "display_SR_CustomerTransReport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Yearly Stats",
+					"method": "display_SR_CustomerTransReport2",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customers First Last Transaction",
+					"method": "display_SR_CustomerFirstLastTra",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Groups's Summary",
+					"method": "display_SR_CustomerGroups",
+					"startNewProcess": true
+				},
+				{
+					"title": "User Transactions' Summary",
+					"method": "display_SR_UserTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account & Sub-Accounts Summary",
+					"method": "display_SR_SubAcountsSum",
+					"startNewProcess": true
+				},
+				{
+					"title": "LCT aggregated by Invoice",
+					"method": "display_SR_LCTByInvoice",
+					"startNewProcess": true
+				},
+				{
+					"title": "LCT aggregated by customer for same day",
+					"method": "display_SR_LCTByCustomer",
+					"startNewProcess": true
+				},
+				{
+					"title": "Transaction Summary",
+					"method": "display_SR_TransactionSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Top100 Customers",
+					"method": "display_SR_CustomerTop100",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 23",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Hourly Traffic Chart",
+					"method": "displayHourlyTrafficChart",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 28",
+					"isSeparator": true
+				},
+				{
+					"title": "FINTRAC LCTR & EFT Reports",
+					"method": "FT_ShowReportWin"
+				},
+				{
+					"title": "New Zealand  Prescribed Transaction Reports",
+					"method": "GoAMLReport"
+				},
+				{
+					"title": "Fiji FIU Transactions Reports",
+					"method": "FJ_ShowReportWin"
+				},
+				{
+					"title": "AUSTRAC Transaction Reports",
+					"method": "AUS_ShowReportWin"
+				},
+				{
+					"title": "Export ASCII for BOJ Accounting System",
+					"method": "JAM_ShowGLReport"
+				}
+			]
+		},
+		{
+			"link": 32032,
+			"title": ":79,5",
+			"items": [
+				{
+					"title": ":131,18",
+					"shortcutAccel": true,
+					"shortcutKey": "Z",
+					"action": "undo"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true
+				},
+				{
+					"title": ":131,20",
+					"shortcutAccel": true,
+					"shortcutKey": "X",
+					"action": "cut"
+				},
+				{
+					"title": ":131,21",
+					"shortcutAccel": true,
+					"shortcutKey": "C",
+					"action": "copy"
+				},
+				{
+					"title": ":131,22",
+					"shortcutAccel": true,
+					"shortcutKey": "V",
+					"action": "paste"
+				},
+				{
+					"title": ":131,23",
+					"action": "clear"
+				},
+				{
+					"title": ":131,24",
+					"shortcutAccel": true,
+					"shortcutKey": "A",
+					"action": "selectAll"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true
+				},
+				{
+					"title": ":131,25",
+					"action": "showClipboard"
+				}
+			]
+		},
+		{
+			"link": 32009,
+			"title": "View",
+			"items": [
+				{
+					"title": "Show Modules",
+					"method": "launchBrowser",
+					"shortcutAccel": true,
+					"shortcutKey": "B"
+				},
+				{
+					"title": "Show Update Minipanel",
+					"method": "displayUpdatePanel"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Toolbar",
+					"method": "display4dToolbar"
+				},
+				{
+					"title": "Hide Toolbar",
+					"method": "hide4dToolbar"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "View Currency Board",
+					"method": "displayCurrenciesPanel_",
+					"startNewProcess": true
+				},
+				{
+					"title": "View Currency Flags",
+					"method": "displayListFlags"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Unrealized Profit by branch",
+					"method": "displayBranchUnrealGains"
+				},
+				{
+					"title": "Cash Balances by branch",
+					"method": "displayBranchBalances"
+				},
+				{
+					"title": "View Remote Server Balances",
+					"method": "displayRemoteAccounts"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "View Currency Holdings",
+					"method": "displayCurrencyHoldings",
+					"startNewProcess": true
+				},
+				{
+					"title": "Tellerproof",
+					"method": "displayListTellerProof"
+				}
+			]
+		},
+		{
+			"link": 32011,
+			"title": "Reports",
+			"items": [
+				{
+					"title": "Currency Summary by Customer Type",
+					"method": "rep_printSummaryByCustType"
+				},
+				{
+					"title": "Query Account Positions",
+					"method": "rep_printAccountsByQuery",
+					"startNewProcess": true
+				},
+				{
+					"title": "Selected Account Positions",
+					"method": "rep_printAccountsBySelector",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account Balances Report",
+					"method": "rep_printAccountBalances",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account Positions Report",
+					"method": "rep_printAccountPositions",
+					"startNewProcess": true
+				},
+				{
+					"title": "Single Account Details",
+					"method": "rep_printAccountDetail",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Till Summary by date",
+					"method": "rep_printTillSummary"
+				},
+				{
+					"title": "Daily Till",
+					"method": "printDailyCashRegisters",
+					"startNewProcess": true
+				},
+				{
+					"title": "Quick Till Balance-thermal",
+					"method": "rep_printMiniTillReport"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Print Customer Dues",
+					"method": "rep_printCustomerDues",
+					"startNewProcess": true
+				},
+				{
+					"title": "Print Agent Payment Order",
+					"method": "displayAgentPOList",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "X Report (Sweden only)",
+					"method": "rep_printXreport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Z Report",
+					"method": "rep_printZreport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 18",
+					"isSeparator": true
+				},
+				{
+					"title": "Screen Reports",
+					"fontWeight": "bold",
+					"enabled": false
+				},
+				{
+					"title": "P&L statement for currencies",
+					"method": "display_PL_Currencies",
+					"startNewProcess": true
+				},
+				{
+					"title": "Complete Profit & Loss",
+					"method": "display_SR_CompletePLStatement",
+					"startNewProcess": true
+				},
+				{
+					"title": "P&L statement for Items",
+					"method": "display_PL_Items",
+					"startNewProcess": true
+				},
+				{
+					"title": "Currencies' Summary",
+					"method": "display_SR_CurrencyTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Summary of Bookings",
+					"method": "display_SR_BookingSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Summary of Income/Expenses",
+					"method": "display_SR_ExpenseIncomeSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Currencies Annual Summary",
+					"method": "display_SR_AnnualSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer's Summary",
+					"method": "display_SR_CustomerTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Stats",
+					"method": "display_SR_CustomerTransReport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Yearly Stats",
+					"method": "display_SR_CustomerTransReport2",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customers First Last Transaction",
+					"method": "display_SR_CustomerFirstLastTra",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Groups's Summary",
+					"method": "display_SR_CustomerGroups",
+					"startNewProcess": true
+				},
+				{
+					"title": "User Transactions' Summary",
+					"method": "display_SR_UserTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account & Sub-Accounts Summary",
+					"method": "display_SR_SubAcountsSum",
+					"startNewProcess": true
+				},
+				{
+					"title": "LCT aggregated by Invoice",
+					"method": "display_SR_LCTByInvoice",
+					"startNewProcess": true
+				},
+				{
+					"title": "LCT aggregated by customer for same day",
+					"method": "display_SR_LCTByCustomer",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 23",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Hourly Traffic Chart",
+					"method": "displayHourlyTrafficChart",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 28",
+					"isSeparator": true
+				},
+				{
+					"title": "FINTRAC LCTR & EFT Reports",
+					"method": "FT_ShowReportWin"
+				},
+				{
+					"title": "New Zealand  Prescribed Transaction Reports",
+					"method": "GoAMLReport"
+				},
+				{
+					"title": "Fiji FIU Transactiions Reports",
+					"method": "FJ_ShowReportWin"
+				}
+			]
+		},
+		{
+			"link": 32012,
+			"title": "Integrity",
+			"items": [
+				{
+					"title": "Fix Invoices",
+					"method": "fixInvoices",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix Registers",
+					"method": "fixRegisters",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix eWire Customer IDs",
+					"method": "fixeWireCustomerIDs",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix Cheque Accounts",
+					"method": "fixChequeAccounts",
+					"startNewProcess": true
+				},
+				{
+					"title": "Compress Attached Docs",
+					"method": "updateNCompressAttachedDocs"
+				},
+				{
+					"title": "Add Branch ID to records",
+					"method": "prependBIDAllTables"
+				},
+				{
+					"isSeparator": true
+				},
+				{
+					"title": "Recreate Customers From Invoices",
+					"method": "recreateCustomersFromInvoices"
+				},
+				{
+					"title": "Recreate Accounts From Registers",
+					"method": "recreateAccountsFromRegisters"
+				},
+				{
+					"title": "Recreate Invoice from Orphaned Registers",
+					"method": "recreateInvoiceFromRegisters"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Auto Reconcile Account",
+					"method": "autoReconcileDataRange"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Integrity Check Panel",
+					"method": "displayIntegrityChecksPanel"
+				}
+			]
+		},
+		{
+			"link": 32007,
+			"title": ":79,1",
+			"items": [
+				{
+					"title": "About this Version",
+					"method": "displaySplashScreen",
+					"startNewProcess": true
+				},
+				{
+					"title": "Open Data File...",
+					"method": "openDataFile"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Remote eWires",
+					"method": "display_eWireRemoteRecords",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fetch eWire",
+					"method": "fetcheWire"
+				},
+				{
+					"title": "New Invoice",
+					"method": "newRecordInvoices",
+					"shortcutAccel": true,
+					"shortcutKey": "N",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Backup Preferences",
+					"method": "open4DBackupPreferences"
+				},
+				{
+					"title": "Backup Now",
+					"method": "backupNow"
+				},
+				{
+					"title": "Restore Backup Archive...",
+					"method": "restoreFile"
+				},
+				{
+					"title": "Backup Log...",
+					"method": "displayListBackupLogs"
+				},
+				{
+					"title": "Database Log File",
+					"method": "displayDatabaseLogFile"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Export Data...",
+					"method": "exportData"
+				},
+				{
+					"title": "Import Data...",
+					"method": "importData"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Server Preferences...",
+					"method": "displayServerPrefs",
+					"shortcutAccel": true,
+					"shortcutKey": ";"
+				},
+				{
+					"title": "Client Preferences...",
+					"method": "displayListClientPrefs",
+					"shortcutAccel": true,
+					"shortcutKey": ","
+				},
+				{
+					"title": "Database Settings...",
+					"action": "databaseSettings"
+				},
+				{
+					"title": "Item 30",
+					"isSeparator": true
+				},
+				{
+					"title": "Sync Preferences",
+					"method": "SYNC_displayBasicConfig"
+				},
+				{
+					"title": "Sync Monitor",
+					"method": "SYNC_displayMonitor"
+				},
+				{
+					"title": "Item 34",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Define Branches",
+					"method": "displayListBranches"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Switch User",
+					"method": "switchSystemUser",
+					"shortcutAccel": true,
+					"shortcutKey": "L"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": ":131,27",
+					"shortcutAccel": true,
+					"shortcutKey": "Y",
+					"action": "design"
+				},
+				{
+					"title": ":131,28",
+					"shortcutShift": true,
+					"shortcutAccel": true,
+					"shortcutKey": "U",
+					"action": "userMode"
+				},
+				{
+					"title": ":131,29",
+					"state": "checked",
+					"shortcutShift": true,
+					"shortcutAccel": true,
+					"shortcutKey": "I",
+					"action": "application"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Control Box Settings- Sweden",
+					"method": "displayControlBoxPrefs"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": ":131,30",
+					"shortcutAccel": true,
+					"shortcutKey": "Q",
+					"action": "quit"
+				}
+			]
+		},
+		{
+			"link": 32008,
+			"title": ":79,5",
+			"items": [
+				{
+					"title": ":131,18",
+					"shortcutAccel": true,
+					"shortcutKey": "Z",
+					"action": "undo"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true
+				},
+				{
+					"title": ":131,20",
+					"shortcutAccel": true,
+					"shortcutKey": "X",
+					"action": "cut"
+				},
+				{
+					"title": ":131,21",
+					"shortcutAccel": true,
+					"shortcutKey": "C",
+					"action": "copy"
+				},
+				{
+					"title": ":131,22",
+					"shortcutAccel": true,
+					"shortcutKey": "V",
+					"action": "paste"
+				},
+				{
+					"title": ":131,23",
+					"action": "clear"
+				},
+				{
+					"title": ":131,24",
+					"shortcutAccel": true,
+					"shortcutKey": "A",
+					"action": "selectAll"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true
+				},
+				{
+					"title": ":131,25",
+					"action": "showClipboard"
+				}
+			]
+		},
+		{
+			"link": 32013,
+			"title": "Support",
+			"items": [
+				{
+					"title": "Configure Company Info",
+					"method": "displayCompanyInfoPage"
+				},
+				{
+					"title": "Initial Configurations",
+					"method": "displayInitialConfigurations",
+					"startNewProcess": true
+				},
+				{
+					"title": "Ask for Live Support",
+					"method": "displayHelpRequestForm"
+				},
+				{
+					"title": "Registration and Licensing",
+					"method": "RAL2_loadUserCompanyInfoForm"
+				},
+				{
+					"title": "Check Registration",
+					"method": "RAL2_checkRegistration"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Authorize Workstations",
+					"method": "displayListMACs"
+				},
+				{
+					"title": "Enable Authorization",
+					"method": "createTablePermissionRecord"
+				},
+				{
+					"title": "Show MAC Address",
+					"method": "displayMACAddress"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Restart Client",
+					"method": "restartClient"
+				},
+				{
+					"title": "Restart Server",
+					"method": "restartServer"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Show 4D Folder",
+					"method": "open4DFolder"
+				},
+				{
+					"title": "Start Web Server",
+					"method": "startwebServer"
+				},
+				{
+					"title": "Stop Web Server",
+					"method": "stopWebServer"
+				},
+				{
+					"title": "Test Localhost:8080",
+					"method": "gotoLocalHost"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Execute 4D Method",
+					"method": "ExecuteMethod"
+				},
+				{
+					"title": "Delete all Transactions",
+					"method": "deleleAllTransactions"
+				}
+			]
+		},
+		{
+			"link": 32014,
+			"title": "Developer",
+			"items": [
+				{
+					"title": "ListMagic",
+					"method": "displayDesignBrowser"
+				},
+				{
+					"title": "Code Revisions",
+					"method": "displayLBoxDB_CodeRevisions"
+				},
+				{
+					"title": "Fix missing country codes",
+					"method": "fixMissingCountryCodes"
+				},
+				{
+					"title": "Item 2",
+					"isSeparator": true
+				},
+				{
+					"title": "Keywords",
+					"method": "displayLBox_DB_Keywords"
+				},
+				{
+					"title": "Item 6",
+					"isSeparator": true
+				},
+				{
+					"title": "ID FIelds for OCR",
+					"method": "displayLBox_OCR_Fields"
+				},
+				{
+					"title": "Define New ID Type For OCR",
+					"method": "displayLBox_OCR_Ids"
+				},
+				{
+					"title": "Sync-Create Seed Database",
+					"method": "SYNC_createSeedDatabase"
+				},
+				{
+					"title": "Sync-Set Defaults for Tables",
+					"method": "SYNC_createDefaultTables"
+				},
+				{
+					"title": "Item 1",
+					"isSeparator": true
+				},
+				{
+					"title": "Administration Panel",
+					"method": "handleAdministrationButton"
+				}
+			]
+		},
+		{
+			"link": 32010,
+			"title": "Admin",
+			"items": [
+				{
+					"title": "Change Administrator Password",
+					"method": "changeAdminUserPassword"
+				},
+				{
+					"title": "Set Startup Message",
+					"method": "setClientStartupMessage"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Customize Printed receipt",
+					"method": "displayCustomizeReceiptForm",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customize Cheque format",
+					"method": "editFormchequePrint",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customize Envelope format",
+					"method": "editFormEnvelope",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Administer Users & Privileges",
+					"method": "displayListUsers"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Define Rule-based Commission Policies",
+					"method": "displayFeeRules",
+					"startNewProcess": true
+				},
+				{
+					"title": "Define Rule-based AML Policies",
+					"method": "displayListAMLRules",
+					"startNewProcess": true
+				},
+				{
+					"title": "Define Database Field Constraints",
+					"method": "displayListFieldConstraints"
+				},
+				{
+					"title": "Define Manual Fee Structures",
+					"method": "displayListFeeStructures"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Normalize PictureIDs",
+					"method": "normalizeAllPictureIDs"
+				},
+				{
+					"title": "Normalize Customer Names",
+					"method": "normalizeAllCustomerNames",
+					"startNewProcess": true
+				},
+				{
+					"title": "Rename an Account ID",
+					"method": "renameAccountID",
+					"startNewProcess": true
+				},
+				{
+					"title": "Merge two Customers",
+					"method": "mergeCustomers",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Edit Currency Rates",
+					"method": "displayCurrencyRateSheet",
+					"startNewProcess": true
+				}
+			]
+		},
+		{
+			"link": 32017,
+			"title": "View",
+			"items": [
+				{
+					"title": "Show Modules",
+					"method": "launchBrowser",
+					"shortcutAccel": true,
+					"shortcutKey": "B"
+				},
+				{
+					"title": "Show Update Minipanel",
+					"method": "displayUpdatePanel"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Toolbar",
+					"method": "display4dToolbar"
+				},
+				{
+					"title": "Hide Toolbar",
+					"method": "hide4dToolbar"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "View Currency Board",
+					"method": "displayCurrenciesPanel_",
+					"startNewProcess": true
+				},
+				{
+					"title": "View Currency Flags",
+					"method": "displayListFlags"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Unrealized Profit by branch",
+					"method": "displayBranchUnrealGains"
+				},
+				{
+					"title": "Cash Balances by branch",
+					"method": "displayBranchBalances"
+				},
+				{
+					"title": "View Remote Server Balances",
+					"method": "displayRemoteAccounts"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "View Currency Holdings",
+					"method": "displayCurrencyHoldings",
+					"startNewProcess": true
+				},
+				{
+					"title": "Tellerproof",
+					"method": "displayListTellerProof"
+				}
+			]
+		},
+		{
+			"link": 32021,
+			"title": "Support",
+			"items": [
+				{
+					"title": "Configure Company Info",
+					"method": "displayCompanyInfoPage"
+				},
+				{
+					"title": "Initial Configurations",
+					"method": "displayInitialConfigurations",
+					"startNewProcess": true
+				},
+				{
+					"title": "Ask for Live Support",
+					"method": "displayHelpRequestForm"
+				},
+				{
+					"title": "Registration and Licensing",
+					"method": "RAL2_loadUserCompanyInfoForm"
+				},
+				{
+					"title": "Check Registration",
+					"method": "RAL2_checkRegistration"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Authorize Workstations",
+					"method": "displayListMACs"
+				},
+				{
+					"title": "Enable Authorization",
+					"method": "createTablePermissionRecord"
+				},
+				{
+					"title": "Show MAC Address",
+					"method": "displayMACAddress"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Restart Client",
+					"method": "restartClient"
+				},
+				{
+					"title": "Restart Server",
+					"method": "restartServer"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Show 4D Folder",
+					"method": "open4DFolder"
+				},
+				{
+					"title": "Start Web Server",
+					"method": "startwebServer"
+				},
+				{
+					"title": "Stop Web Server",
+					"method": "stopWebServer"
+				},
+				{
+					"title": "Test Localhost:8080",
+					"method": "gotoLocalHost"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Execute 4D Method",
+					"method": "ExecuteMethod"
+				},
+				{
+					"title": "Delete all Transactions",
+					"method": "deleleAllTransactions"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Check Registration",
+					"method": "RAL2_Registration"
+				}
+			]
+		},
+		{
+			"link": 32023,
+			"title": ":79,1",
+			"items": [
+				{
+					"title": "About this Version",
+					"method": "displaySplashScreen",
+					"startNewProcess": true
+				},
+				{
+					"title": "Open Data File...",
+					"method": "openDataFile"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Remote eWires",
+					"method": "display_eWireRemoteRecords",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fetch eWire",
+					"method": "fetcheWire"
+				},
+				{
+					"title": "New Invoice",
+					"method": "newRecordInvoices",
+					"shortcutAccel": true,
+					"shortcutKey": "N",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Backup Preferences",
+					"method": "open4DBackupPreferences"
+				},
+				{
+					"title": "Backup Now",
+					"method": "backupNow"
+				},
+				{
+					"title": "Restore Backup Archive...",
+					"method": "restoreFile"
+				},
+				{
+					"title": "Backup Log...",
+					"method": "displayListBackupLogs"
+				},
+				{
+					"title": "Database Log File",
+					"method": "displayDatabaseLogFile"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Export Data...",
+					"method": "exportData"
+				},
+				{
+					"title": "Import Data...",
+					"method": "importData"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Server Preferences...",
+					"method": "displayServerPrefs",
+					"shortcutAccel": true,
+					"shortcutKey": ";"
+				},
+				{
+					"title": "Client Preferences...",
+					"method": "displayListClientPrefs",
+					"shortcutAccel": true,
+					"shortcutKey": ","
+				},
+				{
+					"title": "Database Settings...",
+					"action": "databaseSettings"
+				},
+				{
+					"title": "Item 30",
+					"isSeparator": true
+				},
+				{
+					"title": "Sync Preferences",
+					"method": "SYNC_displayBasicConfig"
+				},
+				{
+					"title": "Sync Monitor",
+					"method": "SYNC_displayMonitor"
+				},
+				{
+					"title": "Item 34",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Define Branches",
+					"method": "displayListBranches"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Switch User",
+					"method": "switchSystemUser",
+					"shortcutAccel": true,
+					"shortcutKey": "L"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": ":131,27",
+					"shortcutAccel": true,
+					"shortcutKey": "Y",
+					"action": "design"
+				},
+				{
+					"title": ":131,28",
+					"shortcutShift": true,
+					"shortcutAccel": true,
+					"shortcutKey": "U",
+					"action": "userMode"
+				},
+				{
+					"title": ":131,29",
+					"state": "checked",
+					"shortcutShift": true,
+					"shortcutAccel": true,
+					"shortcutKey": "I",
+					"action": "application"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Control Box Settings- Sweden",
+					"method": "displayControlBoxPrefs"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": ":131,30",
+					"shortcutAccel": true,
+					"shortcutKey": "Q",
+					"action": "quit"
+				}
+			]
+		},
+		{
+			"link": 32001,
+			"title": "Edit",
+			"items": [
+				{
+					"title": "Undo",
+					"shortcutAccel": true,
+					"shortcutKey": "Z",
+					"action": "undo"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Cut",
+					"shortcutAccel": true,
+					"shortcutKey": "X",
+					"action": "cut"
+				},
+				{
+					"title": "Copy",
+					"shortcutAccel": true,
+					"shortcutKey": "C",
+					"action": "copy"
+				},
+				{
+					"title": "Paste",
+					"shortcutAccel": true,
+					"shortcutKey": "V",
+					"action": "paste"
+				},
+				{
+					"title": "Clear",
+					"action": "clear"
+				},
+				{
+					"title": "Select All",
+					"shortcutAccel": true,
+					"shortcutKey": "A",
+					"action": "selectAll"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Show Clipboard",
+					"action": "showClipboard"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": ":131,26",
+					"method": "mPreferences",
+					"action": "databaseSettings"
+				}
+			]
+		},
+		{
+			"link": 32005,
+			"title": "Windows",
+			"items": [
+				{
+					"title": "Window 1",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 2",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 3",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 4",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 5",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 6",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 7",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 8",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 9",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 10",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 11",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 12",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 13",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 14",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 15",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 16",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 17",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 18",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 19",
+					"method": "mWindowsMenu"
+				},
+				{
+					"title": "Window 20",
+					"method": "mWindowsMenu"
+				}
+			]
+		},
+		{
+			"link": 32002,
+			"title": "Enter",
+			"items": [
+				{
+					"title": "New Record",
+					"method": "mNewRecord",
+					"shortcutAccel": true,
+					"shortcutKey": "N"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Modify Records",
+					"method": "mModifyRecords"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Delete Subset",
+					"method": "mDeleteRecs"
+				}
+			]
+		},
+		{
+			"link": 32003,
+			"title": "Select",
+			"items": [
+				{
+					"title": "Show All",
+					"method": "mShowAll",
+					"shortcutAccel": true,
+					"shortcutKey": "G"
+				},
+				{
+					"title": "Show Subset",
+					"method": "mShowSubset",
+					"shortcutAccel": true,
+					"shortcutKey": "H"
+				},
+				{
+					"title": "Omit Subset",
+					"method": "mOmitSubset",
+					"shortcutAccel": true,
+					"shortcutKey": "J"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Quick Find…",
+					"method": "mQuickFind",
+					"shortcutAccel": true,
+					"shortcutKey": "F"
+				},
+				{
+					"title": "Query Editor…",
+					"method": "mQueryEditor",
+					"shortcutAccel": true,
+					"shortcutKey": "E"
+				},
+				{
+					"title": "Query by Example…",
+					"method": "mQueryForm"
+				},
+				{
+					"title": "Query by Formula…",
+					"method": "mQueryFormula"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Quick Sort…",
+					"method": "mQuickSort",
+					"shortcutAccel": true,
+					"shortcutKey": "T"
+				},
+				{
+					"title": "Sort Order…",
+					"method": "mOrderByEditor"
+				}
+			]
+		},
+		{
+			"link": 32004,
+			"title": "Tools",
+			"items": [
+				{
+					"title": "Special Functions… ",
+					"method": "mSpecialFuncts"
+				},
+				{
+					"title": "Charts and Graphs",
+					"method": "mCharts"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Navigation Palette",
+					"method": "mNavPalette",
+					"shortcutAccel": true,
+					"shortcutKey": " "
+				},
+				{
+					"title": "Link Palette",
+					"method": "mLinkShowList"
+				},
+				{
+					"title": "iDocc Cover Sheet",
+					"method": "DOCC_CoverSheet"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Chat",
+					"method": "iM_Chat",
+					"shortcutAccel": true,
+					"shortcutKey": "?"
+				}
+			]
+		},
+		{
+			"link": 32000,
+			"title": ":79,1",
+			"items": [
+				{
+					"title": "Open Table",
+					"method": "mOpenTable",
+					"shortcutAccel": true,
+					"shortcutKey": "O"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Administration",
+					"method": "mAdministration"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Import",
+					"method": "mImport"
+				},
+				{
+					"title": "Export",
+					"method": "mExport"
+				},
+				{
+					"title": "Update",
+					"method": "mUpdate"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Print",
+					"method": "mPrint",
+					"shortcutAccel": true,
+					"shortcutKey": "P"
+				},
+				{
+					"title": ":131,30",
+					"method": "mQuit",
+					"shortcutAccel": true,
+					"shortcutKey": "Q",
+					"action": "quit"
+				}
+			]
+		},
+		{
+			"link": 32006,
+			"title": "Developer",
+			"items": [
+				{
+					"title": "IE4 tableBrowser",
+					"method": "IE4_tableBrowser"
+				},
+				{
+					"title": "IE4 dataBrowser",
+					"method": "IE4_dataBrowser"
+				},
+				{
+					"title": "ListMagic",
+					"method": "displayDesignBrowser"
+				},
+				{
+					"title": "Item 4",
+					"isSeparator": true
+				},
+				{
+					"title": "Display Remote Revisions",
+					"method": "displayRemoteRevisions"
+				},
+				{
+					"title": "Code Revisions",
+					"method": "displayLBoxDB_CodeRevisions"
+				},
+				{
+					"title": "Item 3",
+					"isSeparator": true
+				},
+				{
+					"title": "Unit Tester",
+					"method": "launchUnitTester"
+				},
+				{
+					"title": "Fix missing country codes",
+					"method": "fixMissingCountryCodes"
+				},
+				{
+					"title": "Item 2",
+					"isSeparator": true
+				},
+				{
+					"title": "Keywords",
+					"method": "displayLBox_DB_Keywords"
+				},
+				{
+					"title": "Item 6",
+					"isSeparator": true
+				},
+				{
+					"title": "ID FIelds for OCR",
+					"method": "displayLBox_OCR_Fields"
+				},
+				{
+					"title": "Define New ID Type For OCR",
+					"method": "displayLBox_OCR_Ids"
+				},
+				{
+					"title": "Sync-Create Seed Database",
+					"method": "SYNC_createSeedDatabase"
+				},
+				{
+					"title": "Sync-Set Defaults for Tables",
+					"method": "SYNC_createDefaultTables"
+				},
+				{
+					"title": "Chat",
+					"method": "iM_Chat"
+				},
+				{
+					"title": "Notify Test",
+					"method": "iH_aaTest"
+				},
+				{
+					"title": "CAB Test",
+					"method": "CAB_eventDEMO",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 10",
+					"isSeparator": true
+				},
+				{
+					"title": "Download Latest Version",
+					"method": "automaticUpdates"
+				},
+				{
+					"title": "Item 9",
+					"isSeparator": true
+				},
+				{
+					"title": "Server Administration",
+					"method": "handleAdministrationButton"
+				}
+			]
+		},
+		{
+			"link": 32022,
+			"title": "Developer",
+			"items": [
+				{
+					"title": "ListMagic",
+					"method": "displayDesignBrowser"
+				},
+				{
+					"title": "Code Revisions",
+					"method": "displayLBoxDB_CodeRevisions"
+				},
+				{
+					"title": "Fix missing country codes",
+					"method": "fixMissingCountryCodes"
+				},
+				{
+					"title": "Item 2",
+					"isSeparator": true
+				},
+				{
+					"title": "Keywords",
+					"method": "displayLBox_DB_Keywords"
+				},
+				{
+					"title": "Item 6",
+					"isSeparator": true
+				},
+				{
+					"title": "ID FIelds for OCR",
+					"method": "displayLBox_OCR_Fields"
+				},
+				{
+					"title": "Define New ID Type For OCR",
+					"method": "displayLBox_OCR_Ids"
+				},
+				{
+					"title": "Sync-Create Seed Database",
+					"method": "SYNC_createSeedDatabase"
+				},
+				{
+					"title": "Sync-Set Defaults for Tables",
+					"method": "SYNC_createDefaultTables"
+				},
+				{
+					"title": "Item 1",
+					"isSeparator": true
+				},
+				{
+					"title": "Administration Panel",
+					"method": "handleAdministrationButton"
+				}
+			]
+		},
+		{
+			"link": 32019,
+			"title": "Reports",
+			"items": [
+				{
+					"title": "Currency Summary by Customer Type",
+					"method": "rep_printSummaryByCustType"
+				},
+				{
+					"title": "Query Account Positions",
+					"method": "rep_printAccountsByQuery",
+					"startNewProcess": true
+				},
+				{
+					"title": "Selected Account Positions",
+					"method": "rep_printAccountsBySelector",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account Balances Report",
+					"method": "rep_printAccountBalances",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account Positions Report",
+					"method": "rep_printAccountPositions",
+					"startNewProcess": true
+				},
+				{
+					"title": "Single Account Details",
+					"method": "rep_printAccountDetail",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Till Summary by date",
+					"method": "rep_printTillSummary"
+				},
+				{
+					"title": "Daily Till",
+					"method": "printDailyCashRegisters",
+					"startNewProcess": true
+				},
+				{
+					"title": "Quick Till Balance-thermal",
+					"method": "rep_printMiniTillReport"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Print Customer Dues",
+					"method": "rep_printCustomerDues",
+					"startNewProcess": true
+				},
+				{
+					"title": "Print Agent Payment Order",
+					"method": "displayAgentPOList",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "X Report (Sweden only)",
+					"method": "rep_printXreport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Z Report",
+					"method": "rep_printZreport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 18",
+					"isSeparator": true
+				},
+				{
+					"title": "Screen Reports",
+					"fontWeight": "bold",
+					"enabled": false
+				},
+				{
+					"title": "P&L statement for currencies",
+					"method": "display_PL_Currencies",
+					"startNewProcess": true
+				},
+				{
+					"title": "Complete Profit & Loss",
+					"method": "display_SR_CompletePLStatement",
+					"startNewProcess": true
+				},
+				{
+					"title": "P&L statement for Items",
+					"method": "display_PL_Items",
+					"startNewProcess": true
+				},
+				{
+					"title": "Currencies' Summary",
+					"method": "display_SR_CurrencyTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Summary of Bookings",
+					"method": "display_SR_BookingSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Summary of Income/Expenses",
+					"method": "display_SR_ExpenseIncomeSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Currencies Annual Summary",
+					"method": "display_SR_AnnualSummary",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer's Summary",
+					"method": "display_SR_CustomerTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Stats",
+					"method": "display_SR_CustomerTransReport",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Yearly Stats",
+					"method": "display_SR_CustomerTransReport2",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customers First Last Transaction",
+					"method": "display_SR_CustomerFirstLastTra",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customer Groups's Summary",
+					"method": "display_SR_CustomerGroups",
+					"startNewProcess": true
+				},
+				{
+					"title": "User Transactions' Summary",
+					"method": "display_SR_UserTrans",
+					"startNewProcess": true
+				},
+				{
+					"title": "Account & Sub-Accounts Summary",
+					"method": "display_SR_SubAcountsSum",
+					"startNewProcess": true
+				},
+				{
+					"title": "LCT aggregated by Invoice",
+					"method": "display_SR_LCTByInvoice",
+					"startNewProcess": true
+				},
+				{
+					"title": "LCT aggregated by customer for same day",
+					"method": "display_SR_LCTByCustomer",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 23",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Hourly Traffic Chart",
+					"method": "displayHourlyTrafficChart",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 28",
+					"isSeparator": true
+				},
+				{
+					"title": "FINTRAC LCTR & EFT Reports",
+					"method": "FT_ShowReportWin"
+				},
+				{
+					"title": "New Zealand  Prescribed Transaction Reports",
+					"method": "GoAMLReport"
+				},
+				{
+					"title": "Fiji FIU Transactiions Reports",
+					"method": "FJ_ShowReportWin"
+				}
+			]
+		},
+		{
+			"link": 32018,
+			"title": "Admin",
+			"items": [
+				{
+					"title": "Change Administrator Password",
+					"method": "changeAdminUserPassword"
+				},
+				{
+					"title": "Set Startup Message",
+					"method": "setClientStartupMessage"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Customize Printed receipt",
+					"method": "displayCustomizeReceiptForm",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customize Cheque format",
+					"method": "editFormchequePrint",
+					"startNewProcess": true
+				},
+				{
+					"title": "Customize Envelope format",
+					"method": "editFormEnvelope",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Administer Users & Privileges",
+					"method": "displayListUsers"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Define Rule-based Commission Policies",
+					"method": "displayFeeRules",
+					"startNewProcess": true
+				},
+				{
+					"title": "Define Rule-based AML Policies",
+					"method": "displayListAMLRules",
+					"startNewProcess": true
+				},
+				{
+					"title": "Define Database Field Constraints",
+					"method": "displayListFieldConstraints"
+				},
+				{
+					"title": "Define Manual Fee Structures",
+					"method": "displayListFeeStructures"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Normalize PictureIDs",
+					"method": "normalizeAllPictureIDs"
+				},
+				{
+					"title": "Normalize Customer Names",
+					"method": "normalizeAllCustomerNames",
+					"startNewProcess": true
+				},
+				{
+					"title": "Rename an Account ID",
+					"method": "renameAccountID",
+					"startNewProcess": true
+				},
+				{
+					"title": "Merge two Customers",
+					"method": "mergeCustomers",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Edit Currency Rates",
+					"method": "displayCurrencyRateSheet",
+					"startNewProcess": true
+				}
+			]
+		},
+		{
+			"link": 32015,
+			"title": ":79,1",
+			"items": [
+				{
+					"title": "About this Version",
+					"method": "displaySplashScreen",
+					"startNewProcess": true
+				},
+				{
+					"title": "Open Data File...",
+					"method": "openDataFile"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Remote eWires",
+					"method": "display_eWireRemoteRecords",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fetch eWire",
+					"method": "fetcheWire"
+				},
+				{
+					"title": "New Invoice",
+					"method": "newRecordInvoices",
+					"shortcutAccel": true,
+					"shortcutKey": "N",
+					"startNewProcess": true
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Backup Preferences",
+					"method": "open4DBackupPreferences"
+				},
+				{
+					"title": "Backup Now",
+					"method": "backupNow"
+				},
+				{
+					"title": "Restore Backup Archive...",
+					"method": "restoreFile"
+				},
+				{
+					"title": "Backup Log...",
+					"method": "displayListBackupLogs"
+				},
+				{
+					"title": "Database Log File",
+					"method": "displayDatabaseLogFile"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Export Data...",
+					"method": "exportData"
+				},
+				{
+					"title": "Import Data...",
+					"method": "importData"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Server Preferences...",
+					"method": "displayServerPrefs",
+					"shortcutAccel": true,
+					"shortcutKey": ";"
+				},
+				{
+					"title": "Client Preferences...",
+					"method": "displayListClientPrefs",
+					"shortcutAccel": true,
+					"shortcutKey": ","
+				},
+				{
+					"title": "Database Settings...",
+					"action": "databaseSettings"
+				},
+				{
+					"title": "Item 30",
+					"isSeparator": true
+				},
+				{
+					"title": "Sync Preferences",
+					"method": "SYNC_displayBasicConfig"
+				},
+				{
+					"title": "Sync Monitor",
+					"method": "SYNC_displayMonitor"
+				},
+				{
+					"title": "Item 34",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Define Branches",
+					"method": "displayListBranches"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Switch User",
+					"method": "switchSystemUser",
+					"shortcutAccel": true,
+					"shortcutKey": "L"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": ":131,27",
+					"shortcutAccel": true,
+					"shortcutKey": "Y",
+					"action": "design"
+				},
+				{
+					"title": ":131,28",
+					"shortcutShift": true,
+					"shortcutAccel": true,
+					"shortcutKey": "U",
+					"action": "userMode"
+				},
+				{
+					"title": ":131,29",
+					"state": "checked",
+					"shortcutShift": true,
+					"shortcutAccel": true,
+					"shortcutKey": "I",
+					"action": "application"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Control Box Settings- Sweden",
+					"method": "displayControlBoxPrefs"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": ":131,30",
+					"shortcutAccel": true,
+					"shortcutKey": "Q",
+					"action": "quit"
+				}
+			]
+		},
+		{
+			"link": 32016,
+			"title": ":79,5",
+			"items": [
+				{
+					"title": ":131,18",
+					"shortcutAccel": true,
+					"shortcutKey": "Z",
+					"action": "undo"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true
+				},
+				{
+					"title": ":131,20",
+					"shortcutAccel": true,
+					"shortcutKey": "X",
+					"action": "cut"
+				},
+				{
+					"title": ":131,21",
+					"shortcutAccel": true,
+					"shortcutKey": "C",
+					"action": "copy"
+				},
+				{
+					"title": ":131,22",
+					"shortcutAccel": true,
+					"shortcutKey": "V",
+					"action": "paste"
+				},
+				{
+					"title": ":131,23",
+					"action": "clear"
+				},
+				{
+					"title": ":131,24",
+					"shortcutAccel": true,
+					"shortcutKey": "A",
+					"action": "selectAll"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true
+				},
+				{
+					"title": ":131,25",
+					"action": "showClipboard"
+				}
+			]
+		},
+		{
+			"link": 32020,
+			"title": "Integrity",
+			"items": [
+				{
+					"title": "Fix Invoices",
+					"method": "fixInvoices",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix Registers",
+					"method": "fixRegisters",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix eWire Customer IDs",
+					"method": "fixeWireCustomerIDs",
+					"startNewProcess": true
+				},
+				{
+					"title": "Fix Cheque Accounts",
+					"method": "fixChequeAccounts",
+					"startNewProcess": true
+				},
+				{
+					"title": "Compress Attached Docs",
+					"method": "updateNCompressAttachedDocs"
+				},
+				{
+					"title": "Add Branch ID to records",
+					"method": "prependBIDAllTables"
+				},
+				{
+					"isSeparator": true
+				},
+				{
+					"title": "Recreate Customers From Invoices",
+					"method": "recreateCustomersFromInvoices"
+				},
+				{
+					"title": "Recreate Accounts From Registers",
+					"method": "recreateAccountsFromRegisters"
+				},
+				{
+					"title": "Recreate Invoice from Orphaned Registers",
+					"method": "recreateInvoiceFromRegisters"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Auto Reconcile Account",
+					"method": "autoReconcileDataRange"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "Display Integrity Check Panel",
+					"method": "displayIntegrityChecksPanel"
+				}
+			]
+		},
+		{
+			"link": 32039,
+			"title": "AML",
+			"items": [
+				{
+					"title": "Dashboard",
+					"method": "displayForm_AML_Dashboard"
+				},
+				{
+					"title": "Alerts",
+					"method": "displayLboxAML_Alerts"
+				},
+				{
+					"title": "Aggregation Rules",
+					"method": "displayLBoxAML_AggrRules"
+				},
+				{
+					"title": "Sanction List Configs",
+					"method": "displayLBoxSanctionListLog"
+				},
+				{
+					"title": "Audit Controls",
+					"method": "displayLBoxAuditControls"
+				},
+				{
+					"title": "Audit Query Editor",
+					"method": "displayAuditQueryForm",
+					"startNewProcess": true
+				},
+				{
+					"title": "Live Sanction Screening",
+					"method": "sl_displayLiveSanctionScreening",
+					"startNewProcess": true
+				},
+				{
+					"title": "Item 8",
+					"isSeparator": true
+				},
+				{
+					"title": "Logs",
+					"fontStyle": "italic",
+					"fontWeight": "bold",
+					"state": "checked"
+				},
+				{
+					"title": "Sanction Screening",
+					"method": "displayLBoxSanctionListLog"
+				},
+				{
+					"title": "Exceptions Log",
+					"method": "displayLBoxExceptionsLog"
+				},
+				{
+					"title": "Audit Trail (Registers)",
+					"method": "displayLBoxRegistersAuditTrail"
+				},
+				{
+					"title": "Customer Profile Reviews",
+					"method": "displayLBoxKYC_ReviewLog"
+				},
+				{
+					"title": "Customer Risk Reviews",
+					"method": "displayLBoxAML_ReviewLog"
+				},
+				{
+					"title": "Item 7",
+					"isSeparator": true
+				},
+				{
+					"title": "Lists",
+					"fontStyle": "italic",
+					"fontWeight": "bold",
+					"state": "checked"
+				},
+				{
+					"title": "Purpose of Transactions (PoT)",
+					"method": "displayLBoxList_POT"
+				},
+				{
+					"title": "Source of Funds / Wealth (SoF/SoW)",
+					"method": "displayLBoxList_SOF"
+				},
+				{
+					"title": "Business Relationships",
+					"method": "displayLBoxList_PIN"
+				},
+				{
+					"title": "Occupations",
+					"method": "displayLBoxOccupations"
+				},
+				{
+					"title": "Industries",
+					"method": "displayLBoxIndustries"
+				},
+				{
+					"title": "Risk Factors",
+					"method": "displayLBoxList_RiskFactors"
+				},
+				{
+					"title": "Risk Profiles (Templates)",
+					"method": "displayLBoxAML_RiskTemplates"
+				},
+				{
+					"title": "Transaction Types",
+					"method": "displayLBoxTransactionTypes"
+				},
+				{
+					"title": "Customer Types",
+					"method": "displayLBoxCustomerTypes"
+				},
+				{
+					"title": "Customer  Relation Types",
+					"method": "displayLBoxRelations"
+				},
+				{
+					"title": "Payment Types",
+					"method": "displayLBoxPaymentTypes"
+				},
+				{
+					"title": "Relationships",
+					"method": "displayLBoxList_Relationships"
+				},
+				{
+					"title": "Document /  ID Types",
+					"method": "displayLBoxPictureIDTypes"
+				},
+				{
+					"title": "Countries",
+					"method": "displayLBoxCountries"
+				},
+				{
+					"title": "Item 5",
+					"isSeparator": true
+				},
+				{
+					"title": "AML Reporting",
+					"fontStyle": "italic",
+					"fontWeight": "bold",
+					"state": "checked"
+				},
+				{
+					"title": "FINTRAC Batch Reporting",
+					"method": "FT_ShowReportWin"
+				},
+				{
+					"title": "New Zealand GoAML Reporting",
+					"method": "GoAMLReport"
+				},
+				{
+					"title": "AUSTRAC Batch Reporting",
+					"method": "AUS_ShowReportWin"
+				},
+				{
+					"title": "Fiji Batch Reporting",
+					"method": "FJ_ShowReportWin"
+				},
+				{
+					"title": "CAB | STR Reporting",
+					"method": "CAB_DisplayCABReportPage"
+				}
+			]
+		}
+	]
+}

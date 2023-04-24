@@ -1,0 +1,24 @@
+{
+	"forms": {
+		"Entry": {
+			"timeStamp": "2023-04-24T12:23:48Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2023-04-24T12:23:48Z",
+			"destination": "detailScreen"
+		},
+		"print": {
+			"timeStamp": "2023-04-24T12:23:48Z",
+			"destination": "listPrinter"
+		},
+		"search": {
+			"timeStamp": "2023-04-24T12:23:48Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2023-04-24T12:23:48Z",
+			"destination": "detailScreen"
+		}
+	}
+}

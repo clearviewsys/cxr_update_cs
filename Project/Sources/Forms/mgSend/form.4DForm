@@ -1,0 +1,1125 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 57,
+					"left": 564,
+					"width": 546,
+					"height": 112,
+					"fill": "transparent"
+				},
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 303,
+					"left": 564,
+					"width": 548,
+					"height": 89,
+					"fill": "transparent"
+				},
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 192,
+					"left": 564,
+					"width": 547,
+					"height": 86,
+					"fill": "transparent"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 54,
+					"left": 8,
+					"width": 550,
+					"height": 432,
+					"fill": "transparent"
+				},
+				"senderFirstName": {
+					"type": "input",
+					"top": 68,
+					"left": 163,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderFirstName",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderLastName": {
+					"type": "input",
+					"top": 91,
+					"left": 163,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderLastName",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderMiddleName": {
+					"type": "input",
+					"top": 115,
+					"left": 163,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderMiddleName",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderLastName2": {
+					"type": "input",
+					"top": 139,
+					"left": 163,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderLastName2",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderCountry": {
+					"type": "input",
+					"top": 163,
+					"left": 163,
+					"width": 53,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderCountry",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"entryFilter": "~A",
+					"method": "ObjectMethods/senderCountry.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderZipCity": {
+					"type": "input",
+					"top": 188,
+					"left": 163,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderCity",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderAddress": {
+					"type": "input",
+					"top": 213,
+					"left": 163,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderAddress",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderZipCode4": {
+					"type": "input",
+					"top": 237,
+					"left": 163,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderZipCode",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderPhoneCountryCode": {
+					"type": "input",
+					"top": 263,
+					"left": 163,
+					"width": 73,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderPhoneCountryCode",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderPhone": {
+					"type": "input",
+					"top": 262,
+					"left": 365,
+					"width": 182,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderPhone",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderDOB": {
+					"type": "input",
+					"top": 289,
+					"left": 163,
+					"width": 133,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderDOB",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"entryFilter": "!0&9##/##/####",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderBirthCountry": {
+					"type": "input",
+					"top": 316,
+					"left": 162,
+					"width": 53,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderBirthCountry",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"entryFilter": "~A",
+					"method": "ObjectMethods/senderBirthCountry.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderPhotoIdType": {
+					"type": "input",
+					"top": 349,
+					"left": 163,
+					"width": 73,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderPhotoIdType",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderPhotoIdNumber": {
+					"type": "input",
+					"top": 349,
+					"left": 365,
+					"width": 182,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderPhotoIdNumber",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderPhotoIdIssueDate": {
+					"type": "input",
+					"top": 375,
+					"left": 163,
+					"width": 133,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderPhotoIdIssueDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"entryFilter": "!0&9##/##/####",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderPhotoIdExpDate": {
+					"type": "input",
+					"top": 375,
+					"left": 405,
+					"width": 142,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderPhotoIdExpDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": "!0&9##/##/####",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"senderPhotoIdCountry": {
+					"type": "input",
+					"top": 400,
+					"left": 163,
+					"width": 53,
+					"height": 16,
+					"dataSource": "Form:C1466.object.senderPhotoIdCountry",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"entryFilter": "~A",
+					"method": "ObjectMethods/senderPhotoIdCountry.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"marketingNotification": {
+					"type": "dropdown",
+					"top": 428,
+					"left": 163,
+					"width": 360,
+					"height": 20,
+					"focusable": false,
+					"method": "ObjectMethods/marketingNotification.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"mgrewardsnumber": {
+					"type": "input",
+					"top": 455,
+					"left": 163,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.object.mgiRewardsNumber",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverFirstName": {
+					"type": "input",
+					"top": 68,
+					"left": 723,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.object.receiverFirstName",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverLastName": {
+					"type": "input",
+					"top": 91,
+					"left": 723,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.object.receiverLastName",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverMiddleName": {
+					"type": "input",
+					"top": 115,
+					"left": 723,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.object.receiverMiddleName",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"receiverLastName2": {
+					"type": "input",
+					"top": 139,
+					"left": 723,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.object.receiverLastName2",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/OnlyLettersAndSpaces"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"destinationCountry": {
+					"type": "input",
+					"top": 203,
+					"left": 723,
+					"width": 60,
+					"height": 16,
+					"dataSource": "Form:C1466.object.destinationCountry",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": "~A",
+					"method": "ObjectMethods/destinationCountry.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"sendAmount": {
+					"type": "input",
+					"top": 227,
+					"left": 723,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.object.sendAmount",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": "&\"0-9;.;-\"",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"sendCurrency": {
+					"type": "input",
+					"top": 251,
+					"left": 722,
+					"width": 60,
+					"height": 16,
+					"dataSource": "Form:C1466.object.sendCurrency",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": "~A",
+					"method": "ObjectMethods/sendCurrency.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"username": {
+					"type": "input",
+					"top": 314,
+					"left": 723,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.credentials.username",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"password": {
+					"type": "input",
+					"top": 338,
+					"left": 723,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.credentials.password",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"agentID": {
+					"type": "input",
+					"top": 363,
+					"left": 723,
+					"width": 384,
+					"height": 16,
+					"dataSource": "Form:C1466.credentials.agentID",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"btn_cancel": {
+					"type": "button",
+					"top": 438,
+					"left": 645,
+					"width": 150,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"shortcutKey": "[Esc]",
+					"text": ":xliff:cvs_cancel",
+					"events": [
+						"onClick"
+					]
+				},
+				"btn_send2": {
+					"type": "button",
+					"top": 438,
+					"left": 799,
+					"width": 151,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Send using test form",
+					"method": "ObjectMethods/btn_send2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btn_send": {
+					"type": "button",
+					"top": 438,
+					"left": 959,
+					"width": 151,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Send",
+					"method": "ObjectMethods/btn_send.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"senderCountryName": {
+					"type": "input",
+					"top": 163,
+					"left": 223,
+					"width": 324,
+					"height": 16,
+					"stroke": "#444444",
+					"focusable": false,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/mgPickCountry"
+					},
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": "OnlyLettersAndSpaces",
+					"method": "ObjectMethods/senderCountryName.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_first": {
+					"type": "text",
+					"top": 67,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "First Names"
+				},
+				"l_last": {
+					"type": "text",
+					"top": 91,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Last Name"
+				},
+				"l_last1": {
+					"type": "text",
+					"top": 115,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Middle Name"
+				},
+				"l_last2": {
+					"type": "text",
+					"top": 139,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Second Last Name"
+				},
+				"l_last3": {
+					"type": "text",
+					"top": 163,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Country"
+				},
+				"l_last5": {
+					"type": "text",
+					"top": 188,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "City"
+				},
+				"l_last7": {
+					"type": "text",
+					"top": 213,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Address"
+				},
+				"l_last8": {
+					"type": "text",
+					"top": 237,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Postal Code"
+				},
+				"l_last9": {
+					"type": "text",
+					"top": 263,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Phone Country Code"
+				},
+				"l_last10": {
+					"type": "text",
+					"top": 262,
+					"left": 228,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Phone"
+				},
+				"l_last11": {
+					"type": "text",
+					"top": 349,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Photo ID Type"
+				},
+				"l_last12": {
+					"type": "text",
+					"top": 349,
+					"left": 228,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Photo ID Num"
+				},
+				"l_last13": {
+					"type": "text",
+					"top": 375,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Photo ID Issue"
+				},
+				"l_last14": {
+					"type": "text",
+					"top": 375,
+					"left": 228,
+					"width": 170,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Photo ID Expiry"
+				},
+				"senderPhotoIdCountryName": {
+					"type": "input",
+					"top": 400,
+					"left": 223,
+					"width": 324,
+					"height": 16,
+					"stroke": "#444444",
+					"focusable": false,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/mgPickCountry"
+					},
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": "OnlyLettersAndSpaces",
+					"method": "ObjectMethods/senderPhotoIdCountryName.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_last15": {
+					"type": "text",
+					"top": 400,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Photo ID Country"
+				},
+				"l_last16": {
+					"type": "text",
+					"top": 289,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Date of birth"
+				},
+				"senderBirthCountryName": {
+					"type": "input",
+					"top": 316,
+					"left": 222,
+					"width": 324,
+					"height": 16,
+					"stroke": "#444444",
+					"focusable": false,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/mgPickCountry"
+					},
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": "OnlyLettersAndSpaces",
+					"method": "ObjectMethods/senderBirthCountryName.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_last17": {
+					"type": "text",
+					"top": 316,
+					"left": 5,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Country of birth"
+				},
+				"l_first1": {
+					"type": "text",
+					"top": 67,
+					"left": 566,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "First Names"
+				},
+				"l_last18": {
+					"type": "text",
+					"top": 91,
+					"left": 566,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Last Name"
+				},
+				"l_last19": {
+					"type": "text",
+					"top": 115,
+					"left": 566,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Middle Name"
+				},
+				"l_last20": {
+					"type": "text",
+					"top": 139,
+					"left": 566,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Second Last Name"
+				},
+				"Text53": {
+					"type": "text",
+					"top": 38,
+					"left": 7,
+					"width": 551,
+					"height": 15,
+					"sizingX": "grow",
+					"fill": "#5B89C9",
+					"stroke": "#FFFFFF",
+					"textAlign": "center",
+					"text": "Sender"
+				},
+				"t_IM_fraudRule": {
+					"type": "text",
+					"top": 37,
+					"left": 563,
+					"width": 548,
+					"height": 15,
+					"sizingX": "grow",
+					"fill": "#009B9C",
+					"stroke": "#FFFFFF",
+					"textAlign": "center",
+					"text": "Receiver"
+				},
+				"l_first2": {
+					"type": "text",
+					"top": 202,
+					"left": 566,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Destination country"
+				},
+				"l_last6": {
+					"type": "text",
+					"top": 227,
+					"left": 566,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Send Amount"
+				},
+				"l_last21": {
+					"type": "text",
+					"top": 250,
+					"left": 566,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Currency"
+				},
+				"t_IM_fraudRule1": {
+					"type": "text",
+					"top": 172,
+					"left": 563,
+					"width": 548,
+					"height": 15,
+					"sizingX": "grow",
+					"fill": "#FF6347",
+					"stroke": "#FFFFFF",
+					"textAlign": "center",
+					"text": "Transaction"
+				},
+				"destinationCountryName": {
+					"type": "input",
+					"top": 203,
+					"left": 791,
+					"width": 315,
+					"height": 16,
+					"stroke": "#444444",
+					"focusable": false,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/mgPickCountry"
+					},
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": "OnlyLettersAndSpaces",
+					"method": "ObjectMethods/destinationCountryName.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"sendCurrencyName": {
+					"type": "input",
+					"top": 251,
+					"left": 790,
+					"width": 315,
+					"height": 16,
+					"stroke": "#444444",
+					"focusable": false,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/mgPickCurrency"
+					},
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": "OnlyLettersAndSpaces",
+					"method": "ObjectMethods/sendCurrencyName.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_first3": {
+					"type": "text",
+					"top": 315,
+					"left": 566,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Username"
+				},
+				"l_last22": {
+					"type": "text",
+					"top": 340,
+					"left": 566,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Password"
+				},
+				"l_last23": {
+					"type": "text",
+					"top": 363,
+					"left": 566,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "AgentID"
+				},
+				"t_IM_fraudRule2": {
+					"type": "text",
+					"top": 283,
+					"left": 563,
+					"width": 548,
+					"height": 15,
+					"sizingX": "grow",
+					"fill": "#DDA0DD",
+					"stroke": "#FFFFFF",
+					"textAlign": "center",
+					"text": "MoneyGram Credentials"
+				},
+				"Text": {
+					"type": "text",
+					"top": 5,
+					"left": 8,
+					"width": 1104,
+					"height": 29,
+					"fill": "#FF0000",
+					"stroke": "#FFFFFF",
+					"textAlign": "center",
+					"fontFamily": "Tahoma",
+					"fontSize": 24,
+					"text": "MoneyGram Send"
+				},
+				"l_last4": {
+					"type": "text",
+					"top": 428,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Marketing notify"
+				},
+				"l_last24": {
+					"type": "text",
+					"top": 456,
+					"left": 6,
+					"width": 150,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Rewards number"
+				},
+				"btn_ValidateTest": {
+					"type": "button",
+					"top": 15,
+					"left": 12,
+					"width": 12,
+					"height": 13,
+					"shortcutKey": "m",
+					"shortcutAccel": true,
+					"shortcutShift": true,
+					"display": false,
+					"method": "ObjectMethods/btn_ValidateTest.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_pickLink": {
+					"type": "button",
+					"top": 37,
+					"left": 957,
+					"width": 148,
+					"height": 21,
+					"text": "Pick link",
+					"focusable": false,
+					"method": "ObjectMethods/b_pickLink.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_getQuote": {
+					"type": "button",
+					"top": 170,
+					"left": 935,
+					"width": 148,
+					"height": 21,
+					"text": "Get quote",
+					"focusable": false,
+					"method": "ObjectMethods/b_getQuote.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"cb_oldloginmethod": {
+					"type": "checkbox",
+					"top": 401,
+					"left": 578,
+					"width": 256,
+					"height": 25,
+					"dataSource": "Form:C1466.useOldLogin",
+					"text": "Use old login method",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"btn_soap": {
+					"type": "button",
+					"top": 398,
+					"left": 795,
+					"width": 151,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Send via SOAP API",
+					"method": "ObjectMethods/btn_soap.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"cb_stageSendReques": {
+					"type": "checkbox",
+					"top": 401,
+					"left": 971,
+					"width": 136,
+					"height": 25,
+					"dataSource": "Form:C1466.stageTransfer",
+					"text": "Stage send transfer",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"senderFirstName",
+				"senderLastName",
+				"senderMiddleName",
+				"senderLastName2",
+				"senderCountry",
+				"senderZipCity",
+				"senderAddress",
+				"senderZipCode4",
+				"senderPhoneCountryCode",
+				"senderPhone",
+				"senderDOB",
+				"senderBirthCountry",
+				"senderPhotoIdType",
+				"senderPhotoIdNumber",
+				"senderPhotoIdIssueDate",
+				"senderPhotoIdExpDate",
+				"senderPhotoIdCountry",
+				"marketingNotification",
+				"mgrewardsnumber",
+				"receiverFirstName",
+				"receiverLastName",
+				"receiverMiddleName",
+				"receiverLastName2",
+				"destinationCountry",
+				"sendAmount",
+				"sendCurrency",
+				"username",
+				"password",
+				"agentID",
+				"btn_cancel",
+				"btn_send2",
+				"btn_send",
+				"b_pickLink",
+				"b_getQuote",
+				"cb_oldloginmethod",
+				"btn_soap",
+				"cb_stageSendReques"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"btn_cancel"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

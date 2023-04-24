@@ -1,0 +1,1271 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"tab_main": {
+					"type": "tab",
+					"text": "Tab control",
+					"top": 2,
+					"left": 1,
+					"width": 699,
+					"height": 523,
+					"dataSource": "Form:C1466.tabs",
+					"dataSourceTypeHint": "object",
+					"action": "",
+					"right": 700,
+					"bottom": 525,
+					"class": "Control",
+					"method": "ObjectMethods/tab_main.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onMouseMove"
+					],
+					"sizingX": "grow",
+					"sizingY": "grow"
+				},
+				"b_trace": {
+					"type": "button",
+					"text": "Trace",
+					"top": 8,
+					"left": 630,
+					"width": 62,
+					"height": 15,
+					"events": [
+						"onClick"
+					],
+					"visibility": "hidden",
+					"method": "ObjectMethods/b_trace.4dm",
+					"sizingX": "move"
+				}
+			},
+			"entryOrder": [
+				"b_trace"
+			]
+		},
+		{
+			"objects": {
+				"Text9": {
+					"type": "text",
+					"top": 29,
+					"left": 8,
+					"width": 105,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Decision:"
+				},
+				"Variable4": {
+					"type": "input",
+					"top": 29,
+					"left": 123,
+					"width": 67,
+					"height": 18,
+					"dataSource": "Form:C1466.response.summary.diq_summary.decision",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "fixed"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 28,
+					"left": 218,
+					"width": 47,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Reson:"
+				},
+				"Variable15": {
+					"type": "input",
+					"top": 58,
+					"left": 123,
+					"width": 568,
+					"height": 18,
+					"dataSource": "Form:C1466.response.summary.diq_summary.highestScoreNameHit",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "grow"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 59,
+					"left": 8,
+					"width": 117,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Highest Score Hit:"
+				},
+				"Variable16": {
+					"type": "input",
+					"top": 28,
+					"left": 270,
+					"width": 418,
+					"height": 18,
+					"dataSource": "Form:C1466.response.summary.diq_summary.reason",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "grow"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 84,
+					"left": 8,
+					"width": 105,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Score:"
+				},
+				"Variable18": {
+					"type": "input",
+					"top": 83,
+					"left": 123,
+					"width": 102,
+					"height": 18,
+					"dataSource": "Form:C1466.response.summary.diq_summary.score",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "fixed"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 85,
+					"left": 255,
+					"width": 105,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Timestamp:"
+				},
+				"Variable19": {
+					"type": "input",
+					"top": 84,
+					"left": 359,
+					"width": 117,
+					"height": 18,
+					"dataSource": "Form:C1466.response.summary.diq_summary.timestamp",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "grow"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 85,
+					"left": 486,
+					"width": 105,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Process Time:",
+					"sizingX": "move"
+				},
+				"Variable20": {
+					"type": "input",
+					"top": 84,
+					"left": 590,
+					"width": 102,
+					"height": 18,
+					"dataSource": "Form:C1466.response.summary.diq_summary.processing_time",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "move"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 439,
+					"left": 8,
+					"width": 279,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Records contributing to the decision:",
+					"sizingY": "move"
+				},
+				"Variable21": {
+					"type": "input",
+					"top": 438,
+					"left": 307,
+					"width": 381,
+					"height": 18,
+					"dataSource": "Form:C1466.response.summary.diq_summary.records_contributing_to_result",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "grow",
+					"sizingY": "move"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 468,
+					"left": 8,
+					"width": 279,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Records contributing to the FAIL decision:",
+					"sizingY": "move"
+				},
+				"Variable22": {
+					"type": "input",
+					"top": 467,
+					"left": 307,
+					"width": 379,
+					"height": 18,
+					"dataSource": "Form:C1466.response.summary.diq_summary.records_contributing_to_fail",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "grow",
+					"sizingY": "move"
+				},
+				"Text21": {
+					"type": "text",
+					"top": 500,
+					"left": 8,
+					"width": 279,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Records contributing to the VERIFY decision:",
+					"sizingX": "fixed",
+					"sizingY": "move"
+				},
+				"Variable23": {
+					"type": "input",
+					"top": 499,
+					"left": 307,
+					"width": 379,
+					"height": 18,
+					"dataSource": "Form:C1466.response.summary.diq_summary.records_contributing_to_verify",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "grow",
+					"sizingY": "move"
+				},
+				"List Box2": {
+					"type": "listbox",
+					"left": 8,
+					"top": 139,
+					"width": 335,
+					"height": 97,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"dataSource": "Form:C1466.response.summary.diq_summary.high_risk_business_association",
+					"resizingMode": "rightToLeft",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"listboxType": "collection",
+					"showHeaders": false,
+					"columns": [
+						{
+							"header": {
+								"text": "Type",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"width": 200,
+							"dataSource": "This:C1470.type",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Value",
+								"text": "Value"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"width": 100,
+							"dataSource": "This:C1470.value",
+							"enterable": false,
+							"resizable": false
+						}
+					]
+				},
+				"List Box3": {
+					"type": "listbox",
+					"left": 353,
+					"top": 143,
+					"width": 335,
+					"height": 93,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"dataSource": "Form:C1466.response.summary.diq_summary.diq_results_by_watchlist_type",
+					"resizingMode": "rightToLeft",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"listboxType": "collection",
+					"showHeaders": false,
+					"focusable": true,
+					"columns": [
+						{
+							"header": {
+								"text": "Type",
+								"name": "Header2"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"width": 200,
+							"dataSource": "This:C1470.type",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Value1",
+								"text": "Value"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"width": 100,
+							"dataSource": "This:C1470.value",
+							"enterable": false,
+							"resizable": false
+						}
+					]
+				},
+				"Splitter": {
+					"type": "splitter",
+					"left": 346,
+					"top": 106,
+					"width": 1,
+					"height": 135,
+					"sizingY": "grow"
+				},
+				"Splitter5": {
+					"type": "splitter",
+					"left": 3,
+					"top": 244,
+					"width": 689,
+					"height": 10,
+					"sizingX": "grow"
+				},
+				"List Box9": {
+					"type": "listbox",
+					"left": 12,
+					"top": 281,
+					"width": 676,
+					"height": 137,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"dataSource": "Form:C1466.response.summary.diq_summary.diq_status_by_product",
+					"resizingMode": "rightToLeft",
+					"listboxType": "collection",
+					"showHeaders": true,
+					"sizingY": "grow",
+					"sizingX": "grow",
+					"columns": [
+						{
+							"header": {
+								"name": "Header20",
+								"text": "Type"
+							},
+							"name": "Column22",
+							"footer": {
+								"name": "Footer23"
+							},
+							"dataSource": "This:C1470.type"
+						},
+						{
+							"header": {
+								"name": "Value2",
+								"text": "Decision"
+							},
+							"name": "Column21",
+							"footer": {
+								"name": "Footer22"
+							},
+							"width": 100,
+							"dataSource": "This:C1470.decision",
+							"enterable": false,
+							"resizable": false
+						},
+						{
+							"header": {
+								"text": "Reason",
+								"name": "Header19"
+							},
+							"name": "Column11",
+							"footer": {
+								"name": "Footer21"
+							},
+							"width": 200,
+							"dataSource": "This:C1470.reason",
+							"enterable": false
+						}
+					]
+				},
+				"Text": {
+					"type": "text",
+					"text": "DIQ Status By Product",
+					"top": 254,
+					"left": 10,
+					"width": 678,
+					"height": 19,
+					"class": "Titles",
+					"sizingX": "grow",
+					"fill": "#f5deb3",
+					"textAlign": "center"
+				},
+				"Text15": {
+					"type": "text",
+					"text": "DIQ Results By Watchlist Type",
+					"top": 110,
+					"left": 8,
+					"width": 335,
+					"height": 19,
+					"class": "Titles",
+					"sizingX": "grow",
+					"fill": "#f5deb3",
+					"textAlign": "center"
+				},
+				"Text44": {
+					"type": "text",
+					"text": "High Risk Business Association",
+					"top": 110,
+					"left": 353,
+					"width": 335,
+					"height": 19,
+					"class": "Titles",
+					"sizingX": "grow",
+					"fill": "#f5deb3",
+					"textAlign": "center"
+				}
+			},
+			"entryOrder": [
+				"Variable4",
+				"Variable15",
+				"Variable16",
+				"Variable18",
+				"Variable19",
+				"Variable20",
+				"Variable21",
+				"Variable22",
+				"Variable23",
+				"List Box2",
+				"List Box3",
+				"List Box9"
+			]
+		},
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 190,
+					"left": 10,
+					"width": 681,
+					"height": 323,
+					"fill": "automatic",
+					"sizingX": "grow",
+					"sizingY": "grow"
+				},
+				"List Box": {
+					"type": "listbox",
+					"top": 29,
+					"left": 10,
+					"width": 681,
+					"height": 110,
+					"resizingMode": "rightToLeft",
+					"listboxType": "collection",
+					"movableRows": false,
+					"dataSource": "Form:C1466.response.summary.smart_scan_summary",
+					"currentItemSource": "Form:C1466.selectedList",
+					"selectionMode": "single",
+					"scrollbarHorizontal": "automatic",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"sizingX": "grow",
+					"right": 691,
+					"columns": [
+						{
+							"name": "Column8",
+							"dataSource": "This:C1470.list_name",
+							"width": 232,
+							"minWidth": 200,
+							"maxWidth": 32000,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header8",
+								"text": "List Name",
+								"dataSource": "This:C1470[\"List Name\"]"
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss"
+							},
+							"enterable": false
+						},
+						{
+							"name": "Column9",
+							"dataSource": "This:C1470.no_of_hits",
+							"width": 120,
+							"minWidth": 40,
+							"maxWidth": 32000,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header9",
+								"text": "Number of Hits"
+							},
+							"footer": {
+								"name": "Footer9",
+								"timeFormat": "hh_mm_ss"
+							},
+							"enterable": false
+						},
+						{
+							"name": "Column10",
+							"dataSource": "This:C1470.score",
+							"width": 73,
+							"minWidth": 40,
+							"maxWidth": 32000,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header10",
+								"text": "Score"
+							},
+							"footer": {
+								"name": "Footer10",
+								"timeFormat": "hh_mm_ss"
+							},
+							"enterable": false
+						},
+						{
+							"name": "Columncomment",
+							"dataSource": "This:C1470[\"comment\"]",
+							"width": 206,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header11",
+								"text": "Comment"
+							},
+							"footer": {
+								"name": "Footer11",
+								"timeFormat": "hh_mm_ss"
+							},
+							"enterable": false
+						}
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 166,
+					"left": 10,
+					"width": 681,
+					"height": 24,
+					"dataSource": "Form:C1466.selectedList.list_name",
+					"class": "Titles",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFD700",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "grow",
+					"right": 691
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 199,
+					"left": 471,
+					"width": 211,
+					"height": 18,
+					"dataSource": "Form:C1466.selectedList.hit_location",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "grow"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 201,
+					"left": 353,
+					"width": 101,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Hit Location:"
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 200,
+					"left": 246,
+					"width": 100,
+					"height": 18,
+					"dataSource": "Form:C1466.selectedList.no_of_hits",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 200,
+					"left": 170,
+					"width": 71,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "No. of Hits:"
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 252,
+					"left": 97,
+					"width": 50,
+					"height": 18,
+					"dataSource": "Form:C1466.selectedList.flag_type",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable6": {
+					"type": "input",
+					"top": 197,
+					"left": 97,
+					"width": 50,
+					"height": 18,
+					"dataSource": "Form:C1466.selectedList.score",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 197,
+					"left": 15,
+					"width": 70,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Score:"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 253,
+					"left": 15,
+					"width": 70,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Flag Type:"
+				},
+				"Variable8": {
+					"type": "input",
+					"top": 226,
+					"left": 97,
+					"width": 50,
+					"height": 18,
+					"dataSource": "Form:C1466.selectedList.record_id",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 227,
+					"left": 15,
+					"width": 70,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Record ID:"
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 254,
+					"left": 471,
+					"width": 211,
+					"height": 18,
+					"dataSource": "Form:C1466.selectedList.comment",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "grow"
+				},
+				"Variable10": {
+					"type": "input",
+					"top": 226,
+					"left": 246,
+					"width": 100,
+					"height": 18,
+					"dataSource": "Form:C1466.selectedList.search_reference_id",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text8": {
+					"type": "text",
+					"top": 226,
+					"left": 150,
+					"width": 91,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Search Ref ID:"
+				},
+				"List Box1": {
+					"type": "listbox",
+					"top": 282,
+					"left": 97,
+					"width": 585,
+					"height": 188,
+					"resizingMode": "rightToLeft",
+					"listboxType": "collection",
+					"movableRows": false,
+					"showHeaders": false,
+					"dataSource": "Form:C1466.selectedList.hits",
+					"scrollbarHorizontal": "automatic",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"columns": [
+						{
+							"name": "Column12",
+							"dataSource": "This:C1470.hit",
+							"width": 515,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header12",
+								"text": "Header12"
+							},
+							"footer": {
+								"name": "Footer12",
+								"timeFormat": "hh_mm_ss"
+							},
+							"enterable": false
+						}
+					]
+				},
+				"Text11": {
+					"type": "text",
+					"top": 282,
+					"left": 15,
+					"width": 70,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Hits"
+				},
+				"b_url": {
+					"type": "button",
+					"top": 480,
+					"left": 551,
+					"width": 131,
+					"height": 25,
+					"text": "Open URL",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_url.4dm",
+					"events": [
+						"onClick"
+					],
+					"sizingY": "move"
+				},
+				"Splitter4": {
+					"type": "splitter",
+					"left": 8,
+					"top": 153,
+					"width": 692,
+					"height": 1,
+					"sizingX": "grow"
+				},
+				"Variable13": {
+					"type": "input",
+					"top": 228,
+					"left": 471,
+					"width": 211,
+					"height": 18,
+					"dataSource": "Form:C1466.selectedList.search_dump_id",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "grow"
+				},
+				"Text25": {
+					"type": "text",
+					"top": 227,
+					"left": 353,
+					"width": 115,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Search Dump ID:"
+				},
+				"Variable14": {
+					"type": "input",
+					"top": 255,
+					"left": 246,
+					"width": 100,
+					"height": 18,
+					"dataSource": "Form:C1466.selectedList.status",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text27": {
+					"type": "text",
+					"top": 252,
+					"left": 192,
+					"width": 49,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Status:"
+				},
+				"Text28": {
+					"type": "text",
+					"top": 253,
+					"left": 353,
+					"width": 115,
+					"height": 17,
+					"class": "Label_Medium",
+					"text": "Comment:"
+				}
+			},
+			"entryOrder": [
+				"List Box",
+				"Variable1",
+				"Variable2",
+				"Variable3",
+				"Variable5",
+				"Variable6",
+				"Variable8",
+				"Variable9",
+				"Variable10",
+				"List Box1",
+				"b_url",
+				"Variable13",
+				"Variable14"
+			]
+		},
+		{
+			"objects": {
+				"Input": {
+					"type": "input",
+					"left": 102,
+					"top": 27,
+					"width": 62,
+					"height": 18,
+					"dataSource": "Form:C1466.response.summary.diq_summary.adverse_media_statistics.is_likely_pep",
+					"class": "Medium",
+					"enterable": false,
+					"fill": "transparent"
+				},
+				"Text22": {
+					"type": "text",
+					"text": "Is Likely PEP:",
+					"top": 28,
+					"left": 17,
+					"width": 83,
+					"height": 17,
+					"class": "Label_Medium"
+				},
+				"lb_positions": {
+					"type": "listbox",
+					"left": 15,
+					"top": 79,
+					"width": 158,
+					"height": 433,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "array",
+					"resizingMode": "rightToLeft",
+					"showHeaders": true,
+					"sizingX": "grow",
+					"columns": [
+						{
+							"header": {
+								"text": "Positions Held",
+								"name": "Header3"
+							},
+							"name": "col_positions",
+							"footer": {
+								"name": "Footer5"
+							},
+							"enterable": false,
+							"width": 138
+						}
+					]
+				},
+				"lb_offences": {
+					"type": "listbox",
+					"left": 185,
+					"top": 79,
+					"width": 156,
+					"height": 433,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "array",
+					"resizingMode": "rightToLeft",
+					"showHeaders": true,
+					"sizingX": "grow",
+					"columns": [
+						{
+							"header": {
+								"text": "Designated Offences Categories",
+								"name": "Header4"
+							},
+							"name": "col_offences",
+							"footer": {
+								"name": "Footer6"
+							},
+							"enterable": false,
+							"width": 137
+						}
+					]
+				},
+				"lb_pep": {
+					"type": "listbox",
+					"left": 357,
+					"top": 79,
+					"width": 157,
+					"height": 433,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "array",
+					"resizingMode": "rightToLeft",
+					"showHeaders": true,
+					"sizingX": "grow",
+					"columns": [
+						{
+							"header": {
+								"text": "RCA of PEP",
+								"name": "Header7"
+							},
+							"name": "col_pep",
+							"footer": {
+								"name": "Footer14"
+							},
+							"enterable": true,
+							"width": 137
+						}
+					]
+				},
+				"lb_keywords": {
+					"type": "listbox",
+					"left": 530,
+					"top": 79,
+					"width": 159,
+					"height": 433,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "array",
+					"resizingMode": "rightToLeft",
+					"showHeaders": true,
+					"sizingX": "grow",
+					"columns": [
+						{
+							"header": {
+								"text": "Keywords",
+								"name": "Header14"
+							},
+							"name": "col_keywords",
+							"footer": {
+								"name": "Footer16"
+							},
+							"enterable": false,
+							"width": 138
+						}
+					]
+				},
+				"Splitter1": {
+					"type": "splitter",
+					"left": 176,
+					"top": 79,
+					"width": 3,
+					"height": 440
+				},
+				"Splitter2": {
+					"type": "splitter",
+					"left": 348,
+					"top": 79,
+					"width": 3,
+					"height": 440
+				},
+				"Splitter3": {
+					"type": "splitter",
+					"left": 523,
+					"top": 79,
+					"width": 4,
+					"height": 440
+				},
+				"Input1": {
+					"type": "input",
+					"left": 282,
+					"top": 27,
+					"width": 62,
+					"height": 18,
+					"dataSource": "Form:C1466.response.summary.diq_summary.adverse_media_statistics.is_likely_rca",
+					"class": "Medium",
+					"enterable": false,
+					"fill": "transparent"
+				},
+				"Text23": {
+					"type": "text",
+					"text": "Is Likely RCA:",
+					"top": 28,
+					"left": 195,
+					"width": 83,
+					"height": 17,
+					"class": "Label_Medium"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 449,
+					"top": 28,
+					"width": 62,
+					"height": 18,
+					"dataSource": "Form:C1466.response.summary.diq_summary.adverse_media_statistics.is_likely_hrb",
+					"class": "Medium",
+					"enterable": false,
+					"fill": "transparent"
+				},
+				"Text24": {
+					"type": "text",
+					"text": "Is Likely HRB:",
+					"top": 28,
+					"left": 364,
+					"width": 83,
+					"height": 17,
+					"class": "Label_Medium"
+				},
+				"Text26": {
+					"type": "text",
+					"text": "Reason:",
+					"top": 49,
+					"left": 15,
+					"width": 83,
+					"height": 17,
+					"class": "Label_Medium"
+				},
+				"Input3": {
+					"type": "input",
+					"left": 102,
+					"top": 49,
+					"width": 591,
+					"height": 18,
+					"dataSource": "Form:C1466.response.summary.diq_summary.adverse_media_statistics.adverse_media_reason",
+					"class": "Medium",
+					"sizingX": "grow",
+					"enterable": false,
+					"fill": "transparent"
+				}
+			},
+			"entryOrder": [
+				"Input",
+				"lb_positions",
+				"lb_offences",
+				"lb_pep",
+				"lb_keywords",
+				"Input1",
+				"Input2",
+				"Input3"
+			]
+		}
+	],
+	"geometryStamp": 1263,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

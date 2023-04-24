@@ -1,0 +1,1 @@
+setVisibleIff([Currencies:6]isTemp:57; "temp@")

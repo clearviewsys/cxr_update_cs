@@ -1,0 +1,413 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 177,
+	"markerBody": 210,
+	"markerBreak": 213,
+	"markerFooter": 292,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 152,
+					"left": 10,
+					"width": 540,
+					"height": 58,
+					"fill": "transparent",
+					"stroke": "#AAAAAA",
+					"strokeWidth": 0.1
+				},
+				"Line1": {
+					"type": "line",
+					"top": 152,
+					"left": 212,
+					"height": 58,
+					"stroke": "#AAAAAA",
+					"strokeWidth": 0.1
+				},
+				"Line2": {
+					"type": "line",
+					"top": 152,
+					"left": 277,
+					"height": 58,
+					"stroke": "#AAAAAA",
+					"strokeWidth": 0.1
+				},
+				"Line3": {
+					"type": "line",
+					"top": 152,
+					"left": 397,
+					"height": 58,
+					"stroke": "#AAAAAA",
+					"strokeWidth": 0.1
+				},
+				"Text1": {
+					"type": "text",
+					"top": 11,
+					"left": 17,
+					"width": 533,
+					"height": 72,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"textAlign": "center",
+					"text": "CENTRAL BANK OF SEYCHELLES\nP.O. BOX 701, Victoria, Seychelles\nTelephone:[+248] 282000\nFax:[+248]224958 (main)\nFax:[+248]224502 (direct)\nEmail:  statistics@cbs.sc"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 91,
+					"left": 17,
+					"width": 533,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"text": "DAILY\tREPORT OF FOREIGN EXCHANGE SALES"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 123,
+					"left": 176,
+					"width": 191,
+					"height": 12,
+					"dataSource": "<>CompanyName",
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 123,
+					"left": 10,
+					"width": 173,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"text": "Name of Bank/Bureau de Change:"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 123,
+					"left": 419,
+					"width": 32,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"text": "Date:"
+				},
+				"objDate": {
+					"type": "input",
+					"top": 123,
+					"left": 450,
+					"width": 104,
+					"height": 12,
+					"dataSource": "vDate",
+					"dataSourceTypeHint": "date",
+					"class": "Label_Small",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 155,
+					"left": 14,
+					"width": 193,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"text": "Transaction Details"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 155,
+					"left": 210,
+					"width": 68,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"text": "Currency"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 155,
+					"left": 286,
+					"width": 108,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"text": "Exchange Rate"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 155,
+					"left": 402,
+					"width": 142,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"text": "Amount (SR)"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 262,
+					"left": 14,
+					"width": 311,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"text": "Note: Submission should be done daily, at 3.30pm."
+				},
+				"S1_Field4": {
+					"type": "input",
+					"top": 182,
+					"left": 14,
+					"width": 193,
+					"height": 20,
+					"dataSource": "[Registers:10]Comments:9",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": "AutoGenerateComments",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Line4": {
+					"type": "line",
+					"top": 175,
+					"left": 10,
+					"width": 540,
+					"stroke": "#AAAAAA",
+					"strokeWidth": 0.1
+				},
+				"S1_Field1": {
+					"type": "input",
+					"top": 182,
+					"left": 214,
+					"width": 58,
+					"height": 12,
+					"dataSource": "[Registers:10]Currency:19",
+					"stroke": "#000000",
+					"class": "Fields_Small",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S1_Field2": {
+					"type": "input",
+					"top": 182,
+					"left": 280,
+					"width": 115,
+					"height": 20,
+					"dataSource": "[Registers:10]OurRate:25",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Rates"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S1_Field3": {
+					"type": "input",
+					"top": 182,
+					"left": 400,
+					"width": 79,
+					"height": 10,
+					"dataSource": "[Registers:10]DebitLocal:23",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S1_Field5": {
+					"type": "input",
+					"top": 192,
+					"left": 455,
+					"width": 89,
+					"height": 10,
+					"dataSource": "[Registers:10]CreditLocal:24",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Rectangle1",
+					"Line1",
+					"Line2",
+					"Line3",
+					"Field1",
+					"Line4",
+					"S1_Field1",
+					"S1_Field2",
+					"S1_Field3",
+					"S1_Field5"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

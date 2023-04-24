@@ -1,0 +1,231 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Search",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onUnload",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBoundVariableChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 74,
+					"left": 2,
+					"width": 710,
+					"height": 401,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "mainListBox",
+					"focusable": false,
+					"movableRows": false,
+					"headerHeight": "24px",
+					"showFooters": true,
+					"table": 114,
+					"highlightSet": "$Industries_LBSet",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"fill": "#DDDDDD",
+					"alternateFill": "#EEEEEE",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"borderStyle": "none",
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDisplayDetail",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column3",
+							"dataSource": "[Industries:114]Code:6",
+							"width": 74,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"fill": "#DDDDDD",
+							"alternateFill": "#EEEEEE",
+							"textAlign": "center",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "idColumn",
+								"text": ":xliff:cvs_code",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "footerCode",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#999999",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "[Industries:114]AML_Risk:3",
+							"width": 30,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"numberFormat": "|NumberNoZero",
+							"fill": "#DDDDDD",
+							"alternateFill": "#EEEEEE",
+							"textAlign": "center",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "riskColumn",
+								"text": ":xliff:cvs_risk",
+								"dataSource": "riskColum",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "count",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#999999",
+								"verticalAlign": "middle",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[Industries:114]Industry:2",
+							"width": 589,
+							"minWidth": 10,
+							"maxWidth": 32500,
+							"enterable": false,
+							"fill": "#DDDDDD",
+							"alternateFill": "#EEEEEE",
+							"textAlign": "left",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "IndustryColumn",
+								"text": ":xliff:cvs_industry",
+								"textAlign": "center",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#999999",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"b_deleteAll": {
+					"type": "button",
+					"top": 478,
+					"left": 2,
+					"width": 81,
+					"height": 30,
+					"sizingY": "move",
+					"text": "Delete All",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/b_deleteAll.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_PopulateNAICS": {
+					"type": "dropdown",
+					"top": 478,
+					"left": 86,
+					"width": 327,
+					"height": 30,
+					"sizingY": "move",
+					"choiceList": [
+						"Populate with Standard  NAICS Codes ",
+						"2 digit Codes : 10+ Main categories only",
+						"3 digit Codes : 90+ Industries",
+						"4 digit Codes : 300+ Industries ",
+						"5 digit Codes : 700+ Industries",
+						"6 digit Codes : 1000+ Industries"
+					],
+					"class": "Control",
+					"method": "ObjectMethods/b_PopulateNAICS.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,350 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 318,
+	"markerBreak": 318,
+	"markerFooter": 328,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"bCancel": {
+					"type": "button",
+					"top": 286,
+					"left": 115,
+					"width": 67,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 286,
+					"left": 183,
+					"width": 66,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"text": "Save",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text11": {
+					"type": "text",
+					"top": 67,
+					"left": 24,
+					"width": 38,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "UID"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 91,
+					"left": 23,
+					"width": 38,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "TableNo"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 115,
+					"left": 25,
+					"width": 38,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Read"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 141,
+					"left": 24,
+					"width": 38,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Write"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 167,
+					"left": 24,
+					"width": 38,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Delete"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 193,
+					"left": 25,
+					"width": 38,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Print"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 219,
+					"left": 24,
+					"width": 38,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Import"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 245,
+					"left": 24,
+					"width": 38,
+					"height": 15,
+					"stroke": "#000000",
+					"text": "Export"
+				},
+				"UID": {
+					"type": "input",
+					"top": 67,
+					"left": 94,
+					"width": 49,
+					"height": 16,
+					"dataSource": "[Privileges:24]UserID:1",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"TableNo": {
+					"type": "input",
+					"top": 91,
+					"left": 94,
+					"width": 49,
+					"height": 16,
+					"dataSource": "[Privileges:24]TableNo:2",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Read": {
+					"type": "checkbox",
+					"top": 115,
+					"left": 94,
+					"width": 59,
+					"height": 16,
+					"dataSource": "[Privileges:24]canView:3",
+					"text": "Yes",
+					"stroke": "#000000",
+					"fontWeight": "bold",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Write": {
+					"type": "checkbox",
+					"top": 141,
+					"left": 94,
+					"width": 59,
+					"height": 16,
+					"dataSource": "[Privileges:24]canCreate:4",
+					"text": "Yes",
+					"stroke": "#000000",
+					"fontWeight": "bold",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Delete": {
+					"type": "checkbox",
+					"top": 167,
+					"left": 94,
+					"width": 59,
+					"height": 16,
+					"dataSource": "[Privileges:24]canDelete:5",
+					"text": "Yes",
+					"stroke": "#000000",
+					"fontWeight": "bold",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Print": {
+					"type": "checkbox",
+					"top": 193,
+					"left": 94,
+					"width": 59,
+					"height": 16,
+					"dataSource": "[Privileges:24]canPrint:6",
+					"text": "Yes",
+					"stroke": "#000000",
+					"fontWeight": "bold",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Import": {
+					"type": "checkbox",
+					"top": 219,
+					"left": 94,
+					"width": 59,
+					"height": 16,
+					"dataSource": "[Privileges:24]canImport:7",
+					"text": "Yes",
+					"stroke": "#000000",
+					"fontWeight": "bold",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Export": {
+					"type": "checkbox",
+					"top": 245,
+					"left": 94,
+					"width": 59,
+					"height": 16,
+					"dataSource": "[Privileges:24]canExport:8",
+					"text": "Yes",
+					"stroke": "#000000",
+					"fontWeight": "bold",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

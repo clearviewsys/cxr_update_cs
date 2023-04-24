@@ -1,0 +1,823 @@
+﻿{
+	"destination": "listScreen",
+	"inheritedForm": "ListToolbar",
+	"inheritedFormTable": 7,
+	"windowMinWidth": 570,
+	"windowMinHeight": 200,
+	"rightMargin": 18,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 91,
+	"markerBody": 134,
+	"markerBreak": 183,
+	"markerFooter": 183,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"backstripe": {
+					"type": "rectangle",
+					"top": 92,
+					"left": -8,
+					"width": 733,
+					"height": 41,
+					"sizingX": "grow",
+					"stroke": "transparent"
+				},
+				"S1_Field": {
+					"type": "input",
+					"top": 93,
+					"left": 77,
+					"width": 162,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Links:17]FullName:4",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"keyboardDialect": "fa",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S4_Field": {
+					"type": "input",
+					"top": 95,
+					"left": 248,
+					"width": 118,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Links:17]City:11",
+					"stroke": "#444444",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S4_Field2": {
+					"type": "input",
+					"top": 95,
+					"left": 635,
+					"width": 81,
+					"height": 13,
+					"sizingX": "grow",
+					"dataSource": "[Links:17]AuthorizedUser:13",
+					"stroke": "#444444",
+					"class": "Fields_Small",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S1_Field1": {
+					"type": "input",
+					"top": 97,
+					"left": 7,
+					"width": 62,
+					"height": 13,
+					"sizingX": "grow",
+					"dataSource": "[Links:17]LinkID:1",
+					"stroke": "#076000",
+					"class": "Fields_Small",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Highlight Button2": {
+					"type": "button",
+					"top": 72,
+					"left": 6,
+					"width": 64,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Link ID",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button1": {
+					"type": "button",
+					"top": 72,
+					"left": 75,
+					"width": 164,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Beneficiary Name",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line1": {
+					"type": "line",
+					"top": 386,
+					"left": 203,
+					"width": 75
+				},
+				"S1_Field2": {
+					"type": "input",
+					"top": 93,
+					"left": 476,
+					"width": 149,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Links:17]CustomerName:15",
+					"stroke": "#009B9C",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Highlight Button3": {
+					"type": "button",
+					"top": 72,
+					"left": 473,
+					"width": 155,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Linked to Customer",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button4": {
+					"type": "button",
+					"top": 138,
+					"left": 481,
+					"width": 110,
+					"height": 20,
+					"dataSource": "Highlight Button1",
+					"text": "Unestablished Links",
+					"class": "Small",
+					"stroke": "#600000",
+					"focusable": false,
+					"method": "ObjectMethods/Highlight Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter1": {
+					"type": "splitter",
+					"top": 72,
+					"left": 72,
+					"width": 1,
+					"height": 62,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter2": {
+					"type": "splitter",
+					"top": 72,
+					"left": 241,
+					"width": 1,
+					"height": 62,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter3": {
+					"type": "splitter",
+					"top": 72,
+					"left": 370,
+					"width": 1,
+					"height": 62,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter4": {
+					"type": "splitter",
+					"top": 72,
+					"left": 630,
+					"width": 1,
+					"height": 62,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button5": {
+					"type": "button",
+					"top": 72,
+					"left": 244,
+					"width": 124,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "City",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button6": {
+					"type": "button",
+					"top": 72,
+					"left": 633,
+					"width": 91,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Link Agent",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button7": {
+					"type": "button",
+					"top": 138,
+					"left": 596,
+					"width": 126,
+					"height": 20,
+					"dataSource": "Highlight Button1",
+					"text": "Show Orphaned Links",
+					"class": "Small",
+					"stroke": "#740000",
+					"focusable": false,
+					"method": "ObjectMethods/Highlight Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter5": {
+					"type": "splitter",
+					"top": 72,
+					"left": 470,
+					"width": 1,
+					"height": 62,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button9": {
+					"type": "button",
+					"top": 72,
+					"left": 373,
+					"width": 95,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "Highlight Button1",
+					"class": "Headings",
+					"stroke": "#740074",
+					"focusable": false,
+					"text": "Country",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"S4_Field1": {
+					"type": "input",
+					"top": 95,
+					"left": 376,
+					"width": 89,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Links:17]Country:12",
+					"stroke": "#444444",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S1_Field3": {
+					"type": "input",
+					"top": 110,
+					"left": 77,
+					"width": 162,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Links:17]UnicodeName:27",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"keyboardDialect": "fa",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S1_Field4": {
+					"type": "input",
+					"top": 109,
+					"left": 476,
+					"width": 149,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Customers:3]UNICODE_EthnicName:74",
+					"stroke": "#005F60",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"keyboardDialect": "fa",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Button3": {
+					"type": "button",
+					"top": 139,
+					"left": 83,
+					"width": 80,
+					"height": 25,
+					"dataSource": "Button3",
+					"class": "Control",
+					"focusable": false,
+					"text": "Show All",
+					"iconFrames": 4,
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 401,
+					"left": 546,
+					"width": 51,
+					"height": 19,
+					"dataSource": "Button3",
+					"class": "toolbar",
+					"focusable": false,
+					"text": "Today's",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 139,
+					"left": 249,
+					"width": 75,
+					"height": 25,
+					"dataSource": "Button3",
+					"class": "Control",
+					"focusable": false,
+					"text": "Flagged",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button7": {
+					"type": "button",
+					"top": 139,
+					"left": 327,
+					"width": 65,
+					"height": 25,
+					"dataSource": "Button3",
+					"class": "Control",
+					"focusable": false,
+					"text": "±Flag",
+					"iconFrames": 4,
+					"method": "ObjectMethods/Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button9": {
+					"type": "button",
+					"top": 139,
+					"left": 166,
+					"width": 80,
+					"height": 25,
+					"dataSource": "Button3",
+					"class": "Control",
+					"focusable": false,
+					"text": "Select All",
+					"iconFrames": 4,
+					"method": "ObjectMethods/Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Picture Button2": {
+					"type": "pictureButton",
+					"top": 374,
+					"left": 554,
+					"width": 40,
+					"height": 20,
+					"dataSource": "Picture Button1",
+					"picture": "/RESOURCES/Images/library/micnDateRange.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Picture Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line3": {
+					"type": "line",
+					"top": 139,
+					"left": 245,
+					"height": 25,
+					"stroke": "#444444"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 374,
+					"left": 599,
+					"width": 51,
+					"height": 12,
+					"sizingY": "move",
+					"class": "toolbar",
+					"textAlign": "right",
+					"text": "From Date"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 374,
+					"left": 659,
+					"width": 60,
+					"height": 12,
+					"sizingY": "move",
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "toolbar",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field1.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 388,
+					"left": 599,
+					"width": 51,
+					"height": 12,
+					"sizingY": "move",
+					"class": "toolbar",
+					"textAlign": "right",
+					"text": "To Date"
+				},
+				"Field2": {
+					"type": "input",
+					"top": 388,
+					"left": 659,
+					"width": 60,
+					"height": 12,
+					"sizingY": "move",
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "toolbar",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field2.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"top": 401,
+					"left": 599,
+					"width": 125,
+					"height": 19,
+					"sizingY": "move",
+					"dataSource": "cbApplyDateRange",
+					"text": "Filter Date Range",
+					"class": "toolbar",
+					"focusable": false,
+					"method": "ObjectMethods/Check Box2.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 139,
+					"left": 2,
+					"width": 78,
+					"height": 25,
+					"dataSource": "Button3",
+					"class": "Control",
+					"focusable": false,
+					"text": "Today's",
+					"iconFrames": 4,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button8": {
+					"type": "button",
+					"top": 160,
+					"left": 481,
+					"width": 110,
+					"height": 20,
+					"dataSource": "Highlight Button1",
+					"text": "Established Links",
+					"class": "Small",
+					"stroke": "#600000",
+					"focusable": false,
+					"method": "ObjectMethods/Highlight Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 38,
+					"left": 542,
+					"width": 61,
+					"height": 21,
+					"dataSource": "Button3",
+					"class": "toolbar",
+					"focusable": false,
+					"text": "Today's",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Picture Button1": {
+					"type": "pictureButton",
+					"top": 12,
+					"left": 552,
+					"width": 40,
+					"height": 20,
+					"dataSource": "Picture Button1",
+					"picture": "/RESOURCES/Images/library/micnDateRange.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Picture Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 10,
+					"left": 599,
+					"width": 58,
+					"height": 12,
+					"sizingY": "move",
+					"class": "toolbar",
+					"textAlign": "right",
+					"text": "From Date"
+				},
+				"Field3": {
+					"type": "input",
+					"top": 10,
+					"left": 664,
+					"width": 70,
+					"height": 12,
+					"sizingY": "move",
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "toolbar",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field3.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 28,
+					"left": 599,
+					"width": 58,
+					"height": 12,
+					"sizingY": "move",
+					"class": "toolbar",
+					"textAlign": "right",
+					"text": "To Date"
+				},
+				"Field4": {
+					"type": "input",
+					"top": 28,
+					"left": 664,
+					"width": 70,
+					"height": 12,
+					"sizingY": "move",
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "toolbar",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field4.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"top": 41,
+					"left": 608,
+					"width": 126,
+					"height": 23,
+					"sizingY": "move",
+					"dataSource": "cbApplyDateRange",
+					"text": "Filter Date Range",
+					"class": "toolbar",
+					"focusable": false,
+					"method": "ObjectMethods/Check Box1.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Highlight Button7"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

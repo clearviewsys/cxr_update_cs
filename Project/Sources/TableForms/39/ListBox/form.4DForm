@@ -1,0 +1,360 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Listbox_complete",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onHeader",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onUnload",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"b_itemsPL": {
+					"type": "button",
+					"top": 522,
+					"left": 198,
+					"width": 185,
+					"height": 25,
+					"sizingY": "move",
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Product P&L",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/b_itemsPL.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"mainListBox": {
+					"type": "listbox",
+					"top": 75,
+					"left": 2,
+					"width": 1008,
+					"height": 442,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "mainListBox",
+					"movableRows": false,
+					"headerHeight": "2em",
+					"showFooters": true,
+					"table": 39,
+					"highlightSet": "$items_LBSet",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#CCCCCC",
+					"alternateFill": "#EEEEEE",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column7",
+							"dataSource": "[Items:39]ItemID:1",
+							"width": 82,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_",
+								"text": "Product ID",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "vCount",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "[Items:39]ItemCode:27",
+							"width": 122,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_productCode",
+								"text": "Product Code",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column8",
+							"dataSource": "[Items:39]ItemName:2",
+							"width": 244,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_productName1",
+								"text": "Product Name",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "[Items:39]Category:3",
+							"width": 93,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_productCategory",
+								"text": ":xliff:cvs_category",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[Items:39]SellUnitPrice:7",
+							"dataSourceTypeHint": "number",
+							"width": 92,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_productName",
+								"text": "Price",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "[Items:39]AccountID:12",
+							"width": 138,
+							"maxWidth": 32000,
+							"fill": "#ECFFFF",
+							"alternateFill": "#E0F5F5",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_accountID1",
+								"text": ":xliff:cvs_account",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "[Items:39]SubAccountID:26",
+							"width": 109,
+							"maxWidth": 500,
+							"fill": "#ECFFFF",
+							"alternateFill": "#E0F5F5",
+							"verticalAlign": "middle",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_accountID",
+								"text": ":xliff:cvs_sub_account",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "[Items:39]Description:19",
+							"width": 168,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_description",
+								"text": ":xliff:cvs_description",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer11",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Tahoma",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"b_Duplicate": {
+					"type": "button",
+					"top": 522,
+					"left": 7,
+					"width": 185,
+					"height": 25,
+					"sizingY": "move",
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Duplicate Product",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/b_Duplicate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_ItemsSummary": {
+					"type": "button",
+					"top": 522,
+					"left": 387,
+					"width": 185,
+					"height": 25,
+					"sizingY": "move",
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Product Summary",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/b_ItemsSummary.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

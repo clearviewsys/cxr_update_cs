@@ -1,0 +1,1752 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Entry",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"ThirdPartyIsCompany": {
+					"type": "checkbox",
+					"top": 52,
+					"left": 11,
+					"width": 327,
+					"height": 20,
+					"dataSource": "[ThirdParties:101]IsCompany:2",
+					"text": "Third Party is a Company (Entity)",
+					"stroke": "#005597",
+					"class": "Large",
+					"textAlign": "left",
+					"method": "ObjectMethods/ThirdPartyIsCompany.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[ThirdParties]IdNumber1": {
+					"type": "input",
+					"top": 52,
+					"left": 441,
+					"width": 153,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]InvoiceID:30",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#E2FFDF",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 52,
+					"left": 364,
+					"width": 109,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "left",
+					"text": "Related to invoice:"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 76,
+					"left": 11,
+					"width": 820,
+					"height": 388,
+					"fill": "#EEEEEE",
+					"stroke": "#AAAAAA"
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 430,
+					"left": 654,
+					"width": 169,
+					"height": 25,
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#3C4660",
+					"focusable": false,
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 430,
+					"left": 478,
+					"width": 169,
+					"height": 25,
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "cancel",
+					"shortcutKey": "[Enter]",
+					"text": "Cancel",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#3C4660",
+					"focusable": false,
+					"method": "ObjectMethods/bCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"[ThirdParties]IdNumber2": {
+					"type": "input",
+					"top": 52,
+					"left": 677,
+					"width": 153,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]ThirdPartiesID:31",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"[ThirdParties]FirstName": {
+					"type": "input",
+					"top": 100,
+					"left": 185,
+					"width": 363,
+					"height": 20,
+					"dataSource": "[ThirdParties:101]FirstName:4",
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "left",
+					"fill": "#FFFFDF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]FirstName.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]LastName": {
+					"type": "input",
+					"top": 124,
+					"left": 185,
+					"width": 363,
+					"height": 20,
+					"dataSource": "[ThirdParties:101]LastName:3",
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "left",
+					"fill": "#FFFFDF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]LastName.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]OtherName": {
+					"type": "input",
+					"top": 149,
+					"left": 185,
+					"width": 363,
+					"height": 20,
+					"dataSource": "[ThirdParties:101]OtherName:5",
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]OtherName.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]Occupation": {
+					"type": "input",
+					"top": 176,
+					"left": 185,
+					"width": 221,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]Occupation:20",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[ThirdParties]DOB": {
+					"type": "input",
+					"top": 200,
+					"left": 185,
+					"width": 221,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]DOB:13",
+					"dataSourceTypeHint": "date",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]DOB.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]Address": {
+					"type": "input",
+					"top": 228,
+					"left": 185,
+					"width": 221,
+					"height": 36,
+					"dataSource": "[ThirdParties:101]Address:6",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[thirdparties]City": {
+					"type": "input",
+					"top": 272,
+					"left": 185,
+					"width": 221,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]City:7",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]State1": {
+					"type": "input",
+					"top": 296,
+					"left": 185,
+					"width": 131,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]theState:29",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[ThirdParties]ZipCode1": {
+					"type": "input",
+					"top": 320,
+					"left": 185,
+					"width": 131,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]ZipCode:9",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]CountryCode": {
+					"type": "input",
+					"top": 347,
+					"left": 185,
+					"width": 39,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]CountryCode:8",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]CountryCode.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ThirdPartyCountryName1": {
+					"type": "input",
+					"top": 346,
+					"left": 228,
+					"width": 170,
+					"height": 18,
+					"dataSource": "ThirdPartyCountryName",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[ThirdParties]CountryOfResident": {
+					"type": "input",
+					"top": 374,
+					"left": 185,
+					"width": 39,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]CountryOfResidence:17",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]CountryOfResident.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ThirdPartyCountryResName": {
+					"type": "input",
+					"top": 374,
+					"left": 228,
+					"width": 170,
+					"height": 18,
+					"dataSource": "ThirdPartyCountryResName",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/ThirdPartyCountryResName.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[ThirdParties]HomePhone": {
+					"type": "input",
+					"top": 400,
+					"left": 185,
+					"width": 127,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]HomePhone:10",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]HomePhone.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]WorkPhone": {
+					"type": "input",
+					"top": 426,
+					"left": 185,
+					"width": 127,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]WorkPhone:11",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]WorkPhone.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]WorkPhoneExt": {
+					"type": "input",
+					"top": 426,
+					"left": 319,
+					"width": 40,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]WorkPhoneExt:12",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]IdNumber": {
+					"type": "input",
+					"top": 182,
+					"left": 587,
+					"width": 221,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]IdNumber:16",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[ThirdParties]IdOtherType": {
+					"type": "input",
+					"top": 205,
+					"left": 587,
+					"width": 221,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]IdType:14",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/FINTRAC ID List"
+					},
+					"method": "ObjectMethods/[ThirdParties]IdOtherType.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"ThirdPartyIdOtherType": {
+					"type": "input",
+					"top": 229,
+					"left": 587,
+					"width": 100,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]IdOtherType:15",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"method": "ObjectMethods/ThirdPartyIdOtherType.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onDataChange"
+					]
+				},
+				"ThirdPartyCountryIssueName1": {
+					"type": "input",
+					"top": 262,
+					"left": 633,
+					"width": 178,
+					"height": 18,
+					"dataSource": "ThirdPartyCountryIssueName",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/ThirdPartyCountryIssueName1.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]idCountryOfIssue": {
+					"type": "input",
+					"top": 262,
+					"left": 587,
+					"width": 40,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]IdCountryOfIssue:18",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]idCountryOfIssue.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ThirdPartyStateOfIssue": {
+					"type": "input",
+					"top": 286,
+					"left": 587,
+					"width": 223,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]IdIssueState:19",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"method": "ObjectMethods/ThirdPartyStateOfIssue.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"ThirdPartyRelationshipCode": {
+					"type": "input",
+					"top": 310,
+					"left": 587,
+					"width": 223,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]RelationshipCode:21",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/FINTRAC Relationships"
+					},
+					"method": "ObjectMethods/ThirdPartyRelationshipCode.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"ThirdPartyOtherRelationship": {
+					"type": "input",
+					"top": 335,
+					"left": 587,
+					"width": 223,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]OtherRelationship:22",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"method": "ObjectMethods/ThirdPartyOtherRelationship.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onDataChange"
+					]
+				},
+				"Text58": {
+					"type": "text",
+					"top": 102,
+					"left": 14,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "First Name"
+				},
+				"Text59": {
+					"type": "text",
+					"top": 152,
+					"left": 14,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Other Name"
+				},
+				"Text60": {
+					"type": "text",
+					"top": 228,
+					"left": 14,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Address"
+				},
+				"Text74": {
+					"type": "text",
+					"top": 271,
+					"left": 14,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "City"
+				},
+				"Text75": {
+					"type": "text",
+					"top": 347,
+					"left": 14,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Country"
+				},
+				"Text76": {
+					"type": "text",
+					"top": 400,
+					"left": 14,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Home Phone"
+				},
+				"Text77": {
+					"type": "text",
+					"top": 426,
+					"left": 14,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Work Phone"
+				},
+				"Text79": {
+					"type": "text",
+					"top": 200,
+					"left": 14,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Date of Birth (DOB)"
+				},
+				"Text81": {
+					"type": "text",
+					"top": 182,
+					"left": 416,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Picture ID Number"
+				},
+				"Text82": {
+					"type": "text",
+					"top": 375,
+					"left": 14,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Country of residence"
+				},
+				"Text83": {
+					"type": "text",
+					"top": 76,
+					"left": 10,
+					"width": 821,
+					"height": 19,
+					"fill": "#007CFF",
+					"stroke": "#FFFFFF",
+					"class": "Label_Large",
+					"text": "• Third Party Information (Individual)"
+				},
+				"Text57": {
+					"type": "text",
+					"top": 128,
+					"left": 14,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Last Name"
+				},
+				"Text84": {
+					"type": "text",
+					"top": 262,
+					"left": 416,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Country of Issue"
+				},
+				"Text85": {
+					"type": "text",
+					"top": 286,
+					"left": 416,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "State of Issue"
+				},
+				"Text86": {
+					"type": "text",
+					"top": 176,
+					"left": 14,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "Occupation"
+				},
+				"Text87": {
+					"type": "text",
+					"top": 309,
+					"left": 416,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Relationship Code"
+				},
+				"Line6": {
+					"type": "line",
+					"top": 55,
+					"left": 708,
+					"height": 1
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 417,
+					"left": 606,
+					"width": 1,
+					"height": 1,
+					"fill": "transparent"
+				},
+				"Rectangle4": {
+					"type": "rectangle",
+					"top": 383,
+					"left": 785,
+					"width": 1,
+					"height": 1,
+					"fill": "transparent"
+				},
+				"Text80": {
+					"type": "text",
+					"top": 205,
+					"left": 416,
+					"width": 160,
+					"height": 17,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Picture ID Type"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 296,
+					"left": 14,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "State"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 320,
+					"left": 14,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Zip Code / Postal Code"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 335,
+					"left": 416,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Other Relationship"
+				},
+				"b_occupation": {
+					"type": "button",
+					"top": 176,
+					"left": 14,
+					"width": 165,
+					"height": 18,
+					"display": false,
+					"method": "ObjectMethods/b_occupation.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"latestCheckStatus1": {
+					"type": "input",
+					"top": 124,
+					"left": 556,
+					"width": 20,
+					"height": 20,
+					"dataSource": "latestCheckStatus1",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"bGotoSanctionLog": {
+					"type": "button",
+					"top": 124,
+					"left": 556,
+					"width": 20,
+					"height": 20,
+					"display": false,
+					"method": "ObjectMethods/bGotoSanctionLog.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_pep": {
+					"type": "button",
+					"top": 124,
+					"left": 582,
+					"width": 36,
+					"height": 19,
+					"text": "PEP",
+					"fontFamily": "Tahoma",
+					"fontSize": 10,
+					"method": "ObjectMethods/b_pep.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_sl": {
+					"type": "button",
+					"top": 124,
+					"left": 619,
+					"width": 36,
+					"height": 19,
+					"text": "SL",
+					"fontFamily": "Tahoma",
+					"fontSize": 10,
+					"method": "ObjectMethods/b_sl.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"top": 96,
+					"left": 700,
+					"width": 129,
+					"height": 24,
+					"text": "Pick a Link",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"[ThirdParties]FirstName",
+				"[ThirdParties]LastName",
+				"[ThirdParties]OtherName",
+				"[ThirdParties]Occupation",
+				"[ThirdParties]DOB",
+				"[ThirdParties]Address",
+				"[thirdparties]City",
+				"[ThirdParties]State1",
+				"[ThirdParties]ZipCode1",
+				"[ThirdParties]CountryCode",
+				"[ThirdParties]CountryOfResident",
+				"[ThirdParties]HomePhone",
+				"[ThirdParties]WorkPhone",
+				"[ThirdParties]WorkPhoneExt",
+				"[ThirdParties]IdNumber",
+				"[ThirdParties]IdOtherType",
+				"ThirdPartyIdOtherType",
+				"[ThirdParties]idCountryOfIssue",
+				"ThirdPartyStateOfIssue",
+				"ThirdPartyRelationshipCode",
+				"ThirdPartyOtherRelationship",
+				"b_pep",
+				"b_sl",
+				"Button"
+			]
+		},
+		{
+			"objects": {
+				"[ThirdParties]CompanyName": {
+					"type": "input",
+					"top": 108,
+					"left": 182,
+					"width": 549,
+					"height": 29,
+					"dataSource": "[ThirdParties:101]CompanyName:23",
+					"stroke": "#444444",
+					"class": "ExtraLarge",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"fill": "#F3EFDA",
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]CompanyName.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[ThirdParties]BusinessType": {
+					"type": "input",
+					"top": 146,
+					"left": 182,
+					"width": 221,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]BusinessType:24",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"fill": "#F3EFDA",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[ThirdParties]Address1": {
+					"type": "input",
+					"top": 178,
+					"left": 182,
+					"width": 221,
+					"height": 36,
+					"dataSource": "[ThirdParties:101]Address:6",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[thirdparties]City1": {
+					"type": "input",
+					"top": 222,
+					"left": 182,
+					"width": 221,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]City:7",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]State2": {
+					"type": "input",
+					"top": 246,
+					"left": 182,
+					"width": 131,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]theState:29",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[ThirdParties]ZipCode2": {
+					"type": "input",
+					"top": 270,
+					"left": 182,
+					"width": 131,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]ZipCode:9",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]CountryCode1": {
+					"type": "input",
+					"top": 297,
+					"left": 182,
+					"width": 39,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]CountryCode:8",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]CountryCode1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ThirdPartyCountryName2": {
+					"type": "input",
+					"top": 296,
+					"left": 225,
+					"width": 170,
+					"height": 18,
+					"dataSource": "ThirdPartyCountryName",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[ThirdParties]CountryOfResiden1": {
+					"type": "input",
+					"top": 324,
+					"left": 182,
+					"width": 39,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]CountryOfResidence:17",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]CountryOfResiden1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]HomePhone1": {
+					"type": "input",
+					"top": 350,
+					"left": 182,
+					"width": 127,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]HomePhone:10",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]HomePhone1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]WorkPhone1": {
+					"type": "input",
+					"top": 376,
+					"left": 182,
+					"width": 127,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]WorkPhone:11",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]WorkPhone1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]WorkPhoneExt1": {
+					"type": "input",
+					"top": 376,
+					"left": 316,
+					"width": 40,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]WorkPhoneExt:12",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"[ThirdParties]IncorporationNumb": {
+					"type": "input",
+					"top": 161,
+					"left": 586,
+					"width": 224,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]IncorporationNumber:25",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"fill": "#F3EFDA",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[ThirdParties]idCountryOfIssue2": {
+					"type": "input",
+					"top": 186,
+					"left": 586,
+					"width": 40,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]IdCountryOfIssue:18",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"method": "ObjectMethods/[ThirdParties]idCountryOfIssue2.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ThirdPartyStateOfIssue1": {
+					"type": "input",
+					"top": 210,
+					"left": 586,
+					"width": 223,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]IdIssueState:19",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"method": "ObjectMethods/ThirdPartyStateOfIssue1.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[ThirdParties]Authorized1": {
+					"type": "input",
+					"top": 248,
+					"left": 586,
+					"width": 223,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]Authorized1:26",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"[ThirdParties]Authorized2": {
+					"type": "input",
+					"top": 274,
+					"left": 586,
+					"width": 223,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]Authorized2:27",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text63": {
+					"type": "text",
+					"top": 119,
+					"left": 23,
+					"width": 148,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Company Name"
+				},
+				"Text61": {
+					"type": "text",
+					"top": 144,
+					"left": 23,
+					"width": 148,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Type of business"
+				},
+				"Text68": {
+					"type": "text",
+					"top": 159,
+					"left": 427,
+					"width": 148,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "left",
+					"text": "Incorporation Number"
+				},
+				"[ThirdParties]Authorized3": {
+					"type": "input",
+					"top": 300,
+					"left": 586,
+					"width": 223,
+					"height": 18,
+					"dataSource": "[ThirdParties:101]Authorized3:28",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text71": {
+					"type": "text",
+					"top": 248,
+					"left": 434,
+					"width": 148,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "left",
+					"text": "Individual Authorized 1"
+				},
+				"Text72": {
+					"type": "text",
+					"top": 274,
+					"left": 434,
+					"width": 148,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "left",
+					"text": "Individual Authorized 2"
+				},
+				"Text73": {
+					"type": "text",
+					"top": 300,
+					"left": 434,
+					"width": 148,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "left",
+					"text": "Individual Authorized 3"
+				},
+				"Text22": {
+					"type": "text",
+					"top": 75,
+					"left": 11,
+					"width": 820,
+					"height": 19,
+					"fill": "#AEAF00",
+					"stroke": "#FFFFFF",
+					"class": "Label_Large",
+					"text": "• Third Party Information (Company)"
+				},
+				"ThirdPartyCountryResName1": {
+					"type": "input",
+					"top": 324,
+					"left": 225,
+					"width": 170,
+					"height": 18,
+					"dataSource": "ThirdPartyCountryResName",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 178,
+					"left": 11,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Address"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 221,
+					"left": 11,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "City"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 297,
+					"left": 11,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Country"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 350,
+					"left": 11,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Home Phone"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 376,
+					"left": 11,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Work Phone"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 325,
+					"left": 11,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Country of residence"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 246,
+					"left": 11,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "State"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 270,
+					"left": 11,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Zip Code / Postal Code"
+				},
+				"ThirdPartyCountryIssueName2": {
+					"type": "input",
+					"top": 186,
+					"left": 632,
+					"width": 178,
+					"height": 18,
+					"dataSource": "ThirdPartyCountryIssueName",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/ThirdPartyCountryIssueName2.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"Text13": {
+					"type": "text",
+					"top": 186,
+					"left": 415,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Country of Issue"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 210,
+					"left": 415,
+					"width": 160,
+					"height": 18,
+					"stroke": "#5E6D58",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "State of Issue"
+				},
+				"b_check1": {
+					"type": "button",
+					"top": 119,
+					"left": 765,
+					"width": 45,
+					"height": 18,
+					"text": "Check",
+					"fontFamily": "Tahoma",
+					"fontSize": 10,
+					"method": "ObjectMethods/b_check1.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"latestCheckStatus2": {
+					"type": "input",
+					"top": 118,
+					"left": 736,
+					"width": 20,
+					"height": 20,
+					"dataSource": "latestCheckStatus2",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"bGotoSanctionLog1": {
+					"type": "button",
+					"top": 118,
+					"left": 736,
+					"width": 20,
+					"height": 20,
+					"display": false,
+					"method": "ObjectMethods/bGotoSanctionLog1.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"[ThirdParties]CompanyName",
+				"[ThirdParties]BusinessType",
+				"[ThirdParties]Address1",
+				"[thirdparties]City1",
+				"[ThirdParties]State2",
+				"[ThirdParties]ZipCode2",
+				"[ThirdParties]CountryCode1",
+				"[ThirdParties]CountryOfResiden1",
+				"[ThirdParties]HomePhone1",
+				"[ThirdParties]WorkPhone1",
+				"[ThirdParties]WorkPhoneExt1",
+				"[ThirdParties]IncorporationNumb",
+				"[ThirdParties]idCountryOfIssue2",
+				"ThirdPartyStateOfIssue1",
+				"[ThirdParties]Authorized1",
+				"[ThirdParties]Authorized2",
+				"[ThirdParties]Authorized3",
+				"b_check1"
+			]
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group1": [
+				"latestCheckStatus1",
+				"bGotoSanctionLog"
+			],
+			"Group2": [
+				"latestCheckStatus2",
+				"bGotoSanctionLog1"
+			]
+		},
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"b_pep",
+					"b_sl",
+					"b_check1"
+				]
+			},
+			"View 4": {
+				"objects": [
+					"ThirdPartyIsCompany",
+					"Text83",
+					"Text22"
+				]
+			},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

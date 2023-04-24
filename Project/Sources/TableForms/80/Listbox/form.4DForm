@@ -1,0 +1,248 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Simple",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onPrintingDetail",
+		"onUnload",
+		"onAfterKeystroke",
+		"onLoadRecord"
+	],
+	"method": "method.4dm",
+	"pages": [
+		null,
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 75,
+					"left": 1,
+					"width": 682,
+					"height": 258,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "24px",
+					"table": 80,
+					"highlightSet": "$CalendarEvents_LBSet",
+					"horizontalLineStroke": "transparent",
+					"alternateFill": "#EEEEEE",
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column10",
+							"dataSource": "[CalendarEvents:80]Date:4",
+							"dataSourceTypeHint": "date",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Date",
+								"text": "Date"
+							},
+							"footer": {
+								"name": "Footer10",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[CalendarEvents:80]CalendarName:9",
+							"width": 112,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Calendar",
+								"text": "Calendar"
+							},
+							"footer": {
+								"name": "Footer2",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "[CalendarEvents:80]EventHeading:2",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_event",
+								"text": "Event Heading"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "[CalendarEvents:80]isAllDayEvent:3",
+							"dataSourceTypeHint": "boolean",
+							"width": 75,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Alldat",
+								"text": "All Day"
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "[CalendarEvents:80]FromTime:5",
+							"dataSourceTypeHint": "time",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_FromTime",
+								"text": "From Time"
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#CCCCCC"
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "[CalendarEvents:80]toTime:6",
+							"dataSourceTypeHint": "time",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_toTime",
+								"text": "To Time"
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C0C0C0"
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "[CalendarEvents:80]isCompleted:17",
+							"dataSourceTypeHint": "boolean",
+							"width": 78,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_Completed",
+								"text": "Completed"
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 342,
+					"left": 1,
+					"width": 150,
+					"height": 22,
+					"dataSource": "Button1",
+					"text": "Open Mini Calendar Event",
+					"class": "Small",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

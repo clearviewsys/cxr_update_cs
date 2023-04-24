@@ -1,0 +1,126 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"markerBody": 473,
+	"markerBreak": 473,
+	"markerFooter": 473,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "611pt",
+		"paperHeight": "791pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Field": {
+					"type": "input",
+					"top": 19,
+					"left": 123,
+					"width": 136,
+					"height": 16,
+					"dataSource": "[Invoices:5]InvoiceID:1",
+					"focusable": false,
+					"fill": "transparent",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 16,
+					"left": 273,
+					"width": 390,
+					"height": 20,
+					"dataSource": "[Invoices:5]CustomerFullName:54",
+					"fontFamily": "Segoe UI",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Signature": {
+					"type": "input",
+					"top": 45,
+					"left": 8,
+					"width": 660,
+					"height": 268,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[Signatures:141]Signature:3",
+					"dataSourceTypeHint": "picture",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_close": {
+					"type": "button",
+					"top": 318,
+					"left": 568,
+					"width": 100,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"text": "Close",
+					"class": "Large",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 19,
+					"left": 15,
+					"width": 97,
+					"height": 15,
+					"text": ":xliff:cvs_invoice_number"
+				}
+			},
+			"entryOrder": [
+				"Field3",
+				"Signature",
+				"b_close"
+			]
+		}
+	]
+}

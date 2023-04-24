@@ -1,0 +1,501 @@
+{
+	"destination": "detailScreen",
+	"windowTitle": "Get list of MoneyGram points in destination country",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"popupStates": {
+					"type": "dropdown",
+					"top": 32,
+					"left": 626,
+					"width": 280,
+					"height": 18,
+					"focusable": false,
+					"method": "ObjectMethods/popupStates.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"destinationCountry": {
+					"type": "input",
+					"top": 37,
+					"left": 166,
+					"width": 60,
+					"height": 16,
+					"dataSource": "Form:C1466.destinationCountry",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"entryFilter": "~A",
+					"method": "ObjectMethods/destinationCountry.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"destinationState": {
+					"type": "input",
+					"top": 36,
+					"left": 626,
+					"width": 280,
+					"height": 16,
+					"dataSource": "Form:C1466.state",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"placeholder": "Mandatory for USA, Canada and Mexico",
+					"entryFilter": "~A",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"destinationCity": {
+					"type": "input",
+					"top": 67,
+					"left": 164,
+					"width": 280,
+					"height": 16,
+					"dataSource": "Form:C1466.city",
+					"stroke": "#444444",
+					"contextMenu": "none",
+					"placeholder": "Full city name or enter few letters and pick city from list",
+					"entryFilter": "~A",
+					"method": "ObjectMethods/destinationCity.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"btn_getPoints": {
+					"type": "button",
+					"top": 66,
+					"left": 596,
+					"width": 310,
+					"height": 36,
+					"shortcutKey": "[Esc]",
+					"text": "Get list of MoneyGram points",
+					"class": "Large",
+					"method": "ObjectMethods/btn_getPoints.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btn_pickCities": {
+					"type": "button",
+					"top": 93,
+					"left": 23,
+					"width": 118,
+					"height": 24,
+					"text": "Pick city",
+					"focusable": false,
+					"method": "ObjectMethods/btn_pickCities.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"popupCities": {
+					"type": "dropdown",
+					"top": 96,
+					"left": 161,
+					"width": 280,
+					"height": 18,
+					"focusable": false,
+					"method": "ObjectMethods/popupCities.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"pointts": {
+					"type": "listbox",
+					"top": 123,
+					"left": 27,
+					"width": 951,
+					"height": 260,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"focusable": false,
+					"movableRows": false,
+					"dataSource": "Form:C1466.points.result",
+					"selectionMode": "single",
+					"scrollbarHorizontal": "automatic",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "This:C1470.PointName",
+							"width": 70,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Point name",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer1",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Column9",
+							"dataSource": "This:C1470.PointAddress",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header9",
+								"text": "Point address",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer9",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "ColumnCity",
+							"dataSource": "This:C1470.City",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header11",
+								"text": "City",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer11",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "ColumnState",
+							"dataSource": "This:C1470.StateOfCountry",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header7",
+								"text": "State",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer7",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "This:C1470.PointCanSend",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency",
+							"stroke": "automatic",
+							"fill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "Can send",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer4",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Column13",
+							"dataSource": "This:C1470.PointCanReceive",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency",
+							"stroke": "automatic",
+							"fill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header13",
+								"text": "Can receive",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer13",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Column12",
+							"dataSource": "This:C1470.PointPhone",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency",
+							"stroke": "automatic",
+							"fill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header12",
+								"text": "Phone",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer12",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Column10",
+							"dataSource": "This:C1470.PointWorkSchedule",
+							"width": 300,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header10",
+								"text": "Work Schedule",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer10",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "This:C1470.TransferToPointShortName",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"visibility": "hidden",
+							"stroke": "automatic",
+							"fill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Point name",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer3",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						}
+					]
+				},
+				"destinaioncountry": {
+					"type": "text",
+					"top": 36,
+					"left": 9,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "Destination country"
+				},
+				"#destinationCountryName": {
+					"type": "input",
+					"top": 37,
+					"left": 234,
+					"width": 215,
+					"height": 16,
+					"stroke": "#444444",
+					"focusable": false,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/mgPickCountry"
+					},
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": "OnlyLettersAndSpaces",
+					"method": "ObjectMethods/#destinationCountryName.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"destinaioncountry1": {
+					"type": "text",
+					"top": 66,
+					"left": 47,
+					"width": 70,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "City"
+				},
+				"destinaioncountry2": {
+					"type": "text",
+					"top": 35,
+					"left": 469,
+					"width": 130,
+					"height": 15,
+					"stroke": "#444444",
+					"textAlign": "right",
+					"text": "State"
+				}
+			},
+			"entryOrder": [
+				"popupStates",
+				"destinationCountry",
+				"destinationState",
+				"destinationCity",
+				"btn_getPoints",
+				"btn_pickCities",
+				"popupCities",
+				"pointts"
+			]
+		}
+	],
+	"geometryStamp": 2,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

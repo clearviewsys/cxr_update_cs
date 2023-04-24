@@ -1,0 +1,5162 @@
+{
+	"": {
+		"methods": [
+			"allRecordsAML_AggrRules",
+			"allRecordsConfirmations",
+			"allRecordsFTP_Sites",
+			"allRecordsNotifications",
+			"allRecordsRelations",
+			"allRecordsRelationTypes",
+			"allRecordsSync_Queue",
+			"allRecordsWebEWires",
+			"Compiler_WAPI_hookValidateForm",
+			"delChecksAML_AggrRules",
+			"delChecksConfirmations",
+			"delChecksFTP_Sites",
+			"delChecksNotifications",
+			"delChecksRelationTypes",
+			"delChecksSync_Queue",
+			"delChecksWebEWires",
+			"deleteAML_AggrRules",
+			"deleteConfirmations",
+			"deleteFTP_Sites",
+			"deleteNotifications",
+			"deleteRelations",
+			"deleteRelationTypes",
+			"deleteSync_Queue",
+			"deleteWebEWires",
+			"displayLBox_AML_AggrRules",
+			"displayLBox_Confirmations",
+			"displayLBox_FTP_Sites",
+			"displayLBox_Notifications",
+			"displayLBox_Relations",
+			"displayLBox_RelationTypes",
+			"displayLBox_Sync_Queue",
+			"displayLBox_WebEWires",
+			"displayLBoxAML_AggrRules",
+			"displayLBoxConfirmations",
+			"displayLBoxFTP_Sites",
+			"displayLBoxNotifications",
+			"displayLBoxRelations",
+			"displayLBoxRelationTypes",
+			"displayLBoxSync_Queue",
+			"displayLBoxWebEWires",
+			"displayList_AML_AggrRules",
+			"displayList_Confirmations",
+			"displayList_FTP_Sites",
+			"displayList_Notifications",
+			"displayList_Relations",
+			"displayList_RelationTypes",
+			"displayList_Sync_Queue",
+			"displayList_WebEWires",
+			"displayListAML_AggrRules",
+			"displayListConfirmations",
+			"displayListFTP_Sites",
+			"displayListNotifications",
+			"displayListRelations",
+			"displayListRelationTypes",
+			"displayListSync_Queue",
+			"displayListWebEWires",
+			"displayRecord_Confirmations",
+			"displayRecord_FTP_Sites",
+			"displayRecord_Notifications",
+			"displayRecord_Relations",
+			"displayRecord_RelationTypes",
+			"displayRecord_Sync_Queue",
+			"displayRecord_WebEWires",
+			"displayRecordAML_AggrRules",
+			"displayRecordConfirmations",
+			"displayRecordFTP_Sites",
+			"displayRecordNotifications",
+			"displayRecordRelations",
+			"displayRecordRelationTypes",
+			"displayRecordSync_Queue",
+			"displayRecordWebEWires",
+			"FT_EFTO_report_NonSwift",
+			"FT_GenerateEFTOReport_NonSwift",
+			"FT_generatePartA1_EFT_NS",
+			"FT_GeneratePartE1_EFTO_NS",
+			"FT_GeneratePartF1EFTO_NonSwift",
+			"FT_Get_EFTO_Transactions_NS",
+			"FT_PartA_EFT_NS",
+			"FT_queryEFTO_NS",
+			"iH_Hook_ShowRecord",
+			"iH_Hook_Startup",
+			"iLB_Host_ExecuteFormula",
+			"mgBuildMarketingStuff",
+			"modifyRecordAML_AggrRules",
+			"modifyRecordConfirmations",
+			"modifyRecordFTP_Sites",
+			"modifyRecordNotifications",
+			"modifyRecordRelations",
+			"modifyRecordRelationTypes",
+			"modifyRecordSync_Queue",
+			"modifyRecordWebEWires",
+			"newRecordAML_AggrRules",
+			"newRecordConfirmations",
+			"newRecordFTP_Sites",
+			"newRecordNotifications",
+			"newRecordRelations",
+			"newRecordRelationTypes",
+			"newRecordSync_Queue",
+			"newRecordWebEWires",
+			"orderByAML_AggrRules",
+			"orderByConfirmations",
+			"orderByFTP_Sites",
+			"orderByNotifications",
+			"orderByRelations",
+			"orderByRelationTypes",
+			"orderBySync_Queue",
+			"orderByWebEWires",
+			"pickAML_AggrRules",
+			"pickConfirmations",
+			"pickFTP_Sites",
+			"pickNotifications",
+			"pickRelationTypes",
+			"pickSync_Queue",
+			"pickWebEWires",
+			"printAML_AggrRules",
+			"printConfirmations",
+			"printFTP_Sites",
+			"printNotifications",
+			"printRelations",
+			"printRelationTypes",
+			"printSync_Queue",
+			"printWebEWires",
+			"searchAML_AggrRules",
+			"searchConfirmations",
+			"searchFTP_Sites",
+			"searchNotifications",
+			"searchRelationTypes",
+			"searchSync_Queue",
+			"searchWebEWires",
+			"showDateRangeAML_AggrRules",
+			"showDateRangeWebEWires",
+			"showFlaggedAML_AggrRules",
+			"showRelevantAML_AggrRules",
+			"showRelevantConfirmations",
+			"showRelevantFTP_Sites",
+			"showRelevantNotifications",
+			"showRelevantRelations",
+			"showRelevantRelationTypes",
+			"showRelevantSync_Queue",
+			"showRelevantWebEWires",
+			"showTodaysNotifications",
+			"showTodaysWebEWires",
+			"toggleFlaggedAML_AggrRules",
+			"UTIL_resetUUIDs",
+			"validateAML_AggrRules",
+			"validateConfirmations",
+			"validateFTP_Sites",
+			"validateNotifications",
+			"validateRelations",
+			"validateRelationTypes",
+			"validateSync_Queue",
+			"validateWebEWires",
+			"WAPI_hookValidateForm"
+		]
+	},
+	"_TableTemplate": {
+		"tables": [
+			"_TableTemplate"
+		],
+		"forms": [
+			"[_TableTemplate]Input",
+			"[_TableTemplate]Output"
+		]
+	},
+	"*** Meta ***": {
+		"methods": [
+			"create4DMethod",
+			"createAllModuleMethods",
+			"generateModuleMethods"
+		]
+	},
+	"*Core Modules": {
+		"groups": [
+			"",
+			"Calc Helpers",
+			"Calendar",
+			"Charting",
+			"Checks",
+			"Conversions",
+			"Essentials",
+			"Objects",
+			"Picker",
+			"Printing",
+			"Progress Bar",
+			"Search",
+			"Selection",
+			"Web"
+		],
+		"methods": [
+			"4dwr_hideAllMenusAndToolbars",
+			"4DWR_showAllMenusAndToolbars",
+			"activateSystemLogs",
+			"appendLabelString",
+			"appendToString",
+			"assert_old",
+			"backupNow",
+			"browseTable",
+			"browseTable_",
+			"browseTables",
+			"browseTables_",
+			"ChangeNumberAndNotify",
+			"changeSupportTeamPassword",
+			"changeUserPassword",
+			"clearPictureField",
+			"COMPILER_WEB",
+			"convDate2Serial",
+			"convStringToDate",
+			"copy4DWriteTextIntoPlainText",
+			"countRelatedManySelection",
+			"countRelatedOneSelection",
+			"createSerializedID",
+			"CRLF",
+			"deleteHighlightedRecords",
+			"deleteRelatedManyRecords",
+			"deleteRelatedOneRecords",
+			"disableTriggers",
+			"display_UpdatePanel",
+			"display4dToolbar",
+			"displayDialog",
+			"displayRecordID",
+			"displaySearchDialog",
+			"displaySelectedRecords",
+			"enableButtonForAdminOnly",
+			"enableTriggers",
+			"endErrorTrap",
+			"ErrorTrap",
+			"exportAll",
+			"exportData",
+			"fetchBLOBfromURL",
+			"filterRecords",
+			"findAndReplace",
+			"findAndReplaceString",
+			"FindStringInTable",
+			"forceQuit",
+			"GEN_OpenFormWindow",
+			"get",
+			"getButtonGridClickRC",
+			"getCommonalityInSelection",
+			"getCurrentVersion",
+			"getDateStampString",
+			"getElegantTableName",
+			"getElegantTableNameByNum",
+			"getFieldNamePtr",
+			"getImportExportFilePath",
+			"getImportExportFolderPath",
+			"getLastOrderedRecord",
+			"getListBoxRowNumber",
+			"getPrimaryKeyFieldPtr",
+			"getRGBComponents",
+			"getSemaphoreName",
+			"getSupportFilesPath",
+			"getSupportTeamPassword",
+			"getSystemUserID",
+			"getTableNamedSelection",
+			"getTableSelectionBalances",
+			"getWebFolderPath",
+			"handle vRecNum",
+			"handleApplyButton",
+			"handleApplyDateRangeObject",
+			"handleAutoFill",
+			"handleAutoFillFromArray",
+			"handleAutoFillSearch",
+			"handleAutoFillTable",
+			"handleBrowserFormMethod",
+			"handleCheckButton",
+			"handleCloseBox",
+			"handleColorThermometer",
+			"handleComboBox",
+			"handleComboFromField",
+			"handleDateWidget",
+			"handleDeleteOneRow",
+			"handleDeleteRows",
+			"handledoubleclickevent",
+			"handleDownArrowInPick",
+			"HandleEntryForm",
+			"handleFilterRecords",
+			"handleListForm",
+			"handleModifyButton",
+			"handleModifyForm",
+			"handleNavigationButtonsState",
+			"handlePageSetupCheckBox",
+			"handlePasswordCheckBox",
+			"handleProcess",
+			"handlePulldownShowTables",
+			"handleSaveButton",
+			"handleSortButton",
+			"handleSortButtonTable",
+			"handleTodayButton",
+			"handleViewForm",
+			"handleViewPasswordCheckBox",
+			"handleVRecNum",
+			"hasCustomSearchForm",
+			"Helper_GetPath",
+			"Helper_StringTokenizer",
+			"Hide4dToolbar",
+			"highlightRecords",
+			"importAll",
+			"importData",
+			"ImportExportTable",
+			"initDateRangeVars",
+			"is4DWriteAvailable",
+			"isSelectionHomogeneous",
+			"isTriggerEnabled",
+			"isUserAdministrator",
+			"isUserInGroupDesigners",
+			"isValidationConfirmed",
+			"isValidTime",
+			"LaunchProcess",
+			"linkAutoFillArrayTo",
+			"loadPicture",
+			"lockScreen",
+			"makeFullName",
+			"makeRandomPassword",
+			"modifyRecordClicked",
+			"modifyRecordsInSelection",
+			"modifyRrecordsInSelection",
+			"myAlert",
+			"newLine",
+			"nilErrorTrap",
+			"notifyUser",
+			"numToBoolean",
+			"NumToText",
+			"onModifyRecordEvent",
+			"onNewRecordEvent",
+			"onViewEvents",
+			"OpenEmailURL",
+			"openFormWindow",
+			"openMapByAddress",
+			"openPeopleFinderByPhone",
+			"openPictureFile",
+			"openPictureID",
+			"orderByKey",
+			"orderBys",
+			"parseInfoFromSuperPages",
+			"pathSeparator",
+			"pluralizeNoun",
+			"pluralizeVerbToBe",
+			"pressCancelKey",
+			"pressEnterKey",
+			"printFormFooter",
+			"queryByID",
+			"queryRecords",
+			"quit",
+			"Quotify",
+			"recordsShowAll",
+			"recordsShowHighlighted",
+			"registerClient",
+			"remoteAuthorization",
+			"RemoveCurrentRecordFromSelectio",
+			"revealSupportTeamPassword",
+			"roundUp",
+			"saveBLOBtoFile",
+			"searchAndReplaceStringField",
+			"searchRecords",
+			"searchRecordsInList",
+			"searchSelectionTable",
+			"searchTableDeep",
+			"selectAll",
+			"selectNone",
+			"selectOrphanedRecords",
+			"sendEmailUsingServerSettings",
+			"setApplicationUserForTable",
+			"setDateTimeUser",
+			"setDateTimeUserForced",
+			"setErrorTrap",
+			"setFormTitle",
+			"setListBoxFocusedRow",
+			"setPasswordProperty",
+			"setRadioButtonStatesInInvoice",
+			"setReceivedOrPaid",
+			"setRequestString",
+			"setRGBColourBG",
+			"setSystemUser",
+			"setTableID",
+			"setTimerInMinutes",
+			"Shell_Dialog_About",
+			"Shell_Dialog_HelpTip",
+			"Shell_DoProcess",
+			"Shell_Menu_DesignEnvironment",
+			"Shell_Menu_Quit",
+			"shiftLeft",
+			"showDateRangeTable",
+			"showObjectOnTrue",
+			"stayOnFieldIfNull",
+			"stayOnFieldIfZero",
+			"swapStrings",
+			"switchApplicationUser",
+			"switchDataFile",
+			"switchSystemUser",
+			"tableHasCustomSearchForm",
+			"toggleBooleanField",
+			"toggleFlaggedTable",
+			"toggleSwitchOfHighlightedSet",
+			"uncolourizeField",
+			"Update_",
+			"updateTableUsingMethod",
+			"UTIL_TS_getDateFromTimestamp",
+			"UTIL_TS_getTimeFromTimestamp",
+			"UTIL_TS_getTimeStampFromDate",
+			"v",
+			"vAdd",
+			"validateFieldsForTable",
+			"writeLog"
+		]
+	},
+	"*Project Forms": {
+		"forms": [
+			"AlertDialog",
+			"Case_Browser",
+			"ChoiceList",
+			"DateCalendarDialog",
+			"InitialConfigurations",
+			"RemoteAccounts1",
+			"RemoteListViewer",
+			"RequestForm",
+			"SanctionListCheckDemo",
+			"SearchForm",
+			"Template_ListBox",
+			"TestValidation",
+			"Toolbar",
+			"Toolbar_Brief",
+			"Toolbar_Entry",
+			"Toolbar_Listbox_complete",
+			"Toolbar_Listbox_noSearch",
+			"Toolbar_Min",
+			"Toolbar_PICK",
+			"Toolbar_ScreenReport",
+			"Toolbar_Search",
+			"Toolbar_Simple",
+			"Toolbar_View",
+			"typeahead"
+		]
+	},
+	"*Test Methods": {
+		"methods": [
+			"testpick"
+		]
+	},
+	"AccountBalances": {
+		"tables": [
+			"AccountBalances"
+		]
+	},
+	"AccountInOuts": {
+		"tables": [
+			"AccountInOuts"
+		],
+		"methods": [
+			"allRecordsAccountInOuts",
+			"checkifAccountisOfCurrency",
+			"createAccountInOuts",
+			"createRegisterOfAccountInOuts",
+			"delChecksAccountInOuts",
+			"delChecksInOuts",
+			"deleteAccountInOuts",
+			"displayListAccountInOuts",
+			"displayRecord_AccountInOuts",
+			"displayRecordAccountInOuts",
+			"exportAccountInOuts",
+			"handleInOutFormMethod",
+			"handleSaveInOutButton",
+			"importAccountInOuts",
+			"makeAccountInOutID",
+			"makeCommentsAccountInOuts",
+			"modifyRecordAccountInOuts",
+			"newRecordAccountInOuts",
+			"orderByAccountInOuts",
+			"printAccountInOuts",
+			"searchAccountInOuts",
+			"setAccInOutFieldsToInvoiceVars",
+			"validateAccountInOuts"
+		]
+	},
+	"AccountInOuts_": {
+		"forms": [
+			"[AccountInOuts]ListBox",
+			"[AccountInOuts]View"
+		]
+	},
+	"Accounts": {
+		"tables": [
+			"Accounts"
+		],
+		"methods": [
+			"allRecordsAccounts",
+			"checkIfAccountIDExists",
+			"checkIfAccountIsBankAccount",
+			"checkIfReservedBySystem",
+			"createAccount",
+			"createAllAccounts",
+			"createAllChequeAccounts",
+			"createChequePayable",
+			"createChequeReceivable",
+			"createPrimaryBankAccount",
+			"decrementValidation",
+			"delChecksAccounts",
+			"delChecksACTIVE_USERS",
+			"deleteAccounts",
+			"displayList_AccountInOuts",
+			"displayList_Accounts",
+			"displaylistAccounts",
+			"displayRecord_Accounts",
+			"displayRecordAccounts",
+			"exportAccounts",
+			"fillAdjustmentArrays",
+			"fillAdjustmentArrays2",
+			"fillArrayWithAccounts",
+			"fillReconciliationListBox",
+			"getAccountBalance",
+			"getAccountBalanceInDateRange",
+			"getAccountBalanceTable",
+			"getAccountBalanceToDate",
+			"getAccountTotals",
+			"getAccountTotalsForPrint",
+			"getAccountType",
+			"getAccountTypeNumber",
+			"getNextValidationStamp",
+			"handleAccountsListFormMethod",
+			"handleAccountsViewRegisters",
+			"handleSaveReconcileButton",
+			"handleSearchReconcileButton",
+			"IC_accountCurrencies",
+			"IC_invalidMainAccounts",
+			"importAccounts",
+			"incrementValidation",
+			"initAdjustmentArrays",
+			"initReconcileVars",
+			"isUserAllowedToViewThisAccount",
+			"makeAccountShortName",
+			"modifyRecordAccounts",
+			"newRecordAccounts",
+			"orderByAccounts",
+			"pickAccounts",
+			"pickAccountsOfCurrency",
+			"printAccounts",
+			"printAccountsDaily",
+			"printAccountsSummary",
+			"recon_handleReconciliationListB",
+			"recon_RefreshList",
+			"renameAccountIDsGlobally",
+			"searchAccounts",
+			"selectAccountsByCurrency",
+			"selectAccountsForCashTrans",
+			"selectAccountsInDateRange",
+			"selectAccountsRelatedToTill",
+			"selectFavoriteAccounts",
+			"selectUnreconciledRegistersFor",
+			"setBalanceAfter",
+			"showDateRangeAccounts",
+			"showFlaggedAccounts",
+			"showTodaysAccounts",
+			"toggleFlaggedAccounts",
+			"validateAccounts"
+		],
+		"forms": [
+			"[AccountInOuts]Entry",
+			"[AccountInOuts]list",
+			"[AccountInOuts]pay",
+			"[AccountInOuts]PayReceive",
+			"[AccountInOuts]Receive",
+			"[Accounts]Entry",
+			"[Accounts]List",
+			"[Accounts]Pick",
+			"[Accounts]printAccountsList",
+			"[Accounts]printMainAccounts",
+			"[Accounts]printPanel",
+			"[Accounts]Reconcile",
+			"[Accounts]reconcile_array",
+			"[Accounts]rep_accounts",
+			"[Accounts]rep_CashAccounts",
+			"[Accounts]rep_SummaryDaily",
+			"[Accounts]rep_SummaryVars",
+			"[Accounts]subForm_Agents",
+			"[Accounts]SubForm_Branches",
+			"[Accounts]SubForm_Currencies",
+			"[Accounts]Subform_Summarizer",
+			"[Accounts]View_old"
+		]
+	},
+	"Accounts_": {
+		"methods": [
+			"ACC_displayReconciliationForm",
+			"acc_fillAccouctsListBox",
+			"acc_fillAccountsListBoxRow",
+			"acc_fillBankPositionsListBoxRow",
+			"acc_fillCashPositionsListBoxRow",
+			"acc_fillPositionsListBox",
+			"acc_printFormAccountBalances",
+			"acc_printFormAccountPositions",
+			"acc_printFormBreakMethod",
+			"acc_printFormXreport",
+			"acc_printFormZreport",
+			"acc_RecalcAccountListBoxRow",
+			"acc_refreshAccountListBox"
+		],
+		"forms": [
+			"[Accounts]BranchBalances",
+			"[Accounts]BranchUnrealizedGains",
+			"[Accounts]CashInventory",
+			"[Accounts]ListBox",
+			"[Accounts]PositionsList",
+			"[Accounts]RemoteAccounts",
+			"[Accounts]rep_accountPositions",
+			"[Accounts]rep_XZreport",
+			"[Accounts]Search",
+			"[Accounts]View"
+		]
+	},
+	"Active_Users": {
+		"tables": [
+			"WebSessions"
+		],
+		"methods": [
+			"allRecordsACTIVE_USERS",
+			"deleteACTIVE_USERS",
+			"deleteActiveUsers",
+			"displayList_ACTIVE_USERS",
+			"displayListACTIVE_USERS",
+			"exportACTIVE_USERS",
+			"importACTIVE_USERS",
+			"MakeACTIVE_USERSContextID",
+			"modifyRecordACTIVE_USERS",
+			"newRecordACTIVE_USERS",
+			"printACTIVE_USERS",
+			"searchACTIVE_USERS"
+		]
+	},
+	"Address": {
+		"methods": [
+			"allRecordsAddresses",
+			"CanPostAC_ErrorDeserial",
+			"CanPostAC_GetApiKey",
+			"CanPostAC_handleError",
+			"CanPostAC_ProcessSearchResult",
+			"CanPostAC_RetrieveAddress",
+			"CanPostAC_RetrieveDeserial",
+			"CanPostAC_Search",
+			"CanPostAC_SearchDeserial",
+			"checkCustomerForRelations",
+			"createRecordAddress",
+			"createRecordCustomerAddress",
+			"display_Form_AddressSearch",
+			"display_Form_CustProximityDemo",
+			"display_Form_DistanceDemo",
+			"display_Form_GeocodeDemo",
+			"display_Form_ProximityDemo",
+			"getAddressesMatchingAddress",
+			"getAddressesNearAddress",
+			"getAddressHash",
+			"getCoordinateDistanceMath",
+			"getCoordinateDistanceMath2",
+			"getCustomersMatchingAddress",
+			"getCustomersNearAddress",
+			"googleGeocodeAddressObj",
+			"googleGeocodeAddressString",
+			"googleGetDistance",
+			"handleCustomerExtraAddressEntry",
+			"makeAddressID",
+			"newAddress",
+			"newRelation",
+			"regenerateAddressesForCustomers",
+			"regenerateAllAddressHashes",
+			"setAddressIdAndHash",
+			"splitAddressToUnitAndStreet",
+			"splitAddressToUnitStreetFields",
+			"test_address",
+			"test_CanPostAC",
+			"test_checkCustomerForRelations",
+			"test_updateCustomerAddressID",
+			"updateCustomerAddressID",
+			"updateCustomerAddressIDSimple",
+			"ut_CanPostAC_ErrorDeserial",
+			"ut_CanPostAC_RetrieveAddress",
+			"ut_CanPostAC_RetrieveDeserial",
+			"ut_CanPostAC_Search",
+			"ut_CanPostAC_SearchDeserial",
+			"ut_createRecordAddress",
+			"ut_getAddressesProximity",
+			"ut_getAddressHash",
+			"ut_getCoordinateDistanceMath2",
+			"ut_getCustomersNearAddress",
+			"ut_googleGeocodeAddressObj",
+			"ut_googleGeocodeAddressString",
+			"ut_googleGetDistance",
+			"ut_newAddress",
+			"ut_splitAddressToUnitNdStreet",
+			"ut_updateCustomerAddressSmple",
+			"validateAddressObject"
+		]
+	},
+	"AgentAccounts": {
+		"groups": [
+			"Folder"
+		],
+		"tables": [
+			"AgentAccounts"
+		],
+		"methods": [
+			"allRecordsAgentAccounts"
+		],
+		"forms": [
+			"[AgentAccounts]Entry",
+			"[AgentAccounts]ListBox"
+		]
+	},
+	"AgentPOs": {
+		"tables": [
+			"AgentPOs"
+		]
+	},
+	"Agents": {
+		"tables": [
+			"Agents"
+		],
+		"methods": [
+			"allRecordsAgents",
+			"createWebUserFromAgent",
+			"delChecksAgents",
+			"deleteAgents",
+			"displayList_Agents",
+			"displayListAgents",
+			"displayRecord_Agents",
+			"displayRecordAgents",
+			"exportAgents",
+			"getAgentPendingAccountID",
+			"importAgents",
+			"makeAgentsID",
+			"modifyRecordAgents",
+			"newRecordAgents",
+			"orderByAgents",
+			"pickAgents",
+			"printAgents",
+			"searchAgents",
+			"validateAgents"
+		],
+		"forms": [
+			"[Agents]Entry",
+			"[Agents]List",
+			"[Agents]Pick",
+			"[Agents]View"
+		]
+	},
+	"Agents_": {
+		"forms": [
+			"[Agents]ListBox_old"
+		]
+	},
+	"AML_AggrRules": {
+		"tables": [
+			"AML_AggrRules"
+		],
+		"methods": [
+			"displayRecord_AML_AggrRules"
+		],
+		"forms": [
+			"[AML_AggrRules]PICK"
+		]
+	},
+	"AML_Claims": {
+		"tables": [
+			"AML_Alerts"
+		],
+		"methods": [
+			"allRecordsAML_Alerts"
+		],
+		"forms": [
+			"[AML_Alerts]Entry",
+			"[AML_Alerts]ListBox",
+			"[AML_Alerts]PICK",
+			"[AML_Alerts]Print",
+			"[AML_Alerts]Search",
+			"[AML_Alerts]View"
+		]
+	},
+	"AML_Reports": {
+		"tables": [
+			"AML_Reports"
+		],
+		"methods": [
+			"allRecordsAML_Reports",
+			"delChecksAML_Reports",
+			"deleteAML_Reports",
+			"displayLBox_AML_Reports",
+			"displayLBoxAML_Reports",
+			"displayList_AML_Reports",
+			"displayListAML_Reports",
+			"displayRecord_AML_Reports",
+			"displayRecordAML_Reports",
+			"modifyRecordAML_Reports",
+			"newRecordAML_Reports",
+			"orderByAML_Reports",
+			"pickAML_Reports",
+			"printAML_Reports",
+			"searchAML_Reports",
+			"showFlaggedAML_Reports",
+			"showRelevantAML_Reports",
+			"showTodaysAML_Reports",
+			"toggleFlaggedAML_Reports",
+			"validateAML_Reports"
+		],
+		"forms": [
+			"[AML_Reports]Entry",
+			"[AML_Reports]ListBox",
+			"[AML_Reports]View"
+		]
+	},
+	"AML_ReviewLog": {
+		"tables": [
+			"AML_ReviewLog"
+		],
+		"methods": [
+			"allRecordsAML_ReviewLog"
+		],
+		"forms": [
+			"[AML_ReviewLog]Entry",
+			"[AML_ReviewLog]ListBox",
+			"[AML_ReviewLog]Output",
+			"[AML_ReviewLog]View"
+		]
+	},
+	"AML_RiskTemplates": {
+		"tables": [
+			"AML_RiskTemplates"
+		],
+		"methods": [
+			"allRecordsAML_RiskTemplates"
+		],
+		"forms": [
+			"[AML_RiskTemplates]Entry",
+			"[AML_RiskTemplates]ListBox",
+			"[AML_RiskTemplates]PICK",
+			"[AML_RiskTemplates]PRINT",
+			"[AML_RiskTemplates]Search",
+			"[AML_RiskTemplates]View"
+		]
+	},
+	"AMLRules": {
+		"tables": [
+			"AMLRules"
+		],
+		"methods": [
+			"allRecordsAMLRules"
+		],
+		"forms": [
+			"[AMLRules]Entry",
+			"[AMLRules]List",
+			"[AMLRules]ListBox",
+			"[AMLRules]ListboxForm",
+			"[AMLRules]View"
+		]
+	},
+	"Archieve": {
+		"methods": [
+			"slo_displaySanctionListResult",
+			"slol2_displaySanctionListResult",
+			"slold_chooseSanctionCheckMethod",
+			"slold_displaySanctionListResult",
+			"slold_findSignalById",
+			"slold_handleCheckCompleteEvent",
+			"slold_isSanctionCheckCompleted",
+			"slold_k20DisplayDetails",
+			"slold_k20DisplaySummary",
+			"slold_k20FindDetail",
+			"slold_k20getReponseType",
+			"slold_k20requestSanctionCheck",
+			"slold_k20requestSanctionDetails",
+			"slold_pickSanctionCheckLists",
+			"slold_requestAndLogSanction",
+			"slold_requestManySanctionChecks",
+			"slold_runWorkerProcess",
+			"slold_screenCompany",
+			"slold_screenPerson",
+			"slold_searchTodayScreening",
+			"slold_setOrGetSanctionFlag",
+			"slold_setupDisplayListBox",
+			"slold_signalToMainProcess",
+			"slold1_runWorkerProcess",
+			"sloldn_k20DisplayDetails"
+		]
+	},
+	"Arrays": {
+		"methods": [
+			"appendToArray",
+			"fillArrayTableNamesAndNumbers",
+			"fillRunningBalanceArray"
+		]
+	},
+	"Audit": {
+		"tables": [
+			"Audit"
+		],
+		"methods": [
+			"allRecordsAudit"
+		],
+		"forms": [
+			"[Audit]View"
+		]
+	},
+	"AuditControls": {
+		"tables": [
+			"AuditControls"
+		],
+		"methods": [
+			"allRecordsAuditControls"
+		],
+		"forms": [
+			"[AuditControls]Entry",
+			"[AuditControls]ListBox",
+			"[AuditControls]View"
+		]
+	},
+	"AutoReconciler": {},
+	"b2": {
+		"methods": [
+			"b2_authorize_account",
+			"b2_cancel_large_file",
+			"b2_compare",
+			"b2_getAsyncUploadLimit",
+			"b2_getCLIToolPath",
+			"b2_getDelay",
+			"b2_getKey",
+			"b2_getLocalFileList",
+			"b2_getMyBucketName",
+			"b2_getUnfinishedlargeFiles",
+			"b2_isFileinUnfinishedFiles",
+			"b2_ls",
+			"b2_onBackupShutdown",
+			"b2_parseB2UploadOutput",
+			"b2_uploaderWorker",
+			"b2_uploadFile",
+			"b2_uploadFileAsync",
+			"backup_CloseConfig",
+			"backup_getConfigXMLRef",
+			"backup_getDestinationFolder",
+			"backup_getHistory",
+			"backup_getlastBackupLogFile",
+			"backup_getLastBackupLogFilev17",
+			"col_Difference",
+			"File_v17",
+			"filterCollection"
+		],
+		"forms": [
+			"b2_dialog"
+		]
+	},
+	"Backup": {
+		"groups": [
+			"BackupLogs"
+		],
+		"methods": [
+			"BKP_GetDirGlyph",
+			"BKP_GetTextVal",
+			"BKP_Initialize",
+			"BKP_InitializeFormVariables",
+			"BKP_InitializeGlobalVariables",
+			"BKP_isBool",
+			"BKP_LaunchApp",
+			"BKP_readDefaultBackupXML",
+			"BKP_Startup",
+			"BKP_XML_EndDocument",
+			"BKP_XML_GetAdvancedSettings",
+			"BKP_XML_GetAllPreferences",
+			"BKP_XML_GetDatabaseInfo",
+			"BKP_XML_GetGeneralSettings",
+			"BKP_XML_GetParentElem",
+			"BKP_XML_GetSchedulerSettings",
+			"BKP_XML_GetSettings",
+			"BKP_XML_GetSimpleName",
+			"BKP_XML_PopulateVariables",
+			"BKP_XML_Save",
+			"BKP_XML_SaveAdvanced",
+			"BKP_XML_SaveGeneral",
+			"BKP_XML_SaveInfo",
+			"BKP_XML_SaveScheduler",
+			"BKP_XML_SetAdvanced",
+			"BKP_XML_SetChoice",
+			"BKP_XML_SetGeneral",
+			"BKP_XML_SetGroupArrays",
+			"BKP_XML_SetInfo",
+			"BKP_XML_SetScheduler",
+			"BKP_XML_SetVariable",
+			"BKP_XML_StartDocument",
+			"BKP_XML_WriteData",
+			"open4DBackupPreferences",
+			"warnForBackup"
+		]
+	},
+	"BackupLogs": {
+		"tables": [
+			"BackupLogs",
+			"BackupPrefs"
+		],
+		"methods": [
+			"allRecordsBackupLogs",
+			"BackupLog",
+			"createBackupID",
+			"createBackupLog",
+			"delChecksBackupLogs",
+			"deleteBackupLogs",
+			"displayList_BackupLogs",
+			"displayListBackupLogs",
+			"displayRecord_BackupLogs",
+			"displayRecordBackupLogs",
+			"exportBackupLogs",
+			"importBackupLogs",
+			"makeBackupLogID",
+			"modifyRecordBackupLogs",
+			"newRecordBackupLogs",
+			"orderByBackupLogs",
+			"pickBackupLogs",
+			"printBackupLogs",
+			"searchBackupLogs",
+			"validateBackupLogs"
+		]
+	},
+	"BackupLogs_": {
+		"forms": [
+			"[BackupLogs]Entry",
+			"[BackupLogs]print",
+			"[BackupLogs]View"
+		]
+	},
+	"BackupPrefs": {},
+	"BalanceSnapshots": {
+		"tables": [
+			"BalanceSnapshots"
+		],
+		"forms": [
+			"[BalanceSnapshots]List"
+		]
+	},
+	"BankAccounts": {
+		"tables": [
+			"WireTemplates"
+		],
+		"methods": [
+			"allRecordsWireTemplates",
+			"autoFillOurBankAccountID",
+			"createBankAccount",
+			"delChecksWireTemplates",
+			"deleteWireTemplates",
+			"displayList_WireTemplates",
+			"displayListWireTemplates",
+			"displayRecord_WireTemplates",
+			"displayRecordWireTemplates",
+			"exportWireTemplates",
+			"getBankAccountBalance",
+			"HandleBankAccountEntry",
+			"importBankAccounts",
+			"makeWireTemplateID",
+			"modifyRecordWireTemplates",
+			"newRecordWireTemplates",
+			"orderByWireTemplates",
+			"pickBankAccountsofCurrency",
+			"pickWireTemplates",
+			"printWireTemplates",
+			"searchWireTemplates",
+			"selectBankAccountsOfCurrency",
+			"selectWireTemplatesForCustomer",
+			"validateWireTemplates"
+		],
+		"forms": [
+			"[WireTemplates]Entry",
+			"[WireTemplates]List",
+			"[WireTemplates]Pick",
+			"[WireTemplates]Search",
+			"[WireTemplates]Subform_Customers"
+		]
+	},
+	"BankNotes": {
+		"methods": [
+			"createBankNotes",
+			"delChecksBankNotes",
+			"deleteBankNotes",
+			"displayList_BankNotes",
+			"displayListBankNotes",
+			"displayRecord_BankNotes",
+			"displayRecordBankNotes",
+			"fetchBankNoteBLOB",
+			"fetchBankNotePicture",
+			"handleDownloadBankNote",
+			"importBankNotes",
+			"modifyRecordBankNotes",
+			"newRecordBankNotes",
+			"pickBankNotes",
+			"printBankNotes",
+			"readBankNotes",
+			"searchBankNotes"
+		]
+	},
+	"BankNotes_": {},
+	"Banks": {
+		"methods": [
+			"allRecordsBanks",
+			"displayList_Banks",
+			"displayRecord_Banks",
+			"displayRecordBanks",
+			"exportBanks",
+			"importBanks",
+			"makeBank",
+			"modifyRecordBanks",
+			"newRecordBanks",
+			"printBanks",
+			"readBankCodes",
+			"searchBanks",
+			"unloadRecordBanks",
+			"validateBanks",
+			"validateBranches"
+		]
+	},
+	"BLACKLIST_IND": {
+		"methods": [
+			"allrecordsBLACKLIST_IND",
+			"delChecksBLACKLIST_IND",
+			"deleteBLACKLIST_IND",
+			"displayList_BlackList_Ind",
+			"displayListBlackList",
+			"displayListBLACKLIST_IND",
+			"displayRecord_BLACKLIST_IND",
+			"displayRecordBLACKLIST_IND",
+			"exportBLACKLIST_IND",
+			"importBLACKLIST_IND",
+			"modifyRecordBLACKLIST_IND",
+			"newRecordBLACKLIST_IND",
+			"printBLACKLIST_IND",
+			"searchBLACKLIST_IND"
+		]
+	},
+	"Bookings": {
+		"tables": [
+			"Bookings"
+		],
+		"methods": [
+			"allRecordsBOOKINGS",
+			"delChecksBOOKINGS",
+			"deleteBOOKINGS",
+			"displayList_BOOKINGS",
+			"displayListBOOKINGS",
+			"displayRecord_BOOKINGS",
+			"displayRecordBOOKINGS",
+			"exportBOOKINGS",
+			"handleAutoFillSearchBookings",
+			"importBOOKINGS",
+			"makeBookingID",
+			"makeCommentsBooking_EN",
+			"modifyRecordBOOKINGS",
+			"newRecordBOOKINGS",
+			"orderByBOOKINGS",
+			"pickBOOKINGS",
+			"printBOOKINGS",
+			"searchBOOKINGS",
+			"selectActiveBookingsForCustomer",
+			"setBookingsAutoComment",
+			"showDateRangeBookings",
+			"showFlaggedBookings",
+			"showTodaysBookings",
+			"validateBOOKINGS"
+		],
+		"forms": [
+			"[Bookings]Entry",
+			"[Bookings]List",
+			"[Bookings]Pick_old",
+			"[Bookings]subform_Customers",
+			"[Bookings]View"
+		]
+	},
+	"Bookings_": {
+		"forms": [
+			"[Bookings]ListBox",
+			"[Bookings]PICK",
+			"[Bookings]print",
+			"[Bookings]Search"
+		]
+	},
+	"Branches": {
+		"tables": [
+			"Branches"
+		],
+		"methods": [
+			"allRecordsBranches"
+		],
+		"forms": [
+			"[Branches]Entry",
+			"[Branches]List",
+			"[Branches]Listbox",
+			"[Branches]View"
+		]
+	},
+	"Business Modules_____________": {
+		"groups": [
+			"AccountInOuts",
+			"Accounts",
+			"Active_Users",
+			"Agents",
+			"Backup",
+			"BankAccounts",
+			"BankNotes",
+			"Banks",
+			"BLACKLIST_IND",
+			"Bookings",
+			"CallLogs",
+			"Cash",
+			"Cheques",
+			"ClientPrefs",
+			"CurrenciesGroup",
+			"Customers",
+			"Denominations",
+			"eWires",
+			"FeeStructures",
+			"Flags",
+			"Forms",
+			"IntegrityChecks",
+			"Invoices",
+			"ItemCategories",
+			"Letters",
+			"Links",
+			"MACs",
+			"MainAccounts",
+			"Messages",
+			"Misc",
+			"PictureIDs",
+			"Privileges",
+			"Registers",
+			"ServerPrefs",
+			"SystemLogs",
+			"TransferTemplates",
+			"Users",
+			"UsersLog",
+			"WebUsers",
+			"Wires"
+		],
+		"methods": [
+			"createRegisterFromTable",
+			"declareSummaryVars",
+			"delCheckss",
+			"delete",
+			"getRadioButtonsSelection",
+			"handleBTABbrowseTables",
+			"handleSearchInSummarizer",
+			"handlevOurBankAccountID",
+			"initGlobalVars",
+			"initializeCalculator",
+			"isAccountTypeDebit",
+			"reformatNumber",
+			"rep_",
+			"rep_printAccountBalances",
+			"rep_printCurrenciesSummary",
+			"roundThisToBase",
+			"roundToBase",
+			"setArrowState",
+			"setLastUpdate",
+			"setOffBalanceArrayRow",
+			"Startup",
+			"writeAndUploadXMLRates",
+			"writeXMLFlashTicker",
+			"writeXMLRatesForFlash"
+		]
+	},
+	"Buttons": {
+		"methods": [
+			"bDeleteHighlightedRecords",
+			"bDeleteRecord",
+			"bExportRecords",
+			"bFirstRecord",
+			"bImportRecords",
+			"bindPictureButtonToBooleanField",
+			"bindPopUpToIntegerField",
+			"bindPullDownToStringField",
+			"bLastRecord",
+			"bLoadSelection",
+			"bModifyRecord",
+			"bNewRecord",
+			"bNextRecord",
+			"bPreviousRecord",
+			"bPrintRecord",
+			"bPrintRecords",
+			"bQueryRecords",
+			"bQuickReport",
+			"bRecordsShowAll",
+			"bRecordsShowHighlighted",
+			"bSaveSelection",
+			"bSearchRecords",
+			"bSelectAllRecords",
+			"bShowAll",
+			"bShowDateRange",
+			"bShowFlaggedRecords",
+			"bShowTodaysRecords",
+			"bSortRecords",
+			"bToggleFlaggedRecords",
+			"bViewRecord",
+			"colorizeExpiredDate",
+			"colorizeNegs",
+			"colorizeOnTrue",
+			"colourizeAlternateRows",
+			"colourizeField",
+			"colourizeLineBG",
+			"colourizeMandatoryField",
+			"colourizeMandatoryTable",
+			"colourizeObject",
+			"enableButtonIf",
+			"maskBlue",
+			"maskGreen",
+			"maskRed"
+		]
+	},
+	"cached": {
+		"methods": [
+			"getKeyValue",
+			"initCachedKeyValue",
+			"setCachedKeyValue",
+			"test_CachedKeyValue"
+		]
+	},
+	"Calc Helpers": {
+		"methods": [
+			"accumulateReal",
+			"calc",
+			"calc_Amount",
+			"calc_AmountLocal",
+			"calc_FeeLocal",
+			"calc_PercentFee",
+			"calc_Rate",
+			"calcAccountsRepLineVars",
+			"calcAlpha",
+			"calcAnnualizedReturn",
+			"calcApplyFees",
+			"calcApplyPCT",
+			"calcAppraisal",
+			"calcBOMonth",
+			"calcBOYear",
+			"calcCalculatorVars",
+			"calcCalculatorVars_old",
+			"calcCashInventorySums",
+			"calcColour",
+			"calcCountVars",
+			"calcCurrencyProfitVars",
+			"calcEllapsedMonths",
+			"calcExchangeRate",
+			"calcFeesInInvoice",
+			"calcInvoiceVars",
+			"calcItemsInOutLineVars",
+			"calcMax",
+			"calcMaxDate",
+			"calcMin",
+			"calcMinDate",
+			"calcOurBuyRate",
+			"calcOurSellRate",
+			"calcPctChange",
+			"calcProfiVarsInCurrencyView_old",
+			"calcReturnRisk",
+			"CalcRSqr",
+			"calcRunningVars",
+			"calcRunningVars_old",
+			"calcSafeDivide",
+			"calcSharpeRatio",
+			"calcSterling",
+			"calcSumAndRemainVars",
+			"calcSummaryVars",
+			"calcSumVarsInCashRegistersView",
+			"calcSumVarsInMainAccountsView",
+			"calcTreynor",
+			"calculaleHoldingsArrays",
+			"calculateFieldsInInvoiceRows",
+			"calculateHoldingsSumVars",
+			"calculateReconcileVars",
+			"calcvAmount",
+			"calcvAmountLocal",
+			"calcvAmountLocal_BF",
+			"calcVarsInAccountsView",
+			"calcvFeeLocal",
+			"calcvPercentFee",
+			"calcvRate",
+			"saveTextToFile",
+			"vAppendVectors",
+			"vApplyPctChange",
+			"vCalcBeta",
+			"vCalcCovar",
+			"vCalcDotProduct",
+			"vCalcMean",
+			"vCalcPastPerformance",
+			"vCalcReturnForPeriod",
+			"vCalcReturnSinceInception",
+			"vCalcStdev",
+			"vCalcSum",
+			"vCalcVar",
+			"vCalcYTDReturn",
+			"vecSum",
+			"versions",
+			"vFillAbbrDates",
+			"vFillCommonDates",
+			"vFillDates",
+			"vFillLinear",
+			"vFillWithConstant",
+			"vFillWithString",
+			"vGetCommonDateRange",
+			"vGetComparativeVars",
+			"vGetRiskVars",
+			"vGetTendencyVars",
+			"vGetValueForDate",
+			"viewRecordsInSelection",
+			"vMultiply",
+			"vScalarMultiply"
+		]
+	},
+	"Calendar": {
+		"methods": [
+			"cal_",
+			"cal_date",
+			"cal_getBOM_MY",
+			"cal_getBOMByDate",
+			"cal_getFirstWeekDayNumberOf",
+			"cal_getMonthlyCalendarDayRC",
+			"cal_getNumberOfDaysInMonth",
+			"cal_getPickedDate",
+			"cal_getWeekDayName",
+			"cal_gotoDay",
+			"cal_gotoMonth",
+			"cal_gotoNextMonth",
+			"cal_gotoPreviousMonth",
+			"cal_pickDate",
+			"cal_setCalendarDate",
+			"cal_setCalendarDay",
+			"cal_setCalendarMonth",
+			"cal_setCalendarYear",
+			"cal_setPickedDate",
+			"handleFillMonthlyCalendarArrays"
+		]
+	},
+	"CalendarEvents": {
+		"tables": [
+			"CalendarEvents"
+		],
+		"methods": [
+			"allRecordsCalendarEvents"
+		],
+		"forms": [
+			"[CalendarEvents]Entry",
+			"[CalendarEvents]Entry-OLD",
+			"[CalendarEvents]List",
+			"[CalendarEvents]Listbox",
+			"[CalendarEvents]miniList",
+			"[CalendarEvents]View"
+		]
+	},
+	"CallLogs": {
+		"tables": [
+			"CallLogs"
+		],
+		"methods": [
+			"allRecordsCallLogs",
+			"delChecksCallLogs",
+			"deleteCallLogs",
+			"displayList_CallLogs",
+			"displayListCallLogs",
+			"displayRecord_CallLogs",
+			"displayRecordCallLogs",
+			"exportCallLogs",
+			"importCallLogs",
+			"makeCallLogID",
+			"modifyRecordCallLogs",
+			"newRecordCallLogs",
+			"orderByCallLogs",
+			"pickCallLogs",
+			"printCallLogs",
+			"searchCallLogs",
+			"showFlaggedCallLogs",
+			"showTodaysCallLogs",
+			"toggleFlaggedCallLogs",
+			"validateCallLogs"
+		],
+		"forms": [
+			"[CallLogs]Entry",
+			"[CallLogs]List",
+			"[CallLogs]subform_Customers",
+			"[CallLogs]View"
+		]
+	},
+	"CallLogs_": {
+		"forms": [
+			"[CallLogs]ListBox",
+			"[CallLogs]print"
+		]
+	},
+	"Cash": {
+		"tables": [
+			"CashAccounts",
+			"CashInOuts",
+			"CashInventory",
+			"CashRegisters",
+			"CashTransactions"
+		],
+		"methods": [
+			"allRecordsCashAccounts",
+			"allRecordsCashInOuts",
+			"allRecordscashInventory",
+			"allRecordsCashRegisters",
+			"allRecordscashTransactions",
+			"assignAllCashToCashRegisters",
+			"assignCashAccountToCashRegister",
+			"createAllCashAccounts",
+			"createCashAccount",
+			"createCashBank",
+			"createCashInOutSubrecord",
+			"createCashMainAccount",
+			"createCashRegisterID",
+			"createCashRegistersMainAccount",
+			"createCashTransactionRecord",
+			"createRegisterOfCashTrans",
+			"delChecksCashAccounts",
+			"delChecksCashInOuts",
+			"delChecksCashInventory",
+			"delChecksCashRegisters",
+			"delChecksCashTransactions",
+			"deleteCashAccounts",
+			"deleteCashInOuts",
+			"deleteCashInventory",
+			"deleteCashRegisters",
+			"deleteCashTransactions",
+			"displayCashAccounts",
+			"displayCashAccounts_",
+			"displayList_CashAccounts",
+			"displayList_CashInOuts",
+			"displayList_cashInventory",
+			"displayList_CashRegisters",
+			"displayList_cashTransactions",
+			"displayListCashAccounts",
+			"displayListCashInOuts",
+			"displayListCashInventory",
+			"displayListCashRegisters",
+			"displayListcashTransactions",
+			"displayRecord_CashAccounts",
+			"displayRecord_CashInOuts",
+			"displayRecord_cashInventory",
+			"displayRecord_CashRegisters",
+			"displayRecord_CashTransactions",
+			"displayRecordCashAccounts",
+			"displayRecordCashInOuts",
+			"displayRecordcashInventory",
+			"displayRecordCashRegisters",
+			"displayRecordcashTransactions",
+			"exportCashAccounts",
+			"exportCashInOuts",
+			"exportcashInventory",
+			"exportCashRegisters",
+			"exportcashTransactions",
+			"getDefaultCashRegisterID",
+			"getDefaultCashRegisterName",
+			"handleAddRowInCashTrans",
+			"handleAddRowInCashTransferArray",
+			"handleCashTransactionsFormMetho",
+			"handleFilterCashInventory",
+			"handleQuickCashButton",
+			"handleSaveCashTransactions",
+			"importCashAccounts",
+			"importCashInOuts",
+			"importcashInventory",
+			"importCashRegisters",
+			"importcashTransactions",
+			"InitCashTransactionVars",
+			"isUserSignedInWithCashRegister",
+			"makeCashAccountID",
+			"makeCashInOuts",
+			"makeCashInventoryID",
+			"makeCashRegistersID",
+			"makeCashTransactionsID",
+			"makeCommentsCashTransactions_EN",
+			"modifyRecordCashAccounts",
+			"modifyRecordCashInOuts",
+			"modifyRecordcashInventory",
+			"modifyRecordCashRegisters",
+			"modifyRecordcashTransactions",
+			"newRecordCashAccounts",
+			"newRecordCashInOuts",
+			"newRecordcashInventory",
+			"newRecordCashRegisters",
+			"newRecordcashTransactions",
+			"orderByCashAccounts",
+			"orderByCashInOuts",
+			"orderBycashInventory",
+			"orderByCashRegisters",
+			"orderBycashTransactions",
+			"pickCashRegisters",
+			"printCashAccounts",
+			"printCashInOuts",
+			"printcashInventory",
+			"printCashRegisters",
+			"printcashTransactions",
+			"printDailyCashRegisters",
+			"queryCashAccounts",
+			"receiveCash",
+			"relateManyCashInOuts",
+			"searchCashAccounts",
+			"searchCashInOuts",
+			"searchcashInventory",
+			"searchCashRegisters",
+			"searchCashTransactions",
+			"selectAllCashAccountsofCur",
+			"selectCashAccountsForUser",
+			"setCashInventoryCalcFields",
+			"setCashTransFieldsToInvoiceVars",
+			"signInUserWithCashRegister",
+			"signOutFromCashRegister",
+			"transferFromTilltoTill",
+			"transferTillToSafe",
+			"updateRelatedCashInventory",
+			"updateSelectedCashInventory",
+			"validateCashAccounts",
+			"validateCashInOuts",
+			"validateCashRegisters",
+			"validateCashTransactions",
+			"validateCashTransfer",
+			"validatePayCash_Inv"
+		],
+		"forms": [
+			"[CashAccounts]Entry",
+			"[CashAccounts]List",
+			"[CashAccounts]Subform_CashRegisters",
+			"[CashAccounts]View",
+			"[CashInOuts]ListBox",
+			"[CashInOuts]Subform_CashIn",
+			"[CashInOuts]Subform_CashInvoice",
+			"[CashInOuts]Subform_CashOut",
+			"[CashInOuts]Subform_CashTransactions",
+			"[CashInOuts]Subform_Transactions",
+			"[CashInOuts]View",
+			"[CashInventory]Entry",
+			"[CashInventory]list",
+			"[CashInventory]Subform_CashAccounts",
+			"[CashInventory]Subform_CashRegister2",
+			"[CashInventory]subform_CashRegisters",
+			"[CashInventory]view",
+			"[CashRegisters]Entry",
+			"[CashRegisters]List",
+			"[CashRegisters]Pick",
+			"[CashRegisters]TransferToSafe",
+			"[CashRegisters]View",
+			"[CashTransactions]Background",
+			"[CashTransactions]Deposit",
+			"[CashTransactions]Entry",
+			"[CashTransactions]list",
+			"[CashTransactions]Pay",
+			"[CashTransactions]PayReceive",
+			"[CashTransactions]Receive",
+			"[CashTransactions]Subform_CashInventory",
+			"[CashTransactions]Transfer",
+			"[CashTransactions]View",
+			"[CashTransactions]Withdraw"
+		]
+	},
+	"CashAccounts": {
+		"forms": [
+			"[CashAccounts]ListBox",
+			"[CashAccounts]print"
+		]
+	},
+	"CashInOuts": {
+		"forms": [
+			"[CashInOuts]Entry",
+			"[CashInOuts]print"
+		]
+	},
+	"CashInventory": {
+		"methods": [
+			"displayLBox_CashInventory",
+			"displayLBoxCashInventory"
+		],
+		"forms": [
+			"[CashInventory]ListBox"
+		]
+	},
+	"CashRegisters": {
+		"forms": [
+			"[CashRegisters]ListBox",
+			"[CashRegisters]pickTill",
+			"[CashRegisters]View1"
+		]
+	},
+	"CashTransactions": {
+		"forms": [
+			"[CashTransactions]ListBox",
+			"[CashTransactions]print"
+		]
+	},
+	"CC_Log": {
+		"tables": [
+			"CC_Log"
+		],
+		"methods": [
+			"allRecordsCC_Log"
+		],
+		"forms": [
+			"[CC_Log]Entry",
+			"[CC_Log]ListBox",
+			"[CC_Log]PICK",
+			"[CC_Log]Print",
+			"[CC_Log]View"
+		]
+	},
+	"Charting": {
+		"methods": [
+			"Chart ColorizeAxis",
+			"Chart ColorizeGrids",
+			"Chart drawBorder",
+			"Chart OpenWindow",
+			"Chart setGridColor",
+			"Chart showGrid",
+			"Chart showLegend",
+			"Chart showMenus",
+			"ChartERROR",
+			"chartSetFont",
+			"chartTurnOffDisplays",
+			"delChecks",
+			"getChartColour",
+			"GraphAreaDateValueArrays",
+			"GraphDateValueArr_off",
+			"graphDateValueArrays",
+			"GraphDateValueArrays_rep",
+			"GraphPieArray",
+			"GraphPieArray2",
+			"GraphStackArray"
+		]
+	},
+	"Checks": {
+		"methods": [
+			"checkAddError",
+			"checkAddErrorIf",
+			"checkAddErrorOnTrue",
+			"checkAddWarning",
+			"checkAddWarningOnTrue",
+			"checkErrorExist",
+			"checkGetErrorString",
+			"checkGetWarningString",
+			"checkGreaterThan",
+			"checkIfModified",
+			"checkIfNullString",
+			"checkifRecordExists",
+			"checkIfRelatedManyRecordExist",
+			"checkifRelatedOneExist",
+			"checkifStringsEqual",
+			"checkIfValidDate",
+			"checkInit",
+			"checkList_template",
+			"checkLowerBound",
+			"checkTemplate",
+			"checkUniqueKey",
+			"checkUniqueness",
+			"checkWarningExist",
+			"validateTable"
+		]
+	},
+	"ChequeBooks": {
+		"tables": [
+			"ChequeBooks"
+		],
+		"methods": [
+			"allRecordsChequeBooks",
+			"delChecksChequeBooks",
+			"deleteChequeBooks",
+			"displayList_ChequeBooks",
+			"displayListChequeBooks",
+			"exportChequeBooks",
+			"modifyRecordChequeBooks",
+			"newRecordChequeBooks",
+			"orderByChequeBooks",
+			"pickChequeBooks",
+			"printChequeBooks",
+			"searchChequeBooks",
+			"validateChequeBooks"
+		]
+	},
+	"ChequeBooks_": {},
+	"Cheques": {
+		"groups": [
+			"ChequeBooks"
+		],
+		"tables": [
+			"Cheques"
+		],
+		"methods": [
+			"allRecordscheques",
+			"createRegisterOfCheques",
+			"delChecksCheques",
+			"deleteCheques",
+			"displayList_cheques",
+			"displayListcheques",
+			"displayPrintChequeDialog",
+			"displayRecord_ChequeBooks",
+			"displayRecord_cheques",
+			"displayRecordChequeBooks",
+			"displayRecordcheques",
+			"editFormChequePrint",
+			"exportcheques",
+			"getChequePageFormat",
+			"getChequePrintScale",
+			"getChequeStatusString",
+			"handleArrChequeStatus",
+			"handleAutoClearoutCheque",
+			"handleBounceCheque",
+			"handleChequeDisplayDetail",
+			"handleChequeEntryFormMethod",
+			"handleChequePrintVars",
+			"handleChequesListFormMethod",
+			"handleClearChequeButton",
+			"handleClearChequesButton",
+			"handleClearFromBankPullDown",
+			"handlePendingButton",
+			"handlePickPictureButton",
+			"handlePrintChequeButton",
+			"handlePrintChequeInInvoice",
+			"handleRegistersPrintChequeAfter",
+			"handleSaveChequesButton",
+			"IC_chequeCurrencies",
+			"importChequeBooks",
+			"importcheques",
+			"makeChequeAccountID",
+			"makeChequeBookID",
+			"makeChequePayable",
+			"makeChequeReceivable",
+			"makechequesID",
+			"makeCommentsCheques_EN",
+			"modifyRecordcheques",
+			"newRecordcheques",
+			"orderBycheques",
+			"pickcheques",
+			"pickPayChequeAccountID",
+			"pickReceiveChequeAccountID",
+			"printcheques",
+			"readChequeCoordinates",
+			"Register_DeleteBadEntries",
+			"searchcheques",
+			"selectChequeDepositableAccounts",
+			"selectChequeWithdrawableAccount",
+			"selectFlaggedCheques",
+			"setChequeFieldsToInvoiceVars",
+			"setChequeStatus",
+			"showDateRangeCheques",
+			"showFlaggedCheques",
+			"showTodaysCheques",
+			"toggleFlaggedCheques",
+			"validatecheques"
+		],
+		"forms": [
+			"[Cheques]entry",
+			"[Cheques]list",
+			"[Cheques]pay",
+			"[Cheques]PayReceive",
+			"[Cheques]receive",
+			"[Cheques]View"
+		]
+	},
+	"Cheques_": {
+		"forms": [
+			"[Cheques]ChequeScanForm",
+			"[Cheques]ListBox",
+			"[Cheques]printList",
+			"[Cheques]Search"
+		]
+	},
+	"Cities": {
+		"tables": [
+			"Cities"
+		],
+		"methods": [
+			"allRecordsCities"
+		],
+		"forms": [
+			"[Cities]Entry",
+			"[Cities]ListBox",
+			"[Cities]View"
+		]
+	},
+	"ClientPrefs": {
+		"tables": [
+			"ClientPrefs"
+		],
+		"methods": [
+			"allRecordsClientPrefs",
+			"delChecksClientPrefs",
+			"delChecksClientPrefss",
+			"deleteClientPrefs",
+			"deleteClientPrefss",
+			"displayList_ClientPrefs",
+			"displayListClientPrefs",
+			"displayRecord_ClientPrefs",
+			"displayRecordClientPrefs",
+			"exportClientPrefs",
+			"getClientAutoChequePrint",
+			"getClientAutoeWirePrint",
+			"getClientAutoWirePrint",
+			"getClientBrowserFormName",
+			"getClientChequeFormName",
+			"getClientChequeOrientation",
+			"getClientChequePageFormat",
+			"getClientChequePrinterName",
+			"getClientChequeScale",
+			"getClientCopiesPerCheque",
+			"getClientCopiesPerInvoice",
+			"getClientDefaultOrientation",
+			"getClientDefaultPageFormat",
+			"getClientDefaultPrinterName",
+			"getClientDefaultScale",
+			"getClientInvoiceEntryForm",
+			"getClientInvoiceFormName",
+			"getClientPictureIDDest",
+			"getClientPictureIDFolders",
+			"getClientPictureIDSource",
+			"getClientReceiptOrientation",
+			"getClientReceiptPageFormat",
+			"getClientReceiptPrinterName",
+			"getClientReceiptScale",
+			"getDefaultPageFormat",
+			"getDefaultPrintScale",
+			"getReceiptPageFormat",
+			"getReceiptPrintScale",
+			"handleDuplicateClientPrefsRecor",
+			"handleSelectThisClientButton",
+			"importClientPrefs",
+			"modifyRecordClientPrefs",
+			"newRecordClientPrefs",
+			"orderByClientPrefs",
+			"pickClientPrefs",
+			"printClientPrefs",
+			"searchClientPrefs",
+			"selectClientPrefsRecord",
+			"validateClientPrefs"
+		],
+		"forms": [
+			"[ClientPrefs]Entry",
+			"[ClientPrefs]list"
+		]
+	},
+	"ClientPrefs_": {
+		"forms": [
+			"[ClientPrefs]ListBox",
+			"[ClientPrefs]print",
+			"[ClientPrefs]subform",
+			"[ClientPrefs]View"
+		]
+	},
+	"Colourizing": {
+		"methods": [
+			"getAbbrDateString",
+			"getAbbrMonthName"
+		]
+	},
+	"CommonLists": {
+		"methods": [
+			"allRecordsCommonLists",
+			"delChecksCommonLists",
+			"deleteCommonLists",
+			"displayLBox_CommonLists",
+			"displayLBoxCommonLists",
+			"displayList_CommonLists",
+			"displayListCommonLists",
+			"displayRecord_CommonLists",
+			"displayRecordCommonLists",
+			"makeListName",
+			"modifyRecordCommonLists",
+			"newRecordCommonLists",
+			"orderByCommonLists",
+			"pickCommonList",
+			"printCommonLists",
+			"searchCommonLists",
+			"showRelevantCommonLists",
+			"validateCommonLists"
+		]
+	},
+	"CommonLists_": {
+		"tables": [
+			"CommonLists"
+		],
+		"forms": [
+			"[CommonLists]Entry",
+			"[CommonLists]EntryBulk",
+			"[CommonLists]Listbox",
+			"[CommonLists]Listbox_old",
+			"[CommonLists]Pick",
+			"[CommonLists]PickCommonLists",
+			"[CommonLists]View"
+		]
+	},
+	"CompanyInfo": {
+		"forms": [
+			"[CompanyInfo]AccountsSheet",
+			"[CompanyInfo]AccountsTypeSelector",
+			"[CompanyInfo]AMLForm",
+			"[CompanyInfo]AustractReports",
+			"[CompanyInfo]ChangePassword",
+			"[CompanyInfo]ChoiceList",
+			"[CompanyInfo]confirmDialog",
+			"[CompanyInfo]CustomizeReceipt",
+			"[CompanyInfo]DeleteAllDialog",
+			"[CompanyInfo]EmergencyActivationForm",
+			"[CompanyInfo]FijiFIUReports",
+			"[CompanyInfo]FintracInfo",
+			"[CompanyInfo]Form1",
+			"[CompanyInfo]GoAMLInfo",
+			"[CompanyInfo]HelpRequestForm",
+			"[CompanyInfo]List",
+			"[CompanyInfo]Listbox_RequestExport",
+			"[CompanyInfo]PageSetupInvoice",
+			"[CompanyInfo]pickCityStateCountry",
+			"[CompanyInfo]pickUser",
+			"[CompanyInfo]QuickReportPage",
+			"[CompanyInfo]rep_CBS_DailyJournal",
+			"[CompanyInfo]requestPasswordForm",
+			"[CompanyInfo]ScanNewID",
+			"[CompanyInfo]StartupWizard",
+			"[CompanyInfo]Summarizer1",
+			"[CompanyInfo]SyncLoadTest_NU",
+			"[CompanyInfo]template_pick",
+			"[CompanyInfo]TouchTableForm",
+			"[CompanyInfo]UnlockModule",
+			"[CompanyInfo]VersionReleaseNotes"
+		]
+	},
+	"Constants": {
+		"methods": [
+			"c_Account",
+			"c_Banks",
+			"c_Cash",
+			"c_Cheque",
+			"c_eWire",
+			"c_Expenses",
+			"c_Items",
+			"c_Paid",
+			"c_PanelRatesInputFilename",
+			"c_PanelRatesOutputFileName",
+			"c_Payables",
+			"c_Receivables",
+			"c_Received",
+			"c_Wire",
+			"c_xmlFlashTickerFilename",
+			"c_xmlRatesFilename",
+			"displayCurrentRecord",
+			"enum_Assets",
+			"enum_Equities",
+			"enum_Expenses",
+			"enum_Liabilities",
+			"enum_Revenues",
+			"getInvoiceTransactionTypeEnum",
+			"getPaymentTypeEnum",
+			"getSelfCustomerID",
+			"getUpdateSourceMainURL",
+			"getWalkInCustomerID",
+			"getWalkInCustomerName"
+		]
+	},
+	"ControlBox": {
+		"tables": [
+			"ControlBox"
+		],
+		"methods": [
+			"allRecordsControlBox"
+		],
+		"forms": [
+			"[ControlBox]Entry",
+			"[ControlBox]List",
+			"[ControlBox]print",
+			"[ControlBox]View"
+		]
+	},
+	"ControlBoxLog": {
+		"tables": [
+			"ControlBoxLog"
+		],
+		"forms": [
+			"[ControlBoxLog]List",
+			"[ControlBoxLog]subform",
+			"[ControlBoxLog]View"
+		]
+	},
+	"Conversions": {
+		"methods": [
+			"addToTableFavorite",
+			"booleanToNum",
+			"booleanToString",
+			"titleCase",
+			"toTitleCase"
+		]
+	},
+	"Countries": {
+		"tables": [
+			"Countries"
+		],
+		"methods": [
+			"allRecordsCountries"
+		],
+		"forms": [
+			"[Countries]Entry",
+			"[Countries]List",
+			"[Countries]Listbox",
+			"[Countries]Pick",
+			"[Countries]View"
+		]
+	},
+	"CSMRelations": {
+		"tables": [
+			"CSMRelations"
+		],
+		"methods": [
+			"allRecordsCSMRelations"
+		],
+		"forms": [
+			"[CSMRelations]Entry",
+			"[CSMRelations]ListBox",
+			"[CSMRelations]print",
+			"[CSMRelations]search",
+			"[CSMRelations]View"
+		]
+	},
+	"CSV_Import_Export": {},
+	"Currencies": {
+		"tables": [
+			"Currencies"
+		],
+		"methods": [
+			"allCurrenciesForXML",
+			"allrecordsCurrencies",
+			"allRecordsRatesPanel",
+			"allRecordsWebPanel",
+			"createBaseCurrency",
+			"createCurrencyRecord",
+			"delChecksCurrencies",
+			"deleteCurrencies",
+			"displayCurrenciesForClients",
+			"displayCurrenciesPanel_",
+			"displayCurrencyHoldings",
+			"displayCurrencyRateSheet",
+			"displayList_Currencies",
+			"displayListCurrencies",
+			"displayRatesPanel",
+			"displayRecord_Currencies",
+			"displayRecordCurrencies",
+			"displayTradeSummary",
+			"drawYahooChart",
+			"exportCurrencies",
+			"fillCurrencyCodeArray",
+			"fillCurrencyRateSheetArrays",
+			"getAdjustedMarketRate",
+			"getCurrencyLogoBlob",
+			"getCurrencyRates",
+			"getMarketAvgRate",
+			"getOurBuyRate",
+			"getOurRates",
+			"getOurSellRate",
+			"getSpotRateInverse",
+			"getYahooChartURL",
+			"getYahooMarketAvg",
+			"getYahooQuote",
+			"getYahooQuotesHTML",
+			"getYahooUpdateDate",
+			"getYahooUpdateTime",
+			"getYahooURLforCurrency",
+			"handleAutoUpdateRates",
+			"handleCurrencyObject",
+			"handleCurrencyPopUp",
+			"handleCurrencyPopUpRegisters",
+			"handleCurrencyPullDown",
+			"handleDrawYahooChart",
+			"handleFetchCurrencyRatesButton",
+			"handleHoldingsListBox",
+			"handleISOField",
+			"handleRefreshRatesNow",
+			"handleTabCurrenciesView",
+			"handleTabCurrenciesView_Accnts",
+			"handleTabCurrenciesView_Reg",
+			"handleVecCurrency",
+			"handleVecFromCurrency",
+			"handleVecToCurrency",
+			"handlevSearchText",
+			"importCurrencies",
+			"isRateOffRange",
+			"manuallyUpdateSpotRate",
+			"modifyRecordCurrencies",
+			"newRecordCurrencies",
+			"orderByCurrencies",
+			"PanelRates",
+			"parseQuoteFieldsFromYahoo",
+			"pickCurrency",
+			"postValidateCurrencies",
+			"printCurrencies",
+			"readCurrencyCodes",
+			"roundThisCurrencyRateFields",
+			"searchCurrencies",
+			"selectCurrencyByAlias",
+			"selectFavoriteCurrencies",
+			"selectTradableCurrencies",
+			"setCurrencyRates",
+			"setCurrencySpotRate",
+			"setSpotRate",
+			"setVecCurrency",
+			"setvRate",
+			"showDateRangeCurrencies",
+			"showFlaggedCurrencies",
+			"showFlaggedCustomers",
+			"showTodaysCurrencies",
+			"toggleFlaggedCurrencies",
+			"updateAllCurrenciesRates",
+			"updateSelectedQuotesUsingYahoo",
+			"updateSpotRate",
+			"updateThisCurrencyRate",
+			"uploadXMLRatesToFTPServer",
+			"validateCurrencies"
+		],
+		"forms": [
+			"[Currencies]actions",
+			"[Currencies]CurrenciesPanel",
+			"[Currencies]Entry",
+			"[Currencies]Holdings",
+			"[Currencies]Pick",
+			"[Currencies]print",
+			"[Currencies]profitVars_detail",
+			"[Currencies]ProfitVars_detail-Backup",
+			"[Currencies]profitVars_Sums",
+			"[Currencies]rateSheet",
+			"[Currencies]rep_Currencies",
+			"[Currencies]Search",
+			"[Currencies]Search2",
+			"[Currencies]subform_currencyGroups",
+			"[Currencies]SummaryStatement",
+			"[Currencies]TradeSummary",
+			"[Currencies]update",
+			"[Currencies]updateFailed",
+			"[Currencies]View"
+		]
+	},
+	"Currencies_": {
+		"forms": [
+			"[Currencies]CurrencyPLTable",
+			"[Currencies]HideRates",
+			"[Currencies]ListBox",
+			"[Currencies]Toolbar_ScreenTable"
+		]
+	},
+	"CurrenciesGroup": {
+		"groups": [
+			"Currencies"
+		],
+		"tables": [
+			"CurrencyGroups"
+		],
+		"methods": [
+			"allRecordsCurrencyGroups",
+			"delChecksCurrencyGroups",
+			"deleteCurrencyGroups",
+			"displayList_CurrencyGroups",
+			"displayListCurrencyGroups",
+			"displayRecord_CurrencyGroups",
+			"displayRecordCurrencyGroups",
+			"exportCurrencyGroups",
+			"importCurrencyGroups",
+			"modifyRecordCurrencyGroups",
+			"newRecordCurrencyGroups",
+			"pickCurrencyGroups",
+			"printCurrencyGroups",
+			"searchCurrencyGroups"
+		],
+		"forms": [
+			"[CurrencyGroups]Entry",
+			"[CurrencyGroups]List",
+			"[CurrencyGroups]View"
+		]
+	},
+	"CurrencyGroups": {
+		"forms": [
+			"[CurrencyGroups]ListBox"
+		]
+	},
+	"Customers": {
+		"tables": [
+			"Customers"
+		],
+		"methods": [
+			"allRecordsCustomers",
+			"archivePictureID",
+			"autofillCustomers",
+			"checkCustomerFullName",
+			"checkCustomerInBlackList",
+			"clearPictureIDVars",
+			"createSelfCustomer",
+			"createWalkInCustomer",
+			"delChecksCustomers",
+			"deleteCustomers",
+			"displayList_Customers",
+			"displayListCustomers",
+			"displayRecord_customers",
+			"displayRecordCustomers",
+			"editFormEnvelope",
+			"env_handlePrintedObjects",
+			"env_makeAddressText",
+			"env_makeCustomerFullName",
+			"exportCustomers",
+			"getCustomerBalanceDue",
+			"getCustomerFullName",
+			"getNextCustomer",
+			"handleAutoFillCustomers",
+			"handleCustomerLookupButton",
+			"handleCustomerSubformMethod",
+			"handleCustomerViewTab",
+			"handlePicturesListPullDown",
+			"handleTabCustomerDue",
+			"importCustomers",
+			"initNextCustomer",
+			"makeCommentsCustPaid",
+			"makeCustomerFullName",
+			"makeCustomerID",
+			"mergeCustomers",
+			"modifyRecordCustomers",
+			"newRecordCustomers",
+			"orderbyCustomers",
+			"pickCustomer",
+			"pickWireTemplateForCustomer",
+			"printCustomers",
+			"renameCustomerIDs",
+			"rep_printCustomerDues",
+			"searchCustomers",
+			"selectCustomerByID",
+			"selectCustomersWOutstandingBala",
+			"selectNotesForCustomer",
+			"setCustomerLoginID",
+			"setCustomerToSelf",
+			"setNextCustomer",
+			"setvCustomerID",
+			"showDateRangeCustomers",
+			"showTodaysCustomers",
+			"toggleFlaggedCustomers",
+			"validateCustomers",
+			"writePanelRates"
+		],
+		"forms": [
+			"[Customers]Entry_original",
+			"[Customers]EntrySimple",
+			"[Customers]eWireInfoPicker",
+			"[Customers]Pick",
+			"[Customers]PictureIDLargeView",
+			"[Customers]PictureIDLargeView2",
+			"[Customers]Print",
+			"[Customers]printEnvelope",
+			"[Customers]printEnvelopes",
+			"[Customers]QuickView",
+			"[Customers]rep_CustomerDues",
+			"[Customers]rep_CustomerDues_F",
+			"[Customers]rep_CustomerDues_H",
+			"[Customers]search",
+			"[Customers]View__"
+		]
+	},
+	"Customers_": {
+		"groups": [
+			"Folder_2"
+		],
+		"methods": [
+			"getCustomerFullNameORDA",
+			"pickCustomerID",
+			"queryEntitySelection",
+			"st"
+		],
+		"forms": [
+			"[Customers]3MPassportScanner",
+			"[Customers]actions",
+			"[Customers]ComplianceQuery",
+			"[Customers]Customer_KYC",
+			"[Customers]Customer_KYC_SAR",
+			"[Customers]Customer_Picker",
+			"[Customers]CustomerJournalList",
+			"[Customers]Entry",
+			"[Customers]Entry_original_april2018",
+			"[Customers]KYCQuery",
+			"[Customers]Listbox",
+			"[Customers]Listbox1",
+			"[Customers]print_KYC",
+			"[Customers]print_KYC_BAK",
+			"[Customers]QueryDuplicates",
+			"[Customers]Review_AML",
+			"[Customers]Review_KYC",
+			"[Customers]Review_KYC_Copy",
+			"[Customers]Subform_CompanyInfo",
+			"[Customers]View"
+		]
+	},
+	"CustomerTypes": {
+		"tables": [
+			"CustomerTypes"
+		],
+		"methods": [
+			"allRecordsCustomerTypes",
+			"delChecksCustomerTypes",
+			"deleteCustomerTypes",
+			"displayLBox_CustomerTypes",
+			"displayLBoxCustomerTypes",
+			"displayList_CustomerTypes",
+			"displayListCustomerTypes",
+			"displayRecord_CustomerTypes",
+			"displayRecordCustomerTypes",
+			"modifyRecordCustomerTypes",
+			"newRecordCustomerTypes",
+			"orderByCustomerTypes",
+			"pickCustomerTypes",
+			"printCustomerTypes",
+			"searchCustomerTypes",
+			"showRelevantCustomerTypes",
+			"validateCustomerTypes"
+		],
+		"forms": [
+			"[CustomerTypes]Entry",
+			"[CustomerTypes]ListBox",
+			"[CustomerTypes]Pick",
+			"[CustomerTypes]print",
+			"[CustomerTypes]View"
+		]
+	},
+	"Date": {
+		"methods": [
+			"DATE_GEtDateTimeStampp",
+			"DATE_GetDateTimeVars",
+			"DATE_GetSeedYearDate",
+			"handleFromDateObject",
+			"handleToDateObject",
+			"isDateExpired",
+			"nullDate",
+			"requestDateRange",
+			"requestDateRangeTable",
+			"selectDateRangeTable",
+			"setDateRangeVars"
+		]
+	},
+	"DateRanges": {
+		"tables": [
+			"DateRanges"
+		],
+		"methods": [
+			"allRecordsDateRanges",
+			"handleDropDown_DateRange"
+		],
+		"forms": [
+			"[DateRanges]Entry",
+			"[DateRanges]List",
+			"[DateRanges]ListBox",
+			"[DateRanges]PICK"
+		]
+	},
+	"DB_CodeRevisions": {
+		"tables": [
+			"DB_CodeRevisions",
+			"DB_VersionNotes"
+		],
+		"methods": [
+			"allRecordsDB_CodeRevisions"
+		],
+		"forms": [
+			"[DB_CodeRevisions]commit",
+			"[DB_CodeRevisions]Entry",
+			"[DB_CodeRevisions]ListBox",
+			"[DB_CodeRevisions]View"
+		]
+	},
+	"DB_Issues": {
+		"tables": [
+			"DB_Issues"
+		]
+	},
+	"DB_Keywords": {
+		"tables": [
+			"DB_Keywords"
+		],
+		"methods": [
+			"allRecordsDB_Keywords"
+		],
+		"forms": [
+			"[DB_Keywords]EasyTranslate",
+			"[DB_Keywords]Entry",
+			"[DB_Keywords]ListBox",
+			"[DB_Keywords]Pick",
+			"[DB_Keywords]View"
+		]
+	},
+	"DB_Listboxes": {
+		"tables": [
+			"DB_Listboxes"
+		]
+	},
+	"DB_Sync_Config": {
+		"tables": [
+			"DB_Sync_Config"
+		]
+	},
+	"DB_Tables": {
+		"tables": [
+			"DB_Tables"
+		]
+	},
+	"DB_Translations": {
+		"tables": [
+			"DB_Translations"
+		]
+	},
+	"DB_VersionNotes": {},
+	"Denominations": {
+		"methods": [
+			"displayLBox_Denominations",
+			"displayRecord_Denominations",
+			"displayRecordDenominations",
+			"fillDenominationArray",
+			"handleAutoFillDenominations",
+			"handlevDenominationInCashTran",
+			"importDenominations",
+			"makeDenominationsID",
+			"modifyRecordDenominations",
+			"newRecordDenominations",
+			"orderByDenominations",
+			"printDenominations",
+			"searchDenominations",
+			"selectDenomination"
+		]
+	},
+	"Denominations_": {
+		"forms": [
+			"[Denominations]ListBox",
+			"[Denominations]View"
+		]
+	},
+	"Essentials": {
+		"methods": [
+			"allRecords",
+			"deletes",
+			"deleteTable",
+			"displayList",
+			"displayList_",
+			"displayRecord",
+			"displayRecord_",
+			"exportTable",
+			"FieldToString",
+			"importTable",
+			"modifyRecord",
+			"modifyRecord_",
+			"modifyRecords",
+			"newRecord",
+			"orderByTable",
+			"searchTable_byKeywords",
+			"setif",
+			"showFlaggedTable",
+			"showTodaysTable"
+		]
+	},
+	"eWires": {
+		"tables": [
+			"eWires"
+		],
+		"methods": [
+			"allRecordsEWires",
+			"autofilleWires",
+			"confirmPrinteWire",
+			"countReceivedeWires",
+			"countSenteWires",
+			"countUrgenteWires",
+			"createRegisterFromeWire",
+			"createRegisterOfeWire",
+			"delCheckseWires",
+			"displayList_eWires",
+			"displayListeWires",
+			"displayRecord_eWires",
+			"displayRecordeWires",
+			"exporteWires",
+			"fillArrayWitheWires",
+			"finalizeeWireTransaction",
+			"fixeWireCustomerDRow",
+			"fixeWireCustomerIDs",
+			"GETAttachedPicture",
+			"handleeWireEntryForm",
+			"handleEWireFormMethod",
+			"handleeWireInInvoiceFormMethod",
+			"handleeWirePrintFormMethod",
+			"handleReceiveeWireButton",
+			"handleReceiveeWireForCustomer",
+			"handleSaveEWireButton",
+			"handleSendeWireFormMethod_0",
+			"IC_eWireAccounts",
+			"IC_eWireCustomerID",
+			"IC_EWireInvoiceID",
+			"importeWires",
+			"makeCommentseWire",
+			"makeeWireActionMessage",
+			"makeeWireID",
+			"makeeWirePayable",
+			"makeeWireReceivable",
+			"makeeWireSubjectLine",
+			"modifyRecordeWires",
+			"newRecordeWires",
+			"orderByeWires",
+			"pickeWire",
+			"pickeWireForCustomer",
+			"printeWires",
+			"printThiseWire",
+			"relateOneeWiresLinkID",
+			"renumbereWire",
+			"searcheWires",
+			"selectActiveeWires",
+			"selectActiveeWiresForCustomer",
+			"selecteWiresForCustomer",
+			"selecteWiresReceivedForCustomer",
+			"selectFlaggedeWires",
+			"selectReceivedeWires",
+			"selectSenteWires",
+			"selectUrgenteWires",
+			"sendNotificationForEwire",
+			"Trigger_ewires_old",
+			"validateeWires",
+			"validateWires"
+		],
+		"forms": [
+			"[eWires]actions",
+			"[eWires]Entry",
+			"[eWires]Entry_old",
+			"[eWires]List",
+			"[eWires]Pay",
+			"[eWires]pay_",
+			"[eWires]PayReceive",
+			"[eWires]Pick_",
+			"[eWires]print",
+			"[eWires]printDetailed",
+			"[eWires]printeWireForm",
+			"[eWires]Receive",
+			"[eWires]Search",
+			"[eWires]Subform_Agents",
+			"[eWires]View",
+			"[eWires]viewAttachment"
+		]
+	},
+	"eWires_": {
+		"forms": [
+			"[eWires]AgentPOList",
+			"[eWires]eWireRemoteList",
+			"[eWires]eWiresList",
+			"[eWires]eWireStatus",
+			"[eWires]fetcheWire",
+			"[eWires]ListBox",
+			"[eWires]PICK",
+			"[eWires]rep_PaymentOrderOutgoing"
+		]
+	},
+	"ExceptionsLog": {
+		"tables": [
+			"ExceptionsLog"
+		],
+		"forms": [
+			"[ExceptionsLog]Entry",
+			"[ExceptionsLog]List",
+			"[ExceptionsLog]ListBox",
+			"[ExceptionsLog]print",
+			"[ExceptionsLog]Search",
+			"[ExceptionsLog]View"
+		]
+	},
+	"ExportLog": {
+		"tables": [
+			"ExportLog"
+		]
+	},
+	"FeeRules": {
+		"tables": [
+			"FeeRules"
+		],
+		"forms": [
+			"[FeeRules]FeeRules",
+			"[FeeRules]List"
+		]
+	},
+	"FeeStructures": {
+		"tables": [
+			"FeeStructures"
+		],
+		"methods": [
+			"allRecordsFeeStructures",
+			"delChecksFeeStructures",
+			"deleteFeeStructures",
+			"displayList_FeeStructures",
+			"displayListFeeStructures",
+			"displayRecord_FeeStructures",
+			"displayRecordFeeStructures",
+			"exportFeeStructures",
+			"getFeeStructure",
+			"handleCBfeeStructure",
+			"importFeeStructures",
+			"modifyRecordFeeStructures",
+			"newRecordFeeStructures",
+			"orderByFeeStructures",
+			"printFeeStructures",
+			"searchFeeStructures",
+			"validateFeeStructures"
+		],
+		"forms": [
+			"[FeeStructures]Entry",
+			"[FeeStructures]List"
+		]
+	},
+	"FeeStructures_": {
+		"forms": [
+			"[FeeStructures]View"
+		]
+	},
+	"FieldConstraints": {
+		"tables": [
+			"FieldConstraints"
+		],
+		"forms": [
+			"[FieldConstraints]Entry",
+			"[FieldConstraints]List",
+			"[FieldConstraints]List2",
+			"[FieldConstraints]ListBox",
+			"[FieldConstraints]View"
+		]
+	},
+	"FilePaths": {
+		"tables": [
+			"FilePaths"
+		],
+		"methods": [
+			"allRecordsAllPaths"
+		],
+		"forms": [
+			"[FilePaths]Entry",
+			"[FilePaths]ListBox",
+			"[FilePaths]print",
+			"[FilePaths]View"
+		]
+	},
+	"Flags": {
+		"tables": [
+			"Flags"
+		],
+		"methods": [
+			"allrecordsFlags",
+			"delChecksFlags",
+			"deleteFlags",
+			"displayList_Flags",
+			"displayListFlags",
+			"displayRecord_Flags",
+			"displayRecordFlags",
+			"exportFlagImages",
+			"exportFlags",
+			"importFlags",
+			"modifyRecordFlags",
+			"newRecordFlags",
+			"orderByFlags",
+			"pickFlags",
+			"printFlags",
+			"searchFlags",
+			"setFlagPicture"
+		],
+		"forms": [
+			"[Flags]Entry",
+			"[Flags]Pick"
+		]
+	},
+	"Flags_": {
+		"methods": [
+			"displayLBox_Flags"
+		],
+		"forms": [
+			"[Flags]Listbox"
+		]
+	},
+	"Folder": {},
+	"Folder_1": {},
+	"Folder_2": {},
+	"FormObjects": {
+		"tables": [
+			"FormObjects"
+		],
+		"methods": [
+			"allRecordsFormObjects",
+			"delChecksFormObjects",
+			"deleteFormObjects",
+			"displayLBox_FormObjects",
+			"displayLBoxFormObjects",
+			"displayList_FormObjects",
+			"displayListFormObjects",
+			"displayRecord_FormObjects",
+			"displayRecordFormObjects",
+			"modifyRecordFormObjects",
+			"newRecordFormObjects",
+			"orderByFormObjects",
+			"searchFormObjects",
+			"setFormObjectCustomProperties",
+			"showRelevantFormObjects",
+			"validateFormObjects"
+		],
+		"forms": [
+			"[FormObjects]Entry",
+			"[FormObjects]ListBox",
+			"[FormObjects]Search",
+			"[FormObjects]View"
+		]
+	},
+	"Forms": {
+		"tables": [
+			"CompanyInfo"
+		],
+		"methods": [
+			"assignCompanyInfoVars",
+			"createDemoCompany",
+			"displayAdminPanel",
+			"displayAssistant",
+			"displayAssistant_",
+			"displayCalculator",
+			"displayCalculator_",
+			"displayCompanyInfoPage",
+			"displaySplashScreen",
+			"displayTransferFunds",
+			"displayTransferFunds_",
+			"displayUpdatePanel",
+			"exportForms",
+			"importForms",
+			"launchBrowser",
+			"LaunchBrowser_M",
+			"launchCalendar",
+			"launchCalendar_M",
+			"launchSummarizer",
+			"launchSummarizer_M"
+		],
+		"forms": [
+			"[CompanyInfo]AboutDialog",
+			"[CompanyInfo]AdjustAccountBalances",
+			"[CompanyInfo]AdminPanel",
+			"[CompanyInfo]amountEditor",
+			"[CompanyInfo]Assistant",
+			"[CompanyInfo]browseTables",
+			"[CompanyInfo]Calculator",
+			"[CompanyInfo]Calendar",
+			"[CompanyInfo]closeWindow",
+			"[CompanyInfo]ColourPicker",
+			"[CompanyInfo]CompanyInfo",
+			"[CompanyInfo]EntryToolbar",
+			"[CompanyInfo]IntegrityChecks",
+			"[CompanyInfo]ListToolbar",
+			"[CompanyInfo]ListToolbar_Buttons",
+			"[CompanyInfo]ListToolbar_Stripe",
+			"[CompanyInfo]ListToolbar3",
+			"[CompanyInfo]ListToolbarSimple",
+			"[CompanyInfo]ModifyToolbar",
+			"[CompanyInfo]openTill",
+			"[CompanyInfo]pickFromArray",
+			"[CompanyInfo]printFormFooter",
+			"[CompanyInfo]printFormHeader",
+			"[CompanyInfo]printHeader",
+			"[CompanyInfo]printHeaderLarge",
+			"[CompanyInfo]printReportTemplate",
+			"[CompanyInfo]ProgressBar",
+			"[CompanyInfo]search",
+			"[CompanyInfo]searchDialog",
+			"[CompanyInfo]SplashScreen",
+			"[CompanyInfo]subForm_Customers",
+			"[CompanyInfo]Summarizer",
+			"[CompanyInfo]TransferFunds_old",
+			"[CompanyInfo]updatePanel",
+			"[CompanyInfo]ViewToolbar2",
+			"[Invoices]TransferFunds",
+			"dateRange",
+			"UsersLogin"
+		]
+	},
+	"IC_FailedRecords": {
+		"tables": [
+			"IC_FailedRecords"
+		],
+		"methods": [
+			"allRecordsIC_FailedRecords",
+			"createIC_FailedRecord",
+			"delChecksIC_FailedRecords",
+			"deleteIC_FailedRecords",
+			"displayList_IC_FailedRecords",
+			"displayListIC_FailedRecords",
+			"displayRecord_IC_FailedRecords",
+			"displayRecordIC_FailedRecords",
+			"exportIC_FailedRecords",
+			"importIC_FailedRecords",
+			"modifyRecordIC_FailedRecords",
+			"modifyRecordIntegrityChecks",
+			"newRecordIC_FailedRecords",
+			"orderByIC_FailedRecords",
+			"pickIC_FailedRecords",
+			"printIC_FailedRecords",
+			"searchIC_FailedRecords",
+			"validateIC_FailedRecords"
+		],
+		"forms": [
+			"[IC_FailedRecords]list",
+			"[IC_FailedRecords]Search",
+			"[IC_FailedRecords]subform_IntegrityChecks",
+			"[IC_FailedRecords]subform_IntegrityChecksPanel",
+			"[IC_FailedRecords]View"
+		]
+	},
+	"IC_FailedRecords_": {},
+	"IdentityMind": {
+		"groups": [
+			"IM_TransferLog"
+		],
+		"tables": [
+			"IM_KYCLog"
+		],
+		"methods": [
+			"IdentityMind_colorState",
+			"IdentityMind_displayResponse",
+			"IdentityMind_handleHttpError",
+			"IdentityMind_handleJSONError",
+			"IdentityMind_httpRequest",
+			"IdentityMind_init",
+			"IdentityMind_loadKYCData",
+			"IdentityMind_loadTransferData",
+			"IdentityMind_mapTestName",
+			"IdentityMind_parseJSON",
+			"IdentityMind_reformatAddress",
+			"IdentityMind_sendData",
+			"IdentityMind_status",
+			"IdentityMInd_TOMtoIRR",
+			"IdentityMind_updateResponse",
+			"IM_evaluateCustomerKYC",
+			"IM_evaluateMoneyTransfers",
+			"IM_getEnviornment",
+			"IM_Info",
+			"IM_showDetailTransferReport",
+			"IM_updateKYCReport",
+			"test_reformatAddress"
+		],
+		"forms": [
+			"IdentityMind_CodeExplained",
+			"IdentityMind_DetailReport"
+		]
+	},
+	"IM_TransferLog": {
+		"tables": [
+			"IM_TransferLog"
+		],
+		"forms": [
+			"[IM_TransferLog]Entry",
+			"[IM_TransferLog]ListBox",
+			"[IM_TransferLog]Print",
+			"[IM_TransferLog]View"
+		]
+	},
+	"ImportedRows": {
+		"tables": [
+			"ImportedRows"
+		],
+		"methods": [
+			"allRecordsimportedRows",
+			"delChecksimportedRows",
+			"deleteimportedRows",
+			"displayLBox_importedRows",
+			"displayLBoximportedRows",
+			"displayList_importedRows",
+			"displayListimportedRows",
+			"displayRecord_importedRows",
+			"displayRecordimportedRows",
+			"makeimportedRowID",
+			"modifyRecordimportedRows",
+			"newRecordimportedRows",
+			"orderByimportedRows",
+			"pickimportedRows",
+			"printimportedRows",
+			"searchimportedRows",
+			"showFlaggedimportedRows",
+			"showRelevantimportedRows",
+			"showTodaysimportedRows",
+			"toggleFlaggedimportedRows",
+			"validateimportedRows"
+		],
+		"forms": [
+			"[ImportedRows]Entry",
+			"[ImportedRows]listbox",
+			"[ImportedRows]MatchMaker",
+			"[ImportedRows]View"
+		]
+	},
+	"ImportedSyncIDs": {
+		"tables": [
+			"ImportedSyncIDs"
+		],
+		"methods": [
+			"displayLBoxImportedSyncIDs"
+		],
+		"forms": [
+			"[ImportedSyncIDs]Input",
+			"[ImportedSyncIDs]Output"
+		]
+	},
+	"Industries": {
+		"tables": [
+			"Industries"
+		],
+		"forms": [
+			"[Industries]Entry",
+			"[Industries]ListBox",
+			"[Industries]PICK",
+			"[Industries]print",
+			"[Industries]View"
+		]
+	},
+	"IntegrityChecks": {
+		"groups": [
+			"IC_FailedRecords"
+		],
+		"tables": [
+			"IntegrityChecks"
+		],
+		"methods": [
+			"allRecordsIntegrityChecks",
+			"delChecksIntegrityChecks",
+			"deleteIntegrityChecks",
+			"displayIntegrityChecksPanel",
+			"displayIntegrityChecksPanel_M",
+			"displayList_IntegrityChecks",
+			"displayListIntegrityChecks",
+			"displayRecord_IntegrityChecks",
+			"displayRecordIntegrityChecks",
+			"exportIntegrityChecks",
+			"fillIntegrityCheckArrays",
+			"importIntegrityChecks",
+			"integrity Checking",
+			"integrityCheck",
+			"IntegrityCheckRow",
+			"makeIntegrityCheckID",
+			"newRecordIntegrityChecks",
+			"orderByIntegrityChecks",
+			"pickIntegrityChecks",
+			"printIntegrityChecks",
+			"searchIntegrityChecks",
+			"validateIntegrityChecks"
+		],
+		"forms": [
+			"[IntegrityChecks]IntegrityChecksPanel",
+			"[IntegrityChecks]List",
+			"[IntegrityChecks]View"
+		]
+	},
+	"IntegrityChecks_": {
+		"forms": [
+			"[IntegrityChecks]print"
+		]
+	},
+	"Invoices": {
+		"tables": [
+			"Invoices"
+		],
+		"methods": [
+			"allRecordsInvoices",
+			"autoFillInvoices",
+			"CancelInvoiceTransaction",
+			"clearInvoiceEnterableVars",
+			"clearInvoiceLineVars",
+			"createInvoicefromeWire",
+			"createRegisterFromInvoice",
+			"delChecksInvoices",
+			"deleteInvoices",
+			"displayList_Invoices",
+			"displayListExchanges",
+			"displayListInvoices",
+			"displayRecord_Invoices",
+			"displayRecordInvoices",
+			"editFormInvoicePrint",
+			"editFormInvoicesEntry",
+			"editFormPrintInvoice",
+			"exportInvoices",
+			"fillOpeningArrays",
+			"fixInvoiceRow",
+			"fixInvoices",
+			"fixOldInvoices",
+			"getReceivedOrPayString",
+			"getTransactionTypeString",
+			"getVecCurrencyString",
+			"handleAddLineButton",
+			"handleCalculationFields",
+			"handleDeleteRowInvoice",
+			"handleDisplayDetailInvoice",
+			"handleEditEntryInInvoice",
+			"handleInvoiceCalculations",
+			"handleInvoiceCustomerOws",
+			"handleInvoiceEntryFormMethod",
+			"handlePaidReceivedDisplayDetail",
+			"handlePaymentInInvoice",
+			"handlePaymentInInvoiceForTable",
+			"handlePaymentInInvoiceNew",
+			"handlePayOffButton",
+			"handlePrintInvoiceFormMethod",
+			"handleSaveAdjustments",
+			"handleSaveAdjustments2",
+			"handleTransferButton",
+			"handleTransferButton_OLD",
+			"handleTransferFund_OLD",
+			"handleVecCurrencyMethod",
+			"IC_InvoiceCustomers",
+			"IC_unbalancedInvoices",
+			"importInvoices",
+			"initializeInvoiceVars",
+			"initInvoiceVars",
+			"initVecPaymentMethod",
+			"lockCalculatorRadioButtons",
+			"makeCommentsForInvoiceLines",
+			"makeCommentsInvoice",
+			"makeInvoiceID",
+			"modifyRecordInInvoice",
+			"modifyRecordInvoices",
+			"new_Invoice",
+			"newRecordInvoices",
+			"normalizeVarsInInvoice",
+			"orderByInvoices",
+			"payCash",
+			"printInvoice_Medium_Headerless",
+			"printInvoice2",
+			"printInvoices",
+			"printThisInvoice",
+			"queryInvoicesInvolvingCurrency",
+			"receiveCashFromInvoice",
+			"receiveeWireForInvoice",
+			"relateManyRegistersForInvoice",
+			"renumberInvoice",
+			"searchInvoices",
+			"selectIncompleteInvoices",
+			"selectInvoiceByNumber",
+			"selectLargeTransactionInvoices",
+			"sendEwireFromInvoice",
+			"setExchangeRate",
+			"setInvoiceAutoComment",
+			"setInvoiceFields",
+			"setInvoiceFieldsToVars",
+			"setInvoiceFieldstoVars2",
+			"setInvoiceVarsByBoookingID",
+			"setInvoiceVarsToFields",
+			"setInvoiceVarsToFields2",
+			"setTableFieldsToInvoiceVars",
+			"setWireFieldsToInvoiceVars",
+			"showDateRangeInvoices",
+			"showFlaggedInvoices",
+			"showTodaysInvoices",
+			"templateForImbeddedCalculator",
+			"toggleFlaggedInvoices",
+			"updateInvoiceRecordLine",
+			"updateInvoiceRecords",
+			"validateAddLineInInvoice",
+			"validateInvoice_AMLRules",
+			"validateInvoices",
+			"validateInvoices_old",
+			"validateRatesSensibility"
+		],
+		"forms": [
+			"[Invoices]AdjustAccounts",
+			"[Invoices]Entry",
+			"[Invoices]ReceiveeWire",
+			"[Invoices]search",
+			"[Invoices]SendeWire",
+			"[Invoices]SubForm_Currencies",
+			"[Invoices]SubForm_Invoices",
+			"[Invoices]View"
+		]
+	},
+	"Invoices_": {
+		"forms": [
+			"[Invoices]ListBox",
+			"[Invoices]print_Tabular_Old",
+			"[Invoices]ReceiveCashLCForm"
+		]
+	},
+	"ItemCategories": {
+		"groups": [
+			"Items"
+		],
+		"tables": [
+			"ItemCategories"
+		],
+		"methods": [
+			"allRecordsItemCategories",
+			"delChecksItemCategories",
+			"deleteItemCategories",
+			"displayList_ItemCategories",
+			"displayRecord_ItemCategories",
+			"displayRecordItemCategories",
+			"exportItemCategories",
+			"importItemCategories",
+			"makeItemCategorieID",
+			"modifyRecordItemCategories",
+			"newRecordItemCategories",
+			"orderByItemCategories",
+			"pickItemCategories",
+			"printItemCategories",
+			"searchItemCategories",
+			"validateItemCategories"
+		],
+		"forms": [
+			"[ItemCategories]Entry",
+			"[ItemCategories]List"
+		]
+	},
+	"ItemCategories_": {
+		"forms": [
+			"[ItemCategories]ListBox",
+			"[ItemCategories]Pick",
+			"[ItemCategories]View"
+		]
+	},
+	"ItemInOuts": {
+		"tables": [
+			"ItemInOuts"
+		],
+		"methods": [
+			"allRecordsItemInOuts",
+			"createRegisterOfItemInOuts",
+			"delChecksItemInOuts",
+			"deleteItemInOuts",
+			"displayList_ItemInOuts",
+			"displayListItemInOuts",
+			"displayRecord_ItemInOuts",
+			"displayRecordItemInOuts",
+			"exportItemInOuts",
+			"getItemInOutSums",
+			"handleItemInOutsFormMethod",
+			"handlePickItemObject",
+			"importItemInOuts",
+			"makeCommentsItemInOuts",
+			"makeItemInOutsID",
+			"modifyRecordItemInOuts",
+			"newRecordItemInOuts",
+			"orderByItemInOuts",
+			"pickItemInOuts",
+			"printItemInOuts",
+			"searchItemInOuts",
+			"setItemInOutsFieldsToInvVars",
+			"validateItemInOuts"
+		],
+		"forms": [
+			"[ItemInOuts]Entry",
+			"[ItemInOuts]List",
+			"[ItemInOuts]Pay",
+			"[ItemInOuts]Receive",
+			"[ItemInOuts]Subform_Items",
+			"[ItemInOuts]View"
+		]
+	},
+	"ItemInOuts_": {
+		"forms": [
+			"[ItemInOuts]Entry1",
+			"[ItemInOuts]ListBox",
+			"[ItemInOuts]print"
+		]
+	},
+	"Items": {
+		"groups": [
+			"ItemInOuts"
+		],
+		"tables": [
+			"Items"
+		],
+		"methods": [
+			"allRecordsItems",
+			"delChecksItems",
+			"deleteItems",
+			"displayList_Items",
+			"displayListItemCategories",
+			"displayListItems",
+			"displayRecord_Items",
+			"displayRecordItems",
+			"exportItems",
+			"importItems",
+			"makeItemsID",
+			"modifyRecordItems",
+			"newRecordItems",
+			"orderByItems",
+			"pickItems",
+			"printItems",
+			"searchItems",
+			"showDateRangeItems",
+			"showFlaggedItems",
+			"showTodaysItems",
+			"toggleFlaggedItems",
+			"validateItems"
+		],
+		"forms": [
+			"[Items]List",
+			"[Items]View"
+		]
+	},
+	"Items_": {
+		"forms": [
+			"[Items]Entry",
+			"[Items]ItemsList",
+			"[Items]ListBox",
+			"[Items]PICK",
+			"[Items]rep_items"
+		]
+	},
+	"KeyValues": {
+		"groups": [
+			"cached"
+		],
+		"tables": [
+			"KeyValues"
+		],
+		"methods": [
+			"allRecordsKeyValues",
+			"delChecksKeyValues",
+			"deleteKeyValues",
+			"displayLBox_KeyValues",
+			"displayLBoxKeyValues",
+			"displayList_KeyValues",
+			"displayListKeyValues",
+			"displayRecord_KeyValues",
+			"displayRecordKeyValues",
+			"getKeyValue_old",
+			"modifyRecordKeyValues",
+			"newRecordKeyValues",
+			"orderByKeyValues",
+			"printKeyValues",
+			"searchKeyValues",
+			"setKeyValue",
+			"showRelevantKeyValues",
+			"validateKeyValues"
+		],
+		"forms": [
+			"[KeyValues]Entry",
+			"[KeyValues]ListBox",
+			"[KeyValues]View"
+		]
+	},
+	"KYC_ReviewLog": {
+		"tables": [
+			"KYC_ReviewLog"
+		],
+		"forms": [
+			"[KYC_ReviewLog]Entry",
+			"[KYC_ReviewLog]ListBox",
+			"[KYC_ReviewLog]View"
+		]
+	},
+	"Letters": {
+		"groups": [
+			"LetterTemplates"
+		],
+		"methods": [
+			"delChecksLetters",
+			"deleteLetters",
+			"displayList_Letters",
+			"displayListLetters",
+			"displayRecord_Letters",
+			"displayRecordLetters",
+			"exportLetters",
+			"importLetters",
+			"makeLetterID",
+			"modifyRecordLetters",
+			"newRecordLetters",
+			"orderByLetters",
+			"pickLetters",
+			"printLetters",
+			"searchLetters",
+			"showFlaggedLetters",
+			"showTodaysLetters",
+			"toggleFlaggedLetters",
+			"validateLetters"
+		],
+		"forms": [
+			"[Letters]Entry",
+			"[Letters]List",
+			"[Letters]print",
+			"[Letters]View"
+		]
+	},
+	"Letters_": {},
+	"LetterTemplates": {
+		"tables": [
+			"Letters",
+			"LetterTemplates"
+		],
+		"methods": [
+			"allRecordsLetters",
+			"allRecordsLetterTemplates",
+			"delChecksLetterTemplates",
+			"deleteLetterTemplates",
+			"displayList_LetterTemplates",
+			"displayListLetterTemplates",
+			"displayRecord_LetterTemplates",
+			"displayRecordLetterTemplates",
+			"exportLetterTemplates",
+			"importLetterTemplates",
+			"makeTemplateName",
+			"modifyRecordLetterTemplates",
+			"newRecordLetterTemplates",
+			"orderByLetterTemplates",
+			"pickLetterTemplates",
+			"printLetterTemplates",
+			"searchLetterTemplates",
+			"showFlaggedLetterTemplates",
+			"showTodaysLetterTemplates",
+			"toggleFlaggedLetterTemplates",
+			"validateLetterTemplates"
+		],
+		"forms": [
+			"[LetterTemplates]Entry",
+			"[LetterTemplates]List",
+			"[LetterTemplates]Pick",
+			"[LetterTemplates]View"
+		]
+	},
+	"LetterTemplates_": {},
+	"LinkedDocs": {
+		"forms": [
+			"[LinkedDocs]ListBox",
+			"[LinkedDocs]print"
+		]
+	},
+	"Links": {
+		"tables": [
+			"Links"
+		],
+		"methods": [
+			"allRecordsLinks",
+			"autofillLinks",
+			"createLinkForCustomer",
+			"createLinkID",
+			"delChecksLinks",
+			"deleteLinks",
+			"displayList_Links",
+			"displayListLinks",
+			"displayRecord_Links",
+			"displayRecordLinks",
+			"exportLinks",
+			"getLinkPrimaryPhone",
+			"handleLinkListArrays",
+			"handleMakeBankInfoButton",
+			"handleTodaysLinks",
+			"IC_linkagents",
+			"importLinks",
+			"modifyRecordLinks",
+			"newRecordLinks",
+			"orderByLinks",
+			"pickLink",
+			"printLinks",
+			"searchLinks",
+			"showDateRangeLinks",
+			"showFlaggedLinks",
+			"showTodaysLinks",
+			"toggleFlaggedLinks",
+			"validateLinks"
+		],
+		"forms": [
+			"[Links]Entry",
+			"[Links]EntryForCustomer",
+			"[Links]List",
+			"[Links]Pick",
+			"[Links]Subform_Customers",
+			"[Links]View"
+		]
+	},
+	"Links_": {
+		"forms": [
+			"[Links]ListBox",
+			"[Links]Search"
+		]
+	},
+	"List_Banks": {
+		"tables": [
+			"List_Banks"
+		],
+		"forms": [
+			"[List_Banks]Entry",
+			"[List_Banks]ListBox",
+			"[List_Banks]PICK",
+			"[List_Banks]Print",
+			"[List_Banks]Search",
+			"[List_Banks]View"
+		]
+	},
+	"List_PIN": {
+		"tables": [
+			"List_PIN"
+		],
+		"forms": [
+			"[List_PIN]Entry",
+			"[List_PIN]ListBox",
+			"[List_PIN]PICK",
+			"[List_PIN]print",
+			"[List_PIN]View"
+		]
+	},
+	"List_POT": {
+		"tables": [
+			"List_POT"
+		],
+		"forms": [
+			"[List_POT]Entry",
+			"[List_POT]ListBox",
+			"[List_POT]PICK",
+			"[List_POT]print",
+			"[List_POT]View"
+		]
+	},
+	"List_Relationships": {
+		"tables": [
+			"List_Relationships"
+		],
+		"forms": [
+			"[List_Relationships]Entry",
+			"[List_Relationships]ListBox",
+			"[List_Relationships]PICK",
+			"[List_Relationships]View"
+		]
+	},
+	"List_RiskFactors": {
+		"tables": [
+			"List_RiskFactors"
+		],
+		"forms": [
+			"[List_RiskFactors]Entry",
+			"[List_RiskFactors]ListBox",
+			"[List_RiskFactors]PICK",
+			"[List_RiskFactors]print",
+			"[List_RiskFactors]View"
+		]
+	},
+	"List_SOF": {
+		"tables": [
+			"List_SOF"
+		],
+		"forms": [
+			"[List_SOF]Entry",
+			"[List_SOF]ListBox",
+			"[List_SOF]PICK",
+			"[List_SOF]print",
+			"[List_SOF]View"
+		]
+	},
+	"Listbox": {
+		"methods": [
+			"listbox_appendRow",
+			"listbox_deleteAllRows",
+			"listbox_deleteSelectedRows",
+			"listbox_displayRecordOnDC",
+			"listbox_editLastRow",
+			"listbox_exportToCSV",
+			"listbox_exportToTextFile",
+			"listbox_exportToXML",
+			"listbox_exportWithDelimiters",
+			"listbox_getFirstSelectedRow",
+			"listbox_getSelectedRowNumber",
+			"listbox_requestExport",
+			"listbox_selectLastRow",
+			"listbox_testXML"
+		]
+	},
+	"MACs": {
+		"tables": [
+			"MACs"
+		],
+		"methods": [
+			"allRecordsMACs",
+			"checkSystemAuthorization",
+			"createDemoLicense",
+			"delChecksMACs",
+			"deleteMACs",
+			"displayList_MACs",
+			"displayListMACs",
+			"displayMACaddress",
+			"displayRecord_MACS",
+			"displayRecordMACs",
+			"displaySupportTeamPassword",
+			"exportMACs",
+			"getModuleFieldPtr",
+			"importMACs",
+			"isAuthorizedForListing",
+			"isSystemAuthorized",
+			"isTableAuthorizedforAddRecord",
+			"modifyRecordMACs",
+			"newRecordMACs",
+			"orderByMACs",
+			"printMACs",
+			"searchMACs",
+			"selectMAC",
+			"setMACsLicenseSettings",
+			"setMACsLicenseVars",
+			"setMACsVarsToDemoMode",
+			"validateMACs"
+		],
+		"forms": [
+			"[MACs]Entry",
+			"[MACs]List",
+			"[MACs]Search",
+			"[MACs]View"
+		]
+	},
+	"MACs_": {},
+	"Mailboxes": {
+		"tables": [
+			"Mailboxes"
+		],
+		"forms": [
+			"[Mailboxes]Entry",
+			"[Mailboxes]List",
+			"[Mailboxes]Search",
+			"[Mailboxes]subform_Customers",
+			"[Mailboxes]View"
+		]
+	},
+	"MainAccounts": {
+		"tables": [
+			"MainAccounts"
+		],
+		"methods": [
+			"allRecordsMainAccounts",
+			"createBanksMainAccount",
+			"createMainAccount",
+			"createPayablesMainAccount",
+			"createReceivablesMainAccount",
+			"delChecksMainAccounts",
+			"deleteMainAccounts",
+			"displayList_MainAccounts",
+			"displayListMainAccounts",
+			"displayRecord_MainAccounts",
+			"displayRecordMainAccounts",
+			"exportMainAccounts",
+			"handleAutoFillMainAccounts",
+			"handleCurrencyQueryInMainAccoun",
+			"importMainAccounts",
+			"makeMainAccountsID",
+			"modifyRecordMainAccounts",
+			"newRecordMainAccounts",
+			"orderByMainAccounts",
+			"pickMainAccounts",
+			"printMainAccounts",
+			"searchMainAccounts",
+			"selectMainAccountsInDateRange",
+			"showDateRangeMainAccounts",
+			"showFlaggedMainAccounts",
+			"showTodaysMainAccounts",
+			"toggleFlaggedMainAccounts",
+			"validateMainAccounts"
+		],
+		"forms": [
+			"[MainAccounts]Entry",
+			"[MainAccounts]List",
+			"[MainAccounts]Pick_old",
+			"[MainAccounts]View"
+		]
+	},
+	"MainAccounts_": {
+		"forms": [
+			"[MainAccounts]ListBox",
+			"[MainAccounts]PICK",
+			"[MainAccounts]print"
+		]
+	},
+	"MemberCheck": {
+		"tables": [
+			"mchk_CheckLog"
+		],
+		"methods": [
+			"mchk_httpRequestMemberCheck",
+			"mchk_scanCustomerEntity"
+		],
+		"forms": [
+			"mchk_ScanCompanyResult",
+			"mchk_ScanPersonResult"
+		]
+	},
+	"Messages": {
+		"tables": [
+			"MESSAGES"
+		],
+		"methods": [
+			"allRecordsMessages",
+			"countReceivedMessages",
+			"countSentMessages",
+			"countUrgentMessages",
+			"delChecksMessages",
+			"deleteMessages",
+			"displaylist_Messages",
+			"displayListMessages",
+			"displayRecord_Messages",
+			"displayRecordMessages",
+			"exportMessages",
+			"importMessages",
+			"makeMessageID",
+			"modifyRecordMessages",
+			"newRecordMessages",
+			"orderByMessages",
+			"orderMessages",
+			"printMessages",
+			"searchMessages",
+			"selectActiveMessagesFromCust",
+			"selectReceivedMessages",
+			"selectSentMessages",
+			"selectUrgentMessages",
+			"showDateRangeMessages",
+			"showFlaggedMessages",
+			"showTodaysMessages",
+			"toggleFlaggedMessages",
+			"validateMessages"
+		],
+		"forms": [
+			"[MESSAGES]Entry",
+			"[MESSAGES]List",
+			"[MESSAGES]subform_Customers",
+			"[MESSAGES]View"
+		]
+	},
+	"MESSAGES_": {
+		"forms": [
+			"[MESSAGES]ListBox"
+		]
+	},
+	"Misc": {
+		"tables": [
+			"BankNotes",
+			"Denominations",
+			"ObjectProperties",
+			"PanelRates"
+		],
+		"methods": [
+			"Account_RedrawWindow",
+			"Account_RedrawWindow2",
+			"Account_SetColor",
+			"Accounts_DisplayTable",
+			"allRecordsBankNotes",
+			"allRecordsDenominations",
+			"breakAmountIntoDenoms",
+			"breakDownTEst",
+			"delChecksDenominations",
+			"deleteDenominations",
+			"displayListDenominations",
+			"downloadFINTRACdocs",
+			"exportBankNotes",
+			"exportDenominations",
+			"getObjectProperties",
+			"gotoFBIwebpage",
+			"gotoFintracReportingURL",
+			"gotoFINTRACwebpage",
+			"handleCalculatorFormMethod",
+			"setCrossCheckBoxFromLegPolicies",
+			"uploadToFINTRAC",
+			"validateDenominations"
+		],
+		"forms": [
+			"[BackupLogs]ListBox",
+			"[BackupPrefs]frm_MainWindow",
+			"[BankNotes]Entry",
+			"[BankNotes]List",
+			"[BankNotes]List_0",
+			"[BankNotes]View",
+			"[Denominations]Entry",
+			"[Denominations]list",
+			"[WebSessions]List"
+		]
+	},
+	"MoneyGram": {
+		"methods": [
+			"mgAssignPhotoIDList",
+			"mgBuildSendRequestTransaction",
+			"mgCloseDialog",
+			"mgClosePalette",
+			"mgConvertProfixDateTime",
+			"mgCopyTransactionObject",
+			"mgCountryCode2CountryID",
+			"mgCountryCode2CXR_CC",
+			"mgCreateReceiveObject",
+			"mgCreateSendObject",
+			"mgCreateSendRequestMissingObj",
+			"mgCreateWebEWire",
+			"mgCreateWebeWireRecord",
+			"mgCredentialsRemove",
+			"mgCredentialsStore",
+			"mgCXR_CountryCode2MG",
+			"mgCXR_ID_Type2MG",
+			"mgDefineReceiveObject",
+			"mgDefineSendObject",
+			"mgDisplayDialog",
+			"mgDisplayMainForm",
+			"mgFillCountryName",
+			"mgFillCredentials",
+			"mgFillCurrencyName",
+			"mgGetAgentIDFromKeyValues",
+			"mgGetCertificatesPath",
+			"mgGetCountryCodes",
+			"mgGetCredentials",
+			"mgGetCredentialsFromKeyValues",
+			"mgGetCredentialsFromStorage",
+			"mgGetCurrencies",
+			"mgGetDocument",
+			"mgGetEndPoints",
+			"mgGetFormHTML",
+			"mgGetFormTemplate",
+			"mgGetProfixDate",
+			"mgGetProfixReal",
+			"mgGetResourcesPath",
+			"mgGetResult",
+			"mgGetResultData",
+			"mgGetSendRequestMethodInfo",
+			"mgGetSendRequestResult",
+			"mgGetStates",
+			"mgGetStatesFromStorage",
+			"mgGetStatesIntoStorage",
+			"mgGetSubObject",
+			"mgHndlSendRequestMissingParams",
+			"mgIsStateRequired",
+			"mgMakeMarketingPopup",
+			"mgNewCustomerTransaction_OM",
+			"mgNewSession",
+			"mgNewTransactionByCustomer",
+			"mgNewTransactionFromInvoice",
+			"mgOpenDeniedURL",
+			"mgPickLink",
+			"mgSendRequest",
+			"mgSetHelpTips",
+			"mgSetHTTPCertificates",
+			"mgSOAP_BuildGetMethodInfoXML",
+			"mgSOAP_BuildXML",
+			"mgSOAP_Call",
+			"mgSOAP_CheckCredentials",
+			"mgSOAP_GetCollection",
+			"mgSOAP_GetErrorMsg",
+			"mgSOAP_GetMethodInfo",
+			"mgSOAP_GetMethodInfoGetFields",
+			"mgSOAP_GetNameSpaces",
+			"mgSOAP_GetResponse",
+			"mgSOAP_RepackCollection",
+			"mgSOAP_RunMethod",
+			"mgStart",
+			"mgStartWA",
+			"mgValidateAll",
+			"mgValidateCountryCode",
+			"mgValidateCurrencyCode",
+			"mgValidateMask",
+			"mgValidateUsingregex",
+			"mgWebArea_CloseBox",
+			"mgWebArea_fillFormData",
+			"mgWebArea_oldFormMethod",
+			"mgWebArea_OM",
+			"mgWebArea_onLoad",
+			"mgXML2Object"
+		],
+		"forms": [
+			"mgQuote",
+			"mgReceive",
+			"mgSend",
+			"mgSendEdit",
+			"mgTestWebArea1",
+			"mgWebArea"
+		]
+	},
+	"NoteTemplates": {
+		"tables": [
+			"NoteTemplates"
+		],
+		"forms": [
+			"[NoteTemplates]Entry",
+			"[NoteTemplates]ListBox",
+			"[NoteTemplates]PICK",
+			"[NoteTemplates]Print",
+			"[NoteTemplates]View"
+		]
+	},
+	"ObjectProperties": {},
+	"Objects": {
+		"methods": [
+			"hideObjectsOnTrue",
+			"isTextChanged",
+			"setEnterableIff",
+			"setFieldAsPassword",
+			"SetFieldsToVariables",
+			"setIfNotNullString",
+			"setIfNotZero",
+			"SetVariablesToFields",
+			"setVisibleIff"
+		]
+	},
+	"Occupations": {
+		"tables": [
+			"Occupations"
+		],
+		"methods": [
+			"allRecordsIndustries",
+			"allRecordsOccupations",
+			"delChecksIndustries",
+			"delChecksOccupations",
+			"deleteIndustries",
+			"deleteOccupations",
+			"displayLBox_Industries",
+			"displayLBox_Occupations",
+			"displayLBoxIndustries",
+			"displayLBoxOccupations",
+			"displayList_Industries",
+			"displayList_Occupations",
+			"displayListIndustries",
+			"displayListOccupations",
+			"displayRecord_Industries",
+			"displayRecordIndustries",
+			"modifyRecordIndustries",
+			"modifyRecordOccupations",
+			"newRecordIndustries",
+			"newRecordOccupations",
+			"orderByIndustries",
+			"orderByOccupations",
+			"pickIndustryCode",
+			"pickOccupation",
+			"printIndustries",
+			"printOccupations",
+			"searchIndustries",
+			"searchOccupations",
+			"showFlaggedOccupations",
+			"showRelevantIndustries",
+			"showRelevantOccupations",
+			"testPickIndustries",
+			"validateIndustries",
+			"validateOccupations"
+		],
+		"forms": [
+			"[Occupations]Entry",
+			"[Occupations]ListBox",
+			"[Occupations]PICK",
+			"[Occupations]PICK_Code",
+			"[Occupations]print",
+			"[Occupations]View"
+		]
+	},
+	"OCR_Fields": {
+		"tables": [
+			"OCR_Fields"
+		],
+		"forms": [
+			"[OCR_Fields]Entry",
+			"[OCR_Fields]ListBox",
+			"[OCR_Fields]View"
+		]
+	},
+	"OCR_FieldsxID": {
+		"tables": [
+			"OCR_FieldsxID"
+		]
+	},
+	"OCR_Ids": {
+		"tables": [
+			"OCR_Ids"
+		],
+		"forms": [
+			"[OCR_Ids]Entry",
+			"[OCR_Ids]ListBox",
+			"[OCR_Ids]PICK",
+			"[OCR_Ids]View"
+		]
+	},
+	"OrderLines": {
+		"tables": [
+			"OrderLines"
+		],
+		"forms": [
+			"[OrderLines]Entry",
+			"[OrderLines]ListBox",
+			"[OrderLines]View"
+		]
+	},
+	"orders": {
+		"tables": [
+			"Orders"
+		],
+		"methods": [
+			"allRecordsOrderLines",
+			"allRecordsOrders",
+			"calcOrderLineTotalForRow",
+			"clearOrderArrays",
+			"createRecordOrder",
+			"createRecordOrderLines",
+			"delChecksOrderLines",
+			"delChecksOrders",
+			"deleteOrderLines",
+			"deleteOrders",
+			"displayLBox_OrderLines",
+			"displayLBox_Orders",
+			"displayLBoxOrderLines",
+			"displayLBoxOrders",
+			"displayList_OrderLines",
+			"displayList_Orders",
+			"displayListOrderLines",
+			"displayListOrders",
+			"displayRecord_OrderLines",
+			"displayRecord_Orders",
+			"displayRecordOrderLines",
+			"displayRecordOrders",
+			"fillOrderFormArrays",
+			"getOrderStatusText",
+			"getTotalOrderForCurrencyByOrder",
+			"handleOrderCB",
+			"initOrderVars",
+			"loadCurrencyOrderIntoArrays",
+			"makeorderID",
+			"makeorderLineID",
+			"modifyRecordOrderLines",
+			"modifyRecordOrders",
+			"newRecordOrderLines",
+			"newRecordOrders",
+			"orderByOrderLines",
+			"orderByOrders",
+			"pickOrderLines",
+			"pickOrders",
+			"printOrderLines",
+			"printOrders",
+			"saveOrderLines",
+			"searchOrderLines",
+			"searchOrders",
+			"showFlaggedOrders",
+			"showRelevantOrderLines",
+			"showRelevantOrders",
+			"showTodaysOrders",
+			"validateOrderLines",
+			"validateOrders"
+		],
+		"forms": [
+			"[Orders]Entry",
+			"[Orders]ListBox",
+			"[Orders]search",
+			"[Orders]ShippingEntry",
+			"[Orders]View"
+		]
+	},
+	"PanelRates": {},
+	"PaymentTypes": {
+		"tables": [
+			"PaymentTypes"
+		],
+		"methods": [
+			"allRecordsPaymentTypes",
+			"delChecksPaymentTypes",
+			"deletePaymentTypes",
+			"displayLBox_PaymentTypes",
+			"displayLBoxPaymentTypes",
+			"displayList_PaymentTypes",
+			"displayListPaymentTypes",
+			"displayRecord_PaymentTypes",
+			"displayRecordPaymentTypes",
+			"modifyRecordPaymentTypes",
+			"newRecordPaymentTypes",
+			"orderByPaymentTypes",
+			"pickPaymentTypeCode",
+			"populatePaymentTypeArrs_NZ",
+			"populatePaymentTypes_NZ",
+			"printPaymentTypes",
+			"searchPaymentTypes",
+			"showRelevantPaymentTypes",
+			"validatePaymentTypes"
+		],
+		"forms": [
+			"[PaymentTypes]Entry",
+			"[PaymentTypes]ListBox",
+			"[PaymentTypes]PICK",
+			"[PaymentTypes]print",
+			"[PaymentTypes]View"
+		]
+	},
+	"Picker": {
+		"methods": [
+			"advanceMarker",
+			"handlePickArrays",
+			"handlepickFormMethod",
+			"handlePickListBoxObjectMethod",
+			"handlePickNewButton",
+			"handlepickOKbutton",
+			"handleUpArrowInPick",
+			"pick",
+			"pickRecordForTable",
+			"setPrintDimensions",
+			"setPrintDimensionsUsingForm",
+			"setPrintNumberOfCopies",
+			"setPrintOrientation",
+			"setPrintPaperName",
+			"setPrintScale",
+			"setPrintSettings",
+			"setPrintSettingsDefault",
+			"setPrintSettingsForCheque",
+			"setPrintSettingsForReceipt"
+		]
+	},
+	"PictureIDs": {
+		"tables": [
+			"LinkedDocs"
+		],
+		"methods": [
+			"allRecordsPictureIDs",
+			"countCustomerPictureIDs",
+			"delChecksPictureIDs",
+			"deletePictureIDs",
+			"displayList_PictureIDs",
+			"displayListPictureIDs",
+			"displayRecord_PictureIDs",
+			"displayRecordPictureIDs",
+			"exportPictureIDs",
+			"importPictureIDs",
+			"loadPictureIDsforCurrentCustome",
+			"modifyRecordPictureIDs",
+			"newRecordPictureIDs",
+			"orderByPictureIDs",
+			"pickPictureFromFile",
+			"printPictureIDs",
+			"searchPictureIDs",
+			"validatePictureIDs"
+		],
+		"forms": [
+			"[LinkedDocs]pickPictureFromFile",
+			"[LinkedDocs]Subform_Entry",
+			"[LinkedDocs]tinyView",
+			"[LinkedDocs]View"
+		]
+	},
+	"PictureIDTypes": {
+		"tables": [
+			"PictureIDTypes"
+		],
+		"methods": [
+			"allRecordsPictureIDTypes",
+			"delChecksPictureIDTypes",
+			"deletePictureIDTypes",
+			"displayLBox_PictureIDTypes",
+			"displayLBoxPictureIDTypes",
+			"displayList_PictureIDTypes",
+			"displayListPictureIDTypes",
+			"displayRecord_PictureIDTypes",
+			"displayRecordPictureIDTypes",
+			"modifyRecordPictureIDTypes",
+			"newRecordPictureIDTypes",
+			"orderByPictureIDTypes",
+			"pickPictureIDTypes",
+			"printPictureIDTypes",
+			"searchPictureIDTypes",
+			"showFlaggedPictureIDTypes",
+			"showRelevantPictureIDTypes",
+			"toggleFlaggedPictureIDTypes",
+			"validatePictureIDTypes"
+		],
+		"forms": [
+			"[PictureIDTypes]Entry",
+			"[PictureIDTypes]ListBox",
+			"[PictureIDTypes]Pick",
+			"[PictureIDTypes]print",
+			"[PictureIDTypes]View"
+		]
+	},
+	"Printing": {
+		"methods": [
+			"handlePrintFormMethod",
+			"print2LevelBreakTable",
+			"printFormHeader",
+			"printFormsTable",
+			"printPage",
+			"printRecordUsingPrinter",
+			"printSelection",
+			"printSelectionUsingPrinter",
+			"printSettings",
+			"printTable"
+		]
+	},
+	"Privileges": {
+		"tables": [
+			"Privileges"
+		],
+		"methods": [
+			"allRecordsPrivileges",
+			"delChecksPrivileges",
+			"deletePrivileges",
+			"displayList_Privileges",
+			"displayListPrivileges",
+			"displayRecord_Privileges",
+			"displayRecordPrivileges",
+			"exportPrivileges",
+			"importPrivileges",
+			"isUserAuthorizedToAddRecord",
+			"isUserAuthorizedToDelete",
+			"isUserAuthorizedToExport",
+			"isUserAuthorizedToImport",
+			"isUserAuthorizedToImportExport",
+			"isUserAuthorizedToModify",
+			"isUserAuthorizedToPrint",
+			"isUserAuthorizedToView",
+			"modifyRecordPrivileges",
+			"modifyRecordRegisters",
+			"newRecordPrivileges",
+			"printPrivileges",
+			"searchPrivileges",
+			"selectDefaultPrivilegesForUser",
+			"selectPrivilegesForTable",
+			"validatePrivileges"
+		],
+		"forms": [
+			"[Privileges]Entry",
+			"[Privileges]List",
+			"[Privileges]subform_users"
+		]
+	},
+	"Privileges_": {
+		"forms": [
+			"[Privileges]ListBox"
+		]
+	},
+	"Progress Bar": {
+		"methods": [
+			"isProgressBarStopped",
+			"launchProgressBar",
+			"LaunchProgressBar_M",
+			"progressBarHandlingTemplate",
+			"refreshProgressBar",
+			"setProgressBarTitle",
+			"sumSelection",
+			"sumSelectionHomogeneous",
+			"sumSelectionOn2Fields"
+		]
+	},
+	"Ratex": {
+		"tables": [
+			"Ratex"
+		],
+		"forms": [
+			"[Ratex]Entry",
+			"[Ratex]ListBox",
+			"[Ratex]View"
+		]
+	},
+	"RecentPicks": {
+		"tables": [
+			"RecentPicks"
+		],
+		"methods": [
+			"addRecentCity"
+		]
+	},
+	"ReconciledRows": {
+		"tables": [
+			"ReconciledRows"
+		],
+		"forms": [
+			"[ReconciledRows]Entry",
+			"[ReconciledRows]ListBox"
+		]
+	},
+	"Registers": {
+		"tables": [
+			"Registers"
+		],
+		"methods": [
+			"allrecordsRegisters",
+			"autofillRegisters",
+			"createFeeInRegisters",
+			"createRegister",
+			"delChecksRegisters",
+			"deleteRegisters",
+			"deleteRegisters_",
+			"deleteRelatedFeeRegister",
+			"displayList_Registers",
+			"displayListRegisters",
+			"displayRecord_Registers",
+			"displayRecordRegisters",
+			"exportRegisters",
+			"filterRegistersInDateRange",
+			"fixOldRegistersLines",
+			"fixRegisterRow",
+			"fixRegisters",
+			"getRegistersTaxSums",
+			"getRegisterSums",
+			"getRegisterTypeEnum",
+			"IC_RegisterRates",
+			"importRegisters",
+			"makeRegisterID",
+			"newRecordRegisters",
+			"orderByRegisters",
+			"printRegisters",
+			"queryRegistersByID",
+			"searchRegisters",
+			"selectRegistersbyCurrency",
+			"selectRegistersInDateRange",
+			"showDateRangeRegisters",
+			"showFlaggedRegisters",
+			"showTodaysRegisters",
+			"toggleFlaggedRegisters",
+			"updateRegisterRecords",
+			"validateRegisters"
+		],
+		"forms": [
+			"[Registers]Cheque",
+			"[Registers]Entry",
+			"[Registers]print",
+			"[Registers]printAccounts",
+			"[Registers]printAccounts_nc",
+			"[Registers]printAccounts2",
+			"[Registers]printCheque",
+			"[Registers]printCheque_Computer",
+			"[Registers]printCheque_Computer2",
+			"[Registers]printCustomers",
+			"[Registers]printeWire",
+			"[Registers]printInvoice",
+			"[Registers]printInvoice_Header",
+			"[Registers]printInvoice_Large",
+			"[Registers]printInvoice_Medium",
+			"[Registers]printInvoices",
+			"[Registers]printPanel",
+			"[Registers]printRegisters",
+			"[Registers]reconcileSubform",
+			"[Registers]Search",
+			"[Registers]SubForm_BankAccounts",
+			"[Registers]Subform_Currencies",
+			"[Registers]SubForm_Customers",
+			"[Registers]SubForm_Invoice_Entry",
+			"[Registers]Subform_Invoice_view",
+			"[Registers]subForm_Invoice2",
+			"[Registers]SubForm_Invoices",
+			"[Registers]Subform_Summarizer",
+			"[Registers]Transfer",
+			"[Registers]View"
+		]
+	},
+	"Registers_": {
+		"methods": [
+			"Check_CustomersFirstLastTrans"
+		],
+		"forms": [
+			"[Registers]AuditQueryForm",
+			"[Registers]ChartForm",
+			"[Registers]CustomQRReport",
+			"[Registers]duplicateRegisters",
+			"[Registers]HourlyTraffic",
+			"[Registers]JournalTable",
+			"[Registers]Listbox",
+			"[Registers]printInvoice_FullInfo",
+			"[Registers]printInvoice_FullInfo_Internal",
+			"[Registers]printInvoice_HeaderLess",
+			"[Registers]printInvoice_Large_AAB",
+			"[Registers]printInvoice_Large_CID",
+			"[Registers]printInvoice_Large_FR",
+			"[Registers]printInvoice_LargeHeaderLess",
+			"[Registers]printInvoice_Thermal",
+			"[Registers]printInvoice_Thermal_Complete",
+			"[Registers]printInvoice_Thermal_FR",
+			"[Registers]printInvoice_Thermal_Narrow",
+			"[Registers]printInvoice_Thermal_SEK",
+			"[Registers]printInvoice_Thermal_SEK_Kopy",
+			"[Registers]printInvoice_Thermal_Simple",
+			"[Registers]printInvoice_Thermal_Simple2",
+			"[Registers]printInvoice_ThermalLogo",
+			"[Registers]printSummaryByCustType",
+			"[Registers]rep_CBS_DailyJournal",
+			"[Registers]WPTForm"
+		]
+	},
+	"RegistersAuditTrail": {
+		"tables": [
+			"RegistersAuditTrail"
+		],
+		"forms": [
+			"[RegistersAuditTrail]Entry",
+			"[RegistersAuditTrail]listbox",
+			"[RegistersAuditTrail]Output",
+			"[RegistersAuditTrail]print",
+			"[RegistersAuditTrail]Search",
+			"[RegistersAuditTrail]View"
+		]
+	},
+	"Reports": {
+		"tables": [
+			"Reports"
+		],
+		"forms": [
+			"[Reports]Entry",
+			"[Reports]Listbox",
+			"[Reports]PL_Currencies",
+			"[Reports]PL_Items",
+			"[Reports]rep_eWiresSentByCountry",
+			"[Reports]rep_MiniTillReport",
+			"[Reports]SR_AnnualSummary",
+			"[Reports]SR_BookingSummary",
+			"[Reports]SR_CompletePLStatement",
+			"[Reports]SR_Currencies",
+			"[Reports]SR_CustomerGroups",
+			"[Reports]SR_CustomerTrans",
+			"[Reports]SR_CustomerTransactionStats",
+			"[Reports]SR_CustomerTransYearlyStats",
+			"[Reports]SR_ExpenseIncomeSummary",
+			"[Reports]SR_LCTAggrCustomerDaily",
+			"[Reports]SR_LCTByInvoice",
+			"[Reports]SR_SubAccountsSummary",
+			"[Reports]SR_UserTrans",
+			"[Reports]table_eWireSentByCountry",
+			"[Reports]table_LCT",
+			"[Reports]Zreport"
+		]
+	},
+	"SanctionCheck": {
+		"groups": [
+			"Archieve",
+			"Tables"
+		],
+		"methods": [
+			"sl_chooseSLCollByOption",
+			"sl_combineCXRBlacklistResults",
+			"sl_createResultFilterOptions",
+			"sl_createSanctionCheckLog",
+			"sl_formatKYC2020Result",
+			"sl_formatOpenSanctionProp",
+			"sl_formatOpenSanctionResult",
+			"sl_getListLastUpdate",
+			"sl_getSanctionListResultMsg",
+			"sl_getSanctionSourceForRecord",
+			"sl_handleAgentScreening",
+			"sl_handleCustomerScreening",
+			"sl_handleDemoListResult",
+			"sl_handleEWiresScreening",
+			"sl_handleFilterCheckBoxes",
+			"sl_handleInvoiceScreening",
+			"sl_handleKYC2020ResponseType",
+			"sl_handleLinksScreening",
+			"sl_handleMatchSummaryList",
+			"sl_handleOpenSanctionEntity",
+			"sl_handleOpenSanctionResult",
+			"sl_handleReviewFormEvent",
+			"sl_handleSanctionListMatches",
+			"sl_handleScreening",
+			"sl_handleSearchBox",
+			"sl_handleShowRadio",
+			"sl_handleThirdPartiesScreening",
+			"sl_handleWiresScreening",
+			"sl_isCustomerSubjectToScreening",
+			"sl_isScreeningForTable",
+			"sl_popluateSLFromServer",
+			"sl_pullOpenSanctionEntity",
+			"sl_pullSanctionListNames",
+			"sl_runWorkerProcess",
+			"sl_sanctionRequestTimeout",
+			"sl_saveSanctionListResult",
+			"sl_screenAgainstCXRBlacklist",
+			"sl_screenAgainstKYC2020",
+			"sl_screenAgainstOpenSanction",
+			"sl_screenMainlyNameWithOptions",
+			"sl_setEmojiStatusIcon",
+			"sl_setSanctionListCheckIcon",
+			"sl_setSanctionListIcon",
+			"sl_setScreeningForTable",
+			"slold_getKYC2020RecordDetails",
+			"slOld_handleSanctionLogPages",
+			"slOld_saveDecisionIQReport",
+			"slOld_updateDisplayingLogStatus"
+		],
+		"forms": [
+			"SanctionResultKYC2020",
+			"SanctionResultOpenSanction",
+			"SanctionResultV2",
+			"SanctionSceenResult"
+		],
+		"classes": [
+			"SanctionListResult",
+			"SanctionScreeningOptions"
+		]
+	},
+	"SanctionCheckLog": {
+		"tables": [
+			"SanctionCheckLog"
+		],
+		"forms": [
+			"[SanctionCheckLog]Entry",
+			"[SanctionCheckLog]ListBox",
+			"[SanctionCheckLog]Print",
+			"[SanctionCheckLog]View"
+		]
+	},
+	"SanctionLists": {
+		"tables": [
+			"SanctionLists"
+		],
+		"forms": [
+			"[SanctionLists]Entry",
+			"[SanctionLists]ListBox",
+			"[SanctionLists]View"
+		]
+	},
+	"Search": {
+		"methods": [
+			"relateMany",
+			"relateManyRegisters",
+			"relateOneSelection"
+		]
+	},
+	"Selection": {},
+	"Sequence_Config": {
+		"tables": [
+			"Sequence_Config"
+		],
+		"forms": [
+			"[Sequence_Config]Input",
+			"[Sequence_Config]Output"
+		]
+	},
+	"Sequence_Queue": {
+		"tables": [
+			"Sequence_Queue"
+		]
+	},
+	"SerialGenerator": {
+		"tables": [
+			"SerialGenerator"
+		]
+	},
+	"ServerPrefs": {
+		"tables": [
+			"ServerPrefs"
+		],
+		"methods": [
+			"assignServerPrefsVarsToFields",
+			"disactivateLog",
+			"displayServerPrefs",
+			"exportServerPrefs",
+			"getUpdateSourceString",
+			"getUpdateSourceSubURL",
+			"importServerPrefs",
+			"initServerPrefsVars",
+			"loadServerPreferences",
+			"loadServerPrefs",
+			"openPreferencesWindow",
+			"saveServerPrefs",
+			"setServerPrefsGlobalVars",
+			"validateServerPrefs"
+		],
+		"forms": [
+			"[ServerPrefs]Preferences"
+		]
+	},
+	"ServerPrefs_": {
+		"forms": [
+			"[ServerPrefs]List"
+		]
+	},
+	"ShipmentLines": {
+		"tables": [
+			"ShipmentLines"
+		],
+		"forms": [
+			"[ShipmentLines]ListBox"
+		]
+	},
+	"Shipments": {
+		"tables": [
+			"Shipments"
+		],
+		"methods": [
+			"allRecordsshipmentLines",
+			"allRecordsshipments",
+			"createRecordShipment",
+			"createRecordShipmentLines",
+			"delChecksshipmentLines",
+			"delChecksshipments",
+			"deleteshipmentLines",
+			"deleteshipments",
+			"displayLBox_shipmentLines",
+			"displayLBox_shipments",
+			"displayLBoxshipmentLines",
+			"displayLBoxshipments",
+			"displayList_shipmentLines",
+			"displayList_shipments",
+			"displayListshipmentLines",
+			"displayListshipments",
+			"displayRecord_shipmentLines",
+			"displayRecord_shipments",
+			"displayRecordshipmentLines",
+			"displayRecordshipments",
+			"getShipmentStatusText",
+			"getTotalShipmentForCurrency",
+			"getTotalShipmentValueLC",
+			"handleShipmentEntryCB",
+			"makeshipmentID",
+			"makeshipmentLineID",
+			"modifyRecordshipmentLines",
+			"modifyRecordshipments",
+			"newRecordshipmentLines",
+			"newRecordshipments",
+			"orderByshipmentLines",
+			"orderByshipments",
+			"pickshipmentLines",
+			"pickshipments",
+			"printshipmentLines",
+			"printshipments",
+			"saveShipmentLines",
+			"searchshipmentLines",
+			"searchshipments",
+			"showFlaggedshipments",
+			"showRelevantshipmentLines",
+			"showRelevantshipments",
+			"showTodaysshipmentLines",
+			"showTodaysshipments",
+			"toggleFlaggedshipments",
+			"validateshipmentLines",
+			"validateshipments"
+		],
+		"forms": [
+			"[Shipments]Entry",
+			"[Shipments]ListBox"
+		]
+	},
+	"States": {
+		"tables": [
+			"States"
+		],
+		"forms": [
+			"[States]Entry",
+			"[States]List",
+			"[States]Listbox"
+		]
+	},
+	"Strings": {
+		"methods": [
+			"autoFillSearchTable",
+			"displayPicker",
+			"insertTextAtInsertionPointer",
+			"stringToBoolean"
+		]
+	},
+	"SubAccounts": {
+		"tables": [
+			"SubAccounts"
+		],
+		"forms": [
+			"[SubAccounts]Entry",
+			"[SubAccounts]ListBox",
+			"[SubAccounts]PICK",
+			"[SubAccounts]View"
+		]
+	},
+	"Sync": {
+		"tables": [
+			"Sync_Queue",
+			"Sync_Tables"
+		],
+		"methods": [
+			"SYNC___About",
+			"SYNC_Exit",
+			"Sync_Receive_WS",
+			"Sync_RecordList_WS",
+			"SYNC_Startup",
+			"SYNC_This"
+		]
+	},
+	"Sync_Queue": {
+		"forms": [
+			"[Sync_Queue]List"
+		]
+	},
+	"Sync_Tables": {},
+	"SystemLogs": {
+		"tables": [
+			"SystemLogs"
+		],
+		"methods": [
+			"allRecordsSystemLogs",
+			"delChecksSystemLogs",
+			"deleteSystemLogs",
+			"displayList_SystemLogs",
+			"displayListSystemLogs",
+			"displayRecord_SystemLogs",
+			"displayRecordSystemLogs",
+			"exportSystemLogs",
+			"importSystemLogs",
+			"modifyRecordSystemLogs",
+			"newRecordSystemLogs",
+			"orderBySystemLogs",
+			"printSystemLogs",
+			"searchSystemLogs",
+			"writeLogTrigger"
+		],
+		"forms": [
+			"[SystemLogs]Entry",
+			"[SystemLogs]List",
+			"[SystemLogs]View"
+		]
+	},
+	"SystemLogs_": {
+		"forms": [
+			"[SystemLogs]ListBox"
+		]
+	},
+	"TableLimitations": {
+		"tables": [
+			"TableLimitations"
+		],
+		"forms": [
+			"[TableLimitations]subform"
+		]
+	},
+	"Tables": {
+		"groups": [
+			"SanctionCheckLog",
+			"SanctionLists"
+		]
+	},
+	"TellerProof": {
+		"tables": [
+			"TellerProof"
+		],
+		"forms": [
+			"[TellerProof]Entry",
+			"[TellerProof]Form",
+			"[TellerProof]List",
+			"[TellerProof]ListBox",
+			"[TellerProof]print",
+			"[TellerProof]View"
+		]
+	},
+	"TellerProofLines": {
+		"tables": [
+			"TellerProofLines"
+		],
+		"forms": [
+			"[TellerProofLines]Entry",
+			"[TellerProofLines]List",
+			"[TellerProofLines]ListBox",
+			"[TellerProofLines]print",
+			"[TellerProofLines]View"
+		]
+	},
+	"Test": {
+		"methods": [
+			"testaddsomeflags",
+			"testEncrypt",
+			"testFTPUpload",
+			"testHTML",
+			"testMethodsExist",
+			"testRunningAvg",
+			"testSendSMS"
+		]
+	},
+	"ThirdParties": {
+		"tables": [
+			"ThirdParties"
+		],
+		"forms": [
+			"[ThirdParties]Entry",
+			"[ThirdParties]Listbox",
+			"[ThirdParties]View",
+			"[ThirdParties]View_old"
+		]
+	},
+	"TransactionTypes": {
+		"tables": [
+			"TransactionTypes"
+		],
+		"methods": [
+			"allRecordsTransactionTypes",
+			"delChecksTransactionTypes",
+			"deleteTransactionTypes",
+			"displayLBox_TransactionTypes",
+			"displayLBoxTransactionTypes",
+			"displayList_TransactionTypes",
+			"displayListTransactionTypes",
+			"displayRecord_TransactionTypes",
+			"displayRecordTransactionTypes",
+			"modifyRecordTransactionTypes",
+			"newRecordTransactionTypes",
+			"orderByTransactionTypes",
+			"pickTransactionTypes",
+			"printTransactionTypes",
+			"searchTransactionTypes",
+			"showRelevantTransactionTypes",
+			"validateTransactionTypes"
+		],
+		"forms": [
+			"[TransactionTypes]Entry",
+			"[TransactionTypes]ListBox",
+			"[TransactionTypes]PICK",
+			"[TransactionTypes]View"
+		]
+	},
+	"TransferTemplates": {
+		"tables": [
+			"TransferTemplates"
+		],
+		"methods": [
+			"allRecordsTransferTemplates",
+			"delChecksTransferTemplates",
+			"deleteTransferTemplates",
+			"displayList_TransferTemplates",
+			"displayListTransferTemplates",
+			"displayRecord_TransferTemplates",
+			"displayRecordTransferTemplates",
+			"exportTransferTemplates",
+			"importTransferTemplates",
+			"makeTransferTemplateID",
+			"modifyRecordTransferTemplates",
+			"newRecordTransferTemplates",
+			"orderByTransferTemplates",
+			"pickTransferTemplates",
+			"printTransferTemplates",
+			"searchTransferTemplates",
+			"showFlaggedTransferTemplates",
+			"showTodaysTransferTemplates",
+			"toggleFlaggedTransferTemplates",
+			"validateTransferTemplates"
+		],
+		"forms": [
+			"[TransferTemplates]Entry",
+			"[TransferTemplates]List",
+			"[TransferTemplates]PICK",
+			"[TransferTemplates]View"
+		]
+	},
+	"TransferTemplates_": {
+		"forms": [
+			"[TransferTemplates]Listbox"
+		]
+	},
+	"UnitTesting": {
+		"methods": [
+			"apply4DTagsToDocument",
+			"assertField_CurrencyISOCode",
+			"assertField_KnownKey",
+			"assertField_Sync_Data",
+			"assertField_Sync_Exception",
+			"assertFieldType",
+			"assertFieldType_Alpha",
+			"assertFieldType_BLOB",
+			"assertFieldType_boolean",
+			"assertInvalidNumberOfParams",
+			"create4DMethodFromFile",
+			"getStandardFieldLength",
+			"test_handleCustomerNameComplian"
+		]
+	},
+	"Users": {
+		"tables": [
+			"Users"
+		],
+		"methods": [
+			"allRecordsUsers",
+			"createDefaultPrivileges",
+			"createPrivilegeRecord",
+			"delChecksUsers",
+			"deleteUser",
+			"deleteUsers",
+			"displayCurrentUser",
+			"displayList_Users",
+			"displayListUsers",
+			"displayRecord_Users",
+			"displayRecordUsers",
+			"displayUsersLogin",
+			"exportUsers",
+			"getApplicationUser",
+			"importUsers",
+			"isUserAllowedToChangeRates",
+			"makeUsersID",
+			"modifyRecordUsers",
+			"newRecordUsers",
+			"orderByUsers",
+			"printUsers",
+			"searchUsers",
+			"validateUsers"
+		],
+		"forms": [
+			"[Users]Entry",
+			"[Users]List",
+			"[Users]View",
+			"[WebAccessLog]Entry",
+			"[WebAccessLog]List",
+			"[WebAccessLog]Search",
+			"[WebAccessLog]Subform_USERS"
+		]
+	},
+	"Users_": {
+		"forms": [
+			"[Users]Entry_old",
+			"[Users]ListBox",
+			"[Users]subform"
+		]
+	},
+	"UsersLog": {
+		"tables": [
+			"WebAccessLog"
+		],
+		"methods": [
+			"allRecordsUSERSLOG",
+			"delChecksUSERSLOG",
+			"deleteUsersLog",
+			"displayList_USERSLOG",
+			"displayListUSERSLOG",
+			"exportUSERSLOG",
+			"importUSERSLOG",
+			"modifyRecordUSERSLOG",
+			"newRecordUSERSLOG",
+			"printUSERSLog",
+			"RecordUSERSLog",
+			"searchUSERSLOG"
+		]
+	},
+	"UsersLogBook": {
+		"tables": [
+			"UsersLogBook"
+		]
+	},
+	"Web": {
+		"methods": [
+			"enTag",
+			"fetchHTMLfromURL",
+			"fetchPicturefromURL",
+			"fetchPNGImagefromURL",
+			"ftpUpload",
+			"generateHTMLforTable",
+			"GetCompanyLogo",
+			"GETLibraryGIF",
+			"getLoggedInUserID",
+			"HTML4DVAR",
+			"HTMLAddSelectionToList",
+			"HTMLField",
+			"HTMLHiddenField",
+			"HTMLPage",
+			"HTMLSelectionToList",
+			"HTMLSelectionToList2",
+			"HTMLSelectionToMenu",
+			"HTMLSelectionToMenu2",
+			"HTMLTable",
+			"HTMLTableColumn",
+			"HTMLTableRow",
+			"initializeVariables",
+			"initWebVariables",
+			"makeHTMLBody5",
+			"makeHTMLTitle5",
+			"makeURLLink",
+			"makeXMLflashTicker",
+			"makeXMLforCurrency",
+			"makeXMLforSelectedCurrencies",
+			"makeXMLRowFlashTicker",
+			"openSuperPagesByName",
+			"OpenURL",
+			"openURL_FindAPerson_ByName",
+			"parseHTMLRealField",
+			"setFieldsToWebVariables",
+			"web_ACTIVE_USERSLogin",
+			"web_ACTIVE_USERSLogout",
+			"web_B",
+			"web_BconfirmeWires",
+			"web_BCreate",
+			"web_BcreateCustomers",
+			"web_BCreateeWires",
+			"web_BCreateLinks",
+			"web_BcreateMessages",
+			"web_BSearch",
+			"web_BSearcheWires",
+			"web_BSearchLinks",
+			"web_BSearchMessages",
+			"web_BUpdate",
+			"web_BUpdateeWires",
+			"web_BUpdateLinks",
+			"web_BUpdateMACs",
+			"web_BUpdateMessages",
+			"web_BUSERSLogin",
+			"web_BUSERSLogout",
+			"web_CreateACTIVE_USERS",
+			"web_DeleteACTIVE_USERS",
+			"web_ExecuteURLAfterAuthenticate",
+			"web_GetCompanyName",
+			"web_GetCurrencyFlag",
+			"web_GetCurrentTime",
+			"web_GetFlag",
+			"web_IsUSERLoggedin",
+			"web_L",
+			"web_ListAllCustomers",
+			"web_ListAlleWires",
+			"web_ListAllInvoices",
+			"web_ListAllLinks",
+			"web_ListAllMessages",
+			"web_ListCurrencies",
+			"web_ListCurrencyGroup",
+			"web_ListeWiresForCustomer",
+			"web_ListReceivedeWires",
+			"web_ListReceivedMessages",
+			"web_ListSelectedCustomers",
+			"web_ListSelectedeWires",
+			"web_ListSelectedInvoices",
+			"web_ListSelectedLinks",
+			"web_ListSelectedMessages",
+			"web_ListSelectedRegisters",
+			"web_ListSelectedTable",
+			"web_ListSenteWires",
+			"web_ListSentMessages",
+			"web_LoadACTIVE_USERS",
+			"web_LoadUSERSByContextID",
+			"web_LSendeWire",
+			"web_LTable",
+			"web_LViewInvoice",
+			"web_Modify",
+			"web_ParseURL",
+			"web_SendCalculatorPage",
+			"web_SendContactUS",
+			"web_SendContextExpiredPage",
+			"web_SendErrorMsg",
+			"web_SendERRORPage",
+			"web_SendeWiresEntry",
+			"web_SendeWiresSearch",
+			"web_SendHTMLPage",
+			"web_SendLinksEntry",
+			"web_SendLinksSearch",
+			"web_SendListPage",
+			"web_SendMessagesEntry",
+			"web_SendMessagesSearch",
+			"web_SendOKPage",
+			"web_SendUserAreaPage",
+			"web_SendUSERSLogin",
+			"web_SendYahooChartPage",
+			"web_StartwebServer",
+			"web_StopWebServer",
+			"web_test",
+			"web_USERSAuthenticate",
+			"web_View",
+			"web_ViewCID",
+			"web_ViewCIDeWires",
+			"web_ViewCIDeWiresForCustomer",
+			"web_ViewCIDLinks",
+			"web_ViewCIDMessages",
+			"web_ViewCustomer",
+			"web_ViewCustomerID",
+			"web_ViewID",
+			"web_ViewMACs",
+			"webisContextAlive"
+		]
+	},
+	"WebAccessLog": {},
+	"WebAttachments": {
+		"tables": [
+			"WebAttachments"
+		],
+		"forms": [
+			"[WebAttachments]Entry",
+			"[WebAttachments]Listbox",
+			"[WebAttachments]View"
+		]
+	},
+	"WebEWires": {},
+	"WebServices": {
+		"methods": [
+			"getQuote",
+			"getRate",
+			"GetRealTimeCrossRate",
+			"LookupStock",
+			"SendMSN",
+			"sendSMS",
+			"ws_getCurrencyRate",
+			"WS_getRate",
+			"WS_SendEmail"
+		]
+	},
+	"WebSessions": {},
+	"WebUsers": {
+		"tables": [
+			"WebUsers"
+		],
+		"methods": [
+			"allRecordsWebUSERS",
+			"createWebUserFromCustomer_NU",
+			"delChecksWebUsers",
+			"deleteWebUsers",
+			"displayList_WebUsers",
+			"displayListWebUsers",
+			"displayRecord_WebUSERS",
+			"displayRecordWebUSERS",
+			"exportWebUsers",
+			"importWebUsers",
+			"modifyRecordWebUsers",
+			"newRecordWebUSERS",
+			"orderByWebUsers",
+			"pickWebUsers",
+			"printWebUsers",
+			"searchWebUSERS",
+			"selectChannelWebUsers",
+			"validateWebUSERS"
+		],
+		"forms": [
+			"[WebUsers]List",
+			"[WebUsers]Pick",
+			"[WebUsers]Search",
+			"[WebUsers]View"
+		]
+	},
+	"WebUsers_": {
+		"forms": [
+			"[WebUsers]Entry",
+			"[WebUsers]Listbox_old"
+		]
+	},
+	"Wires": {
+		"tables": [
+			"Wires"
+		],
+		"methods": [
+			"allRecordsWires",
+			"confirmPrintWire",
+			"createeWireAccounts",
+			"createeWireFromInvoice",
+			"createeWireReceiveRegister",
+			"createRegisterofWires",
+			"delChecksWires",
+			"deleteeWires",
+			"deleteWires",
+			"displayList_Wires",
+			"displayListWires",
+			"displayRecord_Wires",
+			"displayRecordWires",
+			"exportWires",
+			"handleSaveWiresButton",
+			"handleWireFormMethod",
+			"importWires",
+			"makeCommentsWires",
+			"makeWireAccountID",
+			"makeWiresID",
+			"mapWireTemplateToWire",
+			"modifyRecordWires",
+			"newRecordWires",
+			"orderByWires",
+			"printThisWire",
+			"printWires",
+			"searchWires",
+			"seteWireFieldsToInvoiceVars",
+			"showDateRangeWires",
+			"showFlaggedWires",
+			"showTodaysWires",
+			"toggleFlaggedWires"
+		],
+		"forms": [
+			"[Wires]Entry",
+			"[Wires]Pay",
+			"[Wires]printBanks",
+			"[Wires]printWireForm",
+			"[Wires]Receive",
+			"[Wires]Search",
+			"[Wires]SubForm_Banks",
+			"[Wires]subform_customers",
+			"[Wires]View_noCC",
+			"[Wires]ViewCash"
+		]
+	},
+	"Wires_": {
+		"forms": [
+			"[Wires]ListBox"
+		]
+	},
+	"Wiretemplates": {
+		"forms": [
+			"[WireTemplates]ListBox",
+			"[WireTemplates]View"
+		]
+	},
+	"ZipCodes": {
+		"tables": [
+			"ZipCodes"
+		],
+		"forms": [
+			"[ZipCodes]list"
+		]
+	},
+	"ZReport": {
+		"tables": [
+			"ZReport"
+		]
+	},
+	"trash": {}
+}

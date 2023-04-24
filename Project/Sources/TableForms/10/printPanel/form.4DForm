@@ -1,0 +1,426 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 30,
+					"left": 10,
+					"width": 505,
+					"height": 50,
+					"fill": "transparent",
+					"stroke": "#AAAAAA"
+				},
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 85,
+					"left": 10,
+					"width": 505,
+					"height": 50,
+					"fill": "transparent",
+					"stroke": "#AAAAAA"
+				},
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 140,
+					"left": 10,
+					"width": 505,
+					"height": 50,
+					"fill": "transparent",
+					"stroke": "#AAAAAA"
+				},
+				"b_journal": {
+					"type": "button",
+					"top": 45,
+					"left": 20,
+					"width": 176,
+					"height": 20,
+					"text": "Journal Report",
+					"class": "Control",
+					"method": "ObjectMethods/b_journal.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 35,
+					"left": 210,
+					"width": 300,
+					"height": 32,
+					"fill": "#FFFFFF",
+					"class": "Label_Small",
+					"text": "Prints a plain journal-style report."
+				},
+				"b_daybyday": {
+					"type": "button",
+					"top": 100,
+					"left": 20,
+					"width": 176,
+					"height": 20,
+					"text": "Day by Day Report",
+					"class": "Control",
+					"method": "ObjectMethods/b_daybyday.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_detailed": {
+					"type": "button",
+					"top": 155,
+					"left": 20,
+					"width": 176,
+					"height": 20,
+					"text": "Detailed Accounts",
+					"class": "Control",
+					"method": "ObjectMethods/b_detailed.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_close": {
+					"type": "button",
+					"top": 370,
+					"left": 395,
+					"width": 120,
+					"height": 20,
+					"action": "cancel",
+					"text": "Close",
+					"class": "Control",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 90,
+					"left": 210,
+					"width": 300,
+					"height": 42,
+					"fill": "#FFFFFF",
+					"class": "Label_Small",
+					"text": "Prints a daily report grouped by date and currency with subtotals for each date and each currency within that date."
+				},
+				"b_dateRange": {
+					"type": "pictureButton",
+					"top": 360,
+					"left": 120,
+					"width": 40,
+					"height": 20,
+					"picture": "/RESOURCES/Images/library/micnDateRange.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/b_dateRange.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_today": {
+					"type": "button",
+					"top": 360,
+					"left": 175,
+					"width": 45,
+					"height": 20,
+					"text": "Today",
+					"class": "Small",
+					"stroke": "#FFFFFF",
+					"method": "ObjectMethods/b_today.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 145,
+					"left": 210,
+					"width": 300,
+					"height": 42,
+					"fill": "#FFFFFF",
+					"class": "Label_Small",
+					"text": "Prints a detailed account list with all transactions for the account. (Very Long)"
+				},
+				"Rectangle4": {
+					"type": "rectangle",
+					"top": 195,
+					"left": 10,
+					"width": 505,
+					"height": 50,
+					"fill": "transparent",
+					"stroke": "#AAAAAA"
+				},
+				"b_detailed2": {
+					"type": "button",
+					"top": 210,
+					"left": 20,
+					"width": 176,
+					"height": 20,
+					"text": "Detailed Accounts 2",
+					"class": "Control",
+					"method": "ObjectMethods/b_detailed2.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 200,
+					"left": 210,
+					"width": 300,
+					"height": 42,
+					"fill": "#FFFFFF",
+					"class": "Label_Small",
+					"text": "Prints a report grouped by accounts. (2nd format) This format has a subtotals and grouping for each currency."
+				},
+				"Rectangle5": {
+					"type": "rectangle",
+					"top": 250,
+					"left": 10,
+					"width": 505,
+					"height": 50,
+					"fill": "transparent",
+					"stroke": "#AAAAAA"
+				},
+				"b_printAccounts": {
+					"type": "button",
+					"top": 265,
+					"left": 20,
+					"width": 176,
+					"height": 20,
+					"text": "Print Accounts NC",
+					"class": "Control",
+					"method": "ObjectMethods/b_printAccounts.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 255,
+					"left": 210,
+					"width": 300,
+					"height": 42,
+					"fill": "#FFFFFF",
+					"class": "Label_Small",
+					"text": "Prints a report grouped by each account. (3rd format) - No comments - more compressed format"
+				},
+				"Library Picture2": {
+					"type": "picture",
+					"top": 364,
+					"left": 73,
+					"width": 15,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/micn showall.png"
+				},
+				"Picture4": {
+					"type": "picture",
+					"top": 362,
+					"left": 24,
+					"width": 18,
+					"height": 18,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/micn Search2.png"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 390,
+					"left": 15,
+					"width": 32,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Small",
+					"textAlign": "center",
+					"text": "Query"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 390,
+					"left": 55,
+					"width": 51,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Small",
+					"textAlign": "center",
+					"text": "Select All"
+				},
+				"b_showAll": {
+					"type": "button",
+					"top": 360,
+					"left": 70,
+					"width": 20,
+					"height": 25,
+					"display": false,
+					"method": "ObjectMethods/b_showAll.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_find": {
+					"type": "button",
+					"top": 360,
+					"left": 20,
+					"width": 23,
+					"height": 25,
+					"display": false,
+					"method": "ObjectMethods/b_find.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 5,
+					"left": 10,
+					"width": 505,
+					"height": 16,
+					"dataSource": "vRecNum",
+					"stroke": "#FFFFFF",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#444444",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 390,
+					"left": 114,
+					"width": 66,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "Small",
+					"textAlign": "center",
+					"text": "Date Range"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 25,
+					"left": 10,
+					"width": 505,
+					"stroke": "#AAAAAA"
+				},
+				"Rectangle6": {
+					"type": "rectangle",
+					"top": 305,
+					"left": 10,
+					"width": 505,
+					"height": 50,
+					"fill": "transparent",
+					"stroke": "#AAAAAA"
+				},
+				"b_printCustomers": {
+					"type": "button",
+					"top": 320,
+					"left": 20,
+					"width": 176,
+					"height": 20,
+					"text": "Print Customers",
+					"class": "Control",
+					"method": "ObjectMethods/b_printCustomers.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 310,
+					"left": 210,
+					"width": 300,
+					"height": 42,
+					"fill": "#FFFFFF",
+					"class": "Label_Small",
+					"text": "Prints a report grouped by customers and their respective invoices. All monetary transactions for the customer are printed."
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

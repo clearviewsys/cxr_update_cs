@@ -1,0 +1,167 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"b_ok": {
+					"type": "button",
+					"top": 272,
+					"left": 451,
+					"width": 95,
+					"height": 21,
+					"action": "cancel",
+					"text": "OK",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"defaultButton": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"copyright": {
+					"type": "text",
+					"top": 97,
+					"left": 25,
+					"width": 515,
+					"height": 208,
+					"stroke": "#000000",
+					"class": "Fields",
+					"text": "©2003-2023 Copyright Clear View Systems Ltd. \rVancouver, BC, Canada\r\rDevelopers: Tiran Behrouz, Barclay Ian Berry, Jaime Alvarez, Milan Adamov, Wai-kin Chau, Viktor Dojnov, Kurt Galvin"
+				},
+				"Text": {
+					"type": "text",
+					"top": 25,
+					"left": 23,
+					"width": 538,
+					"height": 64,
+					"stroke": "#00578B",
+					"fontFamily": "Segoe UI",
+					"fontSize": 24,
+					"fontWeight": "bold",
+					"text": "CurrencyXchanger\rProfessional Money Exchange Software"
+				},
+				"majorVersion": {
+					"type": "input",
+					"top": 12,
+					"left": 426,
+					"width": 136,
+					"height": 28,
+					"stroke": "#1C77B1",
+					"textAlign": "right",
+					"fontFamily": "Segoe UI",
+					"fontSize": 24,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/majorVersion.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"build": {
+					"type": "input",
+					"top": 42,
+					"left": 426,
+					"width": 136,
+					"height": 15,
+					"stroke": "#1C77B1",
+					"textAlign": "right",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/build.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"b_ok1": {
+					"type": "button",
+					"top": 272,
+					"left": 25,
+					"width": 157,
+					"height": 21,
+					"action": "",
+					"text": "Check for Updates ...",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"defaultButton": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/b_ok1.4dm"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"majorVersion"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 10,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"method": "method.4dm"
+}

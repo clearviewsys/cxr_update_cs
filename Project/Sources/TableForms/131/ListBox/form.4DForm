@@ -1,0 +1,194 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"mainListBox": {
+					"type": "listbox",
+					"top": 76,
+					"left": 0,
+					"width": 992,
+					"height": 358,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "24px",
+					"table": "Questions",
+					"highlightSet": "$Questions_LBSet",
+					"horizontalLineStroke": "transparent",
+					"alternateFill": "#F4F8EF",
+					"method": "ObjectMethods/mainListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload",
+						"onSelectionChange",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column9",
+							"dataSource": "[Questions:131]questionID:1",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#F4F8EF",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "fn7",
+								"text": "Question ID"
+							},
+							"footer": {
+								"name": "Footer9",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column10",
+							"dataSource": "[Questions:131]question:2",
+							"width": 175,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#F4F8EF",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "fn8",
+								"text": "Question"
+							},
+							"footer": {
+								"name": "Footer10",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column8",
+							"dataSource": "[Questions:131]answer1:3",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#F4F8EF",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "fn6",
+								"text": "Answer 1"
+							},
+							"footer": {
+								"name": "Footer8",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"header": {
+								"name": "Header1",
+								"text": "Answer 2"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "[Questions:131]answer2:4",
+							"width": 120
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Answer 3"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "[Questions:131]answer3:5",
+							"width": 120
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Answer 4"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "[Questions:131]answer4:6",
+							"width": 120
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Correct Answer"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "[Questions:131]correctAnswer:7",
+							"width": 130
+						}
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 6,
+	"inheritedForm": "Toolbar_Search",
+	"menuBar": "Menu Bar #1",
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

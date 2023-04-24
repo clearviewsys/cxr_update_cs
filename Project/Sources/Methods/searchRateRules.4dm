@@ -1,0 +1,2 @@
+//%attributes = {}
+searchTable(->[RateRules:157]; ->[RateRules:157]CustomerID:2; ->[RateRules:157]fromCurrency:3; ->[RateRules:157]toCurrency:4; ->[RateRules:157]buyMargin:8; ->[RateRules:157]sellMargin:9; ->[RateRules:157]lowerLimit:11; ->[RateRules:157]upperLimit:10; ->[RateRules:157]description:12)

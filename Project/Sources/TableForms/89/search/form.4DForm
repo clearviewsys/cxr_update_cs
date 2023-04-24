@@ -1,0 +1,454 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "SearchForm",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text19": {
+					"type": "text",
+					"top": 79,
+					"left": 89,
+					"width": 151,
+					"height": 17,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Customer Profile ID"
+				},
+				"Text23": {
+					"type": "text",
+					"top": 133,
+					"left": 90,
+					"width": 151,
+					"height": 17,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Related to Profile ID"
+				},
+				"Text26": {
+					"type": "text",
+					"top": 325,
+					"left": 89,
+					"width": 151,
+					"height": 77,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Relationship Datails or other information about nature of relationship"
+				},
+				"Text27": {
+					"type": "text",
+					"top": 297,
+					"left": 69,
+					"width": 171,
+					"height": 17,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Nature of relationship"
+				},
+				"CSMRelationID": {
+					"type": "input",
+					"top": 52,
+					"left": 251,
+					"width": 135,
+					"height": 16,
+					"dataSource": "[CSMRelations:89]CSMRelationID:1",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CustomerID1": {
+					"type": "input",
+					"top": 79,
+					"left": 251,
+					"width": 135,
+					"height": 16,
+					"dataSource": "[CSMRelations:89]CustomerID1:2",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CustomerID2": {
+					"type": "input",
+					"top": 133,
+					"left": 252,
+					"width": 135,
+					"height": 16,
+					"dataSource": "[CSMRelations:89]CustomerID2:3",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"condIsDirector": {
+					"type": "checkbox",
+					"top": 181,
+					"left": 251,
+					"width": 363,
+					"height": 22,
+					"visibility": "hidden",
+					"text": "is a director of",
+					"class": "Fields",
+					"threeState": true,
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"condIsShareHolder": {
+					"type": "checkbox",
+					"top": 210,
+					"left": 251,
+					"width": 370,
+					"height": 17,
+					"text": "is a shareholder of",
+					"threeState": true,
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"condPCTShare": {
+					"type": "input",
+					"top": 234,
+					"left": 405,
+					"width": 73,
+					"height": 16,
+					"dataSource": "[CSMRelations:89]pctShare:14",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Pct_NoDec"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"top": 261,
+					"left": 251,
+					"width": 312,
+					"height": 26,
+					"text": "is authorized to do transaction on behalf of",
+					"threeState": true,
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"FullName1": {
+					"type": "input",
+					"top": 106,
+					"left": 251,
+					"width": 370,
+					"height": 16,
+					"dataSource": "[CSMRelations:89]FullName1:4",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"condFullName2": {
+					"type": "input",
+					"top": 185,
+					"left": 374,
+					"width": 269,
+					"height": 22,
+					"dataSource": "[CSMRelations:89]FullName2:5",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isCust2ACompany": {
+					"type": "checkbox",
+					"top": 128,
+					"left": 394,
+					"width": 136,
+					"height": 26,
+					"dataSource": "[CSMRelations:89]isFlagged:8",
+					"text": "is a company",
+					"stroke": "#000000",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"relationType": {
+					"type": "input",
+					"top": 298,
+					"left": 251,
+					"width": 180,
+					"height": 16,
+					"dataSource": "[CSMRelations:89]relationType:6",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"relationDetails": {
+					"type": "input",
+					"top": 325,
+					"left": 251,
+					"width": 369,
+					"height": 176,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[CSMRelations:89]relationDetails:7",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 521,
+					"left": 558,
+					"width": 77,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/OK"
+					},
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Search",
+					"textAlign": "center",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 521,
+					"left": 486,
+					"width": 62,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Cancel"
+					},
+					"action": "cancel",
+					"shortcutKey": "\u0000",
+					"text": "Cancel",
+					"textAlign": "center",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"condPercentLabel": {
+					"type": "text",
+					"top": 234,
+					"left": 243,
+					"width": 151,
+					"height": 17,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"text": "Percentage share %"
+				},
+				"condFullName": {
+					"type": "input",
+					"top": 185,
+					"left": 19,
+					"width": 224,
+					"height": 22,
+					"dataSource": "[CSMRelations:89]FullName1:4",
+					"stroke": "#000000",
+					"class": "Fields",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"bValidate",
+					"bCancel"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

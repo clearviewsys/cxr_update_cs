@@ -1,0 +1,3 @@
+//%attributes = {}
+//allrecordsRegisters
+showTodaysRegisters

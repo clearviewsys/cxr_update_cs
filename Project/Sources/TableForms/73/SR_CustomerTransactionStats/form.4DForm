@@ -1,0 +1,255 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_ScreenReport",
+	"rightMargin": 0,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onOutsideCall"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"customerStatsListBox": {
+					"type": "listbox",
+					"top": 72,
+					"left": 2,
+					"width": 862,
+					"height": 504,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "holdingsListBox",
+					"movableRows": false,
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"staticColumnCount": 1,
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"alternateFill": "#EEEEEE",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onAfterSort",
+						"onSelectionChange",
+						"onColumnMove",
+						"onRowMove",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": [
+								"arrCustomerIdAndNames",
+								"arrTransTypes",
+								"arrDescriptions"
+							],
+							"width": 245,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Customer",
+								"text": "Customer"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "arrTotalBuys",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Total Buy",
+								"text": "Total Buy"
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "arrTotalSells",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Total Sell",
+								"text": "Total Sell"
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "arrAvgBuys",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Avg. Buy LC",
+								"text": "Avg. Buy LC"
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column8",
+							"dataSource": "arrAvgSells",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Avg. Sell LC",
+								"text": "Avg. Sell LC"
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column9",
+							"dataSource": "arrBuyQtys",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Buy Qty",
+								"text": "Buy Qty"
+							},
+							"footer": {
+								"name": "Footer9",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "arrSellQtys",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Sell Qty",
+								"text": "Sell Qty"
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				},
+				"customerSearchBox": {
+					"type": "input",
+					"top": 19,
+					"left": 696,
+					"width": 168,
+					"height": 22,
+					"sizingX": "move",
+					"class": "Control",
+					"multiline": "no",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/customerSearchBox.4dm",
+					"events": [
+						"onLosingFocus"
+					]
+				},
+				"l_customerSearchBox": {
+					"type": "text",
+					"top": 19,
+					"left": 568,
+					"width": 122,
+					"height": 19,
+					"sizingX": "move",
+					"class": "Label_Large",
+					"text": "Search Customer"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

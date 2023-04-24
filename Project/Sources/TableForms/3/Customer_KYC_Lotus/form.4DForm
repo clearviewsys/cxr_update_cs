@@ -1,0 +1,1234 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 0,
+	"markerBody": 765,
+	"markerBreak": 765,
+	"markerFooter": 765,
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 340,
+					"left": 270,
+					"width": 296,
+					"height": 18,
+					"fill": "transparent"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 359,
+					"left": 270,
+					"width": 296,
+					"height": 18,
+					"fill": "transparent"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 84,
+					"left": 46,
+					"width": 185,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "First Names (include middle names)"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 133,
+					"left": 46,
+					"width": 73,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Street Address"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 158,
+					"left": 46,
+					"width": 45,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Province"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 183,
+					"left": 46,
+					"width": 67,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Occupation"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 208,
+					"left": 46,
+					"width": 147,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Email Address (if applicable)"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 238,
+					"left": 46,
+					"width": 40,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Home:"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 54,
+					"left": 36,
+					"width": 533,
+					"height": 19,
+					"fill": "#EBF3F3",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 13,
+					"fontWeight": "bold",
+					"text": "Internal Client ID"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 73,
+					"left": 36,
+					"width": 534
+				},
+				"Text2": {
+					"type": "text",
+					"top": 108,
+					"left": 46,
+					"width": 52,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Surname:"
+				},
+				"Line3": {
+					"type": "line",
+					"top": 121,
+					"left": 102,
+					"width": 210
+				},
+				"Text4": {
+					"type": "text",
+					"top": 108,
+					"left": 323,
+					"width": 60,
+					"height": 12,
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Date of Birth"
+				},
+				"Line6": {
+					"type": "line",
+					"top": 122,
+					"left": 386,
+					"width": 170
+				},
+				"Text12": {
+					"type": "text",
+					"top": 294,
+					"left": 46,
+					"width": 90,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Type of Picture ID:"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 343,
+					"left": 53,
+					"width": 200,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"text": "•   Most common transaction type"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 133,
+					"left": 349,
+					"width": 33,
+					"height": 12,
+					"textAlign": "right",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "City"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 158,
+					"left": 213,
+					"width": 60,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Postal Code"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 158,
+					"left": 377,
+					"width": 40,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Country"
+				},
+				"Text21": {
+					"type": "text",
+					"top": 238,
+					"left": 214,
+					"width": 40,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Cellular:"
+				},
+				"Text22": {
+					"type": "text",
+					"top": 238,
+					"left": 385,
+					"width": 45,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Business:"
+				},
+				"Text23": {
+					"type": "text",
+					"top": 294,
+					"left": 299,
+					"width": 100,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Document Number:"
+				},
+				"Line4": {
+					"type": "line",
+					"top": 145,
+					"left": 117,
+					"width": 230
+				},
+				"Line7": {
+					"type": "line",
+					"top": 145,
+					"left": 386,
+					"width": 170
+				},
+				"Line8": {
+					"type": "line",
+					"top": 168,
+					"left": 89,
+					"width": 115
+				},
+				"Line9": {
+					"type": "line",
+					"top": 170,
+					"left": 271,
+					"width": 98
+				},
+				"Line10": {
+					"type": "line",
+					"top": 170,
+					"left": 416,
+					"width": 130
+				},
+				"Line11": {
+					"type": "line",
+					"top": 195,
+					"left": 183,
+					"width": 368
+				},
+				"Line12": {
+					"type": "line",
+					"top": 220,
+					"left": 182,
+					"width": 371
+				},
+				"Line13": {
+					"type": "line",
+					"top": 250,
+					"left": 79,
+					"width": 120
+				},
+				"Line14": {
+					"type": "line",
+					"top": 250,
+					"left": 255,
+					"width": 120
+				},
+				"Line15": {
+					"type": "line",
+					"top": 250,
+					"left": 431,
+					"width": 120
+				},
+				"Text24": {
+					"type": "text",
+					"top": 262,
+					"left": 36,
+					"width": 533,
+					"height": 19,
+					"fill": "#EBF3F3",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 13,
+					"fontWeight": "bold",
+					"text": "   Picture Identification:"
+				},
+				"Line18": {
+					"type": "line",
+					"top": 306,
+					"left": 135,
+					"width": 150
+				},
+				"Line21": {
+					"type": "line",
+					"top": 306,
+					"left": 394,
+					"width": 160
+				},
+				"Text25": {
+					"type": "text",
+					"top": 319,
+					"left": 36,
+					"width": 533,
+					"height": 19,
+					"fill": "#EBF3F3",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 13,
+					"fontWeight": "bold",
+					"text": "Business Relationship / Purpose  / Source of Funds:"
+				},
+				"Text32": {
+					"type": "text",
+					"top": 559,
+					"left": 44,
+					"width": 513,
+					"height": 26,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Are you a foreign politically exposed person, a domestic politically exposed person, or a Head of an International Organisation or a family member of or close associate of one of these persons?"
+				},
+				"Text36": {
+					"type": "text",
+					"top": 734,
+					"left": 64,
+					"width": 90,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Client's Signature:"
+				},
+				"Text37": {
+					"type": "text",
+					"top": 734,
+					"left": 317,
+					"width": 50,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Date:"
+				},
+				"Line27": {
+					"type": "line",
+					"top": 746,
+					"left": 153,
+					"width": 150
+				},
+				"Line28": {
+					"type": "line",
+					"top": 746,
+					"left": 349,
+					"width": 150
+				},
+				"Text38": {
+					"type": "text",
+					"top": 19,
+					"left": 136,
+					"width": 286,
+					"height": 20,
+					"textAlign": "center",
+					"fontFamily": "Arial",
+					"fontSize": 16,
+					"fontWeight": "bold",
+					"text": "Client KYC Declaration Form"
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 19,
+					"left": 433,
+					"width": 133,
+					"height": 28,
+					"dataSource": "<>CompanyAddress",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"multiline": "yes",
+					"wordwrap": "normal",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 3,
+					"left": 36,
+					"width": 100,
+					"height": 55,
+					"dataSource": "<>CompanyLogo",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#FFFFFF",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field": {
+					"type": "input",
+					"top": 84,
+					"left": 220,
+					"width": 340,
+					"height": 14,
+					"dataSource": "[Customers:3]FirstName:3",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 107,
+					"left": 103,
+					"width": 216,
+					"height": 14,
+					"dataSource": "[Customers:3]LastName:4",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 107,
+					"left": 385,
+					"width": 181,
+					"height": 14,
+					"dataSource": "[Customers:3]DOB:5",
+					"dataSourceTypeHint": "date",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dateFormat": "systemLong",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 128,
+					"left": 118,
+					"width": 236,
+					"height": 14,
+					"dataSource": "[Customers:3]Address:7",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 129,
+					"left": 388,
+					"width": 163,
+					"height": 14,
+					"dataSource": "[Customers:3]City:8",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 156,
+					"left": 91,
+					"width": 109,
+					"height": 14,
+					"dataSource": "[Customers:3]Province:9",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 156,
+					"left": 273,
+					"width": 98,
+					"height": 14,
+					"dataSource": "[Customers:3]PostalCode:10",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field8": {
+					"type": "input",
+					"top": 156,
+					"left": 418,
+					"width": 128,
+					"height": 14,
+					"dataSource": "[Customers:3]CountryCode:113",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field9": {
+					"type": "input",
+					"top": 180,
+					"left": 182,
+					"width": 367,
+					"height": 14,
+					"dataSource": "[Customers:3]Occupation:21",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field10": {
+					"type": "input",
+					"top": 205,
+					"left": 183,
+					"width": 376,
+					"height": 14,
+					"dataSource": "[Customers:3]Email:17",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field11": {
+					"type": "input",
+					"top": 236,
+					"left": 82,
+					"width": 119,
+					"height": 14,
+					"dataSource": "[Customers:3]HomeTel:6",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field12": {
+					"type": "input",
+					"top": 236,
+					"left": 259,
+					"width": 116,
+					"height": 14,
+					"dataSource": "[Customers:3]CellPhone:13",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field13": {
+					"type": "input",
+					"top": 236,
+					"left": 431,
+					"width": 123,
+					"height": 14,
+					"dataSource": "[Customers:3]WorkTel:12",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field14": {
+					"type": "input",
+					"top": 292,
+					"left": 136,
+					"width": 150,
+					"height": 14,
+					"dataSource": "[Customers:3]PictureID_Type:70",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field16": {
+					"type": "input",
+					"top": 292,
+					"left": 395,
+					"width": 161,
+					"height": 14,
+					"dataSource": "[Customers:3]PictureID_Number:69",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field18": {
+					"type": "input",
+					"top": 342,
+					"left": 284,
+					"width": 270,
+					"height": 14,
+					"dataSource": "[Customers:3]AML_NatureofBusRelationship:39",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"isPEP": {
+					"type": "checkbox",
+					"top": 588,
+					"left": 44,
+					"width": 165,
+					"height": 18,
+					"text": "PEP",
+					"class": "Fields",
+					"focusable": false,
+					"threeState": true,
+					"method": "ObjectMethods/isPEP.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"isHIO": {
+					"type": "checkbox",
+					"top": 588,
+					"left": 219,
+					"width": 303,
+					"height": 18,
+					"text": "HIO",
+					"class": "Fields",
+					"focusable": false,
+					"threeState": true,
+					"method": "ObjectMethods/isHIO.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Field19": {
+					"type": "input",
+					"top": 55,
+					"left": 157,
+					"width": 171,
+					"height": 15,
+					"dataSource": "[Customers:3]CustomerID:1",
+					"class": "Fields_BOLD",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field20": {
+					"type": "input",
+					"top": 264,
+					"left": 188,
+					"width": 200,
+					"height": 14,
+					"dataSource": "[Customers:3]PictureID_TemplateID:15",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field21": {
+					"type": "input",
+					"top": 55,
+					"left": 412,
+					"width": 151,
+					"height": 15,
+					"dataSource": "[Customers:3]ExternalAccountNo:96",
+					"class": "Fields_BOLD",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field23": {
+					"type": "input",
+					"top": 361,
+					"left": 284,
+					"width": 270,
+					"height": 14,
+					"dataSource": "[Customers:3]AML_SOF_SOW:38",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text28": {
+					"type": "text",
+					"top": 362,
+					"left": 53,
+					"width": 200,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"text": "•  Main source of income"
+				},
+				"Text29": {
+					"type": "text",
+					"top": 541,
+					"left": 36,
+					"width": 533,
+					"height": 19,
+					"fill": "#EBF3F3",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 13,
+					"fontWeight": "bold",
+					"text": "PEP / HIO Declaration"
+				},
+				"Line2": {
+					"type": "line",
+					"top": 99,
+					"left": 102,
+					"width": 450
+				},
+				"Text13": {
+					"type": "text",
+					"top": 541,
+					"left": 36,
+					"width": 533,
+					"height": 19,
+					"fill": "#EBF3F3",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 13,
+					"fontWeight": "bold",
+					"text": "Politically Exposed Persons (PEP) / Head of an International Organisation (HIO) Declaration:"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 419,
+					"left": 44,
+					"width": 513,
+					"height": 26,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "We do not want you to miss out on special offers or other promotions that we think would interest you. Remember, you can opt out at any time."
+				},
+				"Text15": {
+					"type": "text",
+					"top": 399,
+					"left": 36,
+					"width": 533,
+					"height": 19,
+					"fill": "#EBF3F3",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 13,
+					"fontWeight": "bold",
+					"text": "Marketing communications:"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 445,
+					"left": 90,
+					"width": 486,
+					"height": 26,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "Yes please - I want to receive offers or promotions from Lotus Foreign Exchange Ltd."
+				},
+				"Text10": {
+					"type": "text",
+					"top": 499,
+					"left": 43,
+					"width": 513,
+					"height": 13,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"text": "I agree to authorise Lotus Foreign Exchange Ltd to:"
+				},
+				"Text26": {
+					"type": "text",
+					"top": 478,
+					"left": 36,
+					"width": 533,
+					"height": 19,
+					"fill": "#EBF3F3",
+					"textAlign": "left",
+					"fontFamily": "Calibri",
+					"fontSize": 13,
+					"fontWeight": "bold",
+					"text": "Authority for On-Line Transactions / Remittances:"
+				},
+				"Text27": {
+					"type": "text",
+					"top": 512,
+					"left": 90,
+					"width": 474,
+					"height": 22,
+					"fontFamily": "Calibri",
+					"fontSize": 9,
+					"text": "Carry out Money Transfers / Exchange of Foreign Currency based on instructions over Fax, Email and / or Telephone or through our on-line portal and to accept online transfers on my behalf as payment for transactions."
+				},
+				"Field2": {
+					"type": "checkbox",
+					"top": 519,
+					"left": 46,
+					"width": 20,
+					"height": 14,
+					"dataSource": "[Customers:3]isAllowedInternetAccess:50",
+					"text": " ",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 379,
+					"left": 270,
+					"width": 296,
+					"height": 18,
+					"fill": "transparent"
+				},
+				"Field17": {
+					"type": "input",
+					"top": 381,
+					"left": 284,
+					"width": 270,
+					"height": 14,
+					"dataSource": "[Customers:3]AML_POT:45",
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 382,
+					"left": 53,
+					"width": 200,
+					"height": 12,
+					"fontFamily": "Calibri",
+					"fontSize": 11,
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"text": "•  Purpose of transaction"
+				},
+				"OptInEmail": {
+					"type": "checkbox",
+					"top": 458,
+					"left": 88,
+					"width": 115,
+					"height": 18,
+					"text": "Email",
+					"class": "Fields_Small",
+					"threeState": true,
+					"method": "ObjectMethods/OptInEmail.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onPrintingDetail"
+					]
+				},
+				"OptInSMS": {
+					"type": "checkbox",
+					"top": 458,
+					"left": 210,
+					"width": 115,
+					"height": 18,
+					"text": "Text",
+					"class": "Fields_Small",
+					"threeState": true,
+					"method": "ObjectMethods/OptInSMS.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onPrintingDetail"
+					]
+				},
+				"OptInPhone": {
+					"type": "checkbox",
+					"top": 458,
+					"left": 353,
+					"width": 213,
+					"height": 18,
+					"text": "Phone",
+					"class": "Fields_Small",
+					"threeState": true,
+					"method": "ObjectMethods/OptInPhone.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onPrintingDetail"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 616,
+					"left": 36,
+					"width": 338,
+					"height": 14,
+					"class": "Fields",
+					"text": "What Services are you most likely to use  "
+				},
+				"dd_transactionFrequency": {
+					"type": "dropdown",
+					"top": 638,
+					"left": 405,
+					"width": 155,
+					"height": 18,
+					"dataSource": "Form:C1466.transactionFrequency",
+					"focusable": false,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text30": {
+					"type": "text",
+					"top": 638,
+					"left": 38,
+					"width": 250,
+					"height": 14,
+					"class": "Fields",
+					"text": "How often are you likely to transact "
+				},
+				"Text31": {
+					"type": "text",
+					"top": 659,
+					"left": 38,
+					"width": 333,
+					"height": 14,
+					"class": "Fields",
+					"text": "Average Transaction Value"
+				},
+				"Text33": {
+					"type": "text",
+					"top": 683,
+					"left": 38,
+					"width": 232,
+					"height": 14,
+					"class": "Fields",
+					"text": "What Services are you most likely to use  "
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"top": 613,
+					"left": 278,
+					"width": 59,
+					"height": 12,
+					"text": "eWire",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"top": 613,
+					"left": 350,
+					"width": 59,
+					"height": 12,
+					"text": "Wire",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"top": 613,
+					"left": 405,
+					"width": 82,
+					"height": 17,
+					"text": "MoneyGram",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box3": {
+					"type": "checkbox",
+					"top": 613,
+					"left": 504,
+					"width": 72,
+					"height": 14,
+					"text": "Exchange",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Field15": {
+					"type": "input",
+					"top": 659,
+					"left": 405,
+					"width": 154,
+					"height": 20,
+					"dataSource": "[Customers:3]CustomerID:1",
+					"class": "Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Input": {
+					"type": "input",
+					"left": 160,
+					"top": 729,
+					"width": 141,
+					"height": 17,
+					"enterable": false,
+					"contextMenu": "none",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"class": "Fields",
+					"method": "ObjectMethods/Input.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Input1": {
+					"type": "input",
+					"left": 358,
+					"top": 729,
+					"width": 141,
+					"height": 17,
+					"enterable": false,
+					"contextMenu": "none",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"class": "Fields",
+					"method": "ObjectMethods/Input1.4dm",
+					"events": [
+						"onLoad"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"OptInEmail",
+					"OptInSMS",
+					"OptInPhone"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 11,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

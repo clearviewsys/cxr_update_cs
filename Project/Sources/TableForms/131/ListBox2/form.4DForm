@@ -1,0 +1,215 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "Questions",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"listbox": {
+					"type": "listbox",
+					"dataSource": "Form:C1466.currentSelection",
+					"top": 85,
+					"left": 16,
+					"width": 952,
+					"height": 300,
+					"visibility": "visible",
+					"sizingX": "fixed",
+					"sizingY": "grow",
+					"headerHeight": "3em",
+					"listboxType": "collection",
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"resizingMode": "legacy",
+					"method": "ObjectMethods/listbox.4dm",
+					"fontSize": 14,
+					"events": [
+						"onDoubleClick"
+					],
+					"currentItemSource": "Form:C1466.currentItem",
+					"selectionMode": "single",
+					"columns": [
+						{
+							"name": "questionID",
+							"dataSource": "This:C1470.questionID",
+							"width": 77,
+							"enterable": false,
+							"header": {
+								"text": "Question id",
+								"name": "Header1"
+							},
+							"footer": {
+								"name": "1"
+							}
+						},
+						{
+							"name": "question",
+							"dataSource": "This:C1470.question",
+							"width": 273,
+							"enterable": true,
+							"header": {
+								"text": "Question",
+								"name": "2"
+							},
+							"footer": {
+								"name": "3"
+							}
+						},
+						{
+							"name": "answer1",
+							"dataSource": "This:C1470.answer1",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Answer1",
+								"name": "4"
+							},
+							"footer": {
+								"name": "5"
+							}
+						},
+						{
+							"name": "answer2",
+							"dataSource": "This:C1470.answer2",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Answer2",
+								"name": "6"
+							},
+							"footer": {
+								"name": "7"
+							}
+						},
+						{
+							"name": "answer3",
+							"dataSource": "This:C1470.answer3",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Answer3",
+								"name": "8"
+							},
+							"footer": {
+								"name": "9"
+							}
+						},
+						{
+							"name": "answer4",
+							"dataSource": "This:C1470.answer4",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Answer4",
+								"name": "10"
+							},
+							"footer": {
+								"name": "11"
+							}
+						},
+						{
+							"name": "correctAnswer",
+							"dataSource": "This:C1470.correctAnswer",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Correct Answer",
+								"name": "12"
+							},
+							"footer": {
+								"name": "13"
+							}
+						}
+					]
+				},
+				"Button": {
+					"type": "button",
+					"text": "Create Question",
+					"top": 16,
+					"left": 257,
+					"width": 228,
+					"height": 49,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Edit Question",
+					"top": 16,
+					"left": 499,
+					"width": 228,
+					"height": 49,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "Refresh",
+					"top": 16,
+					"left": 16,
+					"width": 228,
+					"height": 49,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm"
+				},
+				"Button3": {
+					"type": "button",
+					"text": "Create Quiz",
+					"top": 16,
+					"left": 740,
+					"width": 228,
+					"height": 49,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button3.4dm"
+				}
+			}
+		}
+	],
+	"geometryStamp": 23,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

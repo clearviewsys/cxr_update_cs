@@ -1,0 +1,104 @@
+{
+	"forms": {
+		"printeWireForm": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"viewAttachment": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"Pick_": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"rep_PaymentOrderOutgoing": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"printDetailed": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"pay_": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"eWiresList": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"Entry": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"Pay": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"eWireRemoteList": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"Entry_old": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"Subform_Agents": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"eWireStatus": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"print": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "listPrinter"
+		},
+		"Receive": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"Search": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"AgentPOList": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"List": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "listScreen"
+		},
+		"actions": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"View": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"PayReceive": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"PICK": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"fetcheWire": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		},
+		"print_Thermal": {
+			"timeStamp": "2023-04-24T12:23:47Z",
+			"destination": "detailScreen"
+		}
+	}
+}

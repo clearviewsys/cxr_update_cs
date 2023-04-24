@@ -1,0 +1,2 @@
+//%attributes = {}
+// see isScreenLocked

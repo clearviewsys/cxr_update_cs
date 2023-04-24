@@ -1,0 +1,1400 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_View",
+	"inheritedFormTable": "",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onUnload"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 540,
+					"left": 4,
+					"width": 1110,
+					"height": 33,
+					"sizingY": "move",
+					"fill": "#8DC1DE",
+					"stroke": "#AAAAAA",
+					"sizingX": "grow"
+				},
+				"fromDate": {
+					"type": "input",
+					"top": 548,
+					"left": 305,
+					"width": 220,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "Medium",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/fromDate.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"l_To": {
+					"type": "text",
+					"top": 548,
+					"left": 535,
+					"width": 30,
+					"height": 17,
+					"sizingY": "move",
+					"class": "Medium",
+					"textAlign": "center",
+					"text": "To"
+				},
+				"toDate": {
+					"type": "input",
+					"top": 548,
+					"left": 567,
+					"width": 250,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "Medium",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/toDate.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"top": 546,
+					"left": 847,
+					"width": 145,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "cbApplyDateRange",
+					"text": "Apply Dates",
+					"class": "Medium",
+					"method": "ObjectMethods/Check Box1.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"AccountID": {
+					"type": "input",
+					"top": 75,
+					"left": 154,
+					"width": 397,
+					"height": 20,
+					"dataSource": "[Accounts:9]AccountID:1",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"AccountNo": {
+					"type": "input",
+					"top": 75,
+					"left": 8,
+					"width": 96,
+					"height": 20,
+					"dataSource": "[Accounts:9]AccountCode:4",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/AccountCode"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Currency1": {
+					"type": "input",
+					"top": 75,
+					"left": 110,
+					"width": 38,
+					"height": 20,
+					"dataSource": "[Accounts:9]Currency:6",
+					"class": "Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 108,
+					"left": 420,
+					"width": 15,
+					"height": 15,
+					"class": "Label"
+				},
+				"AuthorizedUser": {
+					"type": "input",
+					"top": 16,
+					"left": 808,
+					"width": 165,
+					"height": 15,
+					"dataSource": "[Accounts:9]AgentID:16",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"AccountType3": {
+					"type": "checkbox",
+					"top": 17,
+					"left": 653,
+					"width": 205,
+					"height": 17,
+					"dataSource": "[Accounts:9]isForeignAccount:15",
+					"text": "Managed by agent",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Text55": {
+					"type": "text",
+					"top": 579,
+					"left": 9,
+					"width": 203,
+					"height": 17,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Opening Balance"
+				},
+				"Variable27": {
+					"type": "input",
+					"top": 579,
+					"left": 219,
+					"width": 137,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.openingBalance",
+					"dataSourceTypeHint": "number",
+					"class": "Medium",
+					"focusable": false,
+					"fill": "#BFE3CF",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"borderStyle": "none"
+				},
+				"l_from": {
+					"type": "text",
+					"top": 548,
+					"left": 252,
+					"width": 40,
+					"height": 17,
+					"sizingY": "move",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "From"
+				},
+				"Button4": {
+					"type": "button",
+					"top": 689,
+					"left": 960,
+					"width": 141,
+					"height": 36,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"text": "Close",
+					"class": "Large",
+					"stroke": "#222222",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"b_Reconcile": {
+					"type": "button",
+					"top": 79,
+					"left": 919,
+					"width": 183,
+					"height": 32,
+					"text": "Reconcile",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_Reconcile.4dm",
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move",
+					"icon": "/RESOURCES/Icons/flat/tiny-checked.png",
+					"textPlacement": "right"
+				},
+				"b_export": {
+					"type": "button",
+					"top": 117,
+					"left": 919,
+					"width": 183,
+					"height": 32,
+					"shortcutKey": "a",
+					"shortcutAccel": true,
+					"class": "Large",
+					"focusable": false,
+					"text": "Export Table",
+					"icon": "/RESOURCES/Icons/flat/tiny-export.png",
+					"iconFrames": 1,
+					"textPlacement": "right",
+					"method": "ObjectMethods/b_export.4dm",
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move"
+				},
+				"isRestricted": {
+					"type": "text",
+					"top": 98,
+					"left": 9,
+					"width": 344,
+					"height": 19,
+					"fill": "#ff6347",
+					"stroke": "#FFFFFF",
+					"class": "Large",
+					"textAlign": "center",
+					"text": "Account is Restricted to managers"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 602,
+					"left": 9,
+					"width": 203,
+					"height": 17,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Transfers In"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 631,
+					"left": 9,
+					"width": 203,
+					"height": 17,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Amount Bought"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 659,
+					"left": 9,
+					"width": 203,
+					"height": 17,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Amount Sold"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 684,
+					"left": 9,
+					"width": 203,
+					"height": 22,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Closing Balance",
+					"fontWeight": "bold"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 589,
+					"left": 714,
+					"width": 203,
+					"height": 17,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Market Rate"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 640,
+					"left": 714,
+					"width": 203,
+					"height": 17,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Market Value (LC)"
+				},
+				"TransferIn": {
+					"type": "input",
+					"top": 605,
+					"left": 219,
+					"width": 137,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.transferIn",
+					"dataSourceTypeHint": "number",
+					"class": "Medium",
+					"focusable": false,
+					"fill": "#b1c4dd",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"borderStyle": "none"
+				},
+				"sumBuys": {
+					"type": "input",
+					"top": 632,
+					"left": 219,
+					"width": 137,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.sumBuys",
+					"dataSourceTypeHint": "number",
+					"class": "Medium",
+					"focusable": false,
+					"fill": "#C4DEDF",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"borderStyle": "none"
+				},
+				"sumSells": {
+					"type": "input",
+					"top": 659,
+					"left": 219,
+					"width": 137,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.sumSells",
+					"dataSourceTypeHint": "number",
+					"class": "Medium",
+					"focusable": false,
+					"fill": "#F4F8D1",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"borderStyle": "none"
+				},
+				"balance": {
+					"type": "input",
+					"top": 684,
+					"left": 219,
+					"width": 166,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.balance",
+					"dataSourceTypeHint": "number",
+					"class": "Large",
+					"fontWeight": "bold",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "#EEEEEE",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"marketRate": {
+					"type": "input",
+					"top": 589,
+					"left": 924,
+					"width": 167,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.marketRate",
+					"dataSourceTypeHint": "number",
+					"class": "Medium",
+					"fill": "transparent",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Rates"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"enterable": false,
+					"focusable": false,
+					"borderStyle": "none"
+				},
+				"marketValue": {
+					"type": "input",
+					"top": 640,
+					"left": 924,
+					"width": 167,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.marketValue",
+					"dataSourceTypeHint": "number",
+					"stroke": "#2042FF",
+					"class": "Medium",
+					"focusable": false,
+					"fill": "#EEEEEE",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"transferOut": {
+					"type": "input",
+					"top": 605,
+					"left": 532,
+					"width": 137,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.transferOut",
+					"dataSourceTypeHint": "number",
+					"class": "Medium",
+					"focusable": false,
+					"fill": "#ffff00",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"borderStyle": "none"
+				},
+				"AccountID5": {
+					"type": "input",
+					"top": 37,
+					"left": 808,
+					"width": 165,
+					"height": 15,
+					"dataSource": "[Accounts:9]CustomerID:20",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text25": {
+					"type": "text",
+					"top": 37,
+					"left": 659,
+					"width": 160,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Fields",
+					"textAlign": "left",
+					"text": "Linked to Customer ID"
+				},
+				"viewListBox": {
+					"type": "listbox",
+					"top": 159,
+					"left": 2,
+					"width": 1114,
+					"height": 376,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeight": "26px",
+					"headerHeight": "2em",
+					"showFooters": true,
+					"footerHeight": "2em",
+					"table": 10,
+					"highlightSet": "$Registers_LBSet",
+					"selectionMode": "single",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#D4EFFC",
+					"alternateFill": "#EEEEEE",
+					"method": "ObjectMethods/viewListBox.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDoubleClick",
+						"onUnload",
+						"onColumnMove",
+						"onColumnResize",
+						"onHeaderClick"
+					],
+					"class": "Medium",
+					"verticalAlign": "middle",
+					"columns": [
+						{
+							"name": "Column19",
+							"dataSource": "[Registers:10]BranchID:39",
+							"width": 27,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"textAlign": "center",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_branchID",
+								"text": "Br."
+							},
+							"footer": {
+								"name": "Footer19",
+								"dataSource": "vFooterText",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C0C0C0",
+								"verticalAlign": "middle"
+							}
+						},
+						{
+							"name": "Column17",
+							"dataSource": "[Registers:10]RegisterID:1",
+							"width": 101,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_RegisterID",
+								"text": "Register ID"
+							},
+							"footer": {
+								"name": "Footer14",
+								"dataSource": "vFooterText",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C0C0C0",
+								"verticalAlign": "middle"
+							}
+						},
+						{
+							"name": "Column18",
+							"dataSource": "[Registers:10]RegisterDate:2",
+							"dataSourceTypeHint": "date",
+							"width": 97,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_ValueDate",
+								"text": "Date"
+							},
+							"footer": {
+								"name": "Footer15",
+								"dataSource": "vCount",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "count",
+								"textFormat": " ",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C0C0C0",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column23",
+							"dataSource": "[Registers:10]InvoiceNumber:10",
+							"width": 95,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#666666",
+							"fill": "#F9FEF0",
+							"alternateFill": "#EFF5E3",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Invoice"
+							},
+							"footer": {
+								"name": "Footer18",
+								"dataSource": "vFooterText",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C0C0C0",
+								"verticalAlign": "middle"
+							}
+						},
+						{
+							"name": "Column20",
+							"dataSource": "[Registers:10]isValidated:35",
+							"dataSourceTypeHint": "boolean",
+							"width": 26,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_validated",
+								"text": "Reconciled"
+							},
+							"footer": {
+								"name": "Footer17",
+								"dataSource": "vFooterText",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C0C0C0",
+								"verticalAlign": "middle"
+							}
+						},
+						{
+							"name": "Column33",
+							"dataSource": "[Registers:10]validationCode:36",
+							"width": 87,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header18",
+								"text": "Validation"
+							},
+							"footer": {
+								"name": "Footer25",
+								"dataSource": "vFooterText",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C0C0C0",
+								"verticalAlign": "middle"
+							}
+						},
+						{
+							"name": "Column32",
+							"dataSource": "[Registers:10]SubAccountID:58",
+							"width": 0,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header17",
+								"text": "Sub-Account"
+							},
+							"footer": {
+								"name": "Footer24",
+								"dataSource": "vFooterText",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C0C0C0",
+								"verticalAlign": "middle"
+							}
+						},
+						{
+							"name": "col_CustomerName",
+							"dataSource": "[Customers:3]FullName:40",
+							"width": 169,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_customerName",
+								"text": "Customer Name"
+							},
+							"footer": {
+								"name": "Footer20",
+								"dataSource": "vFooterText",
+								"fill": "#C0C0C0",
+								"verticalAlign": "middle"
+							}
+						},
+						{
+							"name": "Column25",
+							"dataSource": "[Registers:10]isTransfer:3",
+							"dataSourceTypeHint": "boolean",
+							"width": 27,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"alternateFill": "#EEEEEE",
+							"textAlign": "center",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header10",
+								"text": "Tr."
+							},
+							"footer": {
+								"name": "Footer22",
+								"dataSource": "vFooterText",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C0C0C0",
+								"verticalAlign": "middle"
+							}
+						},
+						{
+							"name": "debit",
+							"dataSource": "[Registers:10]Debit:8",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#DFE4FF",
+							"alternateFill": "#D1D7F7",
+							"events": [],
+							"header": {
+								"name": "h_received",
+								"text": "Received"
+							},
+							"footer": {
+								"name": "SumDebit",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"fill": "#9DA3BF"
+							}
+						},
+						{
+							"name": "Column27",
+							"dataSource": "[Registers:10]Credit:7",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#FFFFDF",
+							"alternateFill": "#FAFAD6",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_paid",
+								"text": "Paid"
+							},
+							"footer": {
+								"name": "sumCredit",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"fill": "#C1BFA1"
+							}
+						},
+						{
+							"name": "Column14",
+							"dataSource": "[Registers:10]OurRate:25",
+							"dataSourceTypeHint": "number",
+							"width": 108,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Rates",
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_rate",
+								"text": "Rate"
+							},
+							"footer": {
+								"name": "Footer16",
+								"dataSource": "vFooterText",
+								"fill": "#DDDDDD"
+							}
+						},
+						{
+							"name": "Column15",
+							"dataSource": "[Registers:10]totalFees:30",
+							"dataSourceTypeHint": "number",
+							"width": 53,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_fees",
+								"text": "Fees"
+							},
+							"footer": {
+								"name": "SumTotalFees",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"fill": "#DDDDDD",
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column22",
+							"dataSource": "[Registers:10]DebitLocal:23",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#DFE4FF",
+							"alternateFill": "#D1D7F7",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "l_debitLC",
+								"text": "Debit LC"
+							},
+							"footer": {
+								"name": "SumDebitLocal1",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"fill": "#9DA3BF",
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "c_creditLocal",
+							"dataSource": "[Registers:10]CreditLocal:24",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#FFFFDF",
+							"alternateFill": "#F9F7CE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "l_revenue",
+								"text": "Credit LC"
+							},
+							"footer": {
+								"name": "SumCreditLocal",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#C1BFA3",
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "c_refNo",
+							"dataSource": "[Registers:10]ReferenceNo:57",
+							"width": 69,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_reference",
+								"text": "Reference"
+							},
+							"footer": {
+								"name": "Footer21",
+								"dataSource": "vFooterText",
+								"fill": "#C0C0C0"
+							}
+						}
+					]
+				},
+				"arrBranches": {
+					"type": "dropdown",
+					"top": 544,
+					"left": 9,
+					"width": 53,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "arrBranches",
+					"focusable": false,
+					"choiceList": [
+						"All",
+						"Assets",
+						"Liabilities",
+						"Equities",
+						"Revenues",
+						"Expenses"
+					],
+					"class": "Medium",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/arrBranches.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"b_displayCustomerName": {
+					"type": "checkbox",
+					"top": 127,
+					"left": 9,
+					"width": 231,
+					"height": 22,
+					"text": "Display Customer Names",
+					"class": "Medium",
+					"focusable": false,
+					"method": "ObjectMethods/b_displayCustomerName.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"dd_dateRanges": {
+					"type": "dropdown",
+					"top": 545,
+					"left": 65,
+					"width": 180,
+					"height": 22,
+					"sizingY": "move",
+					"focusable": false,
+					"class": "Medium",
+					"method": "ObjectMethods/dd_dateRanges.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"sumDebitLC": {
+					"type": "input",
+					"top": 632,
+					"left": 532,
+					"width": 137,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.sumDebitLC",
+					"dataSourceTypeHint": "number",
+					"class": "Medium",
+					"focusable": false,
+					"fill": "#ADD1D3",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"borderStyle": "none"
+				},
+				"sumCreditLC": {
+					"type": "input",
+					"top": 659,
+					"left": 532,
+					"width": 137,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.sumCreditLC",
+					"dataSourceTypeHint": "number",
+					"class": "Medium",
+					"focusable": false,
+					"fill": "#E3EB81",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"borderStyle": "none"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 602,
+					"left": 369,
+					"width": 153,
+					"height": 17,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Transfers Out"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 630,
+					"left": 369,
+					"width": 153,
+					"height": 17,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Volume Bought (LC)"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 659,
+					"left": 369,
+					"width": 153,
+					"height": 17,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Volume Sold (LC)"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 615,
+					"left": 714,
+					"width": 203,
+					"height": 17,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Market Rate Inverse"
+				},
+				"marketRateInverse": {
+					"type": "input",
+					"top": 615,
+					"left": 924,
+					"width": 167,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.marketRateInverse",
+					"dataSourceTypeHint": "number",
+					"class": "Medium",
+					"fill": "transparent",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Rates"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"enterable": false,
+					"focusable": false,
+					"borderStyle": "none"
+				},
+				"marketValue1": {
+					"type": "input",
+					"top": 683,
+					"left": 532,
+					"width": 137,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.sumGains",
+					"dataSourceTypeHint": "number",
+					"stroke": "automatic",
+					"class": "Medium",
+					"focusable": false,
+					"fill": "#fffacd",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"marketValue2": {
+					"type": "input",
+					"top": 707,
+					"left": 532,
+					"width": 137,
+					"height": 18,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.sumFees",
+					"dataSourceTypeHint": "number",
+					"stroke": "automatic",
+					"class": "Medium",
+					"focusable": false,
+					"fill": "#fffacd",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"top": 684,
+					"left": 369,
+					"width": 153,
+					"height": 17,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Gain"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 708,
+					"left": 369,
+					"width": 153,
+					"height": 17,
+					"sizingY": "move",
+					"stroke": "#444444",
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Fees charged"
+				}
+			},
+			"entryOrder": [
+				"fromDate",
+				"toDate",
+				"Check Box1",
+				"Variable27",
+				"Button4",
+				"b_Reconcile",
+				"TransferIn",
+				"sumBuys",
+				"sumSells",
+				"balance",
+				"marketValue",
+				"transferOut",
+				"viewListBox",
+				"arrBranches",
+				"b_displayCustomerName",
+				"dd_dateRanges",
+				"sumDebitLC",
+				"sumCreditLC",
+				"marketRateInverse",
+				"marketValue1",
+				"marketValue2",
+				"marketRate"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 569,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

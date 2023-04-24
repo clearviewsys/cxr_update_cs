@@ -1,0 +1,440 @@
+﻿{
+	"destination": "detailScreen",
+	"windowTitle": "Entry Form",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text17": {
+					"type": "text",
+					"top": 6,
+					"left": 360,
+					"width": 104,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"text": "Calendar"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 120,
+					"left": 1,
+					"width": 133,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Date"
+				},
+				"Text21": {
+					"type": "text",
+					"top": 225,
+					"left": 1,
+					"width": 133,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Event Heading"
+				},
+				"Text22": {
+					"type": "text",
+					"top": 256,
+					"left": 1,
+					"width": 133,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Notes"
+				},
+				"Text24": {
+					"type": "text",
+					"top": 172,
+					"left": 1,
+					"width": 133,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "From Time"
+				},
+				"CalendarName": {
+					"type": "input",
+					"top": 28,
+					"left": 360,
+					"width": 167,
+					"height": 15,
+					"dataSource": "[CalendarEvents:80]CalendarName:9",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/CalendarList"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isAllDayEvent1": {
+					"type": "checkbox",
+					"top": 50,
+					"left": 360,
+					"width": 152,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]isFlagged:15",
+					"text": "Flagged",
+					"stroke": "#000000",
+					"class": "Large",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Date": {
+					"type": "input",
+					"top": 120,
+					"left": 150,
+					"width": 181,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]Date:4",
+					"dataSourceTypeHint": "date",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Date.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"isAllDayEvent": {
+					"type": "checkbox",
+					"top": 146,
+					"left": 150,
+					"width": 152,
+					"height": 18,
+					"dataSource": "[CalendarEvents:80]isAllDayEvent:3",
+					"text": "All Day Event",
+					"stroke": "#000000",
+					"class": "Large",
+					"method": "ObjectMethods/isAllDayEvent.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"FromTime": {
+					"type": "input",
+					"top": 172,
+					"left": 150,
+					"width": 82,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]FromTime:5",
+					"dataSourceTypeHint": "time",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"toTime": {
+					"type": "input",
+					"top": 172,
+					"left": 279,
+					"width": 95,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]toTime:6",
+					"dataSourceTypeHint": "time",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isTask": {
+					"type": "checkbox",
+					"top": 196,
+					"left": 149,
+					"width": 230,
+					"height": 21,
+					"dataSource": "[CalendarEvents:80]isTask:7",
+					"text": "Task",
+					"stroke": "#000000",
+					"class": "Large",
+					"fontWeight": "bold",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isCompleted": {
+					"type": "checkbox",
+					"top": 196,
+					"left": 310,
+					"width": 217,
+					"height": 18,
+					"dataSource": "[CalendarEvents:80]isCompleted:17",
+					"text": "Is this task complete?",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"eventName": {
+					"type": "input",
+					"top": 225,
+					"left": 149,
+					"width": 378,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]EventHeading:2",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Notes": {
+					"type": "input",
+					"top": 256,
+					"left": 149,
+					"width": 363,
+					"height": 126,
+					"dataSource": "[CalendarEvents:80]Notes:8",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 403,
+					"left": 402,
+					"width": 125,
+					"height": 21,
+					"dataSource": "Button1",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 403,
+					"left": 266,
+					"width": 125,
+					"height": 21,
+					"dataSource": "Button1",
+					"action": "cancel",
+					"text": "Cancel",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 172,
+					"left": 246,
+					"width": 29,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "center",
+					"text": "to"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 88,
+					"left": 1,
+					"width": 133,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "User"
+				},
+				"eventName1": {
+					"type": "input",
+					"top": 88,
+					"left": 149,
+					"width": 182,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]TargetUser:10",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 91,
+					"left": 339,
+					"width": 173,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"text": "Leave blank for all users"
+				}
+			},
+			"entryOrder": [
+				"CalendarName",
+				"isAllDayEvent1",
+				"Date",
+				"isAllDayEvent",
+				"FromTime",
+				"toTime",
+				"isTask",
+				"isCompleted",
+				"eventName",
+				"Notes",
+				"Button1",
+				"Button2"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

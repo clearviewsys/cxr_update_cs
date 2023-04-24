@@ -1,0 +1,2 @@
+READ ONLY:C145([MACs:18])
+QUERY:C277([MACs:18]; [MACs:18]MACAddress:1=UTIL_getMacAddress)

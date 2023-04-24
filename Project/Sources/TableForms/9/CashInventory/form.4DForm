@@ -1,0 +1,368 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"acc_PositionsListBox": {
+					"type": "listbox",
+					"top": 54,
+					"left": 2,
+					"width": 460,
+					"height": 473,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "acc_PositionsListBox",
+					"focusable": false,
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "2em",
+					"showFooters": true,
+					"horizontalLineStroke": "#AAAAAA",
+					"verticalLineStroke": "#CCCCCC",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"alternateFill": "#EEFCE1",
+					"fontFamily": "Tahoma",
+					"fontSize": 10,
+					"events": [
+						"onDoubleClick",
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "Column9",
+							"dataSource": "arrAccountIDs",
+							"width": 114,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#FFFFFF",
+							"alternateFill": "#EEFCE1",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"fontWeight": "bold",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Account",
+								"text": "Account",
+								"dataSource": "Accounts",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#D5D0CD"
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrOpenings",
+							"dataSourceTypeHint": "number",
+							"width": 97,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"styledText": true,
+							"contextMenu": "none",
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#F2F2F2",
+							"alternateFill": "#DAF0C8",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_Opening Balance",
+								"text": "Opening Balance",
+								"dataSource": "Header2",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "1",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "count",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#D5D0CD"
+							}
+						},
+						{
+							"name": "Column10",
+							"dataSource": "arrBalances",
+							"dataSourceTypeHint": "number",
+							"width": 98,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"styledText": true,
+							"contextMenu": "none",
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#E9FBFE",
+							"alternateFill": "#D4F3DA",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"fontWeight": "bold",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_Balance1",
+								"text": "Closing Balance",
+								"dataSource": "Header5",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "12",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#D5D0CD"
+							}
+						},
+						{
+							"name": "Column11",
+							"dataSource": "arrCurrencies",
+							"width": 33,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"styledText": true,
+							"contextMenu": "none",
+							"fill": "#FFFFFF",
+							"alternateFill": "#EEFCE1",
+							"textAlign": "center",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"fontWeight": "bold",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "CURR1",
+								"text": "CUR",
+								"dataSource": "Header1",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "13",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#D5D0CD"
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "arrMarketValues",
+							"dataSourceTypeHint": "number",
+							"width": 101,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"styledText": true,
+							"contextMenu": "none",
+							"numberFormat": "|Currency (blank for 0)",
+							"fill": "#FFEBFF",
+							"alternateFill": "#EAE8DA",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"fontWeight": "bold",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_Balance",
+								"text": "Market Value",
+								"dataSource": "Header5",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "6",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#D5D0CD"
+							}
+						}
+					]
+				},
+				"Text52": {
+					"type": "text",
+					"top": 6,
+					"left": 12,
+					"width": 91,
+					"height": 15,
+					"class": "Label",
+					"text": "From Date"
+				},
+				"Field7": {
+					"type": "input",
+					"top": 6,
+					"left": 90,
+					"width": 95,
+					"height": 15,
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field7.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"Text53": {
+					"type": "text",
+					"top": 29,
+					"left": 12,
+					"width": 60,
+					"height": 15,
+					"class": "Label",
+					"text": "To Date"
+				},
+				"Field8": {
+					"type": "input",
+					"top": 29,
+					"left": 90,
+					"width": 95,
+					"height": 15,
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field8.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"top": 2,
+					"left": 191,
+					"width": 118,
+					"height": 20,
+					"dataSource": "cbApplyDateRange",
+					"text": "Apply Date Range",
+					"class": "Fields_Small",
+					"method": "ObjectMethods/Check Box1.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Highlight Button5": {
+					"type": "button",
+					"top": 24,
+					"left": 192,
+					"width": 64,
+					"height": 20,
+					"dataSource": "Highlight Button1",
+					"class": "Fields_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Today",
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 0,
+					"left": -3,
+					"width": 16,
+					"height": 13,
+					"dataSource": "Invisible Button1",
+					"shortcutKey": "w",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

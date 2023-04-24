@@ -1,0 +1,2 @@
+
+cropImageFromAllSides(->docPhoto2)

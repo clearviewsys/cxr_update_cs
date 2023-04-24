@@ -1,1 +1,0 @@
-﻿<!-- SVGTool_SHOW_IN_VIEWER ( Param_1 ; Param_2 ) -> Param_1 (Text) -> Param_2 (Text)-->## Description **SVGTool\_SHOW\_IN\_VIEWER** ( svgObject )

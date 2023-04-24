@@ -1,0 +1,253 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "ViewToolbar2",
+	"inheritedFormTable": 7,
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 66,
+					"left": 15,
+					"width": 118,
+					"height": 15,
+					"class": "Label",
+					"text": "Mailbox ID"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 93,
+					"left": 15,
+					"width": 118,
+					"height": 15,
+					"class": "Label",
+					"text": "Customer ID"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 66,
+					"left": 118,
+					"width": 123,
+					"height": 16,
+					"dataSource": "[Mailboxes:56]MailboxID:1",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 92,
+					"left": 118,
+					"width": 123,
+					"height": 16,
+					"dataSource": "[Mailboxes:56]CustomerID:2",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Field2.4dm",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 118,
+					"left": 118,
+					"width": 123,
+					"height": 16,
+					"dataSource": "[Mailboxes:56]StartDate:3",
+					"dataSourceTypeHint": "date",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 144,
+					"left": 118,
+					"width": 123,
+					"height": 16,
+					"dataSource": "[Mailboxes:56]ExpirationDate:4",
+					"dataSourceTypeHint": "date",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 170,
+					"left": 118,
+					"width": 351,
+					"height": 144,
+					"dataSource": "[Mailboxes:56]Comments:5",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "checkbox",
+					"top": 330,
+					"left": 118,
+					"width": 143,
+					"height": 16,
+					"dataSource": "[Mailboxes:56]isFlagged:6",
+					"text": "isFlagged",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 119,
+					"left": 15,
+					"width": 118,
+					"height": 15,
+					"class": "Label",
+					"text": "Start Date"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 145,
+					"left": 15,
+					"width": 118,
+					"height": 15,
+					"class": "Label",
+					"text": "Exp. Date"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 171,
+					"left": 15,
+					"width": 118,
+					"height": 15,
+					"class": "Label",
+					"text": "Comments"
+				},
+				"Button1": {
+					"type": "button",
+					"top": 339,
+					"left": 399,
+					"width": 75,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "bOK",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"class": "Control",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 339,
+					"left": 314,
+					"width": 75,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"action": "cancel",
+					"shortcutKey": "[Esc]",
+					"text": "Cancel",
+					"class": "Control",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 92,
+					"left": 246,
+					"width": 223,
+					"height": 16,
+					"dataSource": "[Customers:3]FullName:40",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/Field7.4dm",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

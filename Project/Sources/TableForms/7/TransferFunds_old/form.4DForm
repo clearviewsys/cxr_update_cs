@@ -1,0 +1,762 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 259,
+					"left": 15,
+					"width": 405,
+					"height": 65,
+					"fill": "#EEEEEE",
+					"stroke": "transparent"
+				},
+				"Toaccount2": {
+					"type": "input",
+					"top": 10,
+					"left": 287,
+					"width": 126,
+					"height": 15,
+					"dataSource": "vTransferDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": "!0&9Month: ## Day: ## Year: ##",
+					"events": [
+						"onLosingFocus",
+						"onDataChange"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 143,
+					"left": 15,
+					"width": 190,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Transfer From Account"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 143,
+					"left": 242,
+					"width": 173,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Transfer To Account"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 269,
+					"left": 25,
+					"width": 115,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Transfer Amount"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 10,
+					"left": 240,
+					"width": 55,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Date"
+				},
+				"FromAccount9": {
+					"type": "input",
+					"top": 198,
+					"left": 365,
+					"width": 50,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vToCurrency",
+					"stroke": "#444444",
+					"class": "Fields",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 269,
+					"left": 185,
+					"width": 94,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#666666",
+					"class": "Label",
+					"textAlign": "left",
+					"text": "Exchange Rate"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 322,
+					"left": 13,
+					"width": 175,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Comments"
+				},
+				"FromAccount1": {
+					"type": "input",
+					"top": 198,
+					"left": 155,
+					"width": 50,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vFromCurrency",
+					"stroke": "#444444",
+					"class": "Fields",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 269,
+					"left": 280,
+					"width": 135,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#666666",
+					"class": "Label",
+					"textAlign": "left",
+					"text": "Transfered Amount"
+				},
+				"Picture Button1": {
+					"type": "pictureButton",
+					"top": 170,
+					"left": 216,
+					"width": 15,
+					"height": 15,
+					"dataSource": "Picture Button1",
+					"picture": "/RESOURCES/Images/library/rightArrow.png",
+					"loopBackToFirstFrame": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"FromAccount2": {
+					"type": "input",
+					"top": 216,
+					"left": 115,
+					"width": 90,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vFromBalance",
+					"stroke": "#444444",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"FromAccount3": {
+					"type": "input",
+					"top": 216,
+					"left": 325,
+					"width": 90,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vToBalance",
+					"stroke": "#444444",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text8": {
+					"type": "text",
+					"top": 198,
+					"left": 15,
+					"width": 105,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Currency"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 216,
+					"left": 15,
+					"width": 105,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Balance"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 198,
+					"left": 230,
+					"width": 105,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Currency"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 216,
+					"left": 230,
+					"width": 105,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Balance"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 234,
+					"left": 15,
+					"width": 95,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Balance After"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 234,
+					"left": 230,
+					"width": 95,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Balance After"
+				},
+				"FromAccount4": {
+					"type": "input",
+					"top": 234,
+					"left": 115,
+					"width": 90,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vFromBalanceAfter",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"FromAccount5": {
+					"type": "input",
+					"top": 234,
+					"left": 325,
+					"width": 90,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vToBalanceAfter",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 364,
+					"left": 15,
+					"width": 405,
+					"height": 15,
+					"dataSource": "vWarning",
+					"stroke": "#EE0000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"vCurrency": {
+					"type": "input",
+					"top": 45,
+					"left": 143,
+					"width": 43,
+					"height": 15,
+					"dataSource": "vCurrency",
+					"class": "Fields",
+					"contextMenu": "none",
+					"method": "ObjectMethods/vCurrency.4dm",
+					"events": [
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 72,
+					"left": 230,
+					"width": 190,
+					"height": 24,
+					"dataSource": "Button1",
+					"text": "Deposit Cash into Bank",
+					"class": "Control",
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 105,
+					"left": 230,
+					"width": 190,
+					"height": 24,
+					"dataSource": "Button1",
+					"text": "Withdraw Cash from Bank",
+					"class": "Control",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"fromAccount": {
+					"type": "input",
+					"top": 168,
+					"left": 19,
+					"width": 186,
+					"height": 16,
+					"dataSource": "vFromAccount",
+					"dataSourceTypeHint": "number",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"spellcheck": true,
+					"contextMenu": "none",
+					"method": "ObjectMethods/fromAccount.4dm",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"toAccount": {
+					"type": "input",
+					"top": 169,
+					"left": 243,
+					"width": 172,
+					"height": 16,
+					"dataSource": "vToAccount",
+					"dataSourceTypeHint": "number",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"spellcheck": true,
+					"contextMenu": "none",
+					"method": "ObjectMethods/toAccount.4dm",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Toaccount1": {
+					"type": "input",
+					"top": 294,
+					"left": 25,
+					"width": 150,
+					"height": 15,
+					"dataSource": "vFromAmount",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFDF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "&\"0-9;.;-\"",
+					"min": 1,
+					"max": 9999999999,
+					"method": "ObjectMethods/Toaccount1.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onDataChange"
+					]
+				},
+				"Toaccount4": {
+					"type": "input",
+					"top": 294,
+					"left": 185,
+					"width": 85,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vExchangeRate",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Rates"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onGettingFocus",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Toaccount3": {
+					"type": "input",
+					"top": 294,
+					"left": 280,
+					"width": 130,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "vtoAmount",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#DFE4FF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Toaccount5": {
+					"type": "input",
+					"top": 324,
+					"left": 95,
+					"width": 325,
+					"height": 30,
+					"sizingY": "move",
+					"dataSource": "vComments",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 395,
+					"left": 340,
+					"width": 80,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Transfer",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 395,
+					"left": 250,
+					"width": 80,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"vInvoiceNumber": {
+					"type": "input",
+					"top": 9,
+					"left": 13,
+					"width": 116,
+					"height": 16,
+					"dataSource": "vInvoiceNumber",
+					"focusable": false,
+					"fill": "#E2FFDF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text14": {
+					"type": "text",
+					"top": 45,
+					"left": 13,
+					"width": 127,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Transfer Currency"
+				},
+				"Button3": {
+					"type": "button",
+					"top": 70,
+					"left": 17,
+					"width": 51,
+					"height": 21,
+					"dataSource": "Button3",
+					"text": "CAD",
+					"class": "Small",
+					"focusable": false,
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 70,
+					"left": 76,
+					"width": 51,
+					"height": 21,
+					"dataSource": "Button3",
+					"text": "USD",
+					"class": "Small",
+					"focusable": false,
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button5": {
+					"type": "button",
+					"top": 70,
+					"left": 135,
+					"width": 51,
+					"height": 21,
+					"dataSource": "Button3",
+					"text": "EUR",
+					"class": "Small",
+					"focusable": false,
+					"method": "ObjectMethods/Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text15": {
+					"type": "text",
+					"top": 384,
+					"left": 36,
+					"width": 251,
+					"height": 43,
+					"stroke": "#EE0000",
+					"fontFamily": "Tahoma",
+					"fontSize": 36,
+					"text": "OLDER FORM"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

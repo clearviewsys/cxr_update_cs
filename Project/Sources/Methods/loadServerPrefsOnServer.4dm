@@ -1,0 +1,2 @@
+//%attributes = {"executedOnServer":true}
+loadServerPreferences

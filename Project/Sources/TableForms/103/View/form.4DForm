@@ -1,0 +1,750 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_View",
+	"rightMargin": 15,
+	"bottomMargin": 0,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text18": {
+					"type": "text",
+					"top": 61,
+					"left": 26,
+					"width": 161,
+					"height": 14,
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Date"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 42,
+					"left": 580,
+					"width": 161,
+					"height": 19,
+					"class": "Large",
+					"textAlign": "right",
+					"text": "CXR Version"
+				},
+				"Text21": {
+					"type": "text",
+					"top": 84,
+					"left": 26,
+					"width": 161,
+					"height": 14,
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Developer"
+				},
+				"Text22": {
+					"type": "text",
+					"top": 131,
+					"left": 26,
+					"width": 161,
+					"height": 14,
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Commit Message"
+				},
+				"Text23": {
+					"type": "text",
+					"top": 156,
+					"left": 26,
+					"width": 161,
+					"height": 14,
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Additional Notes"
+				},
+				"Date": {
+					"type": "input",
+					"top": 63,
+					"left": 197,
+					"width": 156,
+					"height": 15,
+					"dataSource": "[DB_CodeRevisions:103]CommitDate:8",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Time": {
+					"type": "input",
+					"top": 63,
+					"left": 358,
+					"width": 56,
+					"height": 15,
+					"dataSource": "[DB_CodeRevisions:103]CommitTime:9",
+					"dataSourceTypeHint": "time",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_ss",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"version": {
+					"type": "input",
+					"top": 42,
+					"left": 743,
+					"width": 120,
+					"height": 20,
+					"dataSource": "[DB_CodeRevisions:103]version:14",
+					"class": "Large",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"DevInitials": {
+					"type": "input",
+					"top": 86,
+					"left": 197,
+					"width": 240,
+					"height": 15,
+					"dataSource": "[DB_CodeRevisions:103]Developer:10",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Subject": {
+					"type": "input",
+					"top": 131,
+					"left": 196,
+					"width": 604,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "[DB_CodeRevisions:103]CommitMessage:2",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFDF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Comments": {
+					"type": "input",
+					"top": 155,
+					"left": 197,
+					"width": 604,
+					"height": 54,
+					"sizingX": "grow",
+					"dataSource": "[DB_CodeRevisions:103]Comments:4",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#DDDDDD",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_ViewHistory": {
+					"type": "button",
+					"top": 214,
+					"left": 5,
+					"width": 275,
+					"height": 30,
+					"text": "Reload Revision History",
+					"class": "Control",
+					"method": "ObjectMethods/b_ViewHistory.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_revert": {
+					"type": "button",
+					"top": 214,
+					"left": 297,
+					"width": 275,
+					"height": 30,
+					"text": "Revert to a previous Revision",
+					"class": "Control",
+					"method": "ObjectMethods/b_revert.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_diff2": {
+					"type": "button",
+					"top": 214,
+					"left": 589,
+					"width": 275,
+					"height": 30,
+					"text": "Diff & Merge revisions",
+					"class": "Control",
+					"method": "ObjectMethods/b_diff2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"arrListBox": {
+					"type": "listbox",
+					"top": 246,
+					"left": 5,
+					"width": 859,
+					"height": 195,
+					"sizingX": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "arrListBox",
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"showFooters": true,
+					"horizontalLineStroke": "transparent",
+					"alternateFill": "#E6FAFF",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"method": "ObjectMethods/arrListBox.4dm",
+					"events": [
+						"onClick",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column4",
+							"dataSource": "arrIDs",
+							"dataSourceTypeHint": "number",
+							"width": 67,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#E6FAFF",
+							"fontFamily": "Calibri",
+							"fontSize": 15,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_id",
+								"text": "ID",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer4",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "count",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "arrDates",
+							"dataSourceTypeHint": "date",
+							"width": 106,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#E6FAFF",
+							"fontFamily": "Calibri",
+							"fontSize": 15,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_date",
+								"text": "Date",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "arrDevelopers",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#E6FAFF",
+							"fontFamily": "Calibri",
+							"fontSize": 15,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_developer",
+								"text": "Developer",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrSubjects",
+							"width": 109,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#E6FAFF",
+							"fontFamily": "Calibri",
+							"fontSize": 15,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_subject",
+								"text": "Subject",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "arrSourceCodes",
+							"width": 4,
+							"minWidth": 4,
+							"maxWidth": 32000,
+							"alternateFill": "#E6FAFF",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_sourceCode",
+								"text": "Source Code",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "arrComments",
+							"width": 436,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"styledText": true,
+							"contextMenu": "none",
+							"alternateFill": "#E6FAFF",
+							"fontFamily": "Calibri",
+							"fontSize": 15,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "h_comments",
+								"text": "Comments",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"b_close": {
+					"type": "button",
+					"top": 675,
+					"left": 691,
+					"width": 125,
+					"height": 29,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"text": ":xliff:cvs_close",
+					"events": [
+						"onClick"
+					]
+				},
+				"version1": {
+					"type": "input",
+					"top": 7,
+					"left": 646,
+					"width": 218,
+					"height": 29,
+					"dataSource": "[DB_CodeRevisions:103]Story:3",
+					"stroke": "#FFFFFF",
+					"class": "ExtraLarge",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#444444",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"ObjectName1": {
+					"type": "input",
+					"top": 106,
+					"left": 196,
+					"width": 427,
+					"height": 20,
+					"dataSource": "[DB_CodeRevisions:103]MethodName:11",
+					"stroke": "#001274",
+					"class": "Large",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"vSourceCode": {
+					"type": "input",
+					"top": 446,
+					"left": 5,
+					"width": 841,
+					"height": 306,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "vSourceCode",
+					"stroke": "#FFFFFF",
+					"class": "Fields",
+					"fill": "#444444",
+					"borderStyle": "solid",
+					"styledText": true,
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_openIssues": {
+					"type": "button",
+					"top": 7,
+					"left": 647,
+					"width": 216,
+					"height": 29,
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"b_ViewHistory",
+				"b_revert",
+				"b_diff2",
+				"arrListBox",
+				"b_close"
+			]
+		},
+		{
+			"objects": {
+				"MergelyArea": {
+					"type": "webArea",
+					"top": 62,
+					"left": 14,
+					"width": 845,
+					"height": 680,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "MergelyArea",
+					"progressSource": "Web Area_progress",
+					"borderStyle": "none",
+					"method": "ObjectMethods/MergelyArea.4dm",
+					"events": [
+						"onLoad",
+						"onEndURLLoading"
+					]
+				},
+				"b_refresh": {
+					"type": "button",
+					"top": 750,
+					"left": 14,
+					"width": 125,
+					"height": 29,
+					"sizingY": "move",
+					"text": "Undo Merge",
+					"class": "Control",
+					"method": "ObjectMethods/b_refresh.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_mergeToLeft": {
+					"type": "button",
+					"top": 750,
+					"left": 141,
+					"width": 125,
+					"height": 29,
+					"sizingY": "move",
+					"text": "Merge to left",
+					"class": "Control",
+					"method": "ObjectMethods/b_mergeToLeft.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_mergeToRight": {
+					"type": "button",
+					"top": 750,
+					"left": 268,
+					"width": 125,
+					"height": 29,
+					"sizingY": "move",
+					"text": "Merge to right",
+					"class": "Control",
+					"method": "ObjectMethods/b_mergeToRight.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_save_merged": {
+					"type": "button",
+					"top": 750,
+					"left": 397,
+					"width": 258,
+					"height": 29,
+					"sizingY": "move",
+					"text": "Set Merged Code as default",
+					"class": "Control",
+					"method": "ObjectMethods/b_save_merged.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_back2": {
+					"type": "button",
+					"top": 750,
+					"left": 729,
+					"width": 125,
+					"height": 29,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "previousPage",
+					"text": ":xliff:cvs_return",
+					"class": "Control",
+					"method": "ObjectMethods/b_back2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 19,
+					"left": 628,
+					"width": 50,
+					"height": 15,
+					"text": "Revison: "
+				},
+				"lrev": {
+					"type": "input",
+					"top": 19,
+					"left": 677,
+					"width": 114,
+					"height": 16,
+					"dataSource": "lrev",
+					"focusable": false,
+					"fill": "transparent",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/lrev.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

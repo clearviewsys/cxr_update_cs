@@ -1,0 +1,239 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Entry",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onBeforeKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Field1": {
+					"type": "input",
+					"top": 58,
+					"left": 233,
+					"width": 78,
+					"height": 18,
+					"dataSource": "[CC_Log:135]Time:3",
+					"dataSourceTypeHint": "time",
+					"class": "Medium",
+					"timeFormat": "hh_mm_ss",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 87,
+					"left": 233,
+					"width": 274,
+					"height": 18,
+					"dataSource": "[CC_Log:135]Date:2",
+					"dataSourceTypeHint": "date",
+					"class": "Medium",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/Field2.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 118,
+					"left": 233,
+					"width": 274,
+					"height": 18,
+					"dataSource": "[CC_Log:135]Request:4",
+					"class": "Medium",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 148,
+					"left": 233,
+					"width": 274,
+					"height": 128,
+					"dataSource": "[CC_Log:135]Params:5",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 59,
+					"left": 89,
+					"width": 124,
+					"height": 18,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Time"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 89,
+					"left": 89,
+					"width": 124,
+					"height": 18,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Date"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 119,
+					"left": 89,
+					"width": 124,
+					"height": 18,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Request"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 148,
+					"left": 89,
+					"width": 124,
+					"height": 18,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Parameters"
+				},
+				"b_save": {
+					"type": "button",
+					"top": 470,
+					"left": 388,
+					"width": 119,
+					"height": 32,
+					"action": "accept",
+					"text": "Save",
+					"class": "Large",
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 470,
+					"left": 269,
+					"width": 119,
+					"height": 32,
+					"text": "Cancel",
+					"class": "Large",
+					"method": "ObjectMethods/b_cancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 290,
+					"left": 89,
+					"width": 124,
+					"height": 18,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Status"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 322,
+					"left": 89,
+					"width": 124,
+					"height": 18,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Response"
+				},
+				"Field5": {
+					"type": "input",
+					"top": 290,
+					"left": 233,
+					"width": 274,
+					"height": 18,
+					"dataSource": "[CC_Log:135]Status:6",
+					"class": "Medium",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 322,
+					"left": 233,
+					"width": 274,
+					"height": 128,
+					"dataSource": "[CC_Log:135]Response:7",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

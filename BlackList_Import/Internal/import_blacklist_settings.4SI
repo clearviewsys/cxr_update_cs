@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings-import-export char_display_format="decimal" encoding="UTF-8" file_path="C:\ClearViewSystems\CXR7\BlackList_Import\CAB-Blacklist - Internal.tsv" format="text" import_mode="create" platform="automatic" table_no="3" table_name="Customers">
+	<text_settings delimiter_field="9" delimiter_record="13" with_column_title="false"/>
+	<field kind="alpha"/>
+	<field field_no="42" kind="alpha" name="CompanyName" table_no="3"/>
+	<field field_no="61" kind="text" name="CountryOfResidence_obs" table_no="3"/>
+	<field field_no="41" kind="boolean" name="isCompany" table_no="3"/>
+	<field field_no="3" kind="alpha" name="FirstName" table_no="3"/>
+	<field field_no="4" kind="alpha" name="LastName" table_no="3"/>
+	<field field_no="90" kind="alpha" name="GroupName" table_no="3"/>
+	<field field_no="52" kind="boolean" name="isOnHold" table_no="3"/>
+	<field field_no="127" kind="text" name="AML_OnHoldNotes" table_no="3"/>
+	<xml_settings/>
+</settings-import-export>

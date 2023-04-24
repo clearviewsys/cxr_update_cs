@@ -1,0 +1,297 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"label_ID": {
+					"type": "text",
+					"text": "ID:",
+					"top": 81,
+					"left": 10,
+					"width": 100,
+					"height": 17
+				},
+				"field_ID": {
+					"type": "input",
+					"dataSource": "[CAB_Batch_Logs:139]ID:1",
+					"top": 81,
+					"left": 170,
+					"width": 250,
+					"height": 17
+				},
+				"label_BatchID": {
+					"type": "text",
+					"text": "BatchID:",
+					"top": 107,
+					"left": 10,
+					"width": 100,
+					"height": 17
+				},
+				"field_BatchID": {
+					"type": "input",
+					"dataSource": "[CAB_Batch_Logs:139]BatchID:2",
+					"top": 107,
+					"left": 170,
+					"width": 250,
+					"height": 17
+				},
+				"label_DateStamp": {
+					"type": "text",
+					"text": "DateStamp:",
+					"top": 134,
+					"left": 10,
+					"width": 100,
+					"height": 17
+				},
+				"field_DateStamp": {
+					"type": "input",
+					"dataSource": "[CAB_Batch_Logs:139]DateStamp:3",
+					"top": 134,
+					"left": 170,
+					"width": 150,
+					"height": 17
+				},
+				"label_Status": {
+					"type": "text",
+					"text": "Status:",
+					"top": 134,
+					"left": 329,
+					"width": 100,
+					"height": 17
+				},
+				"field_Status": {
+					"type": "input",
+					"dataSource": "[CAB_Batch_Logs:139]Status:4",
+					"top": 134,
+					"left": 489,
+					"width": 100,
+					"height": 17
+				},
+				"label_Module": {
+					"type": "text",
+					"text": "Module:",
+					"top": 161,
+					"left": 10,
+					"width": 100,
+					"height": 17
+				},
+				"field_Module": {
+					"type": "input",
+					"dataSource": "[CAB_Batch_Logs:139]Module:5",
+					"top": 160,
+					"left": 170,
+					"width": 100,
+					"height": 17
+				},
+				"label_NumOfRecords": {
+					"type": "text",
+					"text": "NumOfRecords:",
+					"top": 160,
+					"left": 329,
+					"width": 100,
+					"height": 17
+				},
+				"field_NumOfRecords": {
+					"type": "input",
+					"dataSource": "[CAB_Batch_Logs:139]NumOfRecords:6",
+					"top": 162,
+					"left": 489,
+					"width": 100,
+					"height": 17
+				},
+				"label_Source": {
+					"type": "text",
+					"text": "Source:",
+					"top": 184,
+					"left": 10,
+					"width": 100,
+					"height": 17
+				},
+				"field_Source": {
+					"type": "input",
+					"dataSource": "[CAB_Batch_Logs:139]Source:7",
+					"top": 187,
+					"left": 170,
+					"width": 419,
+					"height": 17
+				},
+				"label_Imported": {
+					"type": "text",
+					"text": "Imported:",
+					"top": 215,
+					"left": 10,
+					"width": 100,
+					"height": 17
+				},
+				"field_Imported": {
+					"type": "input",
+					"dataSource": "[CAB_Batch_Logs:139]Imported:8",
+					"top": 213,
+					"left": 170,
+					"width": 250,
+					"height": 17
+				},
+				"label_isProcessed": {
+					"type": "text",
+					"text": "isProcessed:",
+					"top": 299,
+					"left": 10,
+					"width": 100,
+					"height": 17
+				},
+				"field_isProcessed": {
+					"type": "input",
+					"dataSource": "[CAB_Batch_Logs:139]isProcessed:13",
+					"top": 298,
+					"left": 170,
+					"width": 250,
+					"height": 17,
+					"dataSourceTypeHint": "boolean"
+				},
+				"label_Metadata": {
+					"type": "text",
+					"text": "Metadata:",
+					"top": 325,
+					"left": 10,
+					"width": 100,
+					"height": 17
+				},
+				"field_Metadata": {
+					"type": "input",
+					"dataSource": "[CAB_Batch_Logs:139]Metadata:14",
+					"top": 325,
+					"left": 170,
+					"width": 360,
+					"height": 47
+				},
+				"label_ErrorText": {
+					"type": "text",
+					"text": "ErrorText:",
+					"top": 352,
+					"left": 10,
+					"width": 100,
+					"height": 17
+				},
+				"field_ErrorText": {
+					"type": "input",
+					"dataSource": "[CAB_Batch_Logs:139]ErrorText:15",
+					"top": 382,
+					"left": 170,
+					"width": 360,
+					"height": 35
+				},
+				"label_creationDate": {
+					"type": "text",
+					"text": "creationDate:",
+					"top": 81,
+					"left": 425,
+					"width": 100,
+					"height": 17
+				},
+				"field_creationDate": {
+					"type": "input",
+					"dataSource": "[CAB_Batch_Logs:139]creationDate:16",
+					"top": 81,
+					"left": 505,
+					"width": 100,
+					"height": 17
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"text": "isValidated",
+					"top": 245,
+					"left": 170,
+					"width": 220,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "[CAB_Batch_Logs:139]isValidated:9",
+					"dataSourceTypeHint": "boolean"
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"text": "isRegistersCreated",
+					"top": 245,
+					"left": 440,
+					"width": 220,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "[CAB_Batch_Logs:139]isRegistersCreated:10",
+					"dataSourceTypeHint": "boolean"
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"text": "isInvoicesCreated",
+					"top": 270,
+					"left": 170,
+					"width": 220,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "[CAB_Batch_Logs:139]isInvoicesCreated:11",
+					"dataSourceTypeHint": "boolean"
+				},
+				"Check Box3": {
+					"type": "checkbox",
+					"text": "isCustomersPulled",
+					"top": 270,
+					"left": 440,
+					"width": 220,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "[CAB_Batch_Logs:139]isCustomersPulled:12",
+					"dataSourceTypeHint": "boolean"
+				}
+			}
+		}
+	],
+	"geometryStamp": 426,
+	"inheritedForm": "Toolbar_View",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

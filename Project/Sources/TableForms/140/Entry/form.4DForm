@@ -1,0 +1,151 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Entry",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 126,
+	"markerBreak": 126,
+	"markerFooter": 136,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"l_code": {
+					"type": "text",
+					"top": 74,
+					"left": 132,
+					"width": 40,
+					"height": 19,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Code"
+				},
+				"l_Purpose": {
+					"type": "text",
+					"top": 102,
+					"left": 60,
+					"width": 121,
+					"height": 19,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"text": "Note Description\t"
+				},
+				"code": {
+					"type": "input",
+					"top": 74,
+					"left": 192,
+					"width": 83,
+					"height": 20,
+					"dataSource": "[NoteTemplates:140]Code:3",
+					"class": "Large",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"occupation": {
+					"type": "input",
+					"top": 102,
+					"left": 192,
+					"width": 277,
+					"height": 160,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[NoteTemplates:140]Notes:4",
+					"class": "Large",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"method": "ObjectMethods/occupation.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 272,
+					"left": 197,
+					"width": 140,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": ":xliff:cvs_cancel",
+					"class": "Large",
+					"method": "ObjectMethods/b_cancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_save": {
+					"type": "button",
+					"top": 272,
+					"left": 337,
+					"width": 150,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"text": ":xliff:cvs_save",
+					"class": "Large",
+					"defaultButton": true,
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

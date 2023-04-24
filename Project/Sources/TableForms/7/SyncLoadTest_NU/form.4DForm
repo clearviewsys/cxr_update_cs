@@ -1,0 +1,577 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onUnload",
+		"onTimer"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Group Box1": {
+					"type": "groupBox",
+					"top": 153,
+					"left": 24,
+					"width": 557,
+					"height": 111,
+					"class": "Label_Large",
+					"text": "Load Parameters for Remote Site"
+				},
+				"Group Box": {
+					"type": "groupBox",
+					"top": 48,
+					"left": 22,
+					"width": 557,
+					"height": 85,
+					"class": "Label_Large",
+					"text": "This Site"
+				},
+				"SYNC_Setting_ID": {
+					"type": "input",
+					"top": 78,
+					"left": 139,
+					"width": 93,
+					"height": 15,
+					"dataSource": "SYNC_sSiteID",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"SYNC_Setting_Password": {
+					"type": "input",
+					"top": 78,
+					"left": 371,
+					"width": 131,
+					"height": 15,
+					"dataSource": "SYNC_sSitePassword",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"SYNC_Setting_Interval": {
+					"type": "input",
+					"top": 104,
+					"left": 139,
+					"width": 40,
+					"height": 15,
+					"dataSource": "SYNC_sSendInterval",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"SYNC_Setting_Timeout": {
+					"type": "input",
+					"top": 104,
+					"left": 264,
+					"width": 40,
+					"height": 15,
+					"dataSource": "SYNC_sSendTimeout",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"SYNC_Setting_TimeZone": {
+					"type": "dropdown",
+					"top": 102,
+					"left": 398,
+					"width": 155,
+					"height": 22,
+					"dataSource": "SYNC_atTimeZone",
+					"choiceList": [
+						"(GMT -12:00)",
+						"(GMT -11:00)",
+						"(GMT -10:00) Hawaii",
+						"(GMT -9:00) Alaska",
+						"(GMT -8:00) Pacific",
+						"(GMT -7:00) Mountain",
+						"(GMT -6:00) Central",
+						"(GMT -5:00) Eastern",
+						"(GMT -4:00)",
+						"(GMT -3:00)",
+						"(GMT -2:00)",
+						"(GMT -1:00)",
+						"(GMT) Greenwich Mean Time",
+						"(GMT +1:00)",
+						"(GMT +2:00)",
+						"(GMT +3:00)",
+						"(GMT +4:00)",
+						"(GMT +5:00)",
+						"(GMT +6:00)",
+						"(GMT +7:00)",
+						"(GMT +8:00)",
+						"(GMT +9:00)",
+						"(GMT +10:00)",
+						"(GMT +11:00)",
+						"(GMT +12:00)"
+					],
+					"class": "Fields",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 568,
+					"left": 432,
+					"width": 147,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save Settings",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"defaultButton": true,
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bValidate1": {
+					"type": "button",
+					"top": 568,
+					"left": 339,
+					"width": 80,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "cancel",
+					"shortcutKey": "[Enter]",
+					"text": "Cancel",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bValidate1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button": {
+					"type": "button",
+					"top": 6,
+					"left": 460,
+					"width": 118,
+					"height": 20,
+					"dataSource": "Invisible Button",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text22": {
+					"type": "text",
+					"top": 2,
+					"left": 13,
+					"width": 565,
+					"height": 27,
+					"sizingX": "grow",
+					"fill": "#52749A",
+					"stroke": "#FFFFFF",
+					"class": "Titles",
+					"textAlign": "center",
+					"text": "Sync Load Test"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 78,
+					"left": 34,
+					"width": 95,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"fontWeight": "bold",
+					"text": "Site Identifier"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 78,
+					"left": 261,
+					"width": 100,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"fontWeight": "bold",
+					"text": "Site Password"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 104,
+					"left": 34,
+					"width": 95,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"fontWeight": "bold",
+					"text": "Send Interval"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 104,
+					"left": 198,
+					"width": 65,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"fontWeight": "bold",
+					"text": "Timeout"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 105,
+					"left": 322,
+					"width": 70,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"fontWeight": "bold",
+					"text": "Time Zone"
+				},
+				"Button6": {
+					"type": "button",
+					"top": 338,
+					"left": 478,
+					"width": 100,
+					"height": 23,
+					"dataSource": "SYNC_iCopyRules",
+					"text": "Copy Log",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button9": {
+					"type": "button",
+					"top": 272,
+					"left": 432,
+					"width": 145,
+					"height": 23,
+					"dataSource": "SYNC_iLoadTest",
+					"text": "Run Load Test",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"SYNC_CreateCount": {
+					"type": "input",
+					"top": 184,
+					"left": 264,
+					"width": 40,
+					"height": 15,
+					"dataSource": "SYNC_iCreateCount",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"SYNC_CreateDelay": {
+					"type": "input",
+					"top": 209,
+					"left": 264,
+					"width": 40,
+					"height": 15,
+					"dataSource": "SYNC_iCreateDelay",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 184,
+					"left": 37,
+					"width": 200,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"fontWeight": "bold",
+					"text": "Number of records to create"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 209,
+					"left": 37,
+					"width": 200,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"fontWeight": "bold",
+					"text": "Delay between record creation"
+				},
+				"SYNC_CreateTables": {
+					"type": "dropdown",
+					"top": 232,
+					"left": 264,
+					"width": 155,
+					"height": 22,
+					"dataSource": "SYNC_atCreateTables",
+					"choiceList": [
+						"(GMT -12:00)",
+						"(GMT -11:00)",
+						"(GMT -10:00) Hawaii",
+						"(GMT -9:00) Alaska",
+						"(GMT -8:00) Pacific",
+						"(GMT -7:00) Mountain",
+						"(GMT -6:00) Central",
+						"(GMT -5:00) Eastern",
+						"(GMT -4:00)",
+						"(GMT -3:00)",
+						"(GMT -2:00)",
+						"(GMT -1:00)",
+						"(GMT) Greenwich Mean Time",
+						"(GMT +1:00)",
+						"(GMT +2:00)",
+						"(GMT +3:00)",
+						"(GMT +4:00)",
+						"(GMT +5:00)",
+						"(GMT +6:00)",
+						"(GMT +7:00)",
+						"(GMT +8:00)",
+						"(GMT +9:00)",
+						"(GMT +10:00)",
+						"(GMT +11:00)",
+						"(GMT +12:00)"
+					],
+					"class": "Fields",
+					"method": "ObjectMethods/SYNC_CreateTables.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"top": 236,
+					"left": 37,
+					"width": 200,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"fontWeight": "bold",
+					"text": "Create records from this table"
+				},
+				"Button10": {
+					"type": "button",
+					"top": 179,
+					"left": 543,
+					"width": 26,
+					"height": 26,
+					"dataSource": "Button10",
+					"text": "?",
+					"focusable": false,
+					"method": "ObjectMethods/Button10.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"SYNC_LoadLog": {
+					"type": "input",
+					"top": 372,
+					"left": 24,
+					"width": 549,
+					"height": 182,
+					"dataSource": "SYNC_tLoadLog",
+					"class": "Medium",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text10": {
+					"type": "text",
+					"top": 209,
+					"left": 314,
+					"width": 200,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"fontWeight": "bold",
+					"text": "seconds"
+				},
+				"Button1": {
+					"type": "button",
+					"top": 272,
+					"left": 432,
+					"width": 145,
+					"height": 23,
+					"dataSource": "SYNC_iLoadTest",
+					"text": "Run Load Test",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 272,
+					"left": 24,
+					"width": 145,
+					"height": 23,
+					"dataSource": "SYNC_iViewQueue",
+					"text": "View Sync Queue",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 346,
+					"left": 24,
+					"width": 200,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"fontWeight": "bold",
+					"text": "Load Test Results:"
+				}
+			},
+			"entryOrder": [
+				"SYNC_Setting_ID",
+				"SYNC_Setting_Password",
+				"SYNC_Setting_Interval",
+				"SYNC_Setting_Timeout",
+				"SYNC_Setting_TimeZone",
+				"bValidate",
+				"bValidate1",
+				"Button6",
+				"Button9",
+				"SYNC_CreateCount",
+				"SYNC_CreateDelay",
+				"SYNC_CreateTables",
+				"Button10",
+				"Button1",
+				"Button2"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

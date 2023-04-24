@@ -1,0 +1,248 @@
+﻿{
+	"destination": "listScreen",
+	"inheritedForm": "ListToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 16,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 91,
+	"markerBody": 113,
+	"markerBreak": 113,
+	"markerFooter": 147,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onOutsideCall",
+		"onDeactivate",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onCloseBox",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"backstripe": {
+					"type": "rectangle",
+					"top": 92,
+					"left": -9,
+					"width": 605,
+					"height": 19,
+					"sizingX": "grow",
+					"fill": "automatic",
+					"stroke": "automatic"
+				},
+				"S1_Field": {
+					"type": "input",
+					"top": 94,
+					"left": 7,
+					"width": 193,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[ClientPrefs:26]ClientName:1",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"S2_Field": {
+					"type": "input",
+					"top": 94,
+					"left": 370,
+					"width": 111,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[ClientPrefs:26]defaultPrinterName:4",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Line8": {
+					"type": "line",
+					"top": 35,
+					"left": 0,
+					"height": 47,
+					"stroke": "#A8A8A8"
+				},
+				"S3_Text1": {
+					"type": "text",
+					"top": 72,
+					"left": 1,
+					"width": 203,
+					"height": 16,
+					"fill": "#444444",
+					"stroke": "#FFDFFF",
+					"class": "Headings",
+					"textAlign": "center",
+					"text": "Computer Network Name"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 280,
+					"left": 556,
+					"width": 35
+				},
+				"b_sortComputerNetworkName": {
+					"type": "button",
+					"top": 72,
+					"left": 2,
+					"width": 202,
+					"height": 19,
+					"display": false,
+					"method": "ObjectMethods/b_sortComputerNetworkName.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"S6_Text1": {
+					"type": "text",
+					"top": 72,
+					"left": 369,
+					"width": 113,
+					"height": 16,
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"class": "Headings",
+					"textAlign": "center",
+					"text": "Main Printer"
+				},
+				"S6_Text3": {
+					"type": "text",
+					"top": 72,
+					"left": 483,
+					"width": 113,
+					"height": 16,
+					"fill": "#444444",
+					"stroke": "#FFFFFF",
+					"class": "Headings",
+					"textAlign": "center",
+					"text": "Receipt Printer"
+				},
+				"S3_Field1": {
+					"type": "input",
+					"top": 94,
+					"left": 485,
+					"width": 106,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[ClientPrefs:26]receiptPrinterName:3",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"b_select": {
+					"type": "button",
+					"top": 118,
+					"left": 12,
+					"width": 200,
+					"height": 24,
+					"text": "Select this Computer",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/b_select.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_duplicate": {
+					"type": "button",
+					"top": 118,
+					"left": 217,
+					"width": 198,
+					"height": 24,
+					"text": "Duplicate Selected Record",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/b_duplicate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"S1_Field1": {
+					"type": "input",
+					"top": 94,
+					"left": 211,
+					"width": 153,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[ClientPrefs:26]ComputerAlias:33",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"S3_Text2": {
+					"type": "text",
+					"top": 72,
+					"left": 205,
+					"width": 163,
+					"height": 16,
+					"fill": "#444444",
+					"stroke": "#FFDFFF",
+					"class": "Headings",
+					"textAlign": "center",
+					"text": "Computer Alias"
+				},
+				"b_sortComputerAlias": {
+					"type": "button",
+					"top": 72,
+					"left": 205,
+					"width": 163,
+					"height": 19,
+					"display": false,
+					"method": "ObjectMethods/b_sortComputerAlias.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

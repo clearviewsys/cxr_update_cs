@@ -1,0 +1,280 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vSearchText": {
+					"type": "input",
+					"top": 15,
+					"left": 290,
+					"width": 140,
+					"height": 24,
+					"dataSource": "vSearchText",
+					"class": "Titles",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/vSearchText.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onBeforeKeystroke",
+						"onDataChange",
+						"onAfterKeystroke"
+					]
+				},
+				"List Box1": {
+					"type": "listbox",
+					"top": 45,
+					"left": 12,
+					"width": 478,
+					"height": 350,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "List Box1",
+					"rowHeight": "40px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "30px",
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "#888888",
+					"verticalLineStroke": "transparent",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"alternateFill": "#D6D8FF",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"method": "ObjectMethods/List Box1.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"name": "Column3",
+							"dataSource": "arrFlags",
+							"dataSourceTypeHint": "picture",
+							"width": 68,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"pictureFormat": "proportionalCenter",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#D6D8FF",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Flags",
+								"dataSource": "Header3",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "arrKey",
+							"width": 64,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#444444",
+							"fill": "#FFFFFF",
+							"alternateFill": "#D6D8FF",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Code",
+								"dataSource": "Header1",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrValue",
+							"width": 329,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"alternateFill": "#D6D8FF",
+							"fontFamily": "Tahoma",
+							"fontSize": 16,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Country",
+								"dataSource": "Header2",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Tahoma",
+								"fontSize": 16
+							}
+						}
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 404,
+					"left": 315,
+					"width": 85,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Large",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_pick": {
+					"type": "button",
+					"top": 404,
+					"left": 405,
+					"width": 85,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Pick",
+					"class": "Large",
+					"defaultButton": true,
+					"method": "ObjectMethods/b_pick.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 15,
+					"left": 12,
+					"width": 279,
+					"height": 24,
+					"class": "Titles",
+					"textAlign": "left",
+					"text": "Lookup country or currency"
+				},
+				"newButton": {
+					"type": "button",
+					"top": 404,
+					"left": 12,
+					"width": 163,
+					"height": 30,
+					"sizingY": "move",
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"class": "Large",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "New",
+					"icon": "/RESOURCES/Images/library/toolbarNewRecord (24134).png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"method": "ObjectMethods/newButton.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

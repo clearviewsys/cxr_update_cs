@@ -1,0 +1,1159 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 5,
+	"bottomMargin": 5,
+	"markerHeader": 82,
+	"markerBody": 696,
+	"markerBreak": 706,
+	"markerFooter": 731,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"ID": {
+					"type": "input",
+					"top": 85,
+					"left": 88,
+					"width": 85,
+					"height": 12,
+					"defaultValue": "#n",
+					"dataSource": "[Customers:3]CustomerID:1",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#DFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text21": {
+					"type": "text",
+					"top": 247,
+					"left": 15,
+					"width": 55,
+					"height": 13,
+					"stroke": "#444444",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "DOB"
+				},
+				"Text22": {
+					"type": "text",
+					"top": 174,
+					"left": 5,
+					"width": 65,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Main Phone"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 230,
+					"left": 5,
+					"width": 65,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "eMail"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 188,
+					"left": 5,
+					"width": 65,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Work Phone"
+				},
+				"DOB": {
+					"type": "input",
+					"top": 246,
+					"left": 78,
+					"width": 114,
+					"height": 10,
+					"dataSource": "[Customers:3]DOB:5",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Tel": {
+					"type": "input",
+					"top": 176,
+					"left": 78,
+					"width": 156,
+					"height": 12,
+					"dataSource": "[Customers:3]HomeTel:6",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Tel1": {
+					"type": "input",
+					"top": 189,
+					"left": 78,
+					"width": 156,
+					"height": 12,
+					"dataSource": "[Customers:3]WorkTel:12",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Address": {
+					"type": "input",
+					"top": 312,
+					"left": 78,
+					"width": 115,
+					"height": 40,
+					"dataSource": "vCustomerAddress",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 216,
+					"left": 5,
+					"width": 65,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Cell"
+				},
+				"Tel2": {
+					"type": "input",
+					"top": 215,
+					"left": 78,
+					"width": 156,
+					"height": 12,
+					"dataSource": "[Customers:3]CellPhone:13",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Tel17": {
+					"type": "input",
+					"top": 271,
+					"left": 78,
+					"width": 114,
+					"height": 10,
+					"dataSource": "[Customers:3]Nationality:91",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": "(###) ###-####",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"City1": {
+					"type": "input",
+					"top": 298,
+					"left": 78,
+					"width": 59,
+					"height": 10,
+					"dataSource": "[Customers:3]CountryOfResidence_obs:61",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text17": {
+					"type": "text",
+					"top": 299,
+					"left": 15,
+					"width": 55,
+					"height": 13,
+					"stroke": "#444444",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Resident of"
+				},
+				"Text34": {
+					"type": "text",
+					"top": 202,
+					"left": 5,
+					"width": 65,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Fax"
+				},
+				"Tel18": {
+					"type": "input",
+					"top": 202,
+					"left": 78,
+					"width": 156,
+					"height": 12,
+					"dataSource": "[Customers:3]WorkFax:46",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 101,
+					"left": 7,
+					"width": 271,
+					"height": 15,
+					"dataSource": "[Customers:3]UNICODE_EthnicName:74",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text26": {
+					"type": "text",
+					"top": 120,
+					"left": 5,
+					"width": 65,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "First Name"
+				},
+				"Text30": {
+					"type": "text",
+					"top": 132,
+					"left": 5,
+					"width": 65,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Last Name"
+				},
+				"nameFirstName": {
+					"type": "input",
+					"top": 120,
+					"left": 78,
+					"width": 190,
+					"height": 12,
+					"dataSource": "[Customers:3]FirstName:3",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"nameLastName": {
+					"type": "input",
+					"top": 134,
+					"left": 78,
+					"width": 190,
+					"height": 12,
+					"dataSource": "[Customers:3]LastName:4",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"compName8": {
+					"type": "input",
+					"top": 148,
+					"left": 78,
+					"width": 190,
+					"height": 12,
+					"dataSource": "[Customers:3]Occupation:21",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text74": {
+					"type": "text",
+					"top": 146,
+					"left": 5,
+					"width": 65,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Occupation"
+				},
+				"ID1": {
+					"type": "input",
+					"top": 85,
+					"left": 178,
+					"width": 100,
+					"height": 12,
+					"defaultValue": "#n",
+					"dataSource": "[Customers:3]ExternalAccountNo:96",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#DFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text73": {
+					"type": "text",
+					"top": 361,
+					"left": 200,
+					"width": 363,
+					"height": 11,
+					"fill": "#008788",
+					"stroke": "#FFFFFF",
+					"class": "Fields_print",
+					"textAlign": "center",
+					"text": "Risk Analysis and Due Diligence"
+				},
+				"Field2": {
+					"type": "checkbox",
+					"top": 416,
+					"left": 7,
+					"width": 185,
+					"height": 11,
+					"dataSource": "[Customers:3]AML_isSuspicious:49",
+					"text": "Customer is Suspicious",
+					"class": "Fields_print",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "checkbox",
+					"top": 431,
+					"left": 23,
+					"width": 165,
+					"height": 11,
+					"dataSource": "[Customers:3]AML_hasManyLCTs_obs:77",
+					"text": "Customer deals with many LCTs",
+					"class": "Fields_print",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field7": {
+					"type": "checkbox",
+					"top": 445,
+					"left": 23,
+					"width": 165,
+					"height": 11,
+					"dataSource": "[Customers:3]AML_hasManyEFTs_obs:81",
+					"text": "Customer deals with Large EFTs",
+					"class": "Fields_print",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "checkbox",
+					"top": 459,
+					"left": 23,
+					"width": 165,
+					"height": 11,
+					"dataSource": "[Customers:3]AML_hasManyThirdParties_obs:79",
+					"text": "Customer has many third parties",
+					"class": "Fields_print",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "checkbox",
+					"top": 473,
+					"left": 23,
+					"width": 165,
+					"height": 10,
+					"dataSource": "[Customers:3]AML_hasManyBankAccounts_obs:78",
+					"text": "Customer has many bank accounts",
+					"class": "Fields_print",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 486,
+					"left": 23,
+					"width": 165,
+					"height": 11,
+					"dataSource": "[Customers:3]AML_isPEP:80",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"numberFormat": "Customer is politically affiliated (PEP)",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Tel4": {
+					"type": "input",
+					"top": 374,
+					"left": 199,
+					"width": 363,
+					"height": 100,
+					"dataSource": "[Customers:3]AML_Notes:76",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Tel5": {
+					"type": "checkbox",
+					"top": 348,
+					"left": 7,
+					"width": 180,
+					"height": 10,
+					"dataSource": "[Customers:3]isOnHold:52",
+					"text": "Place Customer on Hold",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Field8": {
+					"type": "checkbox",
+					"top": 388,
+					"left": 24,
+					"width": 170,
+					"height": 10,
+					"dataSource": "[Customers:3]AML_isMatchFalsePositive:93",
+					"text": "Match is false positive",
+					"class": "Fields_print",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field9": {
+					"type": "checkbox",
+					"top": 361,
+					"left": 7,
+					"width": 175,
+					"height": 11,
+					"dataSource": "[Customers:3]AML_hasPositiveMatchOnSL:92",
+					"text": "Has a match on sanction list",
+					"class": "Fields_print",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Tel6": {
+					"type": "input",
+					"top": 491,
+					"left": 199,
+					"width": 362,
+					"height": 150,
+					"sizingY": "grow",
+					"dataSource": "[Customers:3]AML_SanctionListCheckLog_obs:100",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"printFrame": "variable",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"nameDOB1": {
+					"type": "input",
+					"top": 374,
+					"left": 88,
+					"width": 90,
+					"height": 10,
+					"dataSource": "[Customers:3]AML_LastSanctionListCheckDate:99",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "systemLong",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"Text86": {
+					"type": "text",
+					"top": 478,
+					"left": 199,
+					"width": 362,
+					"height": 10,
+					"fill": "#CF0000",
+					"stroke": "#FFFFFF",
+					"class": "Fields_print",
+					"textAlign": "center",
+					"text": "Sanctions list check  history (showing checks perfomed on this customer- not editable)"
+				},
+				"Variable8": {
+					"type": "input",
+					"top": 209,
+					"left": 350,
+					"width": 120,
+					"height": 10,
+					"dataSource": "[Customers:3]PictureID_Number:69",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 222,
+					"left": 350,
+					"width": 120,
+					"height": 10,
+					"dataSource": "[Customers:3]PictureID_Type:70",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/PictureIDTypes"
+					},
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable10": {
+					"type": "input",
+					"top": 234,
+					"left": 350,
+					"width": 120,
+					"height": 10,
+					"dataSource": "[Customers:3]PictureID_ExpiryDate:71",
+					"dataSourceTypeHint": "date",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"Variable11": {
+					"type": "input",
+					"top": 247,
+					"left": 350,
+					"width": 95,
+					"height": 10,
+					"dataSource": "[Customers:3]PictureID_IssueState:72",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Variable12": {
+					"type": "input",
+					"top": 247,
+					"left": 450,
+					"width": 30,
+					"height": 10,
+					"dataSource": "[Customers:3]PictureID_IssueCountry:73",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 86,
+					"left": 299,
+					"width": 259,
+					"height": 120,
+					"sizingY": "grow",
+					"dataSource": "[Customers:3]PictureID_Image:53",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Text75": {
+					"type": "text",
+					"top": 263,
+					"left": 199,
+					"width": 364,
+					"height": 11,
+					"fill": "#FF5E07",
+					"stroke": "#FFFFFF",
+					"class": "Fields_print",
+					"textAlign": "center",
+					"text": "Confidential notes"
+				},
+				"Tel7": {
+					"type": "input",
+					"top": 274,
+					"left": 199,
+					"width": 364,
+					"height": 80,
+					"sizingY": "grow",
+					"dataSource": "[Customers:3]Comments:43",
+					"class": "Fields_print",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text8": {
+					"type": "text",
+					"top": 85,
+					"left": 5,
+					"width": 80,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Customer ID"
+				},
+				"compName1": {
+					"type": "input",
+					"top": 162,
+					"left": 78,
+					"width": 190,
+					"height": 12,
+					"dataSource": "[Customers:3]CompanyName:42",
+					"class": "Fields_print",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text10": {
+					"type": "text",
+					"top": 160,
+					"left": 5,
+					"width": 65,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Company"
+				},
+				"Tel8": {
+					"type": "input",
+					"top": 285,
+					"left": 78,
+					"width": 114,
+					"height": 10,
+					"dataSource": "[Customers:3]Citizenship_obs:60",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text15": {
+					"type": "text",
+					"top": 272,
+					"left": 15,
+					"width": 55,
+					"height": 13,
+					"stroke": "#444444",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Nationality"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 286,
+					"left": 15,
+					"width": 55,
+					"height": 13,
+					"stroke": "#444444",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Citizenship"
+				},
+				"Tel9": {
+					"type": "input",
+					"top": 229,
+					"left": 78,
+					"width": 156,
+					"height": 12,
+					"dataSource": "[Customers:3]Email:17",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"top": 313,
+					"left": 15,
+					"width": 55,
+					"height": 13,
+					"stroke": "#444444",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Address"
+				},
+				"Text": {
+					"type": "text",
+					"top": 38,
+					"left": 122,
+					"width": 272,
+					"height": 15,
+					"class": "Medium",
+					"text": "KYC and Risk Report"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 374,
+					"left": 3,
+					"width": 80,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Last check date"
+				},
+				"Line": {
+					"type": "line",
+					"top": 77,
+					"left": 23,
+					"width": 533
+				},
+				"Text4": {
+					"type": "text",
+					"top": 209,
+					"left": 300,
+					"width": 45,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Picture ID"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 222,
+					"left": 300,
+					"width": 45,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Type"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 235,
+					"left": 300,
+					"width": 45,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Exp. Date"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 248,
+					"left": 300,
+					"width": 45,
+					"height": 11,
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "Issued"
+				},
+				"vDateTime": {
+					"type": "input",
+					"top": 56,
+					"left": 122,
+					"width": 307,
+					"height": 13,
+					"dataSource": "vDateTime",
+					"stroke": "#444444",
+					"class": "Headings_Small",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/vDateTime.4dm",
+					"events": [
+						"onHeader"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 17,
+					"left": 122,
+					"width": 416,
+					"height": 14,
+					"dataSource": "<>CompanyName",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 5,
+					"left": 23,
+					"width": 92,
+					"height": 67,
+					"dataSource": "<>CompanyLogo",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#FFFFFF",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text14": {
+					"type": "text",
+					"top": 260,
+					"left": 15,
+					"width": 55,
+					"height": 13,
+					"stroke": "#444444",
+					"class": "Fields_print",
+					"textAlign": "right",
+					"text": "SIN/SS"
+				},
+				"DOB1": {
+					"type": "input",
+					"top": 259,
+					"left": 78,
+					"width": 114,
+					"height": 10,
+					"dataSource": "[Customers:3]SIN_No:14",
+					"stroke": "#000000",
+					"class": "Fields_print",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text13": {
+					"type": "text",
+					"top": 503,
+					"left": 8,
+					"width": 180,
+					"height": 149,
+					"class": "Fields_print",
+					"text": "KYC Report generateAd by CurrencyXchanger engine developed by Clear View Systems Ltd. Sanction list checks performed by CurrencyXchanger engine connecting to external web service ewire.me. CurrencyXchanger automatically checks against SEMA, OFAC SDN, AUSTRAC, EU, and OSFI sanctions lists. Sanction lists are automatically updated on a daily basis. For more information contact clearviewsys.com\r\rClear View Systems Ltd. was incorporated under the Company act of British Columbia in Canada (incorporation# 668173) on April 17, 2003"
+				}
+			},
+			"entryOrder": [
+				"Address",
+				"Field1",
+				"nameFirstName",
+				"nameLastName",
+				"compName8",
+				"Field2",
+				"Field3",
+				"Field7",
+				"Field4",
+				"Field5",
+				"Field6",
+				"Tel4",
+				"Tel5",
+				"Field8",
+				"Field9",
+				"Tel6",
+				"nameDOB1",
+				"Variable8",
+				"Variable9",
+				"Variable10",
+				"Variable11",
+				"Variable12",
+				"Variable5",
+				"Tel7",
+				"compName1",
+				"vDateTime",
+				"Variable3",
+				"Variable1"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

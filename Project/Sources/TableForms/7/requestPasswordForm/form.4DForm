@@ -1,0 +1,161 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text3": {
+					"type": "text",
+					"top": 8,
+					"left": 54,
+					"width": 256,
+					"height": 18,
+					"fill": "#9C0000",
+					"stroke": "#FFFFFF",
+					"class": "Label_Large",
+					"textAlign": "center",
+					"text": "Password Authentication"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 69,
+					"left": 57,
+					"width": 251,
+					"height": 18,
+					"dataSource": "vPasswordString",
+					"class": "Label_Large",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field1.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 100,
+					"left": 230,
+					"width": 80,
+					"height": 20,
+					"dataSource": "Button1",
+					"action": "accept",
+					"text": "OK",
+					"class": "Control",
+					"defaultButton": true,
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 100,
+					"left": 140,
+					"width": 80,
+					"height": 20,
+					"dataSource": "Button1",
+					"action": "cancel",
+					"shortcutKey": ".",
+					"shortcutAccel": true,
+					"text": "Cancel",
+					"class": "Control",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 30,
+					"left": 57,
+					"width": 252,
+					"height": 34,
+					"dataSource": "vPasswordMessage",
+					"stroke": "#EC0F00",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 6,
+					"left": 8,
+					"width": 41,
+					"height": 39,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/Alert.png"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,303 @@
+﻿{
+	"rightMargin": 0,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"List Box1": {
+					"type": "listbox",
+					"top": 74,
+					"left": 2,
+					"width": 762,
+					"height": 448,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "24px",
+					"showFooters": true,
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#AAAAAA",
+					"stroke": "#000000",
+					"fill": "#A5D8DB",
+					"alternateFill": "#DBEDE9",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "arrAccounts",
+							"width": 296,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#A5D8DB",
+							"alternateFill": "#DBEDE9",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Accounts",
+								"dataSource": "Header1",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#A5D8DB",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrBalance1",
+							"dataSourceTypeHint": "number",
+							"width": 142,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#A5D8DB",
+							"alternateFill": "#DBEDE9",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Head Office",
+								"dataSource": "Header2",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#A5D8DB",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "arrBalance2",
+							"dataSourceTypeHint": "number",
+							"width": 155,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#A5D8DB",
+							"alternateFill": "#DBEDE9",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Remote Branch",
+								"dataSource": "Header3",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#A5D8DB",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "arrBalance",
+							"dataSourceTypeHint": "number",
+							"width": 152,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#EE0000",
+							"fill": "#A5D8DB",
+							"alternateFill": "#DBEDE9",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "Difference",
+								"dataSource": "Header4",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#A5D8DB",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"bAccountsAll": {
+					"type": "button",
+					"top": 41,
+					"left": 119,
+					"width": 125,
+					"height": 25,
+					"visibility": "hidden",
+					"text": "All accounts",
+					"class": "Large",
+					"method": "ObjectMethods/bAccountsAll.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bAccountsCash": {
+					"type": "button",
+					"top": 41,
+					"left": 248,
+					"width": 125,
+					"height": 25,
+					"visibility": "hidden",
+					"text": "Cash",
+					"class": "Large",
+					"method": "ObjectMethods/bAccountsCash.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bAccountsFavs": {
+					"type": "button",
+					"top": 41,
+					"left": 507,
+					"width": 125,
+					"height": 25,
+					"visibility": "hidden",
+					"text": "Favorites",
+					"class": "Large",
+					"method": "ObjectMethods/bAccountsFavs.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bAccountsSearch": {
+					"type": "button",
+					"top": 41,
+					"left": 377,
+					"width": 125,
+					"height": 25,
+					"visibility": "hidden",
+					"text": "Search",
+					"class": "Large",
+					"method": "ObjectMethods/bAccountsSearch.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"arrBranches": {
+					"type": "dropdown",
+					"top": 11,
+					"left": 378,
+					"width": 118,
+					"height": 27,
+					"dataSource": "arrBranches",
+					"focusable": false,
+					"choiceList": [
+						"All",
+						"Assets",
+						"Liabilities",
+						"Equities",
+						"Revenues",
+						"Expenses"
+					],
+					"class": "Large",
+					"method": "ObjectMethods/arrBranches.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 15,
+					"left": 124,
+					"width": 267,
+					"height": 20,
+					"class": "Large",
+					"text": "Remote Branch Balance Audit"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

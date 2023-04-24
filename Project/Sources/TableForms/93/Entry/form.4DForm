@@ -1,0 +1,189 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 129,
+	"markerBreak": 129,
+	"markerFooter": 139,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text10": {
+					"type": "text",
+					"top": 65,
+					"left": 0,
+					"width": 194,
+					"height": 21,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Transaction Code"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 102,
+					"left": 0,
+					"width": 194,
+					"height": 21,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Transaction Type "
+				},
+				"TransTypeID": {
+					"type": "input",
+					"top": 66,
+					"left": 200,
+					"width": 80,
+					"height": 20,
+					"dataSource": "[TransactionTypes:93]TransTypeID:1",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/TransTypeID.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Description": {
+					"type": "input",
+					"top": 102,
+					"left": 200,
+					"width": 370,
+					"height": 20,
+					"dataSource": "[TransactionTypes:93]Description:2",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Description.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Description1": {
+					"type": "checkbox",
+					"top": 138,
+					"left": 200,
+					"width": 370,
+					"height": 20,
+					"dataSource": "[TransactionTypes:93]isRestrictedToManagers:5",
+					"text": "Restrict to Managers only",
+					"stroke": "#000000",
+					"class": "Large",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 169,
+					"left": 443,
+					"width": 127,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/OK"
+					},
+					"action": "accept",
+					"shortcutKey": "\u0000",
+					"text": "Save",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 169,
+					"left": 314,
+					"width": 127,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Cancel"
+					},
+					"action": "cancel",
+					"shortcutKey": "\u0000",
+					"text": "Cancel",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"bValidate",
+					"bCancel"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

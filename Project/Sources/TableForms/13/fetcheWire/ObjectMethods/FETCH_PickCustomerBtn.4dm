@@ -1,0 +1,2 @@
+vCustomerID:=""
+pickCustomer(->vCustomerID)

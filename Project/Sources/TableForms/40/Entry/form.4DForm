@@ -1,0 +1,1059 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Entry",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 690,
+	"markerBreak": 690,
+	"markerFooter": 700,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onOutsideCall",
+		"onGettingFocus",
+		"onMenuSelect",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onLoadRecord",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"l_product_uid": {
+					"type": "text",
+					"top": 63,
+					"left": 22,
+					"width": 250,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Item ID"
+				},
+				"dateL": {
+					"type": "text",
+					"top": 35,
+					"left": 22,
+					"width": 250,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_date"
+				},
+				"comments_L": {
+					"type": "text",
+					"top": 400,
+					"left": 22,
+					"width": 114,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "left",
+					"text": ":xliff:cvs_comments"
+				},
+				"l_amount_before_tax": {
+					"type": "text",
+					"top": 284,
+					"left": 22,
+					"width": 250,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_amount_before_tax"
+				},
+				"ItemID": {
+					"type": "input",
+					"top": 63,
+					"left": 281,
+					"width": 223,
+					"height": 20,
+					"dataSource": "[ItemInOuts:40]ItemID:2",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/ItemID.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"b_pickItems": {
+					"type": "button",
+					"top": 60,
+					"left": 511,
+					"width": 35,
+					"height": 25,
+					"text": "...",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"method": "ObjectMethods/b_pickItems.4dm",
+					"events": [
+						"onClick",
+						"onLosingFocus",
+						"onGettingFocus"
+					]
+				},
+				"Qty": {
+					"type": "input",
+					"top": 203,
+					"left": 281,
+					"width": 114,
+					"height": 20,
+					"dataSource": "[ItemInOuts:40]Qty:8",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"entryFilter": "&\"0-9;.;-\"",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Qty.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"AmountBeforeTax2": {
+					"type": "input",
+					"top": 228,
+					"left": 281,
+					"width": 114,
+					"height": 20,
+					"dataSource": "[ItemInOuts:40]UnitPrice:9",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"entryFilter": "&\"0-9;.;-\"",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/AmountBeforeTax2.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"discount": {
+					"type": "input",
+					"top": 253,
+					"left": 281,
+					"width": 89,
+					"height": 20,
+					"defaultValue": "0",
+					"dataSource": "[ItemInOuts:40]discount:33",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFF0DF",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Percent"
+					},
+					"min": 0,
+					"max": 100,
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/discount.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"ItemID1": {
+					"type": "checkbox",
+					"top": 88,
+					"left": 281,
+					"width": 277,
+					"height": 20,
+					"dataSource": "[Items:39]isBarCoded:23",
+					"text": "Bar Coded",
+					"stroke": "#777777",
+					"class": "Large",
+					"focusable": false,
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"isSold": {
+					"type": "checkbox",
+					"top": 6,
+					"left": 566,
+					"width": 83,
+					"height": 20,
+					"dataSource": "[ItemInOuts:40]isSold:7",
+					"text": ":xliff:cvs_sell",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Date": {
+					"type": "input",
+					"top": 35,
+					"left": 281,
+					"width": 246,
+					"height": 20,
+					"dataSource": "[ItemInOuts:40]Date:3",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"InvoiceID": {
+					"type": "input",
+					"top": 8,
+					"left": 281,
+					"width": 219,
+					"height": 20,
+					"dataSource": "[ItemInOuts:40]InvoiceID:4",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#E2FFDF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"AmountBeforeTax": {
+					"type": "input",
+					"top": 283,
+					"left": 281,
+					"width": 206,
+					"height": 20,
+					"dataSource": "[ItemInOuts:40]AmountBeforeTax:10",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Currency": {
+					"type": "input",
+					"top": 227,
+					"left": 398,
+					"width": 155,
+					"height": 20,
+					"dataSource": "[ItemInOuts:40]Currency:11",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"ItemID3": {
+					"type": "input",
+					"top": 35,
+					"left": 564,
+					"width": 310,
+					"height": 218,
+					"dataSource": "[Items:39]Picture:4",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"ItemID5": {
+					"type": "input",
+					"top": 203,
+					"left": 398,
+					"width": 155,
+					"height": 20,
+					"dataSource": "[Items:39]Unit:6",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"l_Qty": {
+					"type": "text",
+					"top": 204,
+					"left": 22,
+					"width": 250,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_qty"
+				},
+				"Field": {
+					"type": "checkbox",
+					"top": 308,
+					"left": 282,
+					"width": 171,
+					"height": 20,
+					"dataSource": "[Items:39]isTaxInclusive:25",
+					"text": "Tax Inclusive",
+					"class": "Large",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"cbChargeTax1": {
+					"type": "checkbox",
+					"top": 331,
+					"left": 386,
+					"width": 118,
+					"height": 18,
+					"text": ":xliff:cvs_tax_1",
+					"class": "Large",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"cbChargeTax2": {
+					"type": "checkbox",
+					"top": 353,
+					"left": 386,
+					"width": 118,
+					"height": 18,
+					"text": ":xliff:cvs_tax_2",
+					"class": "Large",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Amount": {
+					"type": "input",
+					"top": 378,
+					"left": 281,
+					"width": 206,
+					"height": 20,
+					"dataSource": "[ItemInOuts:40]Amount:22",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"memo": {
+					"type": "input",
+					"top": 423,
+					"left": 22,
+					"width": 528,
+					"height": 60,
+					"sizingY": "grow",
+					"dataSource": "[ItemInOuts:40]memo:15",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_save": {
+					"type": "button",
+					"top": 494,
+					"left": 654,
+					"width": 220,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": ":xliff:cvs_save",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick",
+						"onLosingFocus",
+						"onGettingFocus"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 494,
+					"left": 449,
+					"width": 200,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"shortcutKey": ".",
+					"shortcutAccel": true,
+					"text": ":xliff:cvs_cancel",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/b_cancel.4dm",
+					"events": [
+						"onClick",
+						"onLosingFocus",
+						"onGettingFocus"
+					]
+				},
+				"b_apply": {
+					"type": "button",
+					"top": 494,
+					"left": 22,
+					"width": 120,
+					"height": 30,
+					"sizingY": "move",
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"text": ":xliff:cvs_apply",
+					"focusable": false,
+					"method": "ObjectMethods/b_apply.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"l_unit_price": {
+					"type": "text",
+					"top": 228,
+					"left": 22,
+					"width": 250,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Unit Price"
+				},
+				"AmountBeforeTax3": {
+					"type": "input",
+					"top": 331,
+					"left": 281,
+					"width": 94,
+					"height": 20,
+					"dataSource": "[ItemInOuts:40]tax1:20",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"AmountBeforeTax4": {
+					"type": "input",
+					"top": 353,
+					"left": 281,
+					"width": 94,
+					"height": 20,
+					"dataSource": "[ItemInOuts:40]tax2:21",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"l_local_amount": {
+					"type": "text",
+					"top": 377,
+					"left": 22,
+					"width": 250,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_local_amount"
+				},
+				"vTax1": {
+					"type": "input",
+					"top": 331,
+					"left": 22,
+					"width": 250,
+					"height": 20,
+					"dataSource": "<>tax1Name",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"vTax2": {
+					"type": "input",
+					"top": 354,
+					"left": 22,
+					"width": 250,
+					"height": 20,
+					"dataSource": "<>tax2Name",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Picture362": {
+					"type": "picture",
+					"top": 501,
+					"left": 184,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BNextRec.png"
+				},
+				"Picture363": {
+					"type": "picture",
+					"top": 501,
+					"left": 199,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BLastRec.png"
+				},
+				"Picture364": {
+					"type": "picture",
+					"top": 501,
+					"left": 154,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BFirstRec.png"
+				},
+				"Picture361": {
+					"type": "picture",
+					"top": 501,
+					"left": 169,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BPrevRec.png"
+				},
+				"b_first": {
+					"type": "button",
+					"top": 501,
+					"left": 154,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"display": false,
+					"method": "ObjectMethods/b_first.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_next": {
+					"type": "button",
+					"top": 501,
+					"left": 184,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"display": false,
+					"method": "ObjectMethods/b_next.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_previous": {
+					"type": "button",
+					"top": 501,
+					"left": 169,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"display": false,
+					"method": "ObjectMethods/b_previous.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_last": {
+					"type": "button",
+					"top": 501,
+					"left": 199,
+					"width": 16,
+					"height": 16,
+					"sizingY": "move",
+					"display": false,
+					"method": "ObjectMethods/b_last.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 501,
+					"left": 221,
+					"width": 69,
+					"height": 16,
+					"sizingY": "move",
+					"dataSource": "vRecNum",
+					"stroke": "#000000",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onHeader"
+					]
+				},
+				"ItemID7": {
+					"type": "input",
+					"top": 259,
+					"left": 564,
+					"width": 293,
+					"height": 225,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[Items:39]Description:19",
+					"stroke": "#444444",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"ItemID2": {
+					"type": "input",
+					"top": 133,
+					"left": 281,
+					"width": 277,
+					"height": 20,
+					"dataSource": "[Items:39]ItemName:2",
+					"stroke": "#777777",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"l_product_code": {
+					"type": "text",
+					"top": 111,
+					"left": 22,
+					"width": 250,
+					"height": 19,
+					"stroke": "#777777",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_product_code"
+				},
+				"l_product_name": {
+					"type": "text",
+					"top": 133,
+					"left": 22,
+					"width": 250,
+					"height": 19,
+					"stroke": "#777777",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_product_name"
+				},
+				"itemCode": {
+					"type": "input",
+					"top": 110,
+					"left": 281,
+					"width": 223,
+					"height": 20,
+					"dataSource": "[Items:39]ItemCode:27",
+					"stroke": "#777777",
+					"class": "Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"accountID1": {
+					"type": "input",
+					"top": 155,
+					"left": 281,
+					"width": 277,
+					"height": 20,
+					"dataSource": "[Items:39]AccountID:12",
+					"stroke": "#777777",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"AccountID_L": {
+					"type": "text",
+					"top": 157,
+					"left": 22,
+					"width": 250,
+					"height": 19,
+					"stroke": "#777777",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_account"
+				},
+				"AccountID_L1": {
+					"type": "text",
+					"top": 179,
+					"left": 22,
+					"width": 250,
+					"height": 19,
+					"stroke": "#777777",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_sub_account"
+				},
+				"accountID2": {
+					"type": "input",
+					"top": 178,
+					"left": 281,
+					"width": 277,
+					"height": 20,
+					"dataSource": "[Items:39]SubAccountID:26",
+					"stroke": "#777777",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"l_unit_price1": {
+					"type": "text",
+					"top": 253,
+					"left": 22,
+					"width": 250,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Discount"
+				},
+				"focusRect": {
+					"type": "rectangle",
+					"top": 113,
+					"left": 4,
+					"width": 12,
+					"height": 14,
+					"visibility": "hidden",
+					"fill": "transparent",
+					"strokeWidth": 5
+				}
+			},
+			"entryOrder": [
+				"ItemID",
+				"b_pickItems",
+				"Qty",
+				"AmountBeforeTax2",
+				"discount",
+				"Field",
+				"cbChargeTax1",
+				"cbChargeTax2",
+				"memo",
+				"b_save",
+				"b_cancel",
+				"b_apply",
+				"Variable2"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"focusRect"
+				]
+			},
+			"View 3": {
+				"objects": [
+					"b_save",
+					"b_cancel"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

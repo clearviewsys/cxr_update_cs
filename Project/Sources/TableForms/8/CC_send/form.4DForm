@@ -1,0 +1,145 @@
+﻿{
+	"windowTitle": "Send Current Wire",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onDataChange",
+		"onTimer",
+		"onLoadRecord",
+		"onBoundVariableChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Text2": {
+					"type": "text",
+					"top": 63,
+					"left": 171,
+					"width": 131,
+					"height": 15,
+					"text": "Loading Accounts..."
+				}
+			}
+		},
+		{
+			"objects": {
+				"bSendWire": {
+					"type": "button",
+					"top": 121,
+					"left": 325,
+					"width": 85,
+					"height": 24,
+					"text": "Send Wire",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bSendWire.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"CC_sendDrop": {
+					"type": "dropdown",
+					"top": 61,
+					"left": 164,
+					"width": 188,
+					"height": 20,
+					"dataSource": "drop_CCwireSend",
+					"focusable": false,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 13,
+					"left": 14,
+					"width": 396,
+					"height": 15,
+					"text": "Send a Wire with Currency Cloud"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 63,
+					"left": 45,
+					"width": 138,
+					"height": 15,
+					"text": "Sending Account\r"
+				},
+				"Button": {
+					"type": "button",
+					"top": 121,
+					"left": 238,
+					"width": 85,
+					"height": 24,
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Large",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 91,
+					"left": 81,
+					"width": 60,
+					"height": 15,
+					"text": "Wire Type"
+				},
+				"b_priority": {
+					"type": "radio",
+					"top": 90,
+					"left": 164,
+					"width": 98,
+					"height": 17,
+					"dataSource": "bPriority",
+					"text": "Priority",
+					"focusable": false,
+					"radioGroup": "Group2",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_regular": {
+					"type": "radio",
+					"top": 90,
+					"left": 249,
+					"width": 115,
+					"height": 17,
+					"dataSource": "bRegular",
+					"text": "Regular",
+					"focusable": false,
+					"radioGroup": "Group2",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group2": [
+				"b_priority",
+				"b_regular"
+			]
+		}
+	}
+}

@@ -1,0 +1,369 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 5,
+	"bottomMargin": 5,
+	"markerBody": 376,
+	"markerBreak": 376,
+	"markerFooter": 376,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"pictureIDTemplate": {
+					"type": "input",
+					"top": 59,
+					"left": 9,
+					"width": 133,
+					"height": 18,
+					"dataSource": "[Customers:3]PictureID_TemplateID:15",
+					"stroke": "#696969",
+					"class": "Medium",
+					"textAlign": "right",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onHeader",
+						"onDisplayDetail",
+						"onDataChange"
+					]
+				},
+				"mainPictureID": {
+					"type": "input",
+					"top": 59,
+					"left": 149,
+					"width": 145,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "[Customers:3]PictureID_Number:69",
+					"stroke": "#457A89",
+					"class": "Medium",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onAfterKeystroke"
+					]
+				},
+				"pictureIDexpiry1": {
+					"type": "input",
+					"top": 82,
+					"left": 149,
+					"width": 145,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Customers:3]PictureID_IssueDate:16",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"pictureIDexpiry": {
+					"type": "input",
+					"top": 100,
+					"left": 149,
+					"width": 145,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Customers:3]PictureID_ExpiryDate:71",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"l_expiryDate": {
+					"type": "text",
+					"top": 99,
+					"left": 12,
+					"width": 130,
+					"height": 14,
+					"stroke": "#696969",
+					"class": "Fields",
+					"textAlign": "right",
+					"text": ":xliff:cvs_expiry_date"
+				},
+				"l_issued": {
+					"type": "text",
+					"top": 136,
+					"left": 12,
+					"width": 130,
+					"height": 14,
+					"stroke": "#696969",
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Place of Issue"
+				},
+				"l_countryOfIssue": {
+					"type": "text",
+					"top": 117,
+					"left": 32,
+					"width": 110,
+					"height": 14,
+					"stroke": "#696969",
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Country Of Issue"
+				},
+				"provinceOfIssue": {
+					"type": "input",
+					"top": 137,
+					"left": 149,
+					"width": 145,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Customers:3]PictureID_IssueState:72",
+					"class": "Fields",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"provinceOfIssue1": {
+					"type": "input",
+					"top": 156,
+					"left": 149,
+					"width": 145,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Customers:3]PictureID_Authority:116",
+					"class": "Fields",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 177,
+					"left": 5,
+					"width": 329,
+					"height": 195,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[Customers:3]PictureID_Image:53",
+					"dataSourceTypeHint": "picture",
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"method": "ObjectMethods/Variable5.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"l_issuedAuthority": {
+					"type": "text",
+					"top": 155,
+					"left": 12,
+					"width": 130,
+					"height": 14,
+					"stroke": "#696969",
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Issuing Authority"
+				},
+				"l_issueDate": {
+					"type": "text",
+					"top": 82,
+					"left": 12,
+					"width": 130,
+					"height": 14,
+					"stroke": "#696969",
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Date of Issue"
+				},
+				"pictureIDGovCode1": {
+					"type": "input",
+					"top": 117,
+					"left": 149,
+					"width": 38,
+					"height": 15,
+					"dataSource": "[Customers:3]PictureID_CountryCode:118",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Tel": {
+					"type": "input",
+					"top": 7,
+					"left": 129,
+					"width": 144,
+					"height": 15,
+					"dataSource": "[Customers:3]HomeTel:6",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"multiline": "no",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onDataChange"
+					]
+				},
+				"CellPhone": {
+					"type": "input",
+					"top": 26,
+					"left": 129,
+					"width": 144,
+					"height": 15,
+					"dataSource": "[Customers:3]CellPhone:13",
+					"class": "Fields",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"multiline": "no",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onDataChange"
+					]
+				},
+				"Email": {
+					"type": "input",
+					"top": 42,
+					"left": 12,
+					"width": 262,
+					"height": 15,
+					"dataSource": "[Customers:3]Email:17",
+					"stroke": "#457A89",
+					"class": "Fields",
+					"textAlign": "center",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/Email.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 7,
+					"left": 12,
+					"width": 110,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Main (home)"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 27,
+					"left": 12,
+					"width": 110,
+					"height": 14,
+					"class": "Fields",
+					"textAlign": "right",
+					"text": "Cell"
+				}
+			},
+			"entryOrder": [
+				"Variable5",
+				"Tel",
+				"CellPhone"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"l_expiryDate",
+					"l_issued",
+					"l_countryOfIssue",
+					"l_issuedAuthority",
+					"l_issueDate",
+					"Text1",
+					"Text2"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,257 @@
+﻿{
+	"destination": "detailScreen",
+	"windowTitle": "New Twilio Log Record",
+	"inheritedForm": "Toolbar_Entry",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"b_save": {
+					"type": "button",
+					"top": 456,
+					"left": 388,
+					"width": 119,
+					"height": 32,
+					"action": "accept",
+					"text": "Save",
+					"class": "Large",
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 456,
+					"left": 264,
+					"width": 119,
+					"height": 32,
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Large",
+					"method": "ObjectMethods/b_cancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"f_Time": {
+					"type": "input",
+					"top": 87,
+					"left": 234,
+					"width": 78,
+					"height": 18,
+					"dataSource": "[Twilio_Log:148]time:3",
+					"dataSourceTypeHint": "time",
+					"class": "Medium",
+					"timeFormat": "hh_mm_ss",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"f_FromNumber": {
+					"type": "input",
+					"top": 143,
+					"left": 233,
+					"width": 274,
+					"height": 18,
+					"dataSource": "[Twilio_Log:148]fromNumber:6",
+					"class": "Medium",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"f_Date2": {
+					"type": "input",
+					"top": 60,
+					"left": 233,
+					"width": 274,
+					"height": 18,
+					"dataSource": "[Twilio_Log:148]date:1",
+					"dataSourceTypeHint": "date",
+					"class": "Medium",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/f_Date2.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"label_ToNumber": {
+					"type": "text",
+					"top": 115,
+					"left": 89,
+					"width": 124,
+					"height": 18,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "To Number"
+				},
+				"label_FromNumber": {
+					"type": "text",
+					"top": 145,
+					"left": 89,
+					"width": 124,
+					"height": 18,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "From Number"
+				},
+				"label_Date": {
+					"type": "text",
+					"top": 61,
+					"left": 89,
+					"width": 124,
+					"height": 18,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Date"
+				},
+				"f_Message": {
+					"type": "input",
+					"top": 173,
+					"left": 234,
+					"width": 273,
+					"height": 108,
+					"dataSource": "[Twilio_Log:148]message:4",
+					"class": "Medium",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"label_Message": {
+					"type": "text",
+					"top": 174,
+					"left": 90,
+					"width": 124,
+					"height": 18,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Message"
+				},
+				"f_ToNumber": {
+					"type": "input",
+					"top": 115,
+					"left": 234,
+					"width": 273,
+					"height": 18,
+					"dataSource": "[Twilio_Log:148]toNumber:5",
+					"class": "Medium",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"label_Time": {
+					"type": "text",
+					"top": 87,
+					"left": 89,
+					"width": 124,
+					"height": 18,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Time"
+				},
+				"f_Status": {
+					"type": "input",
+					"top": 293,
+					"left": 233,
+					"width": 274,
+					"height": 18,
+					"dataSource": "[Twilio_Log:148]status:8",
+					"class": "Medium",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"label_Status": {
+					"type": "text",
+					"top": 295,
+					"left": 89,
+					"width": 124,
+					"height": 18,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Staus"
+				},
+				"f_Response": {
+					"type": "input",
+					"top": 323,
+					"left": 234,
+					"width": 273,
+					"height": 108,
+					"dataSource": "[Twilio_Log:148]response:7",
+					"class": "Medium",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"label_Response": {
+					"type": "text",
+					"top": 324,
+					"left": 90,
+					"width": 124,
+					"height": 18,
+					"class": "Label_Medium",
+					"textAlign": "right",
+					"text": "Response"
+				}
+			}
+		}
+	]
+}

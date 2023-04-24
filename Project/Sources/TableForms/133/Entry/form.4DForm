@@ -1,0 +1,330 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_Entry",
+	"rightMargin": 0,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onOutsideCall",
+		"onDeactivate",
+		"onDataChange",
+		"onCloseBox",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onLoadRecord",
+		"onBoundVariableChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text8": {
+					"type": "text",
+					"top": 524,
+					"left": 0,
+					"width": 414,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "center",
+					"text": "Manually creating new or edit log is not support"
+				},
+				"Text": {
+					"type": "text",
+					"top": 106,
+					"left": 7,
+					"width": 170,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Register ID:"
+				},
+				"Field": {
+					"type": "input",
+					"top": 106,
+					"left": 192,
+					"width": 214,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "[IM_TransferLog:133]RegisterID:2",
+					"class": "Medium",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 144,
+					"left": 7,
+					"width": 170,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Customer ID:"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 144,
+					"left": 192,
+					"width": 214,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "[IM_TransferLog:133]CustomerID:3",
+					"class": "Medium",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 182,
+					"left": 7,
+					"width": 170,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Account ID:"
+				},
+				"Field2": {
+					"type": "input",
+					"top": 182,
+					"left": 192,
+					"width": 214,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "[IM_TransferLog:133]AccountID:4",
+					"class": "Medium",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 218,
+					"left": 7,
+					"width": 170,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Review Date:"
+				},
+				"Field3": {
+					"type": "input",
+					"top": 220,
+					"left": 192,
+					"width": 214,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "[IM_TransferLog:133]ResponseDate:7",
+					"dataSourceTypeHint": "date",
+					"class": "Medium",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 257,
+					"left": 7,
+					"width": 170,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Fraud Rule Fired:"
+				},
+				"Field5": {
+					"type": "input",
+					"top": 257,
+					"left": 192,
+					"width": 214,
+					"height": 54,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[IM_TransferLog:133]FraudRuleFired:9",
+					"class": "Medium",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 332,
+					"left": 7,
+					"width": 170,
+					"height": 19,
+					"sizingY": "move",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Result:"
+				},
+				"Field6": {
+					"type": "input",
+					"top": 332,
+					"left": 192,
+					"width": 214,
+					"height": 18,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"dataSource": "[IM_TransferLog:133]Result:6",
+					"class": "Medium",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 486,
+					"left": 295,
+					"width": 111,
+					"height": 31,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Close",
+					"class": "Large",
+					"method": "ObjectMethods/b_cancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_details": {
+					"type": "button",
+					"top": 485,
+					"left": 180,
+					"width": 111,
+					"height": 31,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Show Details",
+					"class": "Large",
+					"method": "ObjectMethods/b_details.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 371,
+					"left": 7,
+					"width": 170,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Enviornment Used:"
+				},
+				"Field4": {
+					"type": "input",
+					"top": 373,
+					"left": 192,
+					"width": 214,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "[IM_TransferLog:133]Environment:10",
+					"class": "Medium",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"top": 67,
+					"left": 7,
+					"width": 170,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Invoice ID:"
+				},
+				"Field7": {
+					"type": "input",
+					"top": 67,
+					"left": 192,
+					"width": 214,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "[IM_TransferLog:133]InvoiceID:13",
+					"class": "Medium",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 410,
+					"left": 7,
+					"width": 170,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Transfer Type:"
+				},
+				"Field8": {
+					"type": "input",
+					"top": 412,
+					"left": 192,
+					"width": 214,
+					"height": 18,
+					"sizingX": "grow",
+					"dataSource": "[IM_TransferLog:133]Endpoint:8",
+					"class": "Medium",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

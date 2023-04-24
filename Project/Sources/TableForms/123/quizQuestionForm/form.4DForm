@@ -1,0 +1,196 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Input": {
+					"type": "input",
+					"left": 27,
+					"top": 35,
+					"width": 507,
+					"height": 26,
+					"dataSource": "Form:C1466.currentQuestion.question",
+					"enterable": false,
+					"focusable": true,
+					"borderStyle": "none",
+					"fill": "transparent",
+					"fontWeight": "bold",
+					"fontSize": 18
+				},
+				"Input1": {
+					"type": "input",
+					"left": 54,
+					"top": 99,
+					"width": 447,
+					"height": 32,
+					"dataSource": "Form:C1466.currentQuestion.answer1",
+					"enterable": false,
+					"borderStyle": "none",
+					"fill": "transparent",
+					"fontSize": 16
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"text": "",
+					"top": 97,
+					"left": 27,
+					"width": 474,
+					"height": 29,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.answer1Checkbox",
+					"dataSourceTypeHint": "boolean",
+					"method": "ObjectMethods/Check Box.4dm"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 54,
+					"top": 146,
+					"width": 447,
+					"height": 32,
+					"dataSource": "Form:C1466.currentQuestion.answer2",
+					"enterable": false,
+					"borderStyle": "none",
+					"fill": "transparent",
+					"fontSize": 16
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"text": "",
+					"top": 144,
+					"left": 27,
+					"width": 474,
+					"height": 29,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.answer2Checkbox",
+					"dataSourceTypeHint": "boolean",
+					"method": "ObjectMethods/Check Box1.4dm"
+				},
+				"Input3": {
+					"type": "input",
+					"left": 54,
+					"top": 193,
+					"width": 447,
+					"height": 32,
+					"dataSource": "Form:C1466.currentQuestion.answer3",
+					"enterable": false,
+					"borderStyle": "none",
+					"fill": "transparent",
+					"fontSize": 16
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"text": "",
+					"top": 191,
+					"left": 27,
+					"width": 474,
+					"height": 29,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.answer3Checkbox",
+					"dataSourceTypeHint": "boolean",
+					"method": "ObjectMethods/Check Box2.4dm"
+				},
+				"Input4": {
+					"type": "input",
+					"left": 54,
+					"top": 240,
+					"width": 447,
+					"height": 32,
+					"dataSource": "Form:C1466.currentQuestion.answer4",
+					"enterable": false,
+					"borderStyle": "none",
+					"fill": "transparent",
+					"fontSize": 16
+				},
+				"Check Box3": {
+					"type": "checkbox",
+					"text": "",
+					"top": 238,
+					"left": 27,
+					"width": 474,
+					"height": 29,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.answer4Checkbox",
+					"dataSourceTypeHint": "boolean",
+					"method": "ObjectMethods/Check Box3.4dm"
+				},
+				"Button": {
+					"type": "button",
+					"text": "Next",
+					"top": 300,
+					"left": 225,
+					"width": 106,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm",
+					"dataSource": "nextButton"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "Finish",
+					"top": 300,
+					"left": 355,
+					"width": 106,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm",
+					"dataSource": "finishButton",
+					"action": "accept"
+				}
+			}
+		}
+	],
+	"geometryStamp": 446,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

@@ -1,0 +1,891 @@
+{
+	"destination": "detailScreen",
+	"windowTitle": "Agents Entry",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 416,
+	"markerBreak": 416,
+	"markerFooter": 426,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Variable5": {
+					"type": "input",
+					"top": 49,
+					"left": 117,
+					"width": 253,
+					"height": 112,
+					"dataSource": "[Agents:22]picture:13",
+					"dataSourceTypeHint": "picture",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"pictureFormat": "proportionalTopLeft",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Text14": {
+					"type": "text",
+					"top": 173,
+					"left": 10,
+					"width": 101,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Full Name"
+				},
+				"l_AgentID": {
+					"type": "text",
+					"top": 198,
+					"left": 10,
+					"width": 101,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Agent ID"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 250,
+					"left": 10,
+					"width": 101,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Password"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 96,
+					"left": 395,
+					"width": 109,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "City"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 122,
+					"left": 395,
+					"width": 109,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Province"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 223,
+					"left": 10,
+					"width": 101,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Country"
+				},
+				"FullName": {
+					"type": "input",
+					"top": 174,
+					"left": 117,
+					"width": 190,
+					"height": 20,
+					"dataSource": "[Agents:22]FullName:6",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/FullName.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"LoginID": {
+					"type": "input",
+					"top": 199,
+					"left": 117,
+					"width": 253,
+					"height": 20,
+					"dataSource": "[Agents:22]AgentID:1",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/LoginID.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CountryCode": {
+					"type": "input",
+					"top": 224,
+					"left": 117,
+					"width": 37,
+					"height": 20,
+					"dataSource": "[Agents:22]CountryCode:21",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/CountryCode.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Password": {
+					"type": "input",
+					"top": 250,
+					"left": 117,
+					"width": 253,
+					"height": 20,
+					"dataSource": "[Agents:22]Password:2",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Password.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"cvViewPassword": {
+					"type": "checkbox",
+					"top": 283,
+					"left": 19,
+					"width": 257,
+					"height": 17,
+					"dataSource": "cbViewPassword",
+					"text": "View Password (Admin Only)",
+					"focusable": false,
+					"method": "ObjectMethods/cvViewPassword.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"b_generatePassword": {
+					"type": "button",
+					"top": 305,
+					"left": 18,
+					"width": 273,
+					"height": 25,
+					"text": "Generate Random Password",
+					"class": "Large",
+					"method": "ObjectMethods/b_generatePassword.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"isAllowedAccess": {
+					"type": "checkbox",
+					"top": 340,
+					"left": 19,
+					"width": 288,
+					"height": 20,
+					"dataSource": "[Agents:22]isAllowedAccess:7",
+					"text": "Allow Access Via Web",
+					"stroke": "#000000",
+					"class": "Large",
+					"method": "ObjectMethods/isAllowedAccess.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"isAllowedAccess1": {
+					"type": "checkbox",
+					"top": 361,
+					"left": 19,
+					"width": 281,
+					"height": 20,
+					"dataSource": "[Agents:22]isAllowedToAddCustomer:14",
+					"text": "Allow adding customers",
+					"stroke": "#000000",
+					"class": "Large",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isAllowedAccess2": {
+					"type": "checkbox",
+					"top": 383,
+					"left": 19,
+					"width": 239,
+					"height": 20,
+					"dataSource": "[Agents:22]isAllowedToChangeLinkInfo:15",
+					"text": "Allow changing link infos",
+					"stroke": "#000000",
+					"class": "Large",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"superAgent": {
+					"type": "checkbox",
+					"top": 1,
+					"left": 460,
+					"width": 234,
+					"height": 30,
+					"dataSource": "[Agents:22]isSuperAgent:16",
+					"text": "Super Agent for Country",
+					"stroke": "#000000",
+					"class": "Fields",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Country1": {
+					"type": "input",
+					"top": 34,
+					"left": 516,
+					"width": 195,
+					"height": 20,
+					"dataSource": "[Agents:22]email:8",
+					"stroke": "#444444",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Country3": {
+					"type": "input",
+					"top": 61,
+					"left": 516,
+					"width": 195,
+					"height": 20,
+					"dataSource": "[Agents:22]Address:10",
+					"stroke": "#444444",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"City": {
+					"type": "input",
+					"top": 95,
+					"left": 516,
+					"width": 195,
+					"height": 20,
+					"dataSource": "[Agents:22]City:3",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/City.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Province": {
+					"type": "input",
+					"top": 121,
+					"left": 516,
+					"width": 195,
+					"height": 20,
+					"dataSource": "[Agents:22]Province:4",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Province.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Province1": {
+					"type": "input",
+					"top": 146,
+					"left": 516,
+					"width": 195,
+					"height": 20,
+					"dataSource": "[Agents:22]PostalCode:22",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Country": {
+					"type": "input",
+					"top": 224,
+					"left": 161,
+					"width": 209,
+					"height": 20,
+					"dataSource": "[Agents:22]Country:5",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"City1": {
+					"type": "input",
+					"top": 177,
+					"left": 516,
+					"width": 195,
+					"height": 20,
+					"dataSource": "[Agents:22]MainPhone:11",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/City1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"City2": {
+					"type": "input",
+					"top": 203,
+					"left": 516,
+					"width": 195,
+					"height": 20,
+					"dataSource": "[Agents:22]MainFax:12",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/City2.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"LocationNumber": {
+					"type": "input",
+					"top": 230,
+					"left": 516,
+					"width": 195,
+					"height": 20,
+					"dataSource": "[Agents:22]LocationNumber:23",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"placeholder": "FINTRAC Location #",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"City3": {
+					"type": "input",
+					"top": 256,
+					"left": 650,
+					"width": 63,
+					"height": 20,
+					"dataSource": "[Agents:22]serviceFee_origin:17",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/City3.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Country2": {
+					"type": "input",
+					"top": 310,
+					"left": 399,
+					"width": 295,
+					"height": 90,
+					"dataSource": "[Agents:22]Notes:9",
+					"stroke": "#444444",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_save": {
+					"type": "button",
+					"top": 432,
+					"left": 563,
+					"width": 150,
+					"height": 25,
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"class": "Large",
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 432,
+					"left": 412,
+					"width": 150,
+					"height": 25,
+					"text": "Cancel",
+					"class": "Large",
+					"method": "ObjectMethods/b_cancel.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"b_update": {
+					"type": "button",
+					"top": 442,
+					"left": 18,
+					"width": 80,
+					"height": 20,
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"text": "Apply",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_update.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 34,
+					"left": 395,
+					"width": 109,
+					"height": 19,
+					"stroke": "#444444",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Email"
+				},
+				"notesL": {
+					"type": "text",
+					"top": 291,
+					"left": 399,
+					"width": 80,
+					"height": 15,
+					"stroke": "#444444",
+					"class": "Label",
+					"textAlign": "left",
+					"text": "Notes"
+				},
+				"Picture362": {
+					"type": "picture",
+					"top": 444,
+					"left": 135,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BNextRec.png"
+				},
+				"Picture363": {
+					"type": "picture",
+					"top": 444,
+					"left": 150,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BLastRec.png"
+				},
+				"Picture364": {
+					"type": "picture",
+					"top": 444,
+					"left": 105,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BFirstRec.png"
+				},
+				"Picture361": {
+					"type": "picture",
+					"top": 444,
+					"left": 120,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/tiny BPrevRec.png"
+				},
+				"b_first": {
+					"type": "button",
+					"top": 444,
+					"left": 105,
+					"width": 16,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_first.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_next": {
+					"type": "button",
+					"top": 444,
+					"left": 135,
+					"width": 16,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_next.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_previous": {
+					"type": "button",
+					"top": 444,
+					"left": 120,
+					"width": 16,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_previous.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_last": {
+					"type": "button",
+					"top": 444,
+					"left": 150,
+					"width": 16,
+					"height": 16,
+					"display": false,
+					"method": "ObjectMethods/b_last.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 444,
+					"left": 172,
+					"width": 35,
+					"height": 13,
+					"dataSource": "vRecNum",
+					"stroke": "#000000",
+					"class": "Tags_Small",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onHeader"
+					]
+				},
+				"notesL1": {
+					"type": "text",
+					"top": 61,
+					"left": 395,
+					"width": 109,
+					"height": 20,
+					"stroke": "#444444",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Address"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 177,
+					"left": 395,
+					"width": 109,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Phone"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 202,
+					"left": 395,
+					"width": 109,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Fax"
+				},
+				"Static Picture3": {
+					"type": "picture",
+					"top": 72,
+					"left": 90,
+					"width": 15,
+					"height": 17,
+					"pictureFormat": "scaled",
+					"picture": "Images/Static Picture3.pict"
+				},
+				"b_openPicture": {
+					"type": "button",
+					"top": 69,
+					"left": 87,
+					"width": 21,
+					"height": 24,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/LoadPicture"
+					},
+					"display": false,
+					"method": "ObjectMethods/b_openPicture.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 264,
+					"left": 375,
+					"width": 260,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Our Fee when remitting via this agent"
+				},
+				"b_plus": {
+					"type": "button",
+					"top": 6,
+					"left": 684,
+					"width": 29,
+					"height": 21,
+					"text": "+",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_plus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"latestCheckStatus1": {
+					"type": "input",
+					"top": 174,
+					"left": 313,
+					"width": 20,
+					"height": 20,
+					"dataSource": "latestCheckStatus1",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_check": {
+					"type": "button",
+					"top": 173,
+					"left": 337,
+					"width": 33,
+					"height": 20,
+					"text": "Check",
+					"fontFamily": "Segoe UI",
+					"fontSize": 10,
+					"focusable": false,
+					"method": "ObjectMethods/b_check.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 147,
+					"left": 395,
+					"width": 109,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Postal Code"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 231,
+					"left": 387,
+					"width": 126,
+					"height": 19,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "left",
+					"text": "Location Number"
+				}
+			},
+			"entryOrder": [
+				"Variable5",
+				"FullName",
+				"LoginID",
+				"CountryCode",
+				"Password",
+				"cvViewPassword",
+				"b_generatePassword",
+				"isAllowedAccess",
+				"isAllowedAccess1",
+				"isAllowedAccess2",
+				"superAgent",
+				"Country1",
+				"Country3",
+				"City",
+				"Province",
+				"Province1",
+				"City1",
+				"City2",
+				"LocationNumber",
+				"City3",
+				"Country2",
+				"b_save",
+				"b_cancel",
+				"b_update",
+				"Variable2",
+				"b_plus",
+				"b_check"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"b_plus"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 29
+}

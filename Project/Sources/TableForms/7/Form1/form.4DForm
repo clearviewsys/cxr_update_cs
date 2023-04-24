@@ -1,0 +1,164 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Currency1": {
+					"type": "input",
+					"top": 154,
+					"left": 206,
+					"width": 201,
+					"height": 15,
+					"dataSource": "[CompanyInfo:7]ClientCode:15",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFC0C0",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Currency2": {
+					"type": "input",
+					"top": 178,
+					"left": 206,
+					"width": 201,
+					"height": 15,
+					"dataSource": "[CompanyInfo:7]ClientKey:16",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFC0C0",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 154,
+					"left": 18,
+					"width": 175,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": "Client Code"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 175,
+					"left": 18,
+					"width": 175,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label",
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": "Client Registration Key"
+				},
+				"Button3": {
+					"type": "button",
+					"top": 149,
+					"left": 422,
+					"width": 156,
+					"height": 26,
+					"dataSource": "Button3",
+					"text": "Test Registration",
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 178,
+					"left": 422,
+					"width": 156,
+					"height": 26,
+					"dataSource": "Button3",
+					"text": "Register this Computer",
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 208,
+					"left": 53,
+					"width": 497,
+					"height": 45,
+					"stroke": "#000000",
+					"text": "The Client Code is a unique identifier that should be given to you by the software vendor. Please do not use arbitrary value for this field. If you do not have a client code, you may use \"demo\". "
+				},
+				"Text4": {
+					"type": "text",
+					"top": 271,
+					"left": 41,
+					"width": 509,
+					"height": 45,
+					"stroke": "#000000",
+					"text": "The client registration key is necessary to subsribing to live data feed and other web-based services. "
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

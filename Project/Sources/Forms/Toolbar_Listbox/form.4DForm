@@ -1,0 +1,443 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 5,
+	"bottomMargin": 0,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"TableName": {
+					"type": "input",
+					"top": 92,
+					"left": 0,
+					"width": 419,
+					"height": 15,
+					"visibility": "hidden",
+					"stroke": "#7170AA",
+					"class": "Label",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#EEEEEE",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/TableName.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"b_doubleClick": {
+					"type": "button",
+					"top": 75,
+					"left": 3,
+					"width": 30,
+					"height": 11,
+					"shortcutKey": "[down arrow]",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/b_doubleClick.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_import": {
+					"type": "button",
+					"top": 75,
+					"left": 43,
+					"width": 30,
+					"height": 11,
+					"shortcutKey": "i",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/b_import.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_export": {
+					"type": "button",
+					"top": 75,
+					"left": 83,
+					"width": 30,
+					"height": 11,
+					"shortcutKey": "x",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/b_export.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_new": {
+					"type": "button",
+					"top": 7,
+					"left": 72,
+					"width": 50,
+					"height": 54,
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": ":xliff:cvs_new",
+					"icon": "/RESOURCES/Icons/flat/new.png",
+					"iconFrames": 1,
+					"style": "roundedBevel",
+					"method": "ObjectMethods/b_new.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"b_edit": {
+					"type": "button",
+					"top": 7,
+					"left": 123,
+					"width": 50,
+					"height": 54,
+					"shortcutKey": "e",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": ":xliff:cvs_edit",
+					"icon": "/RESOURCES/Icons/flat/edit.png",
+					"iconFrames": 1,
+					"style": "roundedBevel",
+					"method": "ObjectMethods/b_edit.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"b_delete": {
+					"type": "button",
+					"top": 17,
+					"left": 634,
+					"width": 30,
+					"height": 34,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Delete Selectio"
+					},
+					"shortcutKey": "[Backspace]",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "",
+					"icon": "/RESOURCES/Icons/flat/trash.png",
+					"iconFrames": 1,
+					"style": "roundedBevel",
+					"method": "ObjectMethods/b_delete.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"b_all": {
+					"type": "button",
+					"top": 7,
+					"left": 225,
+					"width": 50,
+					"height": 54,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Show All"
+					},
+					"shortcutKey": "a",
+					"shortcutAccel": true,
+					"shortcutShift": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": ":xliff:cvs_all",
+					"icon": "/RESOURCES/Icons/flat/all.png",
+					"iconFrames": 1,
+					"style": "roundedBevel",
+					"method": "ObjectMethods/b_all.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_save": {
+					"type": "button",
+					"top": 7,
+					"left": 327,
+					"width": 50,
+					"height": 54,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/SaveSelection"
+					},
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": ":xliff:cvs_save",
+					"icon": "/RESOURCES/Icons/flat/save.png",
+					"iconFrames": 1,
+					"style": "roundedBevel",
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_load": {
+					"type": "button",
+					"top": 7,
+					"left": 378,
+					"width": 50,
+					"height": 54,
+					"shortcutKey": "l",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": ":xliff:cvs_load",
+					"icon": "/RESOURCES/Icons/flat/load.png",
+					"iconFrames": 1,
+					"style": "roundedBevel",
+					"method": "ObjectMethods/b_load.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_filter": {
+					"type": "button",
+					"top": 7,
+					"left": 276,
+					"width": 50,
+					"height": 54,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/getMarketRate"
+					},
+					"shortcutKey": "g",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": ":xliff:cvs_filter",
+					"icon": "/RESOURCES/Icons/flat/filter.png",
+					"iconFrames": 1,
+					"style": "roundedBevel",
+					"method": "ObjectMethods/b_filter.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_query": {
+					"type": "button",
+					"top": 7,
+					"left": 174,
+					"width": 50,
+					"height": 54,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Query"
+					},
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": ":xliff:cvs_query",
+					"icon": "/RESOURCES/Icons/flat/search.png",
+					"iconFrames": 1,
+					"style": "roundedBevel",
+					"method": "ObjectMethods/b_query.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_report": {
+					"type": "button",
+					"top": 7,
+					"left": 480,
+					"width": 50,
+					"height": 54,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report"
+					},
+					"shortcutKey": "r",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": ":xliff:cvs_report",
+					"icon": "/RESOURCES/Icons/flat/report.png",
+					"iconFrames": 1,
+					"style": "roundedBevel",
+					"method": "ObjectMethods/b_report.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_sort": {
+					"type": "button",
+					"top": 7,
+					"left": 429,
+					"width": 50,
+					"height": 54,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report"
+					},
+					"shortcutKey": "t",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": ":xliff:cvs_sort",
+					"icon": "/RESOURCES/Icons/flat/sort.png",
+					"iconFrames": 1,
+					"style": "roundedBevel",
+					"method": "ObjectMethods/b_sort.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_html": {
+					"type": "button",
+					"top": 7,
+					"left": 582,
+					"width": 50,
+					"height": 54,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Print Selection"
+					},
+					"shortcutKey": "p",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": "html",
+					"icon": "/RESOURCES/Icons/flat/html.png",
+					"iconFrames": 1,
+					"style": "roundedBevel",
+					"method": "ObjectMethods/b_html.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_print": {
+					"type": "button",
+					"top": 7,
+					"left": 531,
+					"width": 50,
+					"height": 54,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Print Selection"
+					},
+					"shortcutKey": "p",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#444444",
+					"focusable": false,
+					"text": ":xliff:cvs_print",
+					"icon": "/RESOURCES/Icons/flat/printer.png",
+					"iconFrames": 1,
+					"style": "roundedBevel",
+					"method": "ObjectMethods/b_print.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Variable11": {
+					"type": "input",
+					"top": 59,
+					"left": 2,
+					"width": 66,
+					"height": 12,
+					"dataSource": "<>ApplicationUser",
+					"stroke": "#FFFFFF",
+					"textAlign": "center",
+					"fontFamily": "Tahoma",
+					"fontSize": 9,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"vIcon": {
+					"type": "input",
+					"top": 4,
+					"left": 3,
+					"width": 64,
+					"height": 64,
+					"dataSourceTypeHint": "picture",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/vIcon.4dm",
+					"events": [
+						"onLoad"
+					]
+				}
+			},
+			"entryOrder": [
+				"TableName",
+				"Variable11",
+				"vIcon"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 420,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

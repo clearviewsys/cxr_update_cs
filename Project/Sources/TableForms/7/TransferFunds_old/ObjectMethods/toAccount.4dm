@@ -1,0 +1,1 @@
+pickAccountsOfCurrency(Self:C308; vCurrency)

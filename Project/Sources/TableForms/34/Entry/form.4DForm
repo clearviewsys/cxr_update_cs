@@ -1,0 +1,496 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowMinHeight": 200,
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 176,
+	"markerBreak": 176,
+	"markerFooter": 186,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 330,
+					"left": 13,
+					"width": 627,
+					"height": 22,
+					"sizingY": "move",
+					"fill": "transparent",
+					"stroke": "#AAAAAA"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 45,
+					"left": 15,
+					"width": 118,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Cash Account ID"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 20,
+					"left": 15,
+					"width": 118,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Cash Register ID"
+				},
+				"CashRegisterID": {
+					"type": "input",
+					"top": 20,
+					"left": 140,
+					"width": 40,
+					"height": 15,
+					"dataSource": "[CashAccounts:34]CashRegisterID:2",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/CashRegisterID.4dm",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"CashAccountID": {
+					"type": "input",
+					"top": 45,
+					"left": 140,
+					"width": 135,
+					"height": 15,
+					"dataSource": "[CashAccounts:34]AccountID:1",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/CashAccountID.4dm",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"AccountNo": {
+					"type": "input",
+					"top": 20,
+					"left": 415,
+					"width": 85,
+					"height": 15,
+					"dataSource": "[Accounts:9]AccountCode:4",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/AccountCode"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 362,
+					"left": 570,
+					"width": 70,
+					"height": 26,
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"text": "Save",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 362,
+					"left": 498,
+					"width": 72,
+					"height": 26,
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"text": "Cancel",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text15": {
+					"type": "text",
+					"top": 35,
+					"left": 300,
+					"width": 155,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Main Account ID"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 20,
+					"left": 300,
+					"width": 155,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Account Code"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 50,
+					"left": 300,
+					"width": 105,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Account Type"
+				},
+				"BankID": {
+					"type": "input",
+					"top": 35,
+					"left": 415,
+					"width": 135,
+					"height": 15,
+					"dataSource": "[Accounts:9]MainAccountID:2",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"AccountType": {
+					"type": "input",
+					"top": 50,
+					"left": 415,
+					"width": 135,
+					"height": 15,
+					"dataSource": "[Accounts:9]AccountType:5",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Currency": {
+					"type": "input",
+					"top": 20,
+					"left": 215,
+					"width": 60,
+					"height": 15,
+					"dataSource": "[Accounts:9]Currency:6",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 65,
+					"left": 415,
+					"width": 225,
+					"height": 30,
+					"dataSource": "[Accounts:9]AccountDescription:17",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 65,
+					"left": 300,
+					"width": 105,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "Label",
+					"text": "Account Description"
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 100,
+					"left": 15,
+					"width": 621,
+					"height": 225,
+					"sizingY": "grow",
+					"dataSourceTypeHint": "text",
+					"table": 35,
+					"listForm": "Subform_CashRegister2",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"printFrame": "variable",
+					"borderStyle": "sunken"
+				},
+				"S5_Field1": {
+					"type": "input",
+					"top": 333,
+					"left": 200,
+					"width": 109,
+					"height": 17,
+					"sizingY": "move",
+					"dataSource": "vSumSystemTotals",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000E60",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#DDDDDD",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S5_Field2": {
+					"type": "input",
+					"top": 333,
+					"left": 540,
+					"width": 94,
+					"height": 17,
+					"sizingY": "move",
+					"dataSource": "vSumShortTotals",
+					"dataSourceTypeHint": "number",
+					"stroke": "#880000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#DDDDDD",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S5_Field3": {
+					"type": "input",
+					"top": 333,
+					"left": 380,
+					"width": 109,
+					"height": 17,
+					"sizingY": "move",
+					"dataSource": "vSumActualTotals",
+					"dataSourceTypeHint": "number",
+					"stroke": "#005F60",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#DDDDDD",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 335,
+					"left": 35,
+					"width": 155,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#000E60",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Calculated Sum"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 335,
+					"left": 320,
+					"width": 55,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#005F60",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Man. Sum"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 335,
+					"left": 500,
+					"width": 35,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#B00000",
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Short"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

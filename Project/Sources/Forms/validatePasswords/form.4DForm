@@ -1,0 +1,104 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"userspopup": {
+					"type": "dropdown",
+					"left": 17,
+					"top": 65,
+					"width": 278,
+					"height": 27,
+					"events": [
+						"onDataChange"
+					],
+					"dataSourceTypeHint": "object",
+					"dataSource": "Form:C1466.users",
+					"method": "ObjectMethods/userspopup.4dm"
+				},
+				"passwordInput": {
+					"type": "input",
+					"left": 310,
+					"top": 70,
+					"width": 227,
+					"height": 17,
+					"dataSource": "Form:C1466.password"
+				},
+				"btnValidate": {
+					"type": "button",
+					"text": "Validate password",
+					"top": 107,
+					"left": 334,
+					"width": 177,
+					"height": 32,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnValidate.4dm"
+				},
+				"newpasswordInput": {
+					"type": "input",
+					"left": 17,
+					"top": 171,
+					"width": 227,
+					"height": 17,
+					"dataSource": "Form:C1466.passwordNew"
+				},
+				"btnChangePass": {
+					"type": "button",
+					"text": "Change password",
+					"top": 156,
+					"left": 298,
+					"width": 177,
+					"height": 32,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnChangePass.4dm"
+				}
+			}
+		}
+	],
+	"geometryStamp": 21,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+pickList_SOF(->[eWires:13]AMLsourceOfFunds:94; True:C214)

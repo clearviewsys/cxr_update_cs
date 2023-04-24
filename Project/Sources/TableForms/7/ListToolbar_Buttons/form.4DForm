@@ -1,0 +1,254 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "ListToolbar_Stripe",
+	"inheritedFormTable": 7,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick"
+	],
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt",
+		"orientation": "landscape"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Button3": {
+					"type": "button",
+					"top": 125,
+					"left": 73,
+					"width": 65,
+					"height": 25,
+					"dataSource": "Button3",
+					"class": "Control",
+					"focusable": false,
+					"text": "Show All",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 42,
+					"left": 612,
+					"width": 46,
+					"height": 21,
+					"dataSource": "Button3",
+					"class": "toolbar",
+					"focusable": false,
+					"text": "Today",
+					"iconFrames": 4,
+					"style": "roundedBevel",
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 125,
+					"left": 214,
+					"width": 65,
+					"height": 25,
+					"dataSource": "Button3",
+					"class": "Control",
+					"focusable": false,
+					"text": "Flagged",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "bevel",
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button7": {
+					"type": "button",
+					"top": 125,
+					"left": 282,
+					"width": 65,
+					"height": 25,
+					"dataSource": "Button3",
+					"class": "Control",
+					"focusable": false,
+					"text": "±Flag",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button9": {
+					"type": "button",
+					"top": 125,
+					"left": 141,
+					"width": 65,
+					"height": 25,
+					"dataSource": "Button3",
+					"class": "Control",
+					"focusable": false,
+					"text": "Select All",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Picture Button2": {
+					"type": "pictureButton",
+					"top": 21,
+					"left": 614,
+					"width": 40,
+					"height": 20,
+					"dataSource": "Picture Button1",
+					"picture": "/RESOURCES/Images/library/micnDateRange.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Picture Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line3": {
+					"type": "line",
+					"top": 125,
+					"left": 210,
+					"height": 25,
+					"stroke": "#444444"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 10,
+					"left": 644,
+					"width": 38,
+					"height": 12,
+					"sizingY": "move",
+					"class": "toolbar",
+					"textAlign": "right",
+					"text": "From"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 10,
+					"left": 689,
+					"width": 78,
+					"height": 12,
+					"sizingY": "move",
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "toolbar",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "systemMedium",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field1.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 28,
+					"left": 644,
+					"width": 38,
+					"height": 12,
+					"sizingY": "move",
+					"class": "toolbar",
+					"textAlign": "right",
+					"text": "To"
+				},
+				"Field2": {
+					"type": "input",
+					"top": 28,
+					"left": 689,
+					"width": 78,
+					"height": 12,
+					"sizingY": "move",
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "toolbar",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dateFormat": "systemMedium",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Field2.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"top": 42,
+					"left": 665,
+					"width": 91,
+					"height": 21,
+					"sizingY": "move",
+					"dataSource": "cbApplyDateRange",
+					"text": "Apply Dates",
+					"class": "toolbar",
+					"focusable": false,
+					"method": "ObjectMethods/Check Box2.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"showTodaysButton": {
+					"type": "button",
+					"top": 125,
+					"left": 6,
+					"width": 65,
+					"height": 25,
+					"dataSource": "bShowTodays",
+					"class": "Control",
+					"focusable": false,
+					"text": "Today's",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/showTodaysButton.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

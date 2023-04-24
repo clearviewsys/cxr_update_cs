@@ -1,0 +1,430 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Date": {
+					"type": "input",
+					"top": 134,
+					"left": 101,
+					"width": 104,
+					"height": 20,
+					"dataSource": "Form:C1466.creationDate",
+					"dataSourceTypeHint": "date",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"UserID": {
+					"type": "input",
+					"top": 162,
+					"left": 101,
+					"width": 234,
+					"height": 20,
+					"dataSource": "Form:C1466.createdByUser",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"TypeOfDoc": {
+					"type": "input",
+					"top": 190,
+					"left": 101,
+					"width": 234,
+					"height": 20,
+					"dataSource": "Form:C1466.TypeOfDoc",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Description": {
+					"type": "input",
+					"top": 220,
+					"left": 101,
+					"width": 370,
+					"height": 153,
+					"dataSource": "Form:C1466.description",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"fileName": {
+					"type": "input",
+					"top": 378,
+					"left": 101,
+					"width": 374,
+					"height": 20,
+					"dataSource": "Form:C1466.fileName",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"filePath": {
+					"type": "input",
+					"top": 406,
+					"left": 101,
+					"width": 374,
+					"height": 64,
+					"dataSource": "Form:C1466.filePath",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"mimeType": {
+					"type": "input",
+					"top": 478,
+					"left": 101,
+					"width": 374,
+					"height": 20,
+					"dataSource": "Form:C1466.mimeType",
+					"textAlign": "left",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 548,
+					"left": 895,
+					"width": 80,
+					"height": 22,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 548,
+					"left": 977,
+					"width": 106,
+					"height": 22,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save Changes",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text20": {
+					"type": "text",
+					"top": 134,
+					"left": 5,
+					"width": 87,
+					"height": 16,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "Date : "
+				},
+				"Text30": {
+					"type": "text",
+					"top": 162,
+					"left": 26,
+					"width": 66,
+					"height": 16,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "User : "
+				},
+				"Text2": {
+					"type": "text",
+					"top": 190,
+					"left": 5,
+					"width": 87,
+					"height": 16,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "CXR Type : "
+				},
+				"Text21": {
+					"type": "text",
+					"top": 220,
+					"left": 5,
+					"width": 87,
+					"height": 16,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "Description : "
+				},
+				"Text3": {
+					"type": "text",
+					"top": 378,
+					"left": 10,
+					"width": 82,
+					"height": 16,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "Filename : "
+				},
+				"Text4": {
+					"type": "text",
+					"top": 406,
+					"left": 20,
+					"width": 72,
+					"height": 16,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "Filepath : "
+				},
+				"Text5": {
+					"type": "text",
+					"top": 478,
+					"left": 10,
+					"width": 82,
+					"height": 16,
+					"textAlign": "right",
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "MIME type : "
+				},
+				"Button": {
+					"type": "button",
+					"top": 79,
+					"left": 101,
+					"width": 245,
+					"height": 41,
+					"text": "Pick file to attach",
+					"focusable": false,
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Web Area": {
+					"type": "webArea",
+					"top": 32,
+					"left": 511,
+					"width": 570,
+					"height": 496,
+					"dataSource": "webArea",
+					"webEngine": "embedded",
+					"contextMenu": "none"
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"top": 507,
+					"left": 106,
+					"width": 124,
+					"height": 33,
+					"dataSource": "Form:C1466.isFlagged",
+					"text": "is Flagged?",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"bCancel",
+					"bValidate"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

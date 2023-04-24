@@ -1,0 +1,1 @@
+vComments:=vComments+". Invoice: "+[Registers:10]InvoiceNumber:10

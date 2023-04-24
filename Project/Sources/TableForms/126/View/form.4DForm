@@ -1,0 +1,142 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "Toolbar_View",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Field": {
+					"type": "input",
+					"top": 61,
+					"left": 126,
+					"width": 420,
+					"height": 20,
+					"dataSource": "[AgentAccounts:126]agentAccountsID:2",
+					"class": "Large",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 88,
+					"left": 126,
+					"width": 420,
+					"height": 20,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[AgentAccounts:126]agentID:3",
+					"class": "Large",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 116,
+					"left": 126,
+					"width": 420,
+					"height": 20,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[AgentAccounts:126]reserved:4",
+					"class": "Large",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_key": {
+					"type": "text",
+					"top": 61,
+					"left": 9,
+					"width": 110,
+					"height": 19,
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Agent Acct ID"
+				},
+				"l_key1": {
+					"type": "text",
+					"top": 88,
+					"left": 9,
+					"width": 110,
+					"height": 19,
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Agent ID"
+				},
+				"l_key2": {
+					"type": "text",
+					"top": 116,
+					"left": 9,
+					"width": 110,
+					"height": 19,
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Currency"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,266 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"cbisDeleted": {
+					"type": "checkbox",
+					"top": 282,
+					"left": 189,
+					"width": 200,
+					"height": 21,
+					"text": "Is Deleted?",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"stroke": "#000000",
+					"threeState": true,
+					"method": "ObjectMethods/cbisDeleted.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 324,
+					"left": 229,
+					"width": 119,
+					"height": 32,
+					"text": "Cancel",
+					"class": "Large",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_save": {
+					"type": "button",
+					"top": 324,
+					"left": 355,
+					"width": 119,
+					"height": 32,
+					"action": "accept",
+					"text": "Search",
+					"class": "Large",
+					"events": [
+						"onClick"
+					]
+				},
+				"PK": {
+					"type": "input",
+					"top": 56,
+					"left": 189,
+					"width": 220,
+					"height": 20,
+					"dataSource": "[Sync_Queue:30]PK:1",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TableNum": {
+					"type": "input",
+					"top": 124,
+					"left": 189,
+					"width": 50,
+					"height": 20,
+					"dataSource": "[Sync_Queue:30]Table_Num:5",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Action": {
+					"type": "input",
+					"top": 157,
+					"left": 189,
+					"width": 220,
+					"height": 20,
+					"dataSource": "[Sync_Queue:30]Action:8",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ErrorDescription": {
+					"type": "input",
+					"top": 191,
+					"left": 189,
+					"width": 220,
+					"height": 40,
+					"dataSource": "[Sync_Queue:30]Error_Descrip:4",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"SendAttempts": {
+					"type": "input",
+					"top": 244,
+					"left": 189,
+					"width": 220,
+					"height": 20,
+					"dataSource": "[Sync_Queue:30]Send_Attempts:6",
+					"dataSourceTypeHint": "integer",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"l_PK": {
+					"type": "text",
+					"top": 55,
+					"left": -1,
+					"width": 180,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "PK"
+				},
+				"l_ForID": {
+					"type": "text",
+					"top": 88,
+					"left": -1,
+					"width": 180,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "For ID"
+				},
+				"l_Action": {
+					"type": "text",
+					"top": 156,
+					"left": -1,
+					"width": 180,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Action"
+				},
+				"l_ErrorDesc": {
+					"type": "text",
+					"top": 190,
+					"left": -1,
+					"width": 180,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Error Description"
+				},
+				"l_SendAttempts": {
+					"type": "text",
+					"top": 243,
+					"left": -1,
+					"width": 180,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Send Attempts"
+				},
+				"l_TableNum": {
+					"type": "text",
+					"top": 122,
+					"left": -1,
+					"width": 180,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Table Number"
+				},
+				"ForID": {
+					"type": "input",
+					"top": 89,
+					"left": 190,
+					"width": 220,
+					"height": 20,
+					"dataSource": "[Sync_Queue:30]For_ID:2",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"tableName": {
+					"type": "input",
+					"top": 124,
+					"left": 244,
+					"width": 165,
+					"height": 20,
+					"dataSource": "Form:C1466.tableName",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

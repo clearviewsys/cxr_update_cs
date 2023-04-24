@@ -1,0 +1,1546 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 563,
+	"markerBreak": 563,
+	"markerFooter": 563,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onDragOver",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"BookingDate": {
+					"type": "input",
+					"top": 54,
+					"left": 137,
+					"width": 245,
+					"height": 17,
+					"dataSource": "[Bookings:50]BookingDate:3",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"BookingTime": {
+					"type": "input",
+					"top": 55,
+					"left": 389,
+					"width": 89,
+					"height": 17,
+					"dataSource": "[Bookings:50]BookingTime:4",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"expiryDate": {
+					"type": "input",
+					"top": 74,
+					"left": 137,
+					"width": 245,
+					"height": 17,
+					"dataSource": "[Bookings:50]expiryDate:16",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"expiryTime": {
+					"type": "input",
+					"top": 75,
+					"left": 389,
+					"width": 89,
+					"height": 17,
+					"dataSource": "[Bookings:50]expiryTime:17",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 357,
+					"left": 38,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Direct Rate (LC)"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 86,
+					"left": 536,
+					"width": 95,
+					"height": 20,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": " Spot Rate"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 390,
+					"left": 36,
+					"width": 157,
+					"height": 23,
+					"stroke": "#005F60",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "% Commission"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 446,
+					"left": 36,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Local Amount"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 416,
+					"left": 36,
+					"width": 157,
+					"height": 23,
+					"stroke": "#005F60",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Flat Fee"
+				},
+				"Text36": {
+					"type": "text",
+					"top": 358,
+					"left": 370,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": " Inverse Rate"
+				},
+				"Text43": {
+					"type": "text",
+					"top": 299,
+					"left": 38,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": " Amount"
+				},
+				"Text44": {
+					"type": "text",
+					"top": 301,
+					"left": 523,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "left",
+					"text": "Before fees"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 269,
+					"left": 38,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Currency 💲"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 213,
+					"left": 38,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Payment Method"
+				},
+				"Text25": {
+					"type": "text",
+					"top": 55,
+					"left": 12,
+					"width": 113,
+					"height": 15,
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Booking Date"
+				},
+				"Text27": {
+					"type": "text",
+					"top": 127,
+					"left": 13,
+					"width": 113,
+					"height": 20,
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Customer"
+				},
+				"Text35": {
+					"type": "text",
+					"top": 75,
+					"left": 12,
+					"width": 113,
+					"height": 15,
+					"class": "Label",
+					"textAlign": "right",
+					"text": "Expiry Date"
+				},
+				"isFlagged": {
+					"type": "checkbox",
+					"top": 28,
+					"left": 330,
+					"width": 144,
+					"height": 26,
+					"dataSource": "[Bookings:50]isFlagged:20",
+					"text": "Flagged",
+					"stroke": "#000000",
+					"class": "Large",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"BookingDate1": {
+					"type": "input",
+					"top": 99,
+					"left": 136,
+					"width": 245,
+					"height": 24,
+					"dataSource": "[Bookings:50]ValueDate:26",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"method": "ObjectMethods/BookingDate1.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					],
+					"fontWeight": "bold"
+				},
+				"BookingID": {
+					"type": "input",
+					"top": 8,
+					"left": 506,
+					"width": 185,
+					"height": 20,
+					"dataSource": "[Bookings:50]BookingID:1",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"CustomerID": {
+					"type": "input",
+					"top": 127,
+					"left": 136,
+					"width": 189,
+					"height": 20,
+					"dataSource": "[Bookings:50]CustomerID:2",
+					"stroke": "#000000",
+					"class": "Large",
+					"textDecoration": "underline",
+					"fill": "#DFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/CustomerID.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"isSell": {
+					"type": "checkbox",
+					"top": 185,
+					"left": 201,
+					"width": 323,
+					"height": 18,
+					"dataSource": "[Bookings:50]isSell:7",
+					"text": "We Sell (Customer wants to buy)",
+					"stroke": "#0000FF",
+					"class": "Large",
+					"method": "ObjectMethods/isSell.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange"
+					],
+					"enterable": true,
+					"focusable": true
+				},
+				"CalcField7": {
+					"type": "input",
+					"top": 301,
+					"left": 201,
+					"width": 182,
+					"height": 23,
+					"dataSource": "[Bookings:50]Amount:9",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onDataChange"
+					],
+					"method": "ObjectMethods/CalcField7.4dm",
+					"fontWeight": "bold"
+				},
+				"CalcField1": {
+					"type": "input",
+					"top": 271,
+					"left": 201,
+					"width": 150,
+					"height": 23,
+					"dataSource": "[Bookings:50]Currency:10",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/CalcField1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"BookingMethod1": {
+					"type": "input",
+					"top": 213,
+					"left": 201,
+					"width": 150,
+					"height": 23,
+					"dataSource": "[Bookings:50]PaymentMethod:8",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/PaymentMethods"
+					},
+					"method": "ObjectMethods/BookingMethod1.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"fontWeight": "bold"
+				},
+				"AccountID": {
+					"type": "input",
+					"top": 242,
+					"left": 201,
+					"width": 233,
+					"height": 23,
+					"dataSource": "[Bookings:50]AccountID:30",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/AccountID.4dm",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"CalcField8": {
+					"type": "input",
+					"top": 359,
+					"left": 201,
+					"width": 150,
+					"height": 23,
+					"dataSource": "[Bookings:50]ourRate:11",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#E3F9E5",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Rates"
+					},
+					"method": "ObjectMethods/CalcField8.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"fontWeight": "bold"
+				},
+				"vInverseRate1": {
+					"type": "input",
+					"top": 359,
+					"left": 533,
+					"width": 150,
+					"height": 23,
+					"dataSource": "[Bookings:50]inverseRate:29",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"fill": "#CCF7CD",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Rates"
+					},
+					"method": "ObjectMethods/vInverseRate1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"calcField2": {
+					"type": "input",
+					"top": 327,
+					"left": 523,
+					"width": 183,
+					"height": 20,
+					"dataSource": "vAmountLocal_BF",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onLosingFocus",
+						"onDataChange"
+					]
+				},
+				"CalcField_2": {
+					"type": "input",
+					"top": 389,
+					"left": 199,
+					"width": 56,
+					"height": 23,
+					"dataSource": "[Bookings:50]percentFee:21",
+					"dataSourceTypeHint": "number",
+					"stroke": "#E54522",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Percent"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CalcField9": {
+					"type": "input",
+					"top": 417,
+					"left": 199,
+					"width": 117,
+					"height": 23,
+					"dataSource": "[Bookings:50]feeLocal:22",
+					"dataSourceTypeHint": "number",
+					"stroke": "#E54522",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CalcField11": {
+					"type": "input",
+					"top": 446,
+					"left": 199,
+					"width": 181,
+					"height": 23,
+					"dataSource": "[Bookings:50]amountLocal:23",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"AccountID1": {
+					"type": "input",
+					"top": 445,
+					"left": 524,
+					"width": 233,
+					"height": 23,
+					"dataSource": "[Bookings:50]ReferenceNo:31",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FEE98F",
+					"contextMenu": "none",
+					"placeholder": "Reference",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 241,
+					"left": 551,
+					"width": 199,
+					"height": 31,
+					"dataSource": "Button",
+					"text": "Pick Wire Template",
+					"class": "Large",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"ourRemarks": {
+					"type": "input",
+					"top": 523,
+					"left": 201,
+					"width": 556,
+					"height": 75,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[Bookings:50]ourRemarks:13",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"bottom": 598,
+					"enterable": false
+				},
+				"isConfirmed": {
+					"type": "checkbox",
+					"top": 608,
+					"left": 402,
+					"width": 151,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "[Bookings:50]isConfirmed:15",
+					"text": "Confirmed",
+					"stroke": "#000000",
+					"class": "Large",
+					"method": "ObjectMethods/isConfirmed.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 636,
+					"left": 598,
+					"width": 176,
+					"height": 35,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bValidate",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save Booking",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"BookingMethod": {
+					"type": "input",
+					"top": 608,
+					"left": 210,
+					"width": 106,
+					"height": 23,
+					"sizingY": "move",
+					"defaultValue": "phone",
+					"dataSource": "[Bookings:50]BookingMethod:6",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 636,
+					"left": 402,
+					"width": 176,
+					"height": 35,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"S4_Field": {
+					"type": "input",
+					"top": 154,
+					"left": 136,
+					"width": 388,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "[Customers:3]FullName:40",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 8,
+					"left": 702,
+					"width": 74,
+					"height": 46,
+					"dataSource": "[Currencies:6]Flag:3",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Radio Button6": {
+					"type": "radio",
+					"top": 298,
+					"left": 10,
+					"width": 17,
+					"height": 21,
+					"dataSource": "rb1",
+					"shortcutKey": "1",
+					"shortcutAccel": true,
+					"text": " ",
+					"events": [
+						"onClick"
+					],
+					"radioGroup": "rbBooking"
+				},
+				"Radio Button7": {
+					"type": "radio",
+					"top": 356,
+					"left": 10,
+					"width": 17,
+					"height": 21,
+					"dataSource": "rb2",
+					"shortcutKey": "2",
+					"shortcutAccel": true,
+					"text": " ",
+					"events": [
+						"onClick"
+					],
+					"radioGroup": "rbBooking"
+				},
+				"Radio Button8": {
+					"type": "radio",
+					"top": 390,
+					"left": 10,
+					"width": 17,
+					"height": 21,
+					"dataSource": "rb3",
+					"shortcutKey": "3",
+					"shortcutAccel": true,
+					"text": " ",
+					"events": [
+						"onClick"
+					],
+					"radioGroup": "rbBooking"
+				},
+				"Radio Button9": {
+					"type": "radio",
+					"top": 416,
+					"left": 10,
+					"width": 17,
+					"height": 21,
+					"dataSource": "rb4",
+					"shortcutKey": "4",
+					"shortcutAccel": true,
+					"text": " ",
+					"events": [
+						"onClick"
+					],
+					"radioGroup": "rbBooking"
+				},
+				"Radio Button10": {
+					"type": "radio",
+					"top": 443,
+					"left": 10,
+					"width": 17,
+					"height": 21,
+					"dataSource": "rb5",
+					"shortcutKey": "5",
+					"shortcutAccel": true,
+					"text": " ",
+					"events": [
+						"onClick"
+					],
+					"radioGroup": "rbBooking"
+				},
+				"Field13": {
+					"type": "input",
+					"top": 446,
+					"left": 387,
+					"width": 45,
+					"height": 20,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Field15": {
+					"type": "input",
+					"top": 359,
+					"left": 355,
+					"width": 40,
+					"height": 20,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 359,
+					"left": 392,
+					"width": 12,
+					"height": 20,
+					"class": "Large",
+					"textAlign": "center",
+					"text": "/"
+				},
+				"CalcField10": {
+					"type": "input",
+					"top": 87,
+					"left": 641,
+					"width": 124,
+					"height": 25,
+					"dataSource": "[Bookings:50]spotRate:12",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field17": {
+					"type": "input",
+					"top": 359,
+					"left": 736,
+					"width": 40,
+					"height": 20,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"top": 359,
+					"left": 726,
+					"width": 12,
+					"height": 20,
+					"class": "Large",
+					"textAlign": "center",
+					"text": "/"
+				},
+				"vTotalFees1": {
+					"type": "input",
+					"top": 419,
+					"left": 374,
+					"width": 149,
+					"height": 20,
+					"dataSource": "vTotalFees",
+					"dataSourceTypeHint": "number",
+					"stroke": "#E54522",
+					"class": "Large",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CalcField_3": {
+					"type": "input",
+					"top": 390,
+					"left": 263,
+					"width": 70,
+					"height": 20,
+					"dataSource": "vPercentFeeLocal",
+					"dataSourceTypeHint": "number",
+					"stroke": "#E54522",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text38": {
+					"type": "text",
+					"top": 421,
+					"left": 360,
+					"width": 15,
+					"height": 20,
+					"stroke": "#E54522",
+					"class": "Large",
+					"text": "="
+				},
+				"Field18": {
+					"type": "input",
+					"top": 419,
+					"left": 321,
+					"width": 35,
+					"height": 20,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#E54522",
+					"class": "Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Field19": {
+					"type": "input",
+					"top": 389,
+					"left": 338,
+					"width": 35,
+					"height": 20,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#E54522",
+					"class": "Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Field20": {
+					"type": "input",
+					"top": 327,
+					"left": 721,
+					"width": 35,
+					"height": 20,
+					"dataSource": "<>baseCurrency",
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable14": {
+					"type": "input",
+					"top": 359,
+					"left": 402,
+					"width": 40,
+					"height": 23,
+					"dataSource": "[Bookings:50]Currency:10",
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable18": {
+					"type": "input",
+					"top": 300,
+					"left": 389,
+					"width": 40,
+					"height": 23,
+					"dataSource": "[Bookings:50]Currency:10",
+					"stroke": "#444444",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text28": {
+					"type": "text",
+					"top": 608,
+					"left": 33,
+					"width": 157,
+					"height": 20,
+					"sizingY": "move",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Booking Method"
+				},
+				"l_remarks": {
+					"type": "text",
+					"top": 533,
+					"left": 31,
+					"width": 164,
+					"height": 21,
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Internal Remarks"
+				},
+				"Variable15": {
+					"type": "input",
+					"top": 359,
+					"left": 688,
+					"width": 40,
+					"height": 23,
+					"dataSource": "[Bookings:50]Currency:10",
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"BookingMethod2": {
+					"type": "input",
+					"top": 646,
+					"left": 188,
+					"width": 185,
+					"height": 15,
+					"sizingY": "move",
+					"dataSource": "[Bookings:50]BookedByUser:5",
+					"stroke": "#000000",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 99,
+					"left": 13,
+					"width": 113,
+					"height": 20,
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Value Date"
+				},
+				"Highlight Button5": {
+					"type": "button",
+					"top": 103,
+					"left": 407,
+					"width": 44,
+					"height": 17,
+					"dataSource": "Highlight Button1",
+					"shortcutKey": "t",
+					"shortcutAccel": true,
+					"class": "Fields_Small",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Today",
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bIncreaseDate": {
+					"type": "pictureButton",
+					"top": 103,
+					"left": 452,
+					"width": 16,
+					"height": 16,
+					"dataSource": "vIncreaseDate",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyPlus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bIncreaseDate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bDecrDate": {
+					"type": "pictureButton",
+					"top": 103,
+					"left": 390,
+					"width": 16,
+					"height": 16,
+					"dataSource": "vDecrDate",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyMinus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bDecrDate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button1": {
+					"type": "pictureButton",
+					"top": 99,
+					"left": 471,
+					"width": 24,
+					"height": 24,
+					"dataSource": "",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/calendar.png",
+					"loopBackToFirstFrame": true,
+					"method": "ObjectMethods/3D Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 241,
+					"left": 38,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Account"
+				},
+				"l_reference": {
+					"type": "text",
+					"top": 445,
+					"left": 361,
+					"width": 157,
+					"height": 23,
+					"stroke": "#444444",
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Reference"
+				},
+				"stamp": {
+					"type": "input",
+					"top": 566,
+					"left": 506,
+					"width": 250,
+					"height": 48,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"isFlagged1": {
+					"type": "checkbox",
+					"top": 327,
+					"left": 201,
+					"width": 233,
+					"height": 20,
+					"dataSource": "[Bookings:50]isOpenBooking:34",
+					"text": "Open Booking (Rateless)",
+					"stroke": "#000000",
+					"class": "Large",
+					"method": "ObjectMethods/isFlagged1.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isConfirmed1": {
+					"type": "checkbox",
+					"top": 127,
+					"left": 567,
+					"width": 151,
+					"height": 20,
+					"dataSource": "[Bookings:50]isHonored:18",
+					"text": "Honored",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"isConfirmed2": {
+					"type": "checkbox",
+					"top": 608,
+					"left": 562,
+					"width": 151,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "[Bookings:50]isCancelled:35",
+					"text": "Cancelled",
+					"stroke": "#000000",
+					"class": "Large",
+					"method": "ObjectMethods/isConfirmed2.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"stamp_buy": {
+					"type": "input",
+					"top": 154,
+					"left": 443,
+					"width": 313,
+					"height": 32,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"method": "ObjectMethods/stamp_buy.4dm"
+				},
+				"Button2": {
+					"type": "button",
+					"top": 213,
+					"left": 550,
+					"width": 199,
+					"height": 31,
+					"dataSource": "Button",
+					"text": "Pick a Link",
+					"class": "Large",
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"ourRemarks1": {
+					"type": "input",
+					"top": 476,
+					"left": 201,
+					"width": 556,
+					"height": 40,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[Bookings:50]customerRemarks:14",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"l_remarks1": {
+					"type": "text",
+					"top": 481,
+					"left": 5,
+					"width": 189,
+					"height": 19,
+					"class": "Large",
+					"textAlign": "right",
+					"text": "Customer Remarks"
+				}
+			},
+			"entryOrder": [
+				"BookingDate",
+				"BookingTime",
+				"expiryDate",
+				"isFlagged",
+				"BookingDate1",
+				"CustomerID",
+				"isSell",
+				"BookingMethod1",
+				"AccountID",
+				"CalcField1",
+				"CalcField7",
+				"isFlagged1",
+				"CalcField8",
+				"vInverseRate1",
+				"CalcField_2",
+				"CalcField9",
+				"CalcField11",
+				"AccountID1",
+				"Button1",
+				"ourRemarks",
+				"isConfirmed",
+				"bValidate",
+				"BookingMethod",
+				"bCancel",
+				"Radio Button6",
+				"Radio Button7",
+				"Radio Button8",
+				"Radio Button9",
+				"Radio Button10",
+				"isConfirmed2",
+				"Button2",
+				"ourRemarks1"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"bIncreaseDate",
+					"bDecrDate"
+				]
+			},
+			"View 3": {
+				"objects": [
+					"bValidate",
+					"bCancel"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 68,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

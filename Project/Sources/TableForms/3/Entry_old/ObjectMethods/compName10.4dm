@@ -1,0 +1,1 @@
+handlePickCustomerIndustryC(On Data Change:K2:15; ->[Customers:3]IndustryCode:122; False:C215)

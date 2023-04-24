@@ -1,0 +1,1 @@
+Self:C308->:=removeEnclosingSpaces(toTitleCase(Self:C308))

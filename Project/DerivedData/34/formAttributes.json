@@ -1,0 +1,28 @@
+{
+	"forms": {
+		"Subform_CashRegisters": {
+			"timeStamp": "2023-04-24T12:23:48Z",
+			"destination": "listScreen"
+		},
+		"Entry": {
+			"timeStamp": "2023-04-24T12:23:48Z",
+			"destination": "detailScreen"
+		},
+		"ListBox": {
+			"timeStamp": "2023-04-24T12:23:48Z",
+			"destination": "detailScreen"
+		},
+		"print": {
+			"timeStamp": "2023-04-24T12:23:48Z",
+			"destination": "listPrinter"
+		},
+		"List": {
+			"timeStamp": "2023-04-24T12:23:48Z",
+			"destination": "listScreen"
+		},
+		"View": {
+			"timeStamp": "2023-04-24T12:23:48Z",
+			"destination": "detailScreen"
+		}
+	}
+}

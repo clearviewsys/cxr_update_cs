@@ -1,0 +1,659 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 429,
+					"left": 389,
+					"width": 177,
+					"height": 26,
+					"sizingY": "move",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Selection Order Total"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 52,
+					"left": 18,
+					"width": 129,
+					"height": 20,
+					"class": "Label_Large",
+					"text": "Select Agent"
+				},
+				"AgentID": {
+					"type": "input",
+					"top": 52,
+					"left": 157,
+					"width": 266,
+					"height": 20,
+					"dataSource": "vAgentID",
+					"class": "Large",
+					"contextMenu": "none",
+					"method": "ObjectMethods/AgentID.4dm",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 78,
+					"left": 157,
+					"width": 266,
+					"height": 21,
+					"dataSource": "vAgentAccountID",
+					"class": "Large",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Field3.4dm",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 39,
+					"left": 755,
+					"width": 90,
+					"height": 24,
+					"dataSource": "Button1",
+					"text": "Check All",
+					"class": "Small",
+					"focusable": false,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 68,
+					"left": 755,
+					"width": 90,
+					"height": 24,
+					"dataSource": "Button1",
+					"text": "Uncheck All",
+					"class": "Small",
+					"focusable": false,
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button3": {
+					"type": "button",
+					"top": 75,
+					"left": 490,
+					"width": 146,
+					"height": 26,
+					"dataSource": "Button3",
+					"text": "Query",
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"ewr_POListBox": {
+					"type": "listbox",
+					"top": 107,
+					"left": 18,
+					"width": 829,
+					"height": 291,
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "ewr_POListBox",
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "24px",
+					"horizontalLineStroke": "#AAAAAA",
+					"verticalLineStroke": "#AAAAAA",
+					"stroke": "#000000",
+					"fill": "#E7FFCE",
+					"alternateFill": "#CEDFE5",
+					"fontFamily": "Segoe UI",
+					"fontSize": 12,
+					"method": "ObjectMethods/ewr_POListBox.4dm",
+					"events": [
+						"onDoubleClick"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "ewr_arrRowNo",
+							"dataSourceTypeHint": "number",
+							"width": 39,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#E7FFCE",
+							"alternateFill": "#CEDFE5",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "num_Row No",
+								"text": "Row",
+								"dataSource": "Header1",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#E7FFCE",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column13",
+							"dataSource": "ewr_arreWireID",
+							"width": 96,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#E7FFCE",
+							"alternateFill": "#CEDFE5",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "eWire ID",
+								"text": "eWire ID",
+								"dataSource": "Header1",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#E7FFCE",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "ewr_arrInvoiceID",
+							"width": 93,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#E7FFCE",
+							"alternateFill": "#CEDFE5",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Invoice",
+								"text": "Invoice",
+								"dataSource": "Header2",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#E7FFCE",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column14",
+							"dataSource": "ewr_arrSendDate",
+							"dataSourceTypeHint": "date",
+							"width": 83,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"dateFormat": "short",
+							"stroke": "#000000",
+							"fill": "#E7FFCE",
+							"alternateFill": "#CEDFE5",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "dat_Date Sent",
+								"text": "Date",
+								"dataSource": "Header2",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#E7FFCE",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "ewr_arrCustomerName",
+							"width": 157,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#E7FFCE",
+							"alternateFill": "#CEDFE5",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Ordering Customer Name",
+								"text": "By the order of",
+								"dataSource": "Customer Name",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#E7FFCE",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column17",
+							"dataSource": "ewr_arrLinkName",
+							"width": 152,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#E7FFCE",
+							"alternateFill": "#CEDFE5",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Beneficiary Name",
+								"text": "Beneficiary Name",
+								"dataSource": "Header5",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#E7FFCE",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column22",
+							"dataSource": "ewr_arrToAmount",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#E7FFCE",
+							"alternateFill": "#CEDFE5",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_To Amount",
+								"text": "Amount",
+								"dataSource": "Header10",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#E7FFCE",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "ewr_arrIsSelected",
+							"dataSourceTypeHint": "boolean",
+							"width": 74,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"stroke": "#000000",
+							"fill": "#E7FFCE",
+							"alternateFill": "#CEDFE5",
+							"fontFamily": "Segoe UI",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "bln_Selected",
+								"text": "Include",
+								"dataSource": "Header3",
+								"stroke": "#000000",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#E7FFCE",
+								"fontFamily": "Segoe UI",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 429,
+					"left": 634,
+					"width": 212,
+					"height": 26,
+					"sizingY": "move",
+					"dataSource": "vSumAgentPOs",
+					"dataSourceTypeHint": "number",
+					"class": "Label_Large",
+					"textAlign": "left",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 79,
+					"left": 18,
+					"width": 129,
+					"height": 20,
+					"class": "Label_Large",
+					"text": "Select Account"
+				},
+				"Highlight Button2": {
+					"type": "button",
+					"top": 406,
+					"left": 17,
+					"width": 125,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Export Table",
+					"icon": "/RESOURCES/Images/library/toolbarLoad.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Highlight Button12": {
+					"type": "button",
+					"top": 463,
+					"left": 624,
+					"width": 223,
+					"height": 25,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"shortcutKey": "p",
+					"shortcutAccel": true,
+					"class": "Control",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Print eWire Payment Order",
+					"icon": "/RESOURCES/Images/library/toolbarPrinter.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/Highlight Button12.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 30,
+					"left": 0,
+					"width": 19,
+					"height": 18,
+					"dataSource": "Invisible Button1",
+					"shortcutKey": "w",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 429,
+					"left": 572,
+					"width": 53,
+					"height": 26,
+					"sizingY": "move",
+					"dataSource": "[Accounts:9]Currency:6",
+					"class": "Label_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 1,
+					"left": 18,
+					"width": 827,
+					"height": 27,
+					"fill": "#718D84",
+					"stroke": "#FFFFFF",
+					"class": "Label_Large",
+					"textAlign": "center",
+					"text": "Agent Payment Order for Outgoing eWires"
+				},
+				"Field4": {
+					"type": "input",
+					"top": 78,
+					"left": 428,
+					"width": 53,
+					"height": 20,
+					"dataSource": "[Accounts:9]Currency:6",
+					"stroke": "#666666",
+					"class": "Label_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 404,
+					"left": 634,
+					"width": 212,
+					"height": 26,
+					"sizingY": "move",
+					"dataSource": "vSumToAmounts",
+					"dataSourceTypeHint": "number",
+					"stroke": "#888888",
+					"class": "Label_Large",
+					"textAlign": "left",
+					"textDecoration": "underline",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 404,
+					"left": 389,
+					"width": 177,
+					"height": 26,
+					"sizingY": "move",
+					"stroke": "#888888",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Total for of all rows"
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"top": 20,
+					"left": 17,
+					"width": 422,
+					"height": 34,
+					"dataSource": "vShowPrintedeWires",
+					"text": "Show eWires that were on a previous Payment Order",
+					"class": "Fields_Small",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 404,
+					"left": 572,
+					"width": 53,
+					"height": 26,
+					"sizingY": "move",
+					"dataSource": "[Accounts:9]Currency:6",
+					"stroke": "#888888",
+					"class": "Label_Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

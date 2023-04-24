@@ -1,0 +1,298 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "ListToolbar_Buttons",
+	"inheritedFormTable": 7,
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 88,
+	"markerBody": 115,
+	"markerBreak": 153,
+	"markerFooter": 153,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Splitter1": {
+					"type": "splitter",
+					"top": 68,
+					"left": 93,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button4": {
+					"type": "button",
+					"top": 68,
+					"left": 2,
+					"width": 90,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"stroke": "#600060",
+					"focusable": false,
+					"text": "Mailbox ID",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button4.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"3D Button1": {
+					"type": "button",
+					"top": 68,
+					"left": 95,
+					"width": 286,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"textAlign": "center",
+					"stroke": "#600060",
+					"focusable": false,
+					"text": "Customer Name",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button1.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"oCustID": {
+					"type": "input",
+					"top": 93,
+					"left": 7,
+					"width": 81,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Mailboxes:56]MailboxID:1",
+					"stroke": "#444444",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"oCustID1": {
+					"type": "input",
+					"top": 93,
+					"left": 98,
+					"width": 261,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Customers:3]FullName:40",
+					"stroke": "#444444",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Splitter2": {
+					"type": "splitter",
+					"top": 68,
+					"left": 383,
+					"width": 1,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button2": {
+					"type": "button",
+					"top": 68,
+					"left": 386,
+					"width": 146,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"textAlign": "center",
+					"stroke": "#600060",
+					"focusable": false,
+					"text": "Expiration",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/3D Button2.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"oCustID2": {
+					"type": "input",
+					"top": 93,
+					"left": 387,
+					"width": 141,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Mailboxes:56]ExpirationDate:4",
+					"dataSourceTypeHint": "date",
+					"stroke": "#444444",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Splitter3": {
+					"type": "splitter",
+					"top": 68,
+					"left": 534,
+					"width": 41,
+					"height": 47,
+					"dataSource": "Splitter1",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"3D Button3": {
+					"type": "button",
+					"top": 68,
+					"left": 537,
+					"width": 186,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSource": "bSortSubject",
+					"class": "Label",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Comments",
+					"textPlacement": "right",
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"oCustID3": {
+					"type": "input",
+					"top": 93,
+					"left": 538,
+					"width": 181,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Mailboxes:56]Comments:5",
+					"stroke": "#444444",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"3D Button1"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

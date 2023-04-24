@@ -1,0 +1,1 @@
+vFromDate:=Current date:C33

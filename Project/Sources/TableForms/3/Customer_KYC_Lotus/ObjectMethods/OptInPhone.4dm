@@ -1,0 +1,1 @@
+handleTristateCheckBox(Self:C308; ->[Customers:3]optInPhone:151; "Phone Marketing?"; "Opted in Phone marketing"; "Opted out Phone Marketing"; Black:K11:16; Blue:K11:7; Red:K11:4)

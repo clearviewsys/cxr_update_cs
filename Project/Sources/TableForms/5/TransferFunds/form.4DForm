@@ -1,0 +1,812 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onOutsideCall",
+		"onDataChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text7": {
+					"type": "text",
+					"top": 150,
+					"left": 15,
+					"width": 340,
+					"height": 22,
+					"fill": "#F7D286",
+					"class": "Large",
+					"textAlign": "center",
+					"text": "Transfer from / Withdraw from"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 150,
+					"left": 421,
+					"width": 340,
+					"height": 22,
+					"fill": "#62BCCC",
+					"stroke": "#FFFFFF",
+					"class": "Large",
+					"textAlign": "center",
+					"text": "Transfer to / Deposit into"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 38,
+					"left": 232,
+					"width": 225,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Large",
+					"textAlign": "center",
+					"text": "Transfer Amount"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 361,
+					"left": 15,
+					"width": 175,
+					"height": 19,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"text": "Notes & Remarks"
+				},
+				"FromAccount2": {
+					"type": "input",
+					"top": 234,
+					"left": 171,
+					"width": 180,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "vFromBalance",
+					"stroke": "#444444",
+					"class": "Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"method": "ObjectMethods/FromAccount2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"FromAccount3": {
+					"type": "input",
+					"top": 235,
+					"left": 576,
+					"width": 180,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "vToBalance",
+					"stroke": "#444444",
+					"class": "Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"method": "ObjectMethods/FromAccount3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"top": 234,
+					"left": 17,
+					"width": 110,
+					"height": 19,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Balance before"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 234,
+					"left": 424,
+					"width": 110,
+					"height": 19,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Balance before"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 257,
+					"left": 17,
+					"width": 110,
+					"height": 19,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Balance after"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 257,
+					"left": 424,
+					"width": 110,
+					"height": 19,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Balance after"
+				},
+				"FromAccount4": {
+					"type": "input",
+					"top": 257,
+					"left": 171,
+					"width": 180,
+					"height": 22,
+					"sizingY": "move",
+					"dataSource": "vFromBalanceAfter",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"FromAccount5": {
+					"type": "input",
+					"top": 258,
+					"left": 576,
+					"width": 180,
+					"height": 22,
+					"sizingY": "move",
+					"dataSource": "vToBalanceAfter",
+					"stroke": "#000000",
+					"class": "Large",
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Toaccount1": {
+					"type": "input",
+					"top": 65,
+					"left": 232,
+					"width": 222,
+					"height": 25,
+					"dataSource": "vAmount",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "Titles",
+					"textAlign": "center",
+					"contextMenu": "none",
+					"placeholder": "Amount",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency (blank for 0)"
+					},
+					"entryFilter": "&\"0-9;.;-\"",
+					"min": 0,
+					"method": "ObjectMethods/Toaccount1.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"vCurrency": {
+					"type": "input",
+					"top": 65,
+					"left": 460,
+					"width": 54,
+					"height": 25,
+					"dataSource": "vCurrency",
+					"stroke": "#000000",
+					"class": "Titles",
+					"textAlign": "center",
+					"contextMenu": "none",
+					"entryFilter": "~\"A-Z\"",
+					"method": "ObjectMethods/vCurrency.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"fromAccount1": {
+					"type": "input",
+					"top": 174,
+					"left": 17,
+					"width": 336,
+					"height": 20,
+					"dataSource": "vFromAccount",
+					"class": "Large",
+					"fill": "#FFFDDD",
+					"contextMenu": "none",
+					"method": "ObjectMethods/fromAccount1.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"b_swap": {
+					"type": "button",
+					"top": 174,
+					"left": 356,
+					"width": 62,
+					"height": 22,
+					"text": "🌀",
+					"focusable": false,
+					"method": "ObjectMethods/b_swap.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"toAccount": {
+					"type": "input",
+					"top": 175,
+					"left": 423,
+					"width": 338,
+					"height": 20,
+					"dataSource": "vToAccount",
+					"class": "Large",
+					"fill": "#DEF7FE",
+					"contextMenu": "none",
+					"method": "ObjectMethods/toAccount.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"fromAccount": {
+					"type": "input",
+					"top": 203,
+					"left": 123,
+					"width": 197,
+					"height": 20,
+					"dataSource": "vFromSubAccountID",
+					"class": "Large",
+					"contextMenu": "none",
+					"method": "ObjectMethods/fromAccount.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"b_pickSubAccount": {
+					"type": "button",
+					"top": 203,
+					"left": 322,
+					"width": 31,
+					"height": 20,
+					"text": "...",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_pickSubAccount.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"toAccount2": {
+					"type": "input",
+					"top": 203,
+					"left": 525,
+					"width": 202,
+					"height": 20,
+					"dataSource": "vToSubAccountID",
+					"class": "Large",
+					"contextMenu": "none",
+					"method": "ObjectMethods/toAccount2.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"b_pickSubAccount1": {
+					"type": "button",
+					"top": 203,
+					"left": 729,
+					"width": 31,
+					"height": 20,
+					"text": "...",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_pickSubAccount1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"vReferenceID": {
+					"type": "input",
+					"top": 309,
+					"left": 324,
+					"width": 190,
+					"height": 20,
+					"dataSource": "vReferenceID",
+					"class": "Large",
+					"fill": "#EDFFE8",
+					"contextMenu": "none",
+					"method": "ObjectMethods/vReferenceID.4dm",
+					"events": [
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Toaccount5": {
+					"type": "input",
+					"top": 386,
+					"left": 15,
+					"width": 735,
+					"height": 60,
+					"sizingY": "move",
+					"dataSource": "vComments",
+					"stroke": "#000000",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Toaccount5.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 459,
+					"left": 567,
+					"width": 184,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": "Save",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick",
+						"onLosingFocus",
+						"onGettingFocus"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 459,
+					"left": 397,
+					"width": 164,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Large",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_PickTemplate": {
+					"type": "button",
+					"top": 459,
+					"left": 15,
+					"width": 232,
+					"height": 30,
+					"text": "Pick from Template",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_PickTemplate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 1,
+					"left": 1,
+					"width": 765,
+					"height": 24,
+					"fill": "#819CAD",
+					"stroke": "#FFFFFF",
+					"class": "Titles",
+					"textAlign": "center",
+					"text": "Transfer between Accounts"
+				},
+				"vInvoiceNumber": {
+					"type": "input",
+					"top": 2,
+					"left": 19,
+					"width": 153,
+					"height": 20,
+					"dataSource": "vInvoiceNumber",
+					"stroke": "#C5FFC0",
+					"class": "Large",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"customFlag1": {
+					"type": "input",
+					"top": 64,
+					"left": 580,
+					"width": 45,
+					"height": 25,
+					"dataSource": "customFlag1",
+					"dataSourceTypeHint": "picture",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"b_customCurrencyFlag": {
+					"type": "button",
+					"top": 64,
+					"left": 581,
+					"width": 45,
+					"height": 26,
+					"display": false,
+					"method": "ObjectMethods/b_customCurrencyFlag.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"baseFlag": {
+					"type": "input",
+					"top": 64,
+					"left": 532,
+					"width": 45,
+					"height": 25,
+					"dataSource": "baseFlag",
+					"dataSourceTypeHint": "picture",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"b_baseFlag": {
+					"type": "button",
+					"top": 64,
+					"left": 532,
+					"width": 45,
+					"height": 26,
+					"display": false,
+					"method": "ObjectMethods/b_baseFlag.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"vFromDate": {
+					"type": "input",
+					"top": 124,
+					"left": 16,
+					"width": 274,
+					"height": 20,
+					"dataSource": "vFromDate",
+					"dataSourceTypeHint": "date",
+					"class": "Large",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"dateFormat": "systemMedium",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/vFromDate.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"vToDate": {
+					"type": "input",
+					"top": 124,
+					"left": 422,
+					"width": 276,
+					"height": 20,
+					"dataSource": "vToDate",
+					"dataSourceTypeHint": "date",
+					"class": "Large",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"dateFormat": "systemMedium",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/vToDate.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 99,
+					"left": 15,
+					"width": 269,
+					"height": 19,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"text": "Transfer Date / Withdrawal"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 99,
+					"left": 421,
+					"width": 271,
+					"height": 19,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"text": "Deposit Date"
+				},
+				"bIncreaseDate": {
+					"type": "pictureButton",
+					"top": 123,
+					"left": 310,
+					"width": 16,
+					"height": 16,
+					"dataSource": "vIncreaseDate",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyPlus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bIncreaseDate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bDecrDate": {
+					"type": "pictureButton",
+					"top": 123,
+					"left": 293,
+					"width": 16,
+					"height": 16,
+					"dataSource": "vDecrDate",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyMinus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bDecrDate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_calendar": {
+					"type": "pictureButton",
+					"top": 122,
+					"left": 329,
+					"width": 24,
+					"height": 24,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/calendar.png",
+					"loopBackToFirstFrame": true,
+					"method": "ObjectMethods/b_calendar.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bIncreaseDate1": {
+					"type": "pictureButton",
+					"top": 126,
+					"left": 718,
+					"width": 16,
+					"height": 16,
+					"dataSource": "vIncreaseDate",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyPlus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bIncreaseDate1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bDecrDate1": {
+					"type": "pictureButton",
+					"top": 126,
+					"left": 701,
+					"width": 16,
+					"height": 16,
+					"dataSource": "vDecrDate",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/tinyMinus.png",
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/bDecrDate1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_calendar2": {
+					"type": "pictureButton",
+					"top": 123,
+					"left": 736,
+					"width": 24,
+					"height": 24,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/calendar.png",
+					"loopBackToFirstFrame": true,
+					"method": "ObjectMethods/b_calendar2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text8": {
+					"type": "text",
+					"top": 203,
+					"left": 19,
+					"width": 117,
+					"height": 19,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"text": "Sub-Account"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 203,
+					"left": 423,
+					"width": 117,
+					"height": 19,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"text": "Sub-Account"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 309,
+					"left": 205,
+					"width": 110,
+					"height": 20,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Large",
+					"text": "Reference No"
+				},
+				"Picture8": {
+					"type": "picture",
+					"top": 128,
+					"left": 374,
+					"width": 32,
+					"height": 32,
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture8.png"
+				},
+				"focusRect": {
+					"type": "rectangle",
+					"top": 4,
+					"left": 4,
+					"width": 10,
+					"height": 7,
+					"fill": "transparent",
+					"stroke": "#1E90FF",
+					"strokeWidth": 4
+				}
+			},
+			"entryOrder": [
+				"Toaccount1",
+				"vCurrency",
+				"fromAccount1",
+				"b_swap",
+				"toAccount",
+				"fromAccount",
+				"b_pickSubAccount",
+				"toAccount2",
+				"b_pickSubAccount1",
+				"vReferenceID",
+				"Toaccount5",
+				"bValidate",
+				"bCancel",
+				"b_PickTemplate"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"customFlag1",
+					"baseFlag",
+					"bIncreaseDate",
+					"bDecrDate"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

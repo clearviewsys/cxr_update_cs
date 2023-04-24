@@ -1,0 +1,2 @@
+//%attributes = {}
+allRecordsCC_Log

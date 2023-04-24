@@ -1,0 +1,1 @@
+getKeyValue("email.configuration.booking.declaration")

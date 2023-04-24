@@ -1,0 +1,95 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"top": 34,
+					"left": 20,
+					"width": 476,
+					"height": 24,
+					"class": "Titles",
+					"textAlign": "center",
+					"text": "Licensing"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 80,
+					"left": 20,
+					"width": 487,
+					"height": 105,
+					"text": "An email has been sent to the address provided with a link to activate your account. You  must activate your account before being able to create a license. Please double check your inbox for the email with the activation link.\r\rIf you cannot find the email or are having anyother difficulties, please contact Clear View Systems Support"
+				},
+				"b_licensingRetry": {
+					"type": "button",
+					"top": 191,
+					"left": 352,
+					"width": 144,
+					"height": 42,
+					"action": "accept",
+					"text": "Continue",
+					"focusable": false,
+					"method": "ObjectMethods/b_licensingRetry.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 191,
+					"left": 192,
+					"width": 144,
+					"height": 42,
+					"action": "cancel",
+					"text": "Exit",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"t_unActivated": {
+					"type": "text",
+					"top": 64,
+					"left": 20,
+					"width": 476,
+					"height": 15,
+					"visibility": "hidden",
+					"textAlign": "center",
+					"text": "Your account has not yet been activated"
+				}
+			}
+		}
+	]
+}

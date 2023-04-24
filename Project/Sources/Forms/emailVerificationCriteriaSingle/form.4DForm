@@ -1,0 +1,233 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 95,
+					"left": 25,
+					"width": 458,
+					"height": 42,
+					"fill": "transparent",
+					"strokeWidth": 0.1,
+					"strokeDashArray": "1 1"
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"top": 65,
+					"left": 33,
+					"width": 285,
+					"height": 30,
+					"dataSource": "Form:C1466.valid",
+					"text": "Valid (Always On)",
+					"fontFamily": "Segoe UI",
+					"fontSize": 18,
+					"focusable": false,
+					"method": "ObjectMethods/Check Box.4dm",
+					"events": [
+						"onClick",
+						"onMouseEnter"
+					]
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"top": 100,
+					"left": 32,
+					"width": 105,
+					"height": 30,
+					"dataSource": "Form:C1466.catchAll",
+					"text": "Catch-All",
+					"fontFamily": "Segoe UI",
+					"fontSize": 18,
+					"focusable": false,
+					"method": "ObjectMethods/Check Box2.4dm",
+					"events": [
+						"onClick",
+						"onMouseEnter"
+					]
+				},
+				"Check Box4": {
+					"type": "checkbox",
+					"top": 100,
+					"left": 147,
+					"width": 105,
+					"height": 30,
+					"dataSource": "Form:C1466.abuse",
+					"text": "Abuse ",
+					"fontFamily": "Segoe UI",
+					"fontSize": 18,
+					"focusable": false,
+					"method": "ObjectMethods/Check Box4.4dm",
+					"events": [
+						"onClick",
+						"onMouseEnter"
+					]
+				},
+				"Check Box3": {
+					"type": "checkbox",
+					"top": 100,
+					"left": 378,
+					"width": 105,
+					"height": 30,
+					"dataSource": "Form:C1466.spamtrap",
+					"text": "Spamtrap ",
+					"fontFamily": "Segoe UI",
+					"fontSize": 18,
+					"focusable": false,
+					"method": "ObjectMethods/Check Box3.4dm",
+					"events": [
+						"onClick",
+						"onMouseEnter"
+					]
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"top": 100,
+					"left": 236,
+					"width": 122,
+					"height": 30,
+					"dataSource": "Form:C1466.do_not_mail",
+					"text": "Do Not Mail ",
+					"fontFamily": "Segoe UI",
+					"fontSize": 18,
+					"focusable": false,
+					"method": "ObjectMethods/Check Box1.4dm",
+					"events": [
+						"onClick",
+						"onMouseEnter"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 351,
+					"left": 200,
+					"width": 125,
+					"height": 40,
+					"action": "cancel",
+					"text": "Cancel",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"b_validate": {
+					"type": "button",
+					"top": 351,
+					"left": 352,
+					"width": 125,
+					"height": 40,
+					"action": "accept",
+					"text": "Validate Emails",
+					"focusable": false,
+					"method": "ObjectMethods/b_validate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 155,
+					"left": 229,
+					"width": 247,
+					"height": 20,
+					"dataSource": "Form:C1466.hitsLeftString",
+					"textAlign": "right",
+					"fontFamily": "Segoe UI",
+					"fontSize": 14,
+					"focusable": false,
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field": {
+					"type": "input",
+					"top": 181,
+					"left": 25,
+					"width": 452,
+					"height": 160,
+					"dataSource": "Form:C1466.statusDetails",
+					"fontFamily": "Segoe UI",
+					"fontSize": 14,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 13,
+					"left": 32,
+					"width": 262,
+					"height": 32,
+					"fontFamily": "Segoe UI",
+					"fontSize": 24,
+					"text": "Email Validation Criteria"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 160,
+					"left": 25,
+					"width": 97,
+					"height": 15,
+					"fontFamily": "Segoe UI",
+					"fontSize": 14,
+					"text": "Details:"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 50,
+					"left": 25,
+					"width": 255,
+					"height": 15,
+					"fontFamily": "Segoe UI",
+					"fontSize": 14,
+					"text": "Please Select the validation criteria below:"
+				}
+			}
+		}
+	],
+	"geometryStamp": 1,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

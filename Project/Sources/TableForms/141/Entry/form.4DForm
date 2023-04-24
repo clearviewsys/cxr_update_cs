@@ -1,0 +1,200 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Signature": {
+					"type": "subform",
+					"top": 27,
+					"left": 4,
+					"width": 814,
+					"height": 357,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Signature",
+					"dataSourceTypeHint": "picture",
+					"detailForm": "Signature Pad",
+					"hideFocusRing": true,
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "system",
+					"method": "ObjectMethods/Signature.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"bClear": {
+					"type": "button",
+					"top": 401,
+					"left": 697,
+					"width": 120,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": ":xliff:cvs_clear",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/bClear.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Set Width": {
+					"type": "ruler",
+					"top": 400,
+					"left": 110,
+					"width": 121,
+					"height": 30,
+					"sizingY": "move",
+					"min": 1,
+					"max": 24,
+					"graduationStep": 1,
+					"focusable": false,
+					"method": "ObjectMethods/Set Width.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"b_save": {
+					"type": "button",
+					"top": 433,
+					"left": 697,
+					"width": 120,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"text": ":xliff:cvs_save",
+					"class": "Large",
+					"focusable": false,
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Set Stroke Opacity": {
+					"type": "ruler",
+					"top": 432,
+					"left": 110,
+					"width": 121,
+					"height": 30,
+					"sizingY": "move",
+					"max": 100,
+					"graduationStep": 1,
+					"focusable": false,
+					"method": "ObjectMethods/Set Stroke Opacity.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"b_cancel": {
+					"type": "button",
+					"top": 433,
+					"left": 576,
+					"width": 120,
+					"height": 30,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"text": ":xliff:cvs_cancel",
+					"class": "Large",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 404,
+					"left": 4,
+					"width": 105,
+					"height": 19,
+					"sizingY": "move",
+					"class": "Label_Large",
+					"text": "Stroke Width"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 440,
+					"left": 4,
+					"width": 105,
+					"height": 19,
+					"sizingY": "move",
+					"class": "Label_Large",
+					"text": "Opacity"
+				},
+				"SignatureCopy": {
+					"type": "input",
+					"top": 398,
+					"left": 310,
+					"width": 250,
+					"height": 64,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "Signature",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "solid",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dropping": "none"
+				}
+			},
+			"entryOrder": [
+				"Signature",
+				"bClear",
+				"Set Width",
+				"b_save",
+				"Set Stroke Opacity",
+				"b_cancel"
+			]
+		}
+	]
+}

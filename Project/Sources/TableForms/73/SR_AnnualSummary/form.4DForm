@@ -1,0 +1,998 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDataChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"listboxAnnualSummary": {
+					"type": "listbox",
+					"top": 57,
+					"left": 0,
+					"width": 1073,
+					"height": 567,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "25px",
+					"horizontalLineStroke": "transparent",
+					"alternateFill": "#EEEEEE",
+					"method": "ObjectMethods/listboxAnnualSummary.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"columns": [
+						{
+							"name": "ColumnFlag",
+							"dataSource": "arrFlags",
+							"dataSourceTypeHint": "picture",
+							"width": 45,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"pictureFormat": "proportionalCenter",
+							"alternateFill": "#EEEEEE",
+							"header": {
+								"name": "flag_Header",
+								"text": "Flag"
+							},
+							"footer": {
+								"name": "Footer14",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "ColumnCurrency",
+							"dataSource": "arrCurrencyCodes",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 14,
+							"fontWeight": "bold",
+							"header": {
+								"name": "currency_Header",
+								"text": "CCY"
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "ColumnJan",
+							"dataSource": "arrJanValues",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"header": {
+								"name": "Jan_Header",
+								"text": "JAN"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "ColumnFeb",
+							"dataSource": "arrFebValues",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"header": {
+								"name": "Feb_Header",
+								"text": "FEB"
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "ColumnMar",
+							"dataSource": "arrMarValues",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"header": {
+								"name": "Mar_Header",
+								"text": "MAR"
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "ColumnApr",
+							"dataSource": "arrAprValues",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"header": {
+								"name": "Apr_Header",
+								"text": "APR"
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "ColumnMay",
+							"dataSource": "arrMayValues",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"header": {
+								"name": "May_Header",
+								"text": "MAY"
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "ColumnJun",
+							"dataSource": "arrJunValues",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"header": {
+								"name": "Jun_Header",
+								"text": "JUN"
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "ColumnJul",
+							"dataSource": "arrJulValues",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"header": {
+								"name": "July_Header",
+								"text": "JUL"
+							},
+							"footer": {
+								"name": "Footer9",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "ColumnAug",
+							"dataSource": "arrAugValues",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"header": {
+								"name": "Aug_Header",
+								"text": "AUG"
+							},
+							"footer": {
+								"name": "Footer10",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "ColumnSep",
+							"dataSource": "arrSepValues",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"header": {
+								"name": "Sep_Header",
+								"text": "SEP"
+							},
+							"footer": {
+								"name": "Footer11",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "ColumnOct",
+							"dataSource": "arrOctValues",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"header": {
+								"name": "Oct_Header",
+								"text": "OCT"
+							},
+							"footer": {
+								"name": "Footer12",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "ColumnNov",
+							"dataSource": "arrNovValues",
+							"dataSourceTypeHint": "number",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"header": {
+								"name": "Nov_Header",
+								"text": "NOV"
+							},
+							"footer": {
+								"name": "Footer13",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "ColumnDec",
+							"dataSource": "arrDecValues",
+							"dataSourceTypeHint": "number",
+							"width": 81,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"alternateFill": "#EEEEEE",
+							"header": {
+								"name": "Dec_Header",
+								"text": "DEC"
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				},
+				"yearCombobox": {
+					"type": "dropdown",
+					"top": 28,
+					"left": 91,
+					"width": 80,
+					"height": 20,
+					"dataSource": "yearSelectionValues",
+					"dataSourceTypeHint": "arrayNumber",
+					"class": "Medium",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 28,
+					"left": 7,
+					"width": 80,
+					"height": 15,
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Year"
+				},
+				"showBuyChkbox": {
+					"type": "checkbox",
+					"top": 6,
+					"left": 191,
+					"width": 192,
+					"height": 20,
+					"text": "Display Buys",
+					"class": "Medium",
+					"events": [
+						"onClick"
+					]
+				},
+				"showSellChkbox": {
+					"type": "checkbox",
+					"top": 28,
+					"left": 191,
+					"width": 205,
+					"height": 16,
+					"text": "Display Sells",
+					"class": "Medium",
+					"events": [
+						"onClick"
+					]
+				},
+				"localCurrencyChkbox": {
+					"type": "checkbox",
+					"top": 28,
+					"left": 537,
+					"width": 224,
+					"height": 24,
+					"text": "Show Local Currency Values",
+					"class": "Medium",
+					"events": [
+						"onClick"
+					]
+				},
+				"CountRadButton": {
+					"type": "radio",
+					"top": 6,
+					"left": 329,
+					"width": 203,
+					"height": 25,
+					"text": "Number of Transactions",
+					"class": "Medium",
+					"method": "ObjectMethods/CountRadButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"VolumeRadButton": {
+					"type": "radio",
+					"top": 28,
+					"left": 329,
+					"width": 202,
+					"height": 18,
+					"text": "Volume",
+					"class": "Medium",
+					"method": "ObjectMethods/VolumeRadButton.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 6,
+					"left": 7,
+					"width": 80,
+					"height": 15,
+					"class": "Medium",
+					"textAlign": "right",
+					"text": "Branch"
+				},
+				"branchesCombobox": {
+					"type": "dropdown",
+					"top": 6,
+					"left": 91,
+					"width": 80,
+					"height": 20,
+					"dataSource": "branchSelectionValues",
+					"class": "Medium",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"top": 6,
+					"left": 537,
+					"width": 152,
+					"height": 25,
+					"text": "Refresh",
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"WPTListBox": {
+					"type": "listbox",
+					"top": 57,
+					"left": 0,
+					"width": 1073,
+					"height": 567,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"dataSource": "WPTListBox",
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "25px",
+					"showFooters": true,
+					"footerHeight": "25px",
+					"table": 10,
+					"highlightSet": "$Registers_LBSet",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"alternateFill": "#EEEEEE",
+					"fontFamily": "Tahoma",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"method": "ObjectMethods/WPTListBox.4dm",
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onUnload"
+					],
+					"columns": [
+						{
+							"name": "Column14",
+							"dataSource": "[Registers:10]BranchID:39",
+							"width": 28,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"textAlign": "center",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "BID",
+								"text": "Branch",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer16",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#8FAFBC",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column43",
+							"dataSource": "[Registers:10]InvoiceNumber:10",
+							"width": 63,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#F8FFDF",
+							"alternateFill": "#E8F0D1",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Invoice",
+								"text": "Invoice",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer21",
+								"dataSource": "vFooterText",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#8FAFBC",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column22",
+							"dataSource": "[Registers:10]RegisterDate:2",
+							"dataSourceTypeHint": "date",
+							"width": 66,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "dat_Value_Date",
+								"text": "Value Date",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer18",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "count",
+								"textFormat": " ",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#8FAFBC",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column26",
+							"dataSource": "[Registers:10]AccountID:6",
+							"width": 92,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "AccountID",
+								"text": "Account ID",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "AccountFooter7",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#8FAFBC",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column29",
+							"dataSource": "[Registers:10]SubAccountID:58",
+							"width": 97,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "SubAccountID",
+								"text": "Sub-Account ID",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "AccountFooter8",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|NumberNoZero",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#8FAFBC",
+								"textAlign": "center",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column42",
+							"dataSource": "[Registers:10]CustomerID:5",
+							"width": 69,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"visibility": "hidden",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "CustomerID",
+								"text": "Customer ID",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer20",
+								"dataSource": "vFooterText",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#8FAFBC",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column30",
+							"dataSource": "[Customers:3]FullName:40",
+							"width": 89,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header28",
+								"text": "Customer Name",
+								"dataSource": "Header6",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer19",
+								"dataSource": "vFooterText",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#8FAFBC",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column32",
+							"dataSource": "[Customers:3]isCompany:41",
+							"dataSourceTypeHint": "boolean",
+							"width": 36,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"visibility": "hidden",
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header30",
+								"text": "Co.",
+								"dataSource": "Header6",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer15",
+								"dataSource": "vFooterText",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#8FAFBC",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column34",
+							"dataSource": "[Registers:10]Debit:8",
+							"dataSourceTypeHint": "number",
+							"width": 105,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#EFFFF9",
+							"alternateFill": "#E0EFE9",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_Buy",
+								"text": "Buy",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "SumDebit1",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#FFFFFF",
+								"fill": "#9DA3BF",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column35",
+							"dataSource": "[Registers:10]Credit:7",
+							"dataSourceTypeHint": "number",
+							"width": 105,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#FEEEF7",
+							"alternateFill": "#EEDFE8",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "curr_Sell",
+								"text": "Sell",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "sumCredit1",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#FFFFFF",
+								"fill": "#C1BFA1",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column36",
+							"dataSource": "[Registers:10]Currency:19",
+							"width": 40,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"textAlign": "center",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "CCY",
+								"text": "CCY",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer17",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column45",
+							"dataSource": "[Registers:10]OurRate:25",
+							"dataSourceTypeHint": "number",
+							"width": 86,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "rate_direct",
+								"text": "Direct Rate",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "Footer23",
+								"timeFormat": "hh_mm_ss",
+								"fill": "#DDDDDD",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							}
+						},
+						{
+							"name": "Column41",
+							"dataSource": "[Registers:10]totalFees:30",
+							"dataSourceTypeHint": "number",
+							"width": 65,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"alternateFill": "#EEEEEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_total_fees",
+								"text": "Total Fees",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "SumTotalFees1",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#FFFFFF",
+								"fill": "#DDDDDD",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column37",
+							"dataSource": "[Registers:10]DebitLocal:23",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#EFFCFE",
+							"alternateFill": "#E0ECEE",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_Cost_Of_Purchase",
+								"text": "Cost of Purchase",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "SumDebitLocal1",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#FFFFFF",
+								"fill": "#9DA3BF",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10,
+								"fontWeight": "bold"
+							}
+						},
+						{
+							"name": "Column38",
+							"dataSource": "[Registers:10]CreditLocal:24",
+							"dataSourceTypeHint": "number",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fill": "#FEF1F7",
+							"alternateFill": "#EEDFE7",
+							"fontFamily": "Tahoma",
+							"fontSize": 10,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "cur_Sales_Revenue",
+								"text": "Sales Revenue",
+								"fontFamily": "Tahoma",
+								"fontSize": 10
+							},
+							"footer": {
+								"name": "SumCreditLocal3",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "sum",
+								"numberFormat": "|Currency (blank for 0)",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#FFFFFF",
+								"fill": "#C1BFA3",
+								"verticalAlign": "middle",
+								"fontFamily": "Tahoma",
+								"fontSize": 10,
+								"fontWeight": "bold"
+							}
+						}
+					]
+				},
+				"ReportTitle": {
+					"type": "text",
+					"top": 18,
+					"left": 277,
+					"width": 753,
+					"height": 19,
+					"class": "Large",
+					"text": "Annual Summary"
+				},
+				"backButton": {
+					"type": "button",
+					"top": 14,
+					"left": 23,
+					"width": 222,
+					"height": 30,
+					"action": "firstPage",
+					"text": "Back to Summary Page",
+					"method": "ObjectMethods/backButton.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

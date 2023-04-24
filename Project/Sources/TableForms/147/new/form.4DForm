@@ -1,0 +1,288 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Field": {
+					"type": "input",
+					"top": 85,
+					"left": 238,
+					"width": 229,
+					"height": 20,
+					"dataSource": "Form:C1466.Type",
+					"class": "Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 113,
+					"left": 238,
+					"width": 229,
+					"height": 20,
+					"dataSource": "Form:C1466.Address",
+					"class": "Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 141,
+					"left": 238,
+					"width": 229,
+					"height": 20,
+					"dataSource": "Form:C1466.State",
+					"class": "Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 169,
+					"left": 238,
+					"width": 229,
+					"height": 20,
+					"dataSource": "Form:C1466.City",
+					"class": "Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 197,
+					"left": 238,
+					"width": 40,
+					"height": 20,
+					"dataSource": "Form:C1466.CountryCode",
+					"class": "Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/Field4.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 262,
+					"left": 239,
+					"width": 229,
+					"height": 20,
+					"dataSource": "Form:C1466.ZipCode",
+					"class": "Large",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_save": {
+					"type": "button",
+					"top": 322,
+					"left": 324,
+					"width": 143,
+					"height": 26,
+					"action": "accept",
+					"text": "Save",
+					"class": "Large",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"b_Cancel": {
+					"type": "button",
+					"top": 322,
+					"left": 174,
+					"width": 143,
+					"height": 26,
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Large",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 86,
+					"left": 23,
+					"width": 205,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Address Type"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 113,
+					"left": 23,
+					"width": 205,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Address"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 140,
+					"left": 23,
+					"width": 205,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "State"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 167,
+					"left": 23,
+					"width": 205,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "City"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 194,
+					"left": 23,
+					"width": 205,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Country Code"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 261,
+					"left": 23,
+					"width": 205,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Zip Code"
+				},
+				"Field6": {
+					"type": "input",
+					"top": 56,
+					"left": 238,
+					"width": 229,
+					"height": 20,
+					"dataSource": "Form:C1466.RecordID",
+					"class": "Large",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 56,
+					"left": 23,
+					"width": 205,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Record ID"
+				},
+				"countryName": {
+					"type": "input",
+					"top": 225,
+					"left": 238,
+					"width": 229,
+					"height": 20,
+					"class": "Large",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 225,
+					"left": 23,
+					"width": 205,
+					"height": 19,
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Country Name"
+				},
+				"Field7": {
+					"type": "input",
+					"top": 28,
+					"left": 239,
+					"width": 229,
+					"height": 20,
+					"dataSource": "Table name:C256(Form:C1466.TableNo)",
+					"class": "Large",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	]
+}

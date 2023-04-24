@@ -5,8 +5,7 @@
         "properties" : {
             "type": "object",
             "properties" : {
-                "name" : {"type" : "string", "minLength" : 3},
-                "isEntity" : { "type": "boolean"}
+                "name" : {"type" : "string", "minLength" : 3}
             },
             "patternProperties" : {
                 "^[a-z][a-zA-Z]+$" : {"type" : "string"}
@@ -31,7 +30,7 @@
       "screenList" : {"type" : "string"},
       "screenType" : {"enum" : ["SL", "PEP", ""]}
     },
-    "required" : ["properties", "record"],
+    "required" : ["properties"],
     
     "not" : {"required": ["screenList", "screenType"]},
     "additionalProperties": false

@@ -1,0 +1,725 @@
+﻿{
+	"destination": "detailScreen",
+	"windowTitle": "Rule Based Fee Structure",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text7": {
+					"type": "text",
+					"top": 456,
+					"left": 13,
+					"width": 537,
+					"height": 26,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "Tags",
+					"text": "Note: Lower Limit is inlusive; Upper Limit is exclusive (LL≤amount<UL)\rUse -1 when there is no limit; For example: if upper limit is -1 it means infinity"
+				},
+				"Button3": {
+					"type": "button",
+					"top": 8,
+					"left": 844,
+					"width": 110,
+					"height": 25,
+					"dataSource": "Button3",
+					"shortcutKey": "n",
+					"shortcutAccel": true,
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"text": "New Rule",
+					"icon": "/RESOURCES/Images/library/toolbarNewRecord (24134).png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 8,
+					"left": 718,
+					"width": 110,
+					"height": 25,
+					"dataSource": "Button3",
+					"shortcutKey": "d",
+					"shortcutAccel": true,
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"text": "Duplicate Rule",
+					"icon": "/RESOURCES/Images/library/tinyPlus.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 8,
+					"left": 588,
+					"width": 110,
+					"height": 25,
+					"dataSource": "Button3",
+					"shortcutKey": "[Backspace]",
+					"shortcutAccel": true,
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"text": "Delete Rule",
+					"icon": "/RESOURCES/Images/library/tinyMinus.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"feeRulesListBox": {
+					"type": "listbox",
+					"top": 39,
+					"left": 13,
+					"width": 941,
+					"height": 402,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "feeRulesListBox",
+					"hideFocusRing": true,
+					"rowHeight": "24px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "28px",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "#FFFFFF",
+					"stroke": "#000000",
+					"fill": "#DFEDFE",
+					"alternateFill": "#D7E4F5",
+					"fontFamily": "Calibri",
+					"fontSize": 12,
+					"method": "ObjectMethods/feeRulesListBox.4dm",
+					"events": [
+						"onRowMove"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "arrRuleNo",
+							"width": 29,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#DFEDFE",
+							"alternateFill": "#D7E4F5",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "No",
+								"dataSource": "Header1",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DFEDFE",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "arrRuleName",
+							"dataSource": "arrRuleName",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#DFEDFE",
+							"alternateFill": "#D7E4F5",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header12",
+								"text": "Rule Name",
+								"dataSource": "Header10",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DFEDFE",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column10",
+							"dataSource": "arrCustomerID",
+							"width": 58,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#DFEDFE",
+							"alternateFill": "#D7E4F5",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header10",
+								"text": "Cus. Group",
+								"dataSource": "Header10",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DFEDFE",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "arrRecPaid",
+							"width": 74,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#DFEDFE",
+							"alternateFill": "#D7E4F5",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onBeforeKeystroke",
+								"onDataChange"
+							],
+							"method": "ObjectMethods/Column2.4dm",
+							"header": {
+								"name": "Header2",
+								"text": "Rec/Paid",
+								"dataSource": "Header2",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DFEDFE",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "arrCurrency",
+							"width": 43,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"entryFilter": "~A",
+							"stroke": "#000000",
+							"fill": "#DFEDFE",
+							"alternateFill": "#D7E4F5",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onDataChange"
+							],
+							"method": "ObjectMethods/Column3.4dm",
+							"header": {
+								"name": "Header3",
+								"text": "Curr",
+								"dataSource": "Header3",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DFEDFE",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "arrMethod",
+							"width": 61,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#DFEDFE",
+							"alternateFill": "#D7E4F5",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onBeforeKeystroke",
+								"onDataChange"
+							],
+							"method": "ObjectMethods/Column4.4dm",
+							"header": {
+								"name": "Header4",
+								"text": "Method",
+								"dataSource": "Header4",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DFEDFE",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "arrSubMethod",
+							"width": 79,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#DFEDFE",
+							"alternateFill": "#D7E4F5",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header13",
+								"text": "Account Name",
+								"dataSource": "Header5",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer14",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DFEDFE",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "arrLowerLimit",
+							"dataSource": "arrLowerLimit",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#DFEDFE",
+							"alternateFill": "#D7E4F5",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header6",
+								"text": "GTOE  ≥",
+								"dataSource": "Header6",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DFEDFE",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "arrUpperLimit",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#DFEDFE",
+							"alternateFill": "#D7E4F5",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header7",
+								"text": "Less than <",
+								"dataSource": "Header7",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer9",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DFEDFE",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column13",
+							"dataSource": "arrifRangeInLC",
+							"dataSourceTypeHint": "boolean",
+							"width": 42,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"stroke": "#000000",
+							"fill": "#DFEDFE",
+							"alternateFill": "#D7E4F5",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"fontWeight": "bold",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "bln_Range in LC",
+								"text": " in LC",
+								"dataSource": "Header13",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer10",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DFEDFE",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column9",
+							"dataSource": "arrPercentFee",
+							"dataSourceTypeHint": "number",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Percent",
+							"stroke": "#000000",
+							"fill": "#DFF9FE",
+							"alternateFill": "#D7F0F5",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"fontWeight": "bold",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header9",
+								"text": "% Fee",
+								"dataSource": "Header9",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer11",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DFEDFE",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column8",
+							"dataSource": "arrFlatFee",
+							"dataSourceTypeHint": "number",
+							"width": 51,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "|Currency (blank for 0)",
+							"stroke": "#000000",
+							"fill": "#DFF9FE",
+							"alternateFill": "#D7F0F5",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"fontWeight": "bold",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header8",
+								"text": "Flat Fee",
+								"dataSource": "Header8",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer12",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DFEDFE",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "arrCURRAlias",
+							"width": 58,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#DFF9FE",
+							"alternateFill": "#D7F0F5",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"fontWeight": "bold",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header5",
+								"text": "CUR Alias",
+								"dataSource": "Header5",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DFEDFE",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Column11",
+							"dataSource": "arrStopEvaluating",
+							"dataSourceTypeHint": "boolean",
+							"width": 41,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"stroke": "#000000",
+							"fill": "#DFEDFE",
+							"alternateFill": "#D7E4F5",
+							"fontFamily": "Calibri",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header11",
+								"text": "Stop",
+								"dataSource": "Header11",
+								"stroke": "#000000",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Footer13",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#DFEDFE",
+								"fontFamily": "Calibri",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 456,
+					"left": 848,
+					"width": 106,
+					"height": 26,
+					"sizingY": "move",
+					"dataSource": "Button1",
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"text": "Apply",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 456,
+					"left": 732,
+					"width": 106,
+					"height": 26,
+					"sizingY": "move",
+					"dataSource": "Button1",
+					"shortcutKey": "w",
+					"shortcutAccel": true,
+					"text": "Close",
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button8": {
+					"type": "button",
+					"top": 8,
+					"left": 12,
+					"width": 179,
+					"height": 23,
+					"dataSource": "Button1",
+					"shortcutKey": "e",
+					"shortcutAccel": true,
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"text": "Edit Selected Row",
+					"icon": "/RESOURCES/Images/library/toolbarChange.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"warningText": {
+					"type": "text",
+					"top": 488,
+					"left": 11,
+					"width": 675,
+					"height": 15,
+					"sizingY": "move",
+					"stroke": "#EE0000",
+					"class": "Label",
+					"text": "Remember to activate the Rule-based Fee Structure from the Server Preferences (currently off)"
+				},
+				"Highlight Button2": {
+					"type": "button",
+					"top": 456,
+					"left": 636,
+					"width": 44,
+					"height": 40,
+					"sizingY": "move",
+					"dataSource": "Highlight Button1",
+					"shortcutKey": "s",
+					"shortcutAccel": true,
+					"class": "toolbar",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Export",
+					"icon": "/RESOURCES/Images/library/toolbarLoad.png",
+					"iconFrames": 4,
+					"style": "toolbar",
+					"method": "ObjectMethods/Highlight Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

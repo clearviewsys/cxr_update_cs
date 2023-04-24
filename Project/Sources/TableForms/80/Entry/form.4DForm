@@ -1,0 +1,741 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"b_save": {
+					"type": "button",
+					"top": 472,
+					"left": 590,
+					"width": 125,
+					"height": 30,
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"text": ":xliff:cvs_save",
+					"class": "Large",
+					"method": "ObjectMethods/b_save.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"l_cancel": {
+					"type": "button",
+					"top": 472,
+					"left": 460,
+					"width": 125,
+					"height": 30,
+					"text": ":xliff:cvs_cancel",
+					"class": "Large",
+					"method": "ObjectMethods/l_cancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"SYNC_Exception": {
+					"type": "checkbox",
+					"top": 33,
+					"left": 560,
+					"width": 152,
+					"height": 20,
+					"sizingY": "fixed",
+					"dataSource": "[CalendarEvents:80]_Sync_Exception:34",
+					"text": "Do NOT Sync",
+					"stroke": "#000000",
+					"class": "Large",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"focusable": false
+				},
+				"isScheduledEvent": {
+					"type": "checkbox",
+					"top": 51,
+					"left": 210,
+					"width": 196,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]isScheduledEvent:31",
+					"text": "Scheduled Event",
+					"stroke": "#000000",
+					"class": "Large",
+					"method": "ObjectMethods/isScheduledEvent.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"CalendarName": {
+					"type": "input",
+					"top": 108,
+					"left": 211,
+					"width": 311,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]CalendarName:9",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"targetUser": {
+					"type": "input",
+					"top": 138,
+					"left": 211,
+					"width": 312,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]TargetUser:10",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/targetUser.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_pickUser": {
+					"type": "button",
+					"top": 136,
+					"left": 528,
+					"width": 30,
+					"height": 25,
+					"text": "...",
+					"method": "ObjectMethods/b_pickUser.4dm",
+					"events": [
+						"onClick"
+					],
+					"style": "roundedBevel"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 108,
+					"left": 20,
+					"width": 180,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_calendar"
+				},
+				"l_user": {
+					"type": "text",
+					"top": 137,
+					"left": 20,
+					"width": 180,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_user"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 167,
+					"left": 20,
+					"width": 180,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": ":xliff:cvs_notes"
+				},
+				"Notes": {
+					"type": "input",
+					"top": 168,
+					"left": 211,
+					"width": 494,
+					"height": 38,
+					"dataSource": "[CalendarEvents:80]Notes:8",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isAllDayEvent1": {
+					"type": "checkbox",
+					"top": 10,
+					"left": 560,
+					"width": 152,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]isFlagged:15",
+					"text": "Flagged",
+					"stroke": "#000000",
+					"class": "Large",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"focusable": false
+				},
+				"Text21": {
+					"type": "text",
+					"top": 78,
+					"left": 20,
+					"width": 180,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Event Heading"
+				},
+				"eventName": {
+					"type": "input",
+					"top": 79,
+					"left": 211,
+					"width": 378,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]EventHeading:2",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text15": {
+					"type": "text",
+					"top": 214,
+					"left": 20,
+					"width": 180,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Target Branch"
+				},
+				"CalendarName8": {
+					"type": "input",
+					"top": 214,
+					"left": 210,
+					"width": 150,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]Target_BID:19",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/CalendarName8.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"b_pickBranch": {
+					"type": "button",
+					"top": 212,
+					"left": 365,
+					"width": 30,
+					"height": 25,
+					"text": "...",
+					"method": "ObjectMethods/b_pickBranch.4dm",
+					"events": [
+						"onClick"
+					],
+					"style": "roundedBevel"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 217,
+					"left": 404,
+					"width": 250,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "Label_Small",
+					"text": "Leave blank for all users and/or all branches"
+				},
+				"CalendarInfoText": {
+					"type": "input",
+					"top": 378,
+					"left": 20,
+					"width": 688,
+					"height": 44,
+					"class": "Fields_Small",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": []
+				},
+				"isCompleted1": {
+					"type": "checkbox",
+					"top": 436,
+					"left": 429,
+					"width": 286,
+					"height": 28,
+					"dataSource": "[CalendarEvents:80]isCompleted:17",
+					"text": "This event has been completed",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"focusable": false
+				}
+			},
+			"entryOrder": [
+				"isAllDayEvent1",
+				"SYNC_Exception",
+				"isScheduledEvent",
+				"eventName",
+				"CalendarName",
+				"targetUser",
+				"b_pickUser",
+				"Notes",
+				"CalendarName8",
+				"b_pickBranch",
+				"b_save",
+				"l_cancel",
+				"CalendarInfoText",
+				"isCompleted1"
+			]
+		},
+		{
+			"objects": {
+				"Date": {
+					"type": "input",
+					"top": 243,
+					"left": 210,
+					"width": 352,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]Date:4",
+					"dataSourceTypeHint": "date",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dateFormat": "systemLong",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Date.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"isAllDayEvent": {
+					"type": "checkbox",
+					"top": 248,
+					"left": 567,
+					"width": 152,
+					"height": 18,
+					"dataSource": "[CalendarEvents:80]isAllDayEvent:3",
+					"text": "All Day Event",
+					"stroke": "#000000",
+					"class": "Large",
+					"method": "ObjectMethods/isAllDayEvent.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"FromTime": {
+					"type": "input",
+					"top": 273,
+					"left": 210,
+					"width": 82,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]FromTime:5",
+					"dataSourceTypeHint": "time",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"toTime": {
+					"type": "input",
+					"top": 273,
+					"left": 336,
+					"width": 95,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]toTime:6",
+					"dataSourceTypeHint": "time",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isTask": {
+					"type": "checkbox",
+					"top": 306,
+					"left": 210,
+					"width": 230,
+					"height": 21,
+					"dataSource": "[CalendarEvents:80]isTask:7",
+					"text": "Task",
+					"stroke": "#000000",
+					"class": "Large",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text18": {
+					"type": "text",
+					"top": 246,
+					"left": 20,
+					"width": 180,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Date"
+				},
+				"Text24": {
+					"type": "text",
+					"top": 273,
+					"left": 20,
+					"width": 180,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "From Time"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 273,
+					"left": 299,
+					"width": 29,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "center",
+					"text": "to"
+				}
+			},
+			"entryOrder": [
+				"Date",
+				"isAllDayEvent",
+				"FromTime",
+				"toTime",
+				"isTask"
+			]
+		},
+		{
+			"objects": {
+				"Text5": {
+					"type": "text",
+					"top": 245,
+					"left": 12,
+					"width": 188,
+					"height": 19,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Start Date"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 245,
+					"left": 520,
+					"width": 120,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Start Time"
+				},
+				"Date1": {
+					"type": "input",
+					"top": 245,
+					"left": 209,
+					"width": 321,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]Date:4",
+					"dataSourceTypeHint": "date",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dateFormat": "systemLong",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/DateInput MMDDYYYY"
+					},
+					"method": "ObjectMethods/Date1.4dm",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					]
+				},
+				"FromTime1": {
+					"type": "input",
+					"top": 245,
+					"left": 651,
+					"width": 64,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]FromTime:5",
+					"dataSourceTypeHint": "time",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"entryFilter": "!0&9##:##",
+					"method": "ObjectMethods/FromTime1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Method": {
+					"type": "input",
+					"top": 327,
+					"left": 211,
+					"width": 494,
+					"height": 35,
+					"dataSource": "[CalendarEvents:80]executeMethod:23",
+					"class": "Medium",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "automatic",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"isRecurring": {
+					"type": "checkbox",
+					"top": 277,
+					"left": 205,
+					"width": 150,
+					"height": 18,
+					"dataSource": "[CalendarEvents:80]isRecurring:24",
+					"text": "Is Recurring?",
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"method": "ObjectMethods/isRecurring.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Repeat_every_txt": {
+					"type": "text",
+					"top": 276,
+					"left": 338,
+					"width": 133,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Repeat every"
+				},
+				"Repeat_daysField": {
+					"type": "input",
+					"top": 276,
+					"left": 480,
+					"width": 50,
+					"height": 20,
+					"dataSource": "[CalendarEvents:80]RepeatsEveryNDay:25",
+					"class": "Large",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none"
+				},
+				"Repeat_days_txt": {
+					"type": "text",
+					"top": 275,
+					"left": 539,
+					"width": 50,
+					"height": 20,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"text": "days"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 319,
+					"left": 67,
+					"width": 133,
+					"height": 19,
+					"stroke": "#555555",
+					"class": "Label_Large",
+					"textAlign": "right",
+					"text": "Method"
+				},
+				"Button": {
+					"type": "button",
+					"top": 342,
+					"left": 100,
+					"width": 100,
+					"height": 21,
+					"dataSource": "Button",
+					"text": "Check Method",
+					"class": "Small",
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 367,
+					"left": 210,
+					"width": 448,
+					"height": 12,
+					"class": "Fields_Small",
+					"text": "format: methodName/optionalParameter/optionalParameter2"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 304,
+					"left": 352,
+					"width": 363,
+					"height": 12,
+					"class": "Fields_Small",
+					"textAlign": "right",
+					"text": "To repeat multiple times a day use decimals. ie. .01 = 15 minutes"
+				}
+			},
+			"entryOrder": [
+				"Date1",
+				"FromTime1",
+				"isRecurring",
+				"Repeat_daysField",
+				"Method",
+				"Button"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 569,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

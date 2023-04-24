@@ -1,0 +1,520 @@
+﻿{
+	"destination": "detailScreen",
+	"inheritedForm": "EntryToolbar",
+	"inheritedFormTable": 7,
+	"rightMargin": 15,
+	"bottomMargin": 15,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 607,
+	"markerBreak": 607,
+	"markerFooter": 607,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Text3": {
+					"type": "text",
+					"top": 35,
+					"left": 81,
+					"width": 67,
+					"height": 15,
+					"class": "Label",
+					"text": "Letter ID"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 57,
+					"left": 81,
+					"width": 67,
+					"height": 15,
+					"class": "Label",
+					"text": "Date"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 79,
+					"left": 81,
+					"width": 67,
+					"height": 15,
+					"class": "Label",
+					"text": "Author"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 105,
+					"left": 81,
+					"width": 67,
+					"height": 15,
+					"class": "Label",
+					"text": "Recepient"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 130,
+					"left": 81,
+					"width": 67,
+					"height": 15,
+					"class": "Label",
+					"text": "Subject"
+				},
+				"LetterID1": {
+					"type": "input",
+					"top": 35,
+					"left": 154,
+					"width": 270,
+					"height": 15,
+					"dataSource": "[Letters:52]LetterID:1",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"LetterDate1": {
+					"type": "input",
+					"top": 57,
+					"left": 154,
+					"width": 131,
+					"height": 15,
+					"dataSource": "[Letters:52]LetterDate:2",
+					"dataSourceTypeHint": "date",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"author1": {
+					"type": "input",
+					"top": 79,
+					"left": 154,
+					"width": 180,
+					"height": 15,
+					"dataSource": "[Letters:52]author:5",
+					"class": "Fields",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Recepients1": {
+					"type": "input",
+					"top": 105,
+					"left": 154,
+					"width": 257,
+					"height": 15,
+					"dataSource": "[Letters:52]Recepients:7",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 97,
+					"left": 478,
+					"width": 138,
+					"height": 23,
+					"dataSource": "Button4",
+					"text": "Pick a Customer",
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Subject1": {
+					"type": "input",
+					"top": 130,
+					"left": 154,
+					"width": 400,
+					"height": 15,
+					"dataSource": "[Letters:52]Subject:3",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Body2": {
+					"type": "input",
+					"top": 172,
+					"left": 22,
+					"width": 594,
+					"height": 30,
+					"sizingX": "grow",
+					"dataSource": "[Letters:52]remarks:8",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bValidate1": {
+					"type": "button",
+					"top": 610,
+					"left": 504,
+					"width": 103,
+					"height": 24,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/AddLine"
+					},
+					"action": "accept",
+					"text": "Save",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"focusable": false,
+					"method": "ObjectMethods/bValidate1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel1": {
+					"type": "button",
+					"top": 610,
+					"left": 400,
+					"width": 103,
+					"height": 24,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/ReceivedPaid"
+					},
+					"text": "Cancel",
+					"class": "Control",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"focusable": false,
+					"method": "ObjectMethods/bCancel1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text8": {
+					"type": "text",
+					"top": 152,
+					"left": 20,
+					"width": 521,
+					"height": 15,
+					"class": "Label",
+					"text": "Remarks for internal record only (won't be printed)"
+				},
+				"Tab Control": {
+					"type": "tab",
+					"top": 214,
+					"left": 19,
+					"width": 595,
+					"height": 380,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSourceTypeHint": "arrayText",
+					"labels": [
+						"Plain Text",
+						"Styled Text"
+					],
+					"class": "Control",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_previousPage": {
+					"type": "button",
+					"top": 212,
+					"left": 21,
+					"width": 16,
+					"height": 14,
+					"shortcutKey": "1",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/b_previousPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_nextPage": {
+					"type": "button",
+					"top": 212,
+					"left": 39,
+					"width": 16,
+					"height": 14,
+					"shortcutKey": "2",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/b_nextPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_picktemplate": {
+					"type": "button",
+					"top": 53,
+					"left": 478,
+					"width": 138,
+					"height": 24,
+					"sizingY": "move",
+					"text": "Pick a Template",
+					"class": "Control",
+					"method": "ObjectMethods/b_picktemplate.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Body3": {
+					"type": "input",
+					"top": 284,
+					"left": 22,
+					"width": 573,
+					"height": 304,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[Letters:52]Body:4",
+					"class": "Fields",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"printFrame": "variable",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"b_insertCustomer": {
+					"type": "button",
+					"top": 250,
+					"left": 223,
+					"width": 177,
+					"height": 24,
+					"text": "Insert Customer",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/b_insertCustomer.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_insertBankAccount": {
+					"type": "button",
+					"top": 250,
+					"left": 413,
+					"width": 167,
+					"height": 24,
+					"text": "Insert Bank Account",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/b_insertBankAccount.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"b_printRecords": {
+					"type": "button",
+					"top": 250,
+					"left": 25,
+					"width": 30,
+					"height": 26,
+					"display": false,
+					"method": "ObjectMethods/b_printRecords.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 254,
+					"left": 32,
+					"width": 17,
+					"height": 17,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/micn Printer.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Plugin Area1": {
+					"type": "plugin",
+					"top": 241,
+					"left": 20,
+					"width": 591,
+					"height": 350,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "BodyRichText",
+					"pluginAreaKind": "_4D Write",
+					"borderStyle": "sunken",
+					"events": [
+						"onClick",
+						"onPluginArea"
+					]
+				},
+				"warn4DWriteLicense": {
+					"type": "text",
+					"top": 12,
+					"left": 447,
+					"width": 169,
+					"height": 17,
+					"stroke": "#EE0000",
+					"class": "Tags_Small",
+					"textAlign": "right",
+					"text": "Requires 4D Write License"
+				},
+				"b_copytext": {
+					"type": "button",
+					"top": 609,
+					"left": 19,
+					"width": 271,
+					"height": 25,
+					"sizingY": "move",
+					"text": "Copy Styled text into plain text area",
+					"class": "Control",
+					"focusable": false,
+					"method": "ObjectMethods/b_copytext.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group1": [
+				"b_printRecords",
+				"Picture1"
+			]
+		},
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {
+				"objects": [
+					"bValidate1",
+					"bCancel1"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}
