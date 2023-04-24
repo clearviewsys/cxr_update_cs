@@ -1,1 +1,0 @@
-[Currencies:6]AddPctToMarketSell:12:=0

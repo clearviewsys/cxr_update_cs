@@ -1,3 +1,0 @@
-createCashBank
-
-//newRecord (->[(Banks)];True)

@@ -1,2 +1,0 @@
-//%attributes = {}
-searchTable(->[Registers:10]; ->[Registers:10]RegisterID:1; ->[Registers:10]SubAccountID:58; ->[Registers:10]ReferenceNo:57; ->[Registers:10]InvoiceNumber:10; ->[Registers:10]CustomerID:5; ->[Registers:10]AccountID:6; ->[Registers:10]Currency:19; ->[Customers:3]FullName:40)

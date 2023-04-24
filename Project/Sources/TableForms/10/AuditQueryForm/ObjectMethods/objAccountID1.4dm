@@ -1,1 +1,0 @@
-pickCurrencyISOCode(Self:C308)

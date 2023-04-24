@@ -1,1 +1,0 @@
-setvCustomerID(getSelfCustomerID)

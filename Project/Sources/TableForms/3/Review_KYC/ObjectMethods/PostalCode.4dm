@@ -1,1 +1,0 @@
-applyFocusRect("focusRect2")

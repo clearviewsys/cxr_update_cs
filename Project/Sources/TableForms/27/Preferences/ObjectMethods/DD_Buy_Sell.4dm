@@ -1,1 +1,0 @@
-bindPopUpToIntegerField(Self:C308; ->[ServerPrefs:27]defaultBuyOrSell:87)

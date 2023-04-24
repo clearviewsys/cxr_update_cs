@@ -1,1 +1,0 @@
-displaySelectedRecords(->[Registers:10])

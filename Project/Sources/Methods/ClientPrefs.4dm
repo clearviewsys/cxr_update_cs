@@ -1,3 +1,0 @@
-//%attributes = {}
-// check methods starting with getClient...
-// e.g. getClientBranchID

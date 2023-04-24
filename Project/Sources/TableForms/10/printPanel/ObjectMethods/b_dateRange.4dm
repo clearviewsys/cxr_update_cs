@@ -1,1 +1,0 @@
-requestDateRangeTable(Current form table:C627; ->[Registers:10]RegisterDate:2)

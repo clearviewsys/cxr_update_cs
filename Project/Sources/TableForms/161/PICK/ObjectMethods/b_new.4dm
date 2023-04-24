@@ -1,1 +1,0 @@
-handlePickNewButton(->[CompanyTypes:161]; ->[CompanyTypes:161]Description:3)

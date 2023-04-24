@@ -1,1 +1,0 @@
-IM_preformKYCRelatedTasks("send")

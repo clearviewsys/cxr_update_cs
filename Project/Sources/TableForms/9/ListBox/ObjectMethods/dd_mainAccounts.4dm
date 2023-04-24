@@ -1,1 +1,0 @@
-handleDD_MainAccounts(Self:C308; vFromDate; vToDate; (cbApplyDateRange=1))

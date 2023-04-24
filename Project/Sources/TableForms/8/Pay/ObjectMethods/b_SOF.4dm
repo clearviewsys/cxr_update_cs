@@ -1,1 +1,0 @@
-pickList_SOF(->[Wires:8]AML_SourceOfFunds:66; True:C214)

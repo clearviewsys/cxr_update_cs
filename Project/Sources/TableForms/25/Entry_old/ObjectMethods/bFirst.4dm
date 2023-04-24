@@ -1,1 +1,0 @@
-bFirstRecord(Current form table:C627)

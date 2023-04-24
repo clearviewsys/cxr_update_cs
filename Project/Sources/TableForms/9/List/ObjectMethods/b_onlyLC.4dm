@@ -1,1 +1,0 @@
-QUERY SELECTION BY FORMULA:C207([Accounts:9]; [Accounts:9]Currency:6=<>baseCurrency)

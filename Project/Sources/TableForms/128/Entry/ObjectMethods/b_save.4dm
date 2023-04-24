@@ -1,4 +1,0 @@
-// validateList_POT
-
-handleSaveButton
-

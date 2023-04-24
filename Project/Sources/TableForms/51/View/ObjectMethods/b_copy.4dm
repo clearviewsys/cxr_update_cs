@@ -1,1 +1,0 @@
-SET TEXT TO PASTEBOARD:C523([CallLogs:51]Notes:6)

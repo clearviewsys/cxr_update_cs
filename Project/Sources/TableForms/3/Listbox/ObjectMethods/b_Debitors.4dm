@@ -1,1 +1,0 @@
-selectCustomersWOutstandingBala(c_Receivables)

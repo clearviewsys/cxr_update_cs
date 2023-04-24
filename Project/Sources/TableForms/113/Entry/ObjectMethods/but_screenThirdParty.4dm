@@ -1,1 +1,0 @@
-sl_handleTableFlag(sl_ThirdPartiesFlag)

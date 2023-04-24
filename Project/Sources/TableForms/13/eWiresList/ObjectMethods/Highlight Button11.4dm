@@ -1,2 +1,0 @@
-bQueryRecords
-ewr_filleWiresListBox

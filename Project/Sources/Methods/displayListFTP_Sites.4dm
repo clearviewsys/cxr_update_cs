@@ -1,2 +1,0 @@
-//%attributes = {}
-displayLBoxFTP_Sites

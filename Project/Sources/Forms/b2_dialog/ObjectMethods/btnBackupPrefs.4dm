@@ -1,1 +1,0 @@
-OPEN SETTINGS WINDOW:C903("/Backup/Scheduler")

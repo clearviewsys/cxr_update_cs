@@ -1,1 +1,0 @@
-bindPopUpToIntegerField(Self:C308; ->[MESSAGES:11]Priority:10)

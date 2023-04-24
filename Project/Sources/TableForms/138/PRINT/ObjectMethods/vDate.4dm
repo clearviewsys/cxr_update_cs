@@ -1,1 +1,0 @@
-vDate:=Current date:C33

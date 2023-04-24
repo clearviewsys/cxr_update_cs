@@ -1,1 +1,0 @@
-handlePickOkButtonOCR_Ids

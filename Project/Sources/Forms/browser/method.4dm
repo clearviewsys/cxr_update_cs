@@ -1,2 +1,0 @@
-// [CompanyInfo];"browser"
-handleBrowserFormMethod

@@ -1,1 +1,0 @@
-listbox_requestExport(->holdingsListBox; "Screen Report")

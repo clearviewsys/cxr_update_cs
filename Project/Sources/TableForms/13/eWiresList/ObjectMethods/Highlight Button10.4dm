@@ -1,2 +1,0 @@
-bNewRecord
-ewr_filleWiresListBox

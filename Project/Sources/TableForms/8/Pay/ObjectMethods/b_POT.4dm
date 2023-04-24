@@ -1,1 +1,0 @@
-pickList_POT(->[Wires:8]AML_PurposeOfTransaction:49; True:C214)

@@ -1,3 +1,0 @@
-handleListForm
-//handleAccountsListFormMethod_ol
-//handleAccountsListFormMethod 

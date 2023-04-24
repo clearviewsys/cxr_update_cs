@@ -1,3 +1,0 @@
-//%attributes = {}
-allRecordsAgentAccounts
-orderByAgentAccounts

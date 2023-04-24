@@ -1,1 +1,0 @@
-handleSortButton(->[Registers:10]Currency:19; ->[Registers:10]OurRate:25)

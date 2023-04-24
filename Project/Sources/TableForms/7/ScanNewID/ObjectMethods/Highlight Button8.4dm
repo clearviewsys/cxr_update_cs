@@ -1,1 +1,0 @@
-TRANSFORM PICTURE:C988(docPhoto2; Reset:K61:1)

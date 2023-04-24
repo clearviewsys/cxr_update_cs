@@ -1,4 +1,0 @@
-1 2023-04-24T12:27:04.165 [4D.HDLS] WARN - (Intercepted Dialog: [Cadran_1])[] ()
-2 2023-04-24T12:28:25.482 [4D.HDLS] WARN - (QUIT 4D)[{"type":"projectMethod","name":"runHeadless","line":101,"database":"CXR7"},{"type":"databaseMethod","name":"On Startup","line":15,"database":"CXR7"}] ()
-3 2023-04-24T12:28:25.482 [4D.4DRT] ERROR - [-10716] Object or Collection Expected. (task=-5, taskName=$xx)
-4 2023-04-24T12:28:25.483 [4D.HDLS] ERROR - (Error: #-10716 Object or Collection Expected.)[{"type":"projectMethod","name":"LogUserLoggingOut","line":21,"database":"CXR7"},{"type":"databaseMethod","name":"On Exit","line":21,"database":"CXR7"}] ()

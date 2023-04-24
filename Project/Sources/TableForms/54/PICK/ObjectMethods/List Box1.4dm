@@ -1,1 +1,0 @@
-handlePickListBoxObjectMethod(Self:C308)

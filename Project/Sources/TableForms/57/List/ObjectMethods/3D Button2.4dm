@@ -1,1 +1,0 @@
-handleSortButton(->[DateRanges:57]toDate:3)

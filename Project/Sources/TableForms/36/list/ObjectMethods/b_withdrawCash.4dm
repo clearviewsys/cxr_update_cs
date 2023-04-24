@@ -1,1 +1,0 @@
-newRecord(->[CashTransactions:36]; False:C215; "Withdraw")

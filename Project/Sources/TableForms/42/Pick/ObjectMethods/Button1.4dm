@@ -1,3 +1,0 @@
-//handlepickOKbutton 
-
-handlePickWireTemplateButton

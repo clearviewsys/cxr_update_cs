@@ -1,2 +1,0 @@
-//%attributes = {}
-searchTable(->[LinkedDocs:4]; ->[LinkedDocs:4]LinkedDocID:12; ->[LinkedDocs:4]CustomerID:1; ->[Customers:3]FullName:40; ->[LinkedDocs:4]DocReference:6; ->[LinkedDocs:4]IssueCountry:8; ->[LinkedDocs:4]TypeOfDoc:5)

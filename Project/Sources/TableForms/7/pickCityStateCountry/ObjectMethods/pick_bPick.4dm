@@ -1,2 +1,0 @@
-//pick_handlePickButton
-addRecentCity

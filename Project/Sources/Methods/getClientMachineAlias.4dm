@@ -1,2 +1,0 @@
-//%attributes = {}
-// call getCurrentMachineAlias

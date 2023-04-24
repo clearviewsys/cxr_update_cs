@@ -1,1 +1,0 @@
-[ClientPrefs:26]defaultPrinterName:4:=rdcSetPrinterName(vDefaultPrinterName{vDefaultPrinterName})

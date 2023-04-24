@@ -1,1 +1,0 @@
-vInverseRate:=calcSafeDivide(1; [eWires:13]sourceRate:41)

@@ -1,3 +1,0 @@
-selectItemsInOutInDateRange(vFromDate; vToDate; numToBoolean(cbApplyDateRange))
-
-itm_fillItemsListBox

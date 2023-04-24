@@ -1,2 +1,0 @@
-
-displayCurrentRecord(->[Customers:3])

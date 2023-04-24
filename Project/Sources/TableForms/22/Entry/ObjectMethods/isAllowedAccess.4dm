@@ -1,1 +1,0 @@
-enableButtonForAdminOnly("isAllowedAccess")

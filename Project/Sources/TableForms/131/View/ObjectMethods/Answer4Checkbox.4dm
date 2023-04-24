@@ -1,2 +1,0 @@
-selectCorrectQuizAnswer
-Form:C1466.answer4Checkbox:=True:C214

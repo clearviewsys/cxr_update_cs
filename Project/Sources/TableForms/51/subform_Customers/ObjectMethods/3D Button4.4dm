@@ -1,1 +1,0 @@
-handleSortButton(->[CallLogs:51]CallLogID:1)

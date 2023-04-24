@@ -1,1 +1,0 @@
-handlePickNewButton(->[AML_Alerts:137]; ->[AML_Alerts:137]alertID:2)

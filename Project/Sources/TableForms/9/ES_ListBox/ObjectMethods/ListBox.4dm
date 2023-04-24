@@ -1,1 +1,0 @@
-handleListboxColumnsSettings(Self:C308; ->[Accounts:9]; "ES_ListBox"; "ListBox")

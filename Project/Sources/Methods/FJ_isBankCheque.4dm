@@ -1,2 +1,0 @@
-//%attributes = {}
-// FJ_isBankCheque

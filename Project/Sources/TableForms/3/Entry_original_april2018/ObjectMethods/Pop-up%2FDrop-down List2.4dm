@@ -1,1 +1,0 @@
-bindPopUpToIntegerField(Self:C308; ->[Customers:3]KYC_CreditRating:51)

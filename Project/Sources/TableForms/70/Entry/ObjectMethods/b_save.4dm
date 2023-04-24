@@ -1,3 +1,0 @@
-
-// validateBranches
-handleSaveButton

@@ -1,2 +1,0 @@
-// getBuild
-handleRegistersViewFormMethod

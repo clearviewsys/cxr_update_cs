@@ -1,1 +1,0 @@
-pickCustomerTypes(->[Customers:3]GroupName:90; True:C214)

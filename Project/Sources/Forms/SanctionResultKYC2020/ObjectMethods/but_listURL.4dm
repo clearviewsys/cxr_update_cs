@@ -1,1 +1,0 @@
-util_openURL(Form:C1466.smartScan.list_url)

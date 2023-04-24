@@ -1,1 +1,0 @@
-setFieldAsPassword(Self:C308)

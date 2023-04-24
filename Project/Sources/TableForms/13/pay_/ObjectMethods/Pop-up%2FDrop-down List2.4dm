@@ -1,1 +1,0 @@
-bindPopUpToIntegerField(Self:C308; ->[eWires:13]priority:36)

@@ -1,2 +1,0 @@
-backupNow
-BKP_LaunchApp

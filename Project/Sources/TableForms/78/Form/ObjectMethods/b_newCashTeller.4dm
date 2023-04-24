@@ -1,2 +1,0 @@
-displayTellerProofForm
-TP_refreshListbox(vDate; vTellerName)

@@ -1,9 +1,0 @@
-//%attributes = {}
-ARRAY LONGINT:C221(ewr_arrRowNo; 0)
-ARRAY TEXT:C222(ewr_arreWireID; 0)
-ARRAY TEXT:C222(ewr_arrInvoiceID; 0)
-ARRAY DATE:C224(ewr_arrSendDate; 0)
-ARRAY TEXT:C222(ewr_arrCustomerName; 0)
-ARRAY TEXT:C222(ewr_arrLinkName; 0)
-ARRAY REAL:C219(ewr_arrToAmount; 0)
-ARRAY BOOLEAN:C223(ewr_arrIsSelected; 0)

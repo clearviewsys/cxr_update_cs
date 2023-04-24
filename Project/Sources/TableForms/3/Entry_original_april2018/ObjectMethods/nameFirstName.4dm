@@ -1,4 +1,0 @@
-handleCustomerNameEntryField(Self:C308)
-
-
-

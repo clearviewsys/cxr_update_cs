@@ -1,1 +1,0 @@
-[MACs:18]MACAddress:1:=UTIL_getMacAddress

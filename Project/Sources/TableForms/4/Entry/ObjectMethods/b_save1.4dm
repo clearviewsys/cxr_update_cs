@@ -1,2 +1,0 @@
-handleSaveLinkedDocsButton
-//validateLinkedDocs

@@ -1,3 +1,0 @@
-vExchangeRate:=vExchangeRateAvg
-calcCalculatorVars
-GOTO OBJECT:C206(vFromAmount)

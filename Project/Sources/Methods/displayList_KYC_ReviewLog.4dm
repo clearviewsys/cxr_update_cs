@@ -1,2 +1,0 @@
-//%attributes = {}
-displayLBoxKYC_ReviewLog
