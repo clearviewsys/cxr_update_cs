@@ -1,28 +1,7 @@
 {
 	"_method_": {
-		"New Office365 provider": {
-			"Syntax": "**New Office365 provider**(*inOAuth2Provider* : cs.NetKit.OAuth2Provider; *inParameters* : Object)->provider : Object",
-			"Params": [
-				[
-					"inOAuth2Provider",
-					"cs.NetKit.OAuth2Provider",
-					"->"
-				],
-				[
-					"inParameters",
-					"Object",
-					"->"
-				],
-				[
-					"provider",
-					"Object",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
 		"New OAuth2 provider": {
-			"Syntax": "**New OAuth2 provider**(*inParameters* : Object)->provider : Object",
+			"Syntax": "**New OAuth2 provider**( *inParameters* : Object ) : Object",
 			"Params": [
 				[
 					"inParameters",
@@ -30,20 +9,18 @@
 					"->"
 				],
 				[
-					"provider",
+					"",
 					"Object",
 					"<-"
 				]
 			],
 			"Summary": ""
-		}
-	},
-	"Office365": {
-		"new()": {
-			"Syntax": "**.new**(*inOAuth2Provider* : cs.NetKit.OAuth2Provider; *inParameters* : Object)",
+		},
+		"New Office365 provider": {
+			"Syntax": "**New Office365 provider**( *inProvider* : cs.NetKit.OAuth2Provider; *inParameters* : Object ) : Object",
 			"Params": [
 				[
-					"inOAuth2Provider",
+					"inProvider",
 					"cs.NetKit.OAuth2Provider",
 					"->"
 				],
@@ -51,62 +28,470 @@
 					"inParameters",
 					"Object",
 					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"get mail()": {
-			"Syntax": "**.get mail**() : cs.NetKit._GraphMail",
-			"Params": [
-				[
-					"",
-					"cs.NetKit._GraphMail",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"get user()": {
-			"Syntax": "**.get user**() : cs.NetKit._GraphUser",
-			"Params": [
-				[
-					"",
-					"cs.NetKit._GraphUser",
-					"<-"
-				]
-			],
-			"Summary": ""
-		}
-	},
-	"_BaseClass": {
-		"new()": {
-			"Syntax": "**.new**()",
-			"Params": [],
-			"Summary": ""
-		}
-	},
-	"_UserInformationList": {
-		"new()": {
-			"Syntax": "**.new**(*inOAuth2Provider* : cs.NetKit.OAuth2Provider; *inURL* : Text; *inHeaders* : Object)",
-			"Params": [
-				[
-					"inOAuth2Provider",
-					"cs.NetKit.OAuth2Provider",
-					"->"
 				],
 				[
-					"inURL",
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		}
+	},
+	"cs.NetKit": {
+		"_BaseClass": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
+		"GraphUserList": {
+			"new()": {
+				"Syntax": "**.new**( *inProvider* : cs.NetKit.OAuth2Provider; *inURL* : Text; *inHeaders* : Object )",
+				"Params": [
+					[
+						"inProvider",
+						"cs.NetKit.OAuth2Provider",
+						"->"
+					],
+					[
+						"inURL",
+						"Text",
+						"->"
+					],
+					[
+						"inHeaders",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"Office365Mail": {
+			"new()": {
+				"Syntax": "**.new**( *inProvider* : cs.NetKit.OAuth2Provider; *inParameters* : Object )",
+				"Params": [
+					[
+						"inProvider",
+						"cs.NetKit.OAuth2Provider",
+						"->"
+					],
+					[
+						"inParameters",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"_GraphAPI": {
+			"new()": {
+				"Syntax": "**.new**( *inProvider* : cs.NetKit.OAuth2Provider )",
+				"Params": [
+					[
+						"inProvider",
+						"cs.NetKit.OAuth2Provider",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"_GraphBaseList": {
+			"new()": {
+				"Syntax": "**.new**( *inProvider* : cs.NetKit.OAuth2Provider; *inURL* : Text; *inHeaders* : Object )",
+				"Params": [
+					[
+						"inProvider",
+						"cs.NetKit.OAuth2Provider",
+						"->"
+					],
+					[
+						"inURL",
+						"Text",
+						"->"
+					],
+					[
+						"inHeaders",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"OAuth2Token": {
+			"new()": {
+				"Syntax": "**.new**( *inParams* : Object )",
+				"Params": [
+					[
+						"inParams",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"Office365User": {
+			"new()": {
+				"Syntax": "**.new**( *inProvider* : cs.NetKit.OAuth2Provider )",
+				"Params": [
+					[
+						"inProvider",
+						"cs.NetKit.OAuth2Provider",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"GraphAttachment": {
+			"new()": {
+				"Syntax": "**.new**( *inProvider* : cs.NetKit.OAuth2Provider; *inParams* : Object; *inObject* : Object )",
+				"Params": [
+					[
+						"inProvider",
+						"cs.NetKit.OAuth2Provider",
+						"->"
+					],
+					[
+						"inParams",
+						"Object",
+						"->"
+					],
+					[
+						"inObject",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"GraphMessage": {
+			"new()": {
+				"Syntax": "**.new**( *inProvider* : cs.NetKit.OAuth2Provider; *inParameters* : Object; *inObject* : Object )",
+				"Params": [
+					[
+						"inProvider",
+						"cs.NetKit.OAuth2Provider",
+						"->"
+					],
+					[
+						"inParameters",
+						"Object",
+						"->"
+					],
+					[
+						"inObject",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"GraphMessageList": {
+			"new()": {
+				"Syntax": "**.new**( *inMail* : cs.NetKit.Office365Mail; *inProvider* : cs.NetKit.OAuth2Provider; *inURL* : Text; *inHeaders* : Object )",
+				"Params": [
+					[
+						"inMail",
+						"cs.NetKit.Office365Mail",
+						"->"
+					],
+					[
+						"inProvider",
+						"cs.NetKit.OAuth2Provider",
+						"->"
+					],
+					[
+						"inURL",
+						"Text",
+						"->"
+					],
+					[
+						"inHeaders",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"OAuth2Provider": {
+			"new()": {
+				"Syntax": "**.new**( *inParams* : Object )",
+				"Params": [
+					[
+						"inParams",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"GraphFolderList": {
+			"new()": {
+				"Syntax": "**.new**( *inProvider* : cs.NetKit.OAuth2Provider; *inURL* : Text; *inHeaders* : Object )",
+				"Params": [
+					[
+						"inProvider",
+						"cs.NetKit.OAuth2Provider",
+						"->"
+					],
+					[
+						"inURL",
+						"Text",
+						"->"
+					],
+					[
+						"inHeaders",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"GraphRecipient": {
+			"new()": {
+				"Syntax": "**.new**( *inAddress* : Text; *inName* : Text )",
+				"Params": [
+					[
+						"inAddress",
+						"Text",
+						"->"
+					],
+					[
+						"inName",
+						"Text",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"Office365": {
+			"new()": {
+				"Syntax": "**.new**( *inProvider* : cs.NetKit.OAuth2Provider; *inParameters* : Object )",
+				"Params": [
+					[
+						"inProvider",
+						"cs.NetKit.OAuth2Provider",
+						"->"
+					],
+					[
+						"inParameters",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		}
+	},
+	"_BaseClass": {},
+	"GraphUserList": {
+		"get users()": {
+			"Syntax": "**.get users**() : Collection",
+			"Params": [
+				[
+					"",
+					"Collection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"_inheritedFrom_": "_GraphBaseList"
+	},
+	"Office365Mail": {
+		"delete()": {
+			"Syntax": "**.delete**( *inMailId* : Text ) : Object",
+			"Params": [
+				[
+					"inMailId",
 					"Text",
 					"->"
 				],
 				[
-					"inHeaders",
+					"",
 					"Object",
-					"->"
+					"<-"
 				]
 			],
 			"Summary": ""
 		},
+		"copy()": {
+			"Syntax": "**.copy**( *inMailId* : Text; *inFolderId* : Text ) : Object",
+			"Params": [
+				[
+					"inMailId",
+					"Text",
+					"->"
+				],
+				[
+					"inFolderId",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"getFolderList()": {
+			"Syntax": "**.getFolderList**( *inParameters* : Object ) : Object",
+			"Params": [
+				[
+					"inParameters",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"getMail()": {
+			"Syntax": "**.getMail**( *inMailId* : Text; *inOptions* : Object )->response : Variant",
+			"Params": [
+				[
+					"inMailId",
+					"Text",
+					"->"
+				],
+				[
+					"inOptions",
+					"Object",
+					"->"
+				],
+				[
+					"response",
+					"Variant",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"move()": {
+			"Syntax": "**.move**( *inMailId* : Text; *inFolderId* : Text ) : Object",
+			"Params": [
+				[
+					"inMailId",
+					"Text",
+					"->"
+				],
+				[
+					"inFolderId",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"reply()": {
+			"Syntax": "**.reply**( *inMail* : Object; *inMailId* : Text; *bReplyAll* : Boolean ) : Object",
+			"Params": [
+				[
+					"inMail",
+					"Object",
+					"->"
+				],
+				[
+					"inMailId",
+					"Text",
+					"->"
+				],
+				[
+					"bReplyAll",
+					"Boolean",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"append()": {
+			"Syntax": "**.append**( *inMail* : Variant; *inFolderId* : Text ) : Object",
+			"Params": [
+				[
+					"inMail",
+					"Variant",
+					"->"
+				],
+				[
+					"inFolderId",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"getMails()": {
+			"Syntax": "**.getMails**( *inParameters* : Object ) : Object",
+			"Params": [
+				[
+					"inParameters",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"send()": {
+			"Syntax": "**.send**( *inMail* : Variant ) : Object",
+			"Params": [
+				[
+					"inMail",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"_inheritedFrom_": "_GraphAPI"
+	},
+	"_GraphAPI": {
+		"_inheritedFrom_": "_BaseClass"
+	},
+	"_GraphBaseList": {
 		"previous()": {
 			"Syntax": "**.previous**() : Boolean",
 			"Params": [
@@ -131,45 +516,10 @@
 		},
 		"_inheritedFrom_": "_GraphAPI"
 	},
-	"OAuth2Provider": {
-		"new()": {
-			"Syntax": "**.new**(*inParams* : Object)",
-			"Params": [
-				[
-					"inParams",
-					"Object",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"getToken()": {
-			"Syntax": "**.getToken**()->result : Object",
-			"Params": [
-				[
-					"result",
-					"Object",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"_inheritedFrom_": "_BaseClass"
-	},
-	"_GraphUser": {
-		"new()": {
-			"Syntax": "**.new**(*inOAuth2Provider* : cs.NetKit.OAuth2Provider)",
-			"Params": [
-				[
-					"inOAuth2Provider",
-					"cs.NetKit.OAuth2Provider",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
+	"OAuth2Token": {},
+	"Office365User": {
 		"list()": {
-			"Syntax": "**.list**(*inParameters* : Object) : Object",
+			"Syntax": "**.list**( *inParameters* : Object ) : Object",
 			"Params": [
 				[
 					"inParameters",
@@ -185,7 +535,7 @@
 			"Summary": ""
 		},
 		"get()": {
-			"Syntax": "**.get**(*inID* : Text; *inSelect* : Text) : Object",
+			"Syntax": "**.get**( *inID* : Text; *inSelect* : Text ) : Object",
 			"Params": [
 				[
 					"inID",
@@ -206,7 +556,7 @@
 			"Summary": ""
 		},
 		"getCurrent()": {
-			"Syntax": "**.getCurrent**(*inSelect* : Text)->userInfo : Object",
+			"Syntax": "**.getCurrent**( *inSelect* : Text )->userInfo : Object",
 			"Params": [
 				[
 					"inSelect",
@@ -223,47 +573,35 @@
 		},
 		"_inheritedFrom_": "_GraphAPI"
 	},
-	"_OAuth2Token": {
-		"new()": {
-			"Syntax": "**.new**(*inParams* : Object)",
+	"GraphAttachment": {
+		"fromMailAttachment()": {
+			"Syntax": "**.fromMailAttachment**( *inObject* : 4D.MailAttachment )",
 			"Params": [
 				[
-					"inParams",
-					"Object",
-					"->"
-				]
-			],
-			"Summary": ""
-		}
-	},
-	"_GraphMail": {
-		"new()": {
-			"Syntax": "**.new**(*inOAuth2Provider* : cs.NetKit.OAuth2Provider; *inParameters* : Object)",
-			"Params": [
-				[
-					"inOAuth2Provider",
-					"cs.NetKit.OAuth2Provider",
-					"->"
-				],
-				[
-					"inParameters",
-					"Object",
+					"inObject",
+					"4D.MailAttachment",
 					"->"
 				]
 			],
 			"Summary": ""
 		},
-		"send()": {
-			"Syntax": "**.send**(*inMail* : Variant) : Object",
+		"setContent()": {
+			"Syntax": "**.setContent**( *inContent* : 4D.Blob )",
 			"Params": [
 				[
-					"inMail",
-					"Variant",
+					"inContent",
+					"4D.Blob",
 					"->"
-				],
+				]
+			],
+			"Summary": ""
+		},
+		"getContent()": {
+			"Syntax": "**.getContent**() : 4D.Blob",
+			"Params": [
 				[
 					"",
-					"Object",
+					"4D.Blob",
 					"<-"
 				]
 			],
@@ -271,23 +609,85 @@
 		},
 		"_inheritedFrom_": "_GraphAPI"
 	},
-	"_GraphAPI": {
-		"new()": {
-			"Syntax": "**.new**(*inOAuth2Provider* : cs.NetKit.OAuth2Provider; *inURL* : Text)",
+	"GraphMessage": {
+		"get attachments()": {
+			"Syntax": "**.get attachments**() : Collection",
 			"Params": [
 				[
-					"inOAuth2Provider",
-					"cs.NetKit.OAuth2Provider",
-					"->"
-				],
+					"",
+					"Collection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"_inheritedFrom_": "_GraphAPI"
+	},
+	"GraphMessageList": {
+		"get mails()": {
+			"Syntax": "**.get mails**() : Collection",
+			"Params": [
 				[
-					"inURL",
-					"Text",
-					"->"
+					"",
+					"Collection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"_inheritedFrom_": "_GraphBaseList"
+	},
+	"OAuth2Provider": {
+		"getToken()": {
+			"Syntax": "**.getToken**()->result : Object",
+			"Params": [
+				[
+					"result",
+					"Object",
+					"<-"
 				]
 			],
 			"Summary": ""
 		},
 		"_inheritedFrom_": "_BaseClass"
+	},
+	"GraphFolderList": {
+		"get folders()": {
+			"Syntax": "**.get folders**() : Collection",
+			"Params": [
+				[
+					"",
+					"Collection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"_inheritedFrom_": "_GraphBaseList"
+	},
+	"GraphRecipient": {},
+	"Office365": {
+		"get mail()": {
+			"Syntax": "**.get mail**() : cs.NetKit.Office365Mail",
+			"Params": [
+				[
+					"",
+					"cs.NetKit.Office365Mail",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"get user()": {
+			"Syntax": "**.get user**() : cs.NetKit.Office365User",
+			"Params": [
+				[
+					"",
+					"cs.NetKit.Office365User",
+					"<-"
+				]
+			],
+			"Summary": ""
+		}
 	}
 }
