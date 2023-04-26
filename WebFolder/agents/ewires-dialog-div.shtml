@@ -1,0 +1,45 @@
+<!-- DIALOG FOR EWIRES -->
+
+
+<div id='dialog-ewires' class='modal fade' tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">eWire Details</h4>
+            </div>
+
+            
+
+                            
+            <div class="modal-body" id="dialog-ewires-body">
+                <!-- insert ewires-dialog here -->
+            </div>
+
+            <div class="modal-footer">
+                <div class="btn-toolbar" role="toolbar" style="margin: 0;">
+                    <!--#4DIF false-->
+                    <div class="button-group" role="group">
+                        <form enctype="multipart/form-data" id='links-update-form' action="postPage" method="post">
+                            <!--#4DSCRIPT/WAPI_formHeader/{table:links, primarykey:links___linkid, action:update, post:agents/ewires-update.shtml}-->
+                            <input id="links-update-button" class="btn btn-primary" type="submit" value="Update" form="ewires-form" style='display:block;'>
+                        </form>
+                    </div>
+                    <!--#4DENDIF-->
+                    <div class="button-group pull-right" role="group">
+                        <!--#4DIF WAPI_isDebug-->
+                            <input class="btn btn-primary" type="button" value="Debug-Print" form="ewires-form" onclick="wapiPrintForm(true);"/>
+                            <!--#4DENDIF-->
+                        <button type="button" class="btn btn-primary" form="ewires-form" onclick="wapiPrintForm();">Print</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+            
+        
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--#4DSCRIPT/webRedirectIfNotAuthorized-->
+    
+<!--#4DSCRIPT/WAPI_4DInclude/customers/include/head.shtml-->
+
+<!--#4DSCRIPT/WAPI_4DInclude/customers/ctickerWidget.shtml--> 
+
+
+<script>
+    $(document).ready(function(){
+       wapiObjectMethod(event); //get current rates and values applied right away from 4D
+    });
+</script>
+    
+</head>
+<body>
+    
+<!--#4DSCRIPT/WAPI_4DInclude/customers/include/menubar.shtml-->
+    
+<main>
+    
+        <div class="page-header">
+            <div class='container'>
+                <h1>Currency rates</h1>
+            </div>
+        </div>
+    
+<div class="container" style="padding-bottom: 40px"> 
+
+  <div class="row">
+ 
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> <!-- INSERT RATES TABLE HERE -->
+    <div class="panel panel-default"> 
+        <div class="panel-heading"><h3 class="panel-title"><span class="fa fa-dollar"/><span class="fa fa-euro"/> Real time rates</h3></div>
+    <div class="panel-body">
+        <div class='form-group' style='height: 600px'>     
+            <label id='currency-grid-title' for='currencyGrid' class='text-muted'>Courtesy <!--4DTEXT <>companyName --> </label>
+            <div id="currencyWidget"></div><!-- INSERT GRID HERE -->
+        </div>
+        <div id='currency-grid-footer' class='text-muted small' style="padding-top: 20px; padding-bottom: 10px">* Rates refresh periodically.</div>
+        
+        
+        </div>
+            </div>
+      </div>
+      </div>
+      
+  </div>
+    
+
+    </main>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/footer.shtml-->
+</body>
+   
+    
+</html>      

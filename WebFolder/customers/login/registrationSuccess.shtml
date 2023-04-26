@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/head_lite.shtml-->
+</head>
+
+<body>
+
+    <form method="post" action="/customers/login.shtml">
+
+
+        <div class="container">
+            <div style="margin-top:30px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel panel-primary">
+
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <span class="fa fa-check-circle"></span>&nbsp; Registration Complete!
+                            <span class="small pull-right" style="position: relative; top:5px"><a class="link-a" href="/customers/login.shtml">Login</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="panel-body">
+
+
+                        <h3>Your registration was successful. </h3>
+
+                        <br>
+                            <!--#4DHTML WAPI_includeAlertMessage-->
+                        <br>
+
+                            <p>If at any time you have question please call
+                                <a href="tel:<!--#4DSCRIPT/webGetKeyValue/web.customers.contact.phone-->"><!--#4DSCRIPT/webGetKeyValue/web.customers.contact.phone--></a> and speak to one of our customer service representatives.</p>
+                        <br>
+
+                        <div class="form-group">
+                            <input id="login-submit" name="login-submit" class="btn btn-success btn-block" value="Login" type="submit">
+                        </div>
+
+
+                    </div>
+
+                    <div class="panel-footer panel-primary">
+                        <a class="hidden-xs logo pull-left" style='padding-top: 0px' href="<!--#4DSCRIPT/webGetKeyValue/web.configuration.footer.URL-->"><img src="<!--#4DSCRIPT/webGetKeyValue/web.configuration.footer.logo.url-->" height="20"></a>
+                        <!--#4DTEXT webgetkeyvalue("web.configuration.footer.name")-->
+                        <span class="pull-right">
+                            <a href="tel:<!--#4DSCRIPT/webGetKeyValue/web.configuration.footer.phone-->"><!--#4DSCRIPT/webGetKeyValue/web.configuration.footer.phone--></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/footer-lite.shtml-->
+
+</body>
+
+</html>

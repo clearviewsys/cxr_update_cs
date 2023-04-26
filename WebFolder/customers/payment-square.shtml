@@ -1,0 +1,206 @@
+<div id="payment-container" class="well well-lg">
+
+    <div style="padding-bottom: 10px">
+        <h3>
+            <div class="hidden-xs">Square</div> <small>(Online Payments)</small>
+            <div class="pull-right">
+                <a href="https://www.squareup.com">
+                </a>
+            </div>
+        </h3>
+    </div>
+
+    <div class="panel-group" id="accordian">
+        <div class="panel panel-default">
+
+            <!--#4DIF (webGetWebewirePayStatus="NEW")|(webGetWebewirePayStatus="DRAFT")-->
+            <div class="panel panel-body">
+                
+                <input type="button" class="btn btn-primary btn-block active" id="submit-square" name="submit-square"
+                    onClick="location.href='<!--#4DSCRIPT/WAPI_formField/webewires___paymentinfo___url -->'"
+                    value='Pay Now with Square'>
+            </div>
+
+            <!--#4DELSEIF ((webGetWebewirePayStatus="UNKNOWN")|(webGetWebewirePayStatus="NOT FOUND"))-->
+            <div class="panel panel-body">
+                <input type="button" class="btn btn-primary btn-block active" id="submit-square" name="submit-square"
+                    onClick="location.href='<!--#4DSCRIPT/WAPI_formField/webewires___paymentinfo___url -->'"
+                    value='Pay Now with Square'>
+            </div>
+
+             <!--#4DELSEIF (webGetWebewirePayStatus="SUCCESSFUL")|(webGetWebewirePayStatus="completed")-->
+
+            <div class="panel panel-heading">
+                <h3>
+                    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapse">
+                        <span class="fa fa-check-circle"></span>&nbsp;PAID <small>
+                            <div class="hidden-xs">&nbsp;This transaction has been paid.</div>
+                            <div class="pull-right">
+                                <span class="fa fa-question"></span>
+                            </div>
+                        </small>
+                    </a>
+                </h3>
+            </div>
+
+            <div id="collapse" class="panel-collapse collapse">
+                <div class="panel panel-body">
+                    <div class="table-responsive">
+                        <!--#4DHTML webGetWebewirePaymentData-->
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!--#4DELSEIF webGetWebewirePayStatus="CANCELLED"-->
+
+            <div class="panel panel-heading">
+                <h3>
+                    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapse">
+                        <span class="fa fa-times-circle"></span>&nbsp;CANCELLED <small>
+                            <div class="hidden-xs">&nbsp;This transaction has been CANCELLED.</div>
+
+                            <div class="pull-right">
+                                <span class="fa fa-question"></span>
+                            </div>
+                        </small>
+                    </a>
+                </h3>
+            </div>
+
+            <div id="collapse" class="panel-collapse collapse">
+                <div class="panel panel-body">
+                    <div class="table-responsive">
+                        <!--#4DHTML webGetWebewirePaymentData-->
+                    </div>
+                </div>
+            </div>
+
+
+            <!--#4DELSEIF webGetWebewirePayStatus="FAILED"-->
+
+            <div class="panel panel-heading">
+                <h3>
+                    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapse">
+                        <span class="fa fa-times-circle"></span>&nbsp;FAILED <small>
+                            <div class="hidden-xs">&nbsp;This transaction has FAILED.</div>
+                            <div class="pull-right">
+                                <span class="fa fa-question"></span>
+                            </div>
+                        </small>
+                    </a>
+                </h3>
+            </div>
+
+            <div id="collapse" class="panel-collapse collapse">
+                <div class="panel panel-body">
+                    <div class="table-responsive">
+                        <!--#4DHTML webGetWebewirePaymentData-->
+                    </div>
+                </div>
+            </div>
+
+
+            <!--#4DELSEIF webGetWebewirePayStatus="DECLINED"-->
+
+            <div class="panel panel-heading">
+                <h3>
+                    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapse">
+                        <span class="fa fa-warning"></span>&nbsp;DECLINED <small>
+                            <div class="hidden-xs">&nbsp;This transaction is DECLINED.</div>
+                            <div class="pull-right align-bottom">
+                                <span class="fa fa-question"></span>
+                            </div>
+                        </small>
+                    </a>
+                </h3>
+            </div>
+            <div id="collapse" class="panel-collapse collapse">
+                <div class="panel panel-body">
+                    <div class="table-responsive">
+                        <!--#4DHTML webGetWebewirePaymentData-->
+                    </div>
+                </div>
+            </div>
+
+
+            <!--#4DELSEIF webGetWebewirePayStatus="BLOCKED"-->
+
+            <div class="panel panel-heading">
+                <h3>
+                    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapse">
+                        <span class="fa fa-warning"></span>&nbsp;BLOCKED <small>
+                            <div class="hidden-xs">&nbsp;This transaction has been BLOCKED.</div>
+                            <div class="pull-right">
+                                <span class="fa fa-question"></span>
+                            </div>
+                        </small>
+                    </a>
+                </h3>
+            </div>
+
+            <div id="collapse" class="panel-collapse collapse">
+                <div class="panel panel-body">
+                    <div class="table-responsive">
+                        <!--#4DHTML webGetWebewirePaymentData-->
+                    </div>
+                </div>
+            </div>
+
+
+            <!--#4DELSEIF webGetWebewirePayStatus="INPROGRESS"-->
+
+            <div class="panel panel-heading">
+                <h3>
+                    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapse">
+                        <span class="fa fa-warning"></span>&nbsp;INPROGRESS <small>
+                            <div class="hidden-xs">&nbsp;This transaction is INPROGRESS.</div>
+                            <div class="pull-right">
+                                <span class="fa fa-question"></span>
+                            </div>
+                        </small>
+                    </a>
+                </h3>
+            </div>
+
+            <div id="collapse" class="panel-collapse collapse">
+                <div class="panel panel-body">
+                    <div class="table-responsive">
+                        <!--#4DHTML webGetWebewirePaymentData-->
+                    </div>
+                </div>
+            </div>
+
+
+            <!--#4DELSE-->
+
+            <div class="panel panel-heading">
+                <h3>
+                    <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapse">
+                        <span class="fa fa-warning"></span>&nbsp;ERROR <small>
+                            <div class="hidden-xs">&nbsp;This transaction has ERRORED OUT.</div>
+                            <div class="pull-right">
+                                <span class="fa fa-question"></span>
+                            </div>
+                        </small>
+                    </a>
+                </h3>
+            </div>
+
+            <div id="collapse" class="panel-collapse collapse">
+                <div class="panel panel-body">
+                    <div class="table-responsive">
+                        <!--#4DHTML webGetWebewirePayStatus-->
+                        <!--#4DHTML webGetWebewirePaymentData-->
+                    </div>
+                </div>
+            </div>
+
+            <!--#4DENDIF-->
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,299 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable='true'>
+
+    <!-- BENEFICIARY-COUNTERPARTY NAME INFO -->
+    <div class="panel panel-default">
+
+        <div class="panel-heading" role="tab" id="name-tab">
+            <h3 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#name-data"
+                    aria-expanded="false" aria-controls="name-data">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"> </span> Client Details</a>
+            </h3>
+        </div>
+
+        <div id="name-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="name-tab">
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___iscompany, label:This-new-client-is-a-company, onchange:wapiObjectMethod}-->
+                </div>
+
+                <div class="form-group" style="display:none" id="company-name-hidden">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___companyname, label:Company-Name, placeholder:Company-Name-Optional, width:100px, onchange:wapiObjectMethod}}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___salutation, label:Salutation, onchange:wapiObjectMethod, placeholder:Salutation, width:100px, choicelist:titles, readonly:false-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___firstname, label:First-Name, placeholder:First-name-of-counterparty, readonly:false, pattern:alpha}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___lastname, label:Last-Name, placeholder:Last-name-of-counterparty, readonly:false, pattern:alpha}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___gender, label:Gender, placeholder:Gender, choicelist:webgetchoicelistgender, readonly:false}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___dob, label:Date-of-birth, placeholder:Date-of-birth, readonly:false, inputmask-selectyears:80, inputmask-startyear:1970}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___nationality, label:Nationality, placeholder:Nationality-of-customer, width:100,  choicelist:webGetChoiceListCountries}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___occupation, label:Occupation, placeholder:Occupation-of-counterparty, width:100, choicelist:webgetchoicelistoccupations}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___relationship, label:Relationship, placeholder:Relationship-to-customer, choicelist:webGetChoiceListRelship}-->
+                </div>
+
+                <!--#4DIF false-->
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___aml_isonhold, label:AML-On-Hold, readonly:false}-->
+                </div>
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___aml_onholdnotes, label:AML-On-Hold-Readon, readonly:false}-->
+                </div>
+                <!--#4DENDIF-->
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- CLIENT CONTACT INFO -->
+
+    <!-- BENEFICIARY-CLIENT CONTACT INFO -->
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="demographics-tab">
+            <h3 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#demographic-data"
+                    aria-expanded="false" aria-controls="demographic-data">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Contact Info</a>
+            </h3>
+        </div>
+
+        <div id="demographic-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="demographics-tab">
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___address, label:Address, placeholder:Address-of-residence, readonly:false}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___city, label:City, placeholder:City-of-residence, readonly:false, pattern:alpha}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___province, label:Province, placeholder:Province-or-State-of-residence, pattern:alpha, readonly:false}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___postalcode, label:Postal-Code, placeholder:Postal-code-of-residence, readonly:false}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___countrycode, label:Country-Code, placeholder:Country-of-residence, choicelist:webGetChoiceListCountries, onchange:wapiObjectMethod, readonly:false}-->
+                </div>
+
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___email, label:Email, placeholder:Email-address, width:100, pattern:email, readonly:false}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___mainphone, label:Main-Phone, placeholder:Primary-phone-of-customer, pattern:phone}-->
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- BENEFICIARY-COUNTERPARTY BANKING INFO -->
+    <div class="panel panel-default">
+
+        <div class="panel-heading" role="tab" id="banking-tab">
+            <h3 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#banking-data"
+                    aria-expanded="false" aria-controls="banking-data">
+                    <span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Financial Information</a>
+            </h3>
+        </div>
+
+        <div id="banking-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="banking-tab">
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___defaultpurposeoftransaction, label:Usual-Purpose-Of-Your-Transactions, placeholder:Usual-purpose-of-transactions, choicelist:webgetchoicelistpurposetrans}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankname, label:Bank-Name, placeholder:Bank-name, width:100}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankaddress, label:Bank Address, placeholder:Bank-address}-->
+                </div>
+
+                <!--NEW BANKING INFO COLLECTION BASED ON COUNTRY-->
+
+                <!--#4DIF Choose(webIsBankFieldRequired ([Links]CountryCode;"iban");True;False) -->
+                <div class="form-group" id="banking-iban" style="display: none;">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankaccountno, label:IBAN, placeholder:IBAN, readonly:false, width:100}-->
+                </div>
+                <!--#4DELSE-->
+                <div class="form-group" id="banking-account" style="display: none;">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankaccountno, label:Account-Number, placeholder:Account-Number, readonly:false, width:100}-->
+                </div>
+                <!--#4DENDIF-->
+
+                <!--#4DIF Choose(webIsBankFieldRequired ([Links]CountryCode;"aba");True;False) -->
+                <div class="form-group" id="banking-aba" style="display: none;">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___banktransitcode, label:Routing-Code, placeholder:Routing-code, readonly:false, width:100}-->
+                </div>
+                <!--#4DENDIF-->
+
+                <!--#4DIF Choose(webIsBankFieldRequired ([Links]CountryCode;"transit");True;False) -->
+                <div class="form-group" id="banking-transit" style="display: none;">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___banktransitcode, label:Bank-Transit-Code, placeholder:Bank-Transit-Code, readonly:false, width:100}-->
+                </div>
+                <!--#4DENDIF-->
+
+                <!--#4DIF Choose(webIsBankFieldRequired ([Links]CountryCode;"ifsc");True;False) -->
+                <div class="form-group" id="banking-ifsc" style="display: none;">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankswift, label:IFSC-Code, placeholder:IFSC-Code, readonly:false, width:100}-->
+                </div>
+                <!--#4DENDIF-->
+
+                <!--#4DIF Choose(webIsBankFieldRequired ([Links]CountryCode;"swift");True;False) -->
+                <div class="form-group" id="banking-swift" style="display: none;">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankswift, label:SWIFT-Code, placeholder:SWIFT-Code, readonly:false, width:100}-->
+                </div>
+                <!--#4DENDIF-->
+
+
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___bankingdetails, label:Banking-Details, placeholder:Bank-details}-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- BENEFICIARY-COUNTERPARTY PICTURE ID INFO -->
+    <div class="panel panel-default">
+
+        <div class="panel-heading" role="tab" id="picture-tab">
+            <h3 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#picture-data"
+                    aria-expanded="false" aria-controls="picture-data">
+                    <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Picture ID</a>
+            </h3>
+        </div>
+
+        <div id="picture-data" class="panel-collapse collapse" role="tabpanel" aria-labelledby="picture-tab">
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___pictureidtype, label:Government-ID-Type, placeholder:ie.-license-passport, width:100, choicelist:webgetchoicelistpicturetypes}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___pictureidno, label:Government-ID-No, placeholder:ID-number, width:100}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___pictureidissuedin, label:Country-of-Issue, placeholder:Country-issuing-your-ID, width:100, choicelist:webGetChoiceListCountries}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___pictureidexpdate, label:Expiry-Date}-->
+                </div>
+
+                <!--#4DIF false-->
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:links___pictureid, label:Image-of-Picture-ID, placeholder:Picture-ID, readonly:false, image-width:200, image-compression:.5, image-upload:true}-->
+                </div>
+                <!--#4DENDIF-->
+
+                <!-- DROPZONE AREA FOR ADDITIONAL ATTACHMENTS -->
+                <div class="row" id="wapi-dropzone-group">
+                    <div class="dz-clickable dropzone-previews" id="wapi-dropzone">
+                        <div class="dz-message text-center" style="padding-bottom: 12px">
+                            <h3><span class="label label-default">Click or Drop Files Here to Attach</span></h3>
+                        </div>
+                    </div>
+
+                    <div class="form-group fallback">
+                        <input id='dropzone-upload-file' type="file" multiple />
+                    </div>
+                </div>
+
+                <!-- PREVIOUSLY SUBMITTED ATTACHMENTS -->
+                <!--#4DSCRIPT/webSelectRelatedWebAttachments/[links]-->
+
+                <div class="well">
+                    <div class="row row-eq-height">
+                        <!--#4DLOOP [WebAttachments]-->
+                        <div class="col-sm-3">
+                            <!--#4DSCRIPT/wapi_formMediaGroup/{field-preview:webattachments___preview, field-id:webattachments___uuid, field-path:webattachments___filepath, field-description:webattachments___description, field-name:webattachments___filename, field-mimetype:webattachments___mimetype, readonly:false}-->
+                        </div>
+                        <!--#4DENDLOOP-->
+
+                    </div>
+                </div>
+                <div class="text-centered">*Previously submitted attachments</div>
+
+
+                <!--#4DIF false-->
+                <div class="form-group">
+                    <!--    video stream test -->
+                    <video width=320 height=240 id="player" controls autoplay></video>
+                    <input type="button" id="capture" value="Capture">
+                    <canvas id="canvas" width=320 height=240></canvas>
+                    <script>
+                        const player = document.getElementById('player');
+                        const canvas = document.getElementById('canvas');
+                        const context = canvas.getContext('2d');
+                        const captureButton = document.getElementById('capture');
+
+                        const constraints = {
+                            video: true,
+                        };
+
+                        captureButton.addEventListener('click', () => {
+                            context.drawImage(player, 0, 0, canvas.width, canvas.height);
+
+                            // Stop all video streams.
+                            player.srcObject.getVideoTracks().forEach(track => track.stop());
+                        });
+
+                        navigator.mediaDevices.getUserMedia(constraints)
+                            .then((stream) => {
+                                // Attach the video stream to the video element and autoplay.
+                                player.srcObject = stream;
+                            });
+                    </script>
+
+                </div>
+                <!--#4DENDIF-->
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<!--#4DSCRIPT/WAPI_formInit-->

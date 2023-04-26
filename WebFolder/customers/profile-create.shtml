@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--#4DSCRIPT/webRedirectIfNotAuthorized/false-->
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/head.shtml -->
+
+    <!--#4DSCRIPT/webSelectWebUserRecord-->
+    <!--#4DSCRIPT/WAPI_pageStart/{onload:true, sessiontimer:true, dz-div:profile-create-form, dz-post:true, dz-maxfilesize:15, dz-maxfiles:4, dz-onaddedfile:addDropZone, dz-onremovedfile:removeDropZone, dz-addremovelinks:false, dz-resizewidth:1500}-->
+
+    <!-- dz-onremovedfile:removeDropZone,-->
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            debugger;
+            $('[role=tabpanel]').on('shown.bs.collapse', function () {
+                $('input:visible:enabled:first', this).focus();
+            });
+
+            //wapi_dropzone.disable();
+        });
+    </script>
+
+</head>
+
+
+<body>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/menubar.shtml -->
+
+    <main role="main">
+
+
+
+        <div class="container" style="padding-bottom: 40px; padding-top: 0px">
+            <div class="page-header">
+                <!--#4DHTML WAPI_includeAlertMessage-->
+
+                <h1>
+                    <!--#4DTEXT webgetkeyvalue("web.configuration.footer.name")--><small>&nbsp; Customer Portal</small>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webusers___webusername, label:User-Name, readonly:true}-->
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webusers___email, label:Email-Address, readonly:true, width:100}-->
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webusers___phone, label:Phone, readonly:true, width:100}-->
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <p>Account creation info</p>
+                </div>
+
+                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                    <p>
+                        <!--#4DTEXT [webUsers]creationdate--> at
+                        <!--#4DTEXT [webUsers]creationtime-->
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+            <form id='profile-existing-form' action="/customers/notify.asp" method="post">
+
+                <div>
+                    <!--#4DSCRIPT/WAPI_formHeader/{table:webusers, primarykey:webusers___uuid ,autonumeric:false, email-template:alert-existing-profile-request.html, email-subject:[INTERNAL]Request-To-Link-WebUser-Account, success:/customers/profile-existing-success.shtml}-->
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h1 class="panel-title">Are you an existing
+                                    <!--#4DTEXT webgetkeyvalue("web.configuration.footer.name")--> Customer?</h1>
+                            </div>
+                            <div class="panel-body">
+                                <div>
+
+                                </div>
+
+                                <div class="form-check" style="padding-top: 10px">
+                                    <label class="form-check-label" for="profile-existing-input">
+                                        <input type="checkbox" class="form-check-input" id="profile-existing-input"
+                                            name="profile-existing-input" onchange="wapiObjectMethod(event)">
+                                        Yes, I have an existing account.</label>
+
+                                    <div class="help-block">
+                                        <!--#4DTEXT webIsExistingCustomerPhone-->
+                                    </div>
+                                </div>
+
+                                <div class="form-check" style="padding-top: 10px">
+                                    <label class="form-check-label" for="profile-new-input">
+                                        <input type="checkbox" class="form-check-input" id="profile-new-input"
+                                            name="profile-new-input" onchange="wapiObjectMethod(event)">
+                                        No, I need to create a new account.</label>
+                                </div>
+                            </div>
+
+                            <div class='panel-footer clearfix' id="profile-existing-submit" style="display: none">
+                                <div class="pull-right">
+                                    <button type="submit" form='profile-existing-form' class="btn btn-primary"
+                                        id="submit-existing-input" name="submit-existing-input">Submit</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <form id='profile-create-form' action="/createRecord" method="post">
+
+                <div>
+                    <!--#4DSCRIPT/WAPI_formHeader/{table:customers, success:/customers/profile-create-success.shtml}-->
+                </div>
+
+                <div class="row" id='profile-create-row' style='display: none;'>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h1 class="panel-title">Initial Account Setup Information</h1>
+                            </div>
+                            <div class="panel-body">
+                                <div>
+                                    Please complete the following information to establish your account profile. This
+                                    information will be reviewed by our staff and you will receive an email once your
+                                    account is approved.
+                                </div>
+                                <div class="text-danger" style="padding-top: 8px">
+                                    <!--#4DTEXT webgetkeyvalue("web.customers.profile.documents.alert")-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--TAB NAVIGATION PANEL-->
+                        <div class="panel panel-default" id="tab-navigation">
+                            <div class="panel-heading hidden-xs">
+                                <ul class="nav nav-pills nav-justified" role="tablist">
+
+                                    <li role="presentation" onclick="setProgressLabel('Tell us about yourself?',20)"
+                                        class="active"><a href="#contact-tab" aria-controls="contact-tab" role="tab"
+                                            data-toggle="pill"><span class="fa fa-user fa-2x"></span></a></li>
+
+                                    <li role="presentation" onclick="setProgressLabel('Contact Information',40)">
+                                        <a href="#address-tab" aria-controls="address-tab" role="tab"
+                                            data-toggle="pill"><span class="fa fa-address-card-o fa-2x"></span></a></li>
+
+                                    <li role="presentation" onclick="setProgressLabel('AML Information',60)">
+                                        <a href="#aml-tab" aria-controls="aml-tab" role="tab" data-toggle="pill"><span
+                                                class="fa fa-bank fa-2x"></span></a></li>
+
+                                    <li role="presentation"
+                                        onclick="setProgressLabel('Identification documentation.',80)">
+                                        <a href="#identification-tab" aria-controls="identification-tab" role="tab"
+                                            data-toggle="pill"><span class="fa fa-picture-o fa-2x"></span></a>
+                                    </li>
+
+                                    <li role="presentation" onclick="setProgressLabel('Submit your application',100)">
+                                        <a href="#submit-tab" aria-controls="submit-tab" role="tab"
+                                            data-toggle="pill"><span class="fa fa-send-o fa-2x"></span></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="panel-body">
+                                <div class="progress hidden-xs">
+                                    <div id="progress-bar"
+                                        class="progress-bar progress-bar-success progress-bar-striped"
+                                        role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 20%">
+                                        <span class="sr-only">20% Complete (success)</span>
+                                    </div>
+                                </div>
+                                <h3>
+                                    <div id="progress-label" class="text-center">New customer information</div>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+
+                            <!--CONTACT INFORMATION-->
+                            <div role="tabpanel" class="tab-pane fade in active" id="contact-tab">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___salutation, label:Salutation, choicelist:|-Select-|Mr|Mrs|Ms|Dr, readonly:false}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___firstname, label:First-Name, readonly:false, pattern:alpha}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___lastname, label:Last-Name, readonly:false, pattern:alpha}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___gender, choicelist:webgetchoicelistgender, readonly:false}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___dob, label:Date-of-birth, inputmask-selectyears:90, inputmask-startyear:1970, inputmask-max:-7000, readonly:false}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___occupation, choicelist:webgetchoicelistoccupations, readonly:false}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___hometel, label:Phone, readonly:false, pattern:phone}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___cellphone, label:Mobile, readonly:false, pattern:phone}-->
+                                        </div>
+
+                                    </div>
+
+                                    <div class="panel-footer">
+                                        <a class="btn btn-primary btnPrevious" disabled="disabled">Previous</a>
+                                        <div class="pull-right">
+                                            <a class="btn btn-primary btnNext">Next</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--ADDRESS INFORMATION-->
+                            <div role="tabpanel" class="tab-pane fade in" id="address-tab">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___address, readonly:false, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___city, width:100, readonly:false, pattern:alpha}-->
+                                        </div>
+
+                                        <!--#4DIF false-->
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___province, readonly:false, pattern:alpha}-->
+                                        </div>
+                                        <!--#4DENDIF-->
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___postalcode, label:Postal-Code, readonly:false}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DIF (webgetkeyvalue("web.customers.module.quotes.useCustomerCountry")="true")-->
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___countrycode, label:Country, choicelist:webGetChoiceListCountries, readonly:false}-->
+                                            <!--#4DELSE-->
+                                            <label class="form-control-label" for="customers-countrycode-input"
+                                                id="customers-countrycode-label">Country</label>
+                                            <input class="form-control" id="customers-countrycode-input"
+                                                name="customers-countrycode-input" value="<!--#4DVAR <>CountryCode-->"
+                                                readonly>
+                                            <!--#4DENDIF-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___citizenshipcountrycode, label:Citizenship-Country, choicelist:webGetChoiceListCountries, readonly:false, tooltip:This-is-the-country-that-you-are-currently-a-citizen-of}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___countryofbirthcode, label:Country-of-Birth, choicelist:webGetChoiceListCountries, readonly:false, tooltip:This-is-the-country-that-you-were-born-in}-->
+                                        </div>
+
+                                        <!--#4DIF false-->
+                                        <!--map country of residence to mailing country-->
+                                        <div class="form-group">
+                                            <!--#4DIF (webgetkeyvalue("web.customers.module.quotes.useCustomerCountry")="true")-->
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___countryofresidencecode, label:Country-of-Residence, choicelist:webGetChoiceListCountries, readonly:false, tooltip:This-is-the-country-that-you-are-currently-a-resident-of}-->
+                                            <!--#4DELSE-->
+                                            <label class="form-control-label"
+                                                for="customers-countryofresidencecode-input"
+                                                id="customers-countryofresidencecode-label">Country of
+                                                Residence</label>
+                                            <input class="form-control" id="customers-countryofresidencecode-input"
+                                                name="customers-countryofresidencecode-input"
+                                                value="<!--#4DVAR <>CountryCode-->" readonly>
+                                            <!--#4DENDIF-->
+                                        </div>
+                                        <!--#4DENDIF-->
+
+                                    </div>
+
+                                    <div class="panel-footer">
+                                        <a class="btn btn-primary btnPrevious">Previous</a>
+                                        <div class="pull-right">
+                                            <a class="btn btn-primary btnNext">Next</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--AML INFORMATION-->
+                            <div role="tabpanel" class="tab-pane fade in" id="aml-tab">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___aml_natureofbusrelationship, label:Common-transaction-type, choicelist:webGetChoiceListNatureRelship, readonly:false, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___aml_sof_sow, label:Source-of-funds-|-Wealth, choicelist:webGetChoiceListSourceFunds, readonly:false, width:100}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___aml_pot, label:Purpose-of-transactions, choicelist:webGetChoiceListPurposeTrans, readonly:false, width:100}-->
+                                        </div>
+
+                                    </div>
+
+                                    <div class="panel-footer">
+                                        <a class="btn btn-primary btnPrevious">Previous</a>
+                                        <div class="pull-right">
+                                            <a class="btn btn-primary btnNext">Next</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- PICTURE ID -->
+                            <div role="tabpanel" class="tab-pane fade in" id="identification-tab">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        Please Upload Your Picture Identification
+                                    </div>
+                                    <div class="panel-body">
+
+                                        <!-- DROPZONE AREA FOR ADDITIONAL ATTACHMENTS -->
+                                        <div id="wapi-dropzone-group">
+                                            <div class="dropzone-previews"></div>
+
+                                            <div id="wapi-dropzone-select-group">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="profile-id-type-select"
+                                                        id="profile-id-type-label">Select the type of ID you will
+                                                        upload</label>
+                                                    <select class="form-control custom-select"
+                                                        style="text-align-last:center;" id="profile-id-type-select"
+                                                        name="profile-id-type-select"
+                                                        onchange="$('#wapi-dropzone-drop-group').show();wapiObjectMethod(event)">
+                                                        <option value="" label=""></option>
+                                                    </select>
+                                                    <span id="profile-id-type-select-help-block"
+                                                        class="help-block"></span>
+                                                </div>
+                                            </div>
+
+                                            <div id="wapi-dropzone-drop-group">
+                                                <div class="dz-clickable" id="wapi-dropzone">
+                                                    <div class="btn btn-default btn-block btn-lg"
+                                                        style="padding-bottom: 12px">
+                                                        <span id="profile-dropzone-btn">Click or Drop Files Here</span>
+                                                        <script>
+                                                            if (jQuery.browser.mobile) {
+                                                                $('#profile-dropzone-btn').html(
+                                                                    'Click to take picture');
+                                                            }
+                                                        </script>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group fallback">
+                                                    <input id='dropzone-upload-file' type="file" multiple />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="panel-footer">
+                                        <a class="btn btn-primary btnPrevious">Previous</a>
+
+                                        <div class="pull-right">
+                                            <a class="btn btn-primary btnNext">Next</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!--SUBMIT NEW CUSTOMER PROFILE-->
+                            <div role="tabpanel" class="tab-pane fade in" id="submit-tab">
+                                <div class="panel panel-default">
+
+                                    <div class='panel-heading'>
+                                        <h3 class="panel-title"><span class="fa fa-check-square"
+                                                aria-hidden="true"></span>
+                                            Complete and Submit Your Profile</h3>
+                                    </div>
+
+                                    <div class='panel-body'>
+                                        <h3 class="panel-title">Marketing Opt-In</h3>
+                                        <div class="form-check" style="padding-top: 10px">
+                                            By checking the following you agree to opt into receiving marketing
+                                            information
+                                            via
+                                            email, SMS and/or phone. Leave these unchecked if you do not wish to receive
+                                            marketing information.
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___optinEmail, type:checkbox, label:I-would-like-to-opt-into-email-marketing, readonly:false}-->
+                                        </div>
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___optinSMS, type:checkbox, label:I-would-like-to-opt-into-SMS-marketing, readonly:false}-->
+                                        </div>
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___optinPhone, type:checkbox, label:I-would-like-to-opt-into-phone-marketing, readonly:false}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:customers___secretquestion, label:Secret-word-or-phrase-(Optional), width:100, readonly:false}-->
+                                        </div>
+
+                                        <hr>
+
+                                        <h3 class="panel-title">New Account Confirmation </h3>
+                                        <br>
+
+                                        <div class="form-check" style="padding-top: 10px">
+                                            <label class="form-check-label" for="agreement-input">
+                                                <input type="checkbox" class="form-check-input" id="agreement-input"
+                                                    name="agreement-input" onclick="doAgree()">
+                                                By checking this you are affirming all information is accurate and
+                                                complete.</label>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class='panel-footer clearfix'>
+                                        <div class="pull-right">
+                                            <a class="btn btn-default" href="/customers/login.shtml"
+                                                role="button">Cancel</a>
+                                            <input type="button" class="btn btn-primary" id="submit-new-input"
+                                                name="submit-new-input" onclick="wapiValidateOnSubmit()" disabled
+                                                value="Submit" form="profile-create-form">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+        </div>
+
+        <!--#4DSCRIPT/WAPI_formFooter/{table:customers}-->
+        </form>
+        </div>
+
+
+    </main>
+
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/footer.shtml -->
+
+    <!--dz-preview-template instead of the include-->
+    <div class="hidden" id="tpl">
+        <div class="row" style="padding-bottom: 40px; padding-top: 0px">
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="dz-preview dz-file-preview" id="dz-preview-template">
+                    <div class="dz-details">
+                        <div class="small"><em><span data-dz-name></span></em></div>
+                        <img class="img-thumbnail" data-dz-thumbnail />
+                        <div class="small" style="padding-bottom: 20px; padding-top: 0px">[<span data-dz-size></span>]
+                        </div>
+                        <input class="btn btn-default" id="dz-remove-btn" name="dz-remove-btn" type="button"
+                            value="Remove ID" data-dz-remove>
+                    </div>
+                    <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
+                    <div class="dz-success-mark"><span></span></div>
+                    <div class="dz-error-mark"><span class=""></span></div>
+                    <div class="dz-error-message"><span data-dz-errormessage></span></div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <div class="well">
+                    <div class="form-group" id="customers-pictureid_templatename-group">
+                        <label class="form-control-label" for="customers-pictureid_templatename-input"
+                            id="customers-pictureid_templatename-label">Picture ID Type</label> <input type="text"
+                            class="form-control wapi-pattern" id="customers-pictureid_templatename-input"
+                            name="customers-pictureid_templatename-input" readonly> <span
+                            id="customers-pictureid_templatename-input-help-block" class="help-block"></span>
+                    </div>
+
+                    <div class="form-group hidden" id="customers-pictureid_templateid-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_templateid, label:ID-Type, readonly:true, hidden:true}-->
+                    </div>
+
+                    <div class="form-group" id="customers-pictureid_number-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_number, label:ID-Number, readonly:false, onchange:updatePictureId}-->
+                    </div>
+
+                    <div class="form-group" id="customers-pictureid_issuedate-group">
+                        <label class="form-control-label" for="customers-pictureid_issuedate-input"
+                            id="customers-pictureid_issuedate-label">Issue Date</label> <input type="text"
+                            class="form-control" id="customers-pictureid_issuedate-input"
+                            name="customers-pictureid_issuedate-input" style="background-color:white"> <span
+                            id="customers-pictureid_issuedate-input-help-block" class="help-block"></span>
+                    </div>
+
+                    <div class="form-group" id="customers-picture_expirydate-group">
+                        <label class="form-control-label" for="customers-pictureid_expirydate-input"
+                            id="customers-pictureid_expirydate-label">Expiry Date</label> <input type="text"
+                            class="form-control" id="customers-pictureid_expirydate-input"
+                            name="customers-pictureid_expirydate-input" style="background-color:white"> <span
+                            id="customers-pictureid_expirydate-input-help-block" class="help-block"></span>
+                    </div>
+
+                    <div class="form-group" id="customers-picture_authority-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_authority, label:Issued-By-Authority, readonly:false}-->
+                    </div>
+
+                    <div class="form-group" id="customers-picture_issuestate-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_issuestate, label:Issued-By-State, readonly:false}-->
+                    </div>
+
+                    <div class="form-group" id="customers-pictureid_countrycode-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___pictureid_countrycode, label:Issued-By-Country, choicelist:webGetChoiceListCountries, readonly:false}-->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+    </div>
+
+    <script>
+        function doAgree() {
+            debugger;
+
+            let theType = '<!--#4DSCRIPT/webGetKeyValue/web.customers.profile.id.requires.multiple.list-->';
+            const theArray = theType.split(',').map(item => item.trim());
+
+            if (theArray.includes($('#customers-pictureid_templateid-input').val()) && (
+                    wapi_dropzone.files.length < 2)) {
+                event.preventDefault();
+                var theAlert = '<!--#4DSCRIPT/webGetKeyValue/web.customers.profile.id.multiple.alert-->';
+                wapiDisplayMessage('ID Required', theAlert);
+
+            } else if (wapi_dropzone.files.length == 0) {
+                event.preventDefault();
+                var theAlert =
+                    '<!--#4DSCRIPT/webGetKeyValue/web.customers.profile.id.single.alert-->';
+                wapiDisplayMessage('ID Required', theAlert);
+            } else {
+                wapiObjectMethod(event);
+            }
+        }
+    </script>
+
+    <script>
+        function updatePictureId(theEvent) {
+            debugger;
+            $('[id^=customers-pictureid_number-input]').val($(theEvent.target).val());
+        }
+    </script>
+
+    <script>
+        function addDropZone(file) {
+            debugger;
+            let currId = wapi_dropzone.files.length;
+            let theID = wapi_dropzone.previewsContainer.getElementsByClassName("row")[currId - 1];
+            let inputs = theID.getElementsByTagName("input");
+            inputs['customers-pictureid_templateid-input'].value = $('#profile-id-type-select').val();
+
+            if (currId > 0) {
+
+                for (var i = 0; i < inputs.length; i++) {
+                    inputs[i].id = inputs[i].id + '--' + currId;
+                    inputs[i].name = inputs[i].name + '--' + currId;
+                };
+
+                let selects = theID.getElementsByTagName("select");
+                for (var i = 0; i < selects.length; i++) {
+                    selects[i].id = selects[i].id + '--' + currId;
+                    selects[i].name = selects[i].name + '--' + currId;
+                };
+
+                let labels = theID.getElementsByClassName("form-control-label")
+                for (var i = 0; i < labels.length; i++) {
+                    labels[i].id = labels[i].id + '--' + currId;
+                };
+
+                let helps = theID.getElementsByClassName("help-block")
+                for (var i = 0; i < helps.length; i++) {
+                    helps[i].id = helps[i].id.replace('-help-block', '') + '--' + currId + '-help-block';
+                };
+
+            };
+
+            //wapi_dropzone.disable();
+            // $('#profile-id-type-select').val('');
+
+            // let issueOptions = {
+            //     format: 'dd/mm/yyyy',
+            //     editable: false,
+            //     selectYears: 10,
+            //     selectMonths: true,
+            //     formatSubmit: 'yyyy-mm-ddT00:00:00',
+            //     hiddenName: true,
+            //     min: -3650,
+            //     max: true,
+            //     showMonthsShort: true
+            // }
+            // let expiryOptions = {
+            //     format: 'dd/mm/yyyy',
+            //     editable: false,
+            //     selectYears: 10,
+            //     selectMonths: true,
+            //     formatSubmit: 'yyyy-mm-ddT00:00:00',
+            //     hiddenName: true,
+            //     min: -365,
+            //     max: 3650,
+            //     showMonthsShort: true
+            // }
+
+            // let issueDateId = "customers-pictureid_issuedate-input--"+currId;
+            // let expiryDateId = "customers-pictureid_expirydate-input--"+currId;
+
+            // $('[id='+issueDateId+']').pickadate(issueOptions);
+            // $('[id='+expiryDateId+']').pickadate(expiryOptions);
+
+            wapiObjectMethod(event);
+
+        }
+    </script>
+
+    <script>
+        function removeDropZone(file) {
+            debugger;
+            wapiObjectMethod(event);
+            // $("#wapi-dropzone-add-group").show();
+            // $('#profile-id-type-select').val(''); 
+        }
+    </script>
+
+    <script type='text/javascript'>
+        function setProgressLabel(theLabel, thePercent) {
+            debugger;
+            $('#progress-label').text(theLabel);
+            $('#progress-bar').css('width', thePercent + '%').attr('aria-valuenow', thePercent);
+        }
+    </script>
+
+    <script type="text/javascript">
+        $('.btnNext').click(function () {
+
+            let thePill = $('.nav-pills > .active').next('li').find('a');
+            thePill.trigger('click');
+            $('html, body').animate({
+                scrollTop: 200
+            }, '300');
+
+        });
+
+        $('.btnPrevious').click(function () {
+            let thePill = $('.nav-pills > .active').prev('li').find('a');
+            thePill.trigger('click');
+            $('html, body').animate({
+                scrollTop: 200
+            }, '300');
+        });
+    </script>
+
+    <script>
+        function addDropZone2(file) {
+            //addedfile(file) {
+            debugger;
+            if (this.element === this.previewsContainer) {
+                this.element.classList.add("dz-started");
+            }
+
+            if (this.previewsContainer && !this.options.disablePreviews) {
+                file.previewElement = Dropzone.createElement(
+                    this.options.previewTemplate.trim()
+                );
+                file.previewTemplate = file.previewElement; // Backwards compatibility
+
+                this.previewsContainer.appendChild(file.previewElement);
+                for (var node of file.previewElement.querySelectorAll("[data-dz-name]")) {
+                    node.textContent = file.name;
+                }
+                for (node of file.previewElement.querySelectorAll("[data-dz-size]")) {
+                    node.innerHTML = this.filesize(file.size);
+                }
+
+                if (this.options.addRemoveLinks) {
+                    file._removeLink = Dropzone.createElement(
+                        `<a class="dz-remove" href="javascript:undefined;" data-dz-remove>${this.options.dictRemoveFile}</a>`
+                    );
+                    file.previewElement.appendChild(file._removeLink);
+                }
+
+                let removeFileEvent = (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (file.status === Dropzone.UPLOADING) {
+                        return Dropzone.confirm(
+                            this.options.dictCancelUploadConfirmation,
+                            () => this.removeFile(file)
+                        );
+                    } else {
+                        if (this.options.dictRemoveFileConfirmation) {
+                            return Dropzone.confirm(
+                                this.options.dictRemoveFileConfirmation,
+                                () => this.removeFile(file)
+                            );
+                        } else {
+                            return this.removeFile(file);
+                        }
+                    }
+                };
+
+                for (let removeLink of file.previewElement.querySelectorAll(
+                        "[data-dz-remove]"
+                    )) {
+                    removeLink.addEventListener("click", removeFileEvent);
+                }
+            }
+        }
+    </script>
+
+
+    <!--#4DSCRIPT/WAPI_formInit-->
+</body>
+
+
+</html>

@@ -1,0 +1,11 @@
+<div class="form-group">
+    <div class="card-js">
+        <input class="card-number" id="cc-number" name="card-number">
+        <input class="name" id="cc-name" name="card-holders-name" placeholder="Name on card">
+        <input class="expiry-month" id="cc-expiry-month" name="expiry-month">
+        <input class="expiry-year" id="cc-expiry-year" name="expiry-year">
+        <input class="cvc" id="cc-cvc" name="cvc">
+
+    </div>
+
+</div>

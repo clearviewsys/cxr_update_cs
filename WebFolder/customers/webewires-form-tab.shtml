@@ -1,0 +1,391 @@
+<ul class="nav nav-pills nav-justified" role="tablist">
+    <li role="presentation" class="active"><a href="#customer-tab" aria-controls="customer-tab" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"> </span> Sending Party [
+            <!--4DTEXT [webewires]fromParty.fullName-->]]</a></li>
+
+    <li role="presentation"><a href="#beneficiary-tab" aria-controls="beneficiary-tab" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>Beneficiary [
+            <!--4DTEXT [webewires]toParty.fullName-->]</a></li>
+
+    <li role="presentation"><a href="#destination-tab" aria-controls="destination-tab" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-send" aria-hidden="true"> </span> eWire Amounts [
+            <!--4DTEXT string([webewires]toamount;"###,###,##0.00")-->]</a></li>
+
+    <li role="presentation"><a href="#delivery-tab" aria-controls="delivery-tab" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-plane" aria-hidden="true"> </span> Banking Information</a></li>
+
+    <li role="presentation"><a href="#thirdparty-tab" aria-controls="thirdparty-tab" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-paperclip" aria-hidden="true"> </span> Third Party Information</a>
+        <div id='thirdparty-tab-status' class="pull-right"></div>
+    </li>
+
+    <li role="presentation"><a href="#aml-tab" aria-controls="aml-tab" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"> </span> Purpose</a>
+        <div id='aml-tab-status' class="pull-right"></div>
+    </li>
+
+    <li role="presentation"><a href="#attachments-tab" aria-controls="attachments-tab" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-paperclip" aria-hidden="true"> </span> Attachments</a>
+        <div id='attachments-tab-status' class="pull-right"></div>
+    </li>
+
+    <li role="presentation"><a href="#confirm-tab" aria-controls="confirm-tab" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-paperclip" aria-hidden="true"> </span> Confirmation</a>
+        <div id='confirm-tab-status' class="pull-right"></div>
+    </li>
+</ul>
+
+<!-- Tab panes -->
+
+<div class="tab-content">
+
+    <!-- SENDER-CUSTOMER INFORMATION -->
+    <div role="tabpanel" class="tab-pane active" id="customer-tab">
+        <div class="panel panel-default">
+
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___linkid, label:Link-ID, readonly:true}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromparty___fullName, label:Sender, readonly:true,  onchange:wapiObjectMethod}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromparty___address, label:Sender-Address, placeholder:Address, readonly:true}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromparty___city, label:Sender-City, placeholder:City, readonly:true, width:100, pattern:alpha}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromparty___email, label:Sender-Email, placeholder:Email, readonly:true, width:100, pattern:email}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromparty___phone, label:Sender-Phone, placeholder:Main-Phone, readonly:true, width:100, pattern:phone}-->
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- BENEFICIARY INFORMATION -->
+    <div role="tabpanel" class="tab-pane active" id="beneficiary-tab">
+        <div class="panel panel-default">
+
+            <div class="panel-body">
+                <!-- Beneficiary from agent is the Customer, Sender is the Link -->
+                <!-- popup to select from possible beneficiaries using sameAsLinkID -->
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___customerid, label:Send-To, choicelist:webGetChoiceListBeneficiaries, readonly:false, onchange:wapiObjectMethod}-->
+                </div>
+
+
+                <div class='well' id='beneficiary-link' style="display: none">
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___customerid, label:Customer-ID, readonly:true}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___fullname, label:Beneficiary, readonly:true, width:100, onchange:wapiObjectMethod}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___cellphone, label:Beneficiary-Cell-Phone, readonly:true, width:100, onchange:wapiObjectMethod, pattern:phone}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___relationship, label:Relationship, placeholder:Relationship-to-customer, readonly:true, width:100}-->
+                    </div>
+                    
+                </div>
+
+                <!-- SEARCH FOR EXISTING CUSTOMERS (BENEFICIARY)-->
+                <div class="well" id='beneficiary-search' style='display: none'>
+                    <p class="lead">Search for an existing beneficiary</p>
+                    <p>Use either the customer id OR the date of birth with their name.</p>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___customerid, label:CXR-ID, readonly:false, width:100, onchange:wapiObjectMethod, placeholder:Enter-beneficiary-customer-id-to-search}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___dob, label:Date-of-Birth, readonly:false, width:100, onchange:wapiObjectMethod, placeholder:Enter-beneficiary-date-of-birth-to-search}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:customers___fullname, label:Name, readonly:false, width:100, onchange:wapiObjectMethod, placeholder:Enter-beneficiary-full-name-or-company-name-to-search}-->
+                    </div>
+
+
+                </div>
+
+                <!-- DATA ENTRY FOR NEW BENEFICIARY -->
+                <div class='well' id='beneficiary-new' style='display: none'>
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___fullname, label:Beneficiary-Name, placeholder:Full-Name, readonly:false, width:100, onchange:wapiObjectMethod}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___address, label:Beneficiary-Address, placeholder:Address, readonly:false}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___city, label:Beneficiary-City, placeholder:City, readonly:false, width:100, pattern:alpha}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___email, label:Beneficiary-Email, placeholder:Email, readonly:false, width:100, pattern:email}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___cellphone, label:Cell-Phone, placeholder:Beneficiary-Cell-Phone, readonly:false, width:100, pattern:phone}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webeWires___toparty___relationship, label:Relationship, placeholder:Beneficiary-Relationship, readonly:false, width:100}-->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SEND AN EWIRE INFORMATION -->
+    <div role="tabpanel" class="tab-pane active" id="destination-tab">
+        <div class="panel panel-default">
+
+
+            <div class="panel-body">
+
+                <!--4DIF (true)-->
+                <table border-spacing='10px'>
+                    <tr>
+                        <td>
+                            <!--#4DSCRIPT/WAPI_textGroup/{field:webewires___fromcountrycode, label:From, width:100}-->
+                        </td>
+                        <td> &nbsp;</td>
+                        <td>
+                            <!--#4DSCRIPT/WAPI_textGroup/{field:webewires___tocountrycode, label:To, width:100}-->
+                        </td>
+                    </tr>
+                </table>
+                <!--4DENDIF-->
+
+
+
+                <!-- SENDING AMOUNT -->
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toamount, step:0.01, label:To-amount, readonly:false, addonimage:<>basecurrencyflag, addon-pre-image:<>basecurrencyflag, addon-post:ALL, onchange:wapiObjectMethod, required:true, inputmask-alias:decimal, inputmask-greedy:false, inputmask-autogroup:true, inputmask-groupseparator:comma, inputmask-radixpoint:period, inputmask-placeholder:0.00, inputmask-digits:2, inputmask-digitsoptional:false}-->
+                </div>
+
+
+                <!--EXCHANGE RATE AND INVERSE RATE -->
+                <div class="form-group">
+                    <div class="pull-right"><span id='rateRefresh' class="glyphicon glyphicon-refresh" onclick="wapiObjectMethod(event)"></span></div>
+
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___directrate, step:0.00001, label:Direct-Rate, readonly:false, addon-post:ALL/ALL, required:true, align:right, onchange:wapiObjectMethod, inputmask-alias:decimal}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___inverserate, step:0.00001, label:Inverse-Rate, readonly:false, addon-post:ALL/ALL, required:true, align:right, onchange:wapiObjectMethod, inputmask-alias:decimal}-->
+                </div>
+
+
+                <!--#4DIF False-->
+                <div class='form-group'>
+
+                    <label class="form-control-label" for='webewires-sourcerate-input-inverse' id='webewires-sourcerate-input-inverse-label'>Inverse Rate</label>
+
+                    <div class="input-group">
+                        <input type='number' class="form-control" id='webewires-sourcerate-input-inverse' value='' name='webewires-sourcerate-input-inverse' onchange='wapiObjectMethod(event)' step="0.00001">
+
+                        <div id='webewires-sourcerate-addon-post-inverse' class="input-group-addon">NZD/FJD</div>
+                    </div>
+
+                    <div id='webewires-sourcerate-input-error-inverse'></div>
+
+                    <div><span class='text-muted' id='webewires-sourcerate-inverse'>
+                        </span>
+                        <span id='webewires-currency-rate-updated' class='text-muted small pull-right' style='padding-top:4px'> Updated: </span> </div>
+                </div>
+                <!--#4DENDIF-->
+
+                <!-- FEES -->
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromfee, step:0.01, label:Priority-service-fee, readonly:false, choicelist:webGetChoicelistFeeStructure, choicelistselected:25, onchange:wapiObjectMethod, required:false, addon-pre:glyphicon-usd, addon-pre-image:<>basecurrencyflag, addon-post:ALL }-->
+                </div>
+
+                <!--LOCAL AMOUNT INCLUSIVE OF FEES -->
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromamount, step:0.01, label:Total-Local-Amt-Due, readonly:false, onchange:wapiObjectMethod, addon-pre:glyphicon-usd, addon-pre-image:<>basecurrencyflag, addon-post:ALL, inputmask-alias:decimal, inputmask-greedy:false, inputmask-autogroup:true, inputmask-groupseparator:comma, inputmask-radixpoint:period, inputmask-placeholder:0.00, inputmask-digits:2, inputmask-digitsoptional:false}-->
+                </div>
+
+                <!--#4DIF false-->
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___frommop, label:Method-of-payment-received, placeholder:Method-of-payment-received, readonly:false, width:100, choicelist:webGetChoiceListMOP, required:true}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tomop, label:Delivery-payment-method, placeholder:Delivery-payment-method, readonly:false, width:100, choicelist:webGetChoiceListMOP}-->
+                </div>
+                <!--#4DENDIF-->
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- DELIVERY INFORMATION -->
+    <div role="tabpanel" class="tab-pane active" id="delivery-tab">
+        <div class="panel panel-default">
+
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___dotransfertobank, label:Direct-deposit-to-bank, type:checkbox, readonly:false, onchange:wapiObjectMethod}-->
+                </div>
+
+                <div id='delivery-hidden' style='display: none'>
+                    <div class="form-group">
+                        <select class='form-control custom-select' id='wiretemplates-select' name='wiretemplates-select' onchange='wapiObjectMethod(event)'>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___bankname, label:Bank-name, readonly:false, placeholder:Bank-name, width:100, onchange:wapiObjectMethod}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___accountno, label:Account-No/IBAN, placeholder:Bank-account-or-IBAN, readonly:false, width:100}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___swift, label:SWIFT-Code/BIC, placeholder:SWIFT-Code-or-BIC, readonly:false, width:100}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___details, label:Bank-details, placeholder:Additional-bank-details, readonly:false, width:100}-->
+                    </div>
+
+                    <!--#4DIF false-->
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___routingcode, label:Routing-Code, placeholder:Routing-code, readonly:false}-->
+                    </div>
+                    <!--#4DENDIF-->
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- THIRD PARTY INFORMATION -->
+    <div role="tabpanel" class="tab-pane active" id="thirdparty-tab">
+        <div class="panel panel-default">
+
+            <div class="panel-body">
+
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tothirdparty___dosendthirdparty, label:Is-payment-for-a-third-party?, type:checkbox, readonly:false, onchange:wapiObjectMethod}-->
+                </div>
+
+                <div id='thirdparty-hidden' style='display: none'>
+
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tothirdparty___firstname, label:First-Name, placeholder:Third-party-recipient, readonly:false, pattern:alpha}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tothirdparty___lastname, label:Last-Name, placeholder:Third-party-recipient, readonly:false, onchange:wapiObjectMethod, pattern:alpha}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tothirdparty___address, label:Address, placeholder:Third-party-recipient, readonly:false}-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tothirdparty___city, label:City, placeholder:Third-party-recipient, readonly:false, pattern:alpha}-->
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- AML INFORMATION -->
+    <div role="tabpanel" class="tab-pane active" id="aml-tab">
+        <div class="panel panel-default">
+
+            <div class="panel-body">
+
+                <!--#4DIF true-->
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___aml_info___purposeoftransaction, label:Purpose, readonly:false, placeholder:Purpose-of-transaction, onchange:wapiObjectMethod, required:true, choicelist:webgetchoicelistpurposetrans}-->
+                </div>
+
+                <div class="form-group">
+                    <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___aml_info___sourceoffunds, label:Source-of-funds, placeholder:Source-of-funds, readonly:false, required:true, choicelist:webgetchoicelistsourcefunds}-->
+                </div>
+                <!--#4DENDIF-->
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ATTACHMENTS INFORMATION -->
+    <div role="tabpanel" class="tab-pane active" id="attachments-tab">
+        <div class="panel panel-default">
+
+            <div class="panel-body">
+
+                <!-- DROPZONE AREA FOR ADDITIONAL ATTACHMENTS -->
+                <div class="row" id="wapi-dropzone-group">
+                    <div class="dz-clickable dropzone-previews" id="wapi-dropzone">
+                        <div class="dz-message text-center" style="padding-bottom: 12px">
+                            <h3><span class="label label-default">Click or Drop Files Here to Attach</span></h3>
+                        </div>
+                    </div>
+
+                    <div class="form-group fallback">
+                        <input id='dropzone-upload-file' type="file" multiple />
+                    </div>
+                </div>
+
+                <!-- PREVIOUSLY SUBMITTED ATTACHMENTS -->
+                <!--#4DSCRIPT/webSelectRelatedWebAttachments/[webewires]-->
+
+                <div class="well">
+                    <div class="row row-eq-height">
+                        <!--#4DLOOP [WebAttachments]-->
+                        <div class="col-sm-3">
+                            <!--#4DSCRIPT/wapi_formMediaGroup/{field-preview:webattachments___preview, field-id:webattachments___uuid, field-path:webattachments___filepath, field-description:webattachments___description, field-name:webattachments___filename, field-mimetype:webattachments___mimetype, readonly:true}-->
+                        </div>
+                        <!--#4DENDLOOP-->
+
+                    </div>
+                </div>
+                <div class="text-centered">*Previously submitted attachments</div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="confirm-tab">
+
+    </div>
+</div>
+
+
+<!--#4DSCRIPT/WAPI_formInit-->

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Send Money Request</title>
+
+    <!--#4DSCRIPT/webSelectCustomerRecord-->
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/head.shtml-->
+
+    <!--#4DSCRIPT/WAPI_pageStart/{onload:true, sessiontimer:true, dz-div:webewires-form-create, dz-post:true, dz-maxfilesize:10, dz-maxfiles:4}-->
+
+    <script>
+        function setProgressLabel(theLabel, thePercent) {
+            $('#progress-label').text(theLabel);
+            $('#progress-bar').css('width', thePercent + '%').attr('aria-valuenow', thePercent);
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/menubar.shtml-->
+    <main>
+
+        <div class="page-header hidden-xs">
+
+            <div class='container'>
+                <h1>Hello
+                    <!--#4DTEXT [Customers]firstName-->. <small>&nbsp; Where do you want to send money today.</small>
+                </h1>
+            </div>
+        </div>
+
+        <div class="container content">
+
+            <!--Row with two equal columns-->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <!--#4DHTML WAPI_includeAlertMessage-->
+
+                    <form class="" enctype="multipart/form-data" id='webewires-form-create-quote'
+                        action="/customers/createRecord" method="post">
+
+                        <!--#4DSCRIPT/WAPI_formHeader/{table:webewires, field1:webewires___fromccy, field2:webewires___fromCountryCode, field3:webewires___toccy, field4:webewires___customerid, field5:webewires___fromfee, field6:webewires___directrate, field7:webewires___spotrate, field8:webewires___tobankinginfo___dotransfertobank, field9:webewires___paymentinfo___deliverymethod, field10:webewires___paymentinfo___deliverymethod2,field11:webewires___paymentinfo___paymentmethod, field12:webewires___aml_info___tomopcode, success:/customers/webewires-confirm.shtml, failure:/customers/home.shtml}-->
+
+                        <input type="hidden" id="webewires-pay-method" name="webewires-pay-method" value="">
+
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading hidden-xs">
+                                <ul class="nav nav-pills nav-justified" role="tablist">
+
+                                    <li role="presentation"
+                                        onclick="setProgressLabel('Who do you want to send money to?',36)"
+                                        class="active">
+                                        <a href="#beneficiary-tab" aria-controls="beneficiary-tab" role="tab"
+                                            data-toggle="pill"><span class="fa fa-user fa-2x"></span></a>
+                                    </li>
+
+                                    <li role="presentation"
+                                        onclick="setProgressLabel('How would you like this delivered?',48)">
+                                        <a href="#delivery-tab" aria-controls="delivery-tab" role="tab"
+                                            data-toggle="pill"><span class="fa fa-bank fa-2x"></span></a></li>
+
+                                    <li role="presentation"
+                                        onclick="setProgressLabel('How much do you want to send?',60)"><a
+                                            href="#destination-tab" aria-controls="destination-tab" role="tab"
+                                            data-toggle="pill"><span class="fa fa-dollar fa-2x"></span></a></li>
+
+
+                                    <li role="presentation"
+                                        onclick="setProgressLabel('What is the purpose of this transaction.',84)"><a
+                                            href="#aml-tab" aria-controls="aml-tab" role="tab" data-toggle="pill"><span
+                                                class="fa fa-list-alt fa-2x"></span></a>
+                                    </li>
+
+
+                                    <li role="presentation"
+                                        onclick="setProgressLabel('Please review and confirm your transaction.',100)"><a
+                                            href="#confirm-tab" aria-controls="confirm-tab" role="tab"
+                                            data-toggle="pill"><span class="fa fa-check fa-2x"></span></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="panel-body">
+                                <div class="progress hidden-xs">
+                                    <div id="progress-bar"
+                                        class="progress-bar progress-bar-success progress-bar-striped"
+                                        role="progressbar" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 7%">
+                                        <span class="sr-only">32% Complete (success)</span>
+                                    </div>
+                                </div>
+
+                                <div id="progress-label" class="text-center">
+                                    Who do you want to send money to?
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Tab panes -->
+
+                        <div class="tab-content">
+
+                            <!-- BENEFICIARY INFORMATION -->
+                            <div role="tabpanel" class="tab-pane fade in active" id="beneficiary-tab">
+                                <div class="panel panel-default">
+
+                                    <div class="panel-body">
+
+                                        <!-- popup to select from possible beneficiaries using sameAsLinkID -->
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___linkid, label:Send-To, choicelist:webGetChoiceListBeneficiaries, readonly:false, onchange:wapiShowProcessing(true);wapiObjectMethod}-->
+                                        </div>
+
+                                        <div id="beneficiary-create-group" class="form-group">
+
+                                            <input type="button" class="btn btn-primary btn-block" id="wapi-create-btn"
+                                                name="wapi-create-btn" value="Or Add a New Beneficiary"
+                                                onclick="wapiCreateForm()"
+                                                data-wapi-success="webewires-create-quote.shtml"
+                                                data-wapi-request="customers/links-create.shtml" data-wapi-table="links"
+                                                data-wapi-action="create" data-wapi-primarykey="links___linkid"
+                                                data-wapi-failure="customers/home.shtml">
+                                        </div>
+
+
+                                        <div class='well' id='beneficiary-link' style="display: none">
+                                            <!--#4DIF WAPI_isDebug-->
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___linkid, label:Beneficiary-ID, readonly:true}-->
+                                            </div>
+                                            <!--#4DENDIF-->
+
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___fullname, label:Beneficiary, readonly:true, width:100}-->
+                                            </div>
+
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___cellphone, label:Beneficiary-Cell-Phone, readonly:true, width:100, onchange:wapiObjectMethod, pattern:phone}-->
+                                            </div>
+
+                                            <!--#4DIF true-->
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___countrycode, label:Country, readonly:true, width:100, pattern:alpha}-->
+                                            </div>
+                                            <!--#4DENDIF-->
+
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___relationship, label:Relationship, placeholder:Relationship-to-customer, readonly:true, width:100}-->
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="panel-footer">
+                                        <a class="btn btn-primary btnPrevious">Previous</a>
+
+                                        <div class="pull-right">
+                                            <a class="btn btn-primary btnNext">Next</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- DELIVERY INFORMATION -->
+                            <div role="tabpanel" class="tab-pane fade" id="delivery-tab">
+                                <div class="panel panel-default">
+
+                                    <div class="panel-body">
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___aml_info___tomop, label:Delivery-method, readonly:true}-->
+                                        </div>
+
+                                        <div id='delivery-bank-hidden' style='display: none'>
+
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___bankname, label:Bank-name, readonly:false, placeholder:Bank-name, width:100, onchange:wapiObjectMethod}-->
+                                            </div>
+
+                                            <!--#4DIF webIsBankFieldRequired([webewires]toCountryCode;"iban")-->
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___accountno, label:IBAN, placeholder:IBAN, readonly:false, width:100, onchange:wapiObjectMethod}-->
+                                            </div>
+                                            <!--#4DELSE-->
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___accountno, label:Account-Number, placeholder:Account-Number, readonly:false, width:100, onchange:wapiObjectMethod}-->
+                                            </div>
+                                            <!--#4DENDIF-->
+
+                                            <!--#4DIF webIsBankFieldRequired([webewires]toCountryCode;"account")-->
+
+                                            <!--#4DENDIF-->
+
+                                            <!--#4DIF webIsBankFieldRequired([webewires]toCountryCode;"transit")-->
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___transitcode, label:Bank-Transit-Code, placeholder:Bank-Transit-Code, readonly:false, width:100, onchange:wapiObjectMethod}-->
+                                            </div>
+                                            <!--#4DENDIF-->
+
+                                            <!--#4DIF webIsBankFieldRequired([webewires]toCountryCode;"swift")-->
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___swift, label:SWIFT-Code, placeholder:SWIFT-Code, readonly:false, width:100, onchange:wapiObjectMethod}-->
+                                            </div>
+                                            <!--#4DENDIF-->
+
+                                            <!--#4DIF webIsBankFieldRequired([webewires]toCountryCode;"ifsc")-->
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___swift, label:IFSC-Code, placeholder:IFSC-Code, readonly:false, width:100, onchange:wapiObjectMethod}-->
+                                            </div>
+                                            <!--#4DENDIF-->
+
+                                            <!--#4DIF webIsBankFieldRequired([webewires]toCountryCode;"aba")-->
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___routingcode, label:Routing-Code, placeholder:Routing-code, readonly:false, onchange:wapiObjectMethod}-->
+                                            </div>
+                                            <!--#4DENDIF-->
+
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tobankinginfo___details, label:Bank-details, placeholder:Additional-bank-details, readonly:false, width:100}-->
+                                            </div>
+
+                                        </div>
+
+                                        <div id='delivery-mobilewallet-hidden' style="display: none">
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toparty___cellphone, label:Beneficiary-Cell-Phone, readonly:false, width:100, onchange:updateMobileNumber(this.value), placeholder:Number-associated-with-wallet, pattern:phone}-->
+                                            </div>
+                                        </div>
+
+                                        <div id='delivery-moneygram-hidden' style="display: none">
+
+                                            <div class="form-group">
+                                                <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___paymentinfo___deliverymethod2, label:Money-to-be-delivered-via, readonly:true, placeholder:Delivery-method, width:100, onchange:wapiObjectMethod}-->
+                                            </div>
+
+                                            <div id='webewires-delivery-mg-required'></div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="panel-footer">
+                                        <a class="btn btn-primary btnPrevious">Previous</a>
+
+                                        <div class="pull-right">
+                                            <a class="btn btn-primary btnNext">Next</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- SEND AN EWIRE INFORMATION -->
+                            <div role="tabpanel" class="tab-pane fade" id="destination-tab">
+                                <div class="panel panel-default">
+
+
+                                    <div class="panel-body">
+
+                                        <!--LOCAL AMOUNT INCLUSIVE OF FEES -->
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="webewires-amount-input"
+                                                id="webewires-amount-label">You send</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <img id="webewires-amount-addon-pre" height="20" src="">
+                                                </div>
+                                                <input type="tel" class="form-control" id="webewires-amount-input"
+                                                    name="webewires-amount-input" onchange="wapiObjectMethod(event)"
+                                                    value="" readonly>
+                                                <div id="webewires-amount-addon-post" class="input-group-addon"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SENDING AMOUNT -->
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___toamount,  label:They-receive, readonly:true, addonimage:<>basecurrencyflag, addon-pre-image:<>basecurrencyflag, addon-post:ALL, onchange:wapiObjectMethod, required:true, inputmask:currency}-->
+                                        </div>
+
+                                        <!--EXCHANGE RATE AND INVERSE RATE -->
+                                        <div class="form-group">
+
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___inverserate, label:Exchange-Rate, readonly:true, addon-post:ALL/ALL, required:true, align:right, onchange:wapiObjectMethod, inputmask-alias:decimal}-->
+                                        </div>
+
+                                        <!--#4DIF false-->
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___inverserate, label:Inverse-Rate, readonly:true, addon-post:ALL/ALL, required:true, align:right, onchange:wapiObjectMethod, inputmask-alias:decimal}-->
+                                        </div>
+                                        <!--#4DENDIF-->
+
+                                        <!-- FEES -->
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromfee, label:Fee, readonly:true, addon-pre:glyphicon-usd, addon-pre-image:<>basecurrencyflag, addon-post:ALL }-->
+                                        </div>
+
+
+                                        <!--LOCAL AMOUNT INCLUSIVE OF FEES -->
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___fromamount, label:Total-due, readonly:true, onchange:wapiObjectMethod, addon-pre:glyphicon-usd, addon-pre-image:<>basecurrencyflag, addon-post:ALL, inputmask:currency, readonly:true}-->
+                                        </div>
+
+
+                                        <!--#4DIF False-->
+                                        <div class='form-group'>
+
+                                            <label class="form-control-label" for='webewires-sourcerate-input-inverse'
+                                                id='webewires-sourcerate-input-inverse-label'>Inverse Rate</label>
+
+                                            <div class="input-group">
+                                                <input type='number' class="form-control"
+                                                    id='webewires-sourcerate-input-inverse' value=''
+                                                    name='webewires-sourcerate-input-inverse'
+                                                    onchange='wapiObjectMethod(event)' step="0.00001">
+
+                                                <div id='webewires-sourcerate-addon-post-inverse'
+                                                    class="input-group-addon">NZD/FJD</div>
+                                            </div>
+
+                                            <div id='webewires-sourcerate-input-error-inverse'></div>
+
+                                            <div><span class='text-muted' id='webewires-sourcerate-inverse'>
+                                                </span>
+                                                <span id='webewires-currency-rate-updated'
+                                                    class='text-muted small pull-right' style='padding-top:4px'>
+                                                    Updated: </span> </div>
+                                        </div>
+                                        <!--#4DENDIF-->
+
+                                        <!--#4DIF false-->
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___frommop, label:Method-of-payment-received, placeholder:Method-of-payment-received, readonly:false, width:100, choicelist:webGetChoiceListMOP, required:true}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___tomop, label:Delivery-payment-method, placeholder:Delivery-payment-method, readonly:false, width:100, choicelist:webGetChoiceListMOP}-->
+                                        </div>
+                                        <!--#4DENDIF-->
+
+
+
+                                    </div>
+
+                                    <div class="panel-footer">
+                                        <a class="btn btn-primary btnPrevious">Previous</a>
+
+                                        <div class="pull-right">
+                                            <a class="btn btn-primary btnNext">Next</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- AML-MONEYGRAM INFORMATION -->
+                            <div role="tabpanel" class="tab-pane fade" id="aml-tab">
+                                <div class="panel panel-default">
+
+                                    <div class="panel-body">
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___aml_info___purposeoftransaction, label:Purpose, readonly:false, placeholder:Purpose-of-transaction, onchange:wapiObjectMethod, required:true, choicelist:webgetchoicelistpurposetrans}-->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___aml_info___sourceoffunds, label:Source-of-funds, placeholder:Source-of-funds, readonly:false, required:true, onchange:wapiObjectMethod, choicelist:webgetchoicelistsourcefunds, choicelistselected:bw}-->
+                                        </div>
+
+
+                                        <!--#4DIF ob get([webewires]paymentinfo;"deliveryMethod") = "MG"-->
+                                        <div class="form-group">
+                                            MoneyGram additional data elements
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___paymentinfo___deliverymethod, label:Delivery-Method, readonly:true}-->
+                                        </div>
+                                        <div id='webewires-aml-mg-required'></div>
+
+                                        <!--#4DENDIF-->
+                                    </div>
+
+                                    <div class="panel-footer">
+                                        <a class="btn btn-primary btnPrevious">Previous</a>
+
+                                        <div class="pull-right">
+                                            <a class="btn btn-primary btnNext">Next</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!--REVIEW AND CONFIRM -->
+                            <div role="tabpanel" class="tab-pane fade" id="confirm-tab">
+                                <div class="panel panel-default">
+
+                                    <div class='panel-body'>
+
+                                        <div class="panel panel-default" style="width: 400px; margin: auto">
+                                            <div class="panel-body">
+                                                <samp id="webewire-receipt"></samp>
+                                            </div>
+                                        </div>
+
+                                        <!--MG SLA IF APPLICABLE-->
+                                        <!--#4DIF ob get([webewires]paymentinfo;"deliveryMethod") = "MG"-->
+                                        <div class="form-group" style="padding-top: 16px; padding-bottom: 8px">
+                                            <label>MoneyGram Service Agreement</label>
+                                            <p>
+                                                <!--#4DTEXT webgetkeyvalue("web.customers.webewires.mg.sla")-->
+                                            </p>
+                                        </div>
+                                        <!--#4DENDIF-->
+
+                                        <div class="form-group" style="padding-top: 8px; padding-bottom: 8px">
+
+                                            <label>How will you pay for it?</label>
+                                            <div class="btn-group btn-group-justified" role="group"
+                                                aria-label="tranfer method">
+
+                                                <!--#4DIF (webgetkeyvalue("web.configuration.payments.poli.enabled")="true")-->
+                                                <div class="btn-group" role="group">
+                                                    <button id="webewires-pay-method-poli"
+                                                        name="webewires-pay-method-poli" type="button"
+                                                        class="btn btn-default center-block"
+                                                        onclick="wapiObjectMethod(event)">Poli</button>
+                                                </div>
+                                                <!--#4DENDIF-->
+
+                                                <!--#4DIF (webgetkeyvalue("web.configuration.payments.paymark.enabled")="true")-->
+                                                <div class="btn-group" role="group">
+                                                    <button type="button" class="btn btn-default center-block"
+                                                        id="webewires-pay-method-eft" name="webewires-pay-method-eft"
+                                                        onclick="wapiObjectMethod(event)">Online EFTPOS</button>
+                                                </div>
+                                                <!--#4DENDIF-->
+
+                                                <!--#4DIF (webgetkeyvalue("web.configuration.payments.paypal.enabled")="true")-->
+                                                <div class="btn-group" role="group">
+                                                    <button type="button" class="btn btn-default center-block"
+                                                        id="webewires-pay-method-paypal"
+                                                        name="webewires-pay-method-paypal"
+                                                        onclick="wapiObjectMethod(event)">PayPal</button>
+                                                </div>
+                                                <!--#4DENDIF-->
+
+                                                <!--#4DIF (webgetkeyvalue("web.configuration.payments.square.enabled")="true")-->
+                                                <div class="btn-group" role="group">
+                                                    <button type="button" class="btn btn-default center-block"
+                                                        id="webewires-pay-method-square" name="webewires-pay-method-square"
+                                                        onclick="wapiObjectMethod(event)">Square</button>
+                                                </div>
+                                                <!--#4DENDIF-->
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <!--#4DSCRIPT/WAPI_formGroup/{field:webewires___notes, label:Special-instructions, placeholder:Special-instructions, readonly:false}-->
+                                        </div>
+
+                                        <div id="document-alert-text">
+                                            <!--#4DTEXT webgetkeyvalue("web.customers.webewires.documents.alert")-->
+                                        </div>
+
+                                        <!--#4DIF [Webewires]paymentInfo.deliveryMethod="MG"-->
+                                        <!--#4DSCRIPT/WAPI_4DInclude/customers/mg-fraud-warning.shtml-->
+                                        <!--#4DENDIF-->
+                                        <div>
+                                            <dl>
+                                                <dt>Terms and Conditions</dt>
+                                                <dd>
+                                                    <!--#4DSCRIPT/webGetKeyValue/web.customers.webewires.terms-->
+                                                </dd>
+
+                                            </dl>
+                                        </div>
+
+                                        <div class="form-check" style="padding-top: 10px">
+                                            <label class="form-check-label" for="agreement-input">
+                                                <input type="checkbox" class="form-check-input" id="agreement-input"
+                                                    name="agreement-input" onchange="wapiObjectMethod(event)">
+                                                By checking this you agree to the terms specified above</label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class='panel-footer clearfix'>
+
+                                        <a class="btn btn-primary btnPrevious">Previous</a>
+
+                                        <div class="pull-right">
+                                            <!--4DIF WAPI_isDebug -->
+                                            <input class="btn btn-primary" type="button" value="Print-Debug"
+                                                form="webewires-form-create-quote" onclick="wapiPrintForm(true);" />
+                                            <!--4DENDIF-->
+
+                                            <a class="btn btn-default" href="/customers/home.shtml"
+                                                role="button">Cancel</a>
+
+                                            <input type="button" type='submit' class="btn btn-primary" id="submit-input"
+                                                name="submit-input" form="webewires-form-create-quote"
+                                                onclick="wapiValidateOnSubmit()" disabled
+                                                value="Confirm Send Money Request">
+
+                                        </div>
+                                        <!-- </div> -->
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!--#4DSCRIPT/WAPI_formFooter/{table:webewires}-->
+                        <!--#4DSCRIPT/WAPI_formInit-->
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+    <script type="text/javascript">
+        $('.btnNext').click(function () {
+            debugger;
+            $('.nav-pills > .active').next('li').find('a').trigger('click');
+        });
+
+        $('.btnPrevious').click(function () {
+            if ($('.nav-pills > .active').prev('li').find('a').length == 0) {
+                window.location.href = "home.shtml";
+            } else {
+                $('.nav-pills > .active').prev('li').find('a').trigger('click');
+            }
+        });
+    </script>
+
+    <script>
+        $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+            debugger;
+            // this selects the first input to for required and other validation when they leave
+            //e.target // newly activated tab
+            //e.relatedTarget // previous active tab
+            $('#' + $(this).attr("aria-controls") + ' :input:enabled:visible').not('[readonly]').first().focus()
+        })
+    </script>
+
+    <script>
+        function updateMobileNumber(mobileNum) {
+            debugger;
+
+            $('[id=webewires-toparty-cellphone-input]').val(mobileNum);
+            wapiObjectMethod(event);
+        }
+    </script>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/footer.shtml-->
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/dz_preview.shtml-->
+
+
+</body>
+
+
+
+</html>

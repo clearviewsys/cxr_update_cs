@@ -1,0 +1,7 @@
+<!--NO LONGER USED - MOVED TO PAYMENT-POLIPAY-API.SHTML AND PAYMENT-POLIPAY-LINK.SHTM-->
+
+
+<div id="payment-container" class="well well-lg">
+    <h2><span class="fa fa-check-circle"></span>&nbsp;PAID <small>&nbsp;This transaction has been paid.</small>
+    </h2>
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap -->
+    <link href="/app/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <script src="/app/js/bootstrap.min.js"></script>
+<style>
+
+    .container {max-width:100%; min-width: 50%; padding-top: 20px; margin-right: auto; margin-left: auto; }
+    .panel-primary {border-color:#337ab7}
+
+
+</style>
+
+
+</head>
+<body>
+    
+
+    
+    
+<div class="container">
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">Thank you!</div>
+        </div>
+
+        <div style="padding-top:30px" class="panel-body">
+            <h3>Dear, <strong><!--#4DVar webFirstName --> <!--#4DVar webLastName --> </strong></h3>
+
+            <strong>Please check your email</strong> <!--#4DVar webEmail --> for further instructions on how to validate
+            your account setup.</p>
+            <hr>
+            <p>
+                Having trouble? <a href="">Contact us</a>
+            </p>
+
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <a class="btn btn-primary btn-sm" href="confirmEmailToken.shtml" role="button">Continue to email
+                        confirmation</a>
+                    <a class="btn btn-success btn-sm" href="login.shtml" role="button">Continue to login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--#4DINCLUDE ../include/footer.shtml -->
+
+</div>
+
+
+</body>
+</html>
+ 

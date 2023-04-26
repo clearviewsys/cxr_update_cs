@@ -1,0 +1,34 @@
+<div id='dialog' class='modal fade' tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Client Details</h4>
+            </div>
+
+
+            <div class="modal-body" id="dialog-body">
+                <!-- dialog form inserted here -->
+            </div>
+
+
+            <div class="modal-footer">
+                <div class="btn-toolbar" role="toolbar" style="margin: 0;">
+                    <div class="button-group" role="group">
+                        <form enctype="multipart/form-data" id='links-update-btn-form' action="postPage" method="post">
+                            <!--#4DSCRIPT/WAPI_formHeader/{table:links, primarykey:links___linkid, action:update, post:agents/links-update.shtml, print:/agents/links-registration-print.shtml}-->
+                            <input id="links-update-button" class="btn btn-primary" type="submit" value="Edit" style='display:block;'>
+                        </form>
+                    </div>
+                    <div class="button-group pull-right" role="group">
+                        <!--#4DIF WAPI_isDebug-->
+                        <input class="btn btn-primary" type="button" value="Debug-Print" form="links-form" onclick="wapiPrintForm(true);" />
+                        <!--#4DENDIF-->
+                        <input class="btn btn-primary" type="button" value="Print Registration" form="links-form" onclick="wapiPrintForm();" />
+                        <button type="button" class="btn btn-primary" data-dismiss='modal'>Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
