@@ -1,0 +1,1 @@
+XB_GetBag (BagRef; BagItem) --> BagRef  

@@ -1,0 +1,1 @@
+XB_GetPicture (BagRef; BagItem)  --> Picture  

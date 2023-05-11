@@ -1,0 +1,1 @@
+XB_GetArrayLong (BagRef; BagItem; ElementNumber) --> Long  

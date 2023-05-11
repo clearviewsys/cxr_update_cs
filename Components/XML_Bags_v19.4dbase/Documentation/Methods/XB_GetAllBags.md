@@ -1,0 +1,1 @@
+XB_GetAllBags (BagRef; ->TextArray)  

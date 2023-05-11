@@ -1,0 +1,1 @@
+Sync_Get_Table_TimeStamp(->Table) --> Text   (Timestamp table last updated)  

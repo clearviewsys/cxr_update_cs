@@ -1,0 +1,1 @@
+XB_GetArrayReal (BagRef; BagItem; ElementNumber) --> Real  

@@ -1,0 +1,1 @@
+XB_DeleteItem (BagRef; BagItem)  

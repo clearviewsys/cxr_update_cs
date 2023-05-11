@@ -1,0 +1,1 @@
+XB_LockBag (BagRef)  --> Boolean  

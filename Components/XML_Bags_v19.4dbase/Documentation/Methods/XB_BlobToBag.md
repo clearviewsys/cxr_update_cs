@@ -1,0 +1,1 @@
+XB_BlobToBag (Blob{; Offset{; PassPhrase}}) --> BagRef  

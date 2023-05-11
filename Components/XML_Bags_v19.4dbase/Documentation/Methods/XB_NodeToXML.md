@@ -1,0 +1,1 @@
+XB_NodeToXML (BagRef; BagItem{; FilePath})  

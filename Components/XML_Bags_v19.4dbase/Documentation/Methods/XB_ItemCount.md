@@ -1,0 +1,1 @@
+XB_ItemCount (BagRef{; BagItem})  --> Long  

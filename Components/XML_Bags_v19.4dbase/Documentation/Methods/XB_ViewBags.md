@@ -1,0 +1,1 @@
+XB_ViewBags({BagRef1; ...; BagRefN})  If no Bag reference passed, will show all available bags in drop down.  

@@ -1,0 +1,1 @@
+XB_GetArrayBoolean (BagRef; BagItem; ElementNumber) --> Boolean  

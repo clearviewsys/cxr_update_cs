@@ -1,0 +1,1 @@
+XB_GetRecord (BagRef; RecordItem; ->Table{; ->FilterArray})   

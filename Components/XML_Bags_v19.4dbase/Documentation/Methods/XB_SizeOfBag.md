@@ -1,0 +1,1 @@
+XB_SizeOfBag (BagRef) --> Long  

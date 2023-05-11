@@ -1,0 +1,1 @@
+XB_PutArrayDate (BagRef; BagItem; ElementNumber; Date)  

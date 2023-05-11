@@ -1,0 +1,1 @@
+XB_BagGetLongFromXMLRef (BagRef)  --> Longint  

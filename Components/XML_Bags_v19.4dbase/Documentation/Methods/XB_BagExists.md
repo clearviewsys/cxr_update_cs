@@ -1,0 +1,1 @@
+XB_ItemExists (BagRef; EmbeddedBagItem)  --> Boolean  

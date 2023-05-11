@@ -1,0 +1,1 @@
+XB_GetRecordNumber (BagRef; RecordItem)  --> Long  

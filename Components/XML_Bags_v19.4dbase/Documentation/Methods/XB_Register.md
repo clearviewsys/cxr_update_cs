@@ -1,0 +1,1 @@
+XB_Register ({Registration Code}) --> Boolean  

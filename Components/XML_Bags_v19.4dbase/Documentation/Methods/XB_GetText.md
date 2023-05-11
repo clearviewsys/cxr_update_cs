@@ -1,0 +1,1 @@
+XB_GetText (BagRef; BagItem)  --> Text  

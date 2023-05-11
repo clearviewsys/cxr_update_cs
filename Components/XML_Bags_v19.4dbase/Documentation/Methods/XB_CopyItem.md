@@ -1,0 +1,1 @@
+XB_CopyItem (Src_BagRef; Src_Item; Dest_BagRef; Dest_Item)  
