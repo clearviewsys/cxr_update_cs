@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--#4DSCRIPT/webRedirectIfNotAuthorized-->
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/head.shtml-->
+    <!--#4DSCRIPT/webSelectCustomerRecord-->
+    <!--#4DSCRIPT/WAPI_pageStart/{onload:true, sessiontimer:true}-->
+</head>
+
+
+<body>
+
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/menubar.shtml-->
+
+
+    <main role="main">
+
+        <div class='container'>
+            <form id="dashboard" name="dashboard">
+                <!--#4DHTML WAPI_includeAlertMessage-->
+
+                <!--MUST COME AFTER THE ALERT YOU WANT TO CLOSE -->
+
+                <div class="row" style="padding-top: 10px">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="panel-group" id="accordion-customer" role="tablist" aria-multiselectable='true'>
+
+                            <!-- CUSTOMER BASIC INFO-->
+                            <div class='panel panel-default'>
+                                <!--#4DSCRIPT/webSelectCustomerRecord-->
+                                <div class='panel-heading' role='tab' id='customer-tab'>
+                                    <h3 class='panel-title'><a class='collapsed' role='button' data-toggle='collapse' data-parent='#accordian-customer' href='#customer-data' aria-expanded='false' aria-controls='customer-data'>
+                                            <span class="fa fa-user" aria-hidden="true"></span>&nbsp;
+
+                                            <!--#4DTEXT " "+[customers]firstname + " "+[customers]lastname-->
+                                            <!--#4DIF [customers]iscompany-->
+                                            <!--#4DTEXT " - "+[customers]companyname-->
+                                            <!--#4DENDIF-->
+                                        </a>
+                                        <span class="pull-right">
+                                            <!-- add country flag -->
+                                            <!--#4DTEXT webGetFlag_Customers-->
+                                        </span>
+                                    </h3>
+                                </div>
+
+                                <div id='customer-data' class='panel-collapse collapse' role='tabpanel' aria-labelledby='customer-tab'>
+                                    <div class='row'>
+                                        <div class='col-lg-3 col-md-3 colsm-6 col-xs-6'>
+                                            <div class='panel-body'>
+                                                <!--#4DSCRIPT/WAPI_textGroup/{field:customers___address}-->
+                                                <!--#4DSCRIPT/WAPI_textGroup/{field:customers___city, field2:customers___province, field3:customers___postalcode}-->
+                                                <!--#4DSCRIPT/WAPI_textGroup/{field:customers___country_obs}-->
+                                            </div>
+                                        </div>
+                                        <div class='col-lg-3 col-md-3 colsm-6 col-xs-6'>
+                                            <div class='panel-body'>
+                                                <!--#4DSCRIPT/WAPI_textGroup/{field:customers___customerid, label:ID}-->
+                                                <!--#4DSCRIPT/WAPI_textGroup/{field:customers___worktel, label:W}-->
+                                                <!--#4DSCRIPT/WAPI_textGroup/{field:customers___cellphone, label:M}-->
+                                                <!--#4DSCRIPT/WAPI_textGroup/{field:customers___email, label:Email}-->
+                                            </div>
+                                        </div>
+
+                                        <div class='col-lg-3 col-md-3 colsm-6 col-xs-6'>
+                                            <div class='panel-body'>
+                                                <!--#4DSCRIPT/WAPI_textGroup/{field:customers___pictureid_type, label:ID-Type}-->
+                                                <!--#4DSCRIPT/WAPI_textGroup/{field:customers___pictureid_number, label:ID-Num}-->
+                                                <!--#4DSCRIPT/WAPI_textGroup/{field:customers___pictureid_issuedate, label:Issued}-->
+                                                <!--#4DSCRIPT/WAPI_textGroup/{field:customers___documentsVerificationDate, label:Verified}-->
+                                                <!--#4DSCRIPT/WAPI_textGroup/{field:customers___documentsVerifiedBy, label:Verified-By}-->
+                                            </div>
+                                        </div>
+
+                                        <div class='col-lg-3 col-md-3 colsm-6 col-xs-6'>
+                                            <div class='panel-body'>
+                                                <!--#4DTEXT webGetPictureCustomer -->
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- DASHBOARD OPTONS -->
+                <div class="row" style="padding-top: 10px">
+
+
+                    <!--#4DIF (webgetkeyvalue("web.customers.module.rates.show")="false")-->
+                    <!--#4DELSE-->
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="fa fa-exchange"></span>&nbsp; Live eWire Rates</h3>
+                            </div>
+                            <div class="panel-body bg-rates" style="color:white;">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <div><input id="dash-from-country" name="dash-from-country" class=" btn btn-default btn-block" type="button" value="From Country"></div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <div><input id="dash-to-country" name="dash-to-country" class="btn btn-default btn-block" type="button" value="To Country"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="padding-top: 10px">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input id="dash-from-amount" name="dash-from-amount" type="text" class="form-control" value="100" disabled="disabled">
+                                            <div class="input-group-addon hidden-xs">
+                                                <img height="20px" id="dash-from-amount-post" name="dash-from-amount-post" alt="" src="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input id="dash-to-amount" name="dash-to-amount" type="text" class="form-control" value="5850.00" disabled="disabled">
+                                            <div class="input-group-addon hidden-xs">
+                                                <img height="20px" id="dash-to-amount-post" name="dash-to-amount-post" alt="" src="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="padding-top: 10px">Exchange Rate <span id="dash-rate" name="dash-rate" class="pull-right">58.5080</span></div>
+
+                                <div style="padding-top: 8px"><small>*Rates are live and subject to change.</small></div>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--#4DENDIF-->
+
+
+                    <!--#4DIF (webgetkeyvalue("web.customers.module.bookings.show")="false")-->
+                    <!--#4DELSE-->
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="fa fa-dollar"></span><span class="fa fa-euro"></span>&nbsp; FX Bookings</h3>
+                            </div>
+                            <div class="panel-body bg-bookings" style="color:white;">
+
+                                <div>Pending <span class="badge pull-right">
+                                        <!--#4DSCRIPT/webGetBookingsCount/pending--></span></div>
+                                <div>Confirmed <span class="badge pull-right">
+                                        <!--#4DSCRIPT/webGetBookingsCount/confirmed--></span></div>
+                                <div>Completed <span class="badge pull-right">
+                                        <!--#4DSCRIPT/webGetBookingsCount/complete--></span></div>
+                                <div>&nbsp;</div>
+                                <div>&nbsp;</div>
+
+                                <div style="padding-top: 10px">
+                                    <input type="button" class="btn btn-primary btn-block" id="wapi-create-btn" name="wapi-create-btn" value="Buy or Sell" onclick="wapiCreateForm({'request':'customers/bookings-create.shtml', 'table':'bookings', 'action':'create', 'primarykey':'bookings___bookingid'})">
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--#4DENDIF-->
+
+
+                    <!--#4DIF (webgetkeyvalue("web.customers.module.links.show")="false")-->
+                    <!--#4DELSE-->
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="fa fa-users"></span>&nbsp; <a href="/customers/links-list.shtml">Beneficiaries</a></h3>
+                            </div>
+                            <div class="panel-body bg-links" style="color:white;">
+
+                                <div>Current <span class="badge pull-right">
+                                        <!--#4DSCRIPT/webGetLinksCount--></span></div>
+                                <div>&nbsp;</div>
+                                <div>&nbsp;</div>
+                                <div>&nbsp;</div>
+                                <div>&nbsp;</div>
+
+                                <!--#4DIF false-->
+                                <div>On Hold <span class="badge pull-right">
+                                        <!--#4DSCRIPT/webGetLinksCount/hold--></span></div>
+                                <div>Flagged <span class="badge pull-right">
+                                        <!--#4DSCRIPT/webGetLinksCount/flagged--></span></div>
+                                <!--#4DENDIF-->
+
+                                <div style="padding-top: 10px">
+                                    <input type="button" class="btn btn-primary btn-block" id="wapi-create-btn" name="wapi-create-btn" value="Add Beneficiary" onclick="wapiCreateForm({'request':'customers/links-create.shtml', 'table':'links', 'action':'create', 'primarykey':'links___linkid'})">
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--#4DENDIF-->
+
+
+                    <!--#4DIF (webgetkeyvalue("web.customers.module.webewires.show")="false")-->
+                    <!--#4DELSE-->
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="fa fa-money"></span>&nbsp; <a href="/customers/activity.shtml">Money Transfer</a></h3>
+                            </div>
+                            <div class="panel-body bg-requests" style="color:white;">
+
+                                <!--#4DIF false-->
+                                <div>Draft <span class="badge pull-right">
+                                        <!--#4DSCRIPT/webGetWebEwiresCount/draft--></span></div>
+                                <!--#4DENDIF-->
+
+                                <div>Pending Payment <span class="badge pull-right">
+                                        <!--#4DSCRIPT/webGetWebEwiresCount/pendingpayment--></span></div>
+                                <div>Pending Review <span class="badge pull-right">
+                                        <!--#4DSCRIPT/webGetWebEwiresCount/pending--></span></div>
+                                <div>Approved <span class="badge pull-right">
+                                        <!--#4DSCRIPT/webGetWebEwiresCount/approved--></span></div>
+                                <div>Sent <span class="badge pull-right">
+                                        <!--#4DSCRIPT/webGetWebEwiresCount/sent--></span></div>
+                                <div>Complete <span class="badge pull-right">
+                                        <!--#4DSCRIPT/webGetWebEwiresCount/completed--></span></div>
+
+                                <div style="padding-top: 10px">
+                                    <input type="button" class="btn btn-primary btn-block" id="wapi-create-btn" name="wapi-create-btn" value="Send Money" onclick="wapiCreateForm({'request':'customers/webewires-create.shtml', 'table':'webewires', 'action':'create', 'primarykey':'webewires___webewireid'})">
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--#4DENDIF-->
+
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+
+    <!--FOOTER-->
+    <!--#4DSCRIPT/WAPI_4DInclude/customers/include/footer.shtml-->
+
+
+</body>
+
+
+</html>
