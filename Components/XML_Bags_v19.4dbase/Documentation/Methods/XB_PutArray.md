@@ -1,1 +1,0 @@
-XB_PutArray (BagRef; BagItem; ->Array)    

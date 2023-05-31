@@ -1,1 +1,0 @@
-XB_PutPicture (BagRef; BagItem; Picture)   

@@ -1,1 +1,0 @@
-XB_GetVariable (BagRef; BagItem; ->Variable{; ElementNumber})  

@@ -1,1 +1,0 @@
-Sync_Receive(Blob) --> Blob  Pass web service sync request blob and return the result  

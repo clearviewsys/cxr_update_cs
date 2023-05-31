@@ -1,1 +1,0 @@
-XB_GetBlob (BagRef; BagItem)  --> Blob  

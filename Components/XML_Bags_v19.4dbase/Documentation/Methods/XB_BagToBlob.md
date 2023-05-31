@@ -1,1 +1,0 @@
-XB_BagToBlob (BagRef{; PassPhrase}) --> Blob  

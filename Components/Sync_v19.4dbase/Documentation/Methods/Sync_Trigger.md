@@ -1,1 +1,0 @@
-Place in trigger method of any table you want replictated.  Be sure to activate On Save, On Modify, and On Delete triggers.  

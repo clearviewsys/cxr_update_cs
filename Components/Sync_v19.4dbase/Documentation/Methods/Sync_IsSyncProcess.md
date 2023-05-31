@@ -1,1 +1,0 @@
-Sync_IsSyncProcess --> Boolean  (Use in trigger to determine if called during syncing)  

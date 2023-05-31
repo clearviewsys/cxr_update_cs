@@ -1,1 +1,0 @@
-XB_GetDate (BagRef; BagItem)  --> Date  

@@ -1,1 +1,0 @@
-XB_GetBoolean (BagRef; BagItem)  --> Boolean  

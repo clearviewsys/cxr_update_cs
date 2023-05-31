@@ -1,1 +1,0 @@
-XB_PutRaw (BagRef; BagItem; Text)  (Won't update content type)  

@@ -1,1 +1,0 @@
-XB_FindInArray (BagRef; BagItem; TextValue{; StartElement}) --> Integer  

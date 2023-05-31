@@ -1,1 +1,0 @@
-XB_PutRecord (BagRef; RecordItem; ->Table{; ->FilterArray})   

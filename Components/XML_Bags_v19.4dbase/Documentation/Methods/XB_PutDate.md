@@ -1,1 +1,0 @@
-XB_PutDate (BagRef; BagItem; Date)   

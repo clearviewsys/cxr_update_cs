@@ -1,1 +1,0 @@
-XB_RecordExists (BagRef; EmbeddedRecordItem)  --> Boolean  

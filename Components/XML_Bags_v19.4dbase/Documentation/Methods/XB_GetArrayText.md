@@ -1,1 +1,0 @@
-XB_GetArrayText (BagRef; BagItem; ElementNumber) --> Text  

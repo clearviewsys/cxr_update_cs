@@ -1,1 +1,0 @@
-XB_GetAllRecords (BagRef; ->TextArray)  

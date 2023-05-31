@@ -1,1 +1,0 @@
-XB_FileToBag ({FilePath{; Password}}) --> BagRef  

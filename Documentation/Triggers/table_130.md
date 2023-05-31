@@ -1,1 +1,0 @@
-﻿Purpose and Intended Nature of Business Relationship

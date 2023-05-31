@@ -1,1 +1,0 @@
-XB_GetLong (BagRef; BagItem)  --> Long  

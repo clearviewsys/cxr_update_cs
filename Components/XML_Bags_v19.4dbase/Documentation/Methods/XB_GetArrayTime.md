@@ -1,1 +1,0 @@
-XB_GetArrayTime (BagRef; BagItem; ElementNumber) --> Time  

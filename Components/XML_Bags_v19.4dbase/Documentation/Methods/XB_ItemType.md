@@ -1,1 +1,0 @@
-XB_ItemType (BagRef; BagItem)  --> Long  

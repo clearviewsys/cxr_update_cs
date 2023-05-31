@@ -1,1 +1,0 @@
-XB_GetReal (BagRef; BagItem)  --> Real  

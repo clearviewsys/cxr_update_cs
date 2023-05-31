@@ -1,1 +1,0 @@
-XB_BagGetXMLRefFromLong (Longint)  --> BagRef  

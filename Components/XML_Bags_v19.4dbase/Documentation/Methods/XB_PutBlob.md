@@ -1,1 +1,0 @@
-XB_PutBlob (BagRef; BagItem; Blob)   

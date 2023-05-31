@@ -1,1 +1,0 @@
-XB_XMLToBag ({FilePath}) --> BagRef  

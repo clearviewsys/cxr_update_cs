@@ -1,1 +1,0 @@
-XB_PutReal (BagRef; BagItem; Variable)   

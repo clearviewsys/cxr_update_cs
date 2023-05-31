@@ -1,1 +1,0 @@
-XB_CompareItems (BagRef1; BagItem1; BagRef2; BagItem2) --> Integer  

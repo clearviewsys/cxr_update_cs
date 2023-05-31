@@ -1,1 +1,0 @@
-Sync_Get_Field_TimeStamp(->Field) --> Text   (Timestamp field last updated)  
